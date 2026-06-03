@@ -50,7 +50,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Créer les répertoires nécessaires
-        run: mkdir -p reports data
+        run: mkdir -p reports data output/spoonflower
 
       - name: Restaurer la base de données (cache)
         uses: actions/cache@v4
@@ -62,12 +62,21 @@ jobs:
 
       - name: Lancer le pipeline
         env:
+          # Tendances mondiales temps réel (GEMINI_API_KEY requis)
+          GEMINI_API_KEY:       ${{ secrets.GEMINI_API_KEY }}
+          # Génération d'images Spoonflower (RUNWARE_API_KEY requis)
+          RUNWARE_API_KEY:      ${{ secrets.RUNWARE_API_KEY }}
+          RUNWARE_MODEL:        ${{ secrets.RUNWARE_MODEL || 'runware:100@1' }}
+          # Sources optionnelles
           REDDIT_CLIENT_ID:     ${{ secrets.REDDIT_CLIENT_ID }}
           REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
           REDDIT_USER_AGENT:    ${{ secrets.REDDIT_USER_AGENT || 'Moneymaker/1.0' }}
+          YOUTUBE_API_KEY:      ${{ secrets.YOUTUBE_API_KEY }}
+          ETSY_API_KEY:         ${{ secrets.ETSY_API_KEY }}
+          DATAFORSEO_LOGIN:     ${{ secrets.DATAFORSEO_LOGIN }}
+          DATAFORSEO_PASSWORD:  ${{ secrets.DATAFORSEO_PASSWORD }}
           OPENAI_API_KEY:       ${{ secrets.OPENAI_API_KEY }}
           ANTHROPIC_API_KEY:    ${{ secrets.ANTHROPIC_API_KEY }}
-          YOUTUBE_API_KEY:      ${{ secrets.YOUTUBE_API_KEY }}
         run: |
           ARGS=""
           [ -n "${{ github.event.inputs.keywords }}"   ] && ARGS="$ARGS --keywords '${{ github.event.inputs.keywords }}'"
@@ -76,23 +85,25 @@ jobs:
           [ -n "${{ github.event.inputs.depth }}" ] && ARGS="$ARGS --depth ${{ github.event.inputs.depth }}"
           eval python -m trend_discovery.main $ARGS
 
-      - name: Commit et push des rapports
+      - name: Commit et push des rapports + images
         run: |
           git config user.name  "Moneymaker Bot"
           git config user.email "bot@moneymaker.auto"
-          git add reports/
+          git add reports/ output/
           if git diff --staged --quiet; then
             echo "Aucun nouveau rapport à commiter."
           else
             DATE=$(date -u +"%Y-%m-%d %H:%M UTC")
-            git commit -m "report(module01): trend discovery — ${DATE}"
+            git commit -m "report(pipeline): trends + images Spoonflower — ${DATE}"
             git push origin HEAD
           fi
 
-      - name: Upload rapport comme artefact
+      - name: Upload rapports et images comme artefacts
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: trend-reports-${{ github.run_number }}
-          path: reports/
+          name: moneymaker-${{ github.run_number }}
+          path: |
+            reports/
+            output/spoonflower/
           retention-days: 90
