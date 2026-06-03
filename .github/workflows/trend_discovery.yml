@@ -1,0 +1,98 @@
+name: Module 01 — Trend & Niche Discovery
+
+on:
+  schedule:
+    - cron: '0 6 * * *'   # 06h00 UTC chaque jour
+    - cron: '0 18 * * *'  # 18h00 UTC chaque jour
+  workflow_dispatch:
+    inputs:
+      keywords:
+        description: 'Mots-clés supplémentaires (virgule)'
+        required: false
+        default: ''
+      categories:
+        description: 'Catégories de niches (virgule, vide = toutes)'
+        required: false
+        default: ''
+      fast_mode:
+        description: 'Mode rapide (sans scrapers lents)'
+        required: false
+        default: 'false'
+        type: choice
+        options: ['false', 'true']
+      depth:
+        description: 'Profondeur de l''arbre de niches (1-3)'
+        required: false
+        default: '2'
+
+permissions:
+  contents: write
+
+jobs:
+  discover:
+    name: Pipeline Détection de Tendances
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Installer les dépendances
+        run: pip install -r requirements.txt
+
+      - name: Créer les répertoires nécessaires
+        run: mkdir -p reports data
+
+      - name: Restaurer la base de données (cache)
+        uses: actions/cache@v4
+        with:
+          path: data/
+          key: opportunities-db-${{ github.ref_name }}
+          restore-keys: |
+            opportunities-db-
+
+      - name: Lancer le pipeline
+        env:
+          REDDIT_CLIENT_ID:     ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          REDDIT_USER_AGENT:    ${{ secrets.REDDIT_USER_AGENT || 'Moneymaker/1.0' }}
+          OPENAI_API_KEY:       ${{ secrets.OPENAI_API_KEY }}
+          ANTHROPIC_API_KEY:    ${{ secrets.ANTHROPIC_API_KEY }}
+          YOUTUBE_API_KEY:      ${{ secrets.YOUTUBE_API_KEY }}
+        run: |
+          ARGS=""
+          [ -n "${{ github.event.inputs.keywords }}"   ] && ARGS="$ARGS --keywords '${{ github.event.inputs.keywords }}'"
+          [ -n "${{ github.event.inputs.categories }}" ] && ARGS="$ARGS --categories '${{ github.event.inputs.categories }}'"
+          [ "${{ github.event.inputs.fast_mode }}" = "true" ] && ARGS="$ARGS --fast"
+          [ -n "${{ github.event.inputs.depth }}" ] && ARGS="$ARGS --depth ${{ github.event.inputs.depth }}"
+          eval python -m trend_discovery.main $ARGS
+
+      - name: Commit et push des rapports
+        run: |
+          git config user.name  "Moneymaker Bot"
+          git config user.email "bot@moneymaker.auto"
+          git add reports/
+          if git diff --staged --quiet; then
+            echo "Aucun nouveau rapport à commiter."
+          else
+            DATE=$(date -u +"%Y-%m-%d %H:%M UTC")
+            git commit -m "report(module01): trend discovery — ${DATE}"
+            git push origin HEAD
+          fi
+
+      - name: Upload rapport comme artefact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: trend-reports-${{ github.run_number }}
+          path: reports/
+          retention-days: 90
