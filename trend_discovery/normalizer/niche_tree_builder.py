@@ -33,127 +33,127 @@ class NicheNode:
 # Ontologie POD complète — arbre de niches statique
 # ─────────────────────────────────────────────────────────────────────────────
 _RAW_TREE: Dict = {
-    "Nature & Botanique": {
+    "Nature & Botanical": {
         "_keywords": ["botanical pattern", "nature design", "plant pattern"],
         "Floral": {
-            "_keywords": ["floral pattern", "flower design", "fleurs"],
-            "Roses & Pivoines": {"_keywords": ["roses pattern", "peonies", "rosa"]},
-            "Fleurs Sauvages": {"_keywords": ["wildflowers", "meadow flowers", "prairie"]},
+            "_keywords": ["floral pattern", "flower design", "botanical flowers"],
+            "Roses & Peonies": {"_keywords": ["roses pattern", "peonies", "rosa peony"]},
+            "Wildflowers": {"_keywords": ["wildflowers", "meadow flowers", "wildflower meadow"]},
             "Ditsy Floral": {"_keywords": ["ditsy floral", "small flowers pattern", "tiny flowers"]},
-            "Fleurs Tropicales": {"_keywords": ["tropical flowers", "hibiscus", "bird of paradise"]},
+            "Tropical Flowers": {"_keywords": ["tropical flowers", "hibiscus", "bird of paradise"]},
         },
-        "Botanique": {
-            "_keywords": ["botanical illustration", "botanica", "plant illustration"],
-            "Botanique Victorienne": {"_keywords": ["victorian botanical", "antique botanical", "vintage botanical print"]},
-            "Botanique Scientifique": {"_keywords": ["scientific illustration", "natural history print", "herbarium"]},
-            "Fougères & Mousses": {"_keywords": ["fern pattern", "moss", "ferns", "forest floor"]},
-            "Succulentes": {"_keywords": ["succulent pattern", "cactus", "desert plants"]},
+        "Botanical": {
+            "_keywords": ["botanical illustration", "plant illustration", "botanical art"],
+            "Victorian Botanical": {"_keywords": ["victorian botanical", "antique botanical", "vintage botanical print"]},
+            "Scientific Botanical": {"_keywords": ["scientific illustration", "natural history print", "herbarium"]},
+            "Ferns & Moss": {"_keywords": ["fern pattern", "moss design", "ferns forest floor"]},
+            "Succulents": {"_keywords": ["succulent pattern", "cactus design", "desert plants"]},
         },
-        "Herboristerie": {
-            "_keywords": ["herbal pattern", "herbs", "medicinal plants"],
-            "Apothicaire": {"_keywords": ["apothecary", "apothecary bottles", "potion herbs"]},
-            "Jardin de Sorcière": {"_keywords": ["witch garden", "witch herbs", "magical plants"]},
-            "Plantes Médicinales Médiévales": {"_keywords": ["medieval herbs", "medieval medicine", "illuminated manuscript plants"]},
-            "Cuisine Aromatique": {"_keywords": ["kitchen herbs", "cooking herbs", "culinary plants"]},
+        "Herbalism": {
+            "_keywords": ["herbal pattern", "herbs design", "medicinal plants"],
+            "Apothecary": {"_keywords": ["apothecary", "apothecary bottles", "potion herbs"]},
+            "Witch Garden": {"_keywords": ["witch garden", "witch herbs", "magical plants"]},
+            "Medieval Medicinal Plants": {"_keywords": ["medieval herbs", "medieval medicine", "illuminated manuscript plants"]},
+            "Culinary Herbs": {"_keywords": ["kitchen herbs", "cooking herbs", "culinary plants"]},
         },
-        "Champignons": {
-            "_keywords": ["mushroom pattern", "fungi", "toadstool"],
-            "Champignons Sauvages": {"_keywords": ["wild mushrooms", "forest mushrooms", "amanita"]},
-            "Champignons Mignons": {"_keywords": ["cute mushrooms", "kawaii mushroom", "cartoon mushroom"]},
-            "Champignons Psychédéliques": {"_keywords": ["psychedelic mushroom", "magic mushroom art", "trippy fungi"]},
+        "Mushrooms": {
+            "_keywords": ["mushroom pattern", "fungi design", "toadstool"],
+            "Wild Mushrooms": {"_keywords": ["wild mushrooms", "forest mushrooms", "amanita"]},
+            "Cute Mushrooms": {"_keywords": ["cute mushrooms", "kawaii mushroom", "cartoon mushroom"]},
+            "Psychedelic Mushrooms": {"_keywords": ["psychedelic mushroom", "magic mushroom art", "trippy fungi"]},
         },
-        "Forêt & Bois": {
-            "_keywords": ["forest pattern", "woodland", "trees design"],
-            "Forêt Enchantée": {"_keywords": ["enchanted forest", "magical forest", "fairy forest"]},
-            "Bois Sombres": {"_keywords": ["dark forest", "moody forest", "gothic forest"]},
-            "Forêt Boréale": {"_keywords": ["boreal forest", "pine forest", "nordic forest", "taiga"]},
+        "Forest & Woodland": {
+            "_keywords": ["forest pattern", "woodland design", "trees pattern"],
+            "Enchanted Forest": {"_keywords": ["enchanted forest", "magical forest", "fairy forest"]},
+            "Dark Woods": {"_keywords": ["dark forest", "moody forest", "gothic forest"]},
+            "Boreal Forest": {"_keywords": ["boreal forest", "pine forest", "nordic forest taiga"]},
         },
-        "Océan & Marin": {
+        "Ocean & Marine": {
             "_keywords": ["ocean pattern", "marine design", "sea pattern"],
-            "Fond Marin": {"_keywords": ["underwater pattern", "coral reef", "deep sea"]},
-            "Côtier & Plage": {"_keywords": ["coastal pattern", "beach design", "nautical"]},
-            "Créatures Marines": {"_keywords": ["sea creatures", "jellyfish", "seahorse pattern"]},
+            "Underwater": {"_keywords": ["underwater pattern", "coral reef", "deep sea"]},
+            "Coastal & Beach": {"_keywords": ["coastal pattern", "beach design", "nautical"]},
+            "Sea Creatures": {"_keywords": ["sea creatures", "jellyfish pattern", "seahorse pattern"]},
         },
         "Tropical": {
             "_keywords": ["tropical pattern", "jungle design", "tropics"],
-            "Feuilles Tropicales": {"_keywords": ["tropical leaves", "palm leaf", "monstera pattern"]},
-            "Oiseaux Tropicaux": {"_keywords": ["tropical birds", "parrot pattern", "toucan"]},
+            "Tropical Leaves": {"_keywords": ["tropical leaves", "palm leaf", "monstera pattern"]},
+            "Tropical Birds": {"_keywords": ["tropical birds", "parrot pattern", "toucan design"]},
         },
     },
-    "Animaux": {
+    "Animals": {
         "_keywords": ["animal pattern", "wildlife design", "creature pattern"],
-        "Chats": {
-            "_keywords": ["cat pattern", "cats design", "feline"],
-            "Chats Mignons": {"_keywords": ["cute cats", "kawaii cats", "cartoon cats"]},
-            "Chats Réalistes": {"_keywords": ["realistic cat", "watercolor cat", "cat portrait"]},
-            "Chats Mystiques": {"_keywords": ["black cat", "witch cat", "mystical cat", "celestial cat"]},
+        "Cats": {
+            "_keywords": ["cat pattern", "cats design", "feline pattern"],
+            "Cute Cats": {"_keywords": ["cute cats", "kawaii cats", "cartoon cats"]},
+            "Realistic Cats": {"_keywords": ["realistic cat", "watercolor cat", "cat portrait"]},
+            "Mystical Cats": {"_keywords": ["black cat", "witch cat", "mystical cat celestial"]},
         },
-        "Chiens": {
-            "_keywords": ["dog pattern", "dogs design", "canine"],
-            "Chiens de Race": {"_keywords": ["dachshund pattern", "corgi pattern", "breed specific"]},
+        "Dogs": {
+            "_keywords": ["dog pattern", "dogs design", "canine pattern"],
+            "Purebred Dogs": {"_keywords": ["dachshund pattern", "corgi pattern", "breed specific dog"]},
         },
-        "Animaux des Bois": {
+        "Woodland Animals": {
             "_keywords": ["woodland animals", "forest creatures", "woodland critters"],
-            "Renards": {"_keywords": ["fox pattern", "foxes design", "woodland fox"]},
-            "Cerfs & Biches": {"_keywords": ["deer pattern", "stag design", "forest deer"]},
-            "Lapins": {"_keywords": ["rabbit pattern", "bunny design", "hare"]},
-            "Hérissons": {"_keywords": ["hedgehog pattern", "hedgehog design"]},
-            "Écureuils": {"_keywords": ["squirrel pattern", "squirrel design"]},
+            "Foxes": {"_keywords": ["fox pattern", "foxes design", "woodland fox"]},
+            "Deer": {"_keywords": ["deer pattern", "stag design", "forest deer"]},
+            "Rabbits": {"_keywords": ["rabbit pattern", "bunny design", "hare pattern"]},
+            "Hedgehogs": {"_keywords": ["hedgehog pattern", "hedgehog design"]},
+            "Squirrels": {"_keywords": ["squirrel pattern", "squirrel design"]},
         },
-        "Oiseaux": {
-            "_keywords": ["bird pattern", "birds design", "avian"],
-            "Corbeaux & Corneilles": {"_keywords": ["raven pattern", "crow design", "dark birds"]},
-            "Chouettes & Hiboux": {"_keywords": ["owl pattern", "owl design", "owl art"]},
-            "Oiseaux Chanteurs": {"_keywords": ["songbird pattern", "garden birds", "robin wren"]},
+        "Birds": {
+            "_keywords": ["bird pattern", "birds design", "avian pattern"],
+            "Ravens & Crows": {"_keywords": ["raven pattern", "crow design", "dark birds"]},
+            "Owls": {"_keywords": ["owl pattern", "owl design", "owl art"]},
+            "Songbirds": {"_keywords": ["songbird pattern", "garden birds", "robin wren"]},
         },
-        "Insectes": {
-            "_keywords": ["insect pattern", "bugs design", "entomology"],
-            "Papillons": {"_keywords": ["butterfly pattern", "butterfly design", "lepidoptera"]},
-            "Mites & Sphinx": {"_keywords": ["moth pattern", "hawk moth", "luna moth"]},
-            "Abeilles": {"_keywords": ["bee pattern", "honeybee design", "bumblebee"]},
-            "Coléoptères": {"_keywords": ["beetle pattern", "bug art", "scarab"]},
+        "Insects": {
+            "_keywords": ["insect pattern", "bugs design", "entomology art"],
+            "Butterflies": {"_keywords": ["butterfly pattern", "butterfly design", "lepidoptera"]},
+            "Moths": {"_keywords": ["moth pattern", "hawk moth", "luna moth"]},
+            "Bees": {"_keywords": ["bee pattern", "honeybee design", "bumblebee pattern"]},
+            "Beetles": {"_keywords": ["beetle pattern", "bug art", "scarab design"]},
         },
-        "Animaux Fantastiques": {
+        "Mythical Animals": {
             "_keywords": ["mythical animals", "fantasy creatures", "magical beasts"],
-            "Licornes": {"_keywords": ["unicorn pattern", "unicorn design", "rainbow unicorn"]},
+            "Unicorns": {"_keywords": ["unicorn pattern", "unicorn design", "rainbow unicorn"]},
             "Dragons": {"_keywords": ["dragon pattern", "dragon design", "serpent dragon"]},
         },
     },
-    "Styles Esthétiques": {
+    "Aesthetic Styles": {
         "_keywords": ["aesthetic pattern", "style design", "trend aesthetic"],
         "Cottagecore": {
             "_keywords": ["cottagecore pattern", "cottage aesthetic", "rural charm"],
-            "Cottagecore Romantique": {"_keywords": ["romantic cottage", "english cottage garden", "cottage roses"]},
-            "Cottagecore Automnal": {"_keywords": ["autumn cottagecore", "fall cottagecore", "harvest cottage"]},
+            "Romantic Cottagecore": {"_keywords": ["romantic cottage", "english cottage garden", "cottage roses"]},
+            "Autumn Cottagecore": {"_keywords": ["autumn cottagecore", "fall cottagecore", "harvest cottage"]},
         },
         "Dark Academia": {
             "_keywords": ["dark academia", "academic aesthetic", "gothic scholarly"],
-            "Dark Academia Botanique": {"_keywords": ["dark botanical", "moody botanical", "gothic plant"]},
+            "Dark Academia Botanical": {"_keywords": ["dark botanical", "moody botanical", "gothic plant"]},
         },
         "Goblincore": {
             "_keywords": ["goblincore", "goblin aesthetic", "frogcore"],
-            "Goblincore Champignons": {"_keywords": ["goblin mushrooms", "mushroom hoard", "forest goblin"]},
+            "Goblincore Mushrooms": {"_keywords": ["goblin mushrooms", "mushroom hoard", "forest goblin"]},
         },
         "Fairycore": {
             "_keywords": ["fairycore", "fairy aesthetic", "fae garden"],
             "Fairy Cottagecore": {"_keywords": ["fairy cottage", "enchanted garden", "flower fairy"]},
         },
-        "Witchy & Occulte": {
+        "Witchy & Occult": {
             "_keywords": ["witchy aesthetic", "occult design", "magic pattern"],
-            "Witchy Moderne": {"_keywords": ["modern witch", "hedge witch", "kitchen witch"]},
-            "Witchy Gothique": {"_keywords": ["gothic witch", "dark witch", "halloween witch"]},
+            "Modern Witchy": {"_keywords": ["modern witch", "hedge witch", "kitchen witch"]},
+            "Gothic Witchy": {"_keywords": ["gothic witch", "dark witch", "halloween witch"]},
         },
-        "Gothique": {
+        "Gothic": {
             "_keywords": ["gothic pattern", "dark aesthetic", "goth design"],
-            "Gothique Victorien": {"_keywords": ["victorian gothic", "mourning jewelry", "memento mori"]},
-            "Gothique Romantique": {"_keywords": ["romantic gothic", "dark romance", "gothic floral"]},
+            "Victorian Gothic": {"_keywords": ["victorian gothic", "mourning jewelry", "memento mori"]},
+            "Romantic Gothic": {"_keywords": ["romantic gothic", "dark romance", "gothic floral"]},
         },
         "Japandi": {
             "_keywords": ["japandi design", "japanese minimalism", "wabi sabi"],
         },
         "Boho": {
             "_keywords": ["boho pattern", "bohemian design", "hippie aesthetic"],
-            "Boho Géométrique": {"_keywords": ["boho geometric", "tribal geometric", "aztec"]},
+            "Boho Geometric": {"_keywords": ["boho geometric", "tribal geometric", "aztec pattern"]},
             "Boho Floral": {"_keywords": ["boho floral", "bohemian flowers", "free spirit floral"]},
         },
         "Solarpunk": {
@@ -163,150 +163,150 @@ _RAW_TREE: Dict = {
             "_keywords": ["cyberpunk pattern", "neon aesthetic", "tech dystopian"],
         },
     },
-    "Styles Graphiques": {
+    "Graphic Styles": {
         "_keywords": ["graphic style pattern", "design style", "pattern style"],
-        "Géométrique": {
+        "Geometric": {
             "_keywords": ["geometric pattern", "shapes design", "tessellation"],
-            "Géométrique Minimaliste": {"_keywords": ["minimal geometric", "clean shapes", "simple geometry"]},
-            "Géométrique Complexe": {"_keywords": ["complex geometric", "mandala", "sacred geometry"]},
-            "Géométrique Organique": {"_keywords": ["organic geometric", "soft shapes", "blob pattern"]},
+            "Minimalist Geometric": {"_keywords": ["minimal geometric", "clean shapes", "simple geometry"]},
+            "Complex Geometric": {"_keywords": ["complex geometric", "mandala", "sacred geometry"]},
+            "Organic Geometric": {"_keywords": ["organic geometric", "soft shapes", "blob pattern"]},
         },
-        "Aquarelle": {
+        "Watercolor": {
             "_keywords": ["watercolor pattern", "painted design", "wash technique"],
-            "Aquarelle Floral": {"_keywords": ["watercolor flowers", "painted flowers", "floral wash"]},
-            "Aquarelle Abstrait": {"_keywords": ["abstract watercolor", "color wash", "watercolor blur"]},
+            "Watercolor Floral": {"_keywords": ["watercolor flowers", "painted flowers", "floral wash"]},
+            "Abstract Watercolor": {"_keywords": ["abstract watercolor", "color wash", "watercolor blur"]},
         },
         "Art Nouveau": {
             "_keywords": ["art nouveau pattern", "nouveau design", "jugendstil"],
             "Art Nouveau Floral": {"_keywords": ["art nouveau flowers", "nouveau botanical", "mucha style"]},
-            "Art Nouveau Animaux": {"_keywords": ["art nouveau animals", "nouveau creatures", "decorative animals"]},
+            "Art Nouveau Animals": {"_keywords": ["art nouveau animals", "nouveau creatures", "decorative animals"]},
         },
-        "Art Déco": {
+        "Art Deco": {
             "_keywords": ["art deco pattern", "deco design", "gatsby aesthetic"],
-            "Art Déco Géométrique": {"_keywords": ["deco geometric", "deco shapes", "twenties pattern"]},
-            "Art Déco Floral": {"_keywords": ["deco floral", "deco botanical", "twenties flowers"]},
+            "Art Deco Geometric": {"_keywords": ["deco geometric", "deco shapes", "twenties pattern"]},
+            "Art Deco Floral": {"_keywords": ["deco floral", "deco botanical", "twenties flowers"]},
         },
-        "Rétro & Vintage": {
+        "Retro & Vintage": {
             "_keywords": ["retro pattern", "vintage design", "nostalgic aesthetic"],
-            "Années 50-60": {"_keywords": ["50s pattern", "60s design", "atomic age", "mid century modern"]},
-            "Années 70-80": {"_keywords": ["70s pattern", "80s design", "groovy", "disco era"]},
-            "Publicité Vintage": {"_keywords": ["vintage advertising", "retro ad style", "vintage poster"]},
+            "50s-60s Retro": {"_keywords": ["50s pattern", "60s design", "atomic age mid century modern"]},
+            "70s-80s Retro": {"_keywords": ["70s pattern", "80s design", "groovy disco era"]},
+            "Vintage Advertising": {"_keywords": ["vintage advertising", "retro ad style", "vintage poster"]},
         },
-        "Minimaliste": {
+        "Minimalist": {
             "_keywords": ["minimalist pattern", "minimal design", "clean aesthetic"],
         },
-        "Folk & Traditionnel": {
+        "Folk & Traditional": {
             "_keywords": ["folk art pattern", "traditional design", "naive art"],
-            "Folk Scandinave": {"_keywords": ["scandinavian folk", "nordic folk art", "dala horse"]},
-            "Folk Mexicain": {"_keywords": ["mexican folk art", "otomi", "huichol", "oaxacan"]},
-            "Folk Est-Européen": {"_keywords": ["eastern european folk", "slavic pattern", "ukrainian folk art"]},
+            "Scandinavian Folk": {"_keywords": ["scandinavian folk", "nordic folk art", "dala horse"]},
+            "Mexican Folk Art": {"_keywords": ["mexican folk art", "otomi", "huichol oaxacan"]},
+            "Eastern European Folk": {"_keywords": ["eastern european folk", "slavic pattern", "ukrainian folk art"]},
         },
     },
-    "Mystique & Spirituel": {
+    "Mystical & Spiritual": {
         "_keywords": ["mystical pattern", "spiritual design", "esoteric art"],
         "Tarot": {
             "_keywords": ["tarot design", "tarot art", "oracle cards"],
-            "Tarot Moderne": {"_keywords": ["modern tarot", "contemporary tarot", "indie tarot"]},
-            "Tarot Cottagecore": {"_keywords": ["cottagecore tarot", "nature tarot", "botanical tarot"]},
-            "Tarot Gothique": {"_keywords": ["gothic tarot", "dark tarot", "macabre tarot"]},
+            "Modern Tarot": {"_keywords": ["modern tarot", "contemporary tarot", "indie tarot"]},
+            "Cottagecore Tarot": {"_keywords": ["cottagecore tarot", "nature tarot", "botanical tarot"]},
+            "Gothic Tarot": {"_keywords": ["gothic tarot", "dark tarot", "macabre tarot"]},
         },
-        "Astrologie": {
+        "Astrology": {
             "_keywords": ["astrology pattern", "zodiac design", "celestial chart"],
-            "Signes du Zodiaque": {"_keywords": ["zodiac signs", "star signs", "horoscope design"]},
+            "Zodiac Signs": {"_keywords": ["zodiac signs", "star signs", "horoscope design"]},
             "Constellations": {"_keywords": ["constellation pattern", "star map", "night sky chart"]},
         },
-        "Cristaux & Gemmes": {
+        "Crystals & Gems": {
             "_keywords": ["crystal pattern", "gemstone design", "mineral art"],
-            "Cristaux Aquarelle": {"_keywords": ["watercolor crystals", "painted gems", "crystal illustration"]},
+            "Watercolor Crystals": {"_keywords": ["watercolor crystals", "painted gems", "crystal illustration"]},
         },
-        "Céleste": {
+        "Celestial": {
             "_keywords": ["celestial pattern", "moon stars design", "cosmic art"],
-            "Lune & Étoiles": {"_keywords": ["moon and stars", "lunar pattern", "star pattern"]},
-            "Soleil & Lune": {"_keywords": ["sun and moon", "solar lunar", "celestial faces"]},
-            "Galaxie & Cosmos": {"_keywords": ["galaxy pattern", "nebula design", "space art"]},
+            "Moon & Stars": {"_keywords": ["moon and stars", "lunar pattern", "star pattern"]},
+            "Sun & Moon": {"_keywords": ["sun and moon", "solar lunar", "celestial faces"]},
+            "Galaxy & Cosmos": {"_keywords": ["galaxy pattern", "nebula design", "space art"]},
         },
     },
-    "Culturel & Ethnique": {
+    "Cultural & Ethnic": {
         "_keywords": ["cultural pattern", "ethnic design", "world art"],
-        "Japonais": {
+        "Japanese": {
             "_keywords": ["japanese pattern", "japan design", "nihon art"],
-            "Japonais Traditionnel": {"_keywords": ["traditional japanese", "kimono pattern", "ukiyo e"]},
+            "Traditional Japanese": {"_keywords": ["traditional japanese", "kimono pattern", "ukiyo e"]},
             "Sakura": {"_keywords": ["cherry blossom", "sakura pattern", "hanami"]},
             "Koi": {"_keywords": ["koi fish", "koi pattern", "japanese fish"]},
         },
-        "Scandinave": {
+        "Scandinavian": {
             "_keywords": ["scandinavian pattern", "nordic design", "hygge aesthetic"],
-            "Noël Scandinave": {"_keywords": ["scandinavian christmas", "nordic holiday", "hygge christmas"]},
+            "Scandinavian Christmas": {"_keywords": ["scandinavian christmas", "nordic holiday", "hygge christmas"]},
         },
-        "Marocain": {
+        "Moroccan": {
             "_keywords": ["moroccan pattern", "arabesque design", "moorish art"],
             "Zellige": {"_keywords": ["zellige pattern", "moroccan tile", "islamic tile"]},
         },
-        "Mexicain": {
-            "_keywords": ["mexican pattern", "día de muertos", "folk mexico"],
-            "Día de Muertos": {"_keywords": ["day of the dead", "sugar skull", "calavera pattern"]},
+        "Mexican": {
+            "_keywords": ["mexican pattern", "day of the dead", "folk mexico"],
+            "Dia de Muertos": {"_keywords": ["day of the dead", "sugar skull", "calavera pattern"]},
         },
-        "Celtique": {
+        "Celtic": {
             "_keywords": ["celtic pattern", "celtic knot", "irish design"],
-            "Entrelacs Celtiques": {"_keywords": ["celtic knotwork", "interlace pattern", "trinity knot"]},
+            "Celtic Knotwork": {"_keywords": ["celtic knotwork", "interlace pattern", "trinity knot"]},
         },
-        "Africain": {
-            "_keywords": ["african pattern", "kente", "tribal africa"],
+        "African": {
+            "_keywords": ["african pattern", "kente design", "tribal africa"],
             "Kente & Ankara": {"_keywords": ["kente pattern", "ankara fabric", "adire"]},
         },
-        "Indien": {
-            "_keywords": ["indian pattern", "mandala", "paisley design"],
+        "Indian": {
+            "_keywords": ["indian pattern", "mandala design", "paisley art"],
             "Mandala": {"_keywords": ["mandala pattern", "henna design", "rangoli"]},
             "Paisley": {"_keywords": ["paisley pattern", "boteh design", "kashmir pattern"]},
         },
     },
-    "Saisonnier": {
+    "Seasonal": {
         "_keywords": ["seasonal pattern", "holiday design", "time of year"],
-        "Noël": {
-            "_keywords": ["christmas pattern", "holiday design", "festive"],
-            "Noël Traditionnel": {"_keywords": ["traditional christmas", "classic christmas", "holly berries"]},
-            "Noël Scandinave": {"_keywords": ["scandinavian christmas", "nordic xmas", "hygge holiday"]},
-            "Noël Gothique": {"_keywords": ["gothic christmas", "dark christmas", "creepy christmas"]},
-            "Noël Rétro": {"_keywords": ["retro christmas", "vintage holiday", "50s christmas"]},
+        "Christmas": {
+            "_keywords": ["christmas pattern", "holiday design", "festive pattern"],
+            "Traditional Christmas": {"_keywords": ["traditional christmas", "classic christmas", "holly berries"]},
+            "Scandinavian Christmas": {"_keywords": ["scandinavian christmas", "nordic xmas", "hygge holiday"]},
+            "Gothic Christmas": {"_keywords": ["gothic christmas", "dark christmas", "creepy christmas"]},
+            "Retro Christmas": {"_keywords": ["retro christmas", "vintage holiday", "50s christmas"]},
         },
         "Halloween": {
             "_keywords": ["halloween pattern", "spooky design", "autumn horror"],
-            "Halloween Mignon": {"_keywords": ["cute halloween", "kawaii halloween", "friendly spooky"]},
-            "Halloween Gothique": {"_keywords": ["gothic halloween", "dark halloween", "horror halloween"]},
+            "Cute Halloween": {"_keywords": ["cute halloween", "kawaii halloween", "friendly spooky"]},
+            "Gothic Halloween": {"_keywords": ["gothic halloween", "dark halloween", "horror halloween"]},
             "Halloween Cottagecore": {"_keywords": ["cottagecore halloween", "autumn witch", "harvest halloween"]},
         },
-        "Printemps & Pâques": {
+        "Spring & Easter": {
             "_keywords": ["spring pattern", "easter design", "renewal theme"],
         },
-        "Été": {
+        "Summer": {
             "_keywords": ["summer pattern", "warm season design", "sunshine theme"],
         },
-        "Automne": {
+        "Autumn": {
             "_keywords": ["autumn pattern", "fall design", "harvest theme"],
-            "Automne Cottagecore": {"_keywords": ["cottagecore autumn", "cozy fall", "harvest cottage"]},
+            "Autumn Cottagecore": {"_keywords": ["cottagecore autumn", "cozy fall", "harvest cottage"]},
         },
-        "Hiver": {
+        "Winter": {
             "_keywords": ["winter pattern", "cold season design", "snowflake theme"],
         },
     },
-    "Espace & Cosmos": {
+    "Space & Cosmos": {
         "_keywords": ["space pattern", "cosmic design", "astronomy art"],
-        "Espace Réaliste": {"_keywords": ["realistic space", "nasa photography style", "astronomical art"]},
-        "Espace Cartoon": {"_keywords": ["cute space", "cartoon planets", "kawaii cosmos"]},
-        "Espace Rétro": {"_keywords": ["retro space", "50s space", "pulp sci fi", "retro nasa"]},
+        "Realistic Space": {"_keywords": ["realistic space", "nasa photography style", "astronomical art"]},
+        "Cartoon Space": {"_keywords": ["cute space", "cartoon planets", "kawaii cosmos"]},
+        "Retro Space": {"_keywords": ["retro space", "50s space", "pulp sci fi retro nasa"]},
     },
-    "Médiéval & Fantasy": {
+    "Medieval & Fantasy": {
         "_keywords": ["medieval pattern", "fantasy design", "mythical art"],
-        "Médiéval": {
+        "Medieval": {
             "_keywords": ["medieval design", "middle ages art", "heraldic"],
-            "Héraldique": {"_keywords": ["heraldic pattern", "coat of arms", "armorial"]},
-            "Manuscrit Enluminé": {"_keywords": ["illuminated manuscript", "medieval illumination", "book of hours"]},
-            "Plantes Médiévales": {"_keywords": ["medieval plants", "herbal medieval", "apothecary medieval"]},
+            "Heraldry": {"_keywords": ["heraldic pattern", "coat of arms", "armorial"]},
+            "Illuminated Manuscript": {"_keywords": ["illuminated manuscript", "medieval illumination", "book of hours"]},
+            "Medieval Plants": {"_keywords": ["medieval plants", "herbal medieval", "apothecary medieval"]},
         },
         "Fantasy": {
             "_keywords": ["fantasy art", "magical world", "high fantasy"],
-            "Elfique & Fae": {"_keywords": ["elven design", "fae art", "fairy realm"]},
-            "Sorcellerie": {"_keywords": ["sorcery art", "wizard design", "alchemy pattern"]},
+            "Elven & Fae": {"_keywords": ["elven design", "fae art", "fairy realm"]},
+            "Sorcery & Wizardry": {"_keywords": ["sorcery art", "wizard design", "alchemy pattern"]},
         },
         "Steampunk": {
             "_keywords": ["steampunk design", "clockwork pattern", "victorian sci fi"],

@@ -50,6 +50,12 @@ def _build() -> List[DataProvider]:
         providers.append(YouTubeProvider())
     except Exception as exc:
         logger.debug("YouTube non chargé: %s", exc)
+    # ── Gemini — tendances mondiales temps réel (web search) ─────────────────
+    try:
+        from trend_discovery.providers.gemini_provider import GeminiProvider
+        providers.append(GeminiProvider())
+    except Exception as exc:
+        logger.debug("Gemini non chargé: %s", exc)
     return providers
 
 

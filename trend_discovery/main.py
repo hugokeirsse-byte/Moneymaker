@@ -156,6 +156,7 @@ def run_pipeline(
     # ══════════════════════════════════════════════════════════════════════════
     logger.info("[Phase 1bis] Collecte de vraies données via les providers…")
     real_data_map: Dict = {}
+    gemini_trend_cache: Dict = {}  # {niche_name: metadata} pour le prompt builder
     try:
         from trend_discovery.providers.real_data_collector import RealDataCollector
         from trend_discovery.providers.provider_registry import ProviderRegistry
@@ -166,14 +167,37 @@ def run_pipeline(
                 "[Phase 1bis] Sources réelles disponibles : %s",
                 [p.key for p in avail],
             )
+            # Injection des tendances Gemini (web search temps réel)
+            gemini_provider = registry.get("gemini")
+            if gemini_provider and gemini_provider.is_available():
+                logger.info("[Phase 1bis] Gemini : recherche des tendances mondiales…")
+                global_trends = gemini_provider.fetch_global_pod_trends()
+                if global_trends:
+                    # Ajouter les niches Gemini au pipeline
+                    gemini_niches = gemini_provider.get_enriched_niche_names()
+                    for n in gemini_niches:
+                        if n not in target_niches:
+                            target_niches.append(n)
+                    # Cache pour enrichir les prompts de génération
+                    for t in global_trends:
+                        gemini_trend_cache[t.get("name", "")] = t
+                        for sub in t.get("sub_niches", []):
+                            gemini_trend_cache[sub] = t
+                    logger.info(
+                        "[Phase 1bis] Gemini : %d tendances + %d sous-niches injectées",
+                        len(global_trends),
+                        len([s for t in global_trends for s in t.get("sub_niches", [])]),
+                    )
+                    sources_consulted.append("gemini")
+
             collector = RealDataCollector(registry)
             real_data_map = collector.collect_batch(target_niches[:60])
-            sources_consulted.extend([p.key for p in avail])
+            sources_consulted.extend([p.key for p in avail if p.key != "gemini"])
         else:
             logger.warning(
                 "[Phase 1bis] ⚠️  AUCUNE source réelle disponible (clés API manquantes). "
                 "Les scores seront marqués comme NON FIABLES. "
-                "Configure DATAFORSEO / ETSY / REDDIT / YOUTUBE pour de vraies données."
+                "Configure GEMINI_API_KEY pour les tendances mondiales en temps réel."
             )
     except Exception as exc:
         logger.warning("[Phase 1bis] Collecte réelle échouée: %s", exc)
@@ -272,6 +296,37 @@ def run_pipeline(
     except Exception as exc:
         logger.warning("[Phase 8] Allocation multi-plateformes échouée: %s", exc)
         strat_paths = {}
+
+    # ══════════════════════════════════════════════════════════════════════════
+    # PHASE 9 — Génération d'Images Spoonflower (Module 03)
+    # Génère les 5 meilleures niches → PNG 300 DPI prêts à uploader
+    # ══════════════════════════════════════════════════════════════════════════
+    generated_files: List[str] = []
+    try:
+        from trend_discovery.generators.generation_pipeline import GenerationPipeline
+        gen_pipeline = GenerationPipeline(
+            output_dir="./output/spoonflower",
+            upscale_factor=4,
+        )
+        if gen_pipeline._runware.is_available():
+            logger.info("[Phase 9] Génération d'images Spoonflower (top 5 niches)…")
+            gen_results = gen_pipeline.run(
+                opportunity_scores=opportunity_scores,
+                max_images=5,
+                gemini_cache=gemini_trend_cache,
+            )
+            generated_files = [r.filepath for r in gen_results if r.success and r.filepath]
+            logger.info(
+                "[Phase 9] %d/%d images générées → ./output/spoonflower/",
+                len(generated_files), len(gen_results),
+            )
+        else:
+            logger.info(
+                "[Phase 9] Génération désactivée (RUNWARE_API_KEY absente). "
+                "Ajoute la clé pour générer automatiquement les images Spoonflower."
+            )
+    except Exception as exc:
+        logger.warning("[Phase 9] Génération d'images échouée: %s", exc)
 
     # ══════════════════════════════════════════════════════════════════════════
     # Génération du Rapport Final

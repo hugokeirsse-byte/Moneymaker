@@ -168,7 +168,19 @@ REDDIT_USER_AGENT = os.getenv("REDDIT_USER_AGENT", "Moneymaker/1.0")
 # Demande vidéo réelle (gratuit)
 YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY", "")
 
-# Modules futurs (génération d'images)
+# Recherche de tendances mondiales (web search temps réel)
+# Une seule clé — remplace les scrapers anonymes (403 en datacenter)
+# Inscription gratuite : https://aistudio.google.com/app/apikey
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
+
+# Génération d'images Spoonflower-ready (Stable Diffusion / Flux)
+# pay-as-you-go ~0,003-0,008 $ par image finale (génération + upscale ×4)
+# Inscription : https://runware.ai
+RUNWARE_API_KEY = os.getenv("RUNWARE_API_KEY", "")
+# Modèle Runware : "runware:100@1" (SDXL) ou Flux pour meilleure qualité
+RUNWARE_MODEL = os.getenv("RUNWARE_MODEL", "runware:100@1")
+
+# Modules optionnels (génération avancée, analyse)
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
 

@@ -7,3 +7,7 @@ pandas==2.1.4
 python-dotenv==1.0.0
 schedule==1.2.1
 jinja2==3.1.2
+# Gemini — recherche de tendances mondiales (web search grounding)
+google-genai>=1.0.0
+# Image processing — packaging Spoonflower (300 DPI, resize)
+Pillow>=10.0.0
