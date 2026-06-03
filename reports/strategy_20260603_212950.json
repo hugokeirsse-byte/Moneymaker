@@ -1,0 +1,1277 @@
+{
+  "generated_at": "2026-06-03T21:29:50.455760+00:00",
+  "count": 20,
+  "methodology_note": "Les scores de compatibilité par plateforme sont structurels (basés sur les profils de plateformes). La demande et la concurrence proviennent des données réelles du Module 01.",
+  "recommendations": [
+    {
+      "niche": "Floral",
+      "global_score": 75.59,
+      "platform_scores": {
+        "spoonflower": 100.0,
+        "society6": 87.0,
+        "b2b_direct": 71.0,
+        "creative_market": 69.0,
+        "zazzle": 51.0,
+        "gumroad": 49.0,
+        "payhip": 49.0,
+        "design_bundles": 41.0,
+        "creative_fabrica": 41.0,
+        "amazon_kdp": 41.0,
+        "etsy": 37.0,
+        "teepublic": 31.0,
+        "redbubble": 29.0
+      },
+      "top_platforms": [
+        "spoonflower",
+        "society6",
+        "b2b_direct",
+        "creative_market"
+      ],
+      "recommended_products": {
+        "spoonflower": [
+          "tissus",
+          "papier peint",
+          "serviettes"
+        ],
+        "society6": [
+          "art mural",
+          "posters",
+          "coussins"
+        ],
+        "b2b_direct": [
+          "collections de motifs",
+          "licences commerciales"
+        ],
+        "creative_market": [
+          "ressources graphiques",
+          "polices",
+          "illustrations",
+          "motifs"
+        ]
+      },
+      "discouraged_products": {
+        "spoonflower": [],
+        "society6": [],
+        "b2b_direct": [],
+        "creative_market": []
+      },
+      "content_formats_to_produce": [
+        "Motif seamless PNG (300 DPI, ≥3600×3600 px, raccord parfait)"
+      ],
+      "economic_potential": {
+        "sales_potential": 88.9,
+        "competition_pressure": 20.0,
+        "reusability_score": 30.0,
+        "exploitable_markets_count": 4,
+        "estimated_revenue_tier": "moyen",
+        "notes": "Estimation structurelle : ventes dérivées de la demande (88) et croissance (90) réelles (M01) ; réutilisabilité et marchés exploitables dérivés des compatibilités structurelles (M02). Le tier 'moyen' est qualitatif, pas un montant en euros."
+      },
+      "publication_priority": "immédiate",
+      "priority_score": 79.0,
+      "strategy_summary": "Niche « Floral » : priorité de publication IMMÉDIATE. Cibler en priorité Spoonflower, Society6, Vente B2B Directe. Sur Spoonflower, produire : tissus, papier peint, serviettes. Formats à produire : Motif seamless PNG (300 DPI, ≥3600×3600 px, raccord parfait). Potentiel économique : tier moyen, 4 marché(s) exploitable(s), réutilisabilité 30/100. (Scores de compatibilité = structurels ; demande/concurrence = données réelles M01.)"
+    },
+    {
+      "niche": "Botanical",
+      "global_score": 62.61,
+      "platform_scores": {
+        "society6": 100.0,
+        "spoonflower": 100.0,
+        "b2b_direct": 83.0,
+        "creative_market": 81.0,
+        "zazzle": 51.0,
+        "gumroad": 49.0,
+        "payhip": 49.0,
+        "design_bundles": 41.0,
+        "creative_fabrica": 41.0,
+        "amazon_kdp": 41.0,
+        "etsy": 37.0,
+        "teepublic": 31.0,
+        "redbubble": 21.0
+      },
+      "top_platforms": [
+        "society6",
+        "spoonflower",
+        "b2b_direct",
+        "creative_market"
+      ],
+      "recommended_products": {
+        "society6": [
+          "art mural",
+          "posters",
+          "coussins"
+        ],
+        "spoonflower": [
+          "tissus",
+          "papier peint",
+          "serviettes"
+        ],
+        "b2b_direct": [
+          "collections de motifs",
+          "licences commerciales"
+        ],
+        "creative_market": [
+          "ressources graphiques",
+          "polices",
+          "illustrations",
+          "motifs"
+        ]
+      },
+      "discouraged_products": {
+        "society6": [],
+        "spoonflower": [],
+        "b2b_direct": [],
+        "creative_market": []
+      },
+      "content_formats_to_produce": [
+        "Motif seamless PNG (300 DPI, ≥3600×3600 px, raccord parfait)"
+      ],
+      "economic_potential": {
+        "sales_potential": 59.0,
+        "competition_pressure": 20.0,
+        "reusability_score": 40.0,
+        "exploitable_markets_count": 4,
+        "estimated_revenue_tier": "moyen",
+        "notes": "Estimation structurelle : ventes dérivées de la demande (70) et croissance (42) réelles (M01) ; réutilisabilité et marchés exploitables dérivés des compatibilités structurelles (M02). Le tier 'moyen' est qualitatif, pas un montant en euros."
+      },
+      "publication_priority": "haute",
+      "priority_score": 68.8,
+      "strategy_summary": "Niche « Botanical » : priorité de publication HAUTE. Cibler en priorité Society6, Spoonflower, Vente B2B Directe. Sur Society6, produire : art mural, posters, coussins. Formats à produire : Motif seamless PNG (300 DPI, ≥3600×3600 px, raccord parfait). Potentiel économique : tier moyen, 4 marché(s) exploitable(s), réutilisabilité 40/100. (Scores de compatibilité = structurels ; demande/concurrence = données réelles M01.)"
+    },
+    {
+      "niche": "Mushrooms",
+      "global_score": 61.11,
+      "platform_scores": {
+        "spoonflower": 100.0,
+        "society6": 87.0,
+        "b2b_direct": 71.0,
+        "creative_market": 69.0,
+        "zazzle": 51.0,
+        "gumroad": 49.0,
+        "payhip": 49.0,
+        "design_bundles": 41.0,
+        "creative_fabrica": 41.0,
+        "amazon_kdp": 41.0,
+        "etsy": 37.0,
+        "teepublic": 31.0,
+        "redbubble": 29.0
+      },
+      "top_platforms": [
+        "spoonflower",
+        "society6",
+        "b2b_direct",
+        "creative_market"
+      ],
+      "recommended_products": {
+        "spoonflower": [
+          "tissus",
+          "papier peint",
+          "serviettes"
+        ],
+        "society6": [
+          "art mural",
+          "posters",
+          "coussins"
+        ],
+        "b2b_direct": [
+          "collections de motifs",
+          "licences commerciales"
+        ],
+        "creative_market": [
+          "ressources graphiques",
+          "polices",
+          "illustrations",
+          "motifs"
+        ]
+      },
+      "discouraged_products": {
+        "spoonflower": [],
+        "society6": [],
+        "b2b_direct": [],
+        "creative_market": []
+      },
+      "content_formats_to_produce": [
+        "Motif seamless PNG (300 DPI, ≥3600×3600 px, raccord parfait)"
+      ],
+      "economic_potential": {
+        "sales_potential": 60.9,
+        "competition_pressure": 20.0,
+        "reusability_score": 30.0,
+        "exploitable_markets_count": 4,
+        "estimated_revenue_tier": "moyen",
+        "notes": "Estimation structurelle : ventes dérivées de la demande (74) et croissance (41) réelles (M01) ; réutilisabilité et marchés exploitables dérivés des compatibilités structurelles (M02). Le tier 'moyen' est qualitatif, pas un montant en euros."
+      },
+      "publication_priority": "haute",
+      "priority_score": 67.6,
+      "strategy_summary": "Niche « Mushrooms » : priorité de publication HAUTE. Cibler en priorité Spoonflower, Society6, Vente B2B Directe. Sur Spoonflower, produire : tissus, papier peint, serviettes. Formats à produire : Motif seamless PNG (300 DPI, ≥3600×3600 px, raccord parfait). Potentiel économique : tier moyen, 4 marché(s) exploitable(s), réutilisabilité 30/100. (Scores de compatibilité = structurels ; demande/concurrence = données réelles M01.)"
+    },
+    {
+      "niche": "Forest & Woodland",
+      "global_score": 50.16,
+      "platform_scores": {
+        "spoonflower": 100.0,
+        "society6": 97.0,
+        "b2b_direct": 81.0,
+        "creative_market": 69.0,
+        "zazzle": 51.0,
+        "gumroad": 49.0,
+        "payhip": 49.0,
+        "design_bundles": 41.0,
+        "creative_fabrica": 41.0,
+        "amazon_kdp": 41.0,
+        "etsy": 37.0,
+        "teepublic": 31.0,
+        "redbubble": 29.0
+      },
+      "top_platforms": [
+        "spoonflower",
+        "society6",
+        "b2b_direct",
+        "creative_market"
+      ],
+      "recommended_products": {
+        "spoonflower": [
+          "tissus",
+          "papier peint",
+          "serviettes"
+        ],
+        "society6": [
+          "art mural",
+          "posters",
+          "coussins"
+        ],
+        "b2b_direct": [
+          "collections de motifs sous licence",
+          "bibliothèques de surface design",
+          "collections de motifs",
+          "licences commerciales"
+        ],
+        "creative_market": [
+          "packs de motifs",
+          "surface design"
+        ]
+      },
+      "discouraged_products": {
+        "spoonflower": [],
+        "society6": [],
+        "b2b_direct": [],
+        "creative_market": []
+      },
+      "content_formats_to_produce": [
+        "Motif seamless PNG (300 DPI, ≥3600×3600 px, raccord parfait)"
+      ],
+      "economic_potential": {
+        "sales_potential": 53.4,
+        "competition_pressure": 20.0,
+        "reusability_score": 30.0,
+        "exploitable_markets_count": 4,
+        "estimated_revenue_tier": "moyen",
+        "notes": "Estimation structurelle : ventes dérivées de la demande (59) et croissance (45) réelles (M01) ; réutilisabilité et marchés exploitables dérivés des compatibilités structurelles (M02). Le tier 'moyen' est qualitatif, pas un montant en euros."
+      },
+      "publication_priority": "haute",
+      "priority_score": 61.7,
+      "strategy_summary": "Niche « Forest & Woodland » : priorité de publication HAUTE. Cibler en priorité Spoonflower, Society6, Vente B2B Directe. Sur Spoonflower, produire : tissus, papier peint, serviettes. Formats à produire : Motif seamless PNG (300 DPI, ≥3600×3600 px, raccord parfait). Potentiel économique : tier moyen, 4 marché(s) exploitable(s), réutilisabilité 30/100. (Scores de compatibilité = structurels ; demande/concurrence = données réelles M01.)"
+    },
+    {
+      "niche": "Herbalism",
+      "global_score": 47.91,
+      "platform_scores": {
+        "society6": 100.0,
+        "spoonflower": 100.0,
+        "b2b_direct": 85.0,
+        "creative_market": 83.0,
+        "zazzle": 51.0,
+        "gumroad": 49.0,
+        "payhip": 49.0,
+        "design_bundles": 41.0,
+        "creative_fabrica": 41.0,
+        "amazon_kdp": 41.0,
+        "etsy": 37.0,
+        "teepublic": 31.0,
+        "redbubble": 21.0
+      },
+      "top_platforms": [
+        "society6",
+        "spoonflower",
+        "b2b_direct",
+        "creative_market"
+      ],
+      "recommended_products": {
+        "society6": [
+          "art mural",
+          "posters",
+          "coussins"
+        ],
+        "spoonflower": [
+          "tissus",
+          "papier peint",
+          "serviettes"
+        ],
+        "b2b_direct": [
+          "collections de motifs",
+          "licences commerciales"
+        ],
+        "creative_market": [
+          "ressources graphiques",
+          "polices",
+          "illustrations",
+          "motifs"
+        ]
+      },
+      "discouraged_products": {
+        "society6": [],
+        "spoonflower": [],
+        "b2b_direct": [],
+        "creative_market": []
+      },
+      "content_formats_to_produce": [
+        "Motif seamless PNG (300 DPI, ≥3600×3600 px, raccord parfait)"
+      ],
+      "economic_potential": {
+        "sales_potential": 51.4,
+        "competition_pressure": 20.0,
+        "reusability_score": 40.0,
+        "exploitable_markets_count": 4,
+        "estimated_revenue_tier": "moyen",
+        "notes": "Estimation structurelle : ventes dérivées de la demande (66) et croissance (29) réelles (M01) ; réutilisabilité et marchés exploitables dérivés des compatibilités structurelles (M02). Le tier 'moyen' est qualitatif, pas un montant en euros."
+      },
+      "publication_priority": "haute",
+      "priority_score": 61.4,
+      "strategy_summary": "Niche « Herbalism » : priorité de publication HAUTE. Cibler en priorité Society6, Spoonflower, Vente B2B Directe. Sur Society6, produire : art mural, posters, coussins. Formats à produire : Motif seamless PNG (300 DPI, ≥3600×3600 px, raccord parfait). Potentiel économique : tier moyen, 4 marché(s) exploitable(s), réutilisabilité 40/100. (Scores de compatibilité = structurels ; demande/concurrence = données réelles M01.)"
+    },
+    {
+      "niche": "Tropical",
+      "global_score": 45.22,
+      "platform_scores": {
+        "spoonflower": 100.0,
+        "society6": 87.0,
+        "b2b_direct": 71.0,
+        "creative_market": 69.0,
+        "zazzle": 51.0,
+        "gumroad": 49.0,
+        "payhip": 49.0,
+        "design_bundles": 41.0,
+        "creative_fabrica": 41.0,
+        "amazon_kdp": 41.0,
+        "etsy": 37.0,
+        "teepublic": 31.0,
+        "redbubble": 29.0
+      },
+      "top_platforms": [
+        "spoonflower",
+        "society6",
+        "b2b_direct",
+        "creative_market"
+      ],
+      "recommended_products": {
+        "spoonflower": [
+          "tissus",
+          "papier peint",
+          "serviettes"
+        ],
+        "society6": [
+          "art mural",
+          "posters",
+          "coussins"
+        ],
+        "b2b_direct": [
+          "collections de motifs",
+          "licences commerciales"
+        ],
+        "creative_market": [
+          "ressources graphiques",
+          "polices",
+          "illustrations",
+          "motifs"
+        ]
+      },
+      "discouraged_products": {
+        "spoonflower": [],
+        "society6": [],
+        "b2b_direct": [],
+        "creative_market": []
+      },
+      "content_formats_to_produce": [
+        "Motif seamless PNG (300 DPI, ≥3600×3600 px, raccord parfait)"
+      ],
+      "economic_potential": {
+        "sales_potential": 21.4,
+        "competition_pressure": 20.0,
+        "reusability_score": 30.0,
+        "exploitable_markets_count": 4,
+        "estimated_revenue_tier": "faible",
+        "notes": "Estimation structurelle : ventes dérivées de la demande (9) et croissance (40) réelles (M01) ; réutilisabilité et marchés exploitables dérivés des compatibilités structurelles (M02). Le tier 'faible' est qualitatif, pas un montant en euros."
+      },
+      "publication_priority": "moyenne",
+      "priority_score": 53.4,
+      "strategy_summary": "Niche « Tropical » : priorité de publication MOYENNE. Cibler en priorité Spoonflower, Society6, Vente B2B Directe. Sur Spoonflower, produire : tissus, papier peint, serviettes. Formats à produire : Motif seamless PNG (300 DPI, ≥3600×3600 px, raccord parfait). Potentiel économique : tier faible, 4 marché(s) exploitable(s), réutilisabilité 30/100. (Scores de compatibilité = structurels ; demande/concurrence = données réelles M01.)"
+    },
+    {
+      "niche": "Gothic",
+      "global_score": 51.71,
+      "platform_scores": {
+        "society6": 67.0,
+        "redbubble": 49.0,
+        "gumroad": 49.0,
+        "payhip": 49.0,
+        "b2b_direct": 49.0,
+        "spoonflower": 45.0,
+        "creative_market": 45.0,
+        "teepublic": 41.0,
+        "zazzle": 41.0,
+        "design_bundles": 41.0,
+        "creative_fabrica": 41.0,
+        "amazon_kdp": 41.0,
+        "etsy": 37.0
+      },
+      "top_platforms": [
+        "society6",
+        "redbubble",
+        "gumroad"
+      ],
+      "recommended_products": {
+        "society6": [
+          "art mural",
+          "posters",
+          "tapisseries"
+        ],
+        "redbubble": [
+          "t-shirts",
+          "stickers",
+          "posters",
+          "mugs",
+          "accessoires"
+        ],
+        "gumroad": [
+          "packs numériques",
+          "ressources",
+          "formations"
+        ]
+      },
+      "discouraged_products": {
+        "society6": [],
+        "redbubble": [],
+        "gumroad": []
+      },
+      "content_formats_to_produce": [
+        "Art print haute résolution (300 DPI, formats standards : A4/A3/18×24)"
+      ],
+      "economic_potential": {
+        "sales_potential": 41.0,
+        "competition_pressure": 20.0,
+        "reusability_score": 0.0,
+        "exploitable_markets_count": 1,
+        "estimated_revenue_tier": "faible",
+        "notes": "Estimation structurelle : ventes dérivées de la demande (36) et croissance (49) réelles (M01) ; réutilisabilité et marchés exploitables dérivés des compatibilités structurelles (M02). Le tier 'faible' est qualitatif, pas un montant en euros."
+      },
+      "publication_priority": "moyenne",
+      "priority_score": 50.3,
+      "strategy_summary": "Niche « Gothic » : priorité de publication MOYENNE. Cibler en priorité Society6, Redbubble, Gumroad. Sur Society6, produire : art mural, posters, tapisseries. Formats à produire : Art print haute résolution (300 DPI, formats standards : A4/A3/18×24). Potentiel économique : tier faible, 1 marché(s) exploitable(s), réutilisabilité 0/100. (Scores de compatibilité = structurels ; demande/concurrence = données réelles M01.)"
+    },
+    {
+      "niche": "Ocean & Marine",
+      "global_score": 36.08,
+      "platform_scores": {
+        "spoonflower": 100.0,
+        "society6": 87.0,
+        "b2b_direct": 71.0,
+        "creative_market": 69.0,
+        "zazzle": 51.0,
+        "gumroad": 49.0,
+        "payhip": 49.0,
+        "design_bundles": 41.0,
+        "creative_fabrica": 41.0,
+        "amazon_kdp": 41.0,
+        "etsy": 37.0,
+        "teepublic": 31.0,
+        "redbubble": 29.0
+      },
+      "top_platforms": [
+        "spoonflower",
+        "society6",
+        "b2b_direct",
+        "creative_market"
+      ],
+      "recommended_products": {
+        "spoonflower": [
+          "tissus",
+          "papier peint",
+          "serviettes"
+        ],
+        "society6": [
+          "art mural",
+          "posters",
+          "coussins"
+        ],
+        "b2b_direct": [
+          "collections de motifs",
+          "licences commerciales"
+        ],
+        "creative_market": [
+          "ressources graphiques",
+          "polices",
+          "illustrations",
+          "motifs"
+        ]
+      },
+      "discouraged_products": {
+        "spoonflower": [],
+        "society6": [],
+        "b2b_direct": [],
+        "creative_market": []
+      },
+      "content_formats_to_produce": [
+        "Motif seamless PNG (300 DPI, ≥3600×3600 px, raccord parfait)"
+      ],
+      "economic_potential": {
+        "sales_potential": 16.5,
+        "competition_pressure": 20.0,
+        "reusability_score": 30.0,
+        "exploitable_markets_count": 4,
+        "estimated_revenue_tier": "faible",
+        "notes": "Estimation structurelle : ventes dérivées de la demande (1) et croissance (40) réelles (M01) ; réutilisabilité et marchés exploitables dérivés des compatibilités structurelles (M02). Le tier 'faible' est qualitatif, pas un montant en euros."
+      },
+      "publication_priority": "moyenne",
+      "priority_score": 48.7,
+      "strategy_summary": "Niche « Ocean & Marine » : priorité de publication MOYENNE. Cibler en priorité Spoonflower, Society6, Vente B2B Directe. Sur Spoonflower, produire : tissus, papier peint, serviettes. Formats à produire : Motif seamless PNG (300 DPI, ≥3600×3600 px, raccord parfait). Potentiel économique : tier faible, 4 marché(s) exploitable(s), réutilisabilité 30/100. (Scores de compatibilité = structurels ; demande/concurrence = données réelles M01.)"
+    },
+    {
+      "niche": "Dogs",
+      "global_score": 56.24,
+      "platform_scores": {
+        "gumroad": 49.0,
+        "payhip": 49.0,
+        "b2b_direct": 49.0,
+        "spoonflower": 45.0,
+        "creative_market": 45.0,
+        "teepublic": 41.0,
+        "zazzle": 41.0,
+        "society6": 41.0,
+        "design_bundles": 41.0,
+        "creative_fabrica": 41.0,
+        "amazon_kdp": 41.0,
+        "redbubble": 37.0,
+        "etsy": 37.0
+      },
+      "top_platforms": [
+        "gumroad",
+        "payhip",
+        "b2b_direct"
+      ],
+      "recommended_products": {
+        "gumroad": [
+          "packs numériques",
+          "ressources",
+          "formations"
+        ],
+        "payhip": [
+          "produits numériques",
+          "téléchargements"
+        ],
+        "b2b_direct": [
+          "bibliothèques d'illustrations",
+          "collections de motifs",
+          "packs pro",
+          "licences commerciales"
+        ]
+      },
+      "discouraged_products": {
+        "gumroad": [],
+        "payhip": [],
+        "b2b_direct": []
+      },
+      "content_formats_to_produce": [
+        "PNG HD transparent (300 DPI, ≥4000 px) — format polyvalent par défaut"
+      ],
+      "economic_potential": {
+        "sales_potential": 41.5,
+        "competition_pressure": 20.0,
+        "reusability_score": 0.0,
+        "exploitable_markets_count": 0,
+        "estimated_revenue_tier": "faible",
+        "notes": "Estimation structurelle : ventes dérivées de la demande (42) et croissance (42) réelles (M01) ; réutilisabilité et marchés exploitables dérivés des compatibilités structurelles (M02). Le tier 'faible' est qualitatif, pas un montant en euros."
+      },
+      "publication_priority": "moyenne",
+      "priority_score": 48.6,
+      "strategy_summary": "Niche « Dogs » : priorité de publication MOYENNE. Cibler en priorité Gumroad, Payhip, Vente B2B Directe. Sur Gumroad, produire : packs numériques, ressources, formations. Formats à produire : PNG HD transparent (300 DPI, ≥4000 px) — format polyvalent par défaut. Potentiel économique : tier faible, 0 marché(s) exploitable(s), réutilisabilité 0/100. (Scores de compatibilité = structurels ; demande/concurrence = données réelles M01.)"
+    },
+    {
+      "niche": "Woodland Animals",
+      "global_score": 34.91,
+      "platform_scores": {
+        "spoonflower": 100.0,
+        "society6": 79.0,
+        "b2b_direct": 71.0,
+        "creative_market": 57.0,
+        "gumroad": 49.0,
+        "payhip": 49.0,
+        "zazzle": 41.0,
+        "design_bundles": 41.0,
+        "creative_fabrica": 41.0,
+        "amazon_kdp": 41.0,
+        "etsy": 37.0,
+        "teepublic": 31.0,
+        "redbubble": 29.0
+      },
+      "top_platforms": [
+        "spoonflower",
+        "society6",
+        "b2b_direct",
+        "creative_market"
+      ],
+      "recommended_products": {
+        "spoonflower": [
+          "tissus",
+          "papier peint",
+          "serviettes"
+        ],
+        "society6": [
+          "art mural",
+          "posters",
+          "coussins"
+        ],
+        "b2b_direct": [
+          "collections de motifs sous licence",
+          "bibliothèques de surface design",
+          "collections de motifs",
+          "licences commerciales"
+        ],
+        "creative_market": [
+          "packs de motifs",
+          "surface design"
+        ]
+      },
+      "discouraged_products": {
+        "spoonflower": [],
+        "society6": [],
+        "b2b_direct": [],
+        "creative_market": []
+      },
+      "content_formats_to_produce": [
+        "Motif seamless PNG (300 DPI, ≥3600×3600 px, raccord parfait)"
+      ],
+      "economic_potential": {
+        "sales_potential": 16.9,
+        "competition_pressure": 20.0,
+        "reusability_score": 30.0,
+        "exploitable_markets_count": 3,
+        "estimated_revenue_tier": "faible",
+        "notes": "Estimation structurelle : ventes dérivées de la demande (2) et croissance (40) réelles (M01) ; réutilisabilité et marchés exploitables dérivés des compatibilités structurelles (M02). Le tier 'faible' est qualitatif, pas un montant en euros."
+      },
+      "publication_priority": "moyenne",
+      "priority_score": 48.3,
+      "strategy_summary": "Niche « Woodland Animals » : priorité de publication MOYENNE. Cibler en priorité Spoonflower, Society6, Vente B2B Directe. Sur Spoonflower, produire : tissus, papier peint, serviettes. Formats à produire : Motif seamless PNG (300 DPI, ≥3600×3600 px, raccord parfait). Potentiel économique : tier faible, 3 marché(s) exploitable(s), réutilisabilité 30/100. (Scores de compatibilité = structurels ; demande/concurrence = données réelles M01.)"
+    },
+    {
+      "niche": "Birds",
+      "global_score": 54.6,
+      "platform_scores": {
+        "gumroad": 49.0,
+        "payhip": 49.0,
+        "b2b_direct": 49.0,
+        "spoonflower": 45.0,
+        "creative_market": 45.0,
+        "teepublic": 41.0,
+        "zazzle": 41.0,
+        "society6": 41.0,
+        "design_bundles": 41.0,
+        "creative_fabrica": 41.0,
+        "amazon_kdp": 41.0,
+        "redbubble": 37.0,
+        "etsy": 37.0
+      },
+      "top_platforms": [
+        "gumroad",
+        "payhip",
+        "b2b_direct"
+      ],
+      "recommended_products": {
+        "gumroad": [
+          "packs numériques",
+          "ressources",
+          "formations"
+        ],
+        "payhip": [
+          "produits numériques",
+          "téléchargements"
+        ],
+        "b2b_direct": [
+          "bibliothèques d'illustrations",
+          "collections de motifs",
+          "packs pro",
+          "licences commerciales"
+        ]
+      },
+      "discouraged_products": {
+        "gumroad": [],
+        "payhip": [],
+        "b2b_direct": []
+      },
+      "content_formats_to_produce": [
+        "PNG HD transparent (300 DPI, ≥4000 px) — format polyvalent par défaut"
+      ],
+      "economic_potential": {
+        "sales_potential": 41.7,
+        "competition_pressure": 20.0,
+        "reusability_score": 0.0,
+        "exploitable_markets_count": 0,
+        "estimated_revenue_tier": "faible",
+        "notes": "Estimation structurelle : ventes dérivées de la demande (40) et croissance (44) réelles (M01) ; réutilisabilité et marchés exploitables dérivés des compatibilités structurelles (M02). Le tier 'faible' est qualitatif, pas un montant en euros."
+      },
+      "publication_priority": "moyenne",
+      "priority_score": 48.0,
+      "strategy_summary": "Niche « Birds » : priorité de publication MOYENNE. Cibler en priorité Gumroad, Payhip, Vente B2B Directe. Sur Gumroad, produire : packs numériques, ressources, formations. Formats à produire : PNG HD transparent (300 DPI, ≥4000 px) — format polyvalent par défaut. Potentiel économique : tier faible, 0 marché(s) exploitable(s), réutilisabilité 0/100. (Scores de compatibilité = structurels ; demande/concurrence = données réelles M01.)"
+    },
+    {
+      "niche": "Cats",
+      "global_score": 48.98,
+      "platform_scores": {
+        "gumroad": 49.0,
+        "payhip": 49.0,
+        "b2b_direct": 49.0,
+        "spoonflower": 45.0,
+        "creative_market": 45.0,
+        "teepublic": 41.0,
+        "zazzle": 41.0,
+        "society6": 41.0,
+        "design_bundles": 41.0,
+        "creative_fabrica": 41.0,
+        "amazon_kdp": 41.0,
+        "redbubble": 37.0,
+        "etsy": 37.0
+      },
+      "top_platforms": [
+        "gumroad",
+        "payhip",
+        "b2b_direct"
+      ],
+      "recommended_products": {
+        "gumroad": [
+          "packs numériques",
+          "ressources",
+          "formations"
+        ],
+        "payhip": [
+          "produits numériques",
+          "téléchargements"
+        ],
+        "b2b_direct": [
+          "bibliothèques d'illustrations",
+          "collections de motifs",
+          "packs pro",
+          "licences commerciales"
+        ]
+      },
+      "discouraged_products": {
+        "gumroad": [],
+        "payhip": [],
+        "b2b_direct": []
+      },
+      "content_formats_to_produce": [
+        "PNG HD transparent (300 DPI, ≥4000 px) — format polyvalent par défaut"
+      ],
+      "economic_potential": {
+        "sales_potential": 29.7,
+        "competition_pressure": 20.0,
+        "reusability_score": 0.0,
+        "exploitable_markets_count": 0,
+        "estimated_revenue_tier": "faible",
+        "notes": "Estimation structurelle : ventes dérivées de la demande (22) et croissance (41) réelles (M01) ; réutilisabilité et marchés exploitables dérivés des compatibilités structurelles (M02). Le tier 'faible' est qualitatif, pas un montant en euros."
+      },
+      "publication_priority": "moyenne",
+      "priority_score": 43.3,
+      "strategy_summary": "Niche « Cats » : priorité de publication MOYENNE. Cibler en priorité Gumroad, Payhip, Vente B2B Directe. Sur Gumroad, produire : packs numériques, ressources, formations. Formats à produire : PNG HD transparent (300 DPI, ≥4000 px) — format polyvalent par défaut. Potentiel économique : tier faible, 0 marché(s) exploitable(s), réutilisabilité 0/100. (Scores de compatibilité = structurels ; demande/concurrence = données réelles M01.)"
+    },
+    {
+      "niche": "Cottagecore",
+      "global_score": 44.28,
+      "platform_scores": {
+        "society6": 67.0,
+        "redbubble": 49.0,
+        "gumroad": 49.0,
+        "payhip": 49.0,
+        "b2b_direct": 49.0,
+        "spoonflower": 45.0,
+        "creative_market": 45.0,
+        "teepublic": 41.0,
+        "zazzle": 41.0,
+        "design_bundles": 41.0,
+        "creative_fabrica": 41.0,
+        "amazon_kdp": 41.0,
+        "etsy": 37.0
+      },
+      "top_platforms": [
+        "society6",
+        "redbubble",
+        "gumroad"
+      ],
+      "recommended_products": {
+        "society6": [
+          "art mural",
+          "posters",
+          "tapisseries"
+        ],
+        "redbubble": [
+          "t-shirts",
+          "stickers",
+          "posters",
+          "mugs",
+          "accessoires"
+        ],
+        "gumroad": [
+          "packs numériques",
+          "ressources",
+          "formations"
+        ]
+      },
+      "discouraged_products": {
+        "society6": [],
+        "redbubble": [],
+        "gumroad": []
+      },
+      "content_formats_to_produce": [
+        "Art print haute résolution (300 DPI, formats standards : A4/A3/18×24)"
+      ],
+      "economic_potential": {
+        "sales_potential": 17.9,
+        "competition_pressure": 20.0,
+        "reusability_score": 0.0,
+        "exploitable_markets_count": 1,
+        "estimated_revenue_tier": "faible",
+        "notes": "Estimation structurelle : ventes dérivées de la demande (3) et croissance (40) réelles (M01) ; réutilisabilité et marchés exploitables dérivés des compatibilités structurelles (M02). Le tier 'faible' est qualitatif, pas un montant en euros."
+      },
+      "publication_priority": "moyenne",
+      "priority_score": 42.7,
+      "strategy_summary": "Niche « Cottagecore » : priorité de publication MOYENNE. Cibler en priorité Society6, Redbubble, Gumroad. Sur Society6, produire : art mural, posters, tapisseries. Formats à produire : Art print haute résolution (300 DPI, formats standards : A4/A3/18×24). Potentiel économique : tier faible, 1 marché(s) exploitable(s), réutilisabilité 0/100. (Scores de compatibilité = structurels ; demande/concurrence = données réelles M01.)"
+    },
+    {
+      "niche": "Japandi",
+      "global_score": 43.15,
+      "platform_scores": {
+        "society6": 67.0,
+        "redbubble": 49.0,
+        "gumroad": 49.0,
+        "payhip": 49.0,
+        "b2b_direct": 49.0,
+        "spoonflower": 45.0,
+        "creative_market": 45.0,
+        "teepublic": 41.0,
+        "zazzle": 41.0,
+        "design_bundles": 41.0,
+        "creative_fabrica": 41.0,
+        "amazon_kdp": 41.0,
+        "etsy": 37.0
+      },
+      "top_platforms": [
+        "society6",
+        "redbubble",
+        "gumroad"
+      ],
+      "recommended_products": {
+        "society6": [
+          "art mural",
+          "posters",
+          "tapisseries"
+        ],
+        "redbubble": [
+          "t-shirts",
+          "stickers",
+          "posters",
+          "mugs",
+          "accessoires"
+        ],
+        "gumroad": [
+          "packs numériques",
+          "ressources",
+          "formations"
+        ]
+      },
+      "discouraged_products": {
+        "society6": [],
+        "redbubble": [],
+        "gumroad": []
+      },
+      "content_formats_to_produce": [
+        "Art print haute résolution (300 DPI, formats standards : A4/A3/18×24)"
+      ],
+      "economic_potential": {
+        "sales_potential": 19.5,
+        "competition_pressure": 20.0,
+        "reusability_score": 0.0,
+        "exploitable_markets_count": 1,
+        "estimated_revenue_tier": "faible",
+        "notes": "Estimation structurelle : ventes dérivées de la demande (6) et croissance (40) réelles (M01) ; réutilisabilité et marchés exploitables dérivés des compatibilités structurelles (M02). Le tier 'faible' est qualitatif, pas un montant en euros."
+      },
+      "publication_priority": "moyenne",
+      "priority_score": 42.6,
+      "strategy_summary": "Niche « Japandi » : priorité de publication MOYENNE. Cibler en priorité Society6, Redbubble, Gumroad. Sur Society6, produire : art mural, posters, tapisseries. Formats à produire : Art print haute résolution (300 DPI, formats standards : A4/A3/18×24). Potentiel économique : tier faible, 1 marché(s) exploitable(s), réutilisabilité 0/100. (Scores de compatibilité = structurels ; demande/concurrence = données réelles M01.)"
+    },
+    {
+      "niche": "Dark Academia",
+      "global_score": 38.76,
+      "platform_scores": {
+        "society6": 67.0,
+        "redbubble": 49.0,
+        "gumroad": 49.0,
+        "payhip": 49.0,
+        "b2b_direct": 49.0,
+        "spoonflower": 45.0,
+        "creative_market": 45.0,
+        "teepublic": 41.0,
+        "zazzle": 41.0,
+        "design_bundles": 41.0,
+        "creative_fabrica": 41.0,
+        "amazon_kdp": 41.0,
+        "etsy": 37.0
+      },
+      "top_platforms": [
+        "society6",
+        "redbubble",
+        "gumroad"
+      ],
+      "recommended_products": {
+        "society6": [
+          "art mural",
+          "posters",
+          "tapisseries"
+        ],
+        "redbubble": [
+          "t-shirts",
+          "stickers",
+          "posters",
+          "mugs",
+          "accessoires"
+        ],
+        "gumroad": [
+          "packs numériques",
+          "ressources",
+          "formations"
+        ]
+      },
+      "discouraged_products": {
+        "society6": [],
+        "redbubble": [],
+        "gumroad": []
+      },
+      "content_formats_to_produce": [
+        "Art print haute résolution (300 DPI, formats standards : A4/A3/18×24)"
+      ],
+      "economic_potential": {
+        "sales_potential": 17.2,
+        "competition_pressure": 20.0,
+        "reusability_score": 0.0,
+        "exploitable_markets_count": 1,
+        "estimated_revenue_tier": "faible",
+        "notes": "Estimation structurelle : ventes dérivées de la demande (2) et croissance (40) réelles (M01) ; réutilisabilité et marchés exploitables dérivés des compatibilités structurelles (M02). Le tier 'faible' est qualitatif, pas un montant en euros."
+      },
+      "publication_priority": "moyenne",
+      "priority_score": 40.3,
+      "strategy_summary": "Niche « Dark Academia » : priorité de publication MOYENNE. Cibler en priorité Society6, Redbubble, Gumroad. Sur Society6, produire : art mural, posters, tapisseries. Formats à produire : Art print haute résolution (300 DPI, formats standards : A4/A3/18×24). Potentiel économique : tier faible, 1 marché(s) exploitable(s), réutilisabilité 0/100. (Scores de compatibilité = structurels ; demande/concurrence = données réelles M01.)"
+    },
+    {
+      "niche": "Witchy & Occult",
+      "global_score": 36.59,
+      "platform_scores": {
+        "society6": 67.0,
+        "redbubble": 49.0,
+        "gumroad": 49.0,
+        "payhip": 49.0,
+        "b2b_direct": 49.0,
+        "spoonflower": 45.0,
+        "creative_market": 45.0,
+        "teepublic": 41.0,
+        "zazzle": 41.0,
+        "design_bundles": 41.0,
+        "creative_fabrica": 41.0,
+        "amazon_kdp": 41.0,
+        "etsy": 37.0
+      },
+      "top_platforms": [
+        "society6",
+        "redbubble",
+        "gumroad"
+      ],
+      "recommended_products": {
+        "society6": [
+          "art mural",
+          "posters",
+          "tapisseries"
+        ],
+        "redbubble": [
+          "t-shirts",
+          "stickers",
+          "posters",
+          "mugs",
+          "accessoires"
+        ],
+        "gumroad": [
+          "packs numériques",
+          "ressources",
+          "formations"
+        ]
+      },
+      "discouraged_products": {
+        "society6": [],
+        "redbubble": [],
+        "gumroad": []
+      },
+      "content_formats_to_produce": [
+        "Art print haute résolution (300 DPI, formats standards : A4/A3/18×24)"
+      ],
+      "economic_potential": {
+        "sales_potential": 16.0,
+        "competition_pressure": 20.0,
+        "reusability_score": 0.0,
+        "exploitable_markets_count": 1,
+        "estimated_revenue_tier": "faible",
+        "notes": "Estimation structurelle : ventes dérivées de la demande (0) et croissance (40) réelles (M01) ; réutilisabilité et marchés exploitables dérivés des compatibilités structurelles (M02). Le tier 'faible' est qualitatif, pas un montant en euros."
+      },
+      "publication_priority": "basse",
+      "priority_score": 39.2,
+      "strategy_summary": "Niche « Witchy & Occult » : priorité de publication BASSE. Cibler en priorité Society6, Redbubble, Gumroad. Sur Society6, produire : art mural, posters, tapisseries. Formats à produire : Art print haute résolution (300 DPI, formats standards : A4/A3/18×24). Potentiel économique : tier faible, 1 marché(s) exploitable(s), réutilisabilité 0/100. (Scores de compatibilité = structurels ; demande/concurrence = données réelles M01.)"
+    },
+    {
+      "niche": "Fairycore",
+      "global_score": 35.83,
+      "platform_scores": {
+        "society6": 67.0,
+        "redbubble": 49.0,
+        "gumroad": 49.0,
+        "payhip": 49.0,
+        "b2b_direct": 49.0,
+        "spoonflower": 45.0,
+        "creative_market": 45.0,
+        "teepublic": 41.0,
+        "zazzle": 41.0,
+        "design_bundles": 41.0,
+        "creative_fabrica": 41.0,
+        "amazon_kdp": 41.0,
+        "etsy": 37.0
+      },
+      "top_platforms": [
+        "society6",
+        "redbubble",
+        "gumroad"
+      ],
+      "recommended_products": {
+        "society6": [
+          "art mural",
+          "posters",
+          "tapisseries"
+        ],
+        "redbubble": [
+          "t-shirts",
+          "stickers",
+          "posters",
+          "mugs",
+          "accessoires"
+        ],
+        "gumroad": [
+          "packs numériques",
+          "ressources",
+          "formations"
+        ]
+      },
+      "discouraged_products": {
+        "society6": [],
+        "redbubble": [],
+        "gumroad": []
+      },
+      "content_formats_to_produce": [
+        "Art print haute résolution (300 DPI, formats standards : A4/A3/18×24)"
+      ],
+      "economic_potential": {
+        "sales_potential": 16.9,
+        "competition_pressure": 20.0,
+        "reusability_score": 0.0,
+        "exploitable_markets_count": 1,
+        "estimated_revenue_tier": "faible",
+        "notes": "Estimation structurelle : ventes dérivées de la demande (1) et croissance (40) réelles (M01) ; réutilisabilité et marchés exploitables dérivés des compatibilités structurelles (M02). Le tier 'faible' est qualitatif, pas un montant en euros."
+      },
+      "publication_priority": "basse",
+      "priority_score": 39.1,
+      "strategy_summary": "Niche « Fairycore » : priorité de publication BASSE. Cibler en priorité Society6, Redbubble, Gumroad. Sur Society6, produire : art mural, posters, tapisseries. Formats à produire : Art print haute résolution (300 DPI, formats standards : A4/A3/18×24). Potentiel économique : tier faible, 1 marché(s) exploitable(s), réutilisabilité 0/100. (Scores de compatibilité = structurels ; demande/concurrence = données réelles M01.)"
+    },
+    {
+      "niche": "Goblincore",
+      "global_score": 34.78,
+      "platform_scores": {
+        "society6": 67.0,
+        "redbubble": 49.0,
+        "gumroad": 49.0,
+        "payhip": 49.0,
+        "b2b_direct": 49.0,
+        "spoonflower": 45.0,
+        "creative_market": 45.0,
+        "teepublic": 41.0,
+        "zazzle": 41.0,
+        "design_bundles": 41.0,
+        "creative_fabrica": 41.0,
+        "amazon_kdp": 41.0,
+        "etsy": 37.0
+      },
+      "top_platforms": [
+        "society6",
+        "redbubble",
+        "gumroad"
+      ],
+      "recommended_products": {
+        "society6": [
+          "art mural",
+          "posters",
+          "tapisseries"
+        ],
+        "redbubble": [
+          "t-shirts",
+          "stickers",
+          "posters",
+          "mugs",
+          "accessoires"
+        ],
+        "gumroad": [
+          "packs numériques",
+          "ressources",
+          "formations"
+        ]
+      },
+      "discouraged_products": {
+        "society6": [],
+        "redbubble": [],
+        "gumroad": []
+      },
+      "content_formats_to_produce": [
+        "Art print haute résolution (300 DPI, formats standards : A4/A3/18×24)"
+      ],
+      "economic_potential": {
+        "sales_potential": 16.5,
+        "competition_pressure": 20.0,
+        "reusability_score": 0.0,
+        "exploitable_markets_count": 1,
+        "estimated_revenue_tier": "faible",
+        "notes": "Estimation structurelle : ventes dérivées de la demande (1) et croissance (40) réelles (M01) ; réutilisabilité et marchés exploitables dérivés des compatibilités structurelles (M02). Le tier 'faible' est qualitatif, pas un montant en euros."
+      },
+      "publication_priority": "basse",
+      "priority_score": 38.6,
+      "strategy_summary": "Niche « Goblincore » : priorité de publication BASSE. Cibler en priorité Society6, Redbubble, Gumroad. Sur Society6, produire : art mural, posters, tapisseries. Formats à produire : Art print haute résolution (300 DPI, formats standards : A4/A3/18×24). Potentiel économique : tier faible, 1 marché(s) exploitable(s), réutilisabilité 0/100. (Scores de compatibilité = structurels ; demande/concurrence = données réelles M01.)"
+    },
+    {
+      "niche": "Insects",
+      "global_score": 40.54,
+      "platform_scores": {
+        "gumroad": 49.0,
+        "payhip": 49.0,
+        "b2b_direct": 49.0,
+        "spoonflower": 45.0,
+        "creative_market": 45.0,
+        "teepublic": 41.0,
+        "zazzle": 41.0,
+        "society6": 41.0,
+        "design_bundles": 41.0,
+        "creative_fabrica": 41.0,
+        "amazon_kdp": 41.0,
+        "redbubble": 37.0,
+        "etsy": 37.0
+      },
+      "top_platforms": [
+        "gumroad",
+        "payhip",
+        "b2b_direct"
+      ],
+      "recommended_products": {
+        "gumroad": [
+          "packs numériques",
+          "ressources",
+          "formations"
+        ],
+        "payhip": [
+          "produits numériques",
+          "téléchargements"
+        ],
+        "b2b_direct": [
+          "bibliothèques d'illustrations",
+          "collections de motifs",
+          "packs pro",
+          "licences commerciales"
+        ]
+      },
+      "discouraged_products": {
+        "gumroad": [],
+        "payhip": [],
+        "b2b_direct": []
+      },
+      "content_formats_to_produce": [
+        "PNG HD transparent (300 DPI, ≥4000 px) — format polyvalent par défaut"
+      ],
+      "economic_potential": {
+        "sales_potential": 20.4,
+        "competition_pressure": 20.0,
+        "reusability_score": 0.0,
+        "exploitable_markets_count": 0,
+        "estimated_revenue_tier": "faible",
+        "notes": "Estimation structurelle : ventes dérivées de la demande (8) et croissance (40) réelles (M01) ; réutilisabilité et marchés exploitables dérivés des compatibilités structurelles (M02). Le tier 'faible' est qualitatif, pas un montant en euros."
+      },
+      "publication_priority": "basse",
+      "priority_score": 38.1,
+      "strategy_summary": "Niche « Insects » : priorité de publication BASSE. Cibler en priorité Gumroad, Payhip, Vente B2B Directe. Sur Gumroad, produire : packs numériques, ressources, formations. Formats à produire : PNG HD transparent (300 DPI, ≥4000 px) — format polyvalent par défaut. Potentiel économique : tier faible, 0 marché(s) exploitable(s), réutilisabilité 0/100. (Scores de compatibilité = structurels ; demande/concurrence = données réelles M01.)"
+    },
+    {
+      "niche": "Mythical Animals",
+      "global_score": 34.74,
+      "platform_scores": {
+        "gumroad": 49.0,
+        "payhip": 49.0,
+        "b2b_direct": 49.0,
+        "spoonflower": 45.0,
+        "creative_market": 45.0,
+        "teepublic": 41.0,
+        "zazzle": 41.0,
+        "society6": 41.0,
+        "design_bundles": 41.0,
+        "creative_fabrica": 41.0,
+        "amazon_kdp": 41.0,
+        "redbubble": 37.0,
+        "etsy": 37.0
+      },
+      "top_platforms": [
+        "gumroad",
+        "payhip",
+        "b2b_direct"
+      ],
+      "recommended_products": {
+        "gumroad": [
+          "packs numériques",
+          "ressources",
+          "formations"
+        ],
+        "payhip": [
+          "produits numériques",
+          "téléchargements"
+        ],
+        "b2b_direct": [
+          "bibliothèques d'illustrations",
+          "collections de motifs",
+          "packs pro",
+          "licences commerciales"
+        ]
+      },
+      "discouraged_products": {
+        "gumroad": [],
+        "payhip": [],
+        "b2b_direct": []
+      },
+      "content_formats_to_produce": [
+        "PNG HD transparent (300 DPI, ≥4000 px) — format polyvalent par défaut"
+      ],
+      "economic_potential": {
+        "sales_potential": 16.5,
+        "competition_pressure": 20.0,
+        "reusability_score": 0.0,
+        "exploitable_markets_count": 0,
+        "estimated_revenue_tier": "faible",
+        "notes": "Estimation structurelle : ventes dérivées de la demande (1) et croissance (40) réelles (M01) ; réutilisabilité et marchés exploitables dérivés des compatibilités structurelles (M02). Le tier 'faible' est qualitatif, pas un montant en euros."
+      },
+      "publication_priority": "basse",
+      "priority_score": 35.0,
+      "strategy_summary": "Niche « Mythical Animals » : priorité de publication BASSE. Cibler en priorité Gumroad, Payhip, Vente B2B Directe. Sur Gumroad, produire : packs numériques, ressources, formations. Formats à produire : PNG HD transparent (300 DPI, ≥4000 px) — format polyvalent par défaut. Potentiel économique : tier faible, 0 marché(s) exploitable(s), réutilisabilité 0/100. (Scores de compatibilité = structurels ; demande/concurrence = données réelles M01.)"
+    }
+  ]
+}

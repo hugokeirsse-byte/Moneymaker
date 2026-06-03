@@ -1,0 +1,3472 @@
+{
+  "generated_at": "2026-06-03T21:29:50.465108+00:00",
+  "sources_consulted": [
+    "amazon",
+    "bing_autosuggest",
+    "creative_market",
+    "deviantart",
+    "duckduckgo",
+    "etsy",
+    "google_autocomplete",
+    "google_trends",
+    "pinterest",
+    "redbubble",
+    "reddit",
+    "society6",
+    "tiktok",
+    "wikipedia",
+    "youtube"
+  ],
+  "keywords_analyzed": 214,
+  "execution_time_seconds": 598.2,
+  "top_niches": [
+    {
+      "keyword": "Dogs",
+      "google_trend_score": 80.0,
+      "trend_direction": "stable",
+      "trend_velocity": 4.021276595744681,
+      "seasonality_score": 11.27610471902459,
+      "reddit_buzz_score": 0.0,
+      "search_volume_proxy": 7.59493670886076,
+      "overall_trend_score": 41.52,
+      "sources": [
+        "google_trends",
+        "google_autocomplete"
+      ]
+    },
+    {
+      "keyword": "Birds",
+      "google_trend_score": 76.74193548387096,
+      "trend_direction": "rising",
+      "trend_velocity": 11.00786308973173,
+      "seasonality_score": 11.425439638139508,
+      "reddit_buzz_score": 0.0,
+      "search_volume_proxy": 7.59493670886076,
+      "overall_trend_score": 39.89,
+      "sources": [
+        "google_trends",
+        "google_autocomplete"
+      ]
+    },
+    {
+      "keyword": "Gothic",
+      "google_trend_score": 71.61290322580645,
+      "trend_direction": "rising",
+      "trend_velocity": 21.704902867715088,
+      "seasonality_score": 17.62042559977585,
+      "reddit_buzz_score": 0.0,
+      "search_volume_proxy": 0.0,
+      "overall_trend_score": 35.81,
+      "sources": [
+        "google_trends",
+        "google_autocomplete"
+      ]
+    },
+    {
+      "keyword": "Floral",
+      "google_trend_score": 59.1505376344086,
+      "trend_direction": "rising",
+      "trend_velocity": 13.241905642923227,
+      "seasonality_score": 38.12272994081218,
+      "reddit_buzz_score": 0.0,
+      "search_volume_proxy": 11.39240506329114,
+      "overall_trend_score": 31.85,
+      "sources": [
+        "google_trends",
+        "google_autocomplete"
+      ]
+    },
+    {
+      "keyword": "Cats",
+      "google_trend_score": 41.623655913978496,
+      "trend_direction": "stable",
+      "trend_velocity": 2.199352451433864,
+      "seasonality_score": 11.383233836642418,
+      "reddit_buzz_score": 0.0,
+      "search_volume_proxy": 7.59493670886076,
+      "overall_trend_score": 22.33,
+      "sources": [
+        "google_trends",
+        "google_autocomplete"
+      ]
+    },
+    {
+      "keyword": "Mushrooms",
+      "google_trend_score": 15.913978494623656,
+      "trend_direction": "stable",
+      "trend_velocity": 2.521276595744681,
+      "seasonality_score": 15.047708401039584,
+      "reddit_buzz_score": 0.0,
+      "search_volume_proxy": 7.59493670886076,
+      "overall_trend_score": 9.48,
+      "sources": [
+        "google_trends",
+        "google_autocomplete"
+      ]
+    },
+    {
+      "keyword": "Tropical",
+      "google_trend_score": 14.817204301075268,
+      "trend_direction": "stable",
+      "trend_velocity": 0.2913968547641078,
+      "seasonality_score": 16.52979653037193,
+      "reddit_buzz_score": 0.0,
+      "search_volume_proxy": 7.59493670886076,
+      "overall_trend_score": 8.93,
+      "sources": [
+        "google_trends",
+        "google_autocomplete"
+      ]
+    },
+    {
+      "keyword": "Botanical",
+      "google_trend_score": 14.634408602150538,
+      "trend_direction": "stable",
+      "trend_velocity": 1.3362627197039787,
+      "seasonality_score": 23.64515086310538,
+      "reddit_buzz_score": 0.0,
+      "search_volume_proxy": 7.59493670886076,
+      "overall_trend_score": 8.84,
+      "sources": [
+        "google_trends",
+        "google_autocomplete"
+      ]
+    },
+    {
+      "keyword": "Insects",
+      "google_trend_score": 13.623655913978494,
+      "trend_direction": "stable",
+      "trend_velocity": -1.280758556891767,
+      "seasonality_score": 15.962697181003444,
+      "reddit_buzz_score": 0.0,
+      "search_volume_proxy": 3.79746835443038,
+      "overall_trend_score": 7.57,
+      "sources": [
+        "google_trends",
+        "google_autocomplete"
+      ]
+    },
+    {
+      "keyword": "Japandi",
+      "google_trend_score": 9.43010752688172,
+      "trend_direction": "stable",
+      "trend_velocity": 1.1281221091581868,
+      "seasonality_score": 18.22832849112207,
+      "reddit_buzz_score": 0.0,
+      "search_volume_proxy": 3.79746835443038,
+      "overall_trend_score": 5.47,
+      "sources": [
+        "google_trends",
+        "google_autocomplete"
+      ]
+    },
+    {
+      "keyword": "Cottagecore",
+      "google_trend_score": 1.6236559139784945,
+      "trend_direction": "stable",
+      "trend_velocity": 0.5078630897317284,
+      "seasonality_score": 36.0303854536038,
+      "reddit_buzz_score": 0.0,
+      "search_volume_proxy": 11.39240506329114,
+      "overall_trend_score": 3.09,
+      "sources": [
+        "google_trends",
+        "google_autocomplete"
+      ]
+    },
+    {
+      "keyword": "floral",
+      "google_trend_score": 0.0,
+      "trend_direction": "stable",
+      "trend_velocity": 0.0,
+      "seasonality_score": 0.0,
+      "reddit_buzz_score": 0.0,
+      "search_volume_proxy": 11.39240506329114,
+      "overall_trend_score": 2.28,
+      "sources": [
+        "google_trends(no_data)",
+        "google_autocomplete"
+      ]
+    },
+    {
+      "keyword": "cottagecore",
+      "google_trend_score": 0.0,
+      "trend_direction": "stable",
+      "trend_velocity": 0.0,
+      "seasonality_score": 0.0,
+      "reddit_buzz_score": 0.0,
+      "search_volume_proxy": 11.39240506329114,
+      "overall_trend_score": 2.28,
+      "sources": [
+        "google_trends(no_data)",
+        "google_autocomplete"
+      ]
+    },
+    {
+      "keyword": "Dark Academia",
+      "google_trend_score": 1.0,
+      "trend_direction": "stable",
+      "trend_velocity": 0.0,
+      "seasonality_score": 0.0,
+      "reddit_buzz_score": 0.0,
+      "search_volume_proxy": 7.59493670886076,
+      "overall_trend_score": 2.02,
+      "sources": [
+        "google_trends",
+        "google_autocomplete"
+      ]
+    },
+    {
+      "keyword": "Woodland Animals",
+      "google_trend_score": 0.0,
+      "trend_direction": "stable",
+      "trend_velocity": 0.0,
+      "seasonality_score": 0.0,
+      "reddit_buzz_score": 0.0,
+      "search_volume_proxy": 7.59493670886076,
+      "overall_trend_score": 1.52,
+      "sources": [
+        "google_trends",
+        "google_autocomplete"
+      ]
+    },
+    {
+      "keyword": "botanical",
+      "google_trend_score": 0.0,
+      "trend_direction": "stable",
+      "trend_velocity": 0.0,
+      "seasonality_score": 0.0,
+      "reddit_buzz_score": 0.0,
+      "search_volume_proxy": 7.59493670886076,
+      "overall_trend_score": 1.52,
+      "sources": [
+        "google_trends(no_data)",
+        "google_autocomplete"
+      ]
+    },
+    {
+      "keyword": "forest",
+      "google_trend_score": 0.0,
+      "trend_direction": "stable",
+      "trend_velocity": 0.0,
+      "seasonality_score": 0.0,
+      "reddit_buzz_score": 0.0,
+      "search_volume_proxy": 7.59493670886076,
+      "overall_trend_score": 1.52,
+      "sources": [
+        "google_trends(no_data)",
+        "google_autocomplete"
+      ]
+    },
+    {
+      "keyword": "ocean",
+      "google_trend_score": 0.0,
+      "trend_direction": "stable",
+      "trend_velocity": 0.0,
+      "seasonality_score": 0.0,
+      "reddit_buzz_score": 0.0,
+      "search_volume_proxy": 7.59493670886076,
+      "overall_trend_score": 1.52,
+      "sources": [
+        "google_trends(no_data)",
+        "google_autocomplete"
+      ]
+    },
+    {
+      "keyword": "tropical",
+      "google_trend_score": 0.0,
+      "trend_direction": "stable",
+      "trend_velocity": 0.0,
+      "seasonality_score": 0.0,
+      "reddit_buzz_score": 0.0,
+      "search_volume_proxy": 7.59493670886076,
+      "overall_trend_score": 1.52,
+      "sources": [
+        "google_trends(no_data)",
+        "google_autocomplete"
+      ]
+    },
+    {
+      "keyword": "cats",
+      "google_trend_score": 0.0,
+      "trend_direction": "stable",
+      "trend_velocity": 0.0,
+      "seasonality_score": 0.0,
+      "reddit_buzz_score": 0.0,
+      "search_volume_proxy": 7.59493670886076,
+      "overall_trend_score": 1.52,
+      "sources": [
+        "google_trends(no_data)",
+        "google_autocomplete"
+      ]
+    }
+  ],
+  "top_hybrids": [
+    {
+      "niche1": "Birds",
+      "niche2": "Botanical",
+      "combined_keyword": "Birds Botanical",
+      "hybrid_score": 66.0,
+      "trend_score": 24.37,
+      "uniqueness_score": 100.0,
+      "synergy_score": 85.0,
+      "example_products": [
+        "Birds Botanical Seamless Pattern",
+        "Botanical Birds Fabric Design",
+        "Repeat Birds Botanical Pattern",
+        "Birds Botanical Surface Design"
+      ]
+    },
+    {
+      "niche1": "Dogs",
+      "niche2": "Birds",
+      "combined_keyword": "Dogs Birds",
+      "hybrid_score": 63.78,
+      "trend_score": 40.7,
+      "uniqueness_score": 100.0,
+      "synergy_score": 50.0,
+      "example_products": [
+        "Dogs Birds Seamless Pattern",
+        "Birds Dogs Fabric Design",
+        "Repeat Dogs Birds Pattern",
+        "Dogs Birds Surface Design"
+      ]
+    },
+    {
+      "niche1": "Floral",
+      "niche2": "Cottagecore",
+      "combined_keyword": "Floral Cottagecore",
+      "hybrid_score": 63.24,
+      "trend_score": 17.47,
+      "uniqueness_score": 100.0,
+      "synergy_score": 85.0,
+      "example_products": [
+        "Floral Cottagecore Seamless Pattern",
+        "Cottagecore Floral Fabric Design",
+        "Repeat Floral Cottagecore Pattern",
+        "Floral Cottagecore Surface Design"
+      ]
+    },
+    {
+      "niche1": "Dogs",
+      "niche2": "Gothic",
+      "combined_keyword": "Dogs Gothic",
+      "hybrid_score": 62.97,
+      "trend_score": 38.67,
+      "uniqueness_score": 100.0,
+      "synergy_score": 50.0,
+      "example_products": [
+        "Dogs Gothic Seamless Pattern",
+        "Gothic Dogs Fabric Design",
+        "Repeat Dogs Gothic Pattern",
+        "Dogs Gothic Surface Design"
+      ]
+    },
+    {
+      "niche1": "Birds",
+      "niche2": "Gothic",
+      "combined_keyword": "Birds Gothic",
+      "hybrid_score": 62.64,
+      "trend_score": 37.85,
+      "uniqueness_score": 100.0,
+      "synergy_score": 50.0,
+      "example_products": [
+        "Birds Gothic Seamless Pattern",
+        "Gothic Birds Fabric Design",
+        "Repeat Birds Gothic Pattern",
+        "Birds Gothic Surface Design"
+      ]
+    },
+    {
+      "niche1": "Dogs",
+      "niche2": "Floral",
+      "combined_keyword": "Dogs Floral",
+      "hybrid_score": 62.17,
+      "trend_score": 36.69,
+      "uniqueness_score": 100.0,
+      "synergy_score": 50.0,
+      "example_products": [
+        "Dogs Floral Seamless Pattern",
+        "Floral Dogs Fabric Design",
+        "Repeat Dogs Floral Pattern",
+        "Dogs Floral Surface Design"
+      ]
+    },
+    {
+      "niche1": "Birds",
+      "niche2": "Floral",
+      "combined_keyword": "Birds Floral",
+      "hybrid_score": 61.85,
+      "trend_score": 35.87,
+      "uniqueness_score": 100.0,
+      "synergy_score": 50.0,
+      "example_products": [
+        "Birds Floral Seamless Pattern",
+        "Floral Birds Fabric Design",
+        "Repeat Birds Floral Pattern",
+        "Birds Floral Surface Design"
+      ]
+    },
+    {
+      "niche1": "Gothic",
+      "niche2": "Floral",
+      "combined_keyword": "Gothic Floral",
+      "hybrid_score": 61.03,
+      "trend_score": 33.83,
+      "uniqueness_score": 100.0,
+      "synergy_score": 50.0,
+      "example_products": [
+        "Gothic Floral Seamless Pattern",
+        "Floral Gothic Fabric Design",
+        "Repeat Gothic Floral Pattern",
+        "Gothic Floral Surface Design"
+      ]
+    },
+    {
+      "niche1": "Mushrooms",
+      "niche2": "Cottagecore",
+      "combined_keyword": "Mushrooms Cottagecore",
+      "hybrid_score": 60.51,
+      "trend_score": 6.29,
+      "uniqueness_score": 100.0,
+      "synergy_score": 92.0,
+      "example_products": [
+        "Mushrooms Cottagecore Seamless Pattern",
+        "Cottagecore Mushrooms Fabric Design",
+        "Repeat Mushrooms Cottagecore Pattern",
+        "Mushrooms Cottagecore Surface Design"
+      ]
+    },
+    {
+      "niche1": "Dogs",
+      "niche2": "Cats",
+      "combined_keyword": "Dogs Cats",
+      "hybrid_score": 60.27,
+      "trend_score": 31.93,
+      "uniqueness_score": 100.0,
+      "synergy_score": 50.0,
+      "example_products": [
+        "Dogs Cats Seamless Pattern",
+        "Cats Dogs Fabric Design",
+        "Repeat Dogs Cats Pattern",
+        "Dogs Cats Surface Design"
+      ]
+    },
+    {
+      "niche1": "Birds",
+      "niche2": "Cats",
+      "combined_keyword": "Birds Cats",
+      "hybrid_score": 59.94,
+      "trend_score": 31.11,
+      "uniqueness_score": 100.0,
+      "synergy_score": 50.0,
+      "example_products": [
+        "Birds Cats Seamless Pattern",
+        "Cats Birds Fabric Design",
+        "Repeat Birds Cats Pattern",
+        "Birds Cats Surface Design"
+      ]
+    },
+    {
+      "niche1": "Botanical",
+      "niche2": "Japandi",
+      "combined_keyword": "Botanical Japandi",
+      "hybrid_score": 59.86,
+      "trend_score": 7.15,
+      "uniqueness_score": 100.0,
+      "synergy_score": 88.0,
+      "example_products": [
+        "Botanical Japandi Seamless Pattern",
+        "Japandi Botanical Fabric Design",
+        "Repeat Botanical Japandi Pattern",
+        "Botanical Japandi Surface Design"
+      ]
+    },
+    {
+      "niche1": "Botanical",
+      "niche2": "Cottagecore",
+      "combined_keyword": "Botanical Cottagecore",
+      "hybrid_score": 59.39,
+      "trend_score": 5.96,
+      "uniqueness_score": 100.0,
+      "synergy_score": 88.0,
+      "example_products": [
+        "Botanical Cottagecore Seamless Pattern",
+        "Cottagecore Botanical Fabric Design",
+        "Repeat Botanical Cottagecore Pattern",
+        "Botanical Cottagecore Surface Design"
+      ]
+    },
+    {
+      "niche1": "Gothic",
+      "niche2": "Cats",
+      "combined_keyword": "Gothic Cats",
+      "hybrid_score": 59.13,
+      "trend_score": 29.07,
+      "uniqueness_score": 100.0,
+      "synergy_score": 50.0,
+      "example_products": [
+        "Gothic Cats Seamless Pattern",
+        "Cats Gothic Fabric Design",
+        "Repeat Gothic Cats Pattern",
+        "Gothic Cats Surface Design"
+      ]
+    },
+    {
+      "niche1": "Floral",
+      "niche2": "Cats",
+      "combined_keyword": "Floral Cats",
+      "hybrid_score": 58.34,
+      "trend_score": 27.09,
+      "uniqueness_score": 100.0,
+      "synergy_score": 50.0,
+      "example_products": [
+        "Floral Cats Seamless Pattern",
+        "Cats Floral Fabric Design",
+        "Repeat Floral Cats Pattern",
+        "Floral Cats Surface Design"
+      ]
+    }
+  ],
+  "feasibility_scores": [
+    {
+      "niche": "Geometric",
+      "image_complexity": 20,
+      "prompt_clarity": 85,
+      "seamless_compatibility": 95,
+      "color_flexibility": 90,
+      "commercial_viability": 85,
+      "overall_feasibility": 87.5,
+      "prompt_suggestions": [
+        "seamless geometric pattern, bold shapes, minimal color palette, modern, flat design, repeat tile",
+        "abstract geometric seamless repeat, hexagons and triangles, two-tone, vector"
+      ]
+    },
+    {
+      "niche": "Boho Geometric",
+      "image_complexity": 20,
+      "prompt_clarity": 85,
+      "seamless_compatibility": 95,
+      "color_flexibility": 90,
+      "commercial_viability": 85,
+      "overall_feasibility": 87.5,
+      "prompt_suggestions": [
+        "seamless geometric pattern, bold shapes, minimal color palette, modern, flat design, repeat tile",
+        "abstract geometric seamless repeat, hexagons and triangles, two-tone, vector"
+      ]
+    },
+    {
+      "niche": "Minimalist Geometric",
+      "image_complexity": 20,
+      "prompt_clarity": 85,
+      "seamless_compatibility": 95,
+      "color_flexibility": 90,
+      "commercial_viability": 85,
+      "overall_feasibility": 87.5,
+      "prompt_suggestions": [
+        "seamless geometric pattern, bold shapes, minimal color palette, modern, flat design, repeat tile",
+        "abstract geometric seamless repeat, hexagons and triangles, two-tone, vector"
+      ]
+    },
+    {
+      "niche": "Complex Geometric",
+      "image_complexity": 20,
+      "prompt_clarity": 85,
+      "seamless_compatibility": 95,
+      "color_flexibility": 90,
+      "commercial_viability": 85,
+      "overall_feasibility": 87.5,
+      "prompt_suggestions": [
+        "seamless geometric pattern, bold shapes, minimal color palette, modern, flat design, repeat tile",
+        "abstract geometric seamless repeat, hexagons and triangles, two-tone, vector"
+      ]
+    },
+    {
+      "niche": "Organic Geometric",
+      "image_complexity": 20,
+      "prompt_clarity": 85,
+      "seamless_compatibility": 95,
+      "color_flexibility": 90,
+      "commercial_viability": 85,
+      "overall_feasibility": 87.5,
+      "prompt_suggestions": [
+        "seamless geometric pattern, bold shapes, minimal color palette, modern, flat design, repeat tile",
+        "abstract geometric seamless repeat, hexagons and triangles, two-tone, vector"
+      ]
+    },
+    {
+      "niche": "Art Deco Geometric",
+      "image_complexity": 20,
+      "prompt_clarity": 85,
+      "seamless_compatibility": 95,
+      "color_flexibility": 90,
+      "commercial_viability": 85,
+      "overall_feasibility": 87.5,
+      "prompt_suggestions": [
+        "seamless geometric pattern, bold shapes, minimal color palette, modern, flat design, repeat tile",
+        "abstract geometric seamless repeat, hexagons and triangles, two-tone, vector"
+      ]
+    },
+    {
+      "niche": "geometric",
+      "image_complexity": 20,
+      "prompt_clarity": 85,
+      "seamless_compatibility": 95,
+      "color_flexibility": 90,
+      "commercial_viability": 85,
+      "overall_feasibility": 87.5,
+      "prompt_suggestions": [
+        "seamless geometric pattern, bold shapes, minimal color palette, modern, flat design, repeat tile",
+        "abstract geometric seamless repeat, hexagons and triangles, two-tone, vector"
+      ]
+    },
+    {
+      "niche": "Floral",
+      "image_complexity": 28,
+      "prompt_clarity": 88,
+      "seamless_compatibility": 92,
+      "color_flexibility": 90,
+      "commercial_viability": 90,
+      "overall_feasibility": 87.2,
+      "prompt_suggestions": [
+        "seamless floral pattern, watercolor roses and peonies, soft pastel tones, white background, repeat",
+        "ditsy floral seamless pattern, small flowers, botanical illustration style, light background"
+      ]
+    },
+    {
+      "niche": "Ditsy Floral",
+      "image_complexity": 28,
+      "prompt_clarity": 88,
+      "seamless_compatibility": 92,
+      "color_flexibility": 90,
+      "commercial_viability": 90,
+      "overall_feasibility": 87.2,
+      "prompt_suggestions": [
+        "seamless floral pattern, watercolor roses and peonies, soft pastel tones, white background, repeat",
+        "ditsy floral seamless pattern, small flowers, botanical illustration style, light background"
+      ]
+    },
+    {
+      "niche": "Boho Floral",
+      "image_complexity": 28,
+      "prompt_clarity": 88,
+      "seamless_compatibility": 92,
+      "color_flexibility": 90,
+      "commercial_viability": 90,
+      "overall_feasibility": 87.2,
+      "prompt_suggestions": [
+        "seamless floral pattern, watercolor roses and peonies, soft pastel tones, white background, repeat",
+        "ditsy floral seamless pattern, small flowers, botanical illustration style, light background"
+      ]
+    },
+    {
+      "niche": "Watercolor Floral",
+      "image_complexity": 28,
+      "prompt_clarity": 88,
+      "seamless_compatibility": 92,
+      "color_flexibility": 90,
+      "commercial_viability": 90,
+      "overall_feasibility": 87.2,
+      "prompt_suggestions": [
+        "seamless floral pattern, watercolor roses and peonies, soft pastel tones, white background, repeat",
+        "ditsy floral seamless pattern, small flowers, botanical illustration style, light background"
+      ]
+    },
+    {
+      "niche": "Art Nouveau Floral",
+      "image_complexity": 28,
+      "prompt_clarity": 88,
+      "seamless_compatibility": 92,
+      "color_flexibility": 90,
+      "commercial_viability": 90,
+      "overall_feasibility": 87.2,
+      "prompt_suggestions": [
+        "seamless floral pattern, watercolor roses and peonies, soft pastel tones, white background, repeat",
+        "ditsy floral seamless pattern, small flowers, botanical illustration style, light background"
+      ]
+    },
+    {
+      "niche": "Art Deco Floral",
+      "image_complexity": 28,
+      "prompt_clarity": 88,
+      "seamless_compatibility": 92,
+      "color_flexibility": 90,
+      "commercial_viability": 90,
+      "overall_feasibility": 87.2,
+      "prompt_suggestions": [
+        "seamless floral pattern, watercolor roses and peonies, soft pastel tones, white background, repeat",
+        "ditsy floral seamless pattern, small flowers, botanical illustration style, light background"
+      ]
+    },
+    {
+      "niche": "floral",
+      "image_complexity": 28,
+      "prompt_clarity": 88,
+      "seamless_compatibility": 92,
+      "color_flexibility": 90,
+      "commercial_viability": 90,
+      "overall_feasibility": 87.2,
+      "prompt_suggestions": [
+        "seamless floral pattern, watercolor roses and peonies, soft pastel tones, white background, repeat",
+        "ditsy floral seamless pattern, small flowers, botanical illustration style, light background"
+      ]
+    },
+    {
+      "niche": "Minimalist",
+      "image_complexity": 15,
+      "prompt_clarity": 90,
+      "seamless_compatibility": 88,
+      "color_flexibility": 85,
+      "commercial_viability": 82,
+      "overall_feasibility": 86.8,
+      "prompt_suggestions": [
+        "seamless Minimalist pattern, repeat tile, high quality, surface design, white background",
+        "Minimalist seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "minimalist",
+      "image_complexity": 15,
+      "prompt_clarity": 90,
+      "seamless_compatibility": 88,
+      "color_flexibility": 85,
+      "commercial_viability": 82,
+      "overall_feasibility": 86.8,
+      "prompt_suggestions": [
+        "seamless minimalist pattern, repeat tile, high quality, surface design, white background",
+        "minimalist seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Botanical",
+      "image_complexity": 30,
+      "prompt_clarity": 90,
+      "seamless_compatibility": 90,
+      "color_flexibility": 85,
+      "commercial_viability": 88,
+      "overall_feasibility": 86.0,
+      "prompt_suggestions": [
+        "seamless botanical pattern, watercolor leaves and branches, white background, repeat tile, high detail",
+        "endless botanical print, tropical leaves, flat design, vector style, pastel colors"
+      ]
+    },
+    {
+      "niche": "Victorian Botanical",
+      "image_complexity": 30,
+      "prompt_clarity": 90,
+      "seamless_compatibility": 90,
+      "color_flexibility": 85,
+      "commercial_viability": 88,
+      "overall_feasibility": 86.0,
+      "prompt_suggestions": [
+        "seamless botanical pattern, watercolor leaves and branches, white background, repeat tile, high detail",
+        "endless botanical print, tropical leaves, flat design, vector style, pastel colors"
+      ]
+    },
+    {
+      "niche": "Scientific Botanical",
+      "image_complexity": 30,
+      "prompt_clarity": 90,
+      "seamless_compatibility": 90,
+      "color_flexibility": 85,
+      "commercial_viability": 88,
+      "overall_feasibility": 86.0,
+      "prompt_suggestions": [
+        "seamless botanical pattern, watercolor leaves and branches, white background, repeat tile, high detail",
+        "endless botanical print, tropical leaves, flat design, vector style, pastel colors"
+      ]
+    },
+    {
+      "niche": "Dark Academia Botanical",
+      "image_complexity": 30,
+      "prompt_clarity": 90,
+      "seamless_compatibility": 90,
+      "color_flexibility": 85,
+      "commercial_viability": 88,
+      "overall_feasibility": 86.0,
+      "prompt_suggestions": [
+        "seamless botanical pattern, watercolor leaves and branches, white background, repeat tile, high detail",
+        "endless botanical print, tropical leaves, flat design, vector style, pastel colors"
+      ]
+    },
+    {
+      "niche": "botanical",
+      "image_complexity": 30,
+      "prompt_clarity": 90,
+      "seamless_compatibility": 90,
+      "color_flexibility": 85,
+      "commercial_viability": 88,
+      "overall_feasibility": 86.0,
+      "prompt_suggestions": [
+        "seamless botanical pattern, watercolor leaves and branches, white background, repeat tile, high detail",
+        "endless botanical print, tropical leaves, flat design, vector style, pastel colors"
+      ]
+    },
+    {
+      "niche": "Mushrooms",
+      "image_complexity": 32,
+      "prompt_clarity": 88,
+      "seamless_compatibility": 88,
+      "color_flexibility": 82,
+      "commercial_viability": 82,
+      "overall_feasibility": 83.2,
+      "prompt_suggestions": [
+        "seamless mushroom pattern, cute illustrated mushrooms, cottagecore style, pastel, white background",
+        "hand-drawn mushroom seamless repeat, forest floor, earthy tones, botanical illustration"
+      ]
+    },
+    {
+      "niche": "Wild Mushrooms",
+      "image_complexity": 32,
+      "prompt_clarity": 88,
+      "seamless_compatibility": 88,
+      "color_flexibility": 82,
+      "commercial_viability": 82,
+      "overall_feasibility": 83.2,
+      "prompt_suggestions": [
+        "seamless mushroom pattern, cute illustrated mushrooms, cottagecore style, pastel, white background",
+        "hand-drawn mushroom seamless repeat, forest floor, earthy tones, botanical illustration"
+      ]
+    },
+    {
+      "niche": "Cute Mushrooms",
+      "image_complexity": 32,
+      "prompt_clarity": 88,
+      "seamless_compatibility": 88,
+      "color_flexibility": 82,
+      "commercial_viability": 82,
+      "overall_feasibility": 83.2,
+      "prompt_suggestions": [
+        "seamless mushroom pattern, cute illustrated mushrooms, cottagecore style, pastel, white background",
+        "hand-drawn mushroom seamless repeat, forest floor, earthy tones, botanical illustration"
+      ]
+    },
+    {
+      "niche": "Psychedelic Mushrooms",
+      "image_complexity": 32,
+      "prompt_clarity": 88,
+      "seamless_compatibility": 88,
+      "color_flexibility": 82,
+      "commercial_viability": 82,
+      "overall_feasibility": 83.2,
+      "prompt_suggestions": [
+        "seamless mushroom pattern, cute illustrated mushrooms, cottagecore style, pastel, white background",
+        "hand-drawn mushroom seamless repeat, forest floor, earthy tones, botanical illustration"
+      ]
+    },
+    {
+      "niche": "Goblincore Mushrooms",
+      "image_complexity": 32,
+      "prompt_clarity": 88,
+      "seamless_compatibility": 88,
+      "color_flexibility": 82,
+      "commercial_viability": 82,
+      "overall_feasibility": 83.2,
+      "prompt_suggestions": [
+        "seamless mushroom pattern, cute illustrated mushrooms, cottagecore style, pastel, white background",
+        "hand-drawn mushroom seamless repeat, forest floor, earthy tones, botanical illustration"
+      ]
+    },
+    {
+      "niche": "mushrooms",
+      "image_complexity": 32,
+      "prompt_clarity": 88,
+      "seamless_compatibility": 88,
+      "color_flexibility": 82,
+      "commercial_viability": 82,
+      "overall_feasibility": 83.2,
+      "prompt_suggestions": [
+        "seamless mushroom pattern, cute illustrated mushrooms, cottagecore style, pastel, white background",
+        "hand-drawn mushroom seamless repeat, forest floor, earthy tones, botanical illustration"
+      ]
+    },
+    {
+      "niche": "Tropical",
+      "image_complexity": 35,
+      "prompt_clarity": 85,
+      "seamless_compatibility": 88,
+      "color_flexibility": 88,
+      "commercial_viability": 82,
+      "overall_feasibility": 82.8,
+      "prompt_suggestions": [
+        "seamless Tropical pattern, repeat tile, high quality, surface design, white background",
+        "Tropical seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Tropical Flowers",
+      "image_complexity": 35,
+      "prompt_clarity": 85,
+      "seamless_compatibility": 88,
+      "color_flexibility": 88,
+      "commercial_viability": 82,
+      "overall_feasibility": 82.8,
+      "prompt_suggestions": [
+        "seamless Tropical Flowers pattern, repeat tile, high quality, surface design, white background",
+        "Tropical Flowers seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Tropical Leaves",
+      "image_complexity": 35,
+      "prompt_clarity": 85,
+      "seamless_compatibility": 88,
+      "color_flexibility": 88,
+      "commercial_viability": 82,
+      "overall_feasibility": 82.8,
+      "prompt_suggestions": [
+        "seamless Tropical Leaves pattern, repeat tile, high quality, surface design, white background",
+        "Tropical Leaves seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "tropical",
+      "image_complexity": 35,
+      "prompt_clarity": 85,
+      "seamless_compatibility": 88,
+      "color_flexibility": 88,
+      "commercial_viability": 82,
+      "overall_feasibility": 82.8,
+      "prompt_suggestions": [
+        "seamless tropical pattern, repeat tile, high quality, surface design, white background",
+        "tropical seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Scandinavian Christmas",
+      "image_complexity": 28,
+      "prompt_clarity": 82,
+      "seamless_compatibility": 85,
+      "color_flexibility": 80,
+      "commercial_viability": 90,
+      "overall_feasibility": 82.2,
+      "prompt_suggestions": [
+        "seamless Scandinavian Christmas pattern, repeat tile, high quality, surface design, white background",
+        "Scandinavian Christmas seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Celestial",
+      "image_complexity": 35,
+      "prompt_clarity": 85,
+      "seamless_compatibility": 85,
+      "color_flexibility": 80,
+      "commercial_viability": 85,
+      "overall_feasibility": 81.2,
+      "prompt_suggestions": [
+        "seamless celestial pattern, moons stars constellations, dark navy background, gold details, repeat",
+        "celestial seamless pattern, sun and moon faces, watercolor style, mystical"
+      ]
+    },
+    {
+      "niche": "Christmas",
+      "image_complexity": 38,
+      "prompt_clarity": 88,
+      "seamless_compatibility": 85,
+      "color_flexibility": 72,
+      "commercial_viability": 90,
+      "overall_feasibility": 81.2,
+      "prompt_suggestions": [
+        "seamless Christmas pattern, repeat tile, high quality, surface design, white background",
+        "Christmas seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Traditional Christmas",
+      "image_complexity": 38,
+      "prompt_clarity": 88,
+      "seamless_compatibility": 85,
+      "color_flexibility": 72,
+      "commercial_viability": 90,
+      "overall_feasibility": 81.2,
+      "prompt_suggestions": [
+        "seamless Traditional Christmas pattern, repeat tile, high quality, surface design, white background",
+        "Traditional Christmas seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Gothic Christmas",
+      "image_complexity": 38,
+      "prompt_clarity": 88,
+      "seamless_compatibility": 85,
+      "color_flexibility": 72,
+      "commercial_viability": 90,
+      "overall_feasibility": 81.2,
+      "prompt_suggestions": [
+        "seamless Gothic Christmas pattern, repeat tile, high quality, surface design, white background",
+        "Gothic Christmas seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "christmas",
+      "image_complexity": 38,
+      "prompt_clarity": 88,
+      "seamless_compatibility": 85,
+      "color_flexibility": 72,
+      "commercial_viability": 90,
+      "overall_feasibility": 81.2,
+      "prompt_suggestions": [
+        "seamless christmas pattern, repeat tile, high quality, surface design, white background",
+        "christmas seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "celestial",
+      "image_complexity": 35,
+      "prompt_clarity": 85,
+      "seamless_compatibility": 85,
+      "color_flexibility": 80,
+      "commercial_viability": 85,
+      "overall_feasibility": 81.2,
+      "prompt_suggestions": [
+        "seamless celestial pattern, moons stars constellations, dark navy background, gold details, repeat",
+        "celestial seamless pattern, sun and moon faces, watercolor style, mystical"
+      ]
+    },
+    {
+      "niche": "Scandinavian",
+      "image_complexity": 28,
+      "prompt_clarity": 82,
+      "seamless_compatibility": 85,
+      "color_flexibility": 80,
+      "commercial_viability": 80,
+      "overall_feasibility": 80.7,
+      "prompt_suggestions": [
+        "seamless Scandinavian pattern, repeat tile, high quality, surface design, white background",
+        "Scandinavian seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Halloween",
+      "image_complexity": 40,
+      "prompt_clarity": 88,
+      "seamless_compatibility": 85,
+      "color_flexibility": 72,
+      "commercial_viability": 88,
+      "overall_feasibility": 80.7,
+      "prompt_suggestions": [
+        "seamless Halloween pattern, repeat tile, high quality, surface design, white background",
+        "Halloween seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Scandinavian Folk",
+      "image_complexity": 28,
+      "prompt_clarity": 82,
+      "seamless_compatibility": 85,
+      "color_flexibility": 80,
+      "commercial_viability": 80,
+      "overall_feasibility": 80.7,
+      "prompt_suggestions": [
+        "seamless Scandinavian Folk pattern, repeat tile, high quality, surface design, white background",
+        "Scandinavian Folk seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Cute Halloween",
+      "image_complexity": 40,
+      "prompt_clarity": 88,
+      "seamless_compatibility": 85,
+      "color_flexibility": 72,
+      "commercial_viability": 88,
+      "overall_feasibility": 80.7,
+      "prompt_suggestions": [
+        "seamless Cute Halloween pattern, repeat tile, high quality, surface design, white background",
+        "Cute Halloween seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Gothic Halloween",
+      "image_complexity": 40,
+      "prompt_clarity": 88,
+      "seamless_compatibility": 85,
+      "color_flexibility": 72,
+      "commercial_viability": 88,
+      "overall_feasibility": 80.7,
+      "prompt_suggestions": [
+        "seamless Gothic Halloween pattern, repeat tile, high quality, surface design, white background",
+        "Gothic Halloween seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "halloween",
+      "image_complexity": 40,
+      "prompt_clarity": 88,
+      "seamless_compatibility": 85,
+      "color_flexibility": 72,
+      "commercial_viability": 88,
+      "overall_feasibility": 80.7,
+      "prompt_suggestions": [
+        "seamless halloween pattern, repeat tile, high quality, surface design, white background",
+        "halloween seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "scandinavian",
+      "image_complexity": 28,
+      "prompt_clarity": 82,
+      "seamless_compatibility": 85,
+      "color_flexibility": 80,
+      "commercial_viability": 80,
+      "overall_feasibility": 80.7,
+      "prompt_suggestions": [
+        "seamless scandinavian pattern, repeat tile, high quality, surface design, white background",
+        "scandinavian seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Moroccan",
+      "image_complexity": 38,
+      "prompt_clarity": 82,
+      "seamless_compatibility": 92,
+      "color_flexibility": 88,
+      "commercial_viability": 70,
+      "overall_feasibility": 80.6,
+      "prompt_suggestions": [
+        "seamless Moroccan pattern, repeat tile, high quality, surface design, white background",
+        "Moroccan seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "moroccan",
+      "image_complexity": 38,
+      "prompt_clarity": 82,
+      "seamless_compatibility": 92,
+      "color_flexibility": 88,
+      "commercial_viability": 70,
+      "overall_feasibility": 80.6,
+      "prompt_suggestions": [
+        "seamless moroccan pattern, repeat tile, high quality, surface design, white background",
+        "moroccan seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Butterflies",
+      "image_complexity": 38,
+      "prompt_clarity": 85,
+      "seamless_compatibility": 88,
+      "color_flexibility": 88,
+      "commercial_viability": 70,
+      "overall_feasibility": 80.5,
+      "prompt_suggestions": [
+        "seamless Butterflies pattern, repeat tile, high quality, surface design, white background",
+        "Butterflies seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "butterflies",
+      "image_complexity": 38,
+      "prompt_clarity": 85,
+      "seamless_compatibility": 88,
+      "color_flexibility": 88,
+      "commercial_viability": 70,
+      "overall_feasibility": 80.5,
+      "prompt_suggestions": [
+        "seamless butterflies pattern, repeat tile, high quality, surface design, white background",
+        "butterflies seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Watercolor",
+      "image_complexity": 35,
+      "prompt_clarity": 82,
+      "seamless_compatibility": 80,
+      "color_flexibility": 88,
+      "commercial_viability": 85,
+      "overall_feasibility": 80.3,
+      "prompt_suggestions": [
+        "seamless Watercolor pattern, repeat tile, high quality, surface design, white background",
+        "Watercolor seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Abstract Watercolor",
+      "image_complexity": 35,
+      "prompt_clarity": 82,
+      "seamless_compatibility": 80,
+      "color_flexibility": 88,
+      "commercial_viability": 85,
+      "overall_feasibility": 80.3,
+      "prompt_suggestions": [
+        "seamless Abstract Watercolor pattern, repeat tile, high quality, surface design, white background",
+        "Abstract Watercolor seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Watercolor Crystals",
+      "image_complexity": 35,
+      "prompt_clarity": 82,
+      "seamless_compatibility": 80,
+      "color_flexibility": 88,
+      "commercial_viability": 85,
+      "overall_feasibility": 80.3,
+      "prompt_suggestions": [
+        "seamless Watercolor Crystals pattern, repeat tile, high quality, surface design, white background",
+        "Watercolor Crystals seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "watercolor",
+      "image_complexity": 35,
+      "prompt_clarity": 82,
+      "seamless_compatibility": 80,
+      "color_flexibility": 88,
+      "commercial_viability": 85,
+      "overall_feasibility": 80.3,
+      "prompt_suggestions": [
+        "seamless watercolor pattern, repeat tile, high quality, surface design, white background",
+        "watercolor seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Japandi",
+      "image_complexity": 25,
+      "prompt_clarity": 82,
+      "seamless_compatibility": 85,
+      "color_flexibility": 75,
+      "commercial_viability": 78,
+      "overall_feasibility": 80.0,
+      "prompt_suggestions": [
+        "seamless Japandi pattern, repeat tile, high quality, surface design, white background",
+        "Japandi seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Crystals & Gems",
+      "image_complexity": 38,
+      "prompt_clarity": 85,
+      "seamless_compatibility": 82,
+      "color_flexibility": 85,
+      "commercial_viability": 80,
+      "overall_feasibility": 80.0,
+      "prompt_suggestions": [
+        "seamless Crystals & Gems pattern, repeat tile, high quality, surface design, white background",
+        "Crystals & Gems seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Retro Christmas",
+      "image_complexity": 38,
+      "prompt_clarity": 80,
+      "seamless_compatibility": 82,
+      "color_flexibility": 85,
+      "commercial_viability": 90,
+      "overall_feasibility": 80.0,
+      "prompt_suggestions": [
+        "seamless Retro Christmas pattern, repeat tile, high quality, surface design, white background",
+        "Retro Christmas seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "japandi",
+      "image_complexity": 25,
+      "prompt_clarity": 82,
+      "seamless_compatibility": 85,
+      "color_flexibility": 75,
+      "commercial_viability": 78,
+      "overall_feasibility": 80.0,
+      "prompt_suggestions": [
+        "seamless japandi pattern, repeat tile, high quality, surface design, white background",
+        "japandi seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "crystals",
+      "image_complexity": 38,
+      "prompt_clarity": 85,
+      "seamless_compatibility": 82,
+      "color_flexibility": 85,
+      "commercial_viability": 80,
+      "overall_feasibility": 80.0,
+      "prompt_suggestions": [
+        "seamless crystals pattern, repeat tile, high quality, surface design, white background",
+        "crystals seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "abstract",
+      "image_complexity": 30,
+      "prompt_clarity": 75,
+      "seamless_compatibility": 85,
+      "color_flexibility": 92,
+      "commercial_viability": 78,
+      "overall_feasibility": 79.8,
+      "prompt_suggestions": [
+        "seamless abstract pattern, repeat tile, high quality, surface design, white background",
+        "abstract seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Cats",
+      "image_complexity": 45,
+      "prompt_clarity": 85,
+      "seamless_compatibility": 82,
+      "color_flexibility": 80,
+      "commercial_viability": 88,
+      "overall_feasibility": 79.5,
+      "prompt_suggestions": [
+        "seamless pattern with cute cats, various poses, cartoon style, pastel background, repeat",
+        "minimalist cat silhouette seamless pattern, black and white, geometric"
+      ]
+    },
+    {
+      "niche": "Cottagecore",
+      "image_complexity": 40,
+      "prompt_clarity": 80,
+      "seamless_compatibility": 82,
+      "color_flexibility": 85,
+      "commercial_viability": 88,
+      "overall_feasibility": 79.5,
+      "prompt_suggestions": [
+        "seamless Cottagecore pattern, repeat tile, high quality, surface design, white background",
+        "Cottagecore seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Cute Cats",
+      "image_complexity": 45,
+      "prompt_clarity": 85,
+      "seamless_compatibility": 82,
+      "color_flexibility": 80,
+      "commercial_viability": 88,
+      "overall_feasibility": 79.5,
+      "prompt_suggestions": [
+        "seamless pattern with cute cats, various poses, cartoon style, pastel background, repeat",
+        "minimalist cat silhouette seamless pattern, black and white, geometric"
+      ]
+    },
+    {
+      "niche": "Realistic Cats",
+      "image_complexity": 45,
+      "prompt_clarity": 85,
+      "seamless_compatibility": 82,
+      "color_flexibility": 80,
+      "commercial_viability": 88,
+      "overall_feasibility": 79.5,
+      "prompt_suggestions": [
+        "seamless pattern with cute cats, various poses, cartoon style, pastel background, repeat",
+        "minimalist cat silhouette seamless pattern, black and white, geometric"
+      ]
+    },
+    {
+      "niche": "Mystical Cats",
+      "image_complexity": 45,
+      "prompt_clarity": 85,
+      "seamless_compatibility": 82,
+      "color_flexibility": 80,
+      "commercial_viability": 88,
+      "overall_feasibility": 79.5,
+      "prompt_suggestions": [
+        "seamless pattern with cute cats, various poses, cartoon style, pastel background, repeat",
+        "minimalist cat silhouette seamless pattern, black and white, geometric"
+      ]
+    },
+    {
+      "niche": "Romantic Cottagecore",
+      "image_complexity": 40,
+      "prompt_clarity": 80,
+      "seamless_compatibility": 82,
+      "color_flexibility": 85,
+      "commercial_viability": 88,
+      "overall_feasibility": 79.5,
+      "prompt_suggestions": [
+        "seamless Romantic Cottagecore pattern, repeat tile, high quality, surface design, white background",
+        "Romantic Cottagecore seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Autumn Cottagecore",
+      "image_complexity": 40,
+      "prompt_clarity": 80,
+      "seamless_compatibility": 82,
+      "color_flexibility": 85,
+      "commercial_viability": 88,
+      "overall_feasibility": 79.5,
+      "prompt_suggestions": [
+        "seamless Autumn Cottagecore pattern, repeat tile, high quality, surface design, white background",
+        "Autumn Cottagecore seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Fairy Cottagecore",
+      "image_complexity": 40,
+      "prompt_clarity": 80,
+      "seamless_compatibility": 82,
+      "color_flexibility": 85,
+      "commercial_viability": 88,
+      "overall_feasibility": 79.5,
+      "prompt_suggestions": [
+        "seamless Fairy Cottagecore pattern, repeat tile, high quality, surface design, white background",
+        "Fairy Cottagecore seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Cottagecore Tarot",
+      "image_complexity": 40,
+      "prompt_clarity": 80,
+      "seamless_compatibility": 82,
+      "color_flexibility": 85,
+      "commercial_viability": 88,
+      "overall_feasibility": 79.5,
+      "prompt_suggestions": [
+        "seamless Cottagecore Tarot pattern, repeat tile, high quality, surface design, white background",
+        "Cottagecore Tarot seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Halloween Cottagecore",
+      "image_complexity": 40,
+      "prompt_clarity": 80,
+      "seamless_compatibility": 82,
+      "color_flexibility": 85,
+      "commercial_viability": 88,
+      "overall_feasibility": 79.5,
+      "prompt_suggestions": [
+        "seamless Halloween Cottagecore pattern, repeat tile, high quality, surface design, white background",
+        "Halloween Cottagecore seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "cats",
+      "image_complexity": 45,
+      "prompt_clarity": 85,
+      "seamless_compatibility": 82,
+      "color_flexibility": 80,
+      "commercial_viability": 88,
+      "overall_feasibility": 79.5,
+      "prompt_suggestions": [
+        "seamless pattern with cute cats, various poses, cartoon style, pastel background, repeat",
+        "minimalist cat silhouette seamless pattern, black and white, geometric"
+      ]
+    },
+    {
+      "niche": "cottagecore",
+      "image_complexity": 40,
+      "prompt_clarity": 80,
+      "seamless_compatibility": 82,
+      "color_flexibility": 85,
+      "commercial_viability": 88,
+      "overall_feasibility": 79.5,
+      "prompt_suggestions": [
+        "seamless cottagecore pattern, repeat tile, high quality, surface design, white background",
+        "cottagecore seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Retro & Vintage",
+      "image_complexity": 38,
+      "prompt_clarity": 80,
+      "seamless_compatibility": 82,
+      "color_flexibility": 85,
+      "commercial_viability": 78,
+      "overall_feasibility": 78.2,
+      "prompt_suggestions": [
+        "seamless Retro & Vintage pattern, repeat tile, high quality, surface design, white background",
+        "Retro & Vintage seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "50s-60s Retro",
+      "image_complexity": 38,
+      "prompt_clarity": 80,
+      "seamless_compatibility": 82,
+      "color_flexibility": 85,
+      "commercial_viability": 78,
+      "overall_feasibility": 78.2,
+      "prompt_suggestions": [
+        "seamless 50s-60s Retro pattern, repeat tile, high quality, surface design, white background",
+        "50s-60s Retro seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "70s-80s Retro",
+      "image_complexity": 38,
+      "prompt_clarity": 80,
+      "seamless_compatibility": 82,
+      "color_flexibility": 85,
+      "commercial_viability": 78,
+      "overall_feasibility": 78.2,
+      "prompt_suggestions": [
+        "seamless 70s-80s Retro pattern, repeat tile, high quality, surface design, white background",
+        "70s-80s Retro seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "retro",
+      "image_complexity": 38,
+      "prompt_clarity": 80,
+      "seamless_compatibility": 82,
+      "color_flexibility": 85,
+      "commercial_viability": 78,
+      "overall_feasibility": 78.2,
+      "prompt_suggestions": [
+        "seamless retro pattern, repeat tile, high quality, surface design, white background",
+        "retro seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Bees",
+      "image_complexity": 35,
+      "prompt_clarity": 82,
+      "seamless_compatibility": 85,
+      "color_flexibility": 80,
+      "commercial_viability": 70,
+      "overall_feasibility": 78.1,
+      "prompt_suggestions": [
+        "seamless Bees pattern, repeat tile, high quality, surface design, white background",
+        "Bees seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "bees",
+      "image_complexity": 35,
+      "prompt_clarity": 82,
+      "seamless_compatibility": 85,
+      "color_flexibility": 80,
+      "commercial_viability": 70,
+      "overall_feasibility": 78.1,
+      "prompt_suggestions": [
+        "seamless bees pattern, repeat tile, high quality, surface design, white background",
+        "bees seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Tropical Birds",
+      "image_complexity": 42,
+      "prompt_clarity": 80,
+      "seamless_compatibility": 82,
+      "color_flexibility": 82,
+      "commercial_viability": 82,
+      "overall_feasibility": 77.8,
+      "prompt_suggestions": [
+        "seamless Tropical Birds pattern, repeat tile, high quality, surface design, white background",
+        "Tropical Birds seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Japanese",
+      "image_complexity": 42,
+      "prompt_clarity": 82,
+      "seamless_compatibility": 85,
+      "color_flexibility": 82,
+      "commercial_viability": 70,
+      "overall_feasibility": 77.3,
+      "prompt_suggestions": [
+        "seamless Japanese pattern, repeat tile, high quality, surface design, white background",
+        "Japanese seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Traditional Japanese",
+      "image_complexity": 42,
+      "prompt_clarity": 82,
+      "seamless_compatibility": 85,
+      "color_flexibility": 82,
+      "commercial_viability": 70,
+      "overall_feasibility": 77.3,
+      "prompt_suggestions": [
+        "seamless Traditional Japanese pattern, repeat tile, high quality, surface design, white background",
+        "Traditional Japanese seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "japanese",
+      "image_complexity": 42,
+      "prompt_clarity": 82,
+      "seamless_compatibility": 85,
+      "color_flexibility": 82,
+      "commercial_viability": 70,
+      "overall_feasibility": 77.3,
+      "prompt_suggestions": [
+        "seamless japanese pattern, repeat tile, high quality, surface design, white background",
+        "japanese seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Dogs",
+      "image_complexity": 48,
+      "prompt_clarity": 83,
+      "seamless_compatibility": 80,
+      "color_flexibility": 78,
+      "commercial_viability": 85,
+      "overall_feasibility": 77.2,
+      "prompt_suggestions": [
+        "seamless Dogs pattern, repeat tile, high quality, surface design, white background",
+        "Dogs seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Boho",
+      "image_complexity": 40,
+      "prompt_clarity": 78,
+      "seamless_compatibility": 80,
+      "color_flexibility": 85,
+      "commercial_viability": 80,
+      "overall_feasibility": 77.2,
+      "prompt_suggestions": [
+        "seamless Boho pattern, repeat tile, high quality, surface design, white background",
+        "Boho seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Purebred Dogs",
+      "image_complexity": 48,
+      "prompt_clarity": 83,
+      "seamless_compatibility": 80,
+      "color_flexibility": 78,
+      "commercial_viability": 85,
+      "overall_feasibility": 77.2,
+      "prompt_suggestions": [
+        "seamless Purebred Dogs pattern, repeat tile, high quality, surface design, white background",
+        "Purebred Dogs seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "dogs",
+      "image_complexity": 48,
+      "prompt_clarity": 83,
+      "seamless_compatibility": 80,
+      "color_flexibility": 78,
+      "commercial_viability": 85,
+      "overall_feasibility": 77.2,
+      "prompt_suggestions": [
+        "seamless dogs pattern, repeat tile, high quality, surface design, white background",
+        "dogs seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "boho",
+      "image_complexity": 40,
+      "prompt_clarity": 78,
+      "seamless_compatibility": 80,
+      "color_flexibility": 85,
+      "commercial_viability": 80,
+      "overall_feasibility": 77.2,
+      "prompt_suggestions": [
+        "seamless boho pattern, repeat tile, high quality, surface design, white background",
+        "boho seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Birds",
+      "image_complexity": 42,
+      "prompt_clarity": 80,
+      "seamless_compatibility": 82,
+      "color_flexibility": 82,
+      "commercial_viability": 70,
+      "overall_feasibility": 76.0,
+      "prompt_suggestions": [
+        "seamless Birds pattern, repeat tile, high quality, surface design, white background",
+        "Birds seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Foxes",
+      "image_complexity": 44,
+      "prompt_clarity": 82,
+      "seamless_compatibility": 82,
+      "color_flexibility": 80,
+      "commercial_viability": 70,
+      "overall_feasibility": 76.0,
+      "prompt_suggestions": [
+        "seamless Foxes pattern, repeat tile, high quality, surface design, white background",
+        "Foxes seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Songbirds",
+      "image_complexity": 42,
+      "prompt_clarity": 80,
+      "seamless_compatibility": 82,
+      "color_flexibility": 82,
+      "commercial_viability": 70,
+      "overall_feasibility": 76.0,
+      "prompt_suggestions": [
+        "seamless Songbirds pattern, repeat tile, high quality, surface design, white background",
+        "Songbirds seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "birds",
+      "image_complexity": 42,
+      "prompt_clarity": 80,
+      "seamless_compatibility": 82,
+      "color_flexibility": 82,
+      "commercial_viability": 70,
+      "overall_feasibility": 76.0,
+      "prompt_suggestions": [
+        "seamless birds pattern, repeat tile, high quality, surface design, white background",
+        "birds seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "foxes",
+      "image_complexity": 44,
+      "prompt_clarity": 82,
+      "seamless_compatibility": 82,
+      "color_flexibility": 80,
+      "commercial_viability": 70,
+      "overall_feasibility": 76.0,
+      "prompt_suggestions": [
+        "seamless foxes pattern, repeat tile, high quality, surface design, white background",
+        "foxes seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Witchy & Occult",
+      "image_complexity": 45,
+      "prompt_clarity": 78,
+      "seamless_compatibility": 80,
+      "color_flexibility": 78,
+      "commercial_viability": 80,
+      "overall_feasibility": 75.3,
+      "prompt_suggestions": [
+        "seamless Witchy & Occult pattern, repeat tile, high quality, surface design, white background",
+        "Witchy & Occult seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Modern Witchy",
+      "image_complexity": 45,
+      "prompt_clarity": 78,
+      "seamless_compatibility": 80,
+      "color_flexibility": 78,
+      "commercial_viability": 80,
+      "overall_feasibility": 75.3,
+      "prompt_suggestions": [
+        "seamless Modern Witchy pattern, repeat tile, high quality, surface design, white background",
+        "Modern Witchy seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Gothic Witchy",
+      "image_complexity": 45,
+      "prompt_clarity": 78,
+      "seamless_compatibility": 80,
+      "color_flexibility": 78,
+      "commercial_viability": 80,
+      "overall_feasibility": 75.3,
+      "prompt_suggestions": [
+        "seamless Gothic Witchy pattern, repeat tile, high quality, surface design, white background",
+        "Gothic Witchy seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "witchy",
+      "image_complexity": 45,
+      "prompt_clarity": 78,
+      "seamless_compatibility": 80,
+      "color_flexibility": 78,
+      "commercial_viability": 80,
+      "overall_feasibility": 75.3,
+      "prompt_suggestions": [
+        "seamless witchy pattern, repeat tile, high quality, surface design, white background",
+        "witchy seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Witchy & Occulte",
+      "image_complexity": 45,
+      "prompt_clarity": 78,
+      "seamless_compatibility": 80,
+      "color_flexibility": 78,
+      "commercial_viability": 80,
+      "overall_feasibility": 75.3,
+      "prompt_suggestions": [
+        "seamless Witchy & Occulte pattern, repeat tile, high quality, surface design, white background",
+        "Witchy & Occulte seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Ocean & Marine",
+      "image_complexity": 42,
+      "prompt_clarity": 80,
+      "seamless_compatibility": 80,
+      "color_flexibility": 80,
+      "commercial_viability": 70,
+      "overall_feasibility": 75.2,
+      "prompt_suggestions": [
+        "seamless Ocean & Marine pattern, repeat tile, high quality, surface design, white background",
+        "Ocean & Marine seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "ocean",
+      "image_complexity": 42,
+      "prompt_clarity": 80,
+      "seamless_compatibility": 80,
+      "color_flexibility": 80,
+      "commercial_viability": 70,
+      "overall_feasibility": 75.2,
+      "prompt_suggestions": [
+        "seamless ocean pattern, repeat tile, high quality, surface design, white background",
+        "ocean seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Astrology",
+      "image_complexity": 42,
+      "prompt_clarity": 80,
+      "seamless_compatibility": 80,
+      "color_flexibility": 78,
+      "commercial_viability": 70,
+      "overall_feasibility": 74.9,
+      "prompt_suggestions": [
+        "seamless Astrology pattern, repeat tile, high quality, surface design, white background",
+        "Astrology seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "astrology",
+      "image_complexity": 42,
+      "prompt_clarity": 80,
+      "seamless_compatibility": 80,
+      "color_flexibility": 78,
+      "commercial_viability": 70,
+      "overall_feasibility": 74.9,
+      "prompt_suggestions": [
+        "seamless astrology pattern, repeat tile, high quality, surface design, white background",
+        "astrology seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Vintage Advertising",
+      "image_complexity": 42,
+      "prompt_clarity": 78,
+      "seamless_compatibility": 78,
+      "color_flexibility": 80,
+      "commercial_viability": 75,
+      "overall_feasibility": 74.8,
+      "prompt_suggestions": [
+        "seamless Vintage Advertising pattern, repeat tile, high quality, surface design, white background",
+        "Vintage Advertising seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "vintage",
+      "image_complexity": 42,
+      "prompt_clarity": 78,
+      "seamless_compatibility": 78,
+      "color_flexibility": 80,
+      "commercial_viability": 75,
+      "overall_feasibility": 74.8,
+      "prompt_suggestions": [
+        "seamless vintage pattern, repeat tile, high quality, surface design, white background",
+        "vintage seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Retro Space",
+      "image_complexity": 45,
+      "prompt_clarity": 80,
+      "seamless_compatibility": 78,
+      "color_flexibility": 75,
+      "commercial_viability": 78,
+      "overall_feasibility": 74.7,
+      "prompt_suggestions": [
+        "seamless Retro Space pattern, repeat tile, high quality, surface design, white background",
+        "Retro Space seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Realistic Space",
+      "image_complexity": 45,
+      "prompt_clarity": 80,
+      "seamless_compatibility": 78,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 73.5,
+      "prompt_suggestions": [
+        "seamless Realistic Space pattern, repeat tile, high quality, surface design, white background",
+        "Realistic Space seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Cartoon Space",
+      "image_complexity": 45,
+      "prompt_clarity": 80,
+      "seamless_compatibility": 78,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 73.5,
+      "prompt_suggestions": [
+        "seamless Cartoon Space pattern, repeat tile, high quality, surface design, white background",
+        "Cartoon Space seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "space",
+      "image_complexity": 45,
+      "prompt_clarity": 80,
+      "seamless_compatibility": 78,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 73.5,
+      "prompt_suggestions": [
+        "seamless space pattern, repeat tile, high quality, surface design, white background",
+        "space seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Art Nouveau",
+      "image_complexity": 55,
+      "prompt_clarity": 78,
+      "seamless_compatibility": 80,
+      "color_flexibility": 80,
+      "commercial_viability": 70,
+      "overall_feasibility": 72.7,
+      "prompt_suggestions": [
+        "seamless Art Nouveau pattern, repeat tile, high quality, surface design, white background",
+        "Art Nouveau seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Art Nouveau Animals",
+      "image_complexity": 55,
+      "prompt_clarity": 78,
+      "seamless_compatibility": 80,
+      "color_flexibility": 80,
+      "commercial_viability": 70,
+      "overall_feasibility": 72.7,
+      "prompt_suggestions": [
+        "seamless Art Nouveau Animals pattern, repeat tile, high quality, surface design, white background",
+        "Art Nouveau Animals seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "art nouveau",
+      "image_complexity": 55,
+      "prompt_clarity": 78,
+      "seamless_compatibility": 80,
+      "color_flexibility": 80,
+      "commercial_viability": 70,
+      "overall_feasibility": 72.7,
+      "prompt_suggestions": [
+        "seamless art nouveau pattern, repeat tile, high quality, surface design, white background",
+        "art nouveau seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Forest & Woodland",
+      "image_complexity": 50,
+      "prompt_clarity": 78,
+      "seamless_compatibility": 78,
+      "color_flexibility": 78,
+      "commercial_viability": 70,
+      "overall_feasibility": 72.6,
+      "prompt_suggestions": [
+        "seamless Forest & Woodland pattern, repeat tile, high quality, surface design, white background",
+        "Forest & Woodland seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Fairycore",
+      "image_complexity": 48,
+      "prompt_clarity": 75,
+      "seamless_compatibility": 78,
+      "color_flexibility": 82,
+      "commercial_viability": 70,
+      "overall_feasibility": 72.6,
+      "prompt_suggestions": [
+        "seamless Fairycore pattern, repeat tile, high quality, surface design, white background",
+        "Fairycore seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Enchanted Forest",
+      "image_complexity": 50,
+      "prompt_clarity": 78,
+      "seamless_compatibility": 78,
+      "color_flexibility": 78,
+      "commercial_viability": 70,
+      "overall_feasibility": 72.6,
+      "prompt_suggestions": [
+        "seamless Enchanted Forest pattern, repeat tile, high quality, surface design, white background",
+        "Enchanted Forest seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Boreal Forest",
+      "image_complexity": 50,
+      "prompt_clarity": 78,
+      "seamless_compatibility": 78,
+      "color_flexibility": 78,
+      "commercial_viability": 70,
+      "overall_feasibility": 72.6,
+      "prompt_suggestions": [
+        "seamless Boreal Forest pattern, repeat tile, high quality, surface design, white background",
+        "Boreal Forest seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "forest",
+      "image_complexity": 50,
+      "prompt_clarity": 78,
+      "seamless_compatibility": 78,
+      "color_flexibility": 78,
+      "commercial_viability": 70,
+      "overall_feasibility": 72.6,
+      "prompt_suggestions": [
+        "seamless forest pattern, repeat tile, high quality, surface design, white background",
+        "forest seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "fairycore",
+      "image_complexity": 48,
+      "prompt_clarity": 75,
+      "seamless_compatibility": 78,
+      "color_flexibility": 82,
+      "commercial_viability": 70,
+      "overall_feasibility": 72.6,
+      "prompt_suggestions": [
+        "seamless fairycore pattern, repeat tile, high quality, surface design, white background",
+        "fairycore seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Solarpunk",
+      "image_complexity": 50,
+      "prompt_clarity": 70,
+      "seamless_compatibility": 75,
+      "color_flexibility": 80,
+      "commercial_viability": 70,
+      "overall_feasibility": 69.8,
+      "prompt_suggestions": [
+        "seamless Solarpunk pattern, repeat tile, high quality, surface design, white background",
+        "Solarpunk seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "solarpunk",
+      "image_complexity": 50,
+      "prompt_clarity": 70,
+      "seamless_compatibility": 75,
+      "color_flexibility": 80,
+      "commercial_viability": 70,
+      "overall_feasibility": 69.8,
+      "prompt_suggestions": [
+        "seamless solarpunk pattern, repeat tile, high quality, surface design, white background",
+        "solarpunk seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Goblincore",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 75,
+      "color_flexibility": 72,
+      "commercial_viability": 70,
+      "overall_feasibility": 69.2,
+      "prompt_suggestions": [
+        "seamless Goblincore pattern, repeat tile, high quality, surface design, white background",
+        "Goblincore seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "goblincore",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 75,
+      "color_flexibility": 72,
+      "commercial_viability": 70,
+      "overall_feasibility": 69.2,
+      "prompt_suggestions": [
+        "seamless goblincore pattern, repeat tile, high quality, surface design, white background",
+        "goblincore seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Herbalism",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Herbalism pattern, repeat tile, high quality, surface design, white background",
+        "Herbalism seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Woodland Animals",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Woodland Animals pattern, repeat tile, high quality, surface design, white background",
+        "Woodland Animals seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Insects",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Insects pattern, repeat tile, high quality, surface design, white background",
+        "Insects seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Mythical Animals",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Mythical Animals pattern, repeat tile, high quality, surface design, white background",
+        "Mythical Animals seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Gothic",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Gothic pattern, repeat tile, high quality, surface design, white background",
+        "Gothic seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Art Deco",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Art Deco pattern, repeat tile, high quality, surface design, white background",
+        "Art Deco seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Folk & Traditional",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Folk & Traditional pattern, repeat tile, high quality, surface design, white background",
+        "Folk & Traditional seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Mexican",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Mexican pattern, repeat tile, high quality, surface design, white background",
+        "Mexican seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Celtic",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Celtic pattern, repeat tile, high quality, surface design, white background",
+        "Celtic seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "African",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless African pattern, repeat tile, high quality, surface design, white background",
+        "African seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Indian",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Indian pattern, repeat tile, high quality, surface design, white background",
+        "Indian seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Spring & Easter",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Spring & Easter pattern, repeat tile, high quality, surface design, white background",
+        "Spring & Easter seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Summer",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Summer pattern, repeat tile, high quality, surface design, white background",
+        "Summer seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Autumn",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Autumn pattern, repeat tile, high quality, surface design, white background",
+        "Autumn seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Winter",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Winter pattern, repeat tile, high quality, surface design, white background",
+        "Winter seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Medieval",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Medieval pattern, repeat tile, high quality, surface design, white background",
+        "Medieval seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Fantasy",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Fantasy pattern, repeat tile, high quality, surface design, white background",
+        "Fantasy seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Steampunk",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Steampunk pattern, repeat tile, high quality, surface design, white background",
+        "Steampunk seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Roses & Peonies",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Roses & Peonies pattern, repeat tile, high quality, surface design, white background",
+        "Roses & Peonies seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Wildflowers",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Wildflowers pattern, repeat tile, high quality, surface design, white background",
+        "Wildflowers seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Ferns & Moss",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Ferns & Moss pattern, repeat tile, high quality, surface design, white background",
+        "Ferns & Moss seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Succulents",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Succulents pattern, repeat tile, high quality, surface design, white background",
+        "Succulents seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Apothecary",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Apothecary pattern, repeat tile, high quality, surface design, white background",
+        "Apothecary seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Witch Garden",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Witch Garden pattern, repeat tile, high quality, surface design, white background",
+        "Witch Garden seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Medieval Medicinal Plants",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Medieval Medicinal Plants pattern, repeat tile, high quality, surface design, white background",
+        "Medieval Medicinal Plants seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Culinary Herbs",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Culinary Herbs pattern, repeat tile, high quality, surface design, white background",
+        "Culinary Herbs seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Dark Woods",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Dark Woods pattern, repeat tile, high quality, surface design, white background",
+        "Dark Woods seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Underwater",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Underwater pattern, repeat tile, high quality, surface design, white background",
+        "Underwater seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Coastal & Beach",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Coastal & Beach pattern, repeat tile, high quality, surface design, white background",
+        "Coastal & Beach seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Sea Creatures",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Sea Creatures pattern, repeat tile, high quality, surface design, white background",
+        "Sea Creatures seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Deer",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Deer pattern, repeat tile, high quality, surface design, white background",
+        "Deer seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Rabbits",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Rabbits pattern, repeat tile, high quality, surface design, white background",
+        "Rabbits seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Hedgehogs",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Hedgehogs pattern, repeat tile, high quality, surface design, white background",
+        "Hedgehogs seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Squirrels",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Squirrels pattern, repeat tile, high quality, surface design, white background",
+        "Squirrels seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Ravens & Crows",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Ravens & Crows pattern, repeat tile, high quality, surface design, white background",
+        "Ravens & Crows seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Owls",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Owls pattern, repeat tile, high quality, surface design, white background",
+        "Owls seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Moths",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Moths pattern, repeat tile, high quality, surface design, white background",
+        "Moths seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Beetles",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Beetles pattern, repeat tile, high quality, surface design, white background",
+        "Beetles seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Unicorns",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Unicorns pattern, repeat tile, high quality, surface design, white background",
+        "Unicorns seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Dragons",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Dragons pattern, repeat tile, high quality, surface design, white background",
+        "Dragons seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Victorian Gothic",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Victorian Gothic pattern, repeat tile, high quality, surface design, white background",
+        "Victorian Gothic seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Romantic Gothic",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Romantic Gothic pattern, repeat tile, high quality, surface design, white background",
+        "Romantic Gothic seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Mexican Folk Art",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Mexican Folk Art pattern, repeat tile, high quality, surface design, white background",
+        "Mexican Folk Art seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Eastern European Folk",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Eastern European Folk pattern, repeat tile, high quality, surface design, white background",
+        "Eastern European Folk seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Zodiac Signs",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Zodiac Signs pattern, repeat tile, high quality, surface design, white background",
+        "Zodiac Signs seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Constellations",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Constellations pattern, repeat tile, high quality, surface design, white background",
+        "Constellations seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Moon & Stars",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Moon & Stars pattern, repeat tile, high quality, surface design, white background",
+        "Moon & Stars seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Sun & Moon",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Sun & Moon pattern, repeat tile, high quality, surface design, white background",
+        "Sun & Moon seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Galaxy & Cosmos",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Galaxy & Cosmos pattern, repeat tile, high quality, surface design, white background",
+        "Galaxy & Cosmos seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Sakura",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Sakura pattern, repeat tile, high quality, surface design, white background",
+        "Sakura seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Koi",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Koi pattern, repeat tile, high quality, surface design, white background",
+        "Koi seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Zellige",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Zellige pattern, repeat tile, high quality, surface design, white background",
+        "Zellige seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Dia de Muertos",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Dia de Muertos pattern, repeat tile, high quality, surface design, white background",
+        "Dia de Muertos seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Celtic Knotwork",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Celtic Knotwork pattern, repeat tile, high quality, surface design, white background",
+        "Celtic Knotwork seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Kente & Ankara",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Kente & Ankara pattern, repeat tile, high quality, surface design, white background",
+        "Kente & Ankara seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Mandala",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Mandala pattern, repeat tile, high quality, surface design, white background",
+        "Mandala seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Paisley",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Paisley pattern, repeat tile, high quality, surface design, white background",
+        "Paisley seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Heraldry",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Heraldry pattern, repeat tile, high quality, surface design, white background",
+        "Heraldry seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Illuminated Manuscript",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Illuminated Manuscript pattern, repeat tile, high quality, surface design, white background",
+        "Illuminated Manuscript seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Medieval Plants",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Medieval Plants pattern, repeat tile, high quality, surface design, white background",
+        "Medieval Plants seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Elven & Fae",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Elven & Fae pattern, repeat tile, high quality, surface design, white background",
+        "Elven & Fae seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Sorcery & Wizardry",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Sorcery & Wizardry pattern, repeat tile, high quality, surface design, white background",
+        "Sorcery & Wizardry seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "mountain",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless mountain pattern, repeat tile, high quality, surface design, white background",
+        "mountain seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "desert",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless desert pattern, repeat tile, high quality, surface design, white background",
+        "desert seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "garden",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless garden pattern, repeat tile, high quality, surface design, white background",
+        "garden seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "deer",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless deer pattern, repeat tile, high quality, surface design, white background",
+        "deer seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "horses",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless horses pattern, repeat tile, high quality, surface design, white background",
+        "horses seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "maximalist",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless maximalist pattern, repeat tile, high quality, surface design, white background",
+        "maximalist seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "easter",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless easter pattern, repeat tile, high quality, surface design, white background",
+        "easter seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "valentines",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless valentines pattern, repeat tile, high quality, surface design, white background",
+        "valentines seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "thanksgiving",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless thanksgiving pattern, repeat tile, high quality, surface design, white background",
+        "thanksgiving seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "summer",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless summer pattern, repeat tile, high quality, surface design, white background",
+        "summer seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "winter",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless winter pattern, repeat tile, high quality, surface design, white background",
+        "winter seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "spring",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless spring pattern, repeat tile, high quality, surface design, white background",
+        "spring seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "mexican",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless mexican pattern, repeat tile, high quality, surface design, white background",
+        "mexican seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "indian",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless indian pattern, repeat tile, high quality, surface design, white background",
+        "indian seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "celtic",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless celtic pattern, repeat tile, high quality, surface design, white background",
+        "celtic seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "african",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless african pattern, repeat tile, high quality, surface design, white background",
+        "african seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Botanique",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Botanique pattern, repeat tile, high quality, surface design, white background",
+        "Botanique seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Herboristerie",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Herboristerie pattern, repeat tile, high quality, surface design, white background",
+        "Herboristerie seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Champignons",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Champignons pattern, repeat tile, high quality, surface design, white background",
+        "Champignons seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Forêt",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Forêt pattern, repeat tile, high quality, surface design, white background",
+        "Forêt seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Océan & Marin",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Océan & Marin pattern, repeat tile, high quality, surface design, white background",
+        "Océan & Marin seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Chats",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Chats pattern, repeat tile, high quality, surface design, white background",
+        "Chats seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Chiens",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Chiens pattern, repeat tile, high quality, surface design, white background",
+        "Chiens seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Oiseaux",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Oiseaux pattern, repeat tile, high quality, surface design, white background",
+        "Oiseaux seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Gothique",
+      "image_complexity": 50,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 68.8,
+      "prompt_suggestions": [
+        "seamless Gothique pattern, repeat tile, high quality, surface design, white background",
+        "Gothique seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Cyberpunk",
+      "image_complexity": 60,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 67.3,
+      "prompt_suggestions": [
+        "seamless Cyberpunk pattern, repeat tile, high quality, surface design, white background",
+        "Cyberpunk seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "cyberpunk",
+      "image_complexity": 60,
+      "prompt_clarity": 72,
+      "seamless_compatibility": 72,
+      "color_flexibility": 75,
+      "commercial_viability": 70,
+      "overall_feasibility": 67.3,
+      "prompt_suggestions": [
+        "seamless cyberpunk pattern, repeat tile, high quality, surface design, white background",
+        "cyberpunk seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Dark Academia",
+      "image_complexity": 62,
+      "prompt_clarity": 70,
+      "seamless_compatibility": 68,
+      "color_flexibility": 72,
+      "commercial_viability": 70,
+      "overall_feasibility": 65.0,
+      "prompt_suggestions": [
+        "seamless Dark Academia pattern, repeat tile, high quality, surface design, white background",
+        "Dark Academia seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "dark academia",
+      "image_complexity": 62,
+      "prompt_clarity": 70,
+      "seamless_compatibility": 68,
+      "color_flexibility": 72,
+      "commercial_viability": 70,
+      "overall_feasibility": 65.0,
+      "prompt_suggestions": [
+        "seamless dark academia pattern, repeat tile, high quality, surface design, white background",
+        "dark academia seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Tarot",
+      "image_complexity": 65,
+      "prompt_clarity": 70,
+      "seamless_compatibility": 65,
+      "color_flexibility": 78,
+      "commercial_viability": 70,
+      "overall_feasibility": 64.7,
+      "prompt_suggestions": [
+        "seamless Tarot pattern, repeat tile, high quality, surface design, white background",
+        "Tarot seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Modern Tarot",
+      "image_complexity": 65,
+      "prompt_clarity": 70,
+      "seamless_compatibility": 65,
+      "color_flexibility": 78,
+      "commercial_viability": 70,
+      "overall_feasibility": 64.7,
+      "prompt_suggestions": [
+        "seamless Modern Tarot pattern, repeat tile, high quality, surface design, white background",
+        "Modern Tarot seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "Gothic Tarot",
+      "image_complexity": 65,
+      "prompt_clarity": 70,
+      "seamless_compatibility": 65,
+      "color_flexibility": 78,
+      "commercial_viability": 70,
+      "overall_feasibility": 64.7,
+      "prompt_suggestions": [
+        "seamless Gothic Tarot pattern, repeat tile, high quality, surface design, white background",
+        "Gothic Tarot seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    },
+    {
+      "niche": "tarot",
+      "image_complexity": 65,
+      "prompt_clarity": 70,
+      "seamless_compatibility": 65,
+      "color_flexibility": 78,
+      "commercial_viability": 70,
+      "overall_feasibility": 64.7,
+      "prompt_suggestions": [
+        "seamless tarot pattern, repeat tile, high quality, surface design, white background",
+        "tarot seamless repeat pattern, digital art, fabric print, detailed illustration"
+      ]
+    }
+  ],
+  "competition_data": {
+    "Floral": {
+      "keyword": "Floral",
+      "platform": "etsy",
+      "result_count": 0,
+      "competition_score": 0.0,
+      "opportunity_score": 100.0,
+      "competition_level": "low"
+    },
+    "Botanical": {
+      "keyword": "Botanical",
+      "platform": "etsy",
+      "result_count": 0,
+      "competition_score": 0.0,
+      "opportunity_score": 100.0,
+      "competition_level": "low"
+    },
+    "Herbalism": {
+      "keyword": "Herbalism",
+      "platform": "etsy",
+      "result_count": 0,
+      "competition_score": 0.0,
+      "opportunity_score": 100.0,
+      "competition_level": "low"
+    },
+    "Mushrooms": {
+      "keyword": "Mushrooms",
+      "platform": "etsy",
+      "result_count": 0,
+      "competition_score": 0.0,
+      "opportunity_score": 100.0,
+      "competition_level": "low"
+    },
+    "Forest & Woodland": {
+      "keyword": "Forest & Woodland",
+      "platform": "etsy",
+      "result_count": 0,
+      "competition_score": 0.0,
+      "opportunity_score": 100.0,
+      "competition_level": "low"
+    },
+    "Ocean & Marine": {
+      "keyword": "Ocean & Marine",
+      "platform": "etsy",
+      "result_count": 0,
+      "competition_score": 0.0,
+      "opportunity_score": 100.0,
+      "competition_level": "low"
+    },
+    "Tropical": {
+      "keyword": "Tropical",
+      "platform": "etsy",
+      "result_count": 0,
+      "competition_score": 0.0,
+      "opportunity_score": 100.0,
+      "competition_level": "low"
+    },
+    "Cats": {
+      "keyword": "Cats",
+      "platform": "etsy",
+      "result_count": 0,
+      "competition_score": 0.0,
+      "opportunity_score": 100.0,
+      "competition_level": "low"
+    },
+    "Dogs": {
+      "keyword": "Dogs",
+      "platform": "etsy",
+      "result_count": 0,
+      "competition_score": 0.0,
+      "opportunity_score": 100.0,
+      "competition_level": "low"
+    },
+    "Woodland Animals": {
+      "keyword": "Woodland Animals",
+      "platform": "etsy",
+      "result_count": 0,
+      "competition_score": 0.0,
+      "opportunity_score": 100.0,
+      "competition_level": "low"
+    },
+    "Birds": {
+      "keyword": "Birds",
+      "platform": "etsy",
+      "result_count": 0,
+      "competition_score": 0.0,
+      "opportunity_score": 100.0,
+      "competition_level": "low"
+    },
+    "Insects": {
+      "keyword": "Insects",
+      "platform": "etsy",
+      "result_count": 0,
+      "competition_score": 0.0,
+      "opportunity_score": 100.0,
+      "competition_level": "low"
+    },
+    "Mythical Animals": {
+      "keyword": "Mythical Animals",
+      "platform": "etsy",
+      "result_count": 0,
+      "competition_score": 0.0,
+      "opportunity_score": 100.0,
+      "competition_level": "low"
+    },
+    "Cottagecore": {
+      "keyword": "Cottagecore",
+      "platform": "etsy",
+      "result_count": 0,
+      "competition_score": 0.0,
+      "opportunity_score": 100.0,
+      "competition_level": "low"
+    },
+    "Dark Academia": {
+      "keyword": "Dark Academia",
+      "platform": "etsy",
+      "result_count": 0,
+      "competition_score": 0.0,
+      "opportunity_score": 100.0,
+      "competition_level": "low"
+    },
+    "Goblincore": {
+      "keyword": "Goblincore",
+      "result_count": 0,
+      "competition_score": 0.0,
+      "opportunity_score": 100.0,
+      "competition_level": "low"
+    },
+    "Fairycore": {
+      "keyword": "Fairycore",
+      "result_count": 0,
+      "competition_score": 0.0,
+      "opportunity_score": 100.0,
+      "competition_level": "low"
+    },
+    "Witchy & Occult": {
+      "keyword": "Witchy & Occult",
+      "result_count": 0,
+      "competition_score": 0.0,
+      "opportunity_score": 100.0,
+      "competition_level": "low"
+    },
+    "Gothic": {
+      "keyword": "Gothic",
+      "result_count": 0,
+      "competition_score": 0.0,
+      "opportunity_score": 100.0,
+      "competition_level": "low"
+    },
+    "Japandi": {
+      "keyword": "Japandi",
+      "result_count": 0,
+      "competition_score": 0.0,
+      "opportunity_score": 100.0,
+      "competition_level": "low"
+    }
+  }
+}
