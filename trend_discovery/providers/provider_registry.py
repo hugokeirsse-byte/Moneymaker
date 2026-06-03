@@ -18,6 +18,18 @@ logger = logging.getLogger(__name__)
 
 def _build() -> List[DataProvider]:
     providers: List[DataProvider] = []
+    # ── Sources GRATUITES sans clé (toujours disponibles) ────────────────────
+    try:
+        from trend_discovery.providers.wikipedia_provider import WikipediaProvider
+        providers.append(WikipediaProvider())
+    except Exception as exc:
+        logger.debug("Wikipedia non chargé: %s", exc)
+    try:
+        from trend_discovery.providers.duckduckgo_provider import DuckDuckGoProvider
+        providers.append(DuckDuckGoProvider())
+    except Exception as exc:
+        logger.debug("DuckDuckGo non chargé: %s", exc)
+    # ── Source payante optionnelle (vrais volumes Google) ────────────────────
     try:
         from trend_discovery.providers.dataforseo_provider import DataForSEOProvider
         providers.append(DataForSEOProvider())

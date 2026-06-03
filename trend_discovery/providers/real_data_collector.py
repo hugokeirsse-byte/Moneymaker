@@ -48,6 +48,7 @@ class RealDataCollector:
 
     def __init__(self, registry: Optional[ProviderRegistry] = None):
         self._registry = registry or ProviderRegistry()
+        self._wikipedia = self._registry.get("wikipedia")
         self._dataforseo = self._registry.get("dataforseo")
         self._etsy = self._registry.get("etsy")
         self._reddit = self._registry.get("reddit")
@@ -96,20 +97,24 @@ class RealDataCollector:
         """
         raw: Dict = {}
 
-        # ── Demande : DataForSEO (priorité) sinon YouTube ────────────────────
+        # ── Demande : DataForSEO (si payant dispo) → Wikipedia → YouTube ─────
         demande = Metric.unavailable(detail="aucune source de demande")
         if self._dataforseo and self._dataforseo.is_available():
             demande = self._dataforseo.demande_metric(niche, self._volume_cache)
             if niche in self._volume_cache:
                 raw["search_volume"] = self._volume_cache[niche].get("search_volume")
                 raw["cpc"] = self._volume_cache[niche].get("cpc")
+        if not demande.is_real and self._wikipedia and self._wikipedia.is_available():
+            demande = self._wikipedia.demande_metric(niche)
         if not demande.is_real and self._youtube and self._youtube.is_available():
             demande = self._youtube.demand_metric(niche)
 
-        # ── Croissance : tendance mensuelle DataForSEO ───────────────────────
+        # ── Croissance : DataForSEO → Wikipedia (pente des vues) ─────────────
         croissance = Metric.unavailable(detail="aucune source de croissance")
         if self._dataforseo and self._dataforseo.is_available():
             croissance = self._croissance_from_trend(niche)
+        if not croissance.is_real and self._wikipedia and self._wikipedia.is_available():
+            croissance = self._wikipedia.croissance_metric(niche)
 
         # ── Concurrence : Etsy (priorité) sinon DataForSEO ───────────────────
         concurrence = Metric.unavailable(detail="aucune source de concurrence")

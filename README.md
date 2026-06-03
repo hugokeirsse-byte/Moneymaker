@@ -42,7 +42,19 @@ Configure tes clés dans **`.env`** (local) ou dans
 > marché. Le système met les résultats en cache pour ne payer qu'une fois par
 > mot-clé.
 
-### Sources gratuites — vrai marché & signal social
+### Sources gratuites SANS aucune clé (actives par défaut)
+
+| Source | Donne | Config |
+|--------|-------|--------|
+| **Wikipedia Pageviews** | **Vues réelles de pages = demande + croissance + saisonnalité mesurées** | ✅ aucune (auto) |
+| **Wikipedia/MediaWiki** | Découverte de sous-niches réelles (liens, catégories) | ✅ aucune (auto) |
+| **DuckDuckGo Autocomplete** | Expansion de sous-niches recherchées | ✅ aucune (auto) |
+
+> **Budget 0 € :** le système tourne déjà sur de vraies données grâce à
+> Wikipedia, sans aucune clé. Ajoute les clés gratuites ci-dessous pour
+> enrichir (compétition marché, buzz, demande vidéo).
+
+### Sources gratuites — vrai marché & signal social (inscription requise)
 
 | Clé | Donne | Coût | Obtenir |
 |-----|-------|------|---------|
@@ -56,9 +68,11 @@ Configure tes clés dans **`.env`** (local) ou dans
 |-----|-------|
 | `OPENAI_API_KEY` / `ANTHROPIC_API_KEY` | Analyse avancée, génération (modules ultérieurs) |
 
-> **Recommandation budget serré :** commence par les 3 clés **gratuites**
-> (Etsy + Reddit + YouTube), puis ajoute **DataForSEO** dès que possible —
-> c'est la seule qui donne les volumes de recherche absolus réels.
+> **Recommandation budget 0 € :** le système fonctionne déjà sur de vraies
+> données via **Wikipedia** (sans clé). Ajoute ensuite les clés **gratuites**
+> Etsy + Reddit + YouTube pour la compétition marché et le buzz. **DataForSEO**
+> (payant) reste optionnel : il n'apporte que les volumes de recherche Google
+> absolus, que Wikipedia approxime gratuitement.
 
 ---
 
