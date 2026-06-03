@@ -152,14 +152,25 @@ SCRAPER_DELAYS = {
     "youtube":          {"min": 1, "max": 3},
 }
 
-# --- Optional API credentials (from environment) ---
+# --- API credentials (from environment) ---
+# Source principale de demande réelle (payant, pay-as-you-go)
+DATAFORSEO_LOGIN = os.getenv("DATAFORSEO_LOGIN", "")
+DATAFORSEO_PASSWORD = os.getenv("DATAFORSEO_PASSWORD", "")
+
+# Vraie compétition marché POD/numérique (gratuit)
+ETSY_API_KEY = os.getenv("ETSY_API_KEY", "")
+
+# Buzz communautaire réel (gratuit)
 REDDIT_CLIENT_ID = os.getenv("REDDIT_CLIENT_ID", "")
 REDDIT_CLIENT_SECRET = os.getenv("REDDIT_CLIENT_SECRET", "")
-REDDIT_USER_AGENT = os.getenv("REDDIT_USER_AGENT", "TrendDiscovery/1.0 by trend_bot")
+REDDIT_USER_AGENT = os.getenv("REDDIT_USER_AGENT", "Moneymaker/1.0")
 
+# Demande vidéo réelle (gratuit)
+YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY", "")
+
+# Modules futurs (génération d'images)
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
-YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY", "")
 
 # --- HTTP headers ---
 DEFAULT_HEADERS = {

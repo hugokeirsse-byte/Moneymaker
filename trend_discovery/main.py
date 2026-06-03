@@ -152,6 +152,33 @@ def run_pipeline(
     logger.info("[Phase 2] %d niches après normalisation", len(target_niches))
 
     # ══════════════════════════════════════════════════════════════════════════
+    # PHASE 1bis — Collecte de DONNÉES RÉELLES (providers / APIs officielles)
+    # ══════════════════════════════════════════════════════════════════════════
+    logger.info("[Phase 1bis] Collecte de vraies données via les providers…")
+    real_data_map: Dict = {}
+    try:
+        from trend_discovery.providers.real_data_collector import RealDataCollector
+        from trend_discovery.providers.provider_registry import ProviderRegistry
+        registry = ProviderRegistry()
+        avail = registry.available()
+        if avail:
+            logger.info(
+                "[Phase 1bis] Sources réelles disponibles : %s",
+                [p.key for p in avail],
+            )
+            collector = RealDataCollector(registry)
+            real_data_map = collector.collect_batch(target_niches[:60])
+            sources_consulted.extend([p.key for p in avail])
+        else:
+            logger.warning(
+                "[Phase 1bis] ⚠️  AUCUNE source réelle disponible (clés API manquantes). "
+                "Les scores seront marqués comme NON FIABLES. "
+                "Configure DATAFORSEO / ETSY / REDDIT / YOUTUBE pour de vraies données."
+            )
+    except Exception as exc:
+        logger.warning("[Phase 1bis] Collecte réelle échouée: %s", exc)
+
+    # ══════════════════════════════════════════════════════════════════════════
     # PHASE 4 — Hybridation
     # ══════════════════════════════════════════════════════════════════════════
     logger.info("[Phase 4] Calcul des niches hybrides…")
@@ -190,8 +217,15 @@ def run_pipeline(
         competition_data=competition_data,
         tree_paths=tree_paths,
         canonical_names=canonical_names,
+        real_data_map=real_data_map,
     )
     logger.info("[Phase 5] %d opportunités scorées", len(opportunity_scores))
+    # Bilan de fiabilité global
+    reliable = [o for o in opportunity_scores if o.reliability >= 45]
+    logger.info(
+        "[Phase 5] Fiabilité : %d/%d opportunités basées sur de vraies données",
+        len(reliable), len(opportunity_scores),
+    )
 
     # ══════════════════════════════════════════════════════════════════════════
     # PHASE 6 — Classement (Base de données)
@@ -218,6 +252,26 @@ def run_pipeline(
             len(rising),
             [r["niche"] for r in rising[:5]],
         )
+
+    # ══════════════════════════════════════════════════════════════════════════
+    # PHASE 8 — Allocation Multi-Plateformes (Module 02)
+    # ══════════════════════════════════════════════════════════════════════════
+    logger.info("[Phase 8] Allocation stratégique multi-plateformes…")
+    try:
+        from trend_discovery.platform_router.allocator import OpportunityAllocator
+        from trend_discovery.platform_router.strategy_reporter import StrategyReporter
+        allocator = OpportunityAllocator()
+        # On alloue les meilleures opportunités (les plus fiables d'abord)
+        recommendations = allocator.allocate_batch(opportunity_scores[:20])
+        strat_reporter = StrategyReporter()
+        strat_paths = strat_reporter.save_report(recommendations, output_dir=OUTPUT_DIR)
+        logger.info(
+            "[Phase 8] %d recommandations stratégiques générées : %s",
+            len(recommendations), strat_paths.get("markdown", ""),
+        )
+    except Exception as exc:
+        logger.warning("[Phase 8] Allocation multi-plateformes échouée: %s", exc)
+        strat_paths = {}
 
     # ══════════════════════════════════════════════════════════════════════════
     # Génération du Rapport Final

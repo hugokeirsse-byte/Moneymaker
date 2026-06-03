@@ -44,6 +44,12 @@ class OpportunityScore:
     sources: List[str] = field(default_factory=list)
     confidence: float = 0.0          # 0-100, confiance selon nb de sources
 
+    # ── Traçabilité des données (provenance) ─────────────────────────────────
+    reliability: float = 0.0         # 0-100 : part du score basée sur du réel
+    reliability_label: str = "🔴 NON FIABLE (aucune donnée réelle)"
+    real_sources: List[str] = field(default_factory=list)  # sources MEASURED
+    provenance: dict = field(default_factory=dict)         # détail par composante
+
     def score_breakdown(self) -> str:
         """Human-readable breakdown of the score components."""
         return (
@@ -329,6 +335,76 @@ class OpportunityScorer:
             confidence=round(confidence, 1),
         )
 
+    def enrich_with_real_data(self, opp: "OpportunityScore", real_data) -> "OpportunityScore":
+        """
+        Remplace les composantes heuristiques par les VRAIES métriques mesurées
+        quand elles sont disponibles, et calcule la fiabilité (provenance).
+
+        `real_data` est un NicheRealData (providers.real_data_collector).
+        Les composantes sans source réelle restent heuristiques et sont
+        marquées comme telles dans le ledger.
+        """
+        from trend_discovery.provenance import Metric, MetricKind, ProvenanceLedger
+        ledger = ProvenanceLedger()
+
+        # ── Demande ──────────────────────────────────────────────────────────
+        if real_data and real_data.demande.is_real:
+            opp.demande = round(real_data.demande.value, 1)
+            ledger.add(real_data.demande)
+        else:
+            ledger.add(Metric.heuristic(opp.demande, source="trend_scorer",
+                                        detail="demande estimée (pas de source réelle)"))
+
+        # ── Croissance ───────────────────────────────────────────────────────
+        if real_data and real_data.croissance.is_real:
+            opp.croissance = round(real_data.croissance.value, 1)
+            ledger.add(real_data.croissance)
+        else:
+            ledger.add(Metric.heuristic(opp.croissance, source="trend_scorer",
+                                        detail="croissance estimée"))
+
+        # ── Concurrence ──────────────────────────────────────────────────────
+        if real_data and real_data.concurrence.is_real:
+            opp.concurrence = round(real_data.concurrence.value, 1)
+            ledger.add(real_data.concurrence)
+        else:
+            ledger.add(Metric.heuristic(opp.concurrence, source="internal_rules",
+                                        detail="concurrence estimée"))
+
+        # ── Buzz → renforce la demande si mesuré ─────────────────────────────
+        if real_data and real_data.buzz.is_real:
+            ledger.add(real_data.buzz)
+            # Le buzz réel tire légèrement la demande vers le haut
+            opp.demande = round(min(100.0, opp.demande * 0.8 + real_data.buzz.value * 0.2), 1)
+
+        # ── Potentiel visuel / hybridation : toujours heuristiques (légitimes) ─
+        ledger.add(Metric.heuristic(opp.potentiel_visuel, source="feasibility_scorer",
+                                    detail="potentiel visuel (règles de faisabilité)"))
+        ledger.add(Metric.heuristic(opp.potentiel_hybridation, source="hybrid_scorer",
+                                    detail="potentiel d'hybridation (matrice de synergie)"))
+
+        # ── Recalcul du score final avec les vraies valeurs ──────────────────
+        opp.score_final = self._apply_formula(
+            opp.demande, opp.croissance, opp.potentiel_visuel,
+            opp.potentiel_commercial, opp.potentiel_hybridation, opp.concurrence,
+        )
+
+        # ── Provenance ────────────────────────────────────────────────────────
+        summary = ledger.summary()
+        opp.reliability = summary["reliability"]
+        opp.reliability_label = summary["label"]
+        opp.real_sources = summary["real_sources"]
+        opp.provenance = {
+            "demande": real_data.demande.to_dict() if real_data else {},
+            "croissance": real_data.croissance.to_dict() if real_data else {},
+            "concurrence": real_data.concurrence.to_dict() if real_data else {},
+            "buzz": real_data.buzz.to_dict() if real_data else {},
+            "summary": summary,
+        }
+        # La confiance globale tient compte de la fiabilité réelle
+        opp.confidence = round((opp.confidence + opp.reliability) / 2, 1)
+        return opp
+
     def score_all(
         self,
         niches: List[str],
@@ -338,9 +414,13 @@ class OpportunityScorer:
         competition_data: Optional[Dict] = None,
         tree_paths: Optional[Dict] = None,
         canonical_names: Optional[Dict] = None,
+        real_data_map: Optional[Dict] = None,
     ) -> List[OpportunityScore]:
         """
         Score a list of niches and return sorted by score_final descending.
+
+        Si `real_data_map` ({niche: NicheRealData}) est fourni, les vraies
+        données mesurées remplacent les heuristiques et la fiabilité est calculée.
         """
         results = []
         for niche in niches:
@@ -357,7 +437,10 @@ class OpportunityScorer:
                 tree_path=path,
                 canonical_name=canon,
             )
+            if real_data_map and niche in real_data_map:
+                opp = self.enrich_with_real_data(opp, real_data_map[niche])
             results.append(opp)
 
-        results.sort(key=lambda x: (x.score_final, x.confidence), reverse=True)
+        # Tri : fiabilité d'abord (le réel prime), puis score, puis confiance
+        results.sort(key=lambda x: (x.reliability, x.score_final, x.confidence), reverse=True)
         return results
