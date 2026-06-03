@@ -28,15 +28,26 @@ class ProductRecommender:
     # Indices stylistiques déduits des mots-clés de la niche.
     # Chaque "trait" regroupe les mots-clés qui le déclenchent.
     _STYLE_TRAITS: Dict[str, List[str]] = {
-        "seamless": ["seamless", "repeat", "pattern", "surface design", "textile", "fabric", "wallpaper"],
-        "botanical": ["botanical", "floral", "flower", "plant", "leaf", "nature"],
-        "humor_text": ["humor", "funny", "meme", "slogan", "quote", "joke"],
-        "pop_culture": ["pop culture", "fandom", "geek", "gaming", "trend"],
-        "svg_craft": ["svg", "cricut", "cut file", "sublimation", "craft", "maker"],
-        "clipart": ["clipart", "png pack", "bundle", "illustration set"],
-        "coloring": ["coloring", "line art", "coloring book", "activity book"],
-        "wall_art": ["wall art", "art print", "poster", "minimalist", "abstract", "aesthetic"],
-        "event": ["wedding", "event", "invitation", "stationery", "monogram", "personalization"],
+        "seamless": ["seamless", "repeat", "pattern", "surface design", "textile", "fabric", "wallpaper",
+                     "motif", "motifs", "répété", "tissu", "textile"],
+        "botanical": ["botanical", "floral", "flower", "plant", "leaf", "nature",
+                      "botanique", "florale", "floraux", "plantes", "herboristerie",
+                      "champignons", "forêt", "tropical", "aquarelle", "nature"],
+        "humor_text": ["humor", "funny", "meme", "slogan", "quote", "joke",
+                       "humour", "drôle", "mème", "blague", "citation"],
+        "pop_culture": ["pop culture", "fandom", "geek", "gaming", "trend",
+                        "jeux", "geek", "fandom"],
+        "svg_craft": ["svg", "cricut", "cut file", "sublimation", "craft", "maker",
+                      "découpe", "sublimation"],
+        "clipart": ["clipart", "png pack", "bundle", "illustration set",
+                    "illustration", "illustrations"],
+        "coloring": ["coloring", "line art", "coloring book", "activity book",
+                     "coloriage", "colorier", "trait"],
+        "wall_art": ["wall art", "art print", "poster", "minimalist", "abstract", "aesthetic",
+                     "mural", "affiche", "minimaliste", "abstrait", "esthétique", "mandala",
+                     "géométrique"],
+        "event": ["wedding", "event", "invitation", "stationery", "monogram", "personalization",
+                  "mariage", "événement", "papeterie", "monogramme", "personnalisation"],
     }
 
     # Produits recommandés / déconseillés par plateforme selon les traits détectés.

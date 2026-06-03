@@ -82,11 +82,114 @@ class OpportunityAllocator:
         self._recommender = recommender or ProductRecommender()
         self._estimator = estimator or EconomicEstimator()
 
+    # Traduction FR → EN des termes fréquents dans les niches normalisées.
+    # Permet à _KEYWORD_AFFINITIES (en anglais) de matcher des niches en français.
+    _FR_TO_EN: Dict[str, List[str]] = {
+        # Botanique / Nature
+        "botanique": ["botanical", "floral"],
+        "botaniques": ["botanical", "floral"],
+        "florale": ["floral"],
+        "floraux": ["floral"],
+        "florales": ["floral"],
+        "herboristerie": ["herbal", "botanical"],
+        "plantes": ["botanical"],
+        "champignons": ["botanical"],
+        "forêt": ["botanical", "wallpaper"],
+        "océan": ["nautical"],
+        "marin": ["nautical"],
+        "tropical": ["tropical", "botanical"],
+        "nature": ["botanical", "floral"],
+        "aquarelle": ["botanical", "art print"],
+        # Motifs / Textile
+        "motif": ["pattern", "seamless"],
+        "motifs": ["pattern", "seamless"],
+        "répété": ["repeat", "seamless"],
+        "répétés": ["repeat", "seamless"],
+        "textile": ["textile", "fabric"],
+        "tissu": ["fabric", "textile"],
+        "papier": ["wallpaper"],
+        "peint": ["wallpaper"],
+        "surface": ["surface design"],
+        # Humour
+        "humour": ["humor", "funny"],
+        "drôle": ["funny"],
+        "mème": ["meme"],
+        "mèmes": ["meme"],
+        "blague": ["humor"],
+        "citation": ["quote"],
+        # Pop culture / Geek
+        "geek": ["geek"],
+        "jeux": ["gaming"],
+        "gaming": ["gaming"],
+        "fandom": ["fandom"],
+        # Art mural / Déco
+        "mural": ["wall art"],
+        "affiche": ["poster"],
+        "minimaliste": ["minimalist"],
+        "abstrait": ["abstract"],
+        "abstraits": ["abstract"],
+        "boho": ["boho"],
+        "esthétique": ["aesthetic"],
+        "intérieur": ["interior"],
+        "décoration": ["interior", "wall art"],
+        "géométrique": ["abstract", "seamless"],
+        "géométriques": ["abstract", "seamless"],
+        "mandala": ["abstract"],
+        # Événementiel
+        "mariage": ["wedding"],
+        "événement": ["event"],
+        "invitation": ["invitation"],
+        "invitations": ["invitation"],
+        "papeterie": ["stationery"],
+        "monogramme": ["monogram"],
+        "personnalisation": ["personalization"],
+        "personnalisé": ["personalization"],
+        # Craft / Numérique
+        "coloriage": ["coloring"],
+        "colorier": ["coloring"],
+        "découpe": ["cut file", "svg"],
+        "sublimation": ["sublimation"],
+        "imprimable": ["printable"],
+        "modèle": ["template"],
+        "police": ["font"],
+        "illustration": ["illustration set"],
+        "illustrations": ["illustration set"],
+        "livre": ["book"],
+        "guide": ["guide"],
+        "éducatif": ["educational"],
+        "activités": ["activity book"],
+        "trait": ["line art"],
+        # B2B
+        "collection": ["collection"],
+        "collections": ["collection"],
+        "bibliothèque": ["library"],
+        "licence": ["license"],
+        "licences": ["license"],
+        "commercial": ["commercial"],
+        "premium": ["premium"],
+        "professionnel": ["professional"],
+        # Styles visuels communs dans les chemins d'arbre
+        "celtique": ["illustration set"],
+        "médiéval": ["illustration set"],
+        "japonais": ["illustration set"],
+        "zen": ["abstract", "minimalist"],
+        "vintage": ["illustration set"],
+        "cosmique": ["abstract"],
+        "céleste": ["abstract"],
+        "espace": ["abstract"],
+        "sticker": ["sticker"],
+        "stickers": ["sticker"],
+        "noël": ["seasonal", "pattern"],
+        "halloween": ["seasonal", "pattern"],
+    }
+
     # ── Extraction des mots-clés de la niche ─────────────────────────────────
     def _extract_keywords(self, opportunity_score) -> List[str]:
         """
         Construit la liste de mots-clés décrivant la niche à partir des champs
         de l'OpportunityScore (niche, canonical_name, path).
+        Traduit les termes français en équivalents anglais pour que
+        _KEYWORD_AFFINITIES (en anglais) puisse les matcher.
         """
         kws: List[str] = []
         niche = getattr(opportunity_score, "niche", "") or ""
@@ -103,7 +206,15 @@ class OpportunityAllocator:
             kws.append(str(niche).lower())
         if path:
             kws.append(str(path).lower())
-        return list(dict.fromkeys([k for k in kws if k]))
+
+        # Expansion FR → EN : pour chaque token français, ajouter les équivalents anglais
+        expanded: List[str] = list(kws)
+        for token in kws:
+            en_equivalents = self._FR_TO_EN.get(token)
+            if en_equivalents:
+                expanded.extend(en_equivalents)
+
+        return list(dict.fromkeys([k for k in expanded if k]))
 
     # ── Sélection des plateformes top ─────────────────────────────────────────
     def _select_top_platforms(self, platform_scores: Dict[str, float]) -> List[str]:
