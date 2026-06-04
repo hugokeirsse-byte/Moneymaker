@@ -1,181 +1,177 @@
 # 🏭 Moneymaker
 
-Usine automatisée de détection d'opportunités commerciales pour le print-on-demand
-et les produits numériques (Spoonflower, RedBubble, Etsy, KDP, B2B…).
+Moteur d'intelligence commerciale pour le print-on-demand — détecte les niches, génère les motifs, apprend des ventes réelles.
 
-Objectif : détecter automatiquement **les niches qui rapportent vraiment**, sur
-**les bonnes plateformes**, avec **les bons produits** — sur la base de **vraies
-données de marché**, jamais d'estimations déguisées.
+> **Vision :** pas une usine à images, mais une **infrastructure d'intelligence commerciale**
+> qui détecte → produit → publie → apprend des résultats réels.
+> Les motifs Spoonflower sont le premier cas d'usage. D'autres marchés suivront.
 
-> 🧠 **Vision réelle** : pas une usine à images, mais une **infrastructure
-> d'intelligence commerciale** qui détecte, produit, publie et **apprend des
-> résultats réels**. Les images Spoonflower ne sont que le premier cas d'usage.
+📚 **Documentation complète** → [`docs/`](docs/) *(mémoire vivante, partageable à ChatGPT/Gemini)*
 
 ---
 
-## 📚 Plan directeur & documentation → [`docs/`](docs/)
+## 🎯 Ce qui existe aujourd'hui
 
-Toute la vision, l'architecture et la feuille de route sont dans **[`docs/`](docs/)**
-(mémoire vivante du projet, mise à jour en continu, partageable à ChatGPT/Gemini) :
-
-| Doc | Contenu |
-|-----|---------|
-| [docs/VISION.md](docs/VISION.md) | Le but réel à long terme |
-| [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | Les 14 modules + état d'avancement |
-| [docs/ROADMAP.md](docs/ROADMAP.md) | Avancement **brique par brique** |
-| [docs/DECISIONS.md](docs/DECISIONS.md) | Journal des décisions |
-| [docs/BACKLOG.md](docs/BACKLOG.md) | Idées d'évolution + repos à étudier |
-| [docs/TOKEN_ECONOMY.md](docs/TOKEN_ECONOMY.md) | Règles d'économie de tokens |
-| [docs/platforms/spoonflower.md](docs/platforms/spoonflower.md) | Intelligence plateforme Spoonflower |
-
-**Statut actuel** : moteur de détection ✅ (Gemini 3.x + scoring explicable + confiance
-+ provenance). **Prochaine brique** : verrous de dépense + génération des 5 premières
-images Spoonflower. Voir [docs/ROADMAP.md](docs/ROADMAP.md).
-
----
-
-## 🧭 Principe fondamental : zéro donnée inventée
-
-Le système **ne déguise jamais une estimation en mesure réelle**.
-
-Chaque valeur numérique est tracée (`trend_discovery/provenance.py`) :
-
-| Nature | Signification |
-|--------|---------------|
-| 🟢 `MEASURED` | Vraie donnée issue d'une source réelle (API officielle) |
-| 🟡 `HEURISTIC` | Estimation basée sur une règle interne |
-| 🔴 `UNAVAILABLE` | Donnée non disponible (aucune source) |
-
-Chaque rapport affiche un **score de fiabilité** : la part du résultat qui
-repose sur de vraies recherches. Sans clés API, le système le dit clairement
-au lieu de produire des scores au hasard.
-
----
-
-## 🔑 Clés API — quoi mettre et pourquoi
-
-Configure tes clés dans **`.env`** (local) ou dans
-**GitHub → Settings → Secrets and variables → Actions** (automatisation).
-
-### Source principale — vraie demande (PAYANT, pay-as-you-go)
-
-| Clé | Donne | Coût | Obtenir |
-|-----|-------|------|---------|
-| `DATAFORSEO_LOGIN` + `DATAFORSEO_PASSWORD` | **Vrais volumes de recherche Google mensuels + compétition réelle + CPC** | ~0,05 $ / 1000 mots-clés (pas d'abonnement) | [app.dataforseo.com/register](https://app.dataforseo.com/register) |
-
-> C'est **la** clé qui transforme le système d'estimations en vraies valeurs de
-> marché. Le système met les résultats en cache pour ne payer qu'une fois par
-> mot-clé.
-
-### Sources gratuites SANS aucune clé (actives par défaut)
-
-| Source | Donne | Config |
-|--------|-------|--------|
-| **Wikipedia Pageviews** | **Vues réelles de pages = demande + croissance + saisonnalité mesurées** | ✅ aucune (auto) |
-| **Wikipedia/MediaWiki** | Découverte de sous-niches réelles (liens, catégories) | ✅ aucune (auto) |
-| **DuckDuckGo Autocomplete** | Expansion de sous-niches recherchées | ✅ aucune (auto) |
-
-> **Budget 0 € :** le système tourne déjà sur de vraies données grâce à
-> Wikipedia, sans aucune clé. Ajoute les clés gratuites ci-dessous pour
-> enrichir (compétition marché, buzz, demande vidéo).
-
-### Sources gratuites — vrai marché & signal social (inscription requise)
-
-| Clé | Donne | Coût | Obtenir |
-|-----|-------|------|---------|
-| `ETSY_API_KEY` | Nombre réel de listings actifs, tags réels, prix réels (= vraie compétition POD/numérique) | **Gratuit** | [etsy.com/developers/register](https://www.etsy.com/developers/register) |
-| `REDDIT_CLIENT_ID` + `REDDIT_CLIENT_SECRET` | Vrai buzz communautaire (upvotes, commentaires) | **Gratuit** | [reddit.com/prefs/apps](https://www.reddit.com/prefs/apps) → app type *script* |
-| `YOUTUBE_API_KEY` | Vraies vues de tutoriels = intérêt réel pour une niche | **Gratuit** (10 000 u/jour) | [console.cloud.google.com](https://console.cloud.google.com) → activer *YouTube Data API v3* |
-
-### Pour les modules futurs (génération d'images)
-
-| Clé | Usage |
-|-----|-------|
-| `OPENAI_API_KEY` / `ANTHROPIC_API_KEY` | Analyse avancée, génération (modules ultérieurs) |
-
-> **Recommandation budget 0 € :** le système fonctionne déjà sur de vraies
-> données via **Wikipedia** (sans clé). Ajoute ensuite les clés **gratuites**
-> Etsy + Reddit + YouTube pour la compétition marché et le buzz. **DataForSEO**
-> (payant) reste optionnel : il n'apporte que les volumes de recherche Google
-> absolus, que Wikipedia approxime gratuitement.
-
----
-
-## 🏗️ Architecture
+### Pipeline opérationnel
 
 ```
-trend_discovery/
-├── provenance.py            # Traçabilité : MEASURED / HEURISTIC / UNAVAILABLE
-├── providers/               # Connecteurs vers les VRAIES sources (APIs officielles)
-│   ├── dataforseo_provider.py   # volumes de recherche Google réels
-│   ├── etsy_provider.py         # compétition marché réelle
-│   ├── reddit_provider.py       # buzz communautaire réel
-│   ├── youtube_provider.py      # demande vidéo réelle
-│   ├── provider_registry.py     # détecte les clés dispo
-│   └── real_data_collector.py   # collecte + trace les métriques
-├── normalizer/              # Phase 2-3 : normalisation + arbre de niches
-│   ├── concept_merger.py        # fusion synonymes → niches canoniques
-│   └── niche_tree_builder.py    # arbre hiérarchique (160 nœuds)
-├── analyzers/               # Phase 4-5 : scoring
-│   ├── opportunity_scorer.py    # formule multi-critères
-│   ├── hybrid_scorer.py         # combinaisons de niches
-│   ├── trend_scorer.py
-│   └── feasibility_scorer.py
-├── platform_router/         # MODULE 02 : allocation multi-plateformes
-│   ├── platform_profiles.py     # profils des 13 plateformes
-│   ├── compatibility_matrix.py  # score niche × plateforme
-│   ├── product_recommender.py   # produits recommandés/déconseillés
-│   ├── economic_estimator.py    # potentiel économique
-│   └── allocator.py             # recommandation stratégique finale
-├── database/                # Phase 6-7 : base + mémoire historique
-│   ├── opportunity_store.py     # SQLite des opportunités
-│   └── history_tracker.py       # évolution des scores
-├── reporters/               # génération de rapports
-└── main.py                  # orchestrateur du pipeline
+Gemini 3.x + Google Search (37 signaux)
+   ↓
+12 niches d'opportunité anti-saturation (demande forte × concurrence faible)
+   ↓
+Score 6 composantes MESURÉ/HEURISTIQUE + confiance + provenance
+   ↓
+CdC complets : palette hex, style, images Wikimedia, prompts 120-180 mots
+   ↓
+Gate d'approbation manuel → 5 images/CdC → audit qualité → PNG 300 DPI Spoonflower
 ```
+
+### Architecture multi-agents (vision)
+
+| Agent | Rôle | État |
+|-------|------|------|
+| **NicheIntelligenceAgent** | Détecte tendances + niches + CdC | ✅ Actif |
+| **ToolIntelligenceAgent** | Monitore les nouveaux outils/repos utiles | ⬜ Backlog |
+| **BusinessIntelligenceAgent** | Identifie nouveaux marchés & débouchés | ⬜ Backlog |
+| **PlatformIntelligenceAgent** | Analyse auto specs/best-sellers d'une plateforme | ⬜ Backlog |
+| **CollectionEngine** | Stratégie de collection (groupe + variantes couleur) | ⬜ Backlog |
+
+---
+
+## 🔑 Clés API
+
+Deux clés suffisent pour le pipeline complet :
+
+| Clé | Usage | Coût | Obtenir |
+|-----|-------|------|---------|
+| `GEMINI_API_KEY` | Recherche de tendances + Google Search grounding + CdC | Facturation Google (négligeable) | [aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey) |
+| `RUNWARE_API_KEY` | Génération + upscaling d'images | ~0,006 €/image (prépayé, 0 surprise) | [runware.ai](https://runware.ai) |
+
+> ⚠️ `RUNWARE_API_KEY` n'est **jamais** injectée automatiquement — seulement en mode `generate`
+> après approbation explicite des CdC. Gate d'approbation obligatoire.
+
+### Sources gratuites complémentaires (sans clé)
+
+- **Wikipedia Pageviews** — demande + croissance MESURÉES. Actif par défaut.
+- **Wikimedia Commons** — images de référence domaine public.
+- **Google Search via Gemini grounding** — signaux web réels (Etsy, Pinterest, tendances).
+
+### Clés optionnelles pour données supplémentaires
+
+| Clé | Données supplémentaires |
+|-----|------------------------|
+| `ETSY_API_KEY` | Listing counts officiels Etsy (concurrence MESURÉE) |
+| `REDDIT_CLIENT_ID` + `REDDIT_CLIENT_SECRET` | Buzz communautaire réel |
+| `YOUTUBE_API_KEY` | Demande vidéo / tutos |
+| `DATAFORSEO_LOGIN` + `DATAFORSEO_PASSWORD` | Volumes Google mensuels absolus |
 
 ---
 
 ## 🚀 Utilisation
 
 ```bash
-# Installer les dépendances
 pip install -r requirements.txt
+cp .env.example .env   # GEMINI_API_KEY + RUNWARE_API_KEY
 
-# Configurer les clés
-cp .env.example .env   # puis remplir
+# 1. Découverte + CdC (0 €)
+python -m trend_discovery.main preview
+# → reports/cahiers_des_charges_YYYYMMDD_HHMM.md
+# → data/approvals/pending_RUNID.json  (à éditer)
 
-# Lancer le pipeline complet
-python -m trend_discovery.main
+# 2. Approuver les CdCs
+# Ouvrir data/approvals/pending_RUNID.json
+# Mettre "approved": true sur les niches choisies
 
-# Mode rapide (sources principales uniquement)
-python -m trend_discovery.main --fast
+# 3. Générer les images (payant — ~0,03 €/CdC × 5 images)
+python -m trend_discovery.main generate --yes
+# → output/spoonflower/*.png (PNG 300 DPI, ≥ 4500×4500, sRGB)
 
-# Cibler des niches
-python -m trend_discovery.main --keywords "botanical,medieval herbs" --depth 2
+# Options avancées
+python -m trend_discovery.main preview --niches 8 --exclude "florals" --focus "dark academia"
+python -m trend_discovery.main generate --approve "Gothic Cabinet,Heirloom Potager" --images 5
 ```
 
-Les rapports sont écrits dans `reports/` (Markdown + JSON, plus `latest_report.md`).
+---
+
+## 🤖 GitHub Actions
+
+Lancement **manuel uniquement** (crons désactivés tant que le système n'est pas validé) :
+
+```
+Actions → Module 01 → Run workflow
+  mode: preview    → CdC + manifest (0 €)
+  mode: generate   → images des CdCs approuvées (RUNWARE_API_KEY requise)
+```
+
+Les rapports + manifest + images sont commités automatiquement dans la branche.
 
 ---
 
-## 🤖 Automatisation (GitHub Actions)
+## 🏗️ Modules (état juin 2026)
 
-Le workflow `.github/workflows/trend_discovery.yml` tourne **2× par jour**
-(06h et 18h UTC) et après chaque déclenchement manuel. Il :
-1. lance le pipeline,
-2. commit les rapports dans `reports/`,
-3. conserve la base SQLite entre les runs (cache) pour la mémoire historique.
-
-Ajoute tes clés dans les **Secrets** du repo pour qu'il utilise les vraies données.
+| # | Module | État |
+|---|--------|------|
+| 1 | Collectors | 🟡 Gemini+Search ✅, Wikipedia ✅, WebSignalFetcher ✅. trend-pulse/etsyv3 = prochaine intégration |
+| 2 | Normalizer | ✅ Arbre 159 nœuds + fusion synonymes |
+| 3 | Trend Engine | ✅ Gemini 3.x auto-découverte + anti-saturation |
+| 4 | Hybridation | 🟡 Existant, à reconnecter |
+| 5 | Scoring | ✅ 6 composantes + confiance + MEASURED/HEURISTIC/UNAVAILABLE |
+| 6 | Platform Intelligence | 🟡 MarketProfile Spoonflower ✅, bot auto ⬜ |
+| 7 | Brief Generator | ✅ CdC complets + ApprovalGate + persistance briefs |
+| 8 | Image Generation | ✅ run_brief() N images/CdC + gate d'approbation |
+| 9 | Variant Engine | ⬜ 1 motif → N colorways Spoonflower |
+| 10 | Quality Control | ✅ QualityAuditor : netteté + seamless + specs |
+| 11 | Upscaling | ✅ Runware ×4 + SpoonflowerPackager 300 DPI |
+| 12 | Publication | ⬜ Titre/description/tags SEO (prochaine brique) |
+| 13 | Result Tracking | 🟡 HistoryStore détections ✅, ventes ⬜ |
+| 14 | Knowledge Base | ⬜ Boucle ventes → score (long terme) |
 
 ---
 
-## 📦 Modules
+## 🧭 Principe fondamental : zéro donnée inventée
 
-- **Module 01 — Détection de tendances** ✅ : collecte → normalisation → arbre de
-  niches → hybridation → scoring → base → mémoire historique.
-- **Module 02 — Allocation multi-plateformes** ✅ : pour chaque opportunité,
-  score par plateforme + produits recommandés + priorité de publication.
-- **Modules suivants** (à venir) : génération d'images, création de collections,
-  publication automatisée.
+| Tag | Signification |
+|-----|---------------|
+| 🟢 `MEASURED` | Vraie source externe (API, scraping avec grounding confirmé) |
+| 🟡 `HEURISTIC` | Estimation basée sur règle interne ou opinion Gemini |
+| 🔴 `UNAVAILABLE` | Donnée non disponible — le système le dit explicitement |
+
+Le **score de fiabilité** de chaque CdC = % du score basé sur des données MEASURED.
+Cible : maximum de MEASURED, minimum de HEURISTIC. L'intégration de repos open-source
+(trend-pulse, etsyv3, trendspyg) est le levier principal pour y arriver.
+
+---
+
+## 📦 Repos open-source intégrés / à intégrer
+
+Le principe : **ne pas réinventer la roue**. Si un repo public existe et est maintenu,
+on l'utilise plutôt que de recoder.
+
+| Priorité | Repo | Ce qu'il apporte |
+|----------|------|-----------------|
+| 🔴 Urgent | [trendspyg](https://github.com/flack0x/trendspyg) | Remplace pytrends (archivé avril 2025) |
+| 🔴 Urgent | [trend-pulse](https://github.com/claude-world/trend-pulse) | 37 sources agrégées + lifecycle EMERGING→DECLINING |
+| 🟡 Court terme | [etsyv3](https://github.com/anitabyte/etsyv3) | API officielle Etsy → listing counts MEASURED |
+| 🟡 Court terme | [crawlee-python](https://github.com/apify/crawlee-python) | Scraping anti-détection universel (9k ⭐) |
+| 🟡 Court terme | [seo-keyword-research-tool](https://github.com/chukhraiartur/seo-keyword-research-tool) | Google Autocomplete → longue traîne sans clé |
+
+Voir [docs/BACKLOG.md](docs/BACKLOG.md) pour la liste complète et le plan d'intégration.
+
+---
+
+## 📁 Structure du code
+
+```
+trend_discovery/
+├── provenance.py            # Metric : MEASURED / HEURISTIC / UNAVAILABLE
+├── markets/                 # MarketProfile — scalabilité multi-plateforme
+├── providers/               # Gemini, Wikipedia, Wikimedia, Reddit, Etsy…
+├── research/                # OpportunityValidator, WebSignalFetcher, HistoryStore
+├── generators/              # BriefGenerator, RunwareGenerator, GenerationPipeline,
+│                            # QualityAuditor, SpoonflowerPackager, ApprovalGate
+├── normalizer/              # NicheTree (159 nœuds), ConceptMerger
+├── analyzers/               # TrendScorer, HybridScorer, OpportunityScorer
+├── platform_router/         # Allocation multi-plateformes
+├── database/                # OpportunityStore SQLite, HistoryTracker
+└── main.py                  # CLI : preview | generate | (legacy pipeline)
+```
