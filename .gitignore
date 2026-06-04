@@ -3,3 +3,4 @@
 *.pyo
 .env
 data/*.db
+data/detection_history.jsonl

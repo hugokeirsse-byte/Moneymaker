@@ -562,27 +562,44 @@ def _run_full_scrapers(
 # Mode preview : vérifie Gemini + prompts SANS générer d'images
 # ─────────────────────────────────────────────────────────────────────────────
 
-def preview_trends(output_dir: str = "./reports") -> None:
+def preview_trends(
+    output_dir: str = "./reports",
+    market: str = "spoonflower",
+    niche_count: Optional[int] = None,
+    extra_constraints: str = "",
+) -> None:
     """
-    Mode de vérification : interroge Gemini + Wikimedia, génère les cahiers des charges
-    complets (direction visuelle, palette hex, images de référence, prompts IA prêts).
+    Mode de vérification : interroge Gemini + Wikimedia, valide les opportunités,
+    génère les cahiers des charges complets (direction visuelle, palette hex,
+    images de référence, prompts IA prêts) avec score transparent et fiabilité.
+
+    Args:
+        output_dir: dossier de sortie des rapports.
+        market: clé du marché ciblé (ex: "spoonflower").
+        niche_count: si fourni, surcharge le nombre de niches du profil.
+        extra_constraints: contraintes opérateur injectées dans le prompt Gemini.
 
     Sortie : console + reports/cahiers_des_charges_YYYYMMDD_HHMM.md + .json
     """
     from trend_discovery.generators.production_brief import BriefGenerator
+    from trend_discovery.markets.market_profile import get_profile
 
     logger.info("=" * 60)
-    logger.info("PREVIEW — Cahiers des Charges Gemini (sans génération)")
+    logger.info("PREVIEW — Cahiers des Charges (validation d'opportunités, sans génération)")
     logger.info("=" * 60)
 
-    gen = BriefGenerator()
+    profile = get_profile(market)
+    if niche_count:
+        profile.niche_count = int(niche_count)
+
+    gen = BriefGenerator(profile)
     if gen._gemini.is_available():
         logger.info("Interrogation Gemini + Google Search + Wikimedia Commons…")
     else:
         logger.info(
             "Gemini indisponible — génération via arbre de niches + Wikipedia + Wikimedia (0 coût)."
         )
-    briefs = gen.generate_all()
+    briefs = gen.generate_all(extra_constraints)
 
     if not briefs:
         logger.error("Aucune tendance trouvée.")
@@ -590,16 +607,21 @@ def preview_trends(output_dir: str = "./reports") -> None:
 
     # Affichage résumé console
     print("\n" + "=" * 60)
-    print(f"  {len(briefs)} CAHIERS DES CHARGES GÉNÉRÉS")
+    print(f"  {len(briefs)} CAHIERS DES CHARGES GÉNÉRÉS — marché : {profile.key}")
     print("=" * 60)
 
     for i, b in enumerate(briefs, 1):
-        print(f"\n{b.opportunity_emoji()} #{i} {b.name} ({b.trending_score}/100)")
-        print(f"   {b.why_trending[:100]}")
+        sat_level = (b.saturation or {}).get("level", "?")
+        print(
+            f"\n{b.opportunity_emoji()} #{i} {b.name} "
+            f"— opportunité {b.opportunity_score}/100 "
+            f"| fiabilité {b.confidence}% "
+            f"| saturation {sat_level}"
+        )
+        if b.demand_evidence:
+            print(f"   Demande: {b.demand_evidence[:90]}")
         if b.color_primary:
             print(f"   Couleurs: {', '.join(b.color_primary[:2])}")
-        if b.positive_prompt:
-            print(f"   Prompt: {b.positive_prompt[:80]}…")
         if b.reference_images:
             print(f"   Références: {len(b.reference_images)} image(s) Wikimedia")
 
@@ -643,14 +665,41 @@ def main():
     parser.add_argument(
         "--preview-trends", action="store_true",
         help=(
-            "Mode vérification : interroge Gemini, affiche les tendances "
-            "et les prompts — SANS générer d'images ni appeler Runware."
+            "Mode vérification : interroge Gemini, valide les opportunités, affiche "
+            "les tendances et les prompts — SANS générer d'images ni appeler Runware."
         )
+    )
+    parser.add_argument(
+        "--market", type=str, default="spoonflower",
+        help="Marché POD ciblé (ex: spoonflower). Détermine le MarketProfile utilisé."
+    )
+    parser.add_argument(
+        "--niches", type=int, default=None,
+        help="Nombre de niches à découvrir (surcharge le profil)."
+    )
+    parser.add_argument(
+        "--exclude", type=str, default="",
+        help="Termes/niches à éviter (séparés par des virgules)."
+    )
+    parser.add_argument(
+        "--focus", type=str, default="",
+        help="Angles à privilégier (séparés par des virgules)."
     )
     args = parser.parse_args()
 
     if args.preview_trends:
-        preview_trends()
+        constraints = []
+        exclude = [e.strip() for e in args.exclude.split(",") if e.strip()]
+        focus = [f.strip() for f in args.focus.split(",") if f.strip()]
+        if exclude:
+            constraints.append("Avoid these: " + ", ".join(exclude))
+        if focus:
+            constraints.append("Prioritize these angles: " + ", ".join(focus))
+        preview_trends(
+            market=args.market,
+            niche_count=args.niches,
+            extra_constraints="\n".join(constraints),
+        )
         return
 
     extra_kws = [k.strip() for k in args.keywords.split(",") if k.strip()] if args.keywords else None
