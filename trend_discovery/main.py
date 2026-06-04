@@ -564,87 +564,51 @@ def _run_full_scrapers(
 
 def preview_trends(output_dir: str = "./reports") -> None:
     """
-    Mode de vérification : interroge Gemini, affiche les trends trouvés
-    et les prompts Runware qui seraient utilisés — sans générer d'image.
+    Mode de vérification : interroge Gemini + Wikimedia, génère les cahiers des charges
+    complets (direction visuelle, palette hex, images de référence, prompts IA prêts).
 
-    Sortie : console + reports/preview_trends.md
+    Sortie : console + reports/cahiers_des_charges_YYYYMMDD_HHMM.md + .json
     """
-    from datetime import datetime, timezone
-    from trend_discovery.providers.gemini_provider import GeminiProvider
-    from trend_discovery.generators.prompt_builder import PromptBuilder
+    from trend_discovery.generators.production_brief import BriefGenerator
 
     logger.info("=" * 60)
-    logger.info("PREVIEW — Tendances Gemini + Prompts (pas de génération)")
+    logger.info("PREVIEW — Cahiers des Charges Gemini (sans génération)")
     logger.info("=" * 60)
 
-    gem = GeminiProvider()
-    if not gem.is_available():
-        logger.error("GEMINI_API_KEY manquante — impossible de faire le preview.")
+    gen = BriefGenerator()
+    if not gen._gemini.is_available():
+        logger.error("GEMINI_API_KEY manquante.")
         return
 
-    logger.info("Interrogation de Gemini + Google Search…")
-    trends = gem.fetch_global_pod_trends()
+    logger.info("Interrogation Gemini + Google Search + Wikimedia Commons…")
+    briefs = gen.generate_all()
 
-    if not trends:
-        logger.error("Gemini n'a retourné aucune tendance. Vérifie la clé.")
+    if not briefs:
+        logger.error("Aucune tendance trouvée.")
         return
 
-    pb = PromptBuilder()
-    lines = [
-        f"# Preview Tendances Gemini — {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}",
-        f"\n**{len(trends)} tendances trouvées via Google Search**\n",
-    ]
-
+    # Affichage résumé console
     print("\n" + "=" * 60)
-    print(f"  {len(trends)} TENDANCES TROUVÉES PAR GEMINI")
+    print(f"  {len(briefs)} CAHIERS DES CHARGES GÉNÉRÉS")
     print("=" * 60)
 
-    for i, t in enumerate(trends, 1):
-        name = t.get("name", "?")
-        score = t.get("trending_score", "?")
-        why = t.get("why_trending", "")
-        sub = t.get("sub_niches", [])
-        colors = t.get("color_keywords", [])
-        styles = t.get("style_keywords", [])
-        suitability = t.get("seamless_suitability", "?")
-
-        # Construire le prompt
-        prompt = pb.build(name, gemini_metadata=t)
-
-        # Affichage console
-        print(f"\n{'─'*55}")
-        print(f"  #{i} {name}  (score: {score}/100 | seamless: {suitability})")
-        print(f"  Pourquoi : {why}")
-        print(f"  Sous-niches : {', '.join(sub)}")
-        print(f"  Couleurs : {', '.join(colors)}")
-        print(f"  Styles : {', '.join(styles)}")
-        print(f"\n  ➜ PROMPT POSITIF :")
-        print(f"    {prompt.positive[:200]}{'…' if len(prompt.positive) > 200 else ''}")
-        print(f"\n  ➜ PROMPT NÉGATIF :")
-        print(f"    {prompt.negative[:120]}…")
-
-        # Markdown
-        lines += [
-            f"\n## #{i} — {name}",
-            f"**Score tendance :** {score}/100 | **Seamless :** {suitability}",
-            f"\n**Pourquoi :** {why}",
-            f"\n**Sous-niches :** {', '.join(sub)}",
-            f"\n**Couleurs :** {', '.join(colors)}",
-            f"\n**Styles :** {', '.join(styles)}",
-            f"\n### Prompt positif\n```\n{prompt.positive}\n```",
-            f"\n### Prompt négatif\n```\n{prompt.negative}\n```",
-        ]
+    for i, b in enumerate(briefs, 1):
+        print(f"\n{b.opportunity_emoji()} #{i} {b.name} ({b.trending_score}/100)")
+        print(f"   {b.why_trending[:100]}")
+        if b.color_primary:
+            print(f"   Couleurs: {', '.join(b.color_primary[:2])}")
+        if b.positive_prompt:
+            print(f"   Prompt: {b.positive_prompt[:80]}…")
+        if b.reference_images:
+            print(f"   Références: {len(b.reference_images)} image(s) Wikimedia")
 
     print("\n" + "=" * 60)
     print("  VÉRIFICATION TERMINÉE — aucune image générée, aucun coût")
     print("=" * 60 + "\n")
 
-    # Sauvegarde markdown
-    os.makedirs(output_dir, exist_ok=True)
-    preview_path = os.path.join(output_dir, "preview_trends.md")
-    with open(preview_path, "w", encoding="utf-8") as f:
-        f.write("\n".join(lines))
-    logger.info("Preview sauvegardé : %s", preview_path)
+    # Sauvegarde rapport complet
+    path = gen.save_report(briefs, output_dir)
+    logger.info("Cahiers des charges complets sauvegardés: %s", path)
 
 
 # ─────────────────────────────────────────────────────────────────────────────
