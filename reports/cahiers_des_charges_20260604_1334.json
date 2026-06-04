@@ -230,7 +230,8 @@
             "apothecary bottle",
             "watercolor illustration",
             "Rifle Paper Co. style"
-          ]
+          ],
+          "positive_prompt": "Seamless tossed repeat pattern. Flat clean icons of vintage glass ink bottles — round, hexagonal, square shapes — filled with luminous royal blue, emerald and burgundy ink. Fine single-weight ink outlines, flat color fills, no gradients. Small ink droplet and splatter accents. Parchment cream background, generous spacing. Perfectly seamless tiling, wallpaper surface design, 300 DPI."
         },
         {
           "name": "Fountain Pen Nibs",
@@ -242,7 +243,8 @@
             "geometric layout",
             "metallic watercolor",
             "academic stationery"
-          ]
+          ],
+          "positive_prompt": "Seamless geometric half-drop repeat pattern. Flat minimal icons of antique gold and silver fountain pen nibs, shown at slight angles in a balanced grid. Single-weight outline style, flat gold (#D4AF37) and silver fills, no gradients, no shadows. Clean ivory background. Academic stationery aesthetic, Art Deco grid structure. Perfectly seamless tiling, wallpaper surface design, 300 DPI."
         },
         {
           "name": "Cursive Ink Writing",
@@ -254,7 +256,8 @@
             "quill feather",
             "dark academia",
             "Victorian letterwriting"
-          ]
+          ],
+          "positive_prompt": "Seamless tossed repeat pattern. Flat minimal icons: small cursive script word loops, quill feathers, ink dots, tiny open envelopes, all in deep Prussian blue. Clean flat silhouette style, single color on parchment cream background. Light, airy spacing. Dark academia stationery aesthetic. Perfectly seamless tiling, wallpaper surface design, 300 DPI."
         },
         {
           "name": "Stationery & Wax Seals",
@@ -266,7 +269,8 @@
             "postage stamp",
             "antique fountain pen",
             "dark academia stationery"
-          ]
+          ],
+          "positive_prompt": "Seamless tossed repeat pattern. Flat simplified icons: wax seal circle, folded envelope, postage stamp, fountain pen silhouette, small ribbon bow. Clean flat design, crimson (#8B0000) and antique gold (#D4AF37) on warm cream background. Balanced even spacing. Perfectly seamless tiling, wallpaper surface design, 300 DPI."
         }
       ],
       "visual_direction": {
@@ -300,8 +304,8 @@
         "competition_level": "low"
       },
       "ai_generation": {
-        "positive_prompt": "Seamless half-drop repeat surface pattern for fabric. Antique glass inkwells in various shapes — round, hexagonal, square — filled with luminous royal blue (#4169E1), emerald green (#50C878) and deep burgundy (#800020) ink. Ornate antique gold fountain pen nibs with engraved detail and metallic sheen. Scattered ink droplets and small quill feather accents. Detailed watercolor illustration style inspired by Rifle Paper Co.: fine ink outlines, rich translucent washes, visible watercolor paper texture. Warm parchment cream background (#F5F2EB). Generous negative space, balanced tossed layout, medium motif scale. Flat lay, even studio lighting, professional textile surface design, tileable seamless repeat, 300 DPI, no visible seam lines, no text, no watermarks.",
-        "negative_prompt": "blurry, low quality, pixelated, jpeg artifacts, visible seam lines, tile edges, white grid, text, watermarks, signature, cartoon, clip art, 3D render, photorealistic photo, harsh drop shadows, neon colors, modern ballpoint pens, biro, digital flat vector art, busy cluttered layout, asymmetric repeat, dark background, ugly proportions, deformed objects, floating artifacts",
+        "positive_prompt": "Seamless half-drop repeat surface pattern. Flat simplified motifs: vintage inkwells in round and hexagonal shapes, antique fountain pen nibs, small ink droplet accents, tiny quill feather icons. Clean flat vector illustration style with fine ink outlines, minimal color fills — royal blue (#4169E1), emerald green (#50C878), antique gold (#D4AF37) on warm parchment cream (#F5F2EB) background. Motifs evenly spaced with generous breathing room, medium scale, balanced tossed layout. Perfectly seamless tiling, all four edges connect, professional wallpaper and fabric surface design, 300 DPI, flat lay.",
+        "negative_prompt": "blurry, pixelated, jpeg artifacts, visible seam lines, tile edges, text, watermarks, 3D render, photorealistic, heavy drop shadows, neon colors, busy cluttered layout, asymmetric, white grid, single centered object, isolated motif, dark background, cartoon, cheap clip art, gradient mesh",
         "key_elements": [
           "glass inkwells",
           "gold nibs",

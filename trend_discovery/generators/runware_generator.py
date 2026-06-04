@@ -102,21 +102,14 @@ class RunwareGenerator:
         cfg_scale: float = 7.5,
         model: str = DEFAULT_MODEL,
         seed: int = -1,
+        tiling: bool = True,
     ) -> Optional[str]:
         """
         Génère une image et retourne son URL.
 
         Args:
-            positive_prompt: description de l'image désirée
-            negative_prompt: ce qu'on ne veut pas voir
-            width/height: dimensions en pixels (carrées pour seamless)
-            steps: nombre de steps de diffusion (+ = meilleure qualité, + lent)
-            cfg_scale: guidance scale (7-9 pour les patterns)
-            model: ID du modèle Runware
-            seed: -1 = aléatoire
-
-        Returns:
-            URL de l'image générée, ou None en cas d'erreur.
+            tiling: active la génération seamless native (bords raccordés mathématiquement)
+            seed: -1 = aléatoire (clé omise de l'API)
         """
         task_uuid = str(uuid.uuid4())
         task: Dict = {
@@ -134,6 +127,7 @@ class RunwareGenerator:
             "outputFormat": "PNG",
             "checkNSFW": False,
             "includeCost": False,
+            "tiling": tiling,
         }
         if seed != -1:
             task["seed"] = seed
