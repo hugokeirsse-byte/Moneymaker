@@ -46,6 +46,7 @@ class MarketProfile:
     output_format: dict = field(default_factory=dict)
     repeat_required: bool = True
     niche_count: int = 12
+    crossover_count: int = 2  # niches "crossover gap" ultra-nichées en plus des niche_count
 
 
 # ── Profil Spoonflower (savoir actuellement codé en dur, désormais déclaratif) ─

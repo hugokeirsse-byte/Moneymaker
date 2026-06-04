@@ -99,6 +99,9 @@ class ProductionBrief:
     seo_keywords: List[str] = field(default_factory=list)
     title_seeds: List[str] = field(default_factory=list)
 
+    # ── Type de niche ─────────────────────────────────────────────────────────
+    crossover_gap: bool = False  # True = micro-niche crossover (communauté passionnée × gap marché)
+
     # ── Helpers ──────────────────────────────────────────────────────────────
 
     def opportunity_emoji(self) -> str:
@@ -131,8 +134,9 @@ class ProductionBrief:
         lines: List[str] = []
 
         # ── En-tête ──────────────────────────────────────────────────────────
+        crossover_badge = " &nbsp;🔀 **CROSSOVER GAP**" if self.crossover_gap else ""
         lines += [
-            f"# {self.opportunity_emoji()} {self.name}",
+            f"# {self.opportunity_emoji()} {self.name}{crossover_badge}",
             f"",
             f"> **Score tendance :** {self.trending_score}/100 &nbsp;|&nbsp; "
             f"**Opportunité marché :** {self.market_opportunity.replace('_', ' ').upper()} {self.opportunity_emoji()} &nbsp;|&nbsp; "
@@ -598,6 +602,8 @@ def _brief_from_trend(trend: Dict) -> ProductionBrief:
         # SEO
         seo_keywords=seo_keywords,
         title_seeds=title_seeds,
+        # Type de niche
+        crossover_gap=bool(trend.get("crossover_gap", False)),
     )
 
 
