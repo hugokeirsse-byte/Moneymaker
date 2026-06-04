@@ -2,7 +2,7 @@
 Provider Gemini — recherche de tendances en temps réel via Google Search.
 
 Utilise Gemini 2.0 Flash avec Google Search grounding pour trouver
-les vraies tendances POD mondiales (Spoonflower, fabric design) actuelles.
+les vraies tendances POD mondiales (agnostique au marché : voir MarketProfile).
 
 Produit des "cahiers des charges" complets avec direction visuelle, palettes
 de couleurs (hex), références de style, sous-niches, et prompts IA prêts à l'emploi.
@@ -19,10 +19,11 @@ import json
 import logging
 import os
 from datetime import date
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Union
 
 import requests
 
+from trend_discovery.markets.market_profile import MarketProfile, SPOONFLOWER
 from trend_discovery.providers.base_provider import DataProvider
 from trend_discovery.provenance import Metric
 
@@ -30,79 +31,20 @@ logger = logging.getLogger(__name__)
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 
-# ── Prompt enrichi pour la génération de cahiers des charges ──────────────────
 
-_TREND_PROMPT_TEMPLATE = """Today is {today}. You are an expert in print-on-demand surface design and Spoonflower fabric patterns.
+def _coerce_profile(profile: Union[MarketProfile, str, None]) -> MarketProfile:
+    """
+    Compat ascendante : accepte un MarketProfile, une chaîne (clé/marché) ou None.
 
-Use Google Search to find REAL, CURRENT data SPECIFIC to the Spoonflower marketplace. Identify the top 12 OPPORTUNITY niches for {market} — niches with strong and growing buyer demand BUT that are NOT yet oversaturated, so a new designer can actually rank and sell.
-
-Research these real Spoonflower signals before answering:
-- Recent Spoonflower Design Challenge themes and winners (these reveal what the marketplace is pushing right now)
-- Spoonflower trending tags, bestselling fabric collections, "popular" and "newest" sorts
-- What Spoonflower buyers actually make: quilting cotton, apparel, baby/nursery, home decor, wallpaper, table linens
-- Pinterest / TikTok / interior-design trend reports cross-referenced with what is still UNDERSERVED on Spoonflower
-
-CRITICAL selection rules:
-- PRIORITIZE the opportunity gap: high demand + LOW or MEDIUM competition. A niche with huge demand but "very_high" competition is NOT a good pick — skip it or find a fresh sub-angle.
-- EXCLUDE oversaturated/generic categories: plain generic florals, generic cute cats/animals, basic rainbows, plain boho, generic Christmas — unless you find a genuinely fresh, specific, underserved angle.
-- Every niche must be SPECIFIC and differentiated (a precise aesthetic + subject combo), never a broad generic theme.
-- "trending_score" must represent the OPPORTUNITY (demand strength × scarcity of competition), NOT raw popularity. Rank the 12 by this opportunity score, best first.
-
-For EACH trend, return a complete JSON object with ALL of these fields — be specific, use real hex codes, real style references:
-
-{{
-  "name": "2-4 word English trend name (e.g. Victorian Botanical Seamless)",
-  "trending_score": integer 0-100 based on current web/social activity,
-  "market_opportunity": "very_high" | "high" | "medium" | "low",
-  "why_trending": "2 factual sentences: (1) the real demand evidence you found on the web, (2) why it is an OPPORTUNITY on Spoonflower specifically — i.e. demand is rising but competition is still beatable, and the fresh angle that sets it apart",
-  "target_audience": "specific Spoonflower buyer segment + what they make (e.g. quilters making baby blankets, apparel sewists, wallpaper home decorators)",
-  "sub_niches": [
-    {{
-      "name": "specific 2-5 word sub-niche",
-      "trending_score": integer 0-100,
-      "unique_angle": "what makes this sub-niche distinct and saleable",
-      "prompt_keywords": ["keyword1", "keyword2", "keyword3"]
-    }}
-  ],
-  "visual_direction": {{
-    "mood": "comma-separated mood adjectives (e.g. romantic, nostalgic, scientific)",
-    "composition": "repeat type and scale description (e.g. half-drop repeat, medium scale)",
-    "line_style": "drawing/rendering style (e.g. fine pen lines with watercolor wash)",
-    "color_palette": {{
-      "primary": ["Color Name #HEXCODE", "Color Name #HEXCODE", "Color Name #HEXCODE"],
-      "accent": ["Color Name #HEXCODE", "Color Name #HEXCODE"],
-      "background": "Color Name #HEXCODE"
-    }},
-    "style_references": ["Artist or movement name", "Artist or movement name"],
-    "texture": "surface texture description (e.g. aged paper, fine engraving lines)"
-  }},
-  "spoonflower_fit": {{
-    "repeat_type": "half-drop" | "basic" | "brick" | "mirror" | "turn",
-    "scale": "small" | "medium" | "large",
-    "top_products": ["fabric", "wallpaper", "gift_wrap"],
-    "competition_level": "very_high" | "high" | "medium" | "low"
-  }},
-  "ai_generation": {{
-    "positive_prompt": "ULTRA-COMPLETE 120-180 word prompt engineered to produce the PERFECT seamless pattern in ONE generation (before any upscaling). Must explicitly cover, in this order: (1) main subject and the specific motifs/objects, (2) exact layout and repeat structure (e.g. half-drop, evenly spaced, balanced negative space, no large gaps), (3) art style + medium + technique (e.g. gouache, vintage engraving, flat vector, watercolor), (4) line quality and level of detail, (5) the precise color palette naming the actual hex colors, (6) lighting/shading approach (flat, soft, even — no harsh cast shadows), (7) background treatment. MUST end with exactly: seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, even lighting, high detail, 300 DPI, clean background",
-    "negative_prompt": "specific 40-70 word negative prompt tailored to this niche's exact pitfalls (e.g. for botanical: 'wilted, dead leaves, muddy colors'), plus seam/tiling defects, harsh shadows, text, watermarks, low resolution",
-    "key_elements": ["must-have element 1", "must-have element 2", "must-have element 3", "must-have element 4"],
-    "avoid_elements": ["thing to avoid 1", "thing to avoid 2", "thing to avoid 3"],
-    "cfg_scale": 7.5,
-    "style_weight": 0.85
-  }},
-  "wikimedia_query": "2-5 word query to find public domain reference images on Wikimedia Commons"
-}}
-
-Requirements:
-- EXACTLY 4 sub-niches per trend
-- Real hex codes for ALL colors (no "earthy brown" — use "#8B4513 Saddle Brown")
-- positive_prompt must be 120-180 words, vivid, specific, follow the 7-part structure, end with the required suffix
-- style_references must be real artists or movements (e.g. "William Morris", "Pierre-Joseph Redouté")
-- Focus on trends that are hot RIGHT NOW ({today}), tile beautifully as fabric, have strong visual identity — each backed by real web evidence in why_trending
-- wikimedia_query must find actual public domain illustration or art images
-
-Return ONLY a valid JSON array of exactly 12 trend objects. No text before or after. No markdown wrapper.
-"""
+    Les anciens appels passaient une chaîne `market` ou rien — on retombe alors
+    proprement sur le profil Spoonflower par défaut.
+    """
+    if isinstance(profile, MarketProfile):
+        return profile
+    if isinstance(profile, str) and profile:
+        from trend_discovery.markets.market_profile import get_profile
+        return get_profile(profile)
+    return SPOONFLOWER
 
 
 class GeminiProvider(DataProvider):
@@ -367,9 +309,155 @@ class GeminiProvider(DataProvider):
             logger.warning("[gemini] Wikimedia search failed for '%s': %s", query, exc)
             return []
 
+    # ── Construction du prompt de tendances depuis un MarketProfile ────────────
+
+    def _build_trend_prompt(
+        self,
+        profile: MarketProfile,
+        today: str,
+        extra_constraints: str = "",
+    ) -> str:
+        """
+        Construit le prompt de découverte de tendances À PARTIR d'un MarketProfile.
+
+        Tout le savoir marché (plateforme, produits, signaux de recherche,
+        catégories saturées, contraintes d'export, nombre de niches) est injecté
+        depuis le profil — le moteur reste donc agnostique au marché : changer de
+        plateforme = changer de MarketProfile, sans toucher à ce code.
+
+        Args:
+            profile: le MarketProfile décrivant le marché ciblé.
+            today: date du jour (ISO) injectée dans le prompt.
+            extra_constraints: contraintes additionnelles de l'opérateur
+                (ex: termes à exclure / sujets à privilégier).
+
+        Returns:
+            Le prompt complet prêt à passer à _call_gemini.
+        """
+        of = profile.output_format or {}
+        file_fmt = of.get("file", "PNG")
+        dpi = of.get("dpi", 300)
+        min_px = of.get("min_px", 4500)
+        color_profile = of.get("color_profile", "sRGB")
+        max_mb = of.get("max_mb", 40)
+
+        products = ", ".join(profile.product_types) or "surface design products"
+        buyers = ", ".join(profile.buyer_segments) or "independent buyers"
+        signals = "\n".join(f"- {s}" for s in profile.research_signals) or "- current marketplace bestsellers and trending tags"
+        excluded = ", ".join(profile.excluded_generic) or "broad generic themes"
+        name = profile.display_name
+
+        # Contrainte de repeat seamless selon le profil
+        if profile.repeat_required:
+            repeat_line = (
+                "Every niche MUST tile beautifully as a SEAMLESS REPEAT pattern "
+                "(perfect edge-to-edge tile, no visible seam)."
+            )
+            quality_suffix = (
+                "seamless repeat pattern, tileable, surface design, fabric pattern, "
+                "professional textile design, flat lay, even lighting, high detail, "
+                f"{dpi} DPI, clean background"
+            )
+            repeat_field_hint = '"repeat_type": "half-drop" | "basic" | "brick" | "mirror" | "turn",'
+        else:
+            repeat_line = (
+                "Each niche must work as a strong standalone composition for the "
+                "products listed (no seamless tiling required)."
+            )
+            quality_suffix = (
+                "clean professional artwork, bold composition, even lighting, "
+                f"high detail, {dpi} DPI, clean background"
+            )
+            repeat_field_hint = '"repeat_type": "standalone" | "centered" | "allover",'
+
+        extra_block = ""
+        if extra_constraints:
+            extra_block = (
+                "\nOPERATOR CONSTRAINTS (must respect):\n"
+                f"{extra_constraints}\n"
+            )
+
+        return f"""Today is {today}. You are an expert in print-on-demand surface design for {name}.
+
+Use Google Search to find REAL, CURRENT data SPECIFIC to {profile.platform_description}. Identify the top {profile.niche_count} OPPORTUNITY niches — niches with strong and growing buyer demand BUT that are NOT yet oversaturated, so a new designer can actually rank and sell.
+
+Research these real {name} signals before answering:
+{signals}
+
+The products buyers actually purchase here: {products}.
+The buyer segments to design for: {buyers}.
+{extra_block}
+CRITICAL selection rules:
+- PRIORITIZE the opportunity gap: high demand + LOW or MEDIUM competition. A niche with huge demand but "very_high" competition is NOT a good pick — skip it or find a fresh sub-angle.
+- EXCLUDE oversaturated/generic categories: {excluded} — unless you find a genuinely fresh, specific, underserved angle.
+- Every niche must be SPECIFIC and differentiated (a precise aesthetic + subject combo), never a broad generic theme.
+- "trending_score" must represent the OPPORTUNITY (demand strength × scarcity of competition), NOT raw popularity. Rank the {profile.niche_count} by this opportunity score, best first.
+- {repeat_line}
+
+For EACH trend, return a complete JSON object with ALL of these fields — be specific, use real hex codes, real style references:
+
+{{{{
+  "name": "2-4 word English trend name (e.g. Victorian Botanical Seamless)",
+  "trending_score": integer 0-100 based on current web/social activity,
+  "market_opportunity": "very_high" | "high" | "medium" | "low",
+  "why_trending": "2 factual sentences: (1) the real demand evidence you found on the web, (2) why it is an OPPORTUNITY on {name} specifically — i.e. demand is rising but competition is still beatable, and the fresh angle that sets it apart",
+  "target_audience": "specific {name} buyer segment + what they make (drawn from: {buyers})",
+  "sub_niches": [
+    {{{{
+      "name": "specific 2-5 word sub-niche",
+      "trending_score": integer 0-100,
+      "unique_angle": "what makes this sub-niche distinct and saleable",
+      "prompt_keywords": ["keyword1", "keyword2", "keyword3"]
+    }}}}
+  ],
+  "visual_direction": {{{{
+    "mood": "comma-separated mood adjectives (e.g. romantic, nostalgic, scientific)",
+    "composition": "repeat type and scale description (e.g. half-drop repeat, medium scale)",
+    "line_style": "drawing/rendering style (e.g. fine pen lines with watercolor wash)",
+    "color_palette": {{{{
+      "primary": ["Color Name #HEXCODE", "Color Name #HEXCODE", "Color Name #HEXCODE"],
+      "accent": ["Color Name #HEXCODE", "Color Name #HEXCODE"],
+      "background": "Color Name #HEXCODE"
+    }}}},
+    "style_references": ["Artist or movement name", "Artist or movement name"],
+    "texture": "surface texture description (e.g. aged paper, fine engraving lines)"
+  }}}},
+  "spoonflower_fit": {{{{
+    {repeat_field_hint}
+    "scale": "small" | "medium" | "large",
+    "top_products": ["{(profile.product_types[:1] or ['fabric'])[0]}"],
+    "competition_level": "very_high" | "high" | "medium" | "low"
+  }}}},
+  "ai_generation": {{{{
+    "positive_prompt": "ULTRA-COMPLETE 120-180 word prompt engineered to produce the PERFECT pattern in ONE generation (before any upscaling). Must explicitly cover, in this order: (1) main subject and the specific motifs/objects, (2) exact layout and repeat structure (e.g. half-drop, evenly spaced, balanced negative space, no large gaps), (3) art style + medium + technique (e.g. gouache, vintage engraving, flat vector, watercolor), (4) line quality and level of detail, (5) the precise color palette naming the actual hex colors, (6) lighting/shading approach (flat, soft, even — no harsh cast shadows), (7) background treatment. MUST end with exactly: {quality_suffix}",
+    "negative_prompt": "specific 40-70 word negative prompt tailored to this niche's exact pitfalls (e.g. for botanical: 'wilted, dead leaves, muddy colors'), plus seam/tiling defects, harsh shadows, text, watermarks, low resolution",
+    "key_elements": ["must-have element 1", "must-have element 2", "must-have element 3", "must-have element 4"],
+    "avoid_elements": ["thing to avoid 1", "thing to avoid 2", "thing to avoid 3"],
+    "cfg_scale": 7.5,
+    "style_weight": 0.85
+  }}}},
+  "wikimedia_query": "2-5 word query to find public domain reference images on Wikimedia Commons"
+}}}}
+
+Requirements:
+- EXACTLY 4 sub-niches per trend
+- Real hex codes for ALL colors (no "earthy brown" — use "#8B4513 Saddle Brown")
+- positive_prompt must be 120-180 words, vivid, specific, follow the 7-part structure, end with the required suffix
+- style_references must be real artists or movements (e.g. "William Morris", "Pierre-Joseph Redouté")
+- Focus on trends that are hot RIGHT NOW ({today}), have strong visual identity for {name} — each backed by real web evidence in why_trending
+- Target export: {file_fmt}, {dpi} DPI, {min_px}x{min_px}px min, {color_profile}, max {max_mb}MB
+- wikimedia_query must find actual public domain illustration or art images
+
+Return ONLY a valid JSON array of exactly {profile.niche_count} trend objects. No text before or after. No markdown wrapper.
+"""
+
     # ── Méthode principale : découverte de tendances ───────────────────────────
 
-    def fetch_global_pod_trends(self, market: str = "Spoonflower fabric design") -> List[Dict]:
+    def fetch_global_pod_trends(
+        self,
+        profile: Union[MarketProfile, str, None] = None,
+        extra_constraints: str = "",
+    ) -> List[Dict]:
         """
         Recherche les niches tendance mondiales pour le marché POD donné.
 
@@ -379,14 +467,20 @@ class GeminiProvider(DataProvider):
 
         Met en cache les résultats pour éviter les appels répétés.
 
+        Args:
+            profile: MarketProfile ciblé. Compat ascendante : accepte aussi une
+                chaîne (clé marché) ou None → repli sur SPOONFLOWER.
+            extra_constraints: contraintes opérateur injectées dans le prompt.
+
         Returns:
             Liste de dicts structurés avec tous les champs du cahier des charges.
         """
         if self._global_trends is not None:
             return self._global_trends
 
+        profile = _coerce_profile(profile)
         today = date.today().isoformat()
-        prompt = _TREND_PROMPT_TEMPLATE.format(today=today, market=market)
+        prompt = self._build_trend_prompt(profile, today, extra_constraints)
 
         raw = self._call_gemini(prompt)
         if not raw:
@@ -404,83 +498,7 @@ class GeminiProvider(DataProvider):
         for t in trends:
             if not isinstance(t, dict) or not t.get("name"):
                 continue
-
-            # ── Garantir tous les champs top-level ──────────────────────────
-            t.setdefault("trending_score", 50)
-            t.setdefault("market_opportunity", "medium")
-            t.setdefault("why_trending", "")
-            t.setdefault("target_audience", "")
-            t.setdefault("sub_niches", [])
-            t.setdefault("wikimedia_query", t["name"].lower().replace(" ", " "))
-
-            # ── Visual direction ─────────────────────────────────────────────
-            vd = t.setdefault("visual_direction", {})
-            vd.setdefault("mood", "")
-            vd.setdefault("composition", "")
-            vd.setdefault("line_style", "")
-            vd.setdefault("texture", "")
-            vd.setdefault("style_references", [])
-            cp = vd.setdefault("color_palette", {})
-            cp.setdefault("primary", [])
-            cp.setdefault("accent", [])
-            cp.setdefault("background", "")
-
-            # ── Spoonflower fit ──────────────────────────────────────────────
-            sf = t.setdefault("spoonflower_fit", {})
-            sf.setdefault("repeat_type", "basic")
-            sf.setdefault("scale", "medium")
-            sf.setdefault("top_products", ["fabric"])
-            sf.setdefault("competition_level", "medium")
-
-            # ── AI generation ────────────────────────────────────────────────
-            ag = t.setdefault("ai_generation", {})
-            ag.setdefault("positive_prompt", "")
-            ag.setdefault("negative_prompt", "")
-            ag.setdefault("key_elements", [])
-            ag.setdefault("avoid_elements", [])
-            ag.setdefault("cfg_scale", 7.5)
-            ag.setdefault("style_weight", 0.85)
-
-            # ── Normalize sub_niches ─────────────────────────────────────────
-            normalized_subs = []
-            for sub in t.get("sub_niches", []):
-                if isinstance(sub, str):
-                    normalized_subs.append({
-                        "name": sub,
-                        "trending_score": 50,
-                        "unique_angle": "",
-                        "prompt_keywords": [],
-                    })
-                elif isinstance(sub, dict):
-                    sub.setdefault("trending_score", 50)
-                    sub.setdefault("unique_angle", "")
-                    sub.setdefault("prompt_keywords", [])
-                    normalized_subs.append(sub)
-            t["sub_niches"] = normalized_subs
-
-            # ── Legacy fields for backward compatibility ─────────────────────
-            # Keep old-style fields so existing pipeline code still works
-            color_palette = t["visual_direction"]["color_palette"]
-            primary_colors = color_palette.get("primary", [])
-            accent_colors = color_palette.get("accent", [])
-            t.setdefault(
-                "color_keywords",
-                [c.split("#")[0].strip() for c in primary_colors[:3] + accent_colors[:1]],
-            )
-            t.setdefault(
-                "style_keywords",
-                [
-                    t["visual_direction"].get("mood", ""),
-                    t["visual_direction"].get("line_style", ""),
-                    t["visual_direction"].get("texture", ""),
-                ][:6],
-            )
-            t.setdefault(
-                "seamless_suitability",
-                "high" if sf.get("competition_level") != "very_high" else "medium",
-            )
-            t.setdefault("spoonflower_demand", sf.get("competition_level", "medium"))
-
+            t = self._normalize_trend(t)
             valid.append(t)
             # Cache par nom exact et lowercase
             self._trend_cache[t["name"]] = t
@@ -492,19 +510,99 @@ class GeminiProvider(DataProvider):
         )
         return valid
 
-    def build_production_briefs(self) -> List[Dict]:
+    def critique_and_refine(
+        self,
+        trends: List[Dict],
+        profile: Union[MarketProfile, str, None] = None,
+    ) -> List[Dict]:
+        """
+        Passe d'AUTO-CRITIQUE : un SECOND appel Gemini qui révise les niches proposées.
+
+        Demande à Gemini de :
+          - signaler/retirer les niches en réalité sur-saturées,
+          - resserrer l'angle différenciant de chaque niche,
+          - réécrire les positive_prompts faibles au standard 120-180 mots.
+
+        Le résultat respecte EXACTEMENT le même schéma JSON (liste des mêmes objets,
+        affinés). En cas d'échec (réponse vide/invalide), retourne les tendances
+        d'origine inchangées — la critique ne doit jamais dégrader le pipeline.
+
+        Args:
+            trends: liste des niches proposées (sortie de fetch_global_pod_trends).
+            profile: MarketProfile (ou chaîne/None) pour contextualiser la critique.
+
+        Returns:
+            La liste affinée (même schéma) ou l'originale si la critique échoue.
+        """
+        if not trends:
+            return trends
+        profile = _coerce_profile(profile)
+
+        try:
+            trends_json = json.dumps(trends, ensure_ascii=False)
+        except (TypeError, ValueError) as exc:
+            logger.warning("[gemini] critique : sérialisation JSON échouée : %s", exc)
+            return trends
+
+        excluded = ", ".join(profile.excluded_generic) or "broad generic themes"
+        prompt = f"""You are a senior {profile.display_name} surface-design strategist reviewing a junior's niche proposals.
+
+Here is the JSON array of proposed niches:
+{trends_json}
+
+Critically REVIEW and REFINE this list. Your job:
+1. SATURATION CHECK — for any niche that is actually oversaturated or too generic ({excluded}), either drop it or pivot it to a genuinely fresh, underserved angle. Adjust its "competition_level" honestly.
+2. SHARPEN the differentiating angle of EVERY niche (name, why_trending, sub_niches[].unique_angle) so each is specific and clearly distinct from the others.
+3. UPGRADE any weak "positive_prompt" so EVERY niche has a vivid 120-180 word prompt following the same 7-part structure and ending with the same required suffix as the input.
+4. Keep "trending_score" as the OPPORTUNITY score (demand × scarcity); re-rank best first.
+
+Return ONLY a valid JSON array using the EXACT SAME object schema and fields as the input (same keys, same nesting). Do not add or remove fields. No prose, no markdown wrapper."""
+
+        raw = self._call_gemini(prompt)
+        if not raw:
+            logger.info("[gemini] critique : réponse vide — tendances inchangées")
+            return trends
+
+        refined = self._extract_json(raw)
+        if not refined:
+            logger.info("[gemini] critique : parse JSON échoué — tendances inchangées")
+            return trends
+
+        # Garder uniquement les objets nommés valides ; sécuriser tous les champs.
+        valid = [t for t in refined if isinstance(t, dict) and t.get("name")]
+        if not valid:
+            logger.info("[gemini] critique : aucune niche valide — tendances inchangées")
+            return trends
+
+        normalized = [self._normalize_trend(t) for t in valid]
+        logger.info(
+            "[gemini] critique : %d niches affinées (sur %d proposées)",
+            len(normalized), len(trends),
+        )
+        return normalized
+
+    def build_production_briefs(
+        self,
+        profile: Union[MarketProfile, str, None] = None,
+        extra_constraints: str = "",
+    ) -> List[Dict]:
         """
         Construit des cahiers des charges complets avec images de référence Wikimedia.
 
         Étapes :
-        1. Appelle fetch_global_pod_trends() pour obtenir les 12 tendances structurées
+        1. Appelle fetch_global_pod_trends() pour obtenir les niches structurées
         2. Pour chaque tendance, cherche des images Wikimedia Commons (domaine public)
         3. Retourne la liste enrichie avec le champ `reference_images`
+
+        Args:
+            profile: MarketProfile (ou chaîne/None) — repli SPOONFLOWER.
+            extra_constraints: contraintes opérateur injectées dans le prompt.
 
         Returns:
             Liste de tendances enrichies avec reference_images [{title, url, width, height}]
         """
-        trends = self.fetch_global_pod_trends()
+        profile = _coerce_profile(profile)
+        trends = self.fetch_global_pod_trends(profile, extra_constraints)
         enriched = []
 
         for trend in trends:
