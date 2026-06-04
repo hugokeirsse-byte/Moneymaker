@@ -9,13 +9,20 @@ Usage :
     pipeline = GenerationPipeline()
     files = pipeline.run(opportunity_scores, max_images=5)
     # → ["./output/spoonflower/botanical_cottagecore_20250603.png", ...]
+
+    # Depuis un ProductionBrief approuvé (flux principal) :
+    results = pipeline.run_brief(brief, n_images=5)
 """
 from __future__ import annotations
 
 import logging
 import os
 from dataclasses import dataclass, field
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from trend_discovery.generators.production_brief import ProductionBrief
+    from trend_discovery.generators.quality_auditor import QualityAuditor
 
 logger = logging.getLogger(__name__)
 
@@ -191,3 +198,132 @@ class GenerationPipeline:
             logger.info("[gen_pipeline] vérif %s: %s", os.path.basename(r.filepath), msg)
 
         return results
+
+    def run_brief(
+        self,
+        brief: "ProductionBrief",
+        n_images: int = 5,
+        auditor: Optional["QualityAuditor"] = None,
+    ) -> List[GenerationResult]:
+        """
+        Génère N images à partir d'un ProductionBrief approuvé.
+
+        Utilise directement le positive_prompt et negative_prompt du CdC
+        (construits par Gemini, 120-180 mots, structure 7 parties).
+        Chaque image passe par l'audit qualité avant packaging ; si elle échoue,
+        on retente (max 2 reprises) avant de la rejeter.
+
+        Args:
+            brief: ProductionBrief avec positive_prompt rempli.
+            n_images: nombre d'images à produire.
+            auditor: QualityAuditor optionnel. Si absent, aucun audit n'est fait.
+
+        Returns:
+            Liste de GenerationResult (succès + échecs).
+        """
+        if not self._runware.is_available():
+            return [GenerationResult(
+                niche=brief.name,
+                filepath=None,
+                upscaled_url=None,
+                success=False,
+                error="RUNWARE_API_KEY non configurée",
+            )]
+
+        if not brief.positive_prompt:
+            logger.error("[gen_pipeline] '%s' — positive_prompt vide", brief.name)
+            return [GenerationResult(
+                niche=brief.name, filepath=None, upscaled_url=None,
+                success=False, error="positive_prompt manquant dans le CdC",
+            )]
+
+        results: List[GenerationResult] = []
+        logger.info(
+            "[gen_pipeline] '%s' — génération de %d image(s) | prompt: %s…",
+            brief.name, n_images, brief.positive_prompt[:80],
+        )
+
+        for i in range(n_images):
+            result = self._generate_with_audit(
+                niche_name=brief.name,
+                positive_prompt=brief.positive_prompt,
+                negative_prompt=brief.negative_prompt or "",
+                auditor=auditor,
+                attempt_label=f"{i+1}/{n_images}",
+            )
+            results.append(result)
+            logger.info("[gen_pipeline] %s [%d/%d]: %s", brief.name, i + 1, n_images, result)
+
+        successes = sum(1 for r in results if r.success)
+        logger.info(
+            "[gen_pipeline] '%s' → %d/%d images acceptées",
+            brief.name, successes, n_images,
+        )
+        return results
+
+    def _generate_with_audit(
+        self,
+        niche_name: str,
+        positive_prompt: str,
+        negative_prompt: str,
+        auditor: Optional["QualityAuditor"],
+        attempt_label: str = "",
+        max_retries: int = 2,
+    ) -> GenerationResult:
+        """Génère une image, l'audite, retente si nécessaire."""
+        for attempt in range(max_retries + 1):
+            image_bytes, upscaled_url = self._runware.generate_and_upscale(
+                positive_prompt=positive_prompt,
+                negative_prompt=negative_prompt,
+                upscale_factor=self._upscale_factor,
+                retries=0,  # on gère nous-mêmes les retries ici
+            )
+
+            if not image_bytes:
+                if attempt < max_retries:
+                    logger.warning("[gen_pipeline] '%s' tentative %d échouée, retry", niche_name, attempt + 1)
+                    continue
+                return GenerationResult(
+                    niche=niche_name, filepath=None,
+                    upscaled_url=upscaled_url, success=False,
+                    error="Runware n'a retourné aucune image",
+                )
+
+            # Audit qualité
+            if auditor is not None:
+                audit = auditor.audit(image_bytes)
+                if not audit.passed:
+                    logger.warning(
+                        "[gen_pipeline] '%s' audit échoué [tentative %d/%d]: %s",
+                        niche_name, attempt + 1, max_retries + 1,
+                        "; ".join(audit.issues),
+                    )
+                    if attempt < max_retries:
+                        continue
+                    # Dernier essai — on loggue mais on garde quand même l'image
+                    logger.warning(
+                        "[gen_pipeline] '%s' — toutes les tentatives ont échoué l'audit, "
+                        "image conservée avec réserves: %s",
+                        niche_name, audit.details,
+                    )
+                else:
+                    logger.info("[gen_pipeline] '%s' audit OK: %s", niche_name, audit.details)
+
+            # Packaging Spoonflower
+            filepath = self._packager.package(image_bytes, niche_name)
+            if not filepath:
+                return GenerationResult(
+                    niche=niche_name, filepath=None,
+                    upscaled_url=upscaled_url, success=False,
+                    error="Erreur packaging Spoonflower",
+                )
+
+            return GenerationResult(
+                niche=niche_name, filepath=filepath,
+                upscaled_url=upscaled_url, success=True,
+            )
+
+        return GenerationResult(
+            niche=niche_name, filepath=None, upscaled_url=None,
+            success=False, error=f"Échec après {max_retries + 1} tentatives",
+        )

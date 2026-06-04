@@ -137,3 +137,65 @@ class ApprovalGate:
             return None
 
         return max(candidates, key=os.path.getmtime)
+
+    def save_brief_data(self, briefs: List["ProductionBrief"], run_id: str) -> str:
+        """
+        Persiste les données essentielles des briefs (prompts, cfg) pour que
+        la commande 'generate' n'ait pas besoin de relancer Gemini.
+
+        Returns le chemin du fichier JSON sauvegardé.
+        """
+        os.makedirs(self.manifest_dir, exist_ok=True)
+
+        data = {
+            "run_id": run_id,
+            "briefs": [
+                {
+                    "name": b.name,
+                    "positive_prompt": b.positive_prompt,
+                    "negative_prompt": b.negative_prompt,
+                    "cfg_scale": b.cfg_scale,
+                    "opportunity_score": round(b.opportunity_score, 1),
+                }
+                for b in briefs
+            ],
+        }
+
+        path = os.path.join(self.manifest_dir, f"briefs_{run_id}.json")
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+
+        logger.info("[ApprovalGate] briefs persistés: %s", path)
+        return path
+
+    def load_brief_data(self, run_id: str) -> Dict[str, Dict]:
+        """
+        Charge les briefs persistés par save_brief_data.
+        Returns dict name.lower() → {positive_prompt, negative_prompt, cfg_scale}.
+        Returns {} si le fichier n'existe pas (fallback gracieux).
+        """
+        path = os.path.join(self.manifest_dir, f"briefs_{run_id}.json")
+        if not os.path.exists(path):
+            logger.warning("[ApprovalGate] briefs_%s.json introuvable", run_id)
+            return {}
+
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            return {
+                b["name"].lower(): b
+                for b in data.get("briefs", [])
+                if b.get("name")
+            }
+        except Exception as exc:
+            logger.warning("[ApprovalGate] lecture briefs_%s.json échouée: %s", run_id, exc)
+            return {}
+
+    def get_run_id_from_manifest(self, manifest_path: str) -> Optional[str]:
+        """Extrait le run_id d'un manifest."""
+        try:
+            with open(manifest_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            return data.get("run_id")
+        except Exception:
+            return None

@@ -653,8 +653,6 @@ def generate_approved(
     avec ces niches approuvées (les autres ignorées).
     """
     from trend_discovery.generators.approval_gate import ApprovalGate
-    from trend_discovery.generators.production_brief import BriefGenerator
-    from trend_discovery.markets.market_profile import get_profile
 
     gate = ApprovalGate()
 
@@ -692,17 +690,35 @@ def generate_approved(
             print("Annulé.")
             return
 
-    # ── Génération ────────────────────────────────────────────────────────────
-    profile = get_profile(market)
-    gen = BriefGenerator(profile)
-    briefs = gen.generate_all()
+    # ── Chargement des briefs persistés (evite de relancer Gemini) ───────────
+    brief_map: Dict = {}
+    if not approve:
+        # Essaie de charger depuis le fichier briefs_RUNID.json du même run
+        run_id = gate.get_run_id_from_manifest(manifest_path or gate.find_latest_manifest() or "")
+        if run_id:
+            brief_map = gate.load_brief_data(run_id)
+            if brief_map:
+                logger.info("[generate] %d briefs chargés depuis briefs_%s.json", len(brief_map), run_id)
+            else:
+                logger.warning("[generate] briefs_%s.json introuvable — relance Gemini", run_id)
 
-    brief_map = {b.name.lower(): b for b in briefs}
+    # Fallback : re-générer les briefs via Gemini si introuvables
+    if not brief_map:
+        logger.info("[generate] génération des briefs via Gemini (fallback)…")
+        from trend_discovery.generators.production_brief import BriefGenerator
+        from trend_discovery.markets.market_profile import get_profile
+        profile = get_profile(market)
+        gen = BriefGenerator(profile)
+        briefs = gen.generate_all()
+        brief_map = {b.name.lower(): b for b in briefs}
+
+    # ── Pipeline de génération ────────────────────────────────────────────────
     generated = 0
-
     try:
         from trend_discovery.generators.generation_pipeline import GenerationPipeline
+        from trend_discovery.generators.quality_auditor import QualityAuditor
         gen_pipeline = GenerationPipeline(output_dir=output_dir, upscale_factor=4)
+        auditor = QualityAuditor()
         if not gen_pipeline._runware.is_available():
             logger.error("[generate] RUNWARE_API_KEY absente — impossible de générer des images.")
             return
@@ -711,12 +727,29 @@ def generate_approved(
         return
 
     for approval in approvals:
-        brief = brief_map.get(approval.niche_name.lower())
-        if brief is None:
-            logger.warning("[generate] CdC '%s' introuvable dans les briefs générés.", approval.niche_name)
+        brief_data = brief_map.get(approval.niche_name.lower())
+        if brief_data is None:
+            logger.warning("[generate] CdC '%s' introuvable.", approval.niche_name)
             continue
         try:
-            results = gen_pipeline.run_brief(brief, n_images=approval.images_count)
+            # brief_data peut être un ProductionBrief (fallback Gemini) ou un dict (chargé JSON)
+            if isinstance(brief_data, dict):
+                from trend_discovery.generators.production_brief import ProductionBrief
+                brief = ProductionBrief(
+                    name=brief_data["name"],
+                    trending_score=0,
+                    market_opportunity="",
+                    why_trending="",
+                    target_audience="",
+                    sub_niches=[],
+                    positive_prompt=brief_data.get("positive_prompt", ""),
+                    negative_prompt=brief_data.get("negative_prompt", ""),
+                    cfg_scale=float(brief_data.get("cfg_scale", 7.5)),
+                )
+            else:
+                brief = brief_data
+
+            results = gen_pipeline.run_brief(brief, n_images=approval.images_count, auditor=auditor)
             ok = sum(1 for r in results if getattr(r, "success", False))
             generated += ok
             logger.info("[generate] '%s' → %d/%d images générées", approval.niche_name, ok, approval.images_count)
@@ -818,10 +851,11 @@ def main():
         path = gen.save_report(briefs, args.output)
         logger.info("Rapport sauvegardé: %s", path)
 
-        # Écrire le manifest d'approbation
+        # Écrire le manifest d'approbation + persister les briefs complets
         run_id = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M")
         gate = ApprovalGate()
         manifest_path = gate.write_pending_manifest(briefs, run_id)
+        gate.save_brief_data(briefs, run_id)
         print(f"\nManifest d'approbation : {manifest_path}")
         print("Éditez 'approved': true pour les niches choisies, puis lancez 'generate'.")
         return
