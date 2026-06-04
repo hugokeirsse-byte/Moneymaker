@@ -451,13 +451,21 @@ Requirements:
 - Target export: {file_fmt}, {dpi} DPI, {min_px}x{min_px}px min, {color_profile}, max {max_mb}MB
 - wikimedia_query must find actual public domain illustration or art images
 
-MANDATORY CROSSOVER GAP NICHES — the last {crossover_count} entries in the array MUST be "crossover gap" niches:
-These target a specific passionate hobby or lifestyle community that has STRONG visual identity but virtually NO good fabric/wallpaper designs on {name} yet.
-Research method: search Reddit, Etsy reviews, Pinterest boards for communities saying things like "I wish there was a fabric for...", "I can't find wallpaper that matches my hobby/vibe."
-Each crossover niche must combine TWO elements: (1) a passionate micro-community (e.g. terrarium builders, sourdough bakers, fountain pen collectors, analog photographers, van lifers, urban foragers, aquarists, vintage record collectors, mushroom foragers, tarot practitioners) + (2) a strong matching visual aesthetic (e.g. gothic botanical, vintage scientific, mid-century modern, dark academia, cottagecore scientific).
-The crossover MUST be something real buyers would purchase fabric or wallpaper for (home decor, nursery, hobby room).
-Add "crossover_gap": true to the JSON of these {crossover_count} niches.
-These crossover niches must also follow ALL the same JSON schema requirements as regular niches.
+MANDATORY CROSSOVER GAP NICHES — the last {crossover_count} entries in the array MUST be "crossover gap" niches.
+These are NOT invented — you must RESEARCH and DOCUMENT real unmet demand before including them.
+
+RESEARCH PROTOCOL for each crossover gap:
+1. Search Reddit for communities asking for specific fabric/wallpaper/home decor: r/terrariums, r/sourdough, r/fountainpens, r/analog, r/vandwellers, r/aquariums, r/vinylcollectors, r/tarot, r/urbangardening, r/mushroomhunting — look for posts like "I wish there was fabric for...", "can't find wallpaper that matches my..."
+2. Search Etsy: confirm that searching "[hobby] fabric pattern" or "[hobby] wallpaper" returns VERY FEW (< 50) truly dedicated, quality designs — not generic
+3. Search Pinterest: find active boards proving the community has strong visual identity that translates to surface design
+4. Document WHAT you found in the "why_trending" field: quote the real evidence (subreddit, search result count, Pinterest board examples)
+
+Each crossover niche MUST combine: (1) a real passionate micro-community with documented evidence of demand + (2) a distinct visual aesthetic that already has proven appeal (gothic botanical, vintage scientific, mid-century, dark academia, cottagecore-scientific, etc.)
+
+ZERO INVENTED DATA: if you cannot find real evidence of demand for a crossover, do NOT include it — pick a different community where you DO find evidence.
+
+Add "crossover_gap": true and "demand_gap_evidence": "1-2 sentences: what specific evidence you found (e.g. '342 upvote post on r/aquariums asking for underwater botanical wallpaper, Etsy search shows only 8 relevant listings')" to the JSON of each crossover niche.
+These crossover niches must also follow ALL the same JSON schema as regular niches.
 
 Return ONLY a valid JSON array of exactly {total_count} trend objects ({profile.niche_count} regular + {crossover_count} crossover gap). No text before or after. No markdown wrapper.
 """
@@ -479,7 +487,8 @@ Return ONLY a valid JSON array of exactly {total_count} trend objects ({profile.
         t.setdefault("why_trending", "")
         t.setdefault("target_audience", "")
         t.setdefault("sub_niches", [])
-        t.setdefault("crossover_gap", False)  # True pour les niches micro-niche crossover
+        t.setdefault("crossover_gap", False)    # True pour les niches micro-niche crossover
+        t.setdefault("demand_gap_evidence", "")  # Preuve concrète de demande inassouvie (crossover uniquement)
         t.setdefault("wikimedia_query", t.get("name", ""))
 
         # ── Direction visuelle ───────────────────────────────────────────────

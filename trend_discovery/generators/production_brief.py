@@ -100,7 +100,8 @@ class ProductionBrief:
     title_seeds: List[str] = field(default_factory=list)
 
     # ── Type de niche ─────────────────────────────────────────────────────────
-    crossover_gap: bool = False  # True = micro-niche crossover (communauté passionnée × gap marché)
+    crossover_gap: bool = False     # True = micro-niche crossover (communauté passionnée × gap marché)
+    demand_gap_evidence: str = ""   # Preuve concrète de demande inassouvie (Reddit/Etsy/Pinterest)
 
     # ── Helpers ──────────────────────────────────────────────────────────────
 
@@ -145,6 +146,13 @@ class ProductionBrief:
             "---",
             "",
         ]
+
+        # ── Preuve de demande inassouvie (crossover uniquement) ───────────────
+        if self.crossover_gap and self.demand_gap_evidence:
+            lines += [
+                "> 🔀 **Preuve de demande inassouvie :** " + self.demand_gap_evidence,
+                "",
+            ]
 
         # ── Score & Fiabilité (briques d'explicabilité) ────────────────────────
         if self.opportunity_score or self.score_breakdown:
@@ -604,6 +612,7 @@ def _brief_from_trend(trend: Dict) -> ProductionBrief:
         title_seeds=title_seeds,
         # Type de niche
         crossover_gap=bool(trend.get("crossover_gap", False)),
+        demand_gap_evidence=str(trend.get("demand_gap_evidence", "")),
     )
 
 
