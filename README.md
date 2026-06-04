@@ -7,6 +7,31 @@ Objectif : détecter automatiquement **les niches qui rapportent vraiment**, sur
 **les bonnes plateformes**, avec **les bons produits** — sur la base de **vraies
 données de marché**, jamais d'estimations déguisées.
 
+> 🧠 **Vision réelle** : pas une usine à images, mais une **infrastructure
+> d'intelligence commerciale** qui détecte, produit, publie et **apprend des
+> résultats réels**. Les images Spoonflower ne sont que le premier cas d'usage.
+
+---
+
+## 📚 Plan directeur & documentation → [`docs/`](docs/)
+
+Toute la vision, l'architecture et la feuille de route sont dans **[`docs/`](docs/)**
+(mémoire vivante du projet, mise à jour en continu, partageable à ChatGPT/Gemini) :
+
+| Doc | Contenu |
+|-----|---------|
+| [docs/VISION.md](docs/VISION.md) | Le but réel à long terme |
+| [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | Les 14 modules + état d'avancement |
+| [docs/ROADMAP.md](docs/ROADMAP.md) | Avancement **brique par brique** |
+| [docs/DECISIONS.md](docs/DECISIONS.md) | Journal des décisions |
+| [docs/BACKLOG.md](docs/BACKLOG.md) | Idées d'évolution + repos à étudier |
+| [docs/TOKEN_ECONOMY.md](docs/TOKEN_ECONOMY.md) | Règles d'économie de tokens |
+| [docs/platforms/spoonflower.md](docs/platforms/spoonflower.md) | Intelligence plateforme Spoonflower |
+
+**Statut actuel** : moteur de détection ✅ (Gemini 3.x + scoring explicable + confiance
++ provenance). **Prochaine brique** : verrous de dépense + génération des 5 premières
+images Spoonflower. Voir [docs/ROADMAP.md](docs/ROADMAP.md).
+
 ---
 
 ## 🧭 Principe fondamental : zéro donnée inventée
