@@ -1,9 +1,10 @@
 name: Module 01 — Trend & Niche Discovery
 
 on:
-  schedule:
-    - cron: '0 6 * * *'   # 06h00 UTC chaque jour
-    - cron: '0 18 * * *'  # 18h00 UTC chaque jour
+  # Crons désactivés — lancement MANUEL uniquement
+  # schedule:
+  #   - cron: '0 6 * * *'
+  #   - cron: '0 18 * * *'
   workflow_dispatch:
     inputs:
       keywords:
@@ -15,15 +16,24 @@ on:
         required: false
         default: ''
       fast_mode:
-        description: 'Mode rapide (sans scrapers lents)'
+        description: 'Mode rapide'
         required: false
         default: 'false'
         type: choice
         options: ['false', 'true']
       depth:
-        description: 'Profondeur de l''arbre de niches (1-3)'
+        description: 'Profondeur arbre de niches (1-3)'
         required: false
         default: '2'
+      mode:
+        description: 'Mode de lancement'
+        required: false
+        default: 'preview'
+        type: choice
+        options:
+          - 'preview'      # Gemini trends + prompts seulement (0 €)
+          - 'full'         # Pipeline complet sans génération d'images
+          - 'generate'     # Pipeline complet + génération Runware (coût ~0,03 €)
 
 permissions:
   contents: write
@@ -64,8 +74,8 @@ jobs:
         env:
           # Tendances mondiales temps réel (GEMINI_API_KEY requis)
           GEMINI_API_KEY:       ${{ secrets.GEMINI_API_KEY }}
-          # Génération d'images Spoonflower (RUNWARE_API_KEY requis)
-          RUNWARE_API_KEY:      ${{ secrets.RUNWARE_API_KEY }}
+          # Runware : injecté uniquement si mode=generate
+          RUNWARE_API_KEY:      ${{ github.event.inputs.mode == 'generate' && secrets.RUNWARE_API_KEY || '' }}
           RUNWARE_MODEL:        ${{ secrets.RUNWARE_MODEL || 'runware:100@1' }}
           # Sources optionnelles
           REDDIT_CLIENT_ID:     ${{ secrets.REDDIT_CLIENT_ID }}
@@ -78,12 +88,19 @@ jobs:
           OPENAI_API_KEY:       ${{ secrets.OPENAI_API_KEY }}
           ANTHROPIC_API_KEY:    ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
-          ARGS=""
-          [ -n "${{ github.event.inputs.keywords }}"   ] && ARGS="$ARGS --keywords '${{ github.event.inputs.keywords }}'"
-          [ -n "${{ github.event.inputs.categories }}" ] && ARGS="$ARGS --categories '${{ github.event.inputs.categories }}'"
-          [ "${{ github.event.inputs.fast_mode }}" = "true" ] && ARGS="$ARGS --fast"
-          [ -n "${{ github.event.inputs.depth }}" ] && ARGS="$ARGS --depth ${{ github.event.inputs.depth }}"
-          eval python -m trend_discovery.main $ARGS
+          MODE="${{ github.event.inputs.mode || 'preview' }}"
+          if [ "$MODE" = "preview" ]; then
+            echo "=== MODE PREVIEW : Gemini trends + prompts (0 €) ==="
+            python -m trend_discovery.main --preview-trends
+          else
+            ARGS=""
+            [ -n "${{ github.event.inputs.keywords }}"   ] && ARGS="$ARGS --keywords '${{ github.event.inputs.keywords }}'"
+            [ -n "${{ github.event.inputs.categories }}" ] && ARGS="$ARGS --categories '${{ github.event.inputs.categories }}'"
+            [ "${{ github.event.inputs.fast_mode }}" = "true" ] && ARGS="$ARGS --fast"
+            [ -n "${{ github.event.inputs.depth }}" ] && ARGS="$ARGS --depth ${{ github.event.inputs.depth }}"
+            echo "=== MODE $MODE : pipeline complet ==="
+            eval python -m trend_discovery.main $ARGS
+          fi
 
       - name: Commit et push des rapports + images
         run: |

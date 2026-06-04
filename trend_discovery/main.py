@@ -559,6 +559,95 @@ def _run_full_scrapers(
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+# Mode preview : vérifie Gemini + prompts SANS générer d'images
+# ─────────────────────────────────────────────────────────────────────────────
+
+def preview_trends(output_dir: str = "./reports") -> None:
+    """
+    Mode de vérification : interroge Gemini, affiche les trends trouvés
+    et les prompts Runware qui seraient utilisés — sans générer d'image.
+
+    Sortie : console + reports/preview_trends.md
+    """
+    from datetime import datetime, timezone
+    from trend_discovery.providers.gemini_provider import GeminiProvider
+    from trend_discovery.generators.prompt_builder import PromptBuilder
+
+    logger.info("=" * 60)
+    logger.info("PREVIEW — Tendances Gemini + Prompts (pas de génération)")
+    logger.info("=" * 60)
+
+    gem = GeminiProvider()
+    if not gem.is_available():
+        logger.error("GEMINI_API_KEY manquante — impossible de faire le preview.")
+        return
+
+    logger.info("Interrogation de Gemini + Google Search…")
+    trends = gem.fetch_global_pod_trends()
+
+    if not trends:
+        logger.error("Gemini n'a retourné aucune tendance. Vérifie la clé.")
+        return
+
+    pb = PromptBuilder()
+    lines = [
+        f"# Preview Tendances Gemini — {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}",
+        f"\n**{len(trends)} tendances trouvées via Google Search**\n",
+    ]
+
+    print("\n" + "=" * 60)
+    print(f"  {len(trends)} TENDANCES TROUVÉES PAR GEMINI")
+    print("=" * 60)
+
+    for i, t in enumerate(trends, 1):
+        name = t.get("name", "?")
+        score = t.get("trending_score", "?")
+        why = t.get("why_trending", "")
+        sub = t.get("sub_niches", [])
+        colors = t.get("color_keywords", [])
+        styles = t.get("style_keywords", [])
+        suitability = t.get("seamless_suitability", "?")
+
+        # Construire le prompt
+        prompt = pb.build(name, gemini_metadata=t)
+
+        # Affichage console
+        print(f"\n{'─'*55}")
+        print(f"  #{i} {name}  (score: {score}/100 | seamless: {suitability})")
+        print(f"  Pourquoi : {why}")
+        print(f"  Sous-niches : {', '.join(sub)}")
+        print(f"  Couleurs : {', '.join(colors)}")
+        print(f"  Styles : {', '.join(styles)}")
+        print(f"\n  ➜ PROMPT POSITIF :")
+        print(f"    {prompt.positive[:200]}{'…' if len(prompt.positive) > 200 else ''}")
+        print(f"\n  ➜ PROMPT NÉGATIF :")
+        print(f"    {prompt.negative[:120]}…")
+
+        # Markdown
+        lines += [
+            f"\n## #{i} — {name}",
+            f"**Score tendance :** {score}/100 | **Seamless :** {suitability}",
+            f"\n**Pourquoi :** {why}",
+            f"\n**Sous-niches :** {', '.join(sub)}",
+            f"\n**Couleurs :** {', '.join(colors)}",
+            f"\n**Styles :** {', '.join(styles)}",
+            f"\n### Prompt positif\n```\n{prompt.positive}\n```",
+            f"\n### Prompt négatif\n```\n{prompt.negative}\n```",
+        ]
+
+    print("\n" + "=" * 60)
+    print("  VÉRIFICATION TERMINÉE — aucune image générée, aucun coût")
+    print("=" * 60 + "\n")
+
+    # Sauvegarde markdown
+    os.makedirs(output_dir, exist_ok=True)
+    preview_path = os.path.join(output_dir, "preview_trends.md")
+    with open(preview_path, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines))
+    logger.info("Preview sauvegardé : %s", preview_path)
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # CLI entry point
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -586,7 +675,18 @@ def main():
         "--db", type=str, default="./data/opportunities.db",
         help="Chemin vers la base de données SQLite"
     )
+    parser.add_argument(
+        "--preview-trends", action="store_true",
+        help=(
+            "Mode vérification : interroge Gemini, affiche les tendances "
+            "et les prompts — SANS générer d'images ni appeler Runware."
+        )
+    )
     args = parser.parse_args()
+
+    if args.preview_trends:
+        preview_trends()
+        return
 
     extra_kws = [k.strip() for k in args.keywords.split(",") if k.strip()] if args.keywords else None
     cats = [c.strip() for c in args.categories.split(",") if c.strip()] if args.categories else None
