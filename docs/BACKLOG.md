@@ -28,15 +28,50 @@
 **Publication** : plateforme, date mise en ligne, catégorie, mots-clés.
 **Résultats** : vues, clics, ventes, CA, délai 1re vente, performance globale.
 
-## Repos open-source à étudier (délégable à Gemini)
+## Repos open-source identifiés — résultats de recherche (juin 2026)
 
-> Objectif : ne pas réinventer la roue. Faire chercher Gemini.
+> Recherche effectuée et vérifiée. Classés par priorité d'intégration.
 
-- **Google Trends** : wrappers/historique (ex. `pytrends` déjà utilisé, chercher alternatives robustes)
-- **Keyword research** : keyword clustering, longue traîne, SEO automation
-- **Scraping robuste** : Playwright, Crawlee, Scrapy (collecteurs + monitoring)
-- **Data storage** : DuckDB / PostgreSQL pour l'historique & analyses
-- **Repos d'analyse de trends/niches** : chercher s'il en existe un public exploitable
+### ⚠️ Migration urgente
+
+`pytrends` (GeneralMills) a été **archivé en avril 2025** — ne plus l'utiliser.
+
+### 🔴 Priorité HAUTE — intégrer dès que le pipeline de base tourne
+
+| Repo | Stars | Utilité |
+|------|-------|---------|
+| [trend-pulse](https://github.com/claude-world/trend-pulse) | 40 | **37 sources** agrégées (Google Trends + Reddit + Pinterest + Wikipedia + TikTok…) avec lifecycle prediction EMERGING→PEAK→DECLINING. `pip install trend-pulse`. Remplace 3-4 collectes séparées d'un coup. |
+| [pytrends-modern](https://github.com/yiromo/pytrends-modern) | 29 | Remplaçant pytrends avec anti-détection Camoufox, rotation proxies, async. Résout les 403 en datacenter. |
+| [trendspyg](https://github.com/flack0x/trendspyg) | 29 | Alternative pytrends async, 125+ pays, `pip install trendspyg[async]`. Activement maintenu mai 2026. |
+| [trends-checker](https://github.com/akvise/trends-checker) | 218 | CLI Google Trends avec watch mode + alertes, cookie auth, DataForSEO fallback. |
+| [crawlee-python](https://github.com/apify/crawlee-python) | 9 100 | **Couche de scraping universelle.** Anti-détection natif, Playwright intégré, retry/proxy. `pip install crawlee[playwright]`. |
+| [etsyv3](https://github.com/anitabyte/etsyv3) | 75 | Client API officielle Etsy v3 (OAuth 2.0, 10k req/jour gratuit). Listing counts propres sans scraping. |
+| [wordsy_python](https://github.com/interwebologist/wordsy_python) | 38 | Analyse des tags les plus fréquents sur les bestsellers Etsy — signal direct de demande par niche. |
+| [seo-keyword-research-tool](https://github.com/chukhraiartur/seo-keyword-research-tool) | 154 | Google Autocomplete + People Also Ask + Related Searches. 0 clé API. Génère 200+ variantes de longue traîne depuis un seed keyword. |
+
+### 🟡 Priorité MOYENNE — enrichissement futur
+
+| Repo | Stars | Utilité |
+|------|-------|---------|
+| [pinscrape](https://github.com/iamatulsingh/pinscrape) | 142 | Scraper Pinterest par mot-clé ou board. Signaux visuels de demande. |
+| [pinterest-scrapy-scraper](https://github.com/Simple-Python-Scrapy-Scrapers/pinterest-scrapy-scraper) | 7 | 60+ champs par pin (engagement, shopping data). Mesure du nombre de repins = proxy demande. |
+| [keyword-clustering](https://github.com/dartseoengineer/keyword-clustering) | ~50 | Clustering de mots-clés par similarité d'URLs (Jaccard). Structure automatique des niches candidates. |
+| [keyword_clustering_easy_demo](https://github.com/evemilano/keyword_clustering_easy_demo) | ~30 | Clustering sémantique NLP avec SentenceTransformer + BERTopic. Détection de micro-niches émergentes. |
+| [invisible_playwright](https://github.com/feder-cr/invisible_playwright) | 1 200 | Drop-in Playwright avec anti-détection C++ (reCAPTCHA v3 score 0.90). Quand crawlee ne suffit pas. |
+| [anofox-forecast](https://github.com/DataZooDE/anofox-forecast) | 34 | Extension DuckDB pour forecasting séries temporelles en pur SQL — AutoETS, AutoARIMA, 32 modèles. |
+| [Etsy_Scraper](https://github.com/anastasiabizyayeva/Etsy_Scraper) | 30 | Scraper Selenium : listing count exact, prix, rating, nombre de ventes par niche. |
+
+### 🟢 Priorité FAIBLE / à surveiller
+
+| Repo | Note |
+|------|------|
+| [URS Reddit Scraper](https://github.com/JosephLai241/URS) | 995 ⭐ mais dernière maj mai 2023. PRAW seul suffit pour un usage basique. |
+| Spoonflower API | Pas d'API publique officielle. Scraping custom avec crawlee = meilleure approche. |
+
+### Note DuckDB
+
+Pas besoin d'un repo dédié — `pip install duckdb` + extension `anofox-forecast` activable en SQL.
+Bon choix pour stocker et analyser les séries temporelles de trends sans infrastructure.
 
 ## Sources marché potentielles (collectors futurs)
 
