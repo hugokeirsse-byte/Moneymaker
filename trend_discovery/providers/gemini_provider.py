@@ -152,8 +152,8 @@ class GeminiProvider(DataProvider):
         attempts = [
             ("gemini-2.0-flash", True),
             ("gemini-2.0-flash", False),
-            ("gemini-1.5-flash", True),
-            ("gemini-1.5-flash", False),
+            ("gemini-2.0-flash-lite", True),
+            ("gemini-2.0-flash-lite", False),
         ]
 
         for model, use_grounding in attempts:
