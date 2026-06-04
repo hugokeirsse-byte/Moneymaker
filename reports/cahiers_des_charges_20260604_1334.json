@@ -226,10 +226,10 @@
           "unique_angle": "Detailed watercolor illustration of antique glass ink bottles — round, hexagonal, square — filled with luminous colored inks showing translucent glass depth.",
           "prompt_keywords": [
             "vintage glass inkwell",
-            "translucent ink",
-            "apothecary bottle",
-            "watercolor illustration",
-            "Rifle Paper Co. style"
+            "flat icon illustration",
+            "apothecary bottle silhouette",
+            "solid color fills",
+            "stationery pattern"
           ],
           "positive_prompt": "Seamless tossed repeat pattern. Flat clean icons of vintage glass ink bottles — round, hexagonal, square shapes — filled with luminous royal blue, emerald and burgundy ink. Fine single-weight ink outlines, flat color fills, no gradients. Small ink droplet and splatter accents. Parchment cream background, generous spacing. Perfectly seamless tiling, wallpaper surface design, 300 DPI."
         },
@@ -239,9 +239,9 @@
           "unique_angle": "Elegant geometric repeat of antique gold and silver fountain pen nibs, each with fine engraved detail and a subtle metallic watercolor wash.",
           "prompt_keywords": [
             "fountain pen nib",
-            "gold nib engraving",
+            "gold nib flat icon",
             "geometric layout",
-            "metallic watercolor",
+            "flat vector illustration",
             "academic stationery"
           ],
           "positive_prompt": "Seamless geometric half-drop repeat pattern. Flat minimal icons of antique gold and silver fountain pen nibs, shown at slight angles in a balanced grid. Single-weight outline style, flat gold (#D4AF37) and silver fills, no gradients, no shadows. Clean ivory background. Academic stationery aesthetic, Art Deco grid structure. Perfectly seamless tiling, wallpaper surface design, 300 DPI."
@@ -251,10 +251,10 @@
           "trending_score": 89,
           "unique_angle": "Flowing cursive script words and letters in deep Prussian blue ink, thick downstrokes and thin upstrokes, with small quill and ink-dot accents.",
           "prompt_keywords": [
-            "cursive calligraphy",
-            "Prussian blue ink",
-            "quill feather",
-            "dark academia",
+            "cursive calligraphy silhouette",
+            "prussian blue flat color",
+            "quill feather icon",
+            "dark academia flat",
             "Victorian letterwriting"
           ],
           "positive_prompt": "Seamless tossed repeat pattern. Flat minimal icons: small cursive script word loops, quill feathers, ink dots, tiny open envelopes, all in deep Prussian blue. Clean flat silhouette style, single color on parchment cream background. Light, airy spacing. Dark academia stationery aesthetic. Perfectly seamless tiling, wallpaper surface design, 300 DPI."
@@ -264,11 +264,11 @@
           "trending_score": 87,
           "unique_angle": "Vintage envelopes with crimson wax seals, folded letter paper, aged postage stamps, and antique fountain pens in a cozy tossed layout.",
           "prompt_keywords": [
-            "wax seal",
-            "vintage envelope",
-            "postage stamp",
+            "wax seal flat icon",
+            "vintage envelope outline",
+            "postage stamp icon",
             "antique fountain pen",
-            "dark academia stationery"
+            "flat stationery design"
           ],
           "positive_prompt": "Seamless tossed repeat pattern. Flat simplified icons: wax seal circle, folded envelope, postage stamp, fountain pen silhouette, small ribbon bow. Clean flat design, crimson (#8B0000) and antique gold (#D4AF37) on warm cream background. Balanced even spacing. Perfectly seamless tiling, wallpaper surface design, 300 DPI."
         }
@@ -276,7 +276,7 @@
       "visual_direction": {
         "mood": "academic, nostalgic, elegant, intellectual",
         "composition": "half-drop repeat, medium scale, balanced layout",
-        "line_style": "fine, precise ink pen lines with rich watercolor washes",
+        "line_style": "flat vector illustration, clean precise outlines, solid color fills only, no gradients",
         "color_primary": [
           "Royal Blue #4169E1",
           "Emerald Green #50C878",
@@ -291,7 +291,7 @@
           "Victorian stationery",
           "Dark Academia aesthetic"
         ],
-        "texture": "textured watercolor paper with realistic ink bleed and metallic sheen"
+        "texture": "flat smooth fills, crisp clean edges, no texture, no paper grain"
       },
       "spoonflower": {
         "repeat_type": "half-drop",
@@ -305,7 +305,7 @@
       },
       "ai_generation": {
         "positive_prompt": "Seamless half-drop repeat surface pattern. Flat simplified motifs: vintage inkwells in round and hexagonal shapes, antique fountain pen nibs, small ink droplet accents, tiny quill feather icons. Clean flat vector illustration style with fine ink outlines, minimal color fills — royal blue (#4169E1), emerald green (#50C878), antique gold (#D4AF37) on warm parchment cream (#F5F2EB) background. Motifs evenly spaced with generous breathing room, medium scale, balanced tossed layout. Perfectly seamless tiling, all four edges connect, professional wallpaper and fabric surface design, 300 DPI, flat lay.",
-        "negative_prompt": "blurry, pixelated, jpeg artifacts, visible seam lines, tile edges, text, watermarks, 3D render, photorealistic, heavy drop shadows, neon colors, busy cluttered layout, asymmetric, white grid, single centered object, isolated motif, dark background, cartoon, cheap clip art, gradient mesh",
+        "negative_prompt": "blurry, low quality, watermark, text, jpeg artifacts, pixelated, seam lines, visible tile edges, asymmetric repeat, 3D render, fake 3D, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic sheen, fake depth, perspective distortion, volumetric lighting, bump map, realistic photo, photorealistic, watercolor bleed, ink bleed, heavy gradients, soft blurry edges, busy cluttered layout, isolated object on white, single centered motif, white grid lines",
         "key_elements": [
           "glass inkwells",
           "gold nibs",
