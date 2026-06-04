@@ -34,7 +34,19 @@ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 
 _TREND_PROMPT_TEMPLATE = """Today is {today}. You are an expert in print-on-demand surface design and Spoonflower fabric patterns.
 
-Use Google Search to find REAL, CURRENT data. Identify the top 12 niches that are genuinely trending RIGHT NOW (this month, {today}) for {market} patterns and surface design. Base every trend on actual evidence you find on the web — Etsy/Spoonflower bestsellers, Pinterest trends, design blogs, social media, marketplace search volume. Do NOT invent generic evergreen niches; find what is actually rising now.
+Use Google Search to find REAL, CURRENT data SPECIFIC to the Spoonflower marketplace. Identify the top 12 OPPORTUNITY niches for {market} — niches with strong and growing buyer demand BUT that are NOT yet oversaturated, so a new designer can actually rank and sell.
+
+Research these real Spoonflower signals before answering:
+- Recent Spoonflower Design Challenge themes and winners (these reveal what the marketplace is pushing right now)
+- Spoonflower trending tags, bestselling fabric collections, "popular" and "newest" sorts
+- What Spoonflower buyers actually make: quilting cotton, apparel, baby/nursery, home decor, wallpaper, table linens
+- Pinterest / TikTok / interior-design trend reports cross-referenced with what is still UNDERSERVED on Spoonflower
+
+CRITICAL selection rules:
+- PRIORITIZE the opportunity gap: high demand + LOW or MEDIUM competition. A niche with huge demand but "very_high" competition is NOT a good pick — skip it or find a fresh sub-angle.
+- EXCLUDE oversaturated/generic categories: plain generic florals, generic cute cats/animals, basic rainbows, plain boho, generic Christmas — unless you find a genuinely fresh, specific, underserved angle.
+- Every niche must be SPECIFIC and differentiated (a precise aesthetic + subject combo), never a broad generic theme.
+- "trending_score" must represent the OPPORTUNITY (demand strength × scarcity of competition), NOT raw popularity. Rank the 12 by this opportunity score, best first.
 
 For EACH trend, return a complete JSON object with ALL of these fields — be specific, use real hex codes, real style references:
 
@@ -42,8 +54,8 @@ For EACH trend, return a complete JSON object with ALL of these fields — be sp
   "name": "2-4 word English trend name (e.g. Victorian Botanical Seamless)",
   "trending_score": integer 0-100 based on current web/social activity,
   "market_opportunity": "very_high" | "high" | "medium" | "low",
-  "why_trending": "factual sentence with evidence (community, searches, recent posts, events)",
-  "target_audience": "specific audience description (e.g. home decorators, quilters, crafters)",
+  "why_trending": "2 factual sentences: (1) the real demand evidence you found on the web, (2) why it is an OPPORTUNITY on Spoonflower specifically — i.e. demand is rising but competition is still beatable, and the fresh angle that sets it apart",
+  "target_audience": "specific Spoonflower buyer segment + what they make (e.g. quilters making baby blankets, apparel sewists, wallpaper home decorators)",
   "sub_niches": [
     {{
       "name": "specific 2-5 word sub-niche",
