@@ -87,8 +87,8 @@ jobs:
         env:
           # Tendances mondiales temps réel (GEMINI_API_KEY requis)
           GEMINI_API_KEY:       ${{ secrets.GEMINI_API_KEY }}
-          # Runware : injecté uniquement si mode=generate
-          RUNWARE_API_KEY:      ${{ github.event.inputs.mode == 'generate' && secrets.RUNWARE_API_KEY || '' }}
+          # Runware : injecté si mode=generate ou generate-best
+          RUNWARE_API_KEY:      ${{ (github.event.inputs.mode == 'generate' || github.event.inputs.mode == 'generate-best') && secrets.RUNWARE_API_KEY || '' }}
           RUNWARE_MODEL:        ${{ secrets.RUNWARE_MODEL || 'runware:100@1' }}
           # Sources optionnelles
           REDDIT_CLIENT_ID:     ${{ secrets.REDDIT_CLIENT_ID }}
