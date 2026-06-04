@@ -29,6 +29,11 @@ logging.basicConfig(
 )
 logger = logging.getLogger("moneymaker.pipeline")
 
+try:
+    from trend_discovery.generators.approval_gate import DEFAULT_IMAGES_PER_BRIEF
+except Exception:
+    DEFAULT_IMAGES_PER_BRIEF = 5
+
 from trend_discovery.config import NICHE_CATEGORIES, OUTPUT_DIR, KEYWORDS_SEED
 from trend_discovery.normalizer.concept_merger import ConceptMerger
 from trend_discovery.normalizer.niche_tree_builder import NicheTree
@@ -762,13 +767,6 @@ def generate_approved(
 # ─────────────────────────────────────────────────────────────────────────────
 # CLI entry point
 # ─────────────────────────────────────────────────────────────────────────────
-
-# Constante partagée pour approval_gate (évite l'import circulaire au toplevel)
-try:
-    from trend_discovery.generators.approval_gate import DEFAULT_IMAGES_PER_BRIEF
-except Exception:
-    DEFAULT_IMAGES_PER_BRIEF = 5
-
 
 def main():
     parser = argparse.ArgumentParser(
