@@ -134,34 +134,55 @@ class GeminiProvider(DataProvider):
             return None
 
     def _call_gemini(self, prompt: str) -> str:
-        """Appelle Gemini avec Google Search grounding. Retourne le texte brut."""
+        """
+        Appelle Gemini avec Google Search grounding. Retourne le texte brut.
+
+        Ordre de tentatives :
+        1. gemini-2.0-flash + Google Search grounding
+        2. gemini-2.0-flash sans grounding
+        3. gemini-1.5-flash + Google Search grounding (free tier plus permissif)
+        4. gemini-1.5-flash sans grounding (dernier recours)
+        """
         client = self._get_client()
         if not client:
             return ""
-        try:
-            from google.genai import types
-            response = client.models.generate_content(
-                model="gemini-2.0-flash",
-                contents=prompt,
-                config=types.GenerateContentConfig(
-                    tools=[types.Tool(google_search=types.GoogleSearch())],
-                    response_modalities=["TEXT"],
-                    temperature=0.3,
-                ),
-            )
-            return response.text or ""
-        except Exception as exc:
-            logger.warning("[gemini] appel API avec grounding échoué: %s", exc)
-            # Fallback sans web search (moins précis mais fonctionnel)
+
+        from google.genai import types
+
+        attempts = [
+            ("gemini-2.0-flash", True),
+            ("gemini-2.0-flash", False),
+            ("gemini-1.5-flash", True),
+            ("gemini-1.5-flash", False),
+        ]
+
+        for model, use_grounding in attempts:
             try:
+                if use_grounding:
+                    config = types.GenerateContentConfig(
+                        tools=[types.Tool(google_search=types.GoogleSearch())],
+                        response_modalities=["TEXT"],
+                        temperature=0.3,
+                    )
+                else:
+                    config = types.GenerateContentConfig(temperature=0.3)
+
                 response = client.models.generate_content(
-                    model="gemini-2.0-flash",
+                    model=model,
                     contents=prompt,
+                    config=config,
                 )
-                return response.text or ""
-            except Exception as exc2:
-                logger.error("[gemini] fallback aussi échoué: %s", exc2)
-                return ""
+                text = response.text or ""
+                if text:
+                    label = f"{model}{'+search' if use_grounding else ''}"
+                    logger.info("[gemini] succès avec %s", label)
+                    return text
+            except Exception as exc:
+                label = f"{model}{'+search' if use_grounding else ''}"
+                logger.warning("[gemini] %s échoué: %s", label, str(exc)[:120])
+
+        logger.error("[gemini] tous les modèles/configurations ont échoué")
+        return ""
 
     def _extract_json(self, text: str) -> Optional[list]:
         """
