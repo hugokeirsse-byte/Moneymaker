@@ -34,7 +34,7 @@ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 
 _TREND_PROMPT_TEMPLATE = """Today is {today}. You are an expert in print-on-demand surface design and Spoonflower fabric patterns.
 
-Search the web and identify the top 12 currently trending niches for {market} patterns and surface design in 2025.
+Use Google Search to find REAL, CURRENT data. Identify the top 12 niches that are genuinely trending RIGHT NOW (this month, {today}) for {market} patterns and surface design. Base every trend on actual evidence you find on the web — Etsy/Spoonflower bestsellers, Pinterest trends, design blogs, social media, marketplace search volume. Do NOT invent generic evergreen niches; find what is actually rising now.
 
 For EACH trend, return a complete JSON object with ALL of these fields — be specific, use real hex codes, real style references:
 
@@ -71,10 +71,10 @@ For EACH trend, return a complete JSON object with ALL of these fields — be sp
     "competition_level": "very_high" | "high" | "medium" | "low"
   }},
   "ai_generation": {{
-    "positive_prompt": "complete 80-120 word prompt. Must be highly detailed, cover subject, style, technique, colors, composition. Must end with: seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, clean background",
-    "negative_prompt": "specific 30-50 word negative prompt tailored to this niche's main pitfalls",
-    "key_elements": ["must-have element 1", "must-have element 2", "must-have element 3"],
-    "avoid_elements": ["thing to avoid 1", "thing to avoid 2"],
+    "positive_prompt": "ULTRA-COMPLETE 120-180 word prompt engineered to produce the PERFECT seamless pattern in ONE generation (before any upscaling). Must explicitly cover, in this order: (1) main subject and the specific motifs/objects, (2) exact layout and repeat structure (e.g. half-drop, evenly spaced, balanced negative space, no large gaps), (3) art style + medium + technique (e.g. gouache, vintage engraving, flat vector, watercolor), (4) line quality and level of detail, (5) the precise color palette naming the actual hex colors, (6) lighting/shading approach (flat, soft, even — no harsh cast shadows), (7) background treatment. MUST end with exactly: seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, even lighting, high detail, 300 DPI, clean background",
+    "negative_prompt": "specific 40-70 word negative prompt tailored to this niche's exact pitfalls (e.g. for botanical: 'wilted, dead leaves, muddy colors'), plus seam/tiling defects, harsh shadows, text, watermarks, low resolution",
+    "key_elements": ["must-have element 1", "must-have element 2", "must-have element 3", "must-have element 4"],
+    "avoid_elements": ["thing to avoid 1", "thing to avoid 2", "thing to avoid 3"],
     "cfg_scale": 7.5,
     "style_weight": 0.85
   }},
@@ -84,9 +84,9 @@ For EACH trend, return a complete JSON object with ALL of these fields — be sp
 Requirements:
 - EXACTLY 4 sub-niches per trend
 - Real hex codes for ALL colors (no "earthy brown" — use "#8B4513 Saddle Brown")
-- positive_prompt must be 80-120 words, vivid, specific, end with the required suffix
+- positive_prompt must be 120-180 words, vivid, specific, follow the 7-part structure, end with the required suffix
 - style_references must be real artists or movements (e.g. "William Morris", "Pierre-Joseph Redouté")
-- Focus on trends that: are hot RIGHT NOW in 2025, tile beautifully as fabric, have strong visual identity
+- Focus on trends that are hot RIGHT NOW ({today}), tile beautifully as fabric, have strong visual identity — each backed by real web evidence in why_trending
 - wikimedia_query must find actual public domain illustration or art images
 
 Return ONLY a valid JSON array of exactly 12 trend objects. No text before or after. No markdown wrapper.
@@ -113,6 +113,7 @@ class GeminiProvider(DataProvider):
         self._client = None
         self._trend_cache: Dict[str, Dict] = {}
         self._global_trends: Optional[List[Dict]] = None
+        self._available_models: Optional[List[str]] = None
 
     def _check_credentials(self) -> bool:
         return bool(GEMINI_API_KEY)
@@ -133,15 +134,72 @@ class GeminiProvider(DataProvider):
             logger.error("[gemini] init client échoué: %s", exc)
             return None
 
+    def _discover_models(self) -> List[str]:
+        """
+        Demande à l'API la liste réelle des modèles disponibles pour cette clé.
+
+        Robuste face aux dépréciations : au lieu de deviner les noms de modèles,
+        on utilise ceux que l'API déclare réellement supporter pour generateContent.
+        """
+        if self._available_models is not None:
+            return self._available_models
+        client = self._get_client()
+        models: List[str] = []
+        if client:
+            try:
+                for m in client.models.list():
+                    name = (getattr(m, "name", "") or "").replace("models/", "")
+                    methods = (
+                        getattr(m, "supported_actions", None)
+                        or getattr(m, "supported_generation_methods", None)
+                        or []
+                    )
+                    if name and (not methods or "generateContent" in methods):
+                        models.append(name)
+                logger.info(
+                    "[gemini] %d modèles disponibles pour cette clé : %s",
+                    len(models), ", ".join(models[:20]),
+                )
+            except Exception as exc:
+                logger.warning("[gemini] list models échoué : %s", str(exc)[:200])
+        self._available_models = models
+        return models
+
+    def _ranked_flash_models(self) -> List[str]:
+        """Modèles 'flash' disponibles, classés du plus récent/capable au moins."""
+        import re
+        discovered = self._discover_models()
+        exclude = ("image", "tts", "audio", "embedding", "vision", "live", "thinking")
+        flash = [m for m in discovered if "flash" in m and not any(x in m for x in exclude)]
+
+        def score(m: str) -> float:
+            s = 0.0
+            ver = re.search(r"(\d+\.\d+)", m)
+            if ver:
+                s += float(ver.group(1)) * 10
+            if "lite" in m:
+                s -= 2
+            if "latest" in m:
+                s += 1.5
+            if "preview" in m or "exp" in m:
+                s -= 1
+            return s
+
+        ranked = sorted(flash, key=score, reverse=True)
+        # Fallbacks codés en dur (modèles courants 2025-2026), ajoutés s'ils manquent
+        for fb in ("gemini-2.5-flash", "gemini-flash-latest", "gemini-2.0-flash",
+                   "gemini-2.5-flash-lite", "gemini-2.0-flash-lite"):
+            if fb not in ranked:
+                ranked.append(fb)
+        return ranked
+
     def _call_gemini(self, prompt: str) -> str:
         """
         Appelle Gemini avec Google Search grounding. Retourne le texte brut.
 
-        Ordre de tentatives :
-        1. gemini-2.0-flash + Google Search grounding
-        2. gemini-2.0-flash sans grounding
-        3. gemini-1.5-flash + Google Search grounding (free tier plus permissif)
-        4. gemini-1.5-flash sans grounding (dernier recours)
+        Stratégie robuste :
+        1. Découvre les modèles 'flash' réellement disponibles pour la clé
+        2. Essaie les meilleurs candidats, chacun AVEC puis SANS grounding web
         """
         client = self._get_client()
         if not client:
@@ -149,39 +207,36 @@ class GeminiProvider(DataProvider):
 
         from google.genai import types
 
-        attempts = [
-            ("gemini-2.0-flash", True),
-            ("gemini-2.0-flash", False),
-            ("gemini-2.0-flash-lite", True),
-            ("gemini-2.0-flash-lite", False),
-        ]
+        candidates = self._ranked_flash_models()[:4]  # top 4 modèles
+        logger.info("[gemini] candidats testés : %s", ", ".join(candidates))
 
-        for model, use_grounding in attempts:
-            try:
-                if use_grounding:
-                    config = types.GenerateContentConfig(
-                        tools=[types.Tool(google_search=types.GoogleSearch())],
-                        response_modalities=["TEXT"],
-                        temperature=0.3,
-                    )
-                else:
-                    config = types.GenerateContentConfig(temperature=0.3)
-
-                response = client.models.generate_content(
-                    model=model,
-                    contents=prompt,
-                    config=config,
-                )
-                text = response.text or ""
-                if text:
-                    label = f"{model}{'+search' if use_grounding else ''}"
-                    logger.info("[gemini] succès avec %s", label)
-                    return text
-            except Exception as exc:
+        for model in candidates:
+            for use_grounding in (True, False):
                 label = f"{model}{'+search' if use_grounding else ''}"
-                logger.warning("[gemini] %s échoué: %s", label, str(exc)[:120])
+                try:
+                    if use_grounding:
+                        config = types.GenerateContentConfig(
+                            tools=[types.Tool(google_search=types.GoogleSearch())],
+                            response_modalities=["TEXT"],
+                            temperature=0.3,
+                        )
+                    else:
+                        config = types.GenerateContentConfig(temperature=0.3)
 
-        logger.error("[gemini] tous les modèles/configurations ont échoué")
+                    response = client.models.generate_content(
+                        model=model, contents=prompt, config=config,
+                    )
+                    text = response.text or ""
+                    if text:
+                        logger.info("[gemini] succès avec %s", label)
+                        return text
+                except Exception as exc:
+                    logger.warning("[gemini] %s échoué : %s", label, str(exc)[:140])
+
+        logger.error(
+            "[gemini] tous les modèles/configurations ont échoué — "
+            "quota free-tier à 0 ? Active la facturation sur le projet Google Cloud."
+        )
         return ""
 
     def _extract_json(self, text: str) -> Optional[list]:
