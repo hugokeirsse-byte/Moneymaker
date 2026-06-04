@@ -18,16 +18,22 @@ from typing import List, Optional
 
 _SPOONFLOWER_SUFFIX = (
     "seamless tileable repeat pattern, perfectly seamless on all four sides, "
-    "flat simplified motifs, even spacing, surface design for fabric and wallpaper, "
-    "professional textile surface design, flat lay, even studio lighting, "
-    "300 DPI, clean solid background, no visible seam lines at tile edges"
+    "flat 2D illustration, solid color fills, no gradients, no shading, no shadows, "
+    "graphic flat design, even spacing between motifs, "
+    "professional textile surface design for fabric and wallpaper, "
+    "flat lay, even studio lighting, 300 DPI, clean solid background, "
+    "no visible seam lines at tile edges"
 )
 
 _BASE_NEGATIVE = (
     "blurry, low quality, watermark, text, jpeg artifacts, pixelated, "
-    "seam lines, visible tile edges, asymmetric repeat, photo, realistic photo, "
-    "3D render, heavy drop shadows, busy cluttered layout, white grid lines, "
-    "isolated object on white, single centered motif"
+    "seam lines, visible tile edges, asymmetric repeat, "
+    "3D render, fake 3D, bevel, emboss, drop shadow, cast shadow, "
+    "ambient occlusion, specular highlight, glossy, shiny, metallic sheen, "
+    "fake depth, perspective distortion, volumetric lighting, bump map, "
+    "realistic photo, photorealistic, watercolor bleed, ink bleed, "
+    "heavy gradients, soft blurry edges, busy cluttered layout, "
+    "isolated object on white, single centered motif, white grid lines"
 )
 
 

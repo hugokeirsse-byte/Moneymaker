@@ -2169,7 +2169,9 @@
             "symmetrical design",
             "scandinavian folk art",
             "stylized branches"
-          ]
+          ],
+          "positive_prompt": "Seamless mirror repeat pattern. Perfectly symmetrical Scandinavian folk bird pairs facing each other on stylized geometric branches with round berries and leaf motifs. Marimekko flat graphic style. Completely flat 2D vector shapes, solid fills — rust red (#B7410E) birds, sage green (#8F9779) branches, mustard yellow (#E1AD01) berries on off-white (#F4F1EA) background. No gradients, no shadows, no shading. Balanced symmetrical layout, seamless tileable, 300 DPI.",
+          "negative_prompt": "3D render, fake 3D, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic, gradient, soft blurry edges, watercolor bleed, ink bleed, photorealistic, photo, realistic texture, depth of field, seam lines, visible tile edges, text, watermarks, busy cluttered layout, white grid lines, single isolated object"
         },
         {
           "name": "Folk Art Foxes & Ferns",
@@ -2180,7 +2182,9 @@
             "geometric ferns",
             "nordic illustration",
             "cozy forest"
-          ]
+          ],
+          "positive_prompt": "Seamless tossed repeat pattern. Charming flat folk art fox silhouettes curled up, surrounded by geometric fern fronds and simple wildflowers. Nordic illustration style, completely flat 2D shapes, solid color fills — rust orange (#B7410E) foxes, sage green (#8F9779) ferns, mustard yellow (#E1AD01) flowers on off-white background. No gradients, no shadows, graphic block shapes. Even scattered layout, seamless tileable on all sides, 300 DPI.",
+          "negative_prompt": "3D render, fake 3D, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic, gradient, soft blurry edges, watercolor bleed, ink bleed, photorealistic, photo, realistic texture, depth of field, seam lines, visible tile edges, text, watermarks, busy cluttered layout, white grid lines, single isolated object"
         },
         {
           "name": "Nordic Floral Vines",
@@ -2191,7 +2195,9 @@
             "nordic stripes",
             "geometric leaves",
             "folk pattern"
-          ]
+          ],
+          "positive_prompt": "Seamless stripe repeat pattern. Winding symmetrical folk art vines with geometric tulip blossoms, round berries and simple leaf pairs, arranged in vertical stripe bands. Flat 2D vector style, Marimekko inspired. Teal (#005F73) vines, rust (#B7410E) tulips, mustard (#E1AD01) berries on off-white background. Zero depth, zero shadows, bold clean shapes. Seamless tileable, professional wallpaper surface design, 300 DPI.",
+          "negative_prompt": "3D render, fake 3D, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic, gradient, soft blurry edges, watercolor bleed, ink bleed, photorealistic, photo, realistic texture, depth of field, seam lines, visible tile edges, text, watermarks, busy cluttered layout, white grid lines, single isolated object"
         },
         {
           "name": "Woodland Folk Mandala",
@@ -2202,7 +2208,9 @@
             "woodland animals",
             "repeating grid",
             "nordic design"
-          ]
+          ],
+          "positive_prompt": "Seamless grid repeat pattern. Circular folk art medallions featuring flat silhouettes — a deer, pine trees, snowflakes — arranged in a symmetrical radial design. Scandinavian folk art style, completely flat 2D shapes, single-color fills per element — sage green, rust red, mustard yellow on off-white background. No gradients, no shadows, graphic bold shapes. Regular grid spacing, seamless tileable on all sides, 300 DPI.",
+          "negative_prompt": "3D render, fake 3D, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic, gradient, soft blurry edges, watercolor bleed, ink bleed, photorealistic, photo, realistic texture, depth of field, seam lines, visible tile edges, text, watermarks, busy cluttered layout, white grid lines, single isolated object"
         }
       ],
       "visual_direction": {
@@ -2236,8 +2244,8 @@
         "competition_level": "medium"
       },
       "ai_generation": {
-        "positive_prompt": "A beautiful symmetrical mirror repeat pattern in the Scandinavian folk art style, featuring stylized birds perched on geometric floral branches, folk foxes, and symmetrical pine trees. The motifs are arranged in a structured, balanced layout with clean negative space. The art style is flat vector with intricate geometric details and decorative folk patterns inside each animal and plant shape. The line quality is clean and precise, with sharp edges and no hand-drawn messiness. The color palette consists of Sage Green #8F9779, Mustard Yellow #E1AD01, and Rust Red #B7410E, set against a solid Off-White #F4F1EA background. The lighting is completely flat and graphic, with no shadows or gradients, capturing a traditional Nordic textile feel. seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, even lighting, high detail, 300 DPI, clean background",
-        "negative_prompt": "photorealistic, watercolor, messy hand-drawn lines, gradients, realistic shadows, chaotic layout, neon colors, text, watermarks, tiling lines",
+        "positive_prompt": "Seamless mirror repeat surface pattern. Scandinavian folk art style, Marimekko aesthetic. Stylized folk birds perched on geometric floral branches, small folk foxes, simple pine tree silhouettes, geometric leaf and berry motifs. Completely flat 2D shapes, solid color fills only — sage green (#8F9779), mustard yellow (#E1AD01), rust red (#B7410E), deep teal (#005F73) on off-white (#F4F1EA) background. Zero gradients, zero shadows, zero shading, zero depth. Bold clean outlines, graphic block shapes. Balanced symmetrical layout, medium scale motifs, generous spacing. Seamless tileable on all four sides, professional fabric surface design, 300 DPI.",
+        "negative_prompt": "3D render, fake 3D, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic, gradient, soft blurry edges, watercolor bleed, ink bleed, photorealistic, photo, realistic texture, depth of field, seam lines, visible tile edges, text, watermarks, busy cluttered layout, white grid lines, single isolated object",
         "key_elements": [
           "folk birds",
           "folk foxes",
