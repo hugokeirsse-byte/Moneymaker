@@ -223,45 +223,49 @@
         {
           "name": "Vintage Ink Bottles",
           "trending_score": 94,
-          "unique_angle": "Detailed watercolor illustrations of vintage glass inkwells with colorful ink splatters.",
+          "unique_angle": "Detailed watercolor illustration of antique glass ink bottles — round, hexagonal, square — filled with luminous colored inks showing translucent glass depth.",
           "prompt_keywords": [
-            "inkwell",
-            "glass bottle",
-            "ink splatters",
-            "vintage stationery"
+            "vintage glass inkwell",
+            "translucent ink",
+            "apothecary bottle",
+            "watercolor illustration",
+            "Rifle Paper Co. style"
           ]
         },
         {
           "name": "Fountain Pen Nibs",
           "trending_score": 92,
-          "unique_angle": "An elegant, geometric layout of detailed gold and silver fountain pen nibs.",
+          "unique_angle": "Elegant geometric repeat of antique gold and silver fountain pen nibs, each with fine engraved detail and a subtle metallic watercolor wash.",
           "prompt_keywords": [
             "fountain pen nib",
-            "gold nib",
+            "gold nib engraving",
             "geometric layout",
-            "fine line art"
+            "metallic watercolor",
+            "academic stationery"
           ]
         },
         {
           "name": "Cursive Ink Writing",
           "trending_score": 89,
-          "unique_angle": "Flowing, elegant cursive script written in deep blue ink with subtle shading.",
+          "unique_angle": "Flowing cursive script words and letters in deep Prussian blue ink, thick downstrokes and thin upstrokes, with small quill and ink-dot accents.",
           "prompt_keywords": [
-            "cursive script",
-            "ink writing",
-            "calligraphy",
-            "vintage letter"
+            "cursive calligraphy",
+            "Prussian blue ink",
+            "quill feather",
+            "dark academia",
+            "Victorian letterwriting"
           ]
         },
         {
           "name": "Stationery & Wax Seals",
           "trending_score": 87,
-          "unique_angle": "A cozy layout of envelopes, wax seals, stamps, and fountain pens.",
+          "unique_angle": "Vintage envelopes with crimson wax seals, folded letter paper, aged postage stamps, and antique fountain pens in a cozy tossed layout.",
           "prompt_keywords": [
             "wax seal",
-            "envelope",
+            "vintage envelope",
             "postage stamp",
-            "fountain pen"
+            "antique fountain pen",
+            "dark academia stationery"
           ]
         }
       ],
@@ -296,8 +300,8 @@
         "competition_level": "low"
       },
       "ai_generation": {
-        "positive_prompt": "An elegant half-drop repeat pattern featuring detailed vintage glass inkwells filled with colorful inks, intricate gold and silver fountain pen nibs, and delicate ink splatters. The motifs are arranged in a balanced, sophisticated layout with generous negative space. The art style is refined watercolor with fine, precise ink pen outlines, capturing the reflective quality of the glass and the metallic sheen of the gold nibs. The line quality is crisp and highly detailed, showing the delicate engravings on the metal nibs. The color palette features Royal Blue #4169E1, Emerald Green #50C878, and Rich Gold #D4AF37, set against a warm Parchment Cream #F5F2EB background. The lighting is soft, flat, and even, with no harsh cast shadows, creating a classic stationery aesthetic. seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, even lighting, high detail, 300 DPI, clean background",
-        "negative_prompt": "modern plastic pens, cheap ballpoint pens, cartoonish style, messy lines, harsh shadows, chaotic layout, neon colors, real readable text, watermarks, tiling lines",
+        "positive_prompt": "Seamless half-drop repeat surface pattern for fabric. Antique glass inkwells in various shapes — round, hexagonal, square — filled with luminous royal blue (#4169E1), emerald green (#50C878) and deep burgundy (#800020) ink. Ornate antique gold fountain pen nibs with engraved detail and metallic sheen. Scattered ink droplets and small quill feather accents. Detailed watercolor illustration style inspired by Rifle Paper Co.: fine ink outlines, rich translucent washes, visible watercolor paper texture. Warm parchment cream background (#F5F2EB). Generous negative space, balanced tossed layout, medium motif scale. Flat lay, even studio lighting, professional textile surface design, tileable seamless repeat, 300 DPI, no visible seam lines, no text, no watermarks.",
+        "negative_prompt": "blurry, low quality, pixelated, jpeg artifacts, visible seam lines, tile edges, white grid, text, watermarks, signature, cartoon, clip art, 3D render, photorealistic photo, harsh drop shadows, neon colors, modern ballpoint pens, biro, digital flat vector art, busy cluttered layout, asymmetric repeat, dark background, ugly proportions, deformed objects, floating artifacts",
         "key_elements": [
           "glass inkwells",
           "gold nibs",

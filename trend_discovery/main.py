@@ -773,9 +773,11 @@ def generate_best_variants(
     n_fusions: int = 2,
     yes: bool = False,
     output_dir: str = "./output/spoonflower",
+    niche_name: Optional[str] = None,
 ) -> None:
     """
     Auto-sélectionne le meilleur CdC du dernier rapport et génère toutes ses variantes.
+    Si niche_name est fourni, cible ce CdC précis plutôt que le meilleur score.
 
     Variantes produites (1 image chacune) :
       • Base           — le prompt original du CdC
@@ -802,15 +804,32 @@ def generate_best_variants(
     with open(report_path, encoding="utf-8") as fh:
         data = json.load(fh)
 
-    all_briefs = data.get("briefs", [])
+    all_briefs = data.get("cahiers_des_charges", data.get("briefs", []))
     if not all_briefs:
         print("ERROR : Aucun CdC dans le rapport.")
         return
 
-    # Meilleur CdC = score le plus élevé
-    sorted_briefs = sorted(all_briefs, key=lambda b: b.get("trending_score", 0), reverse=True)
-    best = sorted_briefs[0]
-    others = sorted_briefs[1:]
+    def _score(b: dict) -> float:
+        return float(b.get("opportunity_score", b.get("trending_score", 0)))
+
+    if niche_name:
+        # Cible un CdC précis par nom (insensible à la casse)
+        needle = niche_name.strip().lower()
+        match = next((b for b in all_briefs if b.get("name", "").lower() == needle), None)
+        if not match:
+            # Recherche partielle si pas de correspondance exacte
+            match = next((b for b in all_briefs if needle in b.get("name", "").lower()), None)
+        if not match:
+            available = [b.get("name") for b in all_briefs]
+            print(f"ERROR : CdC '{niche_name}' introuvable. Disponibles : {available}")
+            return
+        best = match
+        others = [b for b in all_briefs if b.get("name") != best.get("name")]
+    else:
+        # Meilleur CdC = score le plus élevé
+        sorted_briefs = sorted(all_briefs, key=_score, reverse=True)
+        best = sorted_briefs[0]
+        others = sorted_briefs[1:]
 
     from trend_discovery.generators.variant_engine import VariantEngine
     engine = VariantEngine()
@@ -908,6 +927,10 @@ def main():
         "--fusions", type=int, default=2,
         help="Nombre de variantes fusion avec d'autres CdCs (pour --best).",
     )
+    gen_parser.add_argument(
+        "--niche", type=str, default="",
+        help="Nom du CdC à générer (pour --best). Défaut : meilleur score.",
+    )
 
     # ── Arguments legacy (compatibilité ascendante) ────────────────────────────
     parser.add_argument("--keywords", type=str, default="")
@@ -965,6 +988,7 @@ def main():
                 n_fusions=args.fusions,
                 yes=args.yes,
                 output_dir=args.output,
+                niche_name=args.niche or None,
             )
         else:
             generate_approved(

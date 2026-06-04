@@ -47,6 +47,10 @@ on:
         description: 'Number of images per approved CdC'
         required: false
         default: '5'
+      niche:
+        description: 'Nom exact du CdC à générer (mode generate-best). Vide = meilleur score.'
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -107,7 +111,9 @@ jobs:
             python -m trend_discovery.main preview
           elif [ "$MODE" = "generate-best" ]; then
             echo "=== MODE GENERATE-BEST : variantes du meilleur CdC auto-sélectionné ==="
-            python -m trend_discovery.main generate --best --yes
+            NICHE_ARG=""
+            [ -n "${{ github.event.inputs.niche }}" ] && NICHE_ARG="--niche '${{ github.event.inputs.niche }}'"
+            eval python -m trend_discovery.main generate --best --yes $NICHE_ARG
           elif [ "$MODE" = "generate" ]; then
             echo "=== MODE GENERATE : génération des images approuvées ==="
             python -m trend_discovery.main generate \
