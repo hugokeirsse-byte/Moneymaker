@@ -94,7 +94,7 @@ class SpoonflowerPackager:
                 new_w = int(w * scale)
                 new_h = int(h * scale)
                 logger.info(
-                    "[packager] upscale Pillow %dx%d → %dx%d (Runware upscale insuffisant)",
+                    "[packager] upscale Pillow LANCZOS %dx%d → %dx%d",
                     w, h, new_w, new_h,
                 )
                 img = img.resize((new_w, new_h), Image.LANCZOS)

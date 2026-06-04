@@ -210,16 +210,18 @@ class RunwareGenerator:
         self,
         positive_prompt: str,
         negative_prompt: str = "",
-        upscale_factor: int = 4,
+        upscale_factor: int = 4,  # ignoré — upscale géré localement par SpoonflowerPackager
         model: str = DEFAULT_MODEL,
         retries: int = 2,
     ) -> Tuple[Optional[bytes], Optional[str]]:
         """
-        Pipeline complet : génère + upscale + télécharge.
+        Génère une image et la télécharge.
+
+        L'upscale (1024 → 4500 px) est fait gratuitement via Pillow LANCZOS
+        dans SpoonflowerPackager — pas d'appel Runware supplémentaire.
 
         Returns:
-            (image_bytes, upscaled_url) — image_bytes peut être None si le
-            téléchargement échoue mais l'URL reste disponible.
+            (image_bytes, image_url)
         """
         for attempt in range(retries + 1):
             if attempt > 0:
@@ -227,7 +229,6 @@ class RunwareGenerator:
                 logger.info("[runware] retry %d/%d dans %ds", attempt, retries, wait)
                 time.sleep(wait)
 
-            # Génération
             base_url = self.generate(
                 positive_prompt=positive_prompt,
                 negative_prompt=negative_prompt,
@@ -236,17 +237,9 @@ class RunwareGenerator:
             if not base_url:
                 continue
 
-            # Upscale
-            upscaled_url = self.upscale(base_url, upscale_factor=upscale_factor)
-            if not upscaled_url:
-                # On garde quand même l'image de base
-                upscaled_url = base_url
-                logger.warning("[runware] upscale raté — on utilise l'image de base")
-
-            # Téléchargement
-            image_bytes = self.download(upscaled_url)
+            image_bytes = self.download(base_url)
             if image_bytes:
-                return image_bytes, upscaled_url
+                return image_bytes, base_url
 
         logger.error("[runware] generate_and_upscale échoué après %d tentatives", retries + 1)
         return None, None
