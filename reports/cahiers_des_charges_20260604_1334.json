@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-06-04T13:34:05.030747+00:00",
-  "total_briefs": 16,
+  "total_briefs": 20,
   "briefs": [
     {
       "name": "Nostalgic Wooden Toy",
@@ -3477,6 +3477,505 @@
         "Grapefruit & Blossom Grid repeat pattern",
         "Mixed Citrus Toss repeat pattern"
       ]
+    },
+    {
+      "name": "William Morris Arts & Crafts Revival",
+      "trending_score": 82,
+      "opportunity_score": 82.0,
+      "market_opportunity": "high",
+      "why_trending": "Arts & Crafts revival is one of Spoonflower's most consistent bestselling categories. William Morris designs are fully public domain (died 1896) and the 'Modern Morris' trend — his iconic botanical motifs in fresh colourways — is performing strongly on Pinterest, Etsy, and Spoonflower search. Low generation risk, high conversion.",
+      "target_audience": "interior decorators making accent pillows and curtains, quilters seeking sophisticated botanicals",
+      "spoonflower_query": "william morris arts crafts botanical repeat fabric",
+      "sub_niches": [
+        {
+          "name": "Strawberry Thief Revival",
+          "trending_score": 86,
+          "unique_angle": "Morris's famous 'Strawberry Thief' indigo discharge-print birds reworked in modern jewel tones — forest green, terracotta, gold.",
+          "prompt_keywords": [
+            "stylized folk birds",
+            "fruiting vines",
+            "flat botanical repeat",
+            "arts and crafts tiles",
+            "jewel tones"
+          ],
+          "positive_prompt": "Seamless mirror repeat surface pattern. William Morris arts and crafts style. Stylized song thrush birds picking at strawberries among winding acanthus leaves and vine tendrils. Flat 2D illustration, clean precise outlines, solid color fills — forest green (#2D5016), terracotta (#B5451B), gold ochre (#D4A017) on ivory (#F5F0E8) background. No gradients, no shading. Dense botanical layout, balanced left-right symmetry, seamless on all four sides, 300 DPI.",
+          "negative_prompt": "blurry, low quality, watermark, text, jpeg artifacts, pixelated, seam lines, visible tile edges, asymmetric repeat, 3D render, fake 3D, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic sheen, fake depth, perspective distortion, volumetric lighting, bump map, realistic photo, photorealistic, watercolor bleed, ink bleed, heavy gradients, soft blurry edges, busy cluttered layout, isolated object on white, single centered motif, white grid lines"
+        },
+        {
+          "name": "Acanthus Leaf Scroll",
+          "trending_score": 83,
+          "unique_angle": "Classic Morris acanthus scrollwork pattern with large sweeping leaves and small flower heads — timeless wallpaper aesthetic.",
+          "prompt_keywords": [
+            "acanthus leaf scroll",
+            "botanical wallpaper",
+            "flat vector leaf",
+            "arts crafts repeat",
+            "sage green"
+          ],
+          "positive_prompt": "Seamless full-drop repeat surface pattern. Classic William Morris acanthus scroll style. Large stylized acanthus leaves curling in S-curves with small tulip and daisy flower heads nestled between. Flat 2D shapes, solid fills — sage green (#6B8F71), deep burgundy (#6B2E3A), muted gold (#C8A951) on warm cream (#F5F0E8) background. No gradients, no shadows. Dense interlocking layout, perfectly seamless on all four edges, professional wallpaper design, 300 DPI.",
+          "negative_prompt": "blurry, low quality, watermark, text, jpeg artifacts, pixelated, seam lines, visible tile edges, asymmetric repeat, 3D render, fake 3D, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic sheen, fake depth, perspective distortion, volumetric lighting, bump map, realistic photo, photorealistic, watercolor bleed, ink bleed, heavy gradients, soft blurry edges, busy cluttered layout, isolated object on white, single centered motif, white grid lines"
+        },
+        {
+          "name": "Pomegranate Damask",
+          "trending_score": 80,
+          "unique_angle": "Medieval-inspired pomegranate motif (Morris's 'Pomegranate' pattern) with paired leaves and ogee structure.",
+          "prompt_keywords": [
+            "pomegranate motif",
+            "ogee damask",
+            "medieval botanical",
+            "flat vector repeat",
+            "jewel tones"
+          ],
+          "positive_prompt": "Seamless ogee repeat surface pattern. William Morris pomegranate damask style. Central pomegranate fruits with open crowns, paired curling leaves and small blossom accents arranged in classic ogee diamond grid. Flat 2D vector illustration, solid fills — deep teal (#1B5B6B), terracotta (#B5451B), gold ochre (#D4A017) on deep navy (#1A2744) background. No gradients, no shading. Geometric ogee structure, seamless tile, professional fabric design, 300 DPI.",
+          "negative_prompt": "blurry, low quality, watermark, text, jpeg artifacts, pixelated, seam lines, visible tile edges, asymmetric repeat, 3D render, fake 3D, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic sheen, fake depth, perspective distortion, volumetric lighting, bump map, realistic photo, photorealistic, watercolor bleed, ink bleed, heavy gradients, soft blurry edges, busy cluttered layout, isolated object on white, single centered motif, white grid lines"
+        },
+        {
+          "name": "Willow Bough Stripe",
+          "trending_score": 78,
+          "unique_angle": "Morris's drooping willow branches reworked as a vertical stripe repeat — elegant and versatile for curtains and wallpaper.",
+          "prompt_keywords": [
+            "willow bough",
+            "drooping branches",
+            "vertical stripe repeat",
+            "arts crafts flat",
+            "botanical stripe"
+          ],
+          "positive_prompt": "Seamless vertical stripe repeat surface pattern. William Morris willow bough style. Slender drooping willow branches with elongated oval leaves cascading in soft arcs, arranged in flowing vertical bands. Flat 2D illustration, precise outlines, solid color fills — sage green (#6B8F71), deep forest green (#2D5016), pale ivory accents on soft warm beige (#EDE8DC) background. No gradients, no depth. Graceful botanical stripe, seamless horizontal and vertical tile, 300 DPI.",
+          "negative_prompt": "blurry, low quality, watermark, text, jpeg artifacts, pixelated, seam lines, visible tile edges, asymmetric repeat, 3D render, fake 3D, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic sheen, fake depth, perspective distortion, volumetric lighting, bump map, realistic photo, photorealistic, watercolor bleed, ink bleed, heavy gradients, soft blurry edges, busy cluttered layout, isolated object on white, single centered motif, white grid lines"
+        }
+      ],
+      "visual_direction": {
+        "mood": "sophisticated, historical, botanical, timeless",
+        "composition": "mirror repeat / ogee grid, medium-dense scale",
+        "line_style": "flat vector illustration, clean precise outlines, solid color fills only, no gradients",
+        "color_primary": [
+          "Forest Green #2D5016",
+          "Terracotta #B5451B",
+          "Gold Ochre #D4A017"
+        ],
+        "color_accent": [
+          "Deep Teal #1B5B6B",
+          "Burgundy #6B2E3A"
+        ],
+        "color_background": "Ivory #F5F0E8",
+        "style_references": [
+          "William Morris 1870s botanical prints",
+          "Arts and Crafts movement tile designs"
+        ],
+        "texture": "flat smooth fills, crisp clean edges, no texture, no paper grain"
+      },
+      "spoonflower": {
+        "repeat_type": "mirror",
+        "pattern_scale": "medium",
+        "top_products": [
+          "linen cotton canvas",
+          "wallpaper",
+          "quilting cotton"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless mirror repeat surface pattern. William Morris Arts and Crafts style. Stylized acanthus leaves, strawberries, small song birds and winding vine tendrils in a densely interlocking botanical layout. Flat 2D illustration, clean precise outlines, solid color fills only — forest green (#2D5016), terracotta (#B5451B), gold ochre (#D4A017), deep teal (#1B5B6B) on warm ivory (#F5F0E8) background. Zero gradients, zero shadows, zero shading, zero depth. Bold clean shapes, balanced symmetrical layout, perfectly seamless on all four sides, professional textile surface design, 300 DPI.",
+        "negative_prompt": "blurry, low quality, watermark, text, jpeg artifacts, pixelated, seam lines, visible tile edges, asymmetric repeat, 3D render, fake 3D, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic sheen, fake depth, perspective distortion, volumetric lighting, bump map, realistic photo, photorealistic, watercolor bleed, ink bleed, heavy gradients, soft blurry edges, busy cluttered layout, isolated object on white, single centered motif, white grid lines",
+        "key_elements": [
+          "acanthus leaves",
+          "stylized birds",
+          "strawberry motifs",
+          "winding vines"
+        ],
+        "avoid_elements": [
+          "realistic illustration",
+          "watercolor wash",
+          "loose sketchy lines"
+        ],
+        "cfg_scale": 7.5,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "spoonflower_references": [],
+      "generated_at": "2026-06-04 manual UTC",
+      "confidence": 50.0,
+      "score_breakdown": {
+        "demand": 85,
+        "competition": 60,
+        "uniqueness": 70,
+        "spoonflower_fit": 90
+      }
+    },
+    {
+      "name": "Japanese Woodblock Ukiyo-e Pattern",
+      "trending_score": 80,
+      "opportunity_score": 80.0,
+      "market_opportunity": "high",
+      "why_trending": "Japandi and Japanese aesthetics are top-performing Spoonflower categories. Ukiyo-e woodblock prints (Hokusai, Hiroshige — all pre-1850, fully public domain) have a distinctive flat graphic quality ideal for textile surface design. Strong crossover appeal: home decor, fashion fabric, wallpaper.",
+      "target_audience": "Japandi interior decorators, fashion sewists, home goods crafters seeking statement fabric",
+      "spoonflower_query": "japanese woodblock wave koi botanical fabric pattern",
+      "sub_niches": [
+        {
+          "name": "Great Wave Crest Repeat",
+          "trending_score": 84,
+          "unique_angle": "Hokusai's Great Wave broken into repeating graphic wave crests — iconic silhouette, flat graphic, seamless tile.",
+          "prompt_keywords": [
+            "great wave crest",
+            "hokusai inspired",
+            "flat graphic waves",
+            "japanese woodblock",
+            "indigo ivory"
+          ],
+          "positive_prompt": "Seamless tossed repeat surface pattern. Hokusai ukiyo-e woodblock print style. Stylized Japanese wave crests with characteristic claw-tip foam, arranged in an evenly spaced scattered layout. Flat 2D illustration, bold clean outlines, solid color fills — indigo blue (#1B3A6B), foam white (#F5F2EB) on pale cream (#EDE8DC) background. No gradients, no shading. Graphic print-like precision, seamless on all four sides, 300 DPI.",
+          "negative_prompt": "blurry, low quality, watermark, text, jpeg artifacts, pixelated, seam lines, visible tile edges, asymmetric repeat, 3D render, fake 3D, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic sheen, fake depth, perspective distortion, volumetric lighting, bump map, realistic photo, photorealistic, watercolor bleed, ink bleed, heavy gradients, soft blurry edges, busy cluttered layout, isolated object on white, single centered motif, white grid lines"
+        },
+        {
+          "name": "Cherry Blossom & Crane",
+          "trending_score": 82,
+          "unique_angle": "Classic Japanese textile pairing — stylized origami cranes in flight among flat sakura blossom branches.",
+          "prompt_keywords": [
+            "origami crane",
+            "sakura blossom flat",
+            "japanese textile",
+            "flat woodblock style",
+            "indigo coral"
+          ],
+          "positive_prompt": "Seamless half-drop repeat surface pattern. Japanese woodblock print style. Stylized paper cranes in flight alongside flat five-petal sakura blossoms and delicate branch silhouettes. Flat 2D vector illustration, precise outlines, solid color fills — coral red (#E34234), indigo (#1B3A6B), gold ochre (#D4A017) on ivory (#F5F2EB) background. No gradients, no depth. Elegant airy spacing, seamless on all four sides, professional textile design, 300 DPI.",
+          "negative_prompt": "blurry, low quality, watermark, text, jpeg artifacts, pixelated, seam lines, visible tile edges, asymmetric repeat, 3D render, fake 3D, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic sheen, fake depth, perspective distortion, volumetric lighting, bump map, realistic photo, photorealistic, watercolor bleed, ink bleed, heavy gradients, soft blurry edges, busy cluttered layout, isolated object on white, single centered motif, white grid lines"
+        },
+        {
+          "name": "Koi Pond Garden",
+          "trending_score": 79,
+          "unique_angle": "Simplified flat koi fish circling in a pond tile, with lotus flowers and lily pads — a classic Japanese garden motif.",
+          "prompt_keywords": [
+            "koi fish flat icon",
+            "lotus flower",
+            "lily pad",
+            "japanese garden tile",
+            "indigo gold"
+          ],
+          "positive_prompt": "Seamless tossed repeat surface pattern. Japanese decorative style. Flat simplified koi fish in various orientations swimming among circular lotus blossoms and round lily pad shapes. Flat 2D illustration, bold outlines, solid fills — vermillion (#CF4520) and gold (#D4A017) koi, sage green (#5C7A4E) lily pads, pink (#E8A0A0) lotus on deep indigo (#1B3A6B) background. No gradients, no shadows. Evenly spaced scattered layout, seamless tile, 300 DPI.",
+          "negative_prompt": "blurry, low quality, watermark, text, jpeg artifacts, pixelated, seam lines, visible tile edges, asymmetric repeat, 3D render, fake 3D, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic sheen, fake depth, perspective distortion, volumetric lighting, bump map, realistic photo, photorealistic, watercolor bleed, ink bleed, heavy gradients, soft blurry edges, busy cluttered layout, isolated object on white, single centered motif, white grid lines"
+        },
+        {
+          "name": "Wisteria & Swallow",
+          "trending_score": 77,
+          "unique_angle": "Hiroshige-inspired drooping wisteria clusters paired with swallow silhouettes in a vertical drop repeat.",
+          "prompt_keywords": [
+            "wisteria flat icon",
+            "swallow silhouette",
+            "hiroshige inspired",
+            "vertical drop repeat",
+            "purple ivory"
+          ],
+          "positive_prompt": "Seamless half-drop repeat surface pattern. Hiroshige ukiyo-e woodblock style. Drooping wisteria flower clusters hanging from minimal branch lines, with small swift swallow silhouettes in flight. Flat 2D illustration, clean outlines, solid color fills — purple (#6B3FA0), lilac (#C9A8D4), silhouette black (#1C1C1C) on cream (#F5F2EB) background. No gradients, no shading. Elegant vertical rhythm, seamless on all four sides, 300 DPI.",
+          "negative_prompt": "blurry, low quality, watermark, text, jpeg artifacts, pixelated, seam lines, visible tile edges, asymmetric repeat, 3D render, fake 3D, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic sheen, fake depth, perspective distortion, volumetric lighting, bump map, realistic photo, photorealistic, watercolor bleed, ink bleed, heavy gradients, soft blurry edges, busy cluttered layout, isolated object on white, single centered motif, white grid lines"
+        }
+      ],
+      "visual_direction": {
+        "mood": "serene, elegant, graphic, timeless",
+        "composition": "half-drop repeat or tossed repeat, medium scale",
+        "line_style": "flat vector illustration, bold precise woodblock-style outlines, solid color fills only",
+        "color_primary": [
+          "Indigo #1B3A6B",
+          "Coral Red #E34234",
+          "Ivory #F5F2EB"
+        ],
+        "color_accent": [
+          "Gold Ochre #D4A017",
+          "Sage Green #5C7A4E"
+        ],
+        "color_background": "Ivory #F5F2EB or Deep Indigo #1B3A6B",
+        "style_references": [
+          "Hokusai woodblock prints",
+          "Hiroshige landscape prints",
+          "Japanese textile katazome stencil prints"
+        ],
+        "texture": "flat smooth fills, crisp clean edges, no texture, no paper grain"
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "quilting cotton",
+          "wallpaper",
+          "linen cotton canvas"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless half-drop repeat surface pattern. Japanese ukiyo-e woodblock print style. Stylized great wave crests, flat sakura blossoms, paper crane silhouettes and koi fish motifs arranged in an elegant balanced layout. Flat 2D vector illustration, bold precise outlines, solid color fills only — indigo blue (#1B3A6B), coral red (#E34234), gold ochre (#D4A017), sage green (#5C7A4E) on ivory (#F5F2EB) background. Zero gradients, zero shadows, zero shading. Graphic print precision, perfectly seamless on all four sides, professional textile surface design, 300 DPI.",
+        "negative_prompt": "blurry, low quality, watermark, text, jpeg artifacts, pixelated, seam lines, visible tile edges, asymmetric repeat, 3D render, fake 3D, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic sheen, fake depth, perspective distortion, volumetric lighting, bump map, realistic photo, photorealistic, watercolor bleed, ink bleed, heavy gradients, soft blurry edges, busy cluttered layout, isolated object on white, single centered motif, white grid lines",
+        "key_elements": [
+          "wave crests",
+          "sakura blossoms",
+          "crane silhouettes",
+          "koi fish"
+        ],
+        "avoid_elements": [
+          "realistic photo",
+          "Chinese style",
+          "watercolor wash"
+        ],
+        "cfg_scale": 7.5,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "spoonflower_references": [],
+      "generated_at": "2026-06-04 manual UTC",
+      "confidence": 50.0,
+      "score_breakdown": {
+        "demand": 82,
+        "competition": 58,
+        "uniqueness": 75,
+        "spoonflower_fit": 88
+      }
+    },
+    {
+      "name": "Art Deco Vienna Secession Geometric",
+      "trending_score": 78,
+      "opportunity_score": 78.0,
+      "market_opportunity": "medium",
+      "why_trending": "Gustav Klimt's geometric dress and background patterns (Tree of Life, Stoclet Frieze border — public domain since 1970s) and Koloman Moser's Wiener Werkstätte repeating geometric designs are experiencing a strong revival. The black-gold-ivory palette has high-perceived-value appeal for fashion fabrics and premium home decor.",
+      "target_audience": "fashion sewists making statement dresses and linings, premium home decor crafters",
+      "spoonflower_query": "art deco geometric gold black vienna secession pattern",
+      "sub_niches": [
+        {
+          "name": "Klimt Golden Spirals",
+          "trending_score": 82,
+          "unique_angle": "Klimt's famous background geometric spirals and squares from 'The Kiss' and 'Tree of Life' — abstract geometric mosaic.",
+          "prompt_keywords": [
+            "klimt geometric",
+            "golden spiral squares",
+            "mosaic repeat",
+            "art deco flat",
+            "black gold ivory"
+          ],
+          "positive_prompt": "Seamless tossed repeat surface pattern. Gustav Klimt art deco geometric style. Interlocking spirals, small squares, rectangles and circular dot motifs in a mosaic-like dense arrangement. Flat 2D shapes, solid fills — gold (#D4AF37), black (#1C1C1C), ivory (#F5F0E8), terracotta (#B5451B) on dark charcoal (#2A2A2A) background. No gradients, no depth. Dense mosaic layout, every element flat and crisp, seamless on all four sides, 300 DPI.",
+          "negative_prompt": "blurry, low quality, watermark, text, jpeg artifacts, pixelated, seam lines, visible tile edges, asymmetric repeat, 3D render, fake 3D, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic sheen, fake depth, perspective distortion, volumetric lighting, bump map, realistic photo, photorealistic, watercolor bleed, ink bleed, heavy gradients, soft blurry edges, busy cluttered layout, isolated object on white, single centered motif, white grid lines"
+        },
+        {
+          "name": "Wiener Werkstätte Checkerboard",
+          "trending_score": 80,
+          "unique_angle": "Koloman Moser's geometric checkerboard and interlocking square patterns — bold graphic, high contrast.",
+          "prompt_keywords": [
+            "koloman moser",
+            "checkerboard geometric",
+            "wiener werkstatte",
+            "interlocking squares",
+            "black white gold"
+          ],
+          "positive_prompt": "Seamless geometric repeat surface pattern. Koloman Moser Wiener Werkstätte style. Interlocking checkerboard squares with inset geometric diamond and cross motifs, precise grid structure. Flat 2D vector illustration, solid fills — black (#1C1C1C), white (#F5F0E8), gold accent (#D4AF37) on ivory background. No gradients, no shading. Perfect geometric precision, bold high contrast, seamless on all four sides, 300 DPI.",
+          "negative_prompt": "blurry, low quality, watermark, text, jpeg artifacts, pixelated, seam lines, visible tile edges, asymmetric repeat, 3D render, fake 3D, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic sheen, fake depth, perspective distortion, volumetric lighting, bump map, realistic photo, photorealistic, watercolor bleed, ink bleed, heavy gradients, soft blurry edges, busy cluttered layout, isolated object on white, single centered motif, white grid lines"
+        },
+        {
+          "name": "Art Deco Fan & Sunburst",
+          "trending_score": 77,
+          "unique_angle": "1920s Art Deco radiating fan shapes and sunburst arcs in a classic half-drop repeat — elegant and architectural.",
+          "prompt_keywords": [
+            "art deco fan",
+            "sunburst arc",
+            "1920s geometric",
+            "half drop repeat",
+            "gold black ivory"
+          ],
+          "positive_prompt": "Seamless half-drop repeat surface pattern. 1920s Art Deco style. Radiating fan shapes with fine line sunburst arcs, geometric chevron accents and small diamond motifs. Flat 2D illustration, precise outlines, solid fills — gold (#D4AF37), black (#1C1C1C) on deep navy (#1A2744) background. No gradients, no depth, no shading. Elegant architectural precision, balanced layout, seamless tile, 300 DPI.",
+          "negative_prompt": "blurry, low quality, watermark, text, jpeg artifacts, pixelated, seam lines, visible tile edges, asymmetric repeat, 3D render, fake 3D, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic sheen, fake depth, perspective distortion, volumetric lighting, bump map, realistic photo, photorealistic, watercolor bleed, ink bleed, heavy gradients, soft blurry edges, busy cluttered layout, isolated object on white, single centered motif, white grid lines"
+        },
+        {
+          "name": "Vienna Secession Floral Medallion",
+          "trending_score": 75,
+          "unique_angle": "Secession-style stylized flower medallions with geometric petals and border rules — Josef Hoffmann aesthetic.",
+          "prompt_keywords": [
+            "secession floral medallion",
+            "geometric petals",
+            "josef hoffmann",
+            "flat botanical geometric",
+            "teal gold"
+          ],
+          "positive_prompt": "Seamless grid repeat surface pattern. Josef Hoffmann Vienna Secession style. Circular geometric flower medallions with stylized flat petals arranged as repeating squares in a grid, thin border rules between. Flat 2D vector illustration, solid fills — deep teal (#1B5B6B), gold (#D4AF37), ivory (#F5F0E8) on charcoal (#2A2A2A) background. No gradients, no shadows. Geometric precision, elegant grid spacing, seamless on all four sides, 300 DPI.",
+          "negative_prompt": "blurry, low quality, watermark, text, jpeg artifacts, pixelated, seam lines, visible tile edges, asymmetric repeat, 3D render, fake 3D, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic sheen, fake depth, perspective distortion, volumetric lighting, bump map, realistic photo, photorealistic, watercolor bleed, ink bleed, heavy gradients, soft blurry edges, busy cluttered layout, isolated object on white, single centered motif, white grid lines"
+        }
+      ],
+      "visual_direction": {
+        "mood": "sophisticated, luxurious, geometric, architectural",
+        "composition": "grid or half-drop repeat, medium-dense scale",
+        "line_style": "flat vector illustration, razor-precise outlines, solid color fills only, no gradients",
+        "color_primary": [
+          "Gold #D4AF37",
+          "Black #1C1C1C",
+          "Ivory #F5F0E8"
+        ],
+        "color_accent": [
+          "Deep Teal #1B5B6B",
+          "Terracotta #B5451B"
+        ],
+        "color_background": "Charcoal #2A2A2A or Deep Navy #1A2744",
+        "style_references": [
+          "Gustav Klimt geometric patterns",
+          "Koloman Moser Wiener Werkstätte",
+          "Josef Hoffmann architecture"
+        ],
+        "texture": "flat smooth fills, crisp clean edges, no texture, no paper grain"
+      },
+      "spoonflower": {
+        "repeat_type": "grid",
+        "pattern_scale": "medium",
+        "top_products": [
+          "chiffon",
+          "velvet",
+          "wallpaper"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless repeat surface pattern. Art Deco Vienna Secession style. Interlocking geometric spirals, sunburst fans, stylized geometric flower medallions and square mosaic motifs in a precise architectural layout. Flat 2D vector illustration, razor-precise outlines, solid color fills only — gold (#D4AF37), deep teal (#1B5B6B), ivory (#F5F0E8) on charcoal (#2A2A2A) background. Zero gradients, zero shadows, zero shading. Dense elegant geometry, perfectly seamless on all four sides, professional luxury textile design, 300 DPI.",
+        "negative_prompt": "blurry, low quality, watermark, text, jpeg artifacts, pixelated, seam lines, visible tile edges, asymmetric repeat, 3D render, fake 3D, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic sheen, fake depth, perspective distortion, volumetric lighting, bump map, realistic photo, photorealistic, watercolor bleed, ink bleed, heavy gradients, soft blurry edges, busy cluttered layout, isolated object on white, single centered motif, white grid lines",
+        "key_elements": [
+          "geometric spirals",
+          "fan shapes",
+          "mosaic squares",
+          "floral medallions"
+        ],
+        "avoid_elements": [
+          "Klimt figurative art",
+          "realistic faces",
+          "watercolor",
+          "Art Nouveau curves"
+        ],
+        "cfg_scale": 7.5,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "spoonflower_references": [],
+      "generated_at": "2026-06-04 manual UTC",
+      "confidence": 50.0,
+      "score_breakdown": {
+        "demand": 78,
+        "competition": 45,
+        "uniqueness": 82,
+        "spoonflower_fit": 82
+      }
+    },
+    {
+      "name": "Victorian Cyanotype Botanical",
+      "trending_score": 77,
+      "opportunity_score": 77.0,
+      "market_opportunity": "medium",
+      "why_trending": "Anna Atkins' cyanotype botanical photograms (1843–1853, fully public domain) have become a major interior design trend. The white-on-prussian-blue silhouette aesthetic appears in high-end home goods, fashion, and Spoonflower. Low competition because the style is visually distinct and requires specific prompting. Premium perceived value.",
+      "target_audience": "botanical art enthusiasts, interior decorators seeking statement wallpaper, fashion sewists making artistic statement pieces",
+      "spoonflower_query": "cyanotype botanical fern botanical silhouette blue white fabric",
+      "sub_niches": [
+        {
+          "name": "Cyanotype Fern Collection",
+          "trending_score": 81,
+          "unique_angle": "Fine detailed fern frond silhouettes on deep prussian blue — photogram accuracy, clean white fills.",
+          "prompt_keywords": [
+            "fern frond silhouette",
+            "cyanotype print",
+            "prussian blue",
+            "white botanical",
+            "photogram style"
+          ],
+          "positive_prompt": "Seamless tossed repeat surface pattern. Anna Atkins cyanotype photogram style. Detailed fern frond silhouettes — maidenhair, ostrich fern, hart's tongue — scattered in a natural organic layout. Flat 2D illustration, white solid fills with fine frond detail, occasional pale cyan accent on deep prussian blue (#003153) background. No gradients, no depth. Botanically accurate flat silhouettes, generous negative space, seamless on all four sides, 300 DPI.",
+          "negative_prompt": "blurry, low quality, watermark, text, jpeg artifacts, pixelated, seam lines, visible tile edges, asymmetric repeat, 3D render, fake 3D, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic sheen, fake depth, perspective distortion, volumetric lighting, bump map, realistic photo, photorealistic, watercolor bleed, ink bleed, heavy gradients, soft blurry edges, busy cluttered layout, isolated object on white, single centered motif, white grid lines"
+        },
+        {
+          "name": "Cyanotype Seaweed & Algae",
+          "trending_score": 79,
+          "unique_angle": "Atkins' original cyanotype subjects — seaweed and algae specimens — as a repeating pattern with scientific precision.",
+          "prompt_keywords": [
+            "seaweed silhouette",
+            "algae cyanotype",
+            "anna atkins",
+            "marine botanical",
+            "white prussian blue"
+          ],
+          "positive_prompt": "Seamless tossed repeat surface pattern. Anna Atkins cyanotype photogram style. Various seaweed and algae specimens — delicate branching structures, flat fronds, feathery textures — scattered naturally. Flat 2D white silhouettes on deep prussian blue (#003153) background. Fine precise detail in each specimen. No gradients, no depth, no shading. Scientific botanical precision, organic scattered layout, seamless on all four sides, 300 DPI.",
+          "negative_prompt": "blurry, low quality, watermark, text, jpeg artifacts, pixelated, seam lines, visible tile edges, asymmetric repeat, 3D render, fake 3D, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic sheen, fake depth, perspective distortion, volumetric lighting, bump map, realistic photo, photorealistic, watercolor bleed, ink bleed, heavy gradients, soft blurry edges, busy cluttered layout, isolated object on white, single centered motif, white grid lines"
+        },
+        {
+          "name": "Cyanotype Pressed Wildflowers",
+          "trending_score": 78,
+          "unique_angle": "Pressed wildflower silhouettes — Queen Anne's lace, cow parsley, delicate grasses — in cyanotype blue.",
+          "prompt_keywords": [
+            "pressed flower silhouette",
+            "cow parsley flat",
+            "cyanotype white blue",
+            "wildflower botanical",
+            "lacy flat shapes"
+          ],
+          "positive_prompt": "Seamless tossed repeat surface pattern. Cyanotype photogram style. Pressed wildflower specimens — Queen Anne's lace umbels, delicate grass seed heads, small daisy flowers, branching stems — scattered in a loose natural arrangement. White flat silhouettes on prussian blue (#003153), pale cyan (#B0E0E6) mid-tones. No gradients, no depth. Lacy intricate flat shapes, airy spacing, seamless tile, 300 DPI.",
+          "negative_prompt": "blurry, low quality, watermark, text, jpeg artifacts, pixelated, seam lines, visible tile edges, asymmetric repeat, 3D render, fake 3D, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic sheen, fake depth, perspective distortion, volumetric lighting, bump map, realistic photo, photorealistic, watercolor bleed, ink bleed, heavy gradients, soft blurry edges, busy cluttered layout, isolated object on white, single centered motif, white grid lines"
+        },
+        {
+          "name": "Cyanotype Feathers & Wings",
+          "trending_score": 75,
+          "unique_angle": "Bird feather specimens and butterfly wing outlines in cyanotype style — elegant and fashion-forward.",
+          "prompt_keywords": [
+            "feather silhouette",
+            "butterfly wing outline",
+            "cyanotype blue",
+            "flat scientific illustration",
+            "white on blue"
+          ],
+          "positive_prompt": "Seamless scattered repeat surface pattern. Cyanotype photogram style. Individual bird feathers of varying shapes — flight feather, down feather, tail feather — and delicate butterfly wing outlines scattered naturally. White flat silhouettes with fine internal detail on prussian blue (#003153) background. No gradients, no shading, no depth. Scientific precision, generous breathing space, seamless on all four sides, 300 DPI.",
+          "negative_prompt": "blurry, low quality, watermark, text, jpeg artifacts, pixelated, seam lines, visible tile edges, asymmetric repeat, 3D render, fake 3D, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic sheen, fake depth, perspective distortion, volumetric lighting, bump map, realistic photo, photorealistic, watercolor bleed, ink bleed, heavy gradients, soft blurry edges, busy cluttered layout, isolated object on white, single centered motif, white grid lines"
+        }
+      ],
+      "visual_direction": {
+        "mood": "scientific, serene, vintage, artisanal, sophisticated",
+        "composition": "tossed scatter repeat, medium scale, generous negative space",
+        "line_style": "flat 2D silhouette illustration, white fills with fine botanical detail, no gradients",
+        "color_primary": [
+          "Prussian Blue #003153",
+          "White #FFFFFF"
+        ],
+        "color_accent": [
+          "Pale Cyan #B0E0E6",
+          "Slate Blue #4A6FA5"
+        ],
+        "color_background": "Prussian Blue #003153",
+        "style_references": [
+          "Anna Atkins cyanotype photograms 1843",
+          "Victorian natural history illustration"
+        ],
+        "texture": "flat smooth fills, crisp clean edges, no texture, no paper grain"
+      },
+      "spoonflower": {
+        "repeat_type": "tossed scatter",
+        "pattern_scale": "medium",
+        "top_products": [
+          "linen cotton canvas",
+          "wallpaper",
+          "quilting cotton"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless scattered repeat surface pattern. Victorian cyanotype photogram style (Anna Atkins 1843). Delicate botanical specimens — fern fronds, seaweed branches, pressed wildflowers, individual feathers — scattered naturally across the composition. Flat 2D white silhouettes with fine specimen detail on deep prussian blue (#003153) background. Zero gradients, zero shadows, zero shading, zero depth. Scientific botanical precision, airy organic spacing, perfectly seamless on all four sides, professional textile design, 300 DPI.",
+        "negative_prompt": "blurry, low quality, watermark, text, jpeg artifacts, pixelated, seam lines, visible tile edges, asymmetric repeat, 3D render, fake 3D, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic sheen, fake depth, perspective distortion, volumetric lighting, bump map, realistic photo, photorealistic, watercolor bleed, ink bleed, heavy gradients, soft blurry edges, busy cluttered layout, isolated object on white, single centered motif, white grid lines",
+        "key_elements": [
+          "fern fronds",
+          "seaweed silhouettes",
+          "botanical specimens",
+          "white silhouettes"
+        ],
+        "avoid_elements": [
+          "color photographs",
+          "realistic textures",
+          "dark muddy tones",
+          "busy composition"
+        ],
+        "cfg_scale": 7.5,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "spoonflower_references": [],
+      "generated_at": "2026-06-04 manual UTC",
+      "confidence": 50.0,
+      "score_breakdown": {
+        "demand": 72,
+        "competition": 35,
+        "uniqueness": 90,
+        "spoonflower_fit": 85
+      }
     }
   ]
 }
