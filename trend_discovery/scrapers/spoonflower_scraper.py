@@ -197,7 +197,140 @@ class SpoonflowerScraper:
                     tag_counter[tag] += 1
         return tag_counter
 
-    def get_top_tags(self, limit: int = 50) -> Dict[str, int]:
+    def _parse_designs_with_images(self, soup: BeautifulSoup) -> List[Dict]:
+        """
+        Parse design cards en extrayant titre + URL d'image preview.
+        Essaie __NEXT_DATA__ en premier (Next.js SSR), puis fallback HTML.
+        """
+        if soup is None:
+            return []
+
+        # Essai 1 : __NEXT_DATA__ (Next.js embed JSON)
+        next_script = soup.find("script", {"id": "__NEXT_DATA__"})
+        if next_script and next_script.string:
+            try:
+                data = __import__("json").loads(next_script.string)
+                designs = self._dig_next_designs(data)
+                if designs:
+                    return designs
+            except Exception:
+                pass
+
+        # Essai 2 : balises <img> dans les cards de design
+        results = []
+        card_selectors = [
+            "li[class*='DesignCard']", "li[class*='design-card']",
+            "div[class*='DesignCard']", "div[class*='design-card']",
+        ]
+        cards = []
+        for selector in card_selectors:
+            cards = soup.select(selector)
+            if cards:
+                break
+
+        for card in cards:
+            img = card.select_one("img")
+            if not img:
+                continue
+            src = img.get("src") or img.get("data-src") or img.get("data-lazy-src") or ""
+            alt = img.get("alt", "").strip()
+            if src and ("spoonflower" in src or "cloudfront" in src or "fabric" in src):
+                results.append({
+                    "title": alt or "Spoonflower bestseller",
+                    "image_url": src,
+                    "design_url": "",
+                    "source": "spoonflower",
+                })
+
+        # Essai 3 : toutes les <img> CDN cloudfront dans la page
+        if not results:
+            import re
+            all_imgs = soup.find_all("img")
+            for img in all_imgs:
+                src = img.get("src") or img.get("data-src") or ""
+                if "cloudfront" in src and ("fabric" in src or "design" in src):
+                    results.append({
+                        "title": img.get("alt", "Spoonflower design").strip(),
+                        "image_url": src,
+                        "design_url": "",
+                        "source": "spoonflower",
+                    })
+
+        return results
+
+    def _dig_next_designs(self, data, depth: int = 0) -> List[Dict]:
+        """Cherche récursivement des designs avec images dans le JSON Next.js."""
+        if depth > 8:
+            return []
+        if isinstance(data, list):
+            candidates = [
+                x for x in data if isinstance(x, dict)
+                and (x.get("previewUrl") or x.get("imageUrl") or x.get("thumbnailUrl"))
+            ]
+            if len(candidates) >= 2:
+                out = []
+                for d in candidates:
+                    url = d.get("previewUrl") or d.get("imageUrl") or d.get("thumbnailUrl", "")
+                    if url:
+                        out.append({
+                            "title": d.get("name") or d.get("title") or str(d.get("id", "")),
+                            "image_url": url,
+                            "design_url": d.get("url") or "",
+                            "source": "spoonflower",
+                        })
+                return out
+            for item in data[:5]:
+                r = self._dig_next_designs(item, depth + 1)
+                if r:
+                    return r
+        if isinstance(data, dict):
+            for key in ("designs", "results", "items", "data", "pageProps",
+                        "initialData", "searchResults", "props"):
+                if key in data:
+                    r = self._dig_next_designs(data[key], depth + 1)
+                    if r:
+                        return r
+            for val in data.values():
+                if isinstance(val, (dict, list)):
+                    r = self._dig_next_designs(val, depth + 1)
+                    if r:
+                        return r
+        return []
+
+    def search_bestsellers_with_images(self, query: str, limit: int = 3) -> List[Dict]:
+        """
+        Cherche les designs bestsellers pour une niche et retourne leurs images.
+
+        Utilisé pendant le preview pour enrichir les CdCs avec des références
+        visuelles réelles (seedImage pour Runware, strength 0.20-0.25).
+
+        Args:
+            query: terme de niche (ex: "nordic folk art flat pattern")
+            limit: nombre d'images souhaitées
+
+        Returns:
+            List de dicts {title, image_url, design_url, source}
+            Retourne [] si scraping impossible (pas de crash).
+        """
+        try:
+            soup = self._get(
+                f"{SPOONFLOWER_BASE}/designs",
+                params={"q": query, "sort": "bestSelling"},
+            )
+            if soup is None:
+                return []
+            results = self._parse_designs_with_images(soup)
+            results = [r for r in results if r.get("image_url")][:limit]
+            logger.info(
+                "[spoonflower] '%s' → %d image(s) bestseller trouvée(s)",
+                query, len(results),
+            )
+            return results
+        except Exception as exc:
+            logger.warning("[spoonflower] search_bestsellers_with_images '%s': %s", query, exc)
+            return []
+
+
         """
         Aggregate tags from trending, bestselling, and new pages.
 

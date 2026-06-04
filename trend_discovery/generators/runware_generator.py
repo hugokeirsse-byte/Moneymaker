@@ -103,6 +103,8 @@ class RunwareGenerator:
         model: str = DEFAULT_MODEL,
         seed: int = -1,
         tiling: bool = True,
+        seed_image_url: Optional[str] = None,
+        strength: float = 0.25,
     ) -> Optional[str]:
         """
         Génère une image et retourne son URL.
@@ -131,6 +133,9 @@ class RunwareGenerator:
         }
         if seed != -1:
             task["seed"] = seed
+        if seed_image_url:
+            task["seedImage"] = seed_image_url
+            task["strength"] = strength
         tasks = [task]
 
         logger.info("[runware] génération: %s… (%dx%d, model=%s)", positive_prompt[:60], width, height, model)
@@ -207,6 +212,8 @@ class RunwareGenerator:
         upscale_factor: int = 4,  # ignoré — upscale géré localement par SpoonflowerPackager
         model: str = DEFAULT_MODEL,
         retries: int = 2,
+        seed_image_url: Optional[str] = None,
+        strength: float = 0.25,
     ) -> Tuple[Optional[bytes], Optional[str]]:
         """
         Génère une image et la télécharge.
@@ -227,6 +234,8 @@ class RunwareGenerator:
                 positive_prompt=positive_prompt,
                 negative_prompt=negative_prompt,
                 model=model,
+                seed_image_url=seed_image_url,
+                strength=strength,
             )
             if not base_url:
                 continue

@@ -439,7 +439,8 @@ For EACH trend, return a complete JSON object with ALL of these fields — be sp
     "cfg_scale": 7.5,
     "style_weight": 0.85
   }}}},
-  "wikimedia_query": "2-5 word query to find public domain reference images on Wikimedia Commons"
+  "wikimedia_query": "2-5 word query to find public domain reference images on Wikimedia Commons",
+  "spoonflower_query": "2-5 word query to search Spoonflower bestselling designs for this niche (e.g. 'nordic folk flat pattern')"
 }}}}
 
 Requirements:

@@ -99,6 +99,10 @@ class SpoonflowerPackager:
                 )
                 img = img.resize((new_w, new_h), Image.LANCZOS)
 
+            # Post-processing seamless
+            img = self._make_seamless(img, Image)
+            logger.info("[packager] seamless post-processing appliqué")
+
             # Sauvegarde PNG avec métadonnées DPI 300
             filename = self._safe_filename(niche_name)
             filepath = os.path.join(self._output_dir, filename)
@@ -122,6 +126,40 @@ class SpoonflowerPackager:
         except Exception as exc:
             logger.error("[packager] erreur pour '%s': %s", niche_name, exc)
             return None
+
+    @staticmethod
+    def _make_seamless(img, Image) -> "Image.Image":
+        """
+        Convert any image to a seamless tile using offset+blend.
+
+        Algorithm: shifted version (seam moved to center) is alpha-blended
+        with the original. Border area uses the shifted image (seamless edges);
+        center area uses the original (preserves content); transition is smooth.
+        """
+        try:
+            import numpy as np
+        except ImportError:
+            logger.warning("[packager] numpy absent — seamless post-processing ignoré")
+            return img
+
+        w, h = img.size
+        arr = np.array(img, dtype=np.float32)
+
+        # Move seam from edges to center
+        shifted = np.roll(np.roll(arr, w // 2, axis=1), h // 2, axis=0)
+
+        # Alpha: 0 at center (use original), 1 at edges (use shifted = seamless)
+        x = np.abs(np.linspace(-1.0, 1.0, w))
+        y = np.abs(np.linspace(-1.0, 1.0, h))[:, None]
+        alpha = np.maximum(x, y)
+        # Remap: flat in center (original), flat at edges (shifted), blend in between
+        alpha = np.clip((alpha - 0.25) / 0.35, 0.0, 1.0)
+
+        if arr.ndim == 3:
+            alpha = alpha[:, :, None]
+
+        result = arr * (1.0 - alpha) + shifted * alpha
+        return Image.fromarray(result.clip(0, 255).astype(np.uint8))
 
     def verify(self, filepath: str) -> Tuple[bool, str]:
         """

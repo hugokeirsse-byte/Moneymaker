@@ -665,17 +665,36 @@ class BriefGenerator:
             trends = self._gemini.fetch_global_pod_trends(self._profile, extra_constraints)
             if trends:
                 trends = self._gemini.critique_and_refine(trends, self._profile)
-                # Enrichissement images : pas de nouvel appel Gemini de découverte,
-                # on ajoute reference_images via Wikimedia Commons (0 clé).
+                # Enrichissement images : Wikimedia (domaine public) + Spoonflower bestsellers
+                from trend_discovery.scrapers.spoonflower_scraper import SpoonflowerScraper
+                _spf_scraper = SpoonflowerScraper()
                 for trend in trends:
-                    query = trend.get("wikimedia_query", trend.get("name", ""))
+                    # Wikimedia Commons (style ref domaine public)
+                    wiki_query = trend.get("wikimedia_query", trend.get("name", ""))
                     try:
-                        trend["reference_images"] = self._gemini.find_wikimedia_images(query, limit=2)
+                        trend["reference_images"] = self._gemini.find_wikimedia_images(wiki_query, limit=2)
                     except Exception as exc:
                         logger.warning(
-                            "[BriefGenerator] images Wikimedia '%s' échouées: %s", query, exc
+                            "[BriefGenerator] images Wikimedia '%s' échouées: %s", wiki_query, exc
                         )
                         trend.setdefault("reference_images", [])
+
+                    # Spoonflower bestsellers (images de ce qui vend réellement)
+                    spf_query = trend.get("spoonflower_query", trend.get("name", ""))
+                    try:
+                        trend["spoonflower_references"] = _spf_scraper.search_bestsellers_with_images(
+                            spf_query, limit=3
+                        )
+                        if trend["spoonflower_references"]:
+                            logger.info(
+                                "[BriefGenerator] Spoonflower refs '%s': %d image(s)",
+                                spf_query, len(trend["spoonflower_references"]),
+                            )
+                    except Exception as exc:
+                        logger.warning(
+                            "[BriefGenerator] Spoonflower refs '%s' échouées: %s", spf_query, exc
+                        )
+                        trend.setdefault("spoonflower_references", [])
 
         if not trends:
             logger.warning(

@@ -293,6 +293,11 @@ class GenerationPipeline:
             brief_name, len(variants),
         )
 
+        spf_refs = brief_data.get("spoonflower_references", [])
+        seed_image_url: Optional[str] = spf_refs[0].get("image_url") if spf_refs else None
+        if seed_image_url:
+            logger.info("[gen_pipeline] seedImage Spoonflower: %s…", seed_image_url[:80])
+
         for i, variant in enumerate(variants, 1):
             niche_label = f"{brief_name} — {variant.label}"
             logger.info(
@@ -305,6 +310,7 @@ class GenerationPipeline:
                 negative_prompt=variant.negative_prompt or "",
                 auditor=auditor,
                 attempt_label=f"{i}/{len(variants)}",
+                seed_image_url=seed_image_url,
             )
             results.append(result)
             logger.info("[gen_pipeline] %s", result)
@@ -324,6 +330,7 @@ class GenerationPipeline:
         auditor: Optional["QualityAuditor"],
         attempt_label: str = "",
         max_retries: int = 1,  # 2 tentatives max (1 initiale + 1 retry)
+        seed_image_url: Optional[str] = None,
     ) -> GenerationResult:
         """
         Génère une image, l'audite, retente une seule fois si nécessaire.
@@ -335,6 +342,7 @@ class GenerationPipeline:
                 negative_prompt=negative_prompt,
                 upscale_factor=self._upscale_factor,
                 retries=0,  # on gère nous-mêmes les retries ici
+                seed_image_url=seed_image_url,
             )
 
             if not image_bytes:
