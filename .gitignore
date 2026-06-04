@@ -4,3 +4,5 @@
 .env
 data/*.db
 data/detection_history.jsonl
+data/approvals/
+.claude/
