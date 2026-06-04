@@ -765,6 +765,94 @@ def generate_approved(
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+# Mode generate-best : variantes du meilleur CdC du dernier rapport
+# ─────────────────────────────────────────────────────────────────────────────
+
+def generate_best_variants(
+    report_path: Optional[str] = None,
+    n_fusions: int = 2,
+    yes: bool = False,
+    output_dir: str = "./output/spoonflower",
+) -> None:
+    """
+    Auto-sélectionne le meilleur CdC du dernier rapport et génère toutes ses variantes.
+
+    Variantes produites (1 image chacune) :
+      • Base           — le prompt original du CdC
+      • Sub-niches     — 1 image par sous-niche (jusqu'à 4)
+      • Style: Dark    — palette sombre dramatique
+      • Style: Minimal — line art monochrome
+      • Fusions        — croisement avec 2 autres CdCs du même rapport
+
+    Total typique : 9 images distinctes pour ~0.05 €.
+    """
+    import json
+    import glob as _glob
+
+    # Résolution du rapport
+    if not report_path:
+        reports = sorted(_glob.glob("./reports/cahiers_des_charges_*.json"))
+        if not reports:
+            print("ERROR : Aucun rapport trouvé. Lancez 'preview' d'abord.")
+            return
+        report_path = reports[-1]
+
+    logger.info("[generate-best] rapport : %s", report_path)
+
+    with open(report_path, encoding="utf-8") as fh:
+        data = json.load(fh)
+
+    all_briefs = data.get("briefs", [])
+    if not all_briefs:
+        print("ERROR : Aucun CdC dans le rapport.")
+        return
+
+    # Meilleur CdC = score le plus élevé
+    sorted_briefs = sorted(all_briefs, key=lambda b: b.get("trending_score", 0), reverse=True)
+    best = sorted_briefs[0]
+    others = sorted_briefs[1:]
+
+    from trend_discovery.generators.variant_engine import VariantEngine
+    engine = VariantEngine()
+    variants = engine.generate_variants(best, all_briefs=others, n_fusions=n_fusions)
+
+    print("\n" + "=" * 60)
+    print(f"  MEILLEUR CdC : {best.get('name')} (score {best.get('trending_score')}/100)")
+    print(f"  {len(variants)} variantes à générer :")
+    for i, v in enumerate(variants, 1):
+        print(f"    {i:2d}. {v}")
+    cost_est = len(variants) * 0.006
+    print(f"\n  Coût estimé : ~{cost_est:.3f} € ({len(variants)} images × ~0.006 €)")
+    print("=" * 60)
+
+    if not yes:
+        answer = input("\nProceed? [yes/no] ").strip().lower()
+        if answer not in ("yes", "y"):
+            print("Annulé.")
+            return
+
+    try:
+        from trend_discovery.generators.generation_pipeline import GenerationPipeline
+        from trend_discovery.generators.quality_auditor import QualityAuditor
+        pipeline = GenerationPipeline(output_dir=output_dir, upscale_factor=4)
+        auditor = QualityAuditor()
+    except Exception as exc:
+        logger.error("[generate-best] GenerationPipeline indisponible : %s", exc)
+        return
+
+    if not pipeline._runware.is_available():
+        logger.error("[generate-best] RUNWARE_API_KEY absente — impossible de générer.")
+        return
+
+    results = pipeline.run_variants(best, variants, auditor=auditor)
+    ok = sum(1 for r in results if r.success)
+
+    print(f"\n{ok}/{len(results)} image(s) générée(s) → {output_dir}")
+    for r in results:
+        print(f"  {r}")
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # CLI entry point
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -808,6 +896,18 @@ def main():
     )
     gen_parser.add_argument("--market", type=str, default="spoonflower")
     gen_parser.add_argument("--output", type=str, default="./output/spoonflower")
+    gen_parser.add_argument(
+        "--best", action="store_true",
+        help="Auto-sélectionne le meilleur CdC et génère toutes ses variantes (base + sous-niches + styles + fusions).",
+    )
+    gen_parser.add_argument(
+        "--report", type=str, default="",
+        help="Chemin vers le rapport JSON (pour --best). Défaut : dernier rapport.",
+    )
+    gen_parser.add_argument(
+        "--fusions", type=int, default=2,
+        help="Nombre de variantes fusion avec d'autres CdCs (pour --best).",
+    )
 
     # ── Arguments legacy (compatibilité ascendante) ────────────────────────────
     parser.add_argument("--keywords", type=str, default="")
@@ -859,14 +959,22 @@ def main():
         return
 
     if args.command == "generate":
-        generate_approved(
-            manifest_path=args.manifest or None,
-            approve=args.approve or None,
-            images=args.images,
-            yes=args.yes,
-            output_dir=args.output,
-            market=args.market,
-        )
+        if args.best:
+            generate_best_variants(
+                report_path=args.report or None,
+                n_fusions=args.fusions,
+                yes=args.yes,
+                output_dir=args.output,
+            )
+        else:
+            generate_approved(
+                manifest_path=args.manifest or None,
+                approve=args.approve or None,
+                images=args.images,
+                yes=args.yes,
+                output_dir=args.output,
+                market=args.market,
+            )
         return
 
     # ── Legacy : --preview-trends ─────────────────────────────────────────────

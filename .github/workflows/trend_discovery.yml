@@ -31,9 +31,10 @@ on:
         default: 'preview'
         type: choice
         options:
-          - 'preview'      # Gemini trends + prompts seulement (0 €)
-          - 'full'         # Pipeline complet sans génération d'images
-          - 'generate'     # Pipeline complet + génération Runware (coût ~0,03 €)
+          - 'preview'         # Gemini trends + CdCs + manifest (0 €)
+          - 'generate-best'   # Variantes du meilleur CdC auto-sélectionné (~0.05 €)
+          - 'generate'        # Images des CdCs approuvées (manifest requis)
+          - 'full'            # Pipeline complet sans génération d'images
       manifest_path:
         description: 'Path to approval manifest (relative to repo root)'
         required: false
@@ -102,8 +103,11 @@ jobs:
         run: |
           MODE="${{ github.event.inputs.mode || 'preview' }}"
           if [ "$MODE" = "preview" ]; then
-            echo "=== MODE PREVIEW : Gemini trends + prompts + manifest (0 €) ==="
+            echo "=== MODE PREVIEW : Gemini trends + CdCs + manifest (0 €) ==="
             python -m trend_discovery.main preview
+          elif [ "$MODE" = "generate-best" ]; then
+            echo "=== MODE GENERATE-BEST : variantes du meilleur CdC auto-sélectionné ==="
+            python -m trend_discovery.main generate --best --yes
           elif [ "$MODE" = "generate" ]; then
             echo "=== MODE GENERATE : génération des images approuvées ==="
             python -m trend_discovery.main generate \

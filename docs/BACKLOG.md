@@ -7,6 +7,166 @@
 > des outils listés ici — elles doivent entrer dans le **calcul de scoring** et les **CdC**.
 > Chaque nouvelle source = une nouvelle `Metric` MEASURED qui améliore la confiance.
 
+---
+
+## 🏗️ Roadmap stratégique — ordre de priorité
+
+> Validé juin 2026. Source : analyse convergente (ChatGPT + sessions précédentes).
+
+### Phase actuelle : Validation Spoonflower
+Priorité absolue : valider qu'un pipeline complet produit des ventes réelles.
+Détection → CdC → Image → Publication → Résultat. Tout le reste est secondaire.
+
+### Ordre de construction recommandé
+
+| # | Brique | Quand | Priorité |
+|---|--------|-------|----------|
+| 1 | **Result Tracking Engine** (Sales DNA) | Dès première publication | ★★★★★ |
+| 2 | **Seasonal Engine** | Dès le pipeline stabilisé | ★★★★★ |
+| 3 | **Platform Intelligence Engine** | Après validation Spoonflower | ★★★★★ |
+| 4 | **Knowledge Base** | Progressivement dès maintenant | ★★★★★ |
+| 5 | **Tool Intelligence Engine** | Après validation | ★★★★☆ |
+| 6 | **Business Opportunity Engine** | Après validation d'au moins 1 business | ★★★★★ |
+| 7 | **Expansion multi-plateformes** | Après ROI Spoonflower prouvé | ★★★☆☆ |
+
+---
+
+## 💾 BRIQUE 1 — Result Tracking Engine (Sales DNA)
+
+> **Implémenter maintenant** — c'est la brique dont les données prendront de la valeur
+> avec le temps. Chaque jour sans tracking = données perdues pour toujours.
+
+### Schéma de la table principale (`opportunity_lifecycle`)
+
+**Colonnes identité :**
+- `opportunity_id` — identifiant unique format `OPP-YYYYMMDD-NNN` (ex: `OPP-20260604-001`)
+- `detected_at` — timestamp de détection
+- `niche` — niche principale
+- `sub_niche` — sous-niche
+- `market` — plateforme cible (spoonflower, etsy, society6…)
+
+**Colonnes scoring :**
+- `trend_score` — score global (/100)
+- `confidence_pct` — % données MEASURED
+- `score_breakdown` — JSON {demand, growth, competition, visual, reusability, platform}
+- `sources_used` — JSON liste des sources
+
+**Colonnes création :**
+- `prompt` — positive_prompt utilisé
+- `palette_json` — JSON {primary: [], accent: [], bg: ""}
+- `style` — style visuel
+- `variant_label` — "Base" / "Sub: Rocking Horse" / "Style: Dark Moody" / "Fusion: × Terrarium"
+- `collection` — nom de collection éventuelle
+
+**Colonnes coûts :**
+- `cost_gemini_eur` — coût appel Gemini
+- `cost_runware_eur` — coût génération image
+- `generation_time_s` — durée génération
+
+**Colonnes fichier :**
+- `image_path` — chemin local PNG
+- `image_url` — URL plateforme après upload
+
+**Colonnes résultats (à remplir plus tard) :**
+- `published_at` — date publication
+- `product_url` — URL du produit sur la plateforme
+- `views` — vues
+- `favorites` — favoris
+- `sales_count` — ventes
+- `revenue_eur` — CA
+- `first_sale_at` — date première vente
+- `days_to_first_sale` — délai avant première vente
+
+### Valeur stratégique
+
+Cette table deviendra probablement l'actif le plus précieux du projet.
+Chaque ligne = une expérience réelle qui améliore les décisions futures.
+
+---
+
+## 📅 BRIQUE 2 — Seasonal Engine
+
+> Spoonflower est **très saisonnier**. Le moteur actuel analyse des tendances générales.
+> Il doit aussi pousser les niches adaptées au bon moment (J-90 avant Halloween, J-120 avant Noël).
+
+### Calendrier Spoonflower (délais de production recommandés)
+
+| Événement | Lancement designs | Début publication | Peak |
+|-----------|------------------|-------------------|------|
+| Halloween (31 oct) | J-120 (fin juin) | J-90 (fin juillet) | oct |
+| Noël / Hiver (déc) | J-120 (août) | J-90 (sept) | nov-déc |
+| Saint-Valentin (14 fév) | J-90 (nov) | J-60 (déc) | janv-fév |
+| Printemps / Pâques | J-60 (fév) | J-45 (mars) | mars-avr |
+| Mariages (mai-juin) | J-90 (fév) | J-60 (mars) | avr-mai |
+| Fête des mères (mai) | J-60 (mars) | J-45 (avr) | mai |
+| Été / Plein air | J-60 (avr) | J-45 (mai) | juin-juil |
+| Rentrée scolaire | J-60 (juin) | J-45 (juil) | août |
+| Fête des pères (juin) | J-45 (avr) | J-30 (mai) | juin |
+
+### Implémentation cible
+
+```python
+# À construire dans trend_discovery/analyzers/seasonal_scorer.py
+seasonal_score = SeasonalScorer().score(niche_name, date=today)
+# → {"score": 85, "peak_in_days": 47, "season": "Halloween", "urgency": "HIGH"}
+```
+
+Le `seasonal_score` s'ajoute comme 7ème composante du score global.
+
+---
+
+## 🧠 BRIQUE 3 — Platform Intelligence Engine
+
+> Actuellement le moteur détecte des tendances générales.
+> Il doit détecter des tendances **spécifiquement performantes sur Spoonflower**.
+
+### Ce qu'il faut apprendre sur Spoonflower
+
+- Palettes populaires (par catégorie, par saison)
+- Densité des motifs préférée (dense vs aéré)
+- Tailles de repeat performantes
+- Catégories les plus vendues (quilting cotton vs apparel vs wallpaper…)
+- Styles visuels dominants (watercolor, vector, hand-drawn…)
+- Fréquence des colorways dans les collections qui vendent
+
+### Platform Fit Score (à ajouter au scoring)
+
+```
+Trend Score actuel : 84/100
++ Platform Fit Score Spoonflower : /20
+= Score final : /120 (normalisé /100)
+```
+
+Une même niche peut scorer différemment selon la plateforme :
+- Dark Academia Herbarium → Spoonflower 95 | Etsy SVG 71 | Society6 Art Print 88
+
+---
+
+## 🏢 BRIQUE 4 — Business Opportunity Engine
+
+> Différence fondamentale :
+> - Trend Engine → "Que produire dans un business existant ?"
+> - Business Opportunity Engine → "Quel nouveau business lancer ?"
+
+### Marchés à surveiller
+
+Assets jeux vidéo (Godot, Unity), découpe laser (SVG), templates professionnels (Canva, Notion),
+ressources créatives (brushes, polices), printables Etsy, ressources VRChat/VTubing.
+
+### Architecture cible (long terme)
+
+```
+                    Knowledge Base
+                          │
+  ┌───────────────────────┼───────────────────────┐
+  │                       │                       │
+Trend Engine      Platform Engine      Business Engine
+  │                       │                       │
+"Que produire ?"   "Comment le vendre ?"   "Quel marché lancer ?"
+```
+
+---
+
 ## Vision multi-agents
 
 Le système n'est pas un seul agent IA mais plusieurs agents spécialisés qui coexistent :

@@ -261,6 +261,61 @@ class GenerationPipeline:
         )
         return results
 
+    def run_variants(
+        self,
+        brief_data: dict,
+        variants: List,
+        auditor: Optional["QualityAuditor"] = None,
+    ) -> List[GenerationResult]:
+        """
+        Génère 1 image par variante de prompt (base, sous-niche, style, fusion).
+
+        Args:
+            brief_data : dict brut du CdC (issu du rapport JSON).
+            variants   : List[PromptVariant] produits par VariantEngine.
+            auditor    : QualityAuditor optionnel.
+
+        Returns:
+            List[GenerationResult] — un résultat par variante.
+        """
+        if not self._runware.is_available():
+            return [GenerationResult(
+                niche=f"{brief_data.get('name', '')} — {v.label}",
+                filepath=None, upscaled_url=None, success=False,
+                error="RUNWARE_API_KEY non configurée",
+            ) for v in variants]
+
+        results: List[GenerationResult] = []
+        brief_name = brief_data.get("name", "niche")
+
+        logger.info(
+            "[gen_pipeline] '%s' — %d variante(s) à générer",
+            brief_name, len(variants),
+        )
+
+        for i, variant in enumerate(variants, 1):
+            niche_label = f"{brief_name} — {variant.label}"
+            logger.info(
+                "[gen_pipeline] %d/%d — %s | prompt: %s…",
+                i, len(variants), variant.label, variant.positive_prompt[:80],
+            )
+            result = self._generate_with_audit(
+                niche_name=niche_label,
+                positive_prompt=variant.positive_prompt,
+                negative_prompt=variant.negative_prompt or "",
+                auditor=auditor,
+                attempt_label=f"{i}/{len(variants)}",
+            )
+            results.append(result)
+            logger.info("[gen_pipeline] %s", result)
+
+        ok = sum(1 for r in results if r.success)
+        logger.info(
+            "[gen_pipeline] '%s' → %d/%d variantes générées → %s",
+            brief_name, ok, len(variants), self._output_dir,
+        )
+        return results
+
     def _generate_with_audit(
         self,
         niche_name: str,
