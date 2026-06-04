@@ -1,0 +1,3466 @@
+{
+  "generated_at": "2026-06-04T13:34:05.030747+00:00",
+  "total_briefs": 16,
+  "briefs": [
+    {
+      "name": "Nostalgic Wooden Toy",
+      "trending_score": 84,
+      "market_opportunity": "high",
+      "why_trending": "Modern parents are rejecting bright plastic toys in favor of heirloom wooden toys. This aesthetic is highly trending on Pinterest for nursery design. While generic baby animals are oversaturated, high-quality watercolor patterns of vintage wooden blocks, pull toys, and rocking horses are in high demand but low competition.",
+      "target_audience": "nursery and baby room decorators making crib sheets, curtains, and baby quilts",
+      "sub_niches": [
+        {
+          "name": "Vintage Wooden Blocks",
+          "trending_score": 87,
+          "unique_angle": "Hand-painted wooden alphabet blocks stacked and scattered in soft pastel tones.",
+          "prompt_keywords": [
+            "wooden blocks",
+            "alphabet blocks",
+            "vintage toys",
+            "pastel watercolor"
+          ]
+        },
+        {
+          "name": "Pull-Along Duck Toys",
+          "trending_score": 84,
+          "unique_angle": "Charming wooden pull-along ducks on red wheels with delicate string details.",
+          "prompt_keywords": [
+            "pull toy",
+            "wooden duck",
+            "vintage nursery",
+            "soft shading"
+          ]
+        },
+        {
+          "name": "Classic Rocking Horses",
+          "trending_score": 82,
+          "unique_angle": "Elegant wooden rocking horses with painted saddles and yarn manes.",
+          "prompt_keywords": [
+            "rocking horse",
+            "heirloom toy",
+            "nostalgic nursery",
+            "soft watercolor"
+          ]
+        },
+        {
+          "name": "Wooden Train Tracks",
+          "trending_score": 80,
+          "unique_angle": "A playful, winding pattern of wooden train tracks and tiny wooden locomotives.",
+          "prompt_keywords": [
+            "wooden train",
+            "toy tracks",
+            "playroom pattern",
+            "soft colors"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "nostalgic, gentle, warm, playful",
+        "composition": "basic repeat, medium scale, tossed layout",
+        "line_style": "soft pencil sketches with light watercolor washes",
+        "color_primary": [
+          "Mustard Yellow #E1AD01",
+          "Sage Green #8F9779",
+          "Dusty Blue #4A76A8"
+        ],
+        "color_accent": [
+          "Soft Coral #F88379",
+          "Warm Wood #8B5A2B"
+        ],
+        "color_background": "Creamy White #FFFDD0",
+        "style_references": [
+          "Margaret Wise Brown illustrations",
+          "classic wooden toys"
+        ],
+        "texture": "subtle wood grain texture showing through soft watercolor paint"
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "organic cotton knit",
+          "minky",
+          "quilting cotton"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "A gentle tossed repeat pattern featuring nostalgic wooden toys, including vintage alphabet blocks, pull-along ducks on wheels, and small rocking horses. The motifs are spaced evenly in a playful, uncrowded layout with soft negative space. The art style is soft watercolor over delicate pencil sketches, with subtle wood grain textures visible through the paint layers. The line quality is soft and hand-drawn, avoiding harsh digital lines. The color palette consists of Mustard Yellow #E1AD01, Sage Green #8F9779, and Dusty Blue #4A76A8, with warm wood accents, all set against a cozy Creamy White #FFFDD0 background. The lighting is soft and diffused, with gentle, realistic shading that gives the toys a three-dimensional feel without harsh shadows. seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, even lighting, high detail, 300 DPI, clean background",
+        "negative_prompt": "bright plastic toys, neon colors, harsh black outlines, flat vector shapes, cluttered layout, dark backgrounds, modern digital illustrations, text, watermarks",
+        "key_elements": [
+          "wooden blocks",
+          "pull-along duck",
+          "rocking horse",
+          "wood grain texture"
+        ],
+        "avoid_elements": [
+          "plastic toys",
+          "neon colors",
+          "harsh outlines"
+        ],
+        "cfg_scale": 7.0,
+        "style_weight": 0.8
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-04 13:34 UTC",
+      "opportunity_score": 84.5,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 89.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 89 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'low', ~75 annonces Etsy (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, références de style, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "wooden blocks",
+          "pull-along duck",
+          "rocking horse",
+          "wood grain texture",
+          "alphabet blocks",
+          "vintage toys",
+          "pastel watercolor",
+          "pull toy",
+          "wooden duck",
+          "vintage nursery",
+          "soft shading",
+          "heirloom toy",
+          "nostalgic nursery",
+          "soft watercolor",
+          "wooden train"
+        ],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 10.0,
+        "rationale": "compétition 'medium' → marché encore ouvert"
+      },
+      "reusability_detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 89 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "wooden blocks",
+        "pull-along duck",
+        "rocking horse",
+        "wood grain texture",
+        "alphabet blocks",
+        "vintage toys",
+        "pastel watercolor",
+        "pull toy",
+        "wooden duck",
+        "vintage nursery",
+        "soft shading",
+        "heirloom toy",
+        "nostalgic nursery",
+        "soft watercolor",
+        "wooden train",
+        "toy tracks",
+        "playroom pattern",
+        "soft colors"
+      ],
+      "title_seeds": [
+        "Nostalgic Wooden Toy seamless pattern",
+        "Vintage Wooden Blocks repeat pattern",
+        "Pull-Along Duck Toys repeat pattern",
+        "Classic Rocking Horses repeat pattern",
+        "Wooden Train Tracks repeat pattern"
+      ]
+    },
+    {
+      "name": "Fountain Pen & Inkwell",
+      "trending_score": 79,
+      "market_opportunity": "very_high",
+      "why_trending": "The r/fountainpens community (over 300k members) frequently posts about wanting high-quality, non-cheesy fabric for pen wraps, pouches, and desk mats. Etsy searches for 'fountain pen fabric' return fewer than 30 relevant, high-quality designs, making this a massive, highly passionate crossover gap.",
+      "target_audience": "sewists making pen wraps, pouches, desk mats, and dark academia study wallpaper",
+      "sub_niches": [
+        {
+          "name": "Vintage Ink Bottles",
+          "trending_score": 94,
+          "unique_angle": "Detailed watercolor illustrations of vintage glass inkwells with colorful ink splatters.",
+          "prompt_keywords": [
+            "inkwell",
+            "glass bottle",
+            "ink splatters",
+            "vintage stationery"
+          ]
+        },
+        {
+          "name": "Fountain Pen Nibs",
+          "trending_score": 92,
+          "unique_angle": "An elegant, geometric layout of detailed gold and silver fountain pen nibs.",
+          "prompt_keywords": [
+            "fountain pen nib",
+            "gold nib",
+            "geometric layout",
+            "fine line art"
+          ]
+        },
+        {
+          "name": "Cursive Ink Writing",
+          "trending_score": 89,
+          "unique_angle": "Flowing, elegant cursive script written in deep blue ink with subtle shading.",
+          "prompt_keywords": [
+            "cursive script",
+            "ink writing",
+            "calligraphy",
+            "vintage letter"
+          ]
+        },
+        {
+          "name": "Stationery & Wax Seals",
+          "trending_score": 87,
+          "unique_angle": "A cozy layout of envelopes, wax seals, stamps, and fountain pens.",
+          "prompt_keywords": [
+            "wax seal",
+            "envelope",
+            "postage stamp",
+            "fountain pen"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "academic, nostalgic, elegant, intellectual",
+        "composition": "half-drop repeat, medium scale, balanced layout",
+        "line_style": "fine, precise ink pen lines with rich watercolor washes",
+        "color_primary": [
+          "Royal Blue #4169E1",
+          "Emerald Green #50C878",
+          "Rich Gold #D4AF37"
+        ],
+        "color_accent": [
+          "Deep Burgundy #800020",
+          "Ink Black #1C1C1C"
+        ],
+        "color_background": "Parchment Cream #F5F2EB",
+        "style_references": [
+          "Victorian stationery",
+          "Dark Academia aesthetic"
+        ],
+        "texture": "textured watercolor paper with realistic ink bleed and metallic sheen"
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "quilting cotton",
+          "linen cotton canvas",
+          "wallpaper"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "An elegant half-drop repeat pattern featuring detailed vintage glass inkwells filled with colorful inks, intricate gold and silver fountain pen nibs, and delicate ink splatters. The motifs are arranged in a balanced, sophisticated layout with generous negative space. The art style is refined watercolor with fine, precise ink pen outlines, capturing the reflective quality of the glass and the metallic sheen of the gold nibs. The line quality is crisp and highly detailed, showing the delicate engravings on the metal nibs. The color palette features Royal Blue #4169E1, Emerald Green #50C878, and Rich Gold #D4AF37, set against a warm Parchment Cream #F5F2EB background. The lighting is soft, flat, and even, with no harsh cast shadows, creating a classic stationery aesthetic. seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, even lighting, high detail, 300 DPI, clean background",
+        "negative_prompt": "modern plastic pens, cheap ballpoint pens, cartoonish style, messy lines, harsh shadows, chaotic layout, neon colors, real readable text, watermarks, tiling lines",
+        "key_elements": [
+          "glass inkwells",
+          "gold nibs",
+          "ink splatters",
+          "watercolor texture"
+        ],
+        "avoid_elements": [
+          "modern pens",
+          "ballpoint pens",
+          "harsh shadows"
+        ],
+        "cfg_scale": 7.5,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-04 13:34 UTC",
+      "opportunity_score": 79.3,
+      "confidence": 65.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 66.0,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 82.0,
+          "detail": "page 'Watercolor painting' : 12 335 vues/mois (réel)"
+        },
+        "growth": {
+          "value": 46.4,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 78.0,
+          "detail": "évolution -7% des vues sur 12 mois (réel)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'low', ~50 annonces Etsy (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, références de style, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "wikipedia"
+        ],
+        "trigger_keywords": [
+          "glass inkwells",
+          "gold nibs",
+          "ink splatters",
+          "watercolor texture",
+          "inkwell",
+          "glass bottle",
+          "vintage stationery",
+          "fountain pen nib",
+          "gold nib",
+          "geometric layout",
+          "fine line art",
+          "cursive script",
+          "ink writing",
+          "calligraphy",
+          "vintage letter"
+        ],
+        "categories": [
+          "very_high",
+          "low"
+        ],
+        "notes": "demande MESURÉE (wikipedia) · compétition low · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "page 'Watercolor painting' : 12 335 vues/mois (réel)",
+      "seo_keywords": [
+        "glass inkwells",
+        "gold nibs",
+        "ink splatters",
+        "watercolor texture",
+        "inkwell",
+        "glass bottle",
+        "vintage stationery",
+        "fountain pen nib",
+        "gold nib",
+        "geometric layout",
+        "fine line art",
+        "cursive script",
+        "ink writing",
+        "calligraphy",
+        "vintage letter",
+        "wax seal",
+        "envelope",
+        "postage stamp",
+        "fountain pen"
+      ],
+      "title_seeds": [
+        "Fountain Pen & Inkwell seamless pattern",
+        "Vintage Ink Bottles repeat pattern",
+        "Fountain Pen Nibs repeat pattern",
+        "Cursive Ink Writing repeat pattern",
+        "Stationery & Wax Seals repeat pattern"
+      ]
+    },
+    {
+      "name": "Artisanal Sourdough & Wheat",
+      "trending_score": 78,
+      "market_opportunity": "very_high",
+      "why_trending": "The r/sourdough community (over 400k members) is highly passionate about their craft, often sewing their own proofing basket liners, bread bags, and kitchen aprons. They actively search for fabric featuring beautiful sourdough scoring patterns and wheat ears, but Spoonflower currently only has generic, cartoonish bread patterns.",
+      "target_audience": "home decorators and sewists making kitchen aprons, bread bags, and proofing basket covers",
+      "sub_niches": [
+        {
+          "name": "Scored Sourdough Boules",
+          "trending_score": 94,
+          "unique_angle": "Detailed watercolor illustrations of rustic sourdough loaves with intricate scored designs.",
+          "prompt_keywords": [
+            "sourdough boule",
+            "scored bread",
+            "rustic loaf",
+            "watercolor wash"
+          ]
+        },
+        {
+          "name": "Golden Wheat Ears",
+          "trending_score": 91,
+          "unique_angle": "Elegant, flowing stems of golden wheat ears and wild rye in a dense botanical layout.",
+          "prompt_keywords": [
+            "wheat ears",
+            "wild rye",
+            "golden stems",
+            "botanical layout"
+          ]
+        },
+        {
+          "name": "Baking Tools & Flour",
+          "trending_score": 88,
+          "unique_angle": "A cozy layout of flour-dusted banneton baskets, lame blades, and flour scoops.",
+          "prompt_keywords": [
+            "banneton basket",
+            "lame blade",
+            "flour dust",
+            "baking tools"
+          ]
+        },
+        {
+          "name": "Sourdough Starter Jars",
+          "trending_score": 86,
+          "unique_angle": "Charming glass jars with bubbling sourdough starter and hand-written date labels.",
+          "prompt_keywords": [
+            "sourdough starter",
+            "glass jar",
+            "bubbling yeast",
+            "cozy kitchen"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "cozy, rustic, artisanal, warm",
+        "composition": "half-drop repeat, medium scale, balanced layout",
+        "line_style": "soft pencil sketches with warm, detailed watercolor washes",
+        "color_primary": [
+          "Golden Wheat #F5C26B",
+          "Crust Brown #8B5A2B",
+          "Flour White #F5F5F5"
+        ],
+        "color_accent": [
+          "Warm Terracotta #C35237",
+          "Sage Green #8F9779"
+        ],
+        "color_background": "Soft Oatmeal #EAE6DF",
+        "style_references": [
+          "Jean-François Millet",
+          "rustic French country art"
+        ],
+        "texture": "subtle flour-dusted texture and rough watercolor paper grain"
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "linen cotton canvas",
+          "quilting cotton",
+          "wallpaper"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "A cozy and rustic half-drop repeat pattern featuring detailed watercolor illustrations of scored sourdough boules, golden wheat ears, and flour-dusted banneton baskets. The bread loaves show realistic crust textures and intricate scored patterns. The motifs are arranged in a balanced, warm layout with soft negative space. The art style is soft watercolor over delicate pencil sketches, capturing an artisanal, French country kitchen feel. The line quality is soft and hand-drawn, showing the fine details of the wheat husks and flour dust. The color palette consists of Golden Wheat #F5C26B, Crust Brown #8B5A2B, and Flour White #F5F5F5, set against a cozy Soft Oatmeal #EAE6DF background. The lighting is soft, warm, and diffused, with gentle shading that gives the loaves a realistic, three-dimensional look. seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, even lighting, high detail, 300 DPI, clean background",
+        "negative_prompt": "cartoonish, cheap clip art, harsh black outlines, dark muddy colors, cluttered layout, heavy shadows, modern geometric patterns, text, watermarks",
+        "key_elements": [
+          "sourdough boules",
+          "wheat ears",
+          "banneton baskets",
+          "watercolor texture"
+        ],
+        "avoid_elements": [
+          "cartoon bread",
+          "harsh black outlines",
+          "cluttered composition"
+        ],
+        "cfg_scale": 7.5,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-04 13:34 UTC",
+      "opportunity_score": 77.5,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 66.0,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 82.0,
+          "detail": "page 'Watercolor painting' : 12 335 vues/mois (réel)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'low' → score 90 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, références de style, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding",
+          "wikipedia"
+        ],
+        "trigger_keywords": [
+          "sourdough boules",
+          "wheat ears",
+          "banneton baskets",
+          "watercolor texture",
+          "sourdough boule",
+          "scored bread",
+          "rustic loaf",
+          "watercolor wash",
+          "wild rye",
+          "golden stems",
+          "botanical layout",
+          "banneton basket",
+          "lame blade",
+          "flour dust",
+          "baking tools"
+        ],
+        "categories": [
+          "very_high",
+          "low"
+        ],
+        "notes": "demande MESURÉE (wikipedia) · compétition low · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "page 'Watercolor painting' : 12 335 vues/mois (réel)",
+      "seo_keywords": [
+        "sourdough boules",
+        "wheat ears",
+        "banneton baskets",
+        "watercolor texture",
+        "sourdough boule",
+        "scored bread",
+        "rustic loaf",
+        "watercolor wash",
+        "wild rye",
+        "golden stems",
+        "botanical layout",
+        "banneton basket",
+        "lame blade",
+        "flour dust",
+        "baking tools",
+        "sourdough starter",
+        "glass jar",
+        "bubbling yeast",
+        "cozy kitchen"
+      ],
+      "title_seeds": [
+        "Artisanal Sourdough & Wheat seamless pattern",
+        "Scored Sourdough Boules repeat pattern",
+        "Golden Wheat Ears repeat pattern",
+        "Baking Tools & Flour repeat pattern",
+        "Sourdough Starter Jars repeat pattern"
+      ]
+    },
+    {
+      "name": "Terrarium Moss & Fern",
+      "trending_score": 78,
+      "market_opportunity": "very_high",
+      "why_trending": "The r/terrariums and r/houseplants communities (over 1M combined members) love the aesthetic of miniature glass ecosystems. While generic houseplant patterns are common, highly detailed patterns featuring glass terrarium jars, mossy rocks, and tiny ferns are a massive, underserved crossover gap on Spoonflower.",
+      "target_audience": "home decorators making botanical curtains, cushions, and statement wallpaper",
+      "sub_niches": [
+        {
+          "name": "Glass Jar Ecosystems",
+          "trending_score": 92,
+          "unique_angle": "Detailed watercolor illustrations of classic glass jars filled with moss, ferns, and soil layers.",
+          "prompt_keywords": [
+            "glass jar terrarium",
+            "moss layers",
+            "miniature ferns",
+            "watercolor"
+          ]
+        },
+        {
+          "name": "Mossy Forest Stones",
+          "trending_score": 89,
+          "unique_angle": "A dense, textured pattern of soft green moss, lichen, and tiny pebbles.",
+          "prompt_keywords": [
+            "green moss",
+            "lichen texture",
+            "forest stones",
+            "organic layout"
+          ]
+        },
+        {
+          "name": "Geometric Glass Terrariums",
+          "trending_score": 87,
+          "unique_angle": "Modern, geometric brass-framed terrariums filled with succulents and air plants.",
+          "prompt_keywords": [
+            "geometric terrarium",
+            "brass frame",
+            "succulents",
+            "air plants"
+          ]
+        },
+        {
+          "name": "Tiny Fern Fronds",
+          "trending_score": 85,
+          "unique_angle": "Delicate, small-scale fern fronds and moss spores in a flowing, botanical layout.",
+          "prompt_keywords": [
+            "miniature ferns",
+            "moss spores",
+            "botanical green",
+            "flowing layout"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "natural, serene, detailed, botanical",
+        "composition": "brick repeat, medium scale, organic layout",
+        "line_style": "fine, detailed ink outlines with rich, layered watercolor washes",
+        "color_primary": [
+          "Moss Green #ADDFAD",
+          "Forest Green #228B22",
+          "Fern Green #4F7942"
+        ],
+        "color_accent": [
+          "Terracotta #C35237",
+          "Brass Gold #C5A059"
+        ],
+        "color_background": "Soft Alabaster #F9F6F0",
+        "style_references": [
+          "Ernst Haeckel",
+          "vintage botanical illustrations"
+        ],
+        "texture": "subtle glass reflection and damp soil texture"
+      },
+      "spoonflower": {
+        "repeat_type": "brick",
+        "pattern_scale": "medium",
+        "top_products": [
+          "wallpaper",
+          "linen cotton canvas",
+          "celosia velvet"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "A beautiful brick repeat pattern featuring detailed watercolor illustrations of classic glass jar terrariums filled with lush green moss, miniature ferns, and layered soil. The glass jars show soft reflections and highlights, arranged in a balanced, organic layout with elegant negative space. The art style is refined botanical illustration, with fine ink outlines and rich, layered watercolor washes. The line quality is crisp and precise, capturing the delicate veins of the ferns and the texture of the moss. The color palette features Moss Green #ADDFAD, Forest Green #228B22, and Fern Green #4F7942, set against a clean Soft Alabaster #F9F6F0 background. The lighting is soft, diffused, and even, with no harsh cast shadows, capturing the serene beauty of a miniature ecosystem. seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, even lighting, high detail, 300 DPI, clean background",
+        "negative_prompt": "cartoonish, cheap clip art, harsh black outlines, dark muddy colors, cluttered layout, heavy shadows, modern geometric patterns, text, watermarks",
+        "key_elements": [
+          "glass terrariums",
+          "moss",
+          "miniature ferns",
+          "watercolor texture"
+        ],
+        "avoid_elements": [
+          "cartoon plants",
+          "harsh black outlines",
+          "cluttered composition"
+        ],
+        "cfg_scale": 7.5,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Mordecai Cubitt Cooke - Farne.png",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Mordecai_Cubitt_Cooke_-_Farne.png",
+          "width": 1275,
+          "height": 1877
+        },
+        {
+          "title": "Scientific and applied pharmacognosy intended for the use of students in pharmacy, as a hand book for pharmacists, and as a reference book for food and drug analysts and pharmacologists (1920) (14783099782).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Scientific_and_applied_pharmacognosy_intended_for_the_use_of_students_in_pharmacy%2C_as_a_hand_book_for_pharmacists%2C_and_as_a_reference_book_for_food_and_drug_analysts_and_pharmacologists_%281920%29_%2814783099782%29.jpg",
+          "width": 2008,
+          "height": 2876
+        }
+      ],
+      "generated_at": "2026-06-04 13:34 UTC",
+      "opportunity_score": 77.5,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 66.0,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 82.0,
+          "detail": "page 'Watercolor painting' : 12 335 vues/mois (réel)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'low' → score 90 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, références de style, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "4 sous-niches, 15 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding",
+          "wikipedia"
+        ],
+        "trigger_keywords": [
+          "glass terrariums",
+          "moss",
+          "miniature ferns",
+          "watercolor texture",
+          "glass jar terrarium",
+          "moss layers",
+          "watercolor",
+          "green moss",
+          "lichen texture",
+          "forest stones",
+          "organic layout",
+          "geometric terrarium",
+          "brass frame",
+          "succulents",
+          "air plants"
+        ],
+        "categories": [
+          "very_high",
+          "low"
+        ],
+        "notes": "demande MESURÉE (wikipedia) · compétition low · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "4 sous-niches, 15 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "page 'Watercolor painting' : 12 335 vues/mois (réel)",
+      "seo_keywords": [
+        "glass terrariums",
+        "moss",
+        "miniature ferns",
+        "watercolor texture",
+        "glass jar terrarium",
+        "moss layers",
+        "watercolor",
+        "green moss",
+        "lichen texture",
+        "forest stones",
+        "organic layout",
+        "geometric terrarium",
+        "brass frame",
+        "succulents",
+        "air plants",
+        "moss spores",
+        "botanical green",
+        "flowing layout"
+      ],
+      "title_seeds": [
+        "Terrarium Moss & Fern seamless pattern",
+        "Glass Jar Ecosystems repeat pattern",
+        "Mossy Forest Stones repeat pattern",
+        "Geometric Glass Terrariums repeat pattern",
+        "Tiny Fern Fronds repeat pattern"
+      ]
+    },
+    {
+      "name": "Grandmillennial Oyster Shell",
+      "trending_score": 78,
+      "market_opportunity": "high",
+      "why_trending": "The 'Grandmillennial' coastal aesthetic is highly popular for beach house decor and summer dining. While blue and white ginger jars are common, hand-painted oyster shells with gold-rimmed edges are a massive trend in home decor that is currently underserved on Spoonflower fabric and wallpaper.",
+      "target_audience": "home decorators making table runners, placemats, and coastal bathroom wallpaper",
+      "sub_niches": [
+        {
+          "name": "Gold-Rimmed Oysters",
+          "trending_score": 89,
+          "unique_angle": "Detailed watercolor oyster shells with elegant hand-painted gold leaf edges.",
+          "prompt_keywords": [
+            "oyster shells",
+            "gold leaf trim",
+            "watercolor wash",
+            "coastal chic"
+          ]
+        },
+        {
+          "name": "Oysters & Chinoiserie",
+          "trending_score": 86,
+          "unique_angle": "Combines classic blue and white chinoiserie patterns with scattered oyster shells.",
+          "prompt_keywords": [
+            "chinoiserie",
+            "blue and white pottery",
+            "oyster shells",
+            "elegant coastal"
+          ]
+        },
+        {
+          "name": "Coastal Kelp & Shells",
+          "trending_score": 84,
+          "unique_angle": "Flowing green kelp fronds intertwining with delicate oyster and scallop shells.",
+          "prompt_keywords": [
+            "kelp fronds",
+            "scallop shells",
+            "oyster shells",
+            "ocean botanical"
+          ]
+        },
+        {
+          "name": "Oyster Shell Mosaic",
+          "trending_score": 82,
+          "unique_angle": "A dense, interlocking layout of oyster shells creating a natural stone-like mosaic texture.",
+          "prompt_keywords": [
+            "oyster mosaic",
+            "interlocking shells",
+            "natural texture",
+            "pearly sheen"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "elegant, coastal, refined, artisanal",
+        "composition": "half-drop repeat, medium scale, flowing layout",
+        "line_style": "soft watercolor washes with fine metallic-look gold ink detailing",
+        "color_primary": [
+          "Oyster Blue #4682B4",
+          "Pearly Gray #DCDCDC",
+          "Seafoam Green #9FE2BF"
+        ],
+        "color_accent": [
+          "Gold Leaf #D4AF37",
+          "Deep Navy #000080"
+        ],
+        "color_background": "Soft Alabaster #F9F6F0",
+        "style_references": [
+          "Chinoiserie porcelain",
+          "Japanese watercolor"
+        ],
+        "texture": "subtle pearlescent sheen and watercolor paper grain"
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "linen cotton canvas",
+          "wallpaper",
+          "celosia velvet"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "An elegant half-drop repeat pattern featuring hand-painted oyster shells with shimmering gold-rimmed edges, scattered delicately among soft seafoam green kelp fronds. The shells show realistic pearlescent textures with soft blue, gray, and lavender undertones. The composition is flowing and balanced, with elegant negative space that feels airy and coastal. The art style is refined watercolor with fine metallic gold ink detailing along the shell ridges. The line quality is delicate and precise, highlighting the organic curves of the shells. The color palette features Oyster Blue #4682B4, Pearly Gray #DCDCDC, and Gold Leaf #D4AF37, set against a clean Soft Alabaster #F9F6F0 background. The lighting is bright and even, with no harsh shadows, capturing a luxurious coastal aesthetic. seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, even lighting, high detail, 300 DPI, clean background",
+        "negative_prompt": "cartoonish, cheap clip art, harsh black outlines, dark muddy colors, cluttered layout, heavy shadows, modern geometric patterns, text, watermarks",
+        "key_elements": [
+          "oyster shells",
+          "gold leaf edges",
+          "kelp fronds",
+          "pearly texture"
+        ],
+        "avoid_elements": [
+          "cartoon shells",
+          "harsh black outlines",
+          "cluttered composition"
+        ],
+        "cfg_scale": 7.5,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-04 13:34 UTC",
+      "opportunity_score": 77.5,
+      "confidence": 41.7,
+      "score_breakdown": {
+        "demand": {
+          "value": 91.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 91 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, références de style, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "4 sous-niches, 14 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "oyster shells",
+          "gold leaf edges",
+          "kelp fronds",
+          "pearly texture",
+          "gold leaf trim",
+          "watercolor wash",
+          "coastal chic",
+          "chinoiserie",
+          "blue and white pottery",
+          "elegant coastal",
+          "scallop shells",
+          "ocean botanical",
+          "oyster mosaic",
+          "interlocking shells",
+          "natural texture"
+        ],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium · croissance mesurée",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "4 sous-niches, 14 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 91 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "oyster shells",
+        "gold leaf edges",
+        "kelp fronds",
+        "pearly texture",
+        "gold leaf trim",
+        "watercolor wash",
+        "coastal chic",
+        "chinoiserie",
+        "blue and white pottery",
+        "elegant coastal",
+        "scallop shells",
+        "ocean botanical",
+        "oyster mosaic",
+        "interlocking shells",
+        "natural texture",
+        "pearly sheen"
+      ],
+      "title_seeds": [
+        "Grandmillennial Oyster Shell seamless pattern",
+        "Gold-Rimmed Oysters repeat pattern",
+        "Oysters & Chinoiserie repeat pattern",
+        "Coastal Kelp & Shells repeat pattern",
+        "Oyster Shell Mosaic repeat pattern"
+      ]
+    },
+    {
+      "name": "Damp Forest Floor Bryology",
+      "trending_score": 76,
+      "market_opportunity": "medium",
+      "why_trending": "Cottagecore remains a staple on Spoonflower, but buyers are moving away from generic mushrooms toward highly detailed, whimsical forest floor ecosystems. Patterns featuring snails, moss, acorns, and tiny beetles have high search volume for nursery decor and quilting but low saturation of high-quality designs.",
+      "target_audience": "quilters making baby blankets and nursery decorators designing whimsical baby rooms",
+      "sub_niches": [
+        {
+          "name": "Snails & Mossy Stones",
+          "trending_score": 89,
+          "unique_angle": "Charming garden snails with detailed spiral shells crawling over soft green moss and pebbles.",
+          "prompt_keywords": [
+            "garden snails",
+            "mossy stones",
+            "forest floor",
+            "soft watercolor"
+          ]
+        },
+        {
+          "name": "Acorns & Oak Leaves",
+          "trending_score": 86,
+          "unique_angle": "An autumn-focused pattern of detailed acorns, oak leaves, and tiny forest beetles.",
+          "prompt_keywords": [
+            "acorns",
+            "oak leaves",
+            "forest beetles",
+            "earthy tones"
+          ]
+        },
+        {
+          "name": "Fern Fronds & Spores",
+          "trending_score": 84,
+          "unique_angle": "Delicate unfurling fiddlehead ferns and forest floor foliage in a dense, botanical layout.",
+          "prompt_keywords": [
+            "fiddlehead ferns",
+            "fern fronds",
+            "forest foliage",
+            "botanical green"
+          ]
+        },
+        {
+          "name": "Chanterelles & Pinecones",
+          "trending_score": 82,
+          "unique_angle": "Golden chanterelle mushrooms nestled among fallen pinecones and pine needles.",
+          "prompt_keywords": [
+            "chanterelle mushrooms",
+            "pinecones",
+            "pine needles",
+            "woodland floor"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "whimsical, cozy, natural, enchanting",
+        "composition": "brick repeat, small scale, dense and organic",
+        "line_style": "fine, detailed ink outlines with soft watercolor washes",
+        "color_primary": [
+          "Forest Green #228B22",
+          "Chanterelle Gold #E1AD01",
+          "Acorn Brown #5C4033"
+        ],
+        "color_accent": [
+          "Fern Green #4F7942",
+          "Rust Red #B7410E"
+        ],
+        "color_background": "Soft Oatmeal #EAE6DF",
+        "style_references": [
+          "Beatrix Potter",
+          "Elsa Beskow"
+        ],
+        "texture": "soft watercolor paper texture with delicate stippling"
+      },
+      "spoonflower": {
+        "repeat_type": "brick",
+        "pattern_scale": "small",
+        "top_products": [
+          "quilting cotton",
+          "minky",
+          "organic cotton knit"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "A dense and whimsical brick repeat pattern featuring tiny garden snails with spiral shells, golden chanterelle mushrooms, fallen acorns, and delicate unfurling fiddlehead ferns. The motifs are nested closely together in a natural, organic forest floor layout with minimal negative space. The art style is reminiscent of classic children's book illustrations, rendered in fine ink outlines and soft, detailed watercolor washes. The line quality is delicate and precise, capturing the texture of the moss and the snail shells. The color palette includes Forest Green #228B22, Chanterelle Gold #E1AD01, and Acorn Brown #5C4033, set against a cozy Soft Oatmeal #EAE6DF background. The lighting is soft, diffused, and even, with no harsh shadows. seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, even lighting, high detail, 300 DPI, clean background",
+        "negative_prompt": "scary insects, bright neon colors, modern vector art, flat digital fills, harsh shadows, sparse layout, large empty gaps, tiling lines, watermark, signature",
+        "key_elements": [
+          "garden snails",
+          "chanterelle mushrooms",
+          "fiddlehead ferns",
+          "acorns"
+        ],
+        "avoid_elements": [
+          "scary bugs",
+          "neon colors",
+          "flat vector shapes"
+        ],
+        "cfg_scale": 7.5,
+        "style_weight": 0.8
+      },
+      "reference_images": [
+        {
+          "title": "Margaret Rebecca Dickinson Watercolor No 413 Wild Angelica.webp",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Margaret_Rebecca_Dickinson_Watercolor_No_413_Wild_Angelica.webp",
+          "width": 1050,
+          "height": 1701
+        }
+      ],
+      "generated_at": "2026-06-04 13:34 UTC",
+      "opportunity_score": 76.3,
+      "confidence": 41.7,
+      "score_breakdown": {
+        "demand": {
+          "value": 87.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 87 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, références de style, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "garden snails",
+          "chanterelle mushrooms",
+          "fiddlehead ferns",
+          "acorns",
+          "mossy stones",
+          "forest floor",
+          "soft watercolor",
+          "oak leaves",
+          "forest beetles",
+          "earthy tones",
+          "fern fronds",
+          "forest foliage",
+          "botanical green",
+          "pinecones",
+          "pine needles"
+        ],
+        "categories": [
+          "medium",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium · croissance mesurée",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 87 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "garden snails",
+        "chanterelle mushrooms",
+        "fiddlehead ferns",
+        "acorns",
+        "mossy stones",
+        "forest floor",
+        "soft watercolor",
+        "oak leaves",
+        "forest beetles",
+        "earthy tones",
+        "fern fronds",
+        "forest foliage",
+        "botanical green",
+        "pinecones",
+        "pine needles",
+        "woodland floor"
+      ],
+      "title_seeds": [
+        "Damp Forest Floor Bryology seamless pattern",
+        "Snails & Mossy Stones repeat pattern",
+        "Acorns & Oak Leaves repeat pattern",
+        "Fern Fronds & Spores repeat pattern",
+        "Chanterelles & Pinecones repeat pattern"
+      ]
+    },
+    {
+      "name": "Cabinet of Curiosities Entomological",
+      "trending_score": 76,
+      "market_opportunity": "medium",
+      "why_trending": "Moody, gothic home decor (often called 'Whimsigoth' or 'Dark Cottagecore') is highly popular on TikTok and Pinterest. While basic butterfly patterns are common, detailed Victorian-style illustrations of Luna moths, Death's-head hawkmoths, and ferns on dark backgrounds are a high-demand, medium-competition niche.",
+      "target_audience": "wallpaper home decorators and sewists making statement apparel and velvet cushions",
+      "sub_niches": [
+        {
+          "name": "Luna Moth & Ferns",
+          "trending_score": 88,
+          "unique_angle": "Beautiful pale green Luna moths fluttering among dark, detailed fern fronds.",
+          "prompt_keywords": [
+            "luna moth",
+            "fern fronds",
+            "gothic botanical",
+            "pale green"
+          ]
+        },
+        {
+          "name": "Death's-Head Hawkmoth",
+          "trending_score": 85,
+          "unique_angle": "Intricate, symmetrical Death's-head hawkmoths paired with dark roses and thorns.",
+          "prompt_keywords": [
+            "death's-head hawkmoth",
+            "dark roses",
+            "thorns",
+            "victorian gothic"
+          ]
+        },
+        {
+          "name": "Moth & Moon Phases",
+          "trending_score": 83,
+          "unique_angle": "Symmetrical moths arranged with delicate gold moon phases and stars.",
+          "prompt_keywords": [
+            "moths",
+            "moon phases",
+            "gold stars",
+            "celestial gothic"
+          ]
+        },
+        {
+          "name": "Cabinet of Curiosities Moths",
+          "trending_score": 81,
+          "unique_angle": "A grid-like layout of various moth species pinned with scientific labels.",
+          "prompt_keywords": [
+            "curiosity cabinet",
+            "pinned moths",
+            "scientific labels",
+            "vintage grid"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "moody, gothic, mysterious, elegant",
+        "composition": "mirror repeat, medium scale, symmetrical layout",
+        "line_style": "fine, detailed engraving lines with deep, rich color washes",
+        "color_primary": [
+          "Luna Green #77DD77",
+          "Deep Plum #4E2A47",
+          "Midnight Black #1A1A1A"
+        ],
+        "color_accent": [
+          "Antique Gold #C5A059",
+          "Burgundy #800020"
+        ],
+        "color_background": "Midnight Black #1A1A1A",
+        "style_references": [
+          "Victorian scientific illustrations",
+          "Edward Gorey"
+        ],
+        "texture": "subtle velvet texture and fine engraving line grain"
+      },
+      "spoonflower": {
+        "repeat_type": "mirror",
+        "pattern_scale": "medium",
+        "top_products": [
+          "wallpaper",
+          "celosia velvet",
+          "apparel fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "An elegant and moody symmetrical mirror repeat pattern featuring detailed Victorian-style illustrations of Luna moths with pale green wings, dark fern fronds, and delicate antique gold stars. The moths are arranged in a structured, balanced layout with elegant negative space. The art style is inspired by 19th-century scientific engravings, with fine, precise line work and deep, rich color washes. The line quality is extremely detailed, showing the intricate patterns on the moth wings and the texture of the fern leaves. The color palette features Luna Green #77DD77, Deep Plum #4E2A47, and Antique Gold #C5A059, set against a solid Midnight Black #1A1A1A background. The lighting is soft and flat, with no harsh cast shadows, creating a sophisticated gothic aesthetic. seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, even lighting, high detail, 300 DPI, clean background",
+        "negative_prompt": "bright neon colors, modern digital vector, cartoonish style, messy lines, harsh shadows, chaotic layout, text, watermarks, tiling lines",
+        "key_elements": [
+          "luna moths",
+          "fern fronds",
+          "antique gold stars",
+          "engraving lines"
+        ],
+        "avoid_elements": [
+          "cartoon moths",
+          "neon colors",
+          "harsh shadows"
+        ],
+        "cfg_scale": 8.0,
+        "style_weight": 0.9
+      },
+      "reference_images": [
+        {
+          "title": "Microscopic view of a white featherwing'd (feather-winged) moth - DPLA - 64f6896e61312d6631db5486714b1d90.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/58/Microscopic_view_of_a_white_featherwing%27d_%28feather-winged%29_moth_-_DPLA_-_64f6896e61312d6631db5486714b1d90.jpg",
+          "width": 6085,
+          "height": 7561
+        }
+      ],
+      "generated_at": "2026-06-04 13:34 UTC",
+      "opportunity_score": 76.0,
+      "confidence": 41.7,
+      "score_breakdown": {
+        "demand": {
+          "value": 86.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 86 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, références de style, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "luna moths",
+          "fern fronds",
+          "antique gold stars",
+          "engraving lines",
+          "luna moth",
+          "gothic botanical",
+          "pale green",
+          "death's-head hawkmoth",
+          "dark roses",
+          "thorns",
+          "victorian gothic",
+          "moths",
+          "moon phases",
+          "gold stars",
+          "celestial gothic"
+        ],
+        "categories": [
+          "medium",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium · croissance mesurée",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 86 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "luna moths",
+        "fern fronds",
+        "antique gold stars",
+        "engraving lines",
+        "luna moth",
+        "gothic botanical",
+        "pale green",
+        "death's-head hawkmoth",
+        "dark roses",
+        "thorns",
+        "victorian gothic",
+        "moths",
+        "moon phases",
+        "gold stars",
+        "celestial gothic",
+        "curiosity cabinet",
+        "pinned moths",
+        "scientific labels",
+        "vintage grid"
+      ],
+      "title_seeds": [
+        "Cabinet of Curiosities Entomological seamless pattern",
+        "Luna Moth & Ferns repeat pattern",
+        "Death's-Head Hawkmoth repeat pattern",
+        "Moth & Moon Phases repeat pattern",
+        "Cabinet of Curiosities Moths repeat pattern"
+      ]
+    },
+    {
+      "name": "Art Deco Zodiac Blueprint",
+      "trending_score": 76,
+      "market_opportunity": "medium",
+      "why_trending": "Celestial patterns are a constant favorite, but the market is flooded with basic boho suns and moons. There is a strong, growing demand for elegant, structured Art Deco-inspired celestial patterns featuring geometric gold stars, crescent moons, and constellations on deep, rich backgrounds for statement wallpaper and home decor.",
+      "target_audience": "wallpaper home decorators and sewists making luxury bedding and curtains",
+      "sub_niches": [
+        {
+          "name": "Geometric Sunbursts",
+          "trending_score": 86,
+          "unique_angle": "Symmetrical, sharp Art Deco sunbursts with radiating gold lines and geometric details.",
+          "prompt_keywords": [
+            "art deco sunburst",
+            "geometric stars",
+            "gold foil effect",
+            "symmetrical"
+          ]
+        },
+        {
+          "name": "Crescent Moon & Clouds",
+          "trending_score": 83,
+          "unique_angle": "Stylized, elegant crescent moons nestled in geometric, stylized Art Deco clouds.",
+          "prompt_keywords": [
+            "crescent moon",
+            "art deco clouds",
+            "gold lines",
+            "celestial luxury"
+          ]
+        },
+        {
+          "name": "Zodiac Constellations",
+          "trending_score": 81,
+          "unique_angle": "Delicate gold line-art constellations connected by tiny geometric stars on a dark background.",
+          "prompt_keywords": [
+            "constellations",
+            "zodiac art",
+            "fine gold lines",
+            "astronomy"
+          ]
+        },
+        {
+          "name": "Astrological Charts",
+          "trending_score": 79,
+          "unique_angle": "Intricate, circular astrological wheels and geometric charts arranged in a repeating grid.",
+          "prompt_keywords": [
+            "astrological chart",
+            "geometric grid",
+            "vintage astronomy",
+            "gold line art"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "luxurious, mystical, structured, elegant",
+        "composition": "mirror repeat, medium scale, symmetrical layout",
+        "line_style": "clean, sharp vector lines with metallic gold gradients",
+        "color_primary": [
+          "Deep Navy #0A192F",
+          "Midnight Blue #1B2A47",
+          "Rich Gold #D4AF37"
+        ],
+        "color_accent": [
+          "Champagne Gold #F1E5AC",
+          "Charcoal #2C2C2C"
+        ],
+        "color_background": "Deep Navy #0A192F",
+        "style_references": [
+          "Erté",
+          "Art Deco movement"
+        ],
+        "texture": "subtle metallic sheen and fine gold dust texture"
+      },
+      "spoonflower": {
+        "repeat_type": "mirror",
+        "pattern_scale": "medium",
+        "top_products": [
+          "wallpaper",
+          "celosia velvet",
+          "satin"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "A luxurious symmetrical mirror repeat pattern featuring elegant Art Deco celestial motifs, including geometric gold sunbursts, stylized crescent moons, and delicate constellations. The motifs are arranged in a structured, balanced grid with clean negative space. The art style is inspired by 1920s Art Deco design, with sharp, clean vector lines and smooth metallic gold gradients that simulate gold foil. The line quality is extremely precise and crisp, showing intricate geometric details. The color palette features Deep Navy #0A192F, Midnight Blue #1B2A47, and Rich Gold #D4AF37, creating a high-contrast, dramatic look. The lighting is flat and even, with no realistic shadows, focusing entirely on the metallic gold line work. seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, even lighting, high detail, 300 DPI, clean background",
+        "negative_prompt": "blurry, watercolor, messy hand-drawn lines, boho style, soft pastel colors, realistic clouds, harsh shadows, chaotic layout, text, watermarks",
+        "key_elements": [
+          "art deco sunburst",
+          "crescent moon",
+          "gold lines",
+          "geometric stars"
+        ],
+        "avoid_elements": [
+          "boho style",
+          "watercolor textures",
+          "messy lines"
+        ],
+        "cfg_scale": 8.0,
+        "style_weight": 0.9
+      },
+      "reference_images": [
+        {
+          "title": "Illustrated catalogue of the exceedingly rare and valuable art treasures and antiquities formerly contained in the famous Davanzati Palace, Florence, Italy (1916) (14780565595).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/32/Illustrated_catalogue_of_the_exceedingly_rare_and_valuable_art_treasures_and_antiquities_formerly_contained_in_the_famous_Davanzati_Palace%2C_Florence%2C_Italy_%281916%29_%2814780565595%29.jpg",
+          "width": 1886,
+          "height": 2392
+        }
+      ],
+      "generated_at": "2026-06-04 13:34 UTC",
+      "opportunity_score": 75.5,
+      "confidence": 41.7,
+      "score_breakdown": {
+        "demand": {
+          "value": 84.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 84 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, références de style, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "art deco sunburst",
+          "crescent moon",
+          "gold lines",
+          "geometric stars",
+          "gold foil effect",
+          "symmetrical",
+          "art deco clouds",
+          "celestial luxury",
+          "constellations",
+          "zodiac art",
+          "fine gold lines",
+          "astronomy",
+          "astrological chart",
+          "geometric grid",
+          "vintage astronomy"
+        ],
+        "categories": [
+          "medium",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium · croissance mesurée",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 84 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "art deco sunburst",
+        "crescent moon",
+        "gold lines",
+        "geometric stars",
+        "gold foil effect",
+        "symmetrical",
+        "art deco clouds",
+        "celestial luxury",
+        "constellations",
+        "zodiac art",
+        "fine gold lines",
+        "astronomy",
+        "astrological chart",
+        "geometric grid",
+        "vintage astronomy",
+        "gold line art"
+      ],
+      "title_seeds": [
+        "Art Deco Zodiac Blueprint seamless pattern",
+        "Geometric Sunbursts repeat pattern",
+        "Crescent Moon & Clouds repeat pattern",
+        "Zodiac Constellations repeat pattern",
+        "Astrological Charts repeat pattern"
+      ]
+    },
+    {
+      "name": "Mid-Century Breeze Block & Desert Flora",
+      "trending_score": 75,
+      "market_opportunity": "medium",
+      "why_trending": "Mid-century modern design remains highly popular for home decor, but standard geometric patterns are oversaturated. A fresh, high-demand angle is the 'Desert Oasis' theme, combining retro 1960s shapes with desert flora like saguaro cactus, agave, and warm terracotta suns in a clean, minimalist layout.",
+      "target_audience": "wallpaper home decorators and sewists making retro curtains and throw pillows",
+      "sub_niches": [
+        {
+          "name": "Retro Saguaro Cactus",
+          "trending_score": 85,
+          "unique_angle": "Stylized, flat-vector saguaro cacti in olive green and mustard yellow with retro starbursts.",
+          "prompt_keywords": [
+            "saguaro cactus",
+            "mid-century modern",
+            "flat vector",
+            "retro starburst"
+          ]
+        },
+        {
+          "name": "Agave & Terracotta Suns",
+          "trending_score": 82,
+          "unique_angle": "Abstract agave plants paired with overlapping terracotta-colored semi-circles representing the sun.",
+          "prompt_keywords": [
+            "agave plant",
+            "terracotta sun",
+            "mid-century shapes",
+            "minimalist desert"
+          ]
+        },
+        {
+          "name": "Desert Roadrunner & Flora",
+          "trending_score": 80,
+          "unique_angle": "Playful, stylized roadrunner birds running among retro desert shrubs and rocks.",
+          "prompt_keywords": [
+            "roadrunner bird",
+            "desert shrubs",
+            "1960s illustration",
+            "playful retro"
+          ]
+        },
+        {
+          "name": "Prickly Pear & Joshua Trees",
+          "trending_score": 78,
+          "unique_angle": "A geometric layout of prickly pear pads and stylized Joshua trees in warm earth tones.",
+          "prompt_keywords": [
+            "prickly pear",
+            "joshua tree",
+            "geometric desert",
+            "earthy palette"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "retro, warm, minimalist, architectural",
+        "composition": "basic repeat, medium scale, structured layout",
+        "line_style": "clean, flat vector shapes with bold outlines and minimal detail",
+        "color_primary": [
+          "Terracotta #C35237",
+          "Mustard Yellow #E1AD01",
+          "Olive Green #708238"
+        ],
+        "color_accent": [
+          "Burnt Orange #CC5500",
+          "Teal Blue #008080"
+        ],
+        "color_background": "Warm Sand #E6D8B8",
+        "style_references": [
+          "Charley Harper",
+          "Mid-century modern movement"
+        ],
+        "texture": "subtle linen texture overlay to give a vintage fabric feel"
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "wallpaper",
+          "linen cotton canvas",
+          "celosia velvet"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "A stylish mid-century modern basic repeat pattern featuring stylized saguaro cacti, prickly pear pads, and abstract terracotta suns. The motifs are designed as flat vector shapes with clean, bold outlines, arranged in a structured and balanced layout with generous negative space. The art style is heavily inspired by 1960s graphic design and Charley Harper's illustrations, focusing on geometric simplification. The line quality is sharp and clean, with no hand-drawn imperfections. The color palette features warm Terracotta #C35237, Mustard Yellow #E1AD01, and Olive Green #708238, set against a solid Warm Sand #E6D8B8 background. The lighting is completely flat and graphic, with no shadows or gradients, ensuring a clean and modern retro look. A subtle linen texture overlay is applied to give the design a vintage textile feel. seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, even lighting, high detail, 300 DPI, clean background",
+        "negative_prompt": "photorealistic, watercolor, messy hand-drawn lines, gradients, realistic shadows, cluttered layout, neon colors, text, watermarks, tiling lines",
+        "key_elements": [
+          "saguaro cactus",
+          "terracotta sun",
+          "flat vector shapes",
+          "linen texture"
+        ],
+        "avoid_elements": [
+          "realistic shading",
+          "watercolor",
+          "cluttered composition"
+        ],
+        "cfg_scale": 7.5,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-04 13:34 UTC",
+      "opportunity_score": 75.2,
+      "confidence": 41.7,
+      "score_breakdown": {
+        "demand": {
+          "value": 83.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 83 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, références de style, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "saguaro cactus",
+          "terracotta sun",
+          "flat vector shapes",
+          "linen texture",
+          "mid-century modern",
+          "flat vector",
+          "retro starburst",
+          "agave plant",
+          "mid-century shapes",
+          "minimalist desert",
+          "roadrunner bird",
+          "desert shrubs",
+          "1960s illustration",
+          "playful retro",
+          "prickly pear"
+        ],
+        "categories": [
+          "medium",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium · croissance mesurée",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 83 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "saguaro cactus",
+        "terracotta sun",
+        "flat vector shapes",
+        "linen texture",
+        "mid-century modern",
+        "flat vector",
+        "retro starburst",
+        "agave plant",
+        "mid-century shapes",
+        "minimalist desert",
+        "roadrunner bird",
+        "desert shrubs",
+        "1960s illustration",
+        "playful retro",
+        "prickly pear",
+        "joshua tree",
+        "geometric desert",
+        "earthy palette"
+      ],
+      "title_seeds": [
+        "Mid-Century Breeze Block & Desert Flora seamless pattern",
+        "Retro Saguaro Cactus repeat pattern",
+        "Agave & Terracotta Suns repeat pattern",
+        "Desert Roadrunner & Flora repeat pattern",
+        "Prickly Pear & Joshua Trees repeat pattern"
+      ]
+    },
+    {
+      "name": "Victorian Pressed Wildflower Ditsy",
+      "trending_score": 75,
+      "market_opportunity": "medium",
+      "why_trending": "Ditsy floral patterns are always popular for apparel, but standard designs can feel generic. The current high-opportunity angle is the 'English Cottage Garden' style: dense, tiny, highly detailed wildflowers (forget-me-nots, primroses, sweet peas) that feel hand-painted and nostalgic, perfect for cottagecore apparel.",
+      "target_audience": "apparel sewists making vintage-style dresses, blouses, and children's clothing",
+      "sub_niches": [
+        {
+          "name": "Forget-Me-Not Trails",
+          "trending_score": 84,
+          "unique_angle": "Tiny blue forget-me-not flowers on delicate winding green stems in a dense layout.",
+          "prompt_keywords": [
+            "forget-me-nots",
+            "winding stems",
+            "ditsy floral",
+            "delicate blue"
+          ]
+        },
+        {
+          "name": "Primrose & Sweet Pea",
+          "trending_score": 81,
+          "unique_angle": "A colorful mix of tiny primroses and sweet pea blossoms scattered closely together.",
+          "prompt_keywords": [
+            "primrose",
+            "sweet pea",
+            "cottage garden",
+            "dense floral"
+          ]
+        },
+        {
+          "name": "Wild Strawberry Vines",
+          "trending_score": 79,
+          "unique_angle": "Charming tiny wild strawberries, white blossoms, and green leaves on delicate vines.",
+          "prompt_keywords": [
+            "wild strawberries",
+            "strawberry blossom",
+            "ditsy vine",
+            "sweet cottage"
+          ]
+        },
+        {
+          "name": "Chamomile & Clover Meadow",
+          "trending_score": 77,
+          "unique_angle": "A dense, carpet-like pattern of tiny chamomile daisies and pink clover blossoms.",
+          "prompt_keywords": [
+            "chamomile daisy",
+            "pink clover",
+            "meadow pattern",
+            "dense ditsy"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "romantic, nostalgic, delicate, sweet",
+        "composition": "brick repeat, small scale, extremely dense ditsy layout",
+        "line_style": "fine, delicate watercolor brushwork with tiny details",
+        "color_primary": [
+          "Forget-Me-Not Blue #6495ED",
+          "Primrose Yellow #FFEF00",
+          "Clover Pink #FFB7C5"
+        ],
+        "color_accent": [
+          "Meadow Green #3B7A57",
+          "Soft Coral #F88379"
+        ],
+        "color_background": "Soft Ivory #FFFDD0",
+        "style_references": [
+          "Liberty of London",
+          "Beatrix Potter"
+        ],
+        "texture": "fine cotton fabric weave texture overlay"
+      },
+      "spoonflower": {
+        "repeat_type": "brick",
+        "pattern_scale": "small",
+        "top_products": [
+          "cotton lawn",
+          "organic cotton knit",
+          "quilting cotton"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "An extremely dense and delicate ditsy brick repeat pattern featuring tiny English cottage wildflowers, including blue forget-me-nots, yellow primroses, and pink clover blossoms. The flowers are arranged closely together in a seamless, carpet-like layout with almost no background showing, creating a classic Liberty-style floral print. The art style is delicate watercolor with fine, precise details on each tiny petal and leaf. The line quality is soft and hand-painted, capturing a romantic and nostalgic feel. The color palette features Forget-Me-Not Blue #6495ED, Primrose Yellow #FFEF00, and Clover Pink #FFB7C5, set against a Soft Ivory #FFFDD0 background. The lighting is soft, flat, and even, with no shadows, perfect for apparel fabric. seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, even lighting, high detail, 300 DPI, clean background",
+        "negative_prompt": "large flowers, sparse layout, modern geometric shapes, harsh black outlines, dark backgrounds, digital gradients, harsh shadows, text, watermarks",
+        "key_elements": [
+          "forget-me-nots",
+          "primroses",
+          "clover blossoms",
+          "dense layout"
+        ],
+        "avoid_elements": [
+          "large scale motifs",
+          "sparse composition",
+          "harsh outlines"
+        ],
+        "cfg_scale": 7.5,
+        "style_weight": 0.8
+      },
+      "reference_images": [
+        {
+          "title": "Railway and locomotive engineering - a practical journal of railway motive power and rolling stock (1905) (14573382498).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Railway_and_locomotive_engineering_-_a_practical_journal_of_railway_motive_power_and_rolling_stock_%281905%29_%2814573382498%29.jpg",
+          "width": 2114,
+          "height": 1302
+        }
+      ],
+      "generated_at": "2026-06-04 13:34 UTC",
+      "opportunity_score": 74.8,
+      "confidence": 41.7,
+      "score_breakdown": {
+        "demand": {
+          "value": 82.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 82 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, références de style, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "forget-me-nots",
+          "primroses",
+          "clover blossoms",
+          "dense layout",
+          "winding stems",
+          "ditsy floral",
+          "delicate blue",
+          "primrose",
+          "sweet pea",
+          "cottage garden",
+          "dense floral",
+          "wild strawberries",
+          "strawberry blossom",
+          "ditsy vine",
+          "sweet cottage"
+        ],
+        "categories": [
+          "medium",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium · croissance mesurée",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 82 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "forget-me-nots",
+        "primroses",
+        "clover blossoms",
+        "dense layout",
+        "winding stems",
+        "ditsy floral",
+        "delicate blue",
+        "primrose",
+        "sweet pea",
+        "cottage garden",
+        "dense floral",
+        "wild strawberries",
+        "strawberry blossom",
+        "ditsy vine",
+        "sweet cottage",
+        "chamomile daisy",
+        "pink clover",
+        "meadow pattern",
+        "dense ditsy"
+      ],
+      "title_seeds": [
+        "Victorian Pressed Wildflower Ditsy seamless pattern",
+        "Forget-Me-Not Trails repeat pattern",
+        "Primrose & Sweet Pea repeat pattern",
+        "Wild Strawberry Vines repeat pattern",
+        "Chamomile & Clover Meadow repeat pattern"
+      ]
+    },
+    {
+      "name": "Nordic Winter Solstice Folk",
+      "trending_score": 74,
+      "market_opportunity": "medium",
+      "why_trending": "Scandinavian folk art is a timeless favorite on Spoonflower, particularly for holiday and winter decor. However, standard red and white folk art is highly saturated. The current opportunity lies in 'Folk Forest' designs: stylized birds, foxes, and floral vines in modern, sophisticated color palettes like sage, mustard, and rust.",
+      "target_audience": "quilters making cozy winter quilts and home decorators making table linens",
+      "sub_niches": [
+        {
+          "name": "Symmetric Folk Birds",
+          "trending_score": 83,
+          "unique_angle": "Perfectly symmetrical Scandinavian folk birds perched on stylized floral branches.",
+          "prompt_keywords": [
+            "folk birds",
+            "symmetrical design",
+            "scandinavian folk art",
+            "stylized branches"
+          ]
+        },
+        {
+          "name": "Folk Art Foxes & Ferns",
+          "trending_score": 80,
+          "unique_angle": "Charming, stylized folk foxes curled up among geometric ferns and wildflowers.",
+          "prompt_keywords": [
+            "folk fox",
+            "geometric ferns",
+            "nordic illustration",
+            "cozy forest"
+          ]
+        },
+        {
+          "name": "Nordic Floral Vines",
+          "trending_score": 78,
+          "unique_angle": "Winding, symmetrical floral vines with geometric leaves and blossoms in a stripe-like layout.",
+          "prompt_keywords": [
+            "floral vines",
+            "nordic stripes",
+            "geometric leaves",
+            "folk pattern"
+          ]
+        },
+        {
+          "name": "Woodland Folk Mandala",
+          "trending_score": 76,
+          "unique_angle": "Circular folk art mandalas featuring deer, rabbits, and pine trees in a repeating grid.",
+          "prompt_keywords": [
+            "folk mandala",
+            "woodland animals",
+            "repeating grid",
+            "nordic design"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "cozy, traditional, structured, whimsical",
+        "composition": "mirror repeat, medium scale, symmetrical layout",
+        "line_style": "clean, flat vector shapes with intricate geometric details",
+        "color_primary": [
+          "Sage Green #8F9779",
+          "Mustard Yellow #E1AD01",
+          "Rust Red #B7410E"
+        ],
+        "color_accent": [
+          "Deep Teal #005F73",
+          "Soft Rose #E9D8A6"
+        ],
+        "color_background": "Off-White #F4F1EA",
+        "style_references": [
+          "Scandinavian folk art",
+          "Sami traditional design"
+        ],
+        "texture": "subtle matte paint texture with clean edges"
+      },
+      "spoonflower": {
+        "repeat_type": "mirror",
+        "pattern_scale": "medium",
+        "top_products": [
+          "quilting cotton",
+          "linen cotton canvas",
+          "wallpaper"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "A beautiful symmetrical mirror repeat pattern in the Scandinavian folk art style, featuring stylized birds perched on geometric floral branches, folk foxes, and symmetrical pine trees. The motifs are arranged in a structured, balanced layout with clean negative space. The art style is flat vector with intricate geometric details and decorative folk patterns inside each animal and plant shape. The line quality is clean and precise, with sharp edges and no hand-drawn messiness. The color palette consists of Sage Green #8F9779, Mustard Yellow #E1AD01, and Rust Red #B7410E, set against a solid Off-White #F4F1EA background. The lighting is completely flat and graphic, with no shadows or gradients, capturing a traditional Nordic textile feel. seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, even lighting, high detail, 300 DPI, clean background",
+        "negative_prompt": "photorealistic, watercolor, messy hand-drawn lines, gradients, realistic shadows, chaotic layout, neon colors, text, watermarks, tiling lines",
+        "key_elements": [
+          "folk birds",
+          "folk foxes",
+          "symmetrical branches",
+          "geometric details"
+        ],
+        "avoid_elements": [
+          "realistic shading",
+          "watercolor",
+          "chaotic composition"
+        ],
+        "cfg_scale": 7.5,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Ridpath's Universal history - an account of the origin, primitive condition and ethnic development of the great races of mankind, and of the principal events in the evolution and progress of the (14597583928).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Ridpath%27s_Universal_history_-_an_account_of_the_origin%2C_primitive_condition_and_ethnic_development_of_the_great_races_of_mankind%2C_and_of_the_principal_events_in_the_evolution_and_progress_of_the_%2814597583928%29.jpg",
+          "width": 3484,
+          "height": 2240
+        }
+      ],
+      "generated_at": "2026-06-04 13:34 UTC",
+      "opportunity_score": 74.5,
+      "confidence": 41.7,
+      "score_breakdown": {
+        "demand": {
+          "value": 81.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 81 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, références de style, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "folk birds",
+          "folk foxes",
+          "symmetrical branches",
+          "geometric details",
+          "symmetrical design",
+          "scandinavian folk art",
+          "stylized branches",
+          "folk fox",
+          "geometric ferns",
+          "nordic illustration",
+          "cozy forest",
+          "floral vines",
+          "nordic stripes",
+          "geometric leaves",
+          "folk pattern"
+        ],
+        "categories": [
+          "medium",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium · croissance mesurée",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 81 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "folk birds",
+        "folk foxes",
+        "symmetrical branches",
+        "geometric details",
+        "symmetrical design",
+        "scandinavian folk art",
+        "stylized branches",
+        "folk fox",
+        "geometric ferns",
+        "nordic illustration",
+        "cozy forest",
+        "floral vines",
+        "nordic stripes",
+        "geometric leaves",
+        "folk pattern",
+        "folk mandala",
+        "woodland animals",
+        "repeating grid",
+        "nordic design"
+      ],
+      "title_seeds": [
+        "Nordic Winter Solstice Folk seamless pattern",
+        "Symmetric Folk Birds repeat pattern",
+        "Folk Art Foxes & Ferns repeat pattern",
+        "Nordic Floral Vines repeat pattern",
+        "Woodland Folk Mandala repeat pattern"
+      ]
+    },
+    {
+      "name": "Apothecary Botanical",
+      "trending_score": 72,
+      "market_opportunity": "high",
+      "why_trending": "Spoonflower's recent 'Dark Academia' and 'Vintage Science' design challenges show a massive surge in searches for moody, educational aesthetics. While standard florals are oversaturated, detailed scientific apothecary illustrations with dark, rich backgrounds are highly sought after but remain a medium-competition niche.",
+      "target_audience": "wallpaper home decorators and apparel sewists making statement dresses and study room wallpaper",
+      "sub_niches": [
+        {
+          "name": "Poison Garden Botanicals",
+          "trending_score": 90,
+          "unique_angle": "Focuses on beautiful but deadly plants like belladonna, hemlock, and foxglove with elegant cursive Latin labels.",
+          "prompt_keywords": [
+            "belladonna",
+            "hemlock",
+            "vintage scientific illustration",
+            "cursive labels"
+          ]
+        },
+        {
+          "name": "Dried Herbarium Pressings",
+          "trending_score": 87,
+          "unique_angle": "Simulates flattened, dried plants taped onto aged paper with delicate calligraphy notes.",
+          "prompt_keywords": [
+            "pressed flowers",
+            "herbarium sheet",
+            "aged paper texture",
+            "botanical specimen"
+          ]
+        },
+        {
+          "name": "Alchemist Glass Vials",
+          "trending_score": 85,
+          "unique_angle": "Combines botanical sprigs tucked inside amber glass bottles and vintage medicine jars.",
+          "prompt_keywords": [
+            "amber glass",
+            "apothecary bottles",
+            "lavender sprigs",
+            "vintage pharmacy"
+          ]
+        },
+        {
+          "name": "Mystical Herbalist Tea",
+          "trending_score": 83,
+          "unique_angle": "Features loose tea leaves, dried orange slices, star anise, and chamomile flowers in a delicate floating layout.",
+          "prompt_keywords": [
+            "loose leaf tea",
+            "star anise",
+            "dried citrus",
+            "cozy kitchen pattern"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "scientific, nostalgic, academic, mysterious",
+        "composition": "half-drop repeat, medium scale, balanced negative space",
+        "line_style": "fine ink pen lines with delicate watercolor washes",
+        "color_primary": [
+          "Sage Green #8F9779",
+          "Dusty Lavender #967BB6",
+          "Amber Gold #D2A154"
+        ],
+        "color_accent": [
+          "Deep Burgundy #6B1D2F",
+          "Ink Black #1C1C1C"
+        ],
+        "color_background": "Parchment Cream #F5F2EB",
+        "style_references": [
+          "Pierre-Joseph Redouté",
+          "Elizabeth Blackwell"
+        ],
+        "texture": "aged parchment paper with subtle grain and ink bleed"
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "wallpaper",
+          "apparel fabric",
+          "linen cotton canvas"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "An intricate half-drop repeat pattern featuring vintage apothecary bottles, dried lavender sprigs, chamomile flowers, and hand-labeled glass vials. The motifs are arranged in a balanced, dense layout with elegant negative space, avoiding any large gaps or crowding. The art style is inspired by 19th-century scientific botanical illustrations, rendered in fine pen lines and delicate watercolor washes. The line quality is crisp and highly detailed, showing the delicate veins of leaves and the glass reflections. The color palette consists of Sage Green #8F9779, Dusty Lavender #967BB6, and Amber Gold #D2A154, set against a warm Parchment Cream #F5F2EB background. The lighting is soft, flat, and even, with no harsh cast shadows, creating a timeless and elegant feel. seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, even lighting, high detail, 300 DPI, clean background",
+        "negative_prompt": "blurry, low resolution, modern digital gradients, harsh shadows, overlapping messy lines, wilted or dead leaves, muddy colors, text watermarks, seams, visible borders, disjointed elements",
+        "key_elements": [
+          "apothecary bottles",
+          "lavender sprigs",
+          "chamomile",
+          "glass vials"
+        ],
+        "avoid_elements": [
+          "modern plastic bottles",
+          "neon colors",
+          "harsh shadows"
+        ],
+        "cfg_scale": 7.5,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Botanical illustration- Vanilla aromatica MET DP875308.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Botanical_illustration-_Vanilla_aromatica_MET_DP875308.jpg",
+          "width": 3727,
+          "height": 2981
+        },
+        {
+          "title": "Botanical illustration- Virgilia MET DP875313.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Botanical_illustration-_Virgilia_MET_DP875313.jpg",
+          "width": 1445,
+          "height": 1424
+        }
+      ],
+      "generated_at": "2026-06-04 13:34 UTC",
+      "opportunity_score": 71.6,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 92.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 92 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'high', ~1500 annonces Etsy (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, références de style, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "apothecary bottles",
+          "lavender sprigs",
+          "chamomile",
+          "glass vials",
+          "belladonna",
+          "hemlock",
+          "vintage scientific illustration",
+          "cursive labels",
+          "pressed flowers",
+          "herbarium sheet",
+          "aged paper texture",
+          "botanical specimen",
+          "amber glass",
+          "vintage pharmacy",
+          "loose leaf tea"
+        ],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 65.0,
+        "rationale": "compétition 'medium' → marché très exploité"
+      },
+      "reusability_detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 92 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "apothecary bottles",
+        "lavender sprigs",
+        "chamomile",
+        "glass vials",
+        "belladonna",
+        "hemlock",
+        "vintage scientific illustration",
+        "cursive labels",
+        "pressed flowers",
+        "herbarium sheet",
+        "aged paper texture",
+        "botanical specimen",
+        "amber glass",
+        "vintage pharmacy",
+        "loose leaf tea",
+        "star anise",
+        "dried citrus",
+        "cozy kitchen pattern"
+      ],
+      "title_seeds": [
+        "Apothecary Botanical seamless pattern",
+        "Poison Garden Botanicals repeat pattern",
+        "Dried Herbarium Pressings repeat pattern",
+        "Alchemist Glass Vials repeat pattern",
+        "Mystical Herbalist Tea repeat pattern"
+      ]
+    },
+    {
+      "name": "Retro Sardine Tin",
+      "trending_score": 71,
+      "market_opportunity": "high",
+      "why_trending": "Quirky kitchen decor is highly trending, with 'sardine tin' aesthetics becoming a massive novelty hit on Pinterest and design blogs. While standard food patterns are common, beautifully illustrated vintage-style sardine tins with ornate lettering and retro colors are a high-demand, low-competition niche on Spoonflower.",
+      "target_audience": "home decorators making kitchen towels, aprons, and quirky dining wallpaper",
+      "sub_niches": [
+        {
+          "name": "Ornate Sardine Tins",
+          "trending_score": 88,
+          "unique_angle": "Detailed vintage sardine tins with ornate, retro-style labels and hand-drawn fish.",
+          "prompt_keywords": [
+            "sardine tin",
+            "vintage label",
+            "ornate lettering",
+            "retro kitchen"
+          ]
+        },
+        {
+          "name": "Sardines in Olive Oil",
+          "trending_score": 85,
+          "unique_angle": "Open sardine tins showing neatly packed silver fish glistening in golden olive oil.",
+          "prompt_keywords": [
+            "open tin",
+            "silver sardines",
+            "olive oil",
+            "glistening fish"
+          ]
+        },
+        {
+          "name": "Portuguese Fish Tiles",
+          "trending_score": 83,
+          "unique_angle": "Combines retro sardine tins with traditional blue and white Portuguese azulejo tile motifs.",
+          "prompt_keywords": [
+            "portuguese tiles",
+            "azulejo",
+            "sardine tins",
+            "blue and white"
+          ]
+        },
+        {
+          "name": "Lemon & Sardine Toss",
+          "trending_score": 81,
+          "unique_angle": "A playful, tossed layout of whole sardines, lemon wedges, and sprigs of dills.",
+          "prompt_keywords": [
+            "whole sardines",
+            "lemon wedges",
+            "dill sprigs",
+            "tossed layout"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "quirky, retro, artisanal, playful",
+        "composition": "half-drop repeat, medium scale, structured grid or tossed",
+        "line_style": "bold, hand-drawn ink outlines with rich gouache paint fills",
+        "color_primary": [
+          "Mustard Yellow #E1AD01",
+          "Cobalt Blue #0047AB",
+          "Sardine Silver #C0C0C0"
+        ],
+        "color_accent": [
+          "Tomato Red #C93C2B",
+          "Olive Green #708238"
+        ],
+        "color_background": "Warm Cream #FDF5E6",
+        "style_references": [
+          "Vintage European packaging",
+          "mid-century illustration"
+        ],
+        "texture": "subtle metal scratch texture and paint grain"
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "linen cotton canvas",
+          "wallpaper",
+          "quilting cotton"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "A quirky and stylish half-drop repeat pattern featuring vintage-style sardine tins with ornate, retro-designed labels and hand-drawn fish illustrations. Some tins are closed, showing beautiful typography, while others are open, revealing silver sardines packed neatly in golden oil. The motifs are arranged in a balanced, slightly offset grid with even spacing. The art style is rich gouache with bold, hand-drawn ink outlines, capturing a rustic European packaging aesthetic. The line quality is crisp and defined, highlighting the intricate decorative borders of the tins. The color palette features Mustard Yellow #E1AD01, Cobalt Blue #0047AB, and Sardine Silver #C0C0C0, set against a Warm Cream #FDF5E6 background. The lighting is flat and even, with no harsh shadows, highlighting the detailed label designs and metallic silver textures. seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, even lighting, high detail, 300 DPI, clean background",
+        "negative_prompt": "photorealistic, modern digital vector, messy lines, dark moody lighting, harsh shadows, cluttered layout, neon colors, real text, watermarks, tiling seams",
+        "key_elements": [
+          "sardine tins",
+          "vintage labels",
+          "silver fish",
+          "gouache texture"
+        ],
+        "avoid_elements": [
+          "modern barcodes",
+          "photorealism",
+          "harsh shadows"
+        ],
+        "cfg_scale": 8.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-04 13:34 UTC",
+      "opportunity_score": 71.0,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 90 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'high', ~750 annonces Etsy (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, références de style, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "sardine tins",
+          "vintage labels",
+          "silver fish",
+          "gouache texture",
+          "sardine tin",
+          "vintage label",
+          "ornate lettering",
+          "retro kitchen",
+          "open tin",
+          "silver sardines",
+          "olive oil",
+          "glistening fish",
+          "portuguese tiles",
+          "azulejo",
+          "blue and white"
+        ],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 65.0,
+        "rationale": "compétition 'medium' → marché très exploité"
+      },
+      "reusability_detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 90 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "sardine tins",
+        "vintage labels",
+        "silver fish",
+        "gouache texture",
+        "sardine tin",
+        "vintage label",
+        "ornate lettering",
+        "retro kitchen",
+        "open tin",
+        "silver sardines",
+        "olive oil",
+        "glistening fish",
+        "portuguese tiles",
+        "azulejo",
+        "blue and white",
+        "whole sardines",
+        "lemon wedges",
+        "dill sprigs",
+        "tossed layout"
+      ],
+      "title_seeds": [
+        "Retro Sardine Tin seamless pattern",
+        "Ornate Sardine Tins repeat pattern",
+        "Sardines in Olive Oil repeat pattern",
+        "Portuguese Fish Tiles repeat pattern",
+        "Lemon & Sardine Toss repeat pattern"
+      ]
+    },
+    {
+      "name": "Vintage Analog Camera",
+      "trending_score": 70,
+      "market_opportunity": "very_high",
+      "why_trending": "The r/analog community (over 2M members) is highly passionate about film photography. They frequently look for custom fabric to make camera straps, camera wraps, and pouches, or wallpaper for their darkrooms. Etsy searches for 'film camera fabric' show almost no high-quality, detailed vintage camera designs, representing a massive crossover gap.",
+      "target_audience": "sewists making camera straps, gear pouches, and darkroom wallpaper",
+      "sub_niches": [
+        {
+          "name": "Vintage SLR Cameras",
+          "trending_score": 91,
+          "unique_angle": "Detailed watercolor illustrations of classic 1970s SLR cameras and lenses.",
+          "prompt_keywords": [
+            "slr camera",
+            "vintage lens",
+            "1970s camera",
+            "watercolor wash"
+          ]
+        },
+        {
+          "name": "35mm Film Rolls",
+          "trending_score": 88,
+          "unique_angle": "A playful, tossed layout of 35mm film canisters and unrolled film strips.",
+          "prompt_keywords": [
+            "35mm film",
+            "film canister",
+            "unrolled film",
+            "retro layout"
+          ]
+        },
+        {
+          "name": "Twin Lens Reflex (TLR)",
+          "trending_score": 85,
+          "unique_angle": "Elegant, symmetrical illustrations of classic TLR cameras with dual lenses.",
+          "prompt_keywords": [
+            "tlr camera",
+            "twin lens reflex",
+            "vintage camera",
+            "detailed line art"
+          ]
+        },
+        {
+          "name": "Darkroom Equipment",
+          "trending_score": 83,
+          "unique_angle": "A cozy layout of enlargers, developing trays, red safelights, and film clips.",
+          "prompt_keywords": [
+            "darkroom enlarger",
+            "developing tray",
+            "safelight",
+            "film clips"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "retro, nostalgic, technical, artistic",
+        "composition": "basic repeat, medium scale, tossed layout",
+        "line_style": "fine, precise ink pen lines with soft watercolor washes",
+        "color_primary": [
+          "Camera Silver #C0C0C0",
+          "Leather Black #1A1A1A",
+          "Kodak Yellow #FFC72C"
+        ],
+        "color_accent": [
+          "Fuji Green #008A4B",
+          "Safelight Red #E30613"
+        ],
+        "color_background": "Warm Gray #E5E5E5",
+        "style_references": [
+          "Technical patent drawings",
+          "mid-century graphic design"
+        ],
+        "texture": "subtle metallic sheen and fine film grain texture"
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "linen cotton canvas",
+          "quilting cotton",
+          "wallpaper"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "A stylish basic repeat pattern featuring detailed vintage 1970s SLR cameras, 35mm film canisters, and unrolled film strips. The motifs are arranged in a balanced, tossed layout with even spacing and soft negative space. The art style is refined watercolor with fine, precise ink pen outlines, capturing the metallic textures of the cameras and the glossy look of the film. The line quality is crisp and technical, showing the fine details of dials, lenses, and film sprocket holes. The color palette features Camera Silver #C0C0C0, Leather Black #1A1A1A, and Kodak Yellow #FFC72C, set against a clean Warm Gray #E5E5E5 background. The lighting is soft, flat, and even, with no harsh cast shadows, creating a classic retro photography aesthetic. A subtle film grain texture is applied to the design. seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, even lighting, high detail, 300 DPI, clean background",
+        "negative_prompt": "modern digital cameras, smartphones, cartoonish style, messy lines, harsh shadows, chaotic layout, neon colors, real text, watermarks, tiling lines",
+        "key_elements": [
+          "slr cameras",
+          "35mm film",
+          "film canisters",
+          "watercolor texture"
+        ],
+        "avoid_elements": [
+          "digital cameras",
+          "smartphones",
+          "harsh shadows"
+        ],
+        "cfg_scale": 7.5,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-04 13:34 UTC",
+      "opportunity_score": 70.0,
+      "confidence": 65.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 66.0,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 82.0,
+          "detail": "page 'Watercolor painting' : 12 335 vues/mois (réel)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'medium', ~250 annonces Etsy (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, références de style, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "google_search_grounding",
+          "wikipedia"
+        ],
+        "trigger_keywords": [
+          "slr cameras",
+          "35mm film",
+          "film canisters",
+          "watercolor texture",
+          "slr camera",
+          "vintage lens",
+          "1970s camera",
+          "watercolor wash",
+          "film canister",
+          "unrolled film",
+          "retro layout",
+          "tlr camera",
+          "twin lens reflex",
+          "vintage camera",
+          "detailed line art"
+        ],
+        "categories": [
+          "very_high",
+          "low"
+        ],
+        "notes": "demande MESURÉE (wikipedia) · compétition low · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 40.0,
+        "rationale": "compétition 'low' → marché modérément exploité"
+      },
+      "reusability_detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "page 'Watercolor painting' : 12 335 vues/mois (réel)",
+      "seo_keywords": [
+        "slr cameras",
+        "35mm film",
+        "film canisters",
+        "watercolor texture",
+        "slr camera",
+        "vintage lens",
+        "1970s camera",
+        "watercolor wash",
+        "film canister",
+        "unrolled film",
+        "retro layout",
+        "tlr camera",
+        "twin lens reflex",
+        "vintage camera",
+        "detailed line art",
+        "darkroom enlarger",
+        "developing tray",
+        "safelight",
+        "film clips"
+      ],
+      "title_seeds": [
+        "Vintage Analog Camera seamless pattern",
+        "Vintage SLR Cameras repeat pattern",
+        "35mm Film Rolls repeat pattern",
+        "Twin Lens Reflex (TLR) repeat pattern",
+        "Darkroom Equipment repeat pattern"
+      ]
+    },
+    {
+      "name": "Sicilian Majolica & Heirloom Tomato",
+      "trending_score": 70,
+      "market_opportunity": "high",
+      "why_trending": "The 'Tomato Girl' aesthetic has exploded on TikTok and Pinterest, celebrating Southern European summer lifestyles. While plain gingham is common, high-quality hand-painted patterns featuring heirloom tomatoes, olive branches, and ceramic plates are highly sought after for kitchen linens and summer apparel but remain scarce.",
+      "target_audience": "apparel sewists making summer dresses and home decorators making table linens and curtains",
+      "sub_niches": [
+        {
+          "name": "Heirloom Tomato Vines",
+          "trending_score": 90,
+          "unique_angle": "Detailed watercolor illustrations of red, yellow, and green heirloom tomatoes hanging on leafy green vines.",
+          "prompt_keywords": [
+            "heirloom tomatoes",
+            "tomato vine",
+            "watercolor wash",
+            "tuscan garden"
+          ]
+        },
+        {
+          "name": "Majolica Tile & Olive Sprigs",
+          "trending_score": 87,
+          "unique_angle": "Combines traditional blue and white Italian majolica tile motifs with green olive branches.",
+          "prompt_keywords": [
+            "majolica tile",
+            "olive branch",
+            "mediterranean blue",
+            "terracotta"
+          ]
+        },
+        {
+          "name": "Rustic Al Fresco Picnic",
+          "trending_score": 84,
+          "unique_angle": "A playful layout of crusty bread, olive oil bottles, garlic bulbs, and rosemary sprigs.",
+          "prompt_keywords": [
+            "crusty bread",
+            "olive oil bottle",
+            "garlic bulb",
+            "rosemary"
+          ]
+        },
+        {
+          "name": "Amalfi Lemon & Tile",
+          "trending_score": 82,
+          "unique_angle": "Vibrant yellow lemons nestled against hand-painted blue and white ceramic tile patterns.",
+          "prompt_keywords": [
+            "amalfi lemons",
+            "blue white tile",
+            "hand-painted ceramic",
+            "citrus branch"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "sunny, rustic, joyful, coastal",
+        "composition": "basic repeat, medium scale, tossed layout",
+        "line_style": "loose, expressive watercolor and gouache brushstrokes",
+        "color_primary": [
+          "Tomato Red #C93C2B",
+          "Lemon Yellow #F4D03F",
+          "Olive Green #708238"
+        ],
+        "color_accent": [
+          "Cobalt Blue #0047AB",
+          "Terracotta #C35237"
+        ],
+        "color_background": "Warm Ivory #FFFDD0",
+        "style_references": [
+          "Raoul Dufy",
+          "Mediterranean folk art"
+        ],
+        "texture": "rough watercolor paper texture with visible paint pooling"
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "linen cotton canvas",
+          "organic cotton sateen",
+          "wallpaper"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "A vibrant tossed repeat pattern featuring hand-painted heirloom tomatoes on leafy green vines, sliced lemons, and small sprigs of fresh basil. The elements are arranged in a lively, balanced composition with even spacing and no overlapping. The art style is expressive gouache and watercolor, with visible brushstrokes and rich paint pooling. The line quality is soft and hand-drawn, capturing a rustic, artisanal feel. The color palette features rich Tomato Red #C93C2B, bright Lemon Yellow #F4D03F, and deep Olive Green #708238, all set against a clean Warm Ivory #FFFDD0 background. The lighting is bright, flat, and sunny, with no harsh shadows, evoking a Mediterranean summer day. seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, even lighting, high detail, 300 DPI, clean background",
+        "negative_prompt": "photorealistic, digital vector, sharp geometric lines, dark moody lighting, harsh shadows, cluttered layout, neon colors, text, watermarks, tiling seams",
+        "key_elements": [
+          "heirloom tomatoes",
+          "lemon slices",
+          "basil sprigs",
+          "watercolor texture"
+        ],
+        "avoid_elements": [
+          "geometric grids",
+          "photorealism",
+          "dark backgrounds"
+        ],
+        "cfg_scale": 8.0,
+        "style_weight": 0.9
+      },
+      "reference_images": [
+        {
+          "title": "Pomological Watercolor POM00000122.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Pomological_Watercolor_POM00000122.jpg",
+          "width": 2854,
+          "height": 4000
+        },
+        {
+          "title": "Pomological Watercolor POM00007133.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Pomological_Watercolor_POM00007133.jpg",
+          "width": 2635,
+          "height": 4000
+        }
+      ],
+      "generated_at": "2026-06-04 13:34 UTC",
+      "opportunity_score": 70.0,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 66.0,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 82.0,
+          "detail": "page 'Watercolor painting' : 12 335 vues/mois (réel)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, références de style, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding",
+          "wikipedia"
+        ],
+        "trigger_keywords": [
+          "heirloom tomatoes",
+          "lemon slices",
+          "basil sprigs",
+          "watercolor texture",
+          "tomato vine",
+          "watercolor wash",
+          "tuscan garden",
+          "majolica tile",
+          "olive branch",
+          "mediterranean blue",
+          "terracotta",
+          "crusty bread",
+          "olive oil bottle",
+          "garlic bulb",
+          "rosemary"
+        ],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande MESURÉE (wikipedia) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "page 'Watercolor painting' : 12 335 vues/mois (réel)",
+      "seo_keywords": [
+        "heirloom tomatoes",
+        "lemon slices",
+        "basil sprigs",
+        "watercolor texture",
+        "tomato vine",
+        "watercolor wash",
+        "tuscan garden",
+        "majolica tile",
+        "olive branch",
+        "mediterranean blue",
+        "terracotta",
+        "crusty bread",
+        "olive oil bottle",
+        "garlic bulb",
+        "rosemary",
+        "amalfi lemons",
+        "blue white tile",
+        "hand-painted ceramic",
+        "citrus branch"
+      ],
+      "title_seeds": [
+        "Sicilian Majolica & Heirloom Tomato seamless pattern",
+        "Heirloom Tomato Vines repeat pattern",
+        "Majolica Tile & Olive Sprigs repeat pattern",
+        "Rustic Al Fresco Picnic repeat pattern",
+        "Amalfi Lemon & Tile repeat pattern"
+      ]
+    },
+    {
+      "name": "Orangerie Botanical Conservatory",
+      "trending_score": 70,
+      "market_opportunity": "medium",
+      "why_trending": "Citrus patterns are highly popular for summer home decor and kitchen accessories. While basic cartoon lemons are oversaturated, there is a strong demand for 'Vintage Citrus Orchard' designs: highly detailed, scientific-style illustrations of lemons, oranges, and grapefruits with green leaves and delicate white blossoms on textured backgrounds.",
+      "target_audience": "home decorators making kitchen curtains, tablecloths, and wallpaper",
+      "sub_niches": [
+        {
+          "name": "Lemon Blossom Branches",
+          "trending_score": 87,
+          "unique_angle": "Detailed watercolor branches with ripe yellow lemons, green leaves, and delicate white blossoms.",
+          "prompt_keywords": [
+            "lemon branch",
+            "white blossoms",
+            "vintage botanical",
+            "watercolor wash"
+          ]
+        },
+        {
+          "name": "Blood Orange Slices",
+          "trending_score": 84,
+          "unique_angle": "Rich, deep red blood orange halves and slices arranged with dark green leaves.",
+          "prompt_keywords": [
+            "blood orange",
+            "citrus slices",
+            "rich colors",
+            "botanical illustration"
+          ]
+        },
+        {
+          "name": "Grapefruit & Blossom Grid",
+          "trending_score": 82,
+          "unique_angle": "A structured, geometric grid of pink grapefruits and delicate white blossoms.",
+          "prompt_keywords": [
+            "pink grapefruit",
+            "citrus grid",
+            "geometric layout",
+            "fresh botanical"
+          ]
+        },
+        {
+          "name": "Mixed Citrus Toss",
+          "trending_score": 80,
+          "unique_angle": "A lively, tossed layout of lemons, limes, and oranges with detailed leaf veins.",
+          "prompt_keywords": [
+            "mixed citrus",
+            "lemons and limes",
+            "tossed layout",
+            "detailed leaves"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "fresh, classic, detailed, sunny",
+        "composition": "half-drop repeat, medium scale, balanced layout",
+        "line_style": "fine ink pen lines with rich, detailed watercolor washes",
+        "color_primary": [
+          "Lemon Yellow #F4D03F",
+          "Orange Ochre #E67E22",
+          "Leaf Green #27AE60"
+        ],
+        "color_accent": [
+          "Blossom White #FFFFFF",
+          "Deep Forest Green #1E4620"
+        ],
+        "color_background": "Warm Parchment #FDF5E6",
+        "style_references": [
+          "Pierre-Joseph Redouté",
+          "vintage botanical prints"
+        ],
+        "texture": "aged paper texture with subtle watercolor grain"
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "linen cotton canvas",
+          "wallpaper",
+          "organic cotton sateen"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "A classic half-drop repeat pattern featuring detailed vintage botanical illustrations of lemon and orange branches. The design includes ripe yellow lemons, orange ochre fruits, rich green leaves with visible veins, and delicate white blossoms with yellow centers. The motifs are arranged in a balanced, flowing layout with elegant negative space. The art style is inspired by 19th-century scientific botanical prints, rendered in fine ink pen lines and rich watercolor washes. The line quality is crisp and highly detailed, capturing the delicate textures of the citrus skin and leaf veins. The color palette features Lemon Yellow #F4D03F, Orange Ochre #E67E22, and Leaf Green #27AE60, set against a Warm Parchment #FDF5E6 background. The lighting is soft, flat, and even, with no harsh cast shadows, creating a timeless and elegant feel. seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, even lighting, high detail, 300 DPI, clean background",
+        "negative_prompt": "cartoonish, cheap clip art, harsh black outlines, dark muddy colors, cluttered layout, heavy shadows, modern geometric patterns, text, watermarks",
+        "key_elements": [
+          "lemon branches",
+          "orange branches",
+          "white blossoms",
+          "watercolor texture"
+        ],
+        "avoid_elements": [
+          "cartoon citrus",
+          "harsh black outlines",
+          "cluttered composition"
+        ],
+        "cfg_scale": 7.5,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "A species of citrus fruit (Citrus sarcodactylis Hort. Bog.); Wellcome V0042687.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/A_species_of_citrus_fruit_%28Citrus_sarcodactylis_Hort._Bog.%29%3B_Wellcome_V0042687.jpg",
+          "width": 2343,
+          "height": 3253
+        },
+        {
+          "title": "Naturalis Biodiversity Center - RMNH.ART.335-Fortunella japonica-Citrus aurantium-Citrus sphaerocarpa-Citrus tachibana-Citrus junos-Citrus unshiu-Yūshi Ishizaki- Cock Blomhoff Collection -pencil drawing-water colour.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Naturalis_Biodiversity_Center_-_RMNH.ART.335-Fortunella_japonica-Citrus_aurantium-Citrus_sphaerocarpa-Citrus_tachibana-Citrus_junos-Citrus_unshiu-Y%C5%ABshi_Ishizaki-_Cock_Blomhoff_Collection_-pencil_drawing-water_colour.jpg",
+          "width": 1365,
+          "height": 1920
+        }
+      ],
+      "generated_at": "2026-06-04 13:34 UTC",
+      "opportunity_score": 70.0,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 66.0,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 82.0,
+          "detail": "page 'Watercolor painting' : 12 335 vues/mois (réel)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, références de style, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding",
+          "wikipedia"
+        ],
+        "trigger_keywords": [
+          "lemon branches",
+          "orange branches",
+          "white blossoms",
+          "watercolor texture",
+          "lemon branch",
+          "vintage botanical",
+          "watercolor wash",
+          "blood orange",
+          "citrus slices",
+          "rich colors",
+          "botanical illustration",
+          "pink grapefruit",
+          "citrus grid",
+          "geometric layout",
+          "fresh botanical"
+        ],
+        "categories": [
+          "medium",
+          "medium"
+        ],
+        "notes": "demande MESURÉE (wikipedia) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "page 'Watercolor painting' : 12 335 vues/mois (réel)",
+      "seo_keywords": [
+        "lemon branches",
+        "orange branches",
+        "white blossoms",
+        "watercolor texture",
+        "lemon branch",
+        "vintage botanical",
+        "watercolor wash",
+        "blood orange",
+        "citrus slices",
+        "rich colors",
+        "botanical illustration",
+        "pink grapefruit",
+        "citrus grid",
+        "geometric layout",
+        "fresh botanical",
+        "mixed citrus",
+        "lemons and limes",
+        "tossed layout",
+        "detailed leaves"
+      ],
+      "title_seeds": [
+        "Orangerie Botanical Conservatory seamless pattern",
+        "Lemon Blossom Branches repeat pattern",
+        "Blood Orange Slices repeat pattern",
+        "Grapefruit & Blossom Grid repeat pattern",
+        "Mixed Citrus Toss repeat pattern"
+      ]
+    }
+  ]
+}
