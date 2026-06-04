@@ -32,7 +32,7 @@ RUNWARE_BASE_URL = "https://api.runware.ai/v1"
 # Modèle par défaut : SDXL 1.0 (bon équilibre qualité/vitesse/coût)
 # Pour une meilleure qualité, utiliser un modèle Flux (ex: "runware:101@1")
 # Voir https://runware.ai/models pour la liste complète
-DEFAULT_MODEL = os.getenv("RUNWARE_MODEL", "runware:100@1")
+DEFAULT_MODEL = os.getenv("RUNWARE_MODEL", "runware:101@2")
 
 # Taille de génération initiale (sera upscalée ensuite)
 GENERATION_SIZE = 1024  # px (carré — optimal pour seamless patterns)

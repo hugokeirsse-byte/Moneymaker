@@ -75,10 +75,10 @@ class QualityAuditor:
         file_mb = len(image_bytes) / (1024 * 1024)
 
         # ── Spoonflower specs ─────────────────────────────────────────────────
+        # Note: la taille n'est PAS vérifiée ici — l'upscale vers 4500px se
+        # fait dans SpoonflowerPackager APRÈS l'audit. On vérifie seulement
+        # le poids et le mode couleur de l'image brute sortie de Runware.
         sf_ok = True
-        if w < SPOONFLOWER_MIN_PX or h < SPOONFLOWER_MIN_PX:
-            issues.append(f"taille {w}×{h} < {SPOONFLOWER_MIN_PX}×{SPOONFLOWER_MIN_PX}")
-            sf_ok = False
         if file_mb > SPOONFLOWER_MAX_MB:
             issues.append(f"poids {file_mb:.1f} MB > {SPOONFLOWER_MAX_MB} MB")
             sf_ok = False
