@@ -671,9 +671,24 @@ class BriefGenerator:
             self._record_history(briefs)
             return briefs
 
+        # ── Signaux externes (2 appels Gemini batchés avec grounding) ─────────
+        from trend_discovery.research.web_signal_fetcher import WebSignalFetcher
+        niche_names = [t.get("name", "") for t in trends if t.get("name")]
+        web_signals = {}
+        try:
+            fetcher = WebSignalFetcher(self._gemini)
+            web_signals = fetcher.fetch_all(niche_names)
+            n_measured = sum(1 for s in web_signals.values() if s.grounding_confirmed)
+            logger.info(
+                "[briefs] signaux externes: %d/%d niches avec grounding confirmé",
+                n_measured, len(niche_names),
+            )
+        except Exception as exc:
+            logger.warning("[briefs] WebSignalFetcher échoué, continuer sans: %s", exc)
+
         # ── Validation transparente (scores + briques d'explicabilité) ─────────
         try:
-            trends = OpportunityValidator().validate(trends, self._profile)
+            trends = OpportunityValidator(web_signals=web_signals).validate(trends, self._profile)
         except Exception as exc:
             logger.warning("[BriefGenerator] validation des opportunités échouée: %s", exc)
 

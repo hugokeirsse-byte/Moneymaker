@@ -635,58 +635,209 @@ def preview_trends(
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+# Mode generate : génère les images des CdCs approuvées
+# ─────────────────────────────────────────────────────────────────────────────
+
+def generate_approved(
+    manifest_path: Optional[str] = None,
+    approve: Optional[str] = None,
+    images: int = DEFAULT_IMAGES_PER_BRIEF,
+    yes: bool = False,
+    output_dir: str = "./output/spoonflower",
+    market: str = "spoonflower",
+) -> None:
+    """
+    Génère les images Runware pour les CdCs approuvées dans un manifest.
+
+    Si --approve est fourni (liste de noms), crée un manifest temporaire
+    avec ces niches approuvées (les autres ignorées).
+    """
+    from trend_discovery.generators.approval_gate import ApprovalGate
+    from trend_discovery.generators.production_brief import BriefGenerator
+    from trend_discovery.markets.market_profile import get_profile
+
+    gate = ApprovalGate()
+
+    # ── Résolution du manifest ─────────────────────────────────────────────────
+    if approve:
+        # Inline approval: build a minimal manifest from brief data
+        approved_names = [n.strip() for n in approve.split(",") if n.strip()]
+        logger.info("[generate] approbation inline: %s", approved_names)
+        from trend_discovery.generators.approval_gate import BriefApproval
+        approvals = [
+            BriefApproval(niche_name=n, opportunity_score=0.0, approved=True, images_count=images)
+            for n in approved_names
+        ]
+    else:
+        resolved = manifest_path or gate.find_latest_manifest()
+        if not resolved:
+            print(
+                "ERROR: Aucun manifest d'approbation trouvé. "
+                "Lancez 'preview' d'abord, puis approuvez les CdCs."
+            )
+            import sys
+            sys.exit(1)
+        logger.info("[generate] manifest: %s", resolved)
+        approvals = gate.load_approved(resolved)
+
+    cost = gate.estimate_cost(approvals)
+    print(
+        f"Approuvé: {len(approvals)} CdC(s) → {cost['n_images']} images → "
+        f"~{cost['cost_eur']:.3f}€"
+    )
+
+    if not yes:
+        answer = input("Proceed? [yes/no] ").strip().lower()
+        if answer not in ("yes", "y"):
+            print("Annulé.")
+            return
+
+    # ── Génération ────────────────────────────────────────────────────────────
+    profile = get_profile(market)
+    gen = BriefGenerator(profile)
+    briefs = gen.generate_all()
+
+    brief_map = {b.name.lower(): b for b in briefs}
+    generated = 0
+
+    try:
+        from trend_discovery.generators.generation_pipeline import GenerationPipeline
+        gen_pipeline = GenerationPipeline(output_dir=output_dir, upscale_factor=4)
+        if not gen_pipeline._runware.is_available():
+            logger.error("[generate] RUNWARE_API_KEY absente — impossible de générer des images.")
+            return
+    except Exception as exc:
+        logger.error("[generate] GenerationPipeline indisponible: %s", exc)
+        return
+
+    for approval in approvals:
+        brief = brief_map.get(approval.niche_name.lower())
+        if brief is None:
+            logger.warning("[generate] CdC '%s' introuvable dans les briefs générés.", approval.niche_name)
+            continue
+        try:
+            results = gen_pipeline.run_brief(brief, n_images=approval.images_count)
+            ok = sum(1 for r in results if getattr(r, "success", False))
+            generated += ok
+            logger.info("[generate] '%s' → %d/%d images générées", approval.niche_name, ok, approval.images_count)
+        except Exception as exc:
+            logger.warning("[generate] '%s' génération échouée: %s", approval.niche_name, exc)
+
+    print(f"\n{generated} image(s) générée(s) → {output_dir}")
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # CLI entry point
 # ─────────────────────────────────────────────────────────────────────────────
+
+# Constante partagée pour approval_gate (évite l'import circulaire au toplevel)
+try:
+    from trend_discovery.generators.approval_gate import DEFAULT_IMAGES_PER_BRIEF
+except Exception:
+    DEFAULT_IMAGES_PER_BRIEF = 5
+
 
 def main():
     parser = argparse.ArgumentParser(
         description="Moneymaker — Moteur de Détection de Tendances et d'Opportunités"
     )
-    parser.add_argument(
-        "--keywords", type=str, default="",
-        help="Mots-clés supplémentaires (séparés par des virgules)"
+    subparsers = parser.add_subparsers(dest="command")
+
+    # ── Sous-commande : preview ────────────────────────────────────────────────
+    preview_parser = subparsers.add_parser(
+        "preview",
+        help="Génère les CdCs + manifest d'approbation (0 image, 0 coût).",
     )
-    parser.add_argument(
-        "--categories", type=str, default="",
-        help="Catégories de niches à analyser (séparées par des virgules)"
+    preview_parser.add_argument("--market", type=str, default="spoonflower")
+    preview_parser.add_argument("--niches", type=int, default=None)
+    preview_parser.add_argument("--exclude", type=str, default="")
+    preview_parser.add_argument("--focus", type=str, default="")
+    preview_parser.add_argument("--output", type=str, default="./reports")
+
+    # ── Sous-commande : generate ───────────────────────────────────────────────
+    gen_parser = subparsers.add_parser(
+        "generate",
+        help="Génère les images Runware pour les CdCs approuvées.",
     )
-    parser.add_argument(
-        "--fast", action="store_true",
-        help="Mode rapide : utilise uniquement Google Trends, Autocomplete et Reddit"
+    gen_parser.add_argument(
+        "--manifest", type=str, default="",
+        help="Chemin vers le manifest d'approbation (relatif à la racine du repo).",
     )
-    parser.add_argument(
-        "--depth", type=int, default=2,
-        help="Profondeur dans l'arbre de niches (1=catégories, 2=niches, 3=sous-niches)"
+    gen_parser.add_argument(
+        "--approve", type=str, default="",
+        help="Liste de noms de niches séparés par des virgules (alternative au manifest).",
     )
-    parser.add_argument(
-        "--db", type=str, default="./data/opportunities.db",
-        help="Chemin vers la base de données SQLite"
+    gen_parser.add_argument(
+        "--images", type=int, default=DEFAULT_IMAGES_PER_BRIEF,
+        help="Nombre d'images par CdC approuvé.",
     )
+    gen_parser.add_argument(
+        "--yes", action="store_true",
+        help="Auto-confirmer (mode CI, pas de prompt interactif).",
+    )
+    gen_parser.add_argument("--market", type=str, default="spoonflower")
+    gen_parser.add_argument("--output", type=str, default="./output/spoonflower")
+
+    # ── Arguments legacy (compatibilité ascendante) ────────────────────────────
+    parser.add_argument("--keywords", type=str, default="")
+    parser.add_argument("--categories", type=str, default="")
+    parser.add_argument("--fast", action="store_true")
+    parser.add_argument("--depth", type=int, default=2)
+    parser.add_argument("--db", type=str, default="./data/opportunities.db")
     parser.add_argument(
         "--preview-trends", action="store_true",
-        help=(
-            "Mode vérification : interroge Gemini, valide les opportunités, affiche "
-            "les tendances et les prompts — SANS générer d'images ni appeler Runware."
-        )
+        help="[legacy] Mode vérification sans génération d'images.",
     )
-    parser.add_argument(
-        "--market", type=str, default="spoonflower",
-        help="Marché POD ciblé (ex: spoonflower). Détermine le MarketProfile utilisé."
-    )
-    parser.add_argument(
-        "--niches", type=int, default=None,
-        help="Nombre de niches à découvrir (surcharge le profil)."
-    )
-    parser.add_argument(
-        "--exclude", type=str, default="",
-        help="Termes/niches à éviter (séparés par des virgules)."
-    )
-    parser.add_argument(
-        "--focus", type=str, default="",
-        help="Angles à privilégier (séparés par des virgules)."
-    )
+    parser.add_argument("--market", type=str, default="spoonflower")
+    parser.add_argument("--niches", type=int, default=None)
+    parser.add_argument("--exclude", type=str, default="")
+    parser.add_argument("--focus", type=str, default="")
+
     args = parser.parse_args()
 
+    # ── Dispatch sur les sous-commandes ───────────────────────────────────────
+    if args.command == "preview":
+        constraints = []
+        exclude = [e.strip() for e in args.exclude.split(",") if e.strip()]
+        focus = [f.strip() for f in args.focus.split(",") if f.strip()]
+        if exclude:
+            constraints.append("Avoid these: " + ", ".join(exclude))
+        if focus:
+            constraints.append("Prioritize these angles: " + ", ".join(focus))
+
+        from trend_discovery.generators.production_brief import BriefGenerator
+        from trend_discovery.generators.approval_gate import ApprovalGate
+        from trend_discovery.markets.market_profile import get_profile
+
+        profile = get_profile(args.market)
+        if args.niches:
+            profile.niche_count = int(args.niches)
+
+        gen = BriefGenerator(profile)
+        briefs = gen.generate_all("\n".join(constraints))
+        path = gen.save_report(briefs, args.output)
+        logger.info("Rapport sauvegardé: %s", path)
+
+        # Écrire le manifest d'approbation
+        run_id = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M")
+        gate = ApprovalGate()
+        manifest_path = gate.write_pending_manifest(briefs, run_id)
+        print(f"\nManifest d'approbation : {manifest_path}")
+        print("Éditez 'approved': true pour les niches choisies, puis lancez 'generate'.")
+        return
+
+    if args.command == "generate":
+        generate_approved(
+            manifest_path=args.manifest or None,
+            approve=args.approve or None,
+            images=args.images,
+            yes=args.yes,
+            output_dir=args.output,
+            market=args.market,
+        )
+        return
+
+    # ── Legacy : --preview-trends ─────────────────────────────────────────────
     if args.preview_trends:
         constraints = []
         exclude = [e.strip() for e in args.exclude.split(",") if e.strip()]
@@ -702,6 +853,7 @@ def main():
         )
         return
 
+    # ── Legacy : pipeline complet ─────────────────────────────────────────────
     extra_kws = [k.strip() for k in args.keywords.split(",") if k.strip()] if args.keywords else None
     cats = [c.strip() for c in args.categories.split(",") if c.strip()] if args.categories else None
 

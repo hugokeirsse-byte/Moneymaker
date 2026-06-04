@@ -34,6 +34,18 @@ on:
           - 'preview'      # Gemini trends + prompts seulement (0 €)
           - 'full'         # Pipeline complet sans génération d'images
           - 'generate'     # Pipeline complet + génération Runware (coût ~0,03 €)
+      manifest_path:
+        description: 'Path to approval manifest (relative to repo root)'
+        required: false
+        default: ''
+      approved_niches:
+        description: 'Comma-separated list of niche names to approve (alternative to manifest)'
+        required: false
+        default: ''
+      images_per_niche:
+        description: 'Number of images per approved CdC'
+        required: false
+        default: '5'
 
 permissions:
   contents: write
@@ -90,8 +102,15 @@ jobs:
         run: |
           MODE="${{ github.event.inputs.mode || 'preview' }}"
           if [ "$MODE" = "preview" ]; then
-            echo "=== MODE PREVIEW : Gemini trends + prompts (0 €) ==="
-            python -m trend_discovery.main --preview-trends
+            echo "=== MODE PREVIEW : Gemini trends + prompts + manifest (0 €) ==="
+            python -m trend_discovery.main preview
+          elif [ "$MODE" = "generate" ]; then
+            echo "=== MODE GENERATE : génération des images approuvées ==="
+            python -m trend_discovery.main generate \
+              --manifest "${{ inputs.manifest_path }}" \
+              --approve "${{ inputs.approved_niches }}" \
+              --images ${{ inputs.images_per_niche || '5' }} \
+              --yes
           else
             ARGS=""
             [ -n "${{ github.event.inputs.keywords }}"   ] && ARGS="$ARGS --keywords '${{ github.event.inputs.keywords }}'"
@@ -106,7 +125,7 @@ jobs:
         run: |
           git config user.name  "Moneymaker Bot"
           git config user.email "bot@moneymaker.auto"
-          git add reports/ output/
+          git add reports/ output/ data/approvals/ 2>/dev/null || git add reports/ output/
           if git diff --staged --quiet; then
             echo "Aucun nouveau rapport à commiter."
           else

@@ -32,9 +32,12 @@ Briques d'explicabilité attachées à chaque tendance :
 from __future__ import annotations
 
 import logging
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, TYPE_CHECKING
 
-from trend_discovery.provenance import Metric, ProvenanceLedger
+from trend_discovery.provenance import Metric, MetricKind, ProvenanceLedger
+
+if TYPE_CHECKING:
+    from trend_discovery.research.web_signal_fetcher import NicheSignals
 
 logger = logging.getLogger(__name__)
 
@@ -66,11 +69,12 @@ class OpportunityValidator:
     dégrade proprement vers HEURISTIC / UNAVAILABLE.
     """
 
-    def __init__(self, wiki=None):
+    def __init__(self, wiki=None, web_signals: Optional[Dict] = None):
         """
         Args:
             wiki: WikipediaProvider (instancié si absent). Tolère un échec
                 d'instanciation (réseau / import) → reste à None.
+            web_signals: dict niche_name -> NicheSignals (from WebSignalFetcher).
         """
         if wiki is not None:
             self._wiki = wiki
@@ -81,6 +85,7 @@ class OpportunityValidator:
             except Exception as exc:
                 logger.warning("[validator] WikipediaProvider indisponible: %s", exc)
                 self._wiki = None
+        self._web_signals: Dict = web_signals or {}
 
     # ── API publique ──────────────────────────────────────────────────────────
     def validate(self, trends: List[Dict], profile) -> List[Dict]:
@@ -116,7 +121,7 @@ class OpportunityValidator:
 
         demand = self._demand_metric(trend, name)
         growth = self._growth_metric(name)
-        competition = self._competition_metric(trend)
+        competition = self._competition_metric(trend, name)
         visual = self._visual_metric(trend)
         reusability = self._reusability_metric(trend)
         platform = self._platform_metric(trend, profile)
@@ -175,8 +180,11 @@ class OpportunityValidator:
     # ── Composant 1 : demande ─────────────────────────────────────────────────
     def _demand_metric(self, trend: Dict, name: str) -> Metric:
         """
-        Demande réelle : meilleure valeur MESURÉE entre le nom et les mots-clés
-        de prompt. Repli HEURISTIC sur le trending_score Gemini.
+        Priority order:
+        1. Wikipedia MEASURED (pageviews réels)
+        2. WebSignalFetcher MEASURED (si grounding_confirmed)
+        3. WebSignalFetcher HEURISTIC (si pas grounding mais interest_score présent)
+        4. Gemini trending_score HEURISTIC (fallback)
         """
         candidates: List[Metric] = []
         if self._wiki is not None:
@@ -193,6 +201,20 @@ class OpportunityValidator:
 
         if candidates:
             return max(candidates, key=lambda m: m.value)
+
+        signals = self._web_signals.get(name)
+        if signals and signals.interest_score is not None:
+            kind = MetricKind.MEASURED if signals.grounding_confirmed else MetricKind.HEURISTIC
+            source = "google_search_grounding" if signals.grounding_confirmed else "gemini_web_estimate"
+            confidence = 75.0 if signals.grounding_confirmed else 40.0
+            detail = signals.demand_evidence or f"intérêt web {signals.interest_score:.0f}/100"
+            return Metric(
+                value=max(0.0, min(100.0, signals.interest_score)),
+                kind=kind,
+                source=source,
+                confidence=confidence,
+                detail=detail,
+            )
 
         # Repli : opinion Gemini → HEURISTIC explicite
         gem = float(trend.get("trending_score", 50) or 50)
@@ -212,13 +234,40 @@ class OpportunityValidator:
                     return m
             except Exception as exc:
                 logger.debug("[validator] croissance '%s' échouée: %s", name, exc)
+
+        signals = self._web_signals.get(name)
+        if signals and signals.trending_now is not None and signals.grounding_confirmed:
+            score = 75.0 if signals.trending_now else 35.0
+            return Metric.measured(
+                score, source="google_search_grounding", confidence=70.0,
+                detail=f"trending_now={signals.trending_now} (grounding confirmé)",
+            )
+        if signals and signals.interest_score is not None:
+            # HEURISTIC but from web query — better than pure internal default
+            score = min(100.0, signals.interest_score * 0.8)
+            return Metric.heuristic(
+                score, source="gemini_web_estimate", confidence=35.0,
+                detail=f"croissance estimée d'après intérêt web {signals.interest_score:.0f}/100",
+            )
+
         return Metric.heuristic(
             value=50.0, source="internal_rules", confidence=30.0,
             detail="croissance neutre (aucune mesure Wikipedia)",
         )
 
     # ── Composant 3 : compétition (LOW = bon) ─────────────────────────────────
-    def _competition_metric(self, trend: Dict) -> Metric:
+    def _competition_metric(self, trend: Dict, name: str = "") -> Metric:
+        signals = self._web_signals.get(name) if name else None
+        if signals and signals.etsy_competition_level and signals.grounding_confirmed:
+            value = _COMPETITION_SCORE.get(signals.etsy_competition_level.lower(), 60.0)
+            listing_note = (
+                f", ~{signals.etsy_listing_estimate} annonces Etsy" if signals.etsy_listing_estimate else ""
+            )
+            return Metric.measured(
+                value=value, source="etsy_search", confidence=80.0,
+                detail=f"compétition Etsy '{signals.etsy_competition_level}'{listing_note} (grounding confirmé)",
+            )
+
         level = (trend.get("spoonflower_fit", {}) or {}).get("competition_level", "medium")
         value = _COMPETITION_SCORE.get(str(level).lower(), 60.0)
         return Metric.heuristic(
