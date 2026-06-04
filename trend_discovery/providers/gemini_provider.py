@@ -451,6 +451,86 @@ Requirements:
 Return ONLY a valid JSON array of exactly {profile.niche_count} trend objects. No text before or after. No markdown wrapper.
 """
 
+    # ── Normalisation d'une tendance brute Gemini ──────────────────────────────
+
+    def _normalize_trend(self, t: Dict) -> Dict:
+        """
+        Garantit que tous les champs attendus existent sur une tendance Gemini.
+
+        Sécurise le schéma (top-level, visual_direction, spoonflower_fit,
+        ai_generation, sub_niches) et ajoute des champs legacy pour compat
+        ascendante avec le prompt builder existant. Ne plante jamais sur un
+        JSON Gemini partiel.
+        """
+        # ── Champs top-level ─────────────────────────────────────────────────
+        t.setdefault("trending_score", 50)
+        t.setdefault("market_opportunity", "medium")
+        t.setdefault("why_trending", "")
+        t.setdefault("target_audience", "")
+        t.setdefault("sub_niches", [])
+        t.setdefault("wikimedia_query", t.get("name", ""))
+
+        # ── Direction visuelle ───────────────────────────────────────────────
+        vd = t.setdefault("visual_direction", {})
+        vd.setdefault("mood", "")
+        vd.setdefault("composition", "")
+        vd.setdefault("line_style", "")
+        vd.setdefault("texture", "")
+        vd.setdefault("style_references", [])
+        cp = vd.setdefault("color_palette", {})
+        cp.setdefault("primary", [])
+        cp.setdefault("accent", [])
+        cp.setdefault("background", "")
+
+        # ── Compatibilité plateforme ─────────────────────────────────────────
+        sf = t.setdefault("spoonflower_fit", {})
+        sf.setdefault("repeat_type", "basic")
+        sf.setdefault("scale", "medium")
+        sf.setdefault("top_products", ["fabric"])
+        sf.setdefault("competition_level", "medium")
+
+        # ── Génération IA ────────────────────────────────────────────────────
+        ag = t.setdefault("ai_generation", {})
+        ag.setdefault("positive_prompt", "")
+        ag.setdefault("negative_prompt", "")
+        ag.setdefault("key_elements", [])
+        ag.setdefault("avoid_elements", [])
+        ag.setdefault("cfg_scale", 7.5)
+        ag.setdefault("style_weight", 0.85)
+
+        # ── Normalisation des sous-niches ────────────────────────────────────
+        normalized_subs = []
+        for sub in t.get("sub_niches", []):
+            if isinstance(sub, str):
+                normalized_subs.append({
+                    "name": sub, "trending_score": 50,
+                    "unique_angle": "", "prompt_keywords": [],
+                })
+            elif isinstance(sub, dict):
+                sub.setdefault("trending_score", 50)
+                sub.setdefault("unique_angle", "")
+                sub.setdefault("prompt_keywords", [])
+                normalized_subs.append(sub)
+        t["sub_niches"] = normalized_subs
+
+        # ── Champs legacy (compat prompt builder existant) ───────────────────
+        primary = cp.get("primary", [])
+        accent = cp.get("accent", [])
+        t.setdefault(
+            "color_keywords",
+            [c.split("#")[0].strip() for c in primary[:3] + accent[:1]],
+        )
+        t.setdefault(
+            "style_keywords",
+            [v for v in (vd.get("mood", ""), vd.get("line_style", ""), vd.get("texture", "")) if v][:6],
+        )
+        t.setdefault(
+            "seamless_suitability",
+            "high" if sf.get("competition_level") != "very_high" else "medium",
+        )
+        t.setdefault("spoonflower_demand", sf.get("competition_level", "medium"))
+        return t
+
     # ── Méthode principale : découverte de tendances ───────────────────────────
 
     def fetch_global_pod_trends(
