@@ -1,0 +1,592 @@
+{
+  "generated_at": "2026-06-04T08:44:36.340540+00:00",
+  "total_briefs": 12,
+  "briefs": [
+    {
+      "name": "Cute Cats",
+      "trending_score": 64,
+      "market_opportunity": "high",
+      "why_trending": "Demande MESURÉE — page 'Cats and the Internet' : 9 151 vues/mois (réel)",
+      "target_audience": "",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [],
+        "color_accent": [],
+        "color_background": "",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Cute Cats, cute cats, kawaii cats, cartoon cats, seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, clean background",
+        "negative_prompt": "text, watermark, signature, logo, copyright, blurry, low quality, noise, grain, jpeg artifacts, photography, photograph, photorealistic, 3D render, CGI, glossy, reflective, shadow, cast shadow, border, frame, vignette, white border, edge cutoff, asymmetric pattern, misaligned repeat, inconsistent style, human, face, person, body parts, cartoon character, anime, manga",
+        "key_elements": [
+          "cute cats",
+          "kawaii cats",
+          "cartoon cats"
+        ],
+        "avoid_elements": [],
+        "cfg_scale": 7.5,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Cat November 2010-1a.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Cat_November_2010-1a.jpg",
+          "width": 1795,
+          "height": 2397
+        },
+        {
+          "title": "Cute cats scenario.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Cute_cats_scenario.jpg",
+          "width": 1280,
+          "height": 853
+        }
+      ],
+      "generated_at": "2026-06-04 08:44 UTC"
+    },
+    {
+      "name": "Wildflowers",
+      "trending_score": 61,
+      "market_opportunity": "high",
+      "why_trending": "Demande MESURÉE — page 'Wildflower' : 5 772 vues/mois (réel)",
+      "target_audience": "",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [],
+        "color_accent": [],
+        "color_background": "",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Wildflowers, wildflowers, meadow flowers, wildflower meadow, seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, clean background",
+        "negative_prompt": "text, watermark, signature, logo, copyright, blurry, low quality, noise, grain, jpeg artifacts, photography, photograph, photorealistic, 3D render, CGI, glossy, reflective, shadow, cast shadow, border, frame, vignette, white border, edge cutoff, asymmetric pattern, misaligned repeat, inconsistent style, human, face, person, body parts, cartoon character, anime, manga",
+        "key_elements": [
+          "wildflowers",
+          "meadow flowers",
+          "wildflower meadow"
+        ],
+        "avoid_elements": [],
+        "cfg_scale": 7.5,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "012 Wild Chamois Riederalp Photo by Giles Laurent.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/012_Wild_Chamois_Riederalp_Photo_by_Giles_Laurent.jpg",
+          "width": 7952,
+          "height": 5304
+        },
+        {
+          "title": "013 Wild Baby Chamois Riederalp Photo by Giles Laurent.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/99/013_Wild_Baby_Chamois_Riederalp_Photo_by_Giles_Laurent.jpg",
+          "width": 7004,
+          "height": 4672
+        }
+      ],
+      "generated_at": "2026-06-04 08:44 UTC"
+    },
+    {
+      "name": "Japandi",
+      "trending_score": 55,
+      "market_opportunity": "medium",
+      "why_trending": "Demande MESURÉE — page 'Japandi' : 2 511 vues/mois (réel)",
+      "target_audience": "",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [],
+        "color_accent": [],
+        "color_background": "",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Japandi, japandi design, japanese minimalism, wabi sabi, seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, clean background",
+        "negative_prompt": "text, watermark, signature, logo, copyright, blurry, low quality, noise, grain, jpeg artifacts, photography, photograph, photorealistic, 3D render, CGI, glossy, reflective, shadow, cast shadow, border, frame, vignette, white border, edge cutoff, asymmetric pattern, misaligned repeat, inconsistent style, human, face, person, body parts, cartoon character, anime, manga",
+        "key_elements": [
+          "japandi design",
+          "japanese minimalism",
+          "wabi sabi"
+        ],
+        "avoid_elements": [],
+        "cfg_scale": 7.5,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-04 08:44 UTC"
+    },
+    {
+      "name": "Solarpunk",
+      "trending_score": 50,
+      "market_opportunity": "medium",
+      "why_trending": "HEURISTIQUE — pas de données Wikipedia pour cette niche (à valider)",
+      "target_audience": "",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [],
+        "color_accent": [],
+        "color_background": "",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Solarpunk, solarpunk design, eco punk, green future aesthetic, seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, clean background",
+        "negative_prompt": "text, watermark, signature, logo, copyright, blurry, low quality, noise, grain, jpeg artifacts, photography, photograph, photorealistic, 3D render, CGI, glossy, reflective, shadow, cast shadow, border, frame, vignette, white border, edge cutoff, asymmetric pattern, misaligned repeat, inconsistent style, human, face, person, body parts, cartoon character, anime, manga",
+        "key_elements": [
+          "solarpunk design",
+          "eco punk",
+          "green future aesthetic"
+        ],
+        "avoid_elements": [],
+        "cfg_scale": 7.5,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Caustic Soda Locomotive at a Solar Drying Sation.png",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Caustic_Soda_Locomotive_at_a_Solar_Drying_Sation.png",
+          "width": 3200,
+          "height": 4600
+        },
+        {
+          "title": "Passive Greenhouses in Early Spring.png",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/43/Passive_Greenhouses_in_Early_Spring.png",
+          "width": 4600,
+          "height": 3200
+        }
+      ],
+      "generated_at": "2026-06-04 08:44 UTC"
+    },
+    {
+      "name": "Minimalist",
+      "trending_score": 50,
+      "market_opportunity": "medium",
+      "why_trending": "HEURISTIQUE — pas de données Wikipedia pour cette niche (à valider)",
+      "target_audience": "",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [],
+        "color_accent": [],
+        "color_background": "",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Minimalist, minimalist pattern, minimal design, clean aesthetic, seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, clean background",
+        "negative_prompt": "text, watermark, signature, logo, copyright, blurry, low quality, noise, grain, jpeg artifacts, photography, photograph, photorealistic, 3D render, CGI, glossy, reflective, shadow, cast shadow, border, frame, vignette, white border, edge cutoff, asymmetric pattern, misaligned repeat, inconsistent style, human, face, person, body parts, cartoon character, anime, manga",
+        "key_elements": [
+          "minimalist pattern",
+          "minimal design",
+          "clean aesthetic"
+        ],
+        "avoid_elements": [],
+        "cfg_scale": 7.5,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Abstract pattern on a tree stump.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Abstract_pattern_on_a_tree_stump.jpg",
+          "width": 6000,
+          "height": 4000
+        },
+        {
+          "title": "Minimalist pattern Las Vegas (Unsplash).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Minimalist_pattern_Las_Vegas_%28Unsplash%29.jpg",
+          "width": 7193,
+          "height": 4496
+        }
+      ],
+      "generated_at": "2026-06-04 08:44 UTC"
+    },
+    {
+      "name": "Minimalist Geometric",
+      "trending_score": 50,
+      "market_opportunity": "medium",
+      "why_trending": "HEURISTIQUE — pas de données Wikipedia pour cette niche (à valider)",
+      "target_audience": "",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [],
+        "color_accent": [],
+        "color_background": "",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Minimalist Geometric, clean vector geometric, bold modernist design, Bauhaus influence, flat vector shapes, precise lines, bold contrast, regular grid repeat, interlocking geometric shapes, minimal geometric, clean shapes, simple geometry, seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, clean background",
+        "negative_prompt": "text, watermark, signature, logo, copyright, blurry, low quality, noise, grain, jpeg artifacts, photography, photograph, photorealistic, 3D render, CGI, glossy, reflective, shadow, cast shadow, border, frame, vignette, white border, edge cutoff, asymmetric pattern, misaligned repeat, inconsistent style, human, face, person, body parts, cartoon character, anime, manga",
+        "key_elements": [
+          "minimal geometric",
+          "clean shapes",
+          "simple geometry"
+        ],
+        "avoid_elements": [],
+        "cfg_scale": 7.5,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Minimal art moon boho geometric landscape.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Minimal_art_moon_boho_geometric_landscape.jpg",
+          "width": 500,
+          "height": 708
+        },
+        {
+          "title": "Minimal surface.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/25/Minimal_surface.jpg",
+          "width": 3618,
+          "height": 2415
+        }
+      ],
+      "generated_at": "2026-06-04 08:44 UTC"
+    },
+    {
+      "name": "Modern Tarot",
+      "trending_score": 50,
+      "market_opportunity": "medium",
+      "why_trending": "HEURISTIQUE — pas de données Wikipedia pour cette niche (à valider)",
+      "target_audience": "",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [],
+        "color_accent": [],
+        "color_background": "",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Modern Tarot, modern tarot, contemporary tarot, indie tarot, seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, clean background",
+        "negative_prompt": "text, watermark, signature, logo, copyright, blurry, low quality, noise, grain, jpeg artifacts, photography, photograph, photorealistic, 3D render, CGI, glossy, reflective, shadow, cast shadow, border, frame, vignette, white border, edge cutoff, asymmetric pattern, misaligned repeat, inconsistent style, human, face, person, body parts, cartoon character, anime, manga",
+        "key_elements": [
+          "modern tarot",
+          "contemporary tarot",
+          "indie tarot"
+        ],
+        "avoid_elements": [],
+        "cfg_scale": 7.5,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Synesthesia Tarot Deck.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/0/09/Synesthesia_Tarot_Deck.jpg",
+          "width": 794,
+          "height": 644
+        },
+        {
+          "title": "Untitled (Tarot Card, Club Suit).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/61/Untitled_%28Tarot_Card%2C_Club_Suit%29.jpg",
+          "width": 1703,
+          "height": 5649
+        }
+      ],
+      "generated_at": "2026-06-04 08:44 UTC"
+    },
+    {
+      "name": "Cottagecore Tarot",
+      "trending_score": 50,
+      "market_opportunity": "medium",
+      "why_trending": "HEURISTIQUE — pas de données Wikipedia pour cette niche (à valider)",
+      "target_audience": "",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [],
+        "color_accent": [],
+        "color_background": "",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Cottagecore Tarot, soft cottagecore aesthetic, vintage countryside charm, cozy, soft pencil sketch with gentle watercolor, muted palette, tossed repeat of small cottage motifs, flowers, herbs, cottagecore tarot, nature tarot, botanical tarot, seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, clean background",
+        "negative_prompt": "text, watermark, signature, logo, copyright, blurry, low quality, noise, grain, jpeg artifacts, photography, photograph, photorealistic, 3D render, CGI, glossy, reflective, shadow, cast shadow, border, frame, vignette, white border, edge cutoff, asymmetric pattern, misaligned repeat, inconsistent style, human, face, person, body parts, cartoon character, anime, manga",
+        "key_elements": [
+          "cottagecore tarot",
+          "nature tarot",
+          "botanical tarot"
+        ],
+        "avoid_elements": [],
+        "cfg_scale": 7.5,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-04 08:44 UTC"
+    },
+    {
+      "name": "Traditional Japanese",
+      "trending_score": 50,
+      "market_opportunity": "medium",
+      "why_trending": "HEURISTIQUE — pas de données Wikipedia pour cette niche (à valider)",
+      "target_audience": "",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [],
+        "color_accent": [],
+        "color_background": "",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Traditional Japanese, Japanese woodblock print style, ukiyo-e inspired elegance, flat areas of color with bold outlines, woodcut texture, balanced asymmetric repeat, koi waves cherry blossoms, traditional japanese, kimono pattern, ukiyo e, seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, clean background",
+        "negative_prompt": "text, watermark, signature, logo, copyright, blurry, low quality, noise, grain, jpeg artifacts, photography, photograph, photorealistic, 3D render, CGI, glossy, reflective, shadow, cast shadow, border, frame, vignette, white border, edge cutoff, asymmetric pattern, misaligned repeat, inconsistent style, human, face, person, body parts, cartoon character, anime, manga",
+        "key_elements": [
+          "traditional japanese",
+          "kimono pattern",
+          "ukiyo e"
+        ],
+        "avoid_elements": [],
+        "cfg_scale": 7.5,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Illuminated facade of a restaurant serving traditional food with fresh vegetables in Chiyoda, Tokyo.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Illuminated_facade_of_a_restaurant_serving_traditional_food_with_fresh_vegetables_in_Chiyoda%2C_Tokyo.jpg",
+          "width": 5578,
+          "height": 3719
+        },
+        {
+          "title": "Irezumi Full Back.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Irezumi_Full_Back.jpg",
+          "width": 1469,
+          "height": 2057
+        }
+      ],
+      "generated_at": "2026-06-04 08:44 UTC"
+    },
+    {
+      "name": "Sakura",
+      "trending_score": 50,
+      "market_opportunity": "medium",
+      "why_trending": "HEURISTIQUE — pas de données Wikipedia pour cette niche (à valider)",
+      "target_audience": "",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [],
+        "color_accent": [],
+        "color_background": "",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Sakura, cherry blossom, sakura pattern, hanami, seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, clean background",
+        "negative_prompt": "text, watermark, signature, logo, copyright, blurry, low quality, noise, grain, jpeg artifacts, photography, photograph, photorealistic, 3D render, CGI, glossy, reflective, shadow, cast shadow, border, frame, vignette, white border, edge cutoff, asymmetric pattern, misaligned repeat, inconsistent style, human, face, person, body parts, cartoon character, anime, manga",
+        "key_elements": [
+          "cherry blossom",
+          "sakura pattern",
+          "hanami"
+        ],
+        "avoid_elements": [],
+        "cfg_scale": 7.5,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Cherry blossom buds 1.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Cherry_blossom_buds_1.jpg",
+          "width": 4834,
+          "height": 2719
+        },
+        {
+          "title": "Keikyu-Kurihama-Line Kawazu-cherry-blossoms.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/76/Keikyu-Kurihama-Line_Kawazu-cherry-blossoms.jpg",
+          "width": 4000,
+          "height": 2672
+        }
+      ],
+      "generated_at": "2026-06-04 08:44 UTC"
+    },
+    {
+      "name": "Realistic Cats",
+      "trending_score": 41,
+      "market_opportunity": "medium",
+      "why_trending": "Demande MESURÉE — page 'Cat suit' : 366 vues/mois (réel)",
+      "target_audience": "",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [],
+        "color_accent": [],
+        "color_background": "",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Realistic Cats, realistic cat, watercolor cat, cat portrait, seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, clean background",
+        "negative_prompt": "text, watermark, signature, logo, copyright, blurry, low quality, noise, grain, jpeg artifacts, photography, photograph, photorealistic, 3D render, CGI, glossy, reflective, shadow, cast shadow, border, frame, vignette, white border, edge cutoff, asymmetric pattern, misaligned repeat, inconsistent style, human, face, person, body parts, cartoon character, anime, manga",
+        "key_elements": [
+          "realistic cat",
+          "watercolor cat",
+          "cat portrait"
+        ],
+        "avoid_elements": [],
+        "cfg_scale": 7.5,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Cat reference image.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/76/Cat_reference_image.jpg",
+          "width": 450,
+          "height": 429
+        },
+        {
+          "title": "Sheepdog made from corrugated iron - panoramio.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/41/Sheepdog_made_from_corrugated_iron_-_panoramio.jpg",
+          "width": 2816,
+          "height": 2112
+        }
+      ],
+      "generated_at": "2026-06-04 08:44 UTC"
+    },
+    {
+      "name": "Roses & Peonies",
+      "trending_score": 38,
+      "market_opportunity": "low",
+      "why_trending": "Demande MESURÉE — page 'Ornamental Gardens' : 218 vues/mois (réel)",
+      "target_audience": "",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [],
+        "color_accent": [],
+        "color_background": "",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Roses & Peonies, roses pattern, peonies, rosa peony, seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, clean background",
+        "negative_prompt": "text, watermark, signature, logo, copyright, blurry, low quality, noise, grain, jpeg artifacts, photography, photograph, photorealistic, 3D render, CGI, glossy, reflective, shadow, cast shadow, border, frame, vignette, white border, edge cutoff, asymmetric pattern, misaligned repeat, inconsistent style, human, face, person, body parts, cartoon character, anime, manga",
+        "key_elements": [
+          "roses pattern",
+          "peonies",
+          "rosa peony"
+        ],
+        "avoid_elements": [],
+        "cfg_scale": 7.5,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "2018.08.16 Antique LIMOGES porcelain Tressemanes & Vogt with pattern WILD ROSES 1892 – 1919.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/2018.08.16_Antique_LIMOGES_porcelain_Tressemanes_%26_Vogt_with_pattern_WILD_ROSES_1892_%E2%80%93_1919.jpg",
+          "width": 4032,
+          "height": 1960
+        },
+        {
+          "title": "2019.03.08 LIMOGES porcelain plate Tressemanes & Vogt with Roses 1892 – 1919 Pattern Code TRV718.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/39/2019.03.08_LIMOGES_porcelain_plate_Tressemanes_%26_Vogt_with_Roses_1892_%E2%80%93_1919_Pattern_Code_TRV718.jpg",
+          "width": 1932,
+          "height": 1960
+        }
+      ],
+      "generated_at": "2026-06-04 08:44 UTC"
+    }
+  ]
+}
