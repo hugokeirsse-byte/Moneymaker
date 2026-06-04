@@ -119,7 +119,7 @@ class RunwareGenerator:
             URL de l'image générée, ou None en cas d'erreur.
         """
         task_uuid = str(uuid.uuid4())
-        tasks = [{
+        task: Dict = {
             "taskType": "imageInference",
             "taskUUID": task_uuid,
             "model": model,
@@ -134,8 +134,10 @@ class RunwareGenerator:
             "outputFormat": "PNG",
             "checkNSFW": False,
             "includeCost": False,
-            "seed": seed,
-        }]
+        }
+        if seed != -1:
+            task["seed"] = seed
+        tasks = [task]
 
         logger.info("[runware] génération: %s… (%dx%d, model=%s)", positive_prompt[:60], width, height, model)
         response = self._post(tasks, timeout=120)
