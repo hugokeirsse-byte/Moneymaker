@@ -323,9 +323,12 @@ class GenerationPipeline:
         negative_prompt: str,
         auditor: Optional["QualityAuditor"],
         attempt_label: str = "",
-        max_retries: int = 2,
+        max_retries: int = 1,  # 2 tentatives max (1 initiale + 1 retry)
     ) -> GenerationResult:
-        """Génère une image, l'audite, retente si nécessaire."""
+        """
+        Génère une image, l'audite, retente une seule fois si nécessaire.
+        Si les 2 tentatives échouent l'audit → image rejetée, pas sauvegardée.
+        """
         for attempt in range(max_retries + 1):
             image_bytes, upscaled_url = self._runware.generate_and_upscale(
                 positive_prompt=positive_prompt,
@@ -355,11 +358,15 @@ class GenerationPipeline:
                     )
                     if attempt < max_retries:
                         continue
-                    # Dernier essai — on loggue mais on garde quand même l'image
-                    logger.warning(
-                        "[gen_pipeline] '%s' — toutes les tentatives ont échoué l'audit, "
-                        "image conservée avec réserves: %s",
-                        niche_name, audit.details,
+                    # Toutes les tentatives épuisées — image rejetée, pas sauvegardée
+                    logger.error(
+                        "[gen_pipeline] ❌ '%s' — image non viable après %d tentatives, rejetée. %s",
+                        niche_name, max_retries + 1, audit.details,
+                    )
+                    return GenerationResult(
+                        niche=niche_name, filepath=None,
+                        upscaled_url=upscaled_url, success=False,
+                        error=f"image non viable (audit): {'; '.join(audit.issues)}",
                     )
                 else:
                     logger.info("[gen_pipeline] '%s' audit OK: %s", niche_name, audit.details)
