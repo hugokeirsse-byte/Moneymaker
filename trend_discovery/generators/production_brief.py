@@ -476,20 +476,133 @@ class BriefGenerator:
         """
         Récupère les tendances Gemini + images Wikimedia → construit les briefs.
 
+        Si Gemini est indisponible (clé absente ou quota épuisé), bascule
+        automatiquement sur l'arbre de niches + Wikipedia + Wikimedia + PromptBuilder
+        — aucun coût, aucune clé requise.
+
         Returns:
             Liste de ProductionBrief, triée par trending_score décroissant.
         """
-        raw_trends = self._gemini.build_production_briefs()
+        raw_trends = []
+        if self._gemini.is_available():
+            raw_trends = self._gemini.build_production_briefs()
 
         if not raw_trends:
-            logger.warning("[BriefGenerator] Aucune tendance retournée par Gemini.")
-            return []
+            logger.warning(
+                "[BriefGenerator] Gemini indisponible/vide — fallback arbre de niches "
+                "(Wikipedia + Wikimedia + PromptBuilder, 0 clé / 0 coût)."
+            )
+            return self.generate_from_niche_tree()
 
         briefs = [_brief_from_trend(t) for t in raw_trends]
         # Trier par score décroissant
         briefs.sort(key=lambda b: b.trending_score, reverse=True)
 
-        logger.info("[BriefGenerator] %d cahiers des charges générés.", len(briefs))
+        logger.info("[BriefGenerator] %d cahiers des charges générés (Gemini).", len(briefs))
+        return briefs
+
+    def generate_from_niche_tree(self, max_briefs: int = 12) -> List[ProductionBrief]:
+        """
+        Construit des cahiers des charges SANS Gemini.
+
+        Sources, toutes gratuites et sans clé :
+          - Arbre de niches statique (noms + mots-clés, anglais)
+          - Wikipedia Pageviews → demande réelle MESURÉE (ne bloque jamais les datacenters)
+          - Wikimedia Commons → images de référence domaine public
+          - PromptBuilder → prompts positif + négatif complets (modificateurs de style intégrés)
+
+        Respecte la règle "zéro donnée inventée" : le score de tendance vient de
+        Wikipedia quand disponible (MESURÉ), sinon il est clairement étiqueté HEURISTIQUE.
+
+        Args:
+            max_briefs: nombre maximum de cahiers des charges à produire.
+
+        Returns:
+            Liste de ProductionBrief triée par score décroissant.
+        """
+        from trend_discovery.normalizer.niche_tree_builder import NicheTree
+        from trend_discovery.generators.prompt_builder import PromptBuilder
+        from trend_discovery.providers.wikipedia_provider import WikipediaProvider
+
+        tree = NicheTree()
+        pb = PromptBuilder()
+        wiki = WikipediaProvider()
+
+        # ── Sélection diversifiée : feuilles réparties sur les catégories racines ─
+        selected = []
+        for root in tree.root_nodes():
+            leaves = [n for n in tree.all_descendants(root.name) if not n.children]
+            selected.extend(leaves[:2])  # 2 feuilles par catégorie racine
+        # Compléter avec d'autres feuilles si besoin pour atteindre max_briefs
+        if len(selected) < max_briefs:
+            extra = [n for n in tree.all_leaves() if n not in selected]
+            selected.extend(extra[: max_briefs - len(selected)])
+        selected = selected[:max_briefs]
+
+        briefs: List[ProductionBrief] = []
+        for node in selected:
+            # ── Demande réelle (Wikipedia) ──────────────────────────────────────
+            metric = wiki.demande_metric(node.name)
+            if metric.is_real:
+                score = int(round(metric.value))
+                why = f"Demande MESURÉE — {metric.detail}"
+            else:
+                score = 50  # baseline neutre
+                why = "HEURISTIQUE — pas de données Wikipedia pour cette niche (à valider)"
+
+            opportunity = (
+                "very_high" if score >= 75
+                else "high" if score >= 60
+                else "medium" if score >= 40
+                else "low"
+            )
+
+            # ── Sous-niches = enfants de la niche dans l'arbre ──────────────────
+            sub_niches = [
+                SubNicheBrief(
+                    name=child.name,
+                    trending_score=0,
+                    unique_angle="",
+                    prompt_keywords=child.keywords,
+                )
+                for child in tree.children_of(node.name)
+            ]
+
+            # ── Prompts complets (PromptBuilder, déterministe, 0 LLM) ────────────
+            prompt = pb.build(node.name, niche_keywords=node.keywords)
+
+            # ── Images de référence Wikimedia Commons (0 clé) ───────────────────
+            query = node.keywords[0] if node.keywords else node.name
+            raw_imgs = self._gemini.find_wikimedia_images(query, limit=2)
+            ref_images = [
+                ReferenceImage(
+                    title=img.get("title", ""),
+                    url=img.get("url", ""),
+                    width=img.get("width", 0),
+                    height=img.get("height", 0),
+                )
+                for img in raw_imgs
+            ]
+
+            briefs.append(ProductionBrief(
+                name=node.name,
+                trending_score=score,
+                market_opportunity=opportunity,
+                why_trending=why,
+                target_audience="",
+                sub_niches=sub_niches,
+                positive_prompt=prompt.positive,
+                negative_prompt=prompt.negative,
+                key_elements=node.keywords,
+                reference_images=ref_images,
+                generated_at=datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
+            ))
+
+        briefs.sort(key=lambda b: b.trending_score, reverse=True)
+        logger.info(
+            "[BriefGenerator] %d cahiers des charges générés (arbre de niches + Wikipedia).",
+            len(briefs),
+        )
         return briefs
 
     def save_report(

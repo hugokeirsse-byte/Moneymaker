@@ -576,11 +576,12 @@ def preview_trends(output_dir: str = "./reports") -> None:
     logger.info("=" * 60)
 
     gen = BriefGenerator()
-    if not gen._gemini.is_available():
-        logger.error("GEMINI_API_KEY manquante.")
-        return
-
-    logger.info("Interrogation Gemini + Google Search + Wikimedia Commons…")
+    if gen._gemini.is_available():
+        logger.info("Interrogation Gemini + Google Search + Wikimedia Commons…")
+    else:
+        logger.info(
+            "Gemini indisponible — génération via arbre de niches + Wikipedia + Wikimedia (0 coût)."
+        )
     briefs = gen.generate_all()
 
     if not briefs:

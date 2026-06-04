@@ -264,7 +264,7 @@ class GeminiProvider(DataProvider):
                 "https://commons.wikimedia.org/w/api.php",
                 params=params,
                 timeout=10,
-                headers={"User-Agent": "Moneymaker/1.0 (trend research; educational)"},
+                headers={"User-Agent": "Moneymaker/1.0 (https://github.com/hugokeirsse-byte/Moneymaker; POD trend research)"},
             )
             resp.raise_for_status()
             data = resp.json()
