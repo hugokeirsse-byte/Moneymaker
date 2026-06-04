@@ -2,6 +2,25 @@
 
 > Réservoir d'idées validées comme pertinentes mais **pas encore prioritaires**.
 > On les fera brique par brique, après les premiers produits Spoonflower en vente.
+>
+> **Principe clé :** les données externes (repos, APIs, signaux marché) ne sont pas juste
+> des outils listés ici — elles doivent entrer dans le **calcul de scoring** et les **CdC**.
+> Chaque nouvelle source = une nouvelle `Metric` MEASURED qui améliore la confiance.
+
+## Vision multi-agents
+
+Le système n'est pas un seul agent IA mais plusieurs agents spécialisés qui coexistent :
+
+| Agent | Rôle actuel / futur |
+|-------|---------------------|
+| **NicheIntelligenceAgent** | ✅ Actif — Détecte tendances, score niches, génère CdC |
+| **ToolIntelligenceAgent** | ⬜ À construire — Monitore GitHub/PyPI/HN pour trouver de nouveaux outils utiles au business, évalue leur intégration, propose des améliorations |
+| **BusinessIntelligenceAgent** | ⬜ À construire — Identifie de nouveaux marchés, plateformes, formats (KDP, B2B licences, packs SVG…) |
+| **PlatformIntelligenceAgent** | ⬜ À construire — Analyse automatiquement les specs, best-sellers, codes promo, tendances d'une plateforme avant lancement |
+| **CollectionEngine** | ⬜ À construire — Stratégie de collection : quels motifs grouper, ordre de publication, variantes couleur à prioriser |
+
+> Ces agents partagent tous la même base de connaissances (`HistoryStore` → `KnowledgeBase`)
+> et leurs sorties alimentent le scoring central.
 
 ## Moteurs à construire (au-delà de la détection)
 

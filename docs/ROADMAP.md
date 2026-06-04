@@ -15,27 +15,32 @@
 - [x] Fallback sans Gemini (Wikipedia + arbre de niches, 0 clé / 0 coût)
 - [x] Mode `preview` (0 €) validé sur GitHub Actions
 - [x] Documentation / plan directeur (ce dossier)
+- [x] **Brique A — Gate d'approbation + garde-fou dépense** : `ApprovalGate`, manifest JSON, coût estimé affiché, `--yes` pour CI
+- [x] **Brique B — Validation externe** : `WebSignalFetcher` (2 appels Gemini batchés, grounding Etsy + signaux web) → MEASURED si grounding confirmé
+- [x] **Brique C — Génération image** : `GenerationPipeline.run_brief()` — N images depuis le prompt du CdC directement
+- [x] **Brique D — Audit qualité** : `QualityAuditor` (netteté Laplacian + seamless bords + specs Spoonflower, retry auto 2×)
+- [x] **Brique E — Upscaling + packaging Spoonflower** : Runware ×4 + `SpoonflowerPackager` (PNG 300 DPI, 4500×4500, sRGB, ≤ 40 MB)
+- [x] Persistance briefs (prompts sauvegardés en JSON) — `generate` ne relance pas Gemini
+- [x] Repos open-source identifiés et vérifiés (voir BACKLOG.md)
 
-## 🔜 En cours / prochaine brique (vers la 1re vente)
+## 🔜 Prochaine brique (vers la 1re vente)
 
-- [ ] **Brique A — Verrous de dépense + gate d'approbation CdC** *(protège la carte)*
-  - plafond dur du nombre d'images (centralisé, infranchissable)
-  - aucune génération sans approbation explicite des CdC (manifeste + input `confirm: YES`)
-  - estimation de coût affichée avant tout appel payant
-- [ ] **Brique B — Audit qualité CdC & prompts** (rejet auto de ce qui est faible)
-- [ ] **Brique C — Génération image (Runware) + audit image** (5 images, top niches)
-- [ ] **Brique D — Variantes couleurs Spoonflower** (un motif → plusieurs colorways)
-- [ ] **Brique E — Upscaling + packaging Spoonflower** (PNG 300 DPI, 4500×4500, sRGB)
-- [ ] **Brique F — Génération titre/description/tags** prêts à uploader (upload manuel)
-- [ ] → **Première mise en vente manuelle sur Spoonflower**
+- [ ] **Brique F — Génération titre/description/tags SEO** prêts à uploader (upload manuel)
+  - `title_seeds` et `seo_keywords` déjà dans les CdCs, à formatter
+  - Titre Spoonflower ≤ 60 chars, description ~200 mots, 10-15 tags
+  - → **Première mise en vente manuelle sur Spoonflower**
 
 ## 🛠️ Après les premières ventes
 
-- [ ] **Brique G — Result Tracking** : saisie ventes/revenus/délai 1re vente
-- [ ] **Brique H — Knowledge Base** : boucle ventes → score (le moteur apprend)
-- [ ] **Brique I — Bot d'intelligence plateforme** : analyse auto des specs/best-sellers d'un site
-- [ ] **Brique J — Détection de gaps + collections + différenciation visuelle**
-- [ ] **Brique K — Extension multi-plateformes** (Etsy, Creative Market, KDP…)
+- [ ] **Brique G — Intégration repos** : `trend-pulse` (37 sources → `growth_metric` MEASURED), `etsyv3` (listing counts → `competition_metric` MEASURED), `trendspyg` (remplace pytrends archivé)
+- [ ] **Brique H — Result Tracking** : saisie ventes/revenus/délai 1re vente → retour dans `HistoryStore`
+- [ ] **Brique I — Variant Engine** : 1 motif → N colorways Spoonflower (sauge, terracotta, crème, marine…)
+- [ ] **Brique J — Knowledge Base** : boucle ventes → score. Chaque publication = expérience. Moteur de prédiction.
+- [ ] **Brique K — Collection Engine** : unité stratégique = collection (principale + complémentaires + saisonnière), pas l'image isolée
+- [ ] **Brique L — Platform Intelligence Bot** : analyse auto des specs/best-sellers d'une plateforme avant lancement
+- [ ] **Brique M — Business Intelligence Agent** : identifie de nouveaux débouchés (nouvelles plateformes, KDP, B2B licences…)
+- [ ] **Brique N — Tool Intelligence Agent** : monitore les nouveaux repos/APIs utiles au business
+- [ ] **Brique O — Extension multi-plateformes** (Etsy listings, Creative Market, KDP…)
 
 ## Règle de progression
 
