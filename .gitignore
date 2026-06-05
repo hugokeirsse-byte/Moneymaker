@@ -6,6 +6,8 @@ data/*.db
 data/detection_history.jsonl
 data/approvals/
 .claude/
-# Upscaled user uploads — trop lourds pour git, disponibles via workflow artifact
-output/spoonflower/user_upload_*.png
+# Upscaled user uploads — trop lourds pour git (~15 MB chacun × 50 = 750 MB)
+# Les colorways de ces images (output/uploads/colorways/) sont eux dans git
+# Pour récupérer les originaux upscalés : lancer le workflow upscale_uploads
+output/uploads/base/
 output/upscaled/
