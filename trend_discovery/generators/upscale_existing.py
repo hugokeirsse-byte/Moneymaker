@@ -60,11 +60,23 @@ def fix_image(
         small.save(buf, format="PNG")
         small_bytes = buf.getvalue()
 
-        # 2. Encoder en base64 pour Runware
+        # 2. Encoder en base64 et passer par imageInference (seedImage) pour obtenir
+        #    une URL Runware CDN — imageUpscale n'accepte pas les data: URLs directement.
         b64_url = _image_to_base64_url(small_bytes)
+        relay_url = runware.generate(
+            positive_prompt="seamless pattern tile",
+            seed_image_url=b64_url,
+            strength=0.01,   # quasi-identique à l'original
+            steps=1,
+            cfg_scale=1.0,
+            tiling=True,
+        )
+        if not relay_url:
+            logger.error("[upscale_existing] relay imageInference échoué pour %s", fname)
+            return None
 
-        # 3. AI upscale ×4 via Runware → 4096×4096
-        upscaled_url = runware.upscale(b64_url, upscale_factor=4)
+        # 3. AI upscale ×4 via Runware Real-ESRGAN → 4096×4096
+        upscaled_url = runware.upscale(relay_url, upscale_factor=4)
         if not upscaled_url:
             logger.error("[upscale_existing] upscale Runware échoué pour %s", fname)
             return None
@@ -135,7 +147,7 @@ def fix_directory(
     print(f"  UPSCALE IA — {len(files)} image(s) via Runware Real-ESRGAN")
     print(f"  Pipeline : {input_dir}/")
     print(f"  Sortie   : {out_dir}/ ({'overwrite' if overwrite else 'suffix __sharp'})")
-    print(f"  Coût estimé : ~${len(files) * 0.005:.2f} (upscale Runware)")
+    print(f"  Coût estimé : ~${len(files) * 0.009:.2f} (relay imageInference + upscale Runware)")
     print(f"{'='*60}")
 
     results = {}
