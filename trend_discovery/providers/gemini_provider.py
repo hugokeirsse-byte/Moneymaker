@@ -604,12 +604,75 @@ WORKED EXAMPLE STYLE A (Japanese Woodblock niche → ai_generation.positive_prom
   Single solid uniform ivory (#F5F2EB) background across the entire tile, no texture.
   All four edges tile perfectly. Designed for high-end wallpaper and textile printing."
 
+──────────────────────────────────────────────
+STYLE C — ANIMAL GEOMETRY (animal body becomes the tile unit — 2-3 colors max)
+Use for: birds, insects, fish, mammals whose silhouette/wings can become a geometric repeat.
+THE PROVEN BESTSELLER FORMULA: Art Deco Swans ~7500 favorites, Art Deco Cranes, Heron Fan tiles.
+CRITICAL INSIGHT: the animal IS NOT ON a background — the animal IS the tile. Its shape
+interlocks with copies of itself. Spoonflower mirror repeat makes this perfect automatically.
+──────────────────────────────────────────────
+
+  PART 1 — PATTERN DECLARATION: "Dense seamless mirror repeat pattern for high-end wallpaper.
+    The [ANIMAL] silhouette IS the tile unit — wings/fins/body spread to fill the entire tile,
+    interlocking with mirror copies at every edge. Absolutely no visible background."
+
+  PART 2 — ANIMAL GEOMETRY ANCHOR:
+    Describe HOW the animal's anatomy becomes geometry:
+    "Each [ANIMAL] is rendered as a bold graphic silhouette — [WING/TAIL/FIN/BODY PART]
+    spread wide and stylized into [GEOMETRIC SHAPE: fan arc / radiating spokes / sweep /
+    chevron]. The [BODY PART] forms an interlocking arch/fan/curve that meets its mirror
+    neighbor at [TOP/BOTTOM/SIDE] edge perfectly."
+    Body parts become geometric: wings→fans, tail feathers→radiating lines, fish scales→arcs.
+
+  PART 3 — MINIMAL PALETTE (2-3 COLORS MAXIMUM — this is the law):
+    High contrast is MANDATORY. Proven combinations:
+    - Jet black (#0D0D0D) + cream (#F5F0E8) + single gold accent (#C9A84C)
+    - Deep navy (#1C2B4A) + ivory (#FAF7F0) + copper (#B87333)
+    - Charcoal (#2C2C2C) + blush (#F2C9C0) + no third color
+    - Forest (#2D4A2D) + linen (#F0EBE0) + amber (#D4A017)
+    "Each [ANIMAL] is rendered entirely in [COLOR 1] on a [COLOR 2] background.
+    [Optional: Gold/copper accent only on [SPECIFIC DETAIL — beak/eye/feather tip]]."
+    NO gradients, NO shadows, NO textures inside shapes. Flat graphic vector quality.
+
+  PART 4 — ART DECO / GRAPHIC TREATMENT:
+    "The rendering style is Art Deco graphic — bold flat silhouette, crisp hard edges,
+    zero soft rendering. Every line is a precise arc or straight geometric stroke.
+    The [ANIMAL FEATURE] is drawn with [N] precisely spaced radiating lines like a fan.
+    The entire body is a single flat [COLOR] silhouette — no internal feather detail,
+    no fur texture, no photographic shading. Graphic print quality."
+
+  PART 5 — CLOSING:
+    "The tile is designed for Spoonflower mirror repeat — all four edges have the
+    [ANIMAL BODY PART] touching their mirror counterpart perfectly. 2-color palette
+    ensures maximum production contrast for fabric and wallpaper printing."
+
+WORKED EXAMPLE STYLE C (Art Deco Herons):
+  "Dense seamless mirror repeat pattern for high-end wallpaper.
+  Each heron is rendered as a bold graphic silhouette — wings spread wide and
+  stylized into a fan arc of precisely 16 radiating primary feather strokes.
+  The spread wings form an interlocking arch that meets its mirror neighbor at
+  the left and right tile edges perfectly — no gap, no background.
+  Each heron body is rendered entirely in cream (#F5F0E8) on a jet black (#0D0D0D)
+  background, with a single gold (#C9A84C) accent on the long beak only.
+  The rendering is Art Deco graphic — bold flat silhouette, crisp hard edges,
+  zero soft rendering. The wing spread is drawn with 16 precisely spaced radiating
+  lines from the shoulder joint to the feather tips, all within a single arc.
+  The body is a single flat cream silhouette — no internal feather texture, no
+  shading, no gradients. Graphic print quality, flat vector aesthetic.
+  Designed for Spoonflower mirror repeat — heron wing tips touch at every tile
+  edge. 3-color palette for maximum fabric printing contrast."
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Requirements:
 - EXACTLY 10 elements per niche (2-3 hero, 4-5 supporting, 2-3 filler)
 - Every element prompt follows the MANDATORY ELEMENT FORMAT above — no exceptions
 - ai_generation.positive_prompt follows the MANDATORY FLUX DEV 2 PROMPT FORMAT (5-part structure, 130-180 words, exact anatomy, anti-fusion locks, solid background) — no exceptions
+- STYLE ASSIGNMENT RULE: assign each niche to the appropriate style:
+    • STYLE A → scattered/tossed objects, folk, vintage labels, stationery, food objects
+    • STYLE B → dense botanical, Art Deco geometric, tropical, floral all-over
+    • STYLE C → ANY niche featuring an animal (bird, insect, fish, mammal) as the hero motif — MANDATORY for these
+  At least 2 niches out of {total_count} MUST use STYLE C (animal geometry). Prioritize animals with strong wing/fin/tail geometry: herons, cranes, swallows, dragonflies, koi, peacocks, butterflies, deer, foxes.
 - ai_generation MUST NOT include a "negative_prompt" field — FLUX Dev 2 does not support it
 - ai_generation.cfg_scale is ALWAYS 4.0 (FLUX Dev 2), never 7.5
 - Real hex codes for ALL colors everywhere (no "earthy brown" — use "#8B4513 Saddle Brown")

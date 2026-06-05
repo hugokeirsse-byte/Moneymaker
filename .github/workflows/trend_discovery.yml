@@ -218,9 +218,11 @@ jobs:
           else
             DATE=$(date -u +"%Y-%m-%d %H:%M UTC")
             git commit -m "report(pipeline): trends + images Spoonflower — ${DATE}"
-            # Rebase sur le remote avant de pousser pour éviter les rejets
+            # Stash les fichiers non-stagés avant le rebase pour éviter le blocage
+            git stash --include-untracked 2>/dev/null || true
             git pull --rebase origin HEAD
             git push origin HEAD
+            git stash pop 2>/dev/null || true
           fi
 
       - name: Upload rapports et images comme artefacts
