@@ -1,13 +1,17 @@
 """
 PatternAssembler — assemble des éléments PNG isolés en repeat pattern seamless.
 
+Concept : chaque élément est traité comme un STICKER physique — une image complète
+avec son propre fond, découpée au plus près du contenu et posée sur un fond uni.
+L'effet est celui de vraies étiquettes ou patchs collés, pas d'un dessin sur fond.
+
 Pipeline :
-  1. Charge chaque élément (bytes → RGBA PIL Image)
-  2. Supprime le fond (chroma-key sur vert lime, ou luminance pour compat legacy)
-  3. Ajoute la bordure sticker (contour blanc propre)
-  4. Redimensionne selon le rôle (hero/supporting/filler)
-  5. Place selon le layout : sticker (grille jittérée), tessellate (carrelage offset), grid
-  6. Applique le wrapping seamless
+  1. Charge chaque élément (bytes → PIL Image)
+  2. Découpe au contenu (crop serré + padding)
+  3. Ajoute une ombre portée douce (effet sticker relevé)
+  4. Redimensionne selon le rôle (hero / supporting / filler)
+  5. Place selon le layout (sticker = grille jittérée, tessellate = carrelage offset, grid)
+  6. Wrapping seamless sur les bords
   7. Retourne en bytes PNG
 """
 from __future__ import annotations
@@ -20,176 +24,153 @@ from typing import List, Optional, Tuple
 
 logger = logging.getLogger(__name__)
 
-# Couleur de fond pour la génération — vert lime pur, absent des illustrations normales
-CHROMA_KEY_COLOR = (0, 255, 0)   # #00FF00
-
 
 class PatternAssembler:
     """
-    Assemble des éléments PNG isolés en un repeat pattern seamless.
-    Utilise uniquement Pillow + numpy (gratuit, pas d'appel API).
+    Assemble des éléments PNG en un repeat pattern seamless.
+    Approche sticker : chaque élément garde son propre fond, posé sur le canvas comme un patch collé.
+    Utilise uniquement Pillow + numpy (gratuit, zéro appel API).
     """
 
     CANVAS_SIZE = 2048
 
     ROLE_SCALE = {
-        "hero": 0.18,
-        "supporting": 0.11,
-        "filler": 0.06,
+        "hero":       0.18,
+        "supporting": 0.12,
+        "filler":     0.07,
     }
 
-    # Bordure sticker par défaut (px sur le canvas 2048)
-    STICKER_BORDER_PX = 14
+    SHADOW_PX = 12   # rayon de l'ombre portée
+
+    # ── Extraction du contenu ────────────────────────────────────────────────
 
     @staticmethod
-    def _remove_background(img) -> "Image":
+    def _find_content_bbox(img) -> Tuple[int, int, int, int]:
         """
-        Supprime le fond d'une image PIL.
-
-        Stratégie :
-        - Si l'image a un fond vert lime (#00FF00) → chroma-key (propre, préserve blanc/crème)
-        - Sinon → luminance-based hardened (compat legacy fond blanc)
-
-        Le chroma-key préserve les éléments blancs/clairs (grues, mousse, neige)
-        que la suppression par luminance effacerait par erreur.
+        Retourne (left, top, right, bottom) du contenu non-blanc/non-vert de l'image.
+        Utilisé pour cropper au plus près de l'élément dessiné.
         """
         try:
             import numpy as np
         except ImportError:
-            logger.error("[assembler] numpy manquant — fond non supprimé")
-            return img.convert("RGBA")
+            w, h = img.size
+            return (0, 0, w, h)
 
+        arr = img.convert("RGB") if img.mode != "RGB" else img
+        arr = __import__("numpy").array(arr, dtype="uint8")
+        r, g, b = arr[:, :, 0].astype(float), arr[:, :, 1].astype(float), arr[:, :, 2].astype(float)
+
+        # Pixel « fond » = très clair (blanc) OU très vert (chroma-key)
+        is_white = (r > 220) & (g > 220) & (b > 220)
+        is_green = (g - __import__("numpy").maximum(r, b)) > 80   # fond lime green
+        is_bg = is_white | is_green
+
+        content = ~is_bg
+        rows = __import__("numpy").any(content, axis=1)
+        cols = __import__("numpy").any(content, axis=0)
+
+        if not rows.any():
+            w, h = img.size
+            return (0, 0, w, h)
+
+        rmin = int(__import__("numpy").where(rows)[0][0])
+        rmax = int(__import__("numpy").where(rows)[0][-1])
+        cmin = int(__import__("numpy").where(cols)[0][0])
+        cmax = int(__import__("numpy").where(cols)[0][-1])
+
+        h_img, w_img = arr.shape[:2]
+        pad = max(18, (rmax - rmin) // 8)
+        return (
+            max(0, cmin - pad),
+            max(0, rmin - pad),
+            min(w_img, cmax + pad + 1),
+            min(h_img, rmax + pad + 1),
+        )
+
+    @staticmethod
+    def _to_sticker(img) -> "Image":
+        """
+        Transforme une image générée en sticker physique :
+          1. Crop serré au contenu (détecte fond blanc ou vert lime)
+          2. Conserve le fond original de l'élément (ne le supprime PAS)
+          3. Ajoute une ombre portée douce sous le rectangle
+
+        Le résultat ressemble à un patch ou une étiquette posée sur une surface.
+
+        Args:
+            img: PIL Image (fond blanc ou vert lime depuis Runware)
+
+        Returns:
+            PIL Image RGBA en mode sticker avec ombre portée.
+        """
         from PIL import Image, ImageFilter
 
         rgba = img.convert("RGBA")
-        arr = np.array(rgba, dtype=np.uint8)
-        r = arr[:, :, 0].astype(np.float32)
-        g = arr[:, :, 1].astype(np.float32)
-        b = arr[:, :, 2].astype(np.float32)
+        bbox = PatternAssembler._find_content_bbox(rgba)
+        left, top, right, bottom = bbox
 
-        # Détecte si l'image a un fond chroma-key vert lime
-        # Pixels de bord typiques d'un fond vert pur : g >> r et g >> b
-        border_sample = np.concatenate([
-            arr[0, :, :3], arr[-1, :, :3], arr[:, 0, :3], arr[:, -1, :3]
-        ])
-        green_excess_border = border_sample[:, 1].astype(float) - np.maximum(
-            border_sample[:, 0], border_sample[:, 2]
-        ).astype(float)
-        is_chroma = float(np.mean(green_excess_border > 80)) > 0.5
+        # Crop serré au contenu
+        cropped = rgba.crop(bbox)
+        cw, ch = cropped.size
 
-        if is_chroma:
-            # Chroma-key : supprime les pixels où le vert domine nettement
-            green_excess = g - np.maximum(r, b)
-            # Transition douce : totalement transparent au-delà de 120, opaque en-dessous de 60
-            alpha_f = np.clip(1.0 - (green_excess - 60.0) / 80.0, 0.0, 1.0) * 255.0
-        else:
-            # Luminance-based (compat fond blanc)
-            luminance = np.maximum(np.maximum(r, g), b)
-            alpha_f = np.clip((255.0 - luminance) * 3.0, 0.0, 255.0)
+        if cw < 4 or ch < 4:
+            return rgba
 
-        # Durcissement : bord net, pas de transparence partielle floue
-        alpha_hard = np.where(alpha_f > 128, 255, 0).astype(np.uint8)
-        arr_out = arr.copy()
-        arr_out[:, :, 3] = alpha_hard
+        # ── Ombre portée ───────────────────────────────────────────────────
+        shadow_px = PatternAssembler.SHADOW_PX
+        offset_x, offset_y = shadow_px // 2 + 3, shadow_px // 2 + 3
+        total_w = cw + offset_x + shadow_px
+        total_h = ch + offset_y + shadow_px
 
-        result = Image.fromarray(arr_out, "RGBA")
+        # Canvas transparent pour le sticker final
+        result = Image.new("RGBA", (total_w, total_h), (0, 0, 0, 0))
 
-        # Érosion 1px pour supprimer la frange d'antialiasing au bord
-        a = result.split()[3].filter(ImageFilter.MinFilter(3))
-        result.putalpha(a)
+        # Couche d'ombre : rectangle sombre semi-transparent, flou gaussien
+        shadow_layer = Image.new("RGBA", (total_w, total_h), (0, 0, 0, 0))
+        shadow_rect = Image.new("RGBA", (cw, ch), (15, 15, 15, 130))
+        shadow_layer.paste(shadow_rect, (offset_x, offset_y))
+        shadow_blurred = shadow_layer.filter(
+            ImageFilter.GaussianBlur(radius=shadow_px // 2)
+        )
+
+        # Composite : ombre d'abord, sticker par-dessus
+        result.alpha_composite(shadow_blurred)
+        result.alpha_composite(cropped, dest=(0, 0))
 
         return result
-
-    # Compat alias — certains modules appellent encore _remove_white
-    @staticmethod
-    def _remove_white(img) -> "Image":
-        return PatternAssembler._remove_background(img)
-
-    @staticmethod
-    def _add_sticker_border(img, border_px: int = 14, color=(255, 255, 255, 255)) -> "Image":
-        """
-        Ajoute un contour coloré autour d'un élément RGBA pour l'effet sticker.
-
-        Algorithme : dilate le canal alpha par MaxFilter, colorie les pixels
-        nouvellement couverts avec la couleur de bordure.
-
-        Args:
-            img: PIL Image RGBA (fond transparent)
-            border_px: épaisseur de la bordure en pixels
-            color: RGBA de la bordure (défaut blanc opaque)
-
-        Returns:
-            PIL Image RGBA agrandie de border_px de chaque côté.
-        """
-        try:
-            import numpy as np
-        except ImportError:
-            return img
-
-        from PIL import Image, ImageFilter
-
-        w, h = img.size
-        pad = border_px + 4
-
-        # Canvas agrandi pour éviter le clipping
-        padded = Image.new("RGBA", (w + pad * 2, h + pad * 2), (0, 0, 0, 0))
-        padded.paste(img, (pad, pad), img)
-
-        _, _, _, a = padded.split()
-
-        # Dilation : MaxFilter avec taille impaire ≥ border_px*2+1
-        filter_size = max(3, border_px * 2 + 1)
-        # PIL MaxFilter accepte n'importe quelle taille impaire
-        dilated = a.filter(ImageFilter.MaxFilter(filter_size))
-
-        orig_arr = np.array(a, dtype=np.uint8)
-        dil_arr = np.array(dilated, dtype=np.uint8)
-        border_mask = (dil_arr > 0) & (orig_arr == 0)
-
-        result_arr = np.array(padded, dtype=np.uint8)
-        cr, cg, cb, ca = color
-        result_arr[border_mask] = [cr, cg, cb, ca]
-
-        return Image.fromarray(result_arr, "RGBA")
 
     @staticmethod
     def _scale_element(img, role: str, canvas_size: int) -> "Image":
         from PIL import Image
         scale = PatternAssembler.ROLE_SCALE.get(role, PatternAssembler.ROLE_SCALE["supporting"])
-        target_size = int(scale * canvas_size)
+        target = int(scale * canvas_size)
         w, h = img.size
         if w == 0 or h == 0:
             return img
         if w >= h:
-            new_w = target_size
-            new_h = max(1, int(h * target_size / w))
+            nw, nh = target, max(1, int(h * target / w))
         else:
-            new_h = target_size
-            new_w = max(1, int(w * target_size / h))
-        return img.resize((new_w, new_h), Image.LANCZOS)
+            nh, nw = target, max(1, int(w * target / h))
+        return img.resize((nw, nh), Image.LANCZOS)
+
+    # ── Wrapping seamless ────────────────────────────────────────────────────
 
     def _paste_with_wrap(self, canvas, element_img, x: int, y: int, canvas_size: int) -> None:
         """Colle un élément avec wrapping seamless sur les 4 bords + coins."""
         ew, eh = element_img.size
         offsets = [(0, 0)]
-        if x < 0:
-            offsets.append((canvas_size, 0))
-        if y < 0:
-            offsets.append((0, canvas_size))
-        if x + ew > canvas_size:
-            offsets.append((-canvas_size, 0))
-        if y + eh > canvas_size:
-            offsets.append((0, -canvas_size))
-        if x < 0 and y < 0:
-            offsets.append((canvas_size, canvas_size))
-        if x + ew > canvas_size and y + eh > canvas_size:
-            offsets.append((-canvas_size, -canvas_size))
-        if x < 0 and y + eh > canvas_size:
-            offsets.append((canvas_size, -canvas_size))
-        if x + ew > canvas_size and y < 0:
-            offsets.append((-canvas_size, canvas_size))
+        if x < 0:                   offsets.append((canvas_size, 0))
+        if y < 0:                   offsets.append((0, canvas_size))
+        if x + ew > canvas_size:    offsets.append((-canvas_size, 0))
+        if y + eh > canvas_size:    offsets.append((0, -canvas_size))
+        if x < 0 and y < 0:                        offsets.append((canvas_size, canvas_size))
+        if x + ew > canvas_size and y + eh > canvas_size: offsets.append((-canvas_size, -canvas_size))
+        if x < 0 and y + eh > canvas_size:         offsets.append((canvas_size, -canvas_size))
+        if x + ew > canvas_size and y < 0:         offsets.append((-canvas_size, canvas_size))
         for dx, dy in offsets:
             canvas.alpha_composite(element_img, dest=(x + dx, y + dy))
+
+    # ── Layouts ──────────────────────────────────────────────────────────────
 
     def _place_sticker(
         self,
@@ -198,11 +179,9 @@ class PatternAssembler:
         density: str,
     ) -> "Image":
         """
-        Layout sticker : éléments répartis comme des patchs collés sur un fond.
-
-        Utilise une grille jittérée : distribution uniforme (pas de cluster),
-        rotation douce ±15°, espacement suffisant entre éléments.
-        Chaque instance est légèrement rescalée (80-110%) pour la variété.
+        Dispose les stickers comme des patchs collés sur une surface :
+        grille jittérée (distribution uniforme), rotation légère (±18°),
+        légère variation de taille (85–108%) pour l'aspect naturel.
         """
         from PIL import Image
 
@@ -238,18 +217,16 @@ class PatternAssembler:
         for i, (element_dict, element_img) in enumerate(placements):
             cx, cy = grid_positions[i % len(grid_positions)]
 
-            # Jitter ±25% de la cellule
             jx = random.randint(-cell_w // 4, cell_w // 4)
             jy = random.randint(-cell_h // 4, cell_h // 4)
 
-            # Légère variation de taille (stickers ne sont jamais identiques)
-            scale_var = random.uniform(0.82, 1.08)
+            # Variation de taille naturelle
+            sv = random.uniform(0.85, 1.08)
             w0, h0 = element_img.size
-            new_w = max(1, int(w0 * scale_var))
-            new_h = max(1, int(h0 * scale_var))
-            elem = element_img.resize((new_w, new_h), Image.LANCZOS)
+            elem = element_img.resize((max(1, int(w0 * sv)), max(1, int(h0 * sv))), Image.LANCZOS)
 
-            angle = random.uniform(-15, 15)
+            # Rotation légère
+            angle = random.uniform(-18, 18)
             rotated = elem.rotate(angle, expand=True, resample=Image.BICUBIC)
             rw, rh = rotated.size
 
@@ -264,21 +241,17 @@ class PatternAssembler:
         self,
         elements_rgba: List[Tuple[dict, "Image"]],
         canvas_size: int,
-        gap: int = 4,
+        gap: int = 2,
     ) -> "Image":
         """
-        Layout tessellation : carrelage offset (demi-brique) du motif principal.
-
-        Idéal pour les écailles de sirène, les tuiles hexagonales, les motifs géométriques.
-        Utilise l'élément hero comme tuile de base, répétée côte à côte avec offset.
-
-        Le gap entre tuiles contrôle si c'est jointif (gap=0) ou aéré.
+        Carrelage offset (demi-brique) : un motif répété côte à côte.
+        Parfait pour les écailles de sirène, tuiles hexagonales, motifs géométriques.
+        Utilise l'élément hero comme tuile de base.
         """
         from PIL import Image
 
         canvas = Image.new("RGBA", (canvas_size, canvas_size), (0, 0, 0, 0))
 
-        # Tuile principale = premier hero, ou premier élément
         tile_pair = next(
             ((d, img) for d, img in elements_rgba if d.get("role") == "hero"),
             elements_rgba[0] if elements_rgba else None,
@@ -288,19 +261,16 @@ class PatternAssembler:
 
         _, tile_img = tile_pair
         tw, th = tile_img.size
+        sx, sy = tw + gap, th + gap
 
-        step_x = tw + gap
-        step_y = th + gap
-
-        cols = canvas_size // step_x + 3
-        rows = canvas_size // step_y + 3
+        cols = canvas_size // sx + 3
+        rows = canvas_size // sy + 3
 
         for row in range(rows):
             for col in range(cols):
-                # Offset demi-brique sur les rangées impaires
-                offset_x = step_x // 2 if (row % 2 == 1) else 0
-                x = col * step_x + offset_x - step_x
-                y = row * step_y - step_y
+                offset_x = sx // 2 if (row % 2 == 1) else 0
+                x = col * sx + offset_x - sx
+                y = row * sy - sy
                 self._paste_with_wrap(canvas, tile_img, x, y, canvas_size)
 
         return canvas
@@ -310,7 +280,7 @@ class PatternAssembler:
         elements_rgba: List[Tuple[dict, "Image"]],
         canvas_size: int,
     ) -> "Image":
-        """Grille régulière NxM, sans rotation, éléments en alternance."""
+        """Grille régulière NxM, éléments en alternance, sans rotation."""
         from PIL import Image
 
         canvas = Image.new("RGBA", (canvas_size, canvas_size), (0, 0, 0, 0))
@@ -318,22 +288,24 @@ class PatternAssembler:
             return canvas
 
         max_dim = max(max(img.size) for _, img in elements_rgba)
-        cell_size = max_dim + max(20, max_dim // 4)
-        cols = max(1, canvas_size // cell_size)
-        rows = max(1, canvas_size // cell_size)
-
-        n_elements = len(elements_rgba)
+        cell = max_dim + max(24, max_dim // 4)
+        cols = max(1, canvas_size // cell)
+        rows = max(1, canvas_size // cell)
         idx = 0
+        n = len(elements_rgba)
+
         for row in range(rows + 1):
             for col in range(cols + 1):
-                _, element_img = elements_rgba[idx % n_elements]
+                _, elem = elements_rgba[idx % n]
                 idx += 1
-                ew, eh = element_img.size
-                x = col * cell_size + (cell_size - ew) // 2
-                y = row * cell_size + (cell_size - eh) // 2
-                self._paste_with_wrap(canvas, element_img, x, y, canvas_size)
+                ew, eh = elem.size
+                x = col * cell + (cell - ew) // 2
+                y = row * cell + (cell - eh) // 2
+                self._paste_with_wrap(canvas, elem, x, y, canvas_size)
 
         return canvas
+
+    # ── API publique ─────────────────────────────────────────────────────────
 
     @classmethod
     def load_from_manifest(
@@ -341,11 +313,8 @@ class PatternAssembler:
         manifest_path: str,
         element_ids: Optional[List[int]] = None,
     ) -> Tuple[List[Tuple[dict, bytes]], dict]:
-        """
-        Charge des éléments sauvegardés depuis un manifest JSON.
-        Permet de réassembler sans re-générer.
-        """
-        import json as _json
+        """Charge des éléments sauvegardés depuis un manifest JSON."""
+        import json as _json, os as _os
 
         with open(manifest_path, encoding="utf-8") as f:
             manifest = _json.load(f)
@@ -358,18 +327,15 @@ class PatternAssembler:
 
         results: List[Tuple[dict, bytes]] = []
         for elem in raw_elements:
-            filepath = elem.get("file", "")
-            if not filepath or not __import__("os").path.exists(filepath):
-                logger.warning("[assembler] fichier élément manquant : %s", filepath)
+            fp = elem.get("file", "")
+            if not fp or not _os.path.exists(fp):
+                logger.warning("[assembler] fichier manquant : %s", fp)
                 continue
-            with open(filepath, "rb") as f:
-                image_bytes = f.read()
-            results.append((elem, image_bytes))
+            with open(fp, "rb") as f:
+                results.append((elem, f.read()))
 
-        logger.info(
-            "[assembler] %d/%d éléments chargés depuis %s",
-            len(results), len(raw_elements), manifest_path,
-        )
+        logger.info("[assembler] %d/%d éléments chargés depuis %s",
+                    len(results), len(raw_elements), manifest_path)
         return results, assembly_guide
 
     def assemble(
@@ -379,19 +345,20 @@ class PatternAssembler:
         element_ids: Optional[List[int]] = None,
     ) -> Optional[bytes]:
         """
-        Assemble les éléments en un repeat pattern seamless PNG.
+        Assemble les éléments en pattern seamless PNG.
+
+        Chaque élément est converti en sticker (crop serré + ombre portée)
+        avant d'être posé sur le canvas de fond.
 
         assembly_guide keys :
-          background_color  : hex du fond (ex: "#1B3A6B")
-          layout            : "sticker" | "tessellate" | "grid" | "tossed" (alias sticker)
-          density           : "sparse" | "medium" | "dense"
-          sticker_border    : true/false (défaut true)
-          sticker_border_color : hex (défaut "#FFFFFF")
+          background_color : hex du fond  (ex: "#1B3A6B")
+          layout           : "sticker" | "tessellate" | "grid"
+          density          : "sparse" | "medium" | "dense"
         """
         from PIL import Image
 
         if not elements:
-            logger.warning("[assembler] liste d'éléments vide — assemblage annulé")
+            logger.warning("[assembler] liste d'éléments vide")
             return None
 
         if element_ids is not None:
@@ -401,52 +368,29 @@ class PatternAssembler:
                 return None
 
         canvas_size = self.CANVAS_SIZE
-        bg_color = assembly_guide.get("background_color", "#FFFFFF")
-        layout = assembly_guide.get("layout", "sticker")
-        density = assembly_guide.get("density", "medium")
-        do_border = assembly_guide.get("sticker_border", True)
-        border_hex = assembly_guide.get("sticker_border_color", "#FFFFFF")
+        bg_color    = assembly_guide.get("background_color", "#FFFFFF")
+        layout      = assembly_guide.get("layout", "sticker")
+        density     = assembly_guide.get("density", "medium")
 
-        # Convertit hex border en RGBA
-        try:
-            bh = border_hex.lstrip("#")
-            border_color = (int(bh[0:2], 16), int(bh[2:4], 16), int(bh[4:6], 16), 255)
-        except Exception:
-            border_color = (255, 255, 255, 255)
-
-        # 1. Charger, supprimer fond, ajouter bordure sticker, redimensionner
+        # 1. Charger → sticker → redimensionner
         elements_rgba: List[Tuple[dict, "Image"]] = []
         for element_dict, image_bytes in elements:
             try:
-                img = Image.open(io.BytesIO(image_bytes)).convert("RGBA")
-                img_clean = self._remove_background(img)
-
-                if do_border:
-                    img_clean = self._add_sticker_border(
-                        img_clean,
-                        border_px=self.STICKER_BORDER_PX,
-                        color=border_color,
-                    )
-
-                role = element_dict.get("role", "supporting")
-                img_scaled = self._scale_element(img_clean, role, canvas_size)
-                elements_rgba.append((element_dict, img_scaled))
-
+                img    = Image.open(io.BytesIO(image_bytes))
+                sticker = self._to_sticker(img)
+                role   = element_dict.get("role", "supporting")
+                scaled = self._scale_element(sticker, role, canvas_size)
+                elements_rgba.append((element_dict, scaled))
             except Exception as exc:
-                logger.warning(
-                    "[assembler] chargement '%s' échoué: %s",
-                    element_dict.get("name", "?"),
-                    exc,
-                )
+                logger.warning("[assembler] '%s' échoué : %s",
+                               element_dict.get("name", "?"), exc)
 
         if not elements_rgba:
-            logger.error("[assembler] aucun élément valide après chargement")
+            logger.error("[assembler] aucun élément valide")
             return None
 
-        logger.info(
-            "[assembler] %d éléments → canvas %dx%d, layout=%s, border=%s",
-            len(elements_rgba), canvas_size, canvas_size, layout, do_border,
-        )
+        logger.info("[assembler] %d éléments → %dx%d layout=%s",
+                    len(elements_rgba), canvas_size, canvas_size, layout)
 
         # 2. Layout
         if layout == "tessellate":
@@ -454,7 +398,6 @@ class PatternAssembler:
         elif layout == "grid":
             overlay = self._place_grid(elements_rgba, canvas_size)
         else:
-            # "sticker", "tossed", "half-drop", "stripe" → sticker grid-jitter
             overlay = self._place_sticker(elements_rgba, canvas_size, density)
 
         # 3. Fond coloré
@@ -475,8 +418,22 @@ class PatternAssembler:
         buf.seek(0)
         result_bytes = buf.read()
 
-        logger.info(
-            "[assembler] terminé : %d bytes PNG (%dx%d)",
-            len(result_bytes), canvas_size, canvas_size,
-        )
+        logger.info("[assembler] terminé : %d bytes (%dx%d)", len(result_bytes), canvas_size, canvas_size)
         return result_bytes
+
+    # ── Compat alias ─────────────────────────────────────────────────────────
+
+    @staticmethod
+    def _remove_white(img) -> "Image":
+        """Alias de compat pour les modules qui appellent encore _remove_white."""
+        from PIL import Image
+        rgba = img.convert("RGBA")
+        try:
+            import numpy as np
+            arr = np.array(rgba, dtype=np.uint8)
+            lum = np.maximum(np.maximum(arr[:,:,0], arr[:,:,1]), arr[:,:,2]).astype(float)
+            alpha = np.where(np.clip((255.0 - lum) * 3.0, 0, 255) > 128, 255, 0).astype(np.uint8)
+            arr[:,:,3] = alpha
+            return Image.fromarray(arr, "RGBA")
+        except ImportError:
+            return rgba
