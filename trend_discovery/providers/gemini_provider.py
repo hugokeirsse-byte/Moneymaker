@@ -442,7 +442,12 @@ For EACH trend, return a complete JSON object with ALL of these fields — be sp
     "competition_level": "very_high" | "high" | "medium" | "low"
   }}}},
   "wikimedia_query": "2-5 word query to find public domain reference images on Wikimedia Commons",
-  "spoonflower_query": "2-5 word query to search Spoonflower bestselling designs for this niche (e.g. 'nordic folk flat pattern')"
+  "spoonflower_query": "2-5 word query to search Spoonflower bestselling designs for this niche (e.g. 'nordic folk flat pattern')",
+  "ai_generation": {{{{
+    "positive_prompt": "SEE MANDATORY FLUX PROMPT FORMAT BELOW — the full seamless-pattern prompt for FLUX.1 Dev",
+    "negative_prompt": "SHORT, max 8 comma-separated terms (FLUX ignores long negatives)",
+    "cfg_scale": 4.0
+  }}}}
 }}}}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -491,10 +496,59 @@ Do NOT write "blue" — write "sky blue (#87CEEB)".
   Verification rule: if the element fill hex is within 60 RGB distance of background_color — WRONG, change it.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MANDATORY FLUX PROMPT FORMAT (for ai_generation.positive_prompt)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+This is the single most important field. It is the prompt sent DIRECTLY to FLUX.1 Dev
+to generate the finished seamless pattern in ONE shot (not assembled from elements).
+FLUX.1 Dev is a flow-matching model that understands natural descriptive English
+prose, NOT keyword tags. Write like you are briefing a human textile illustrator.
+
+WRITE THE PROMPT THIS WAY (130-170 words, flowing natural sentences):
+1. Open with: "A seamless [REPEAT TYPE] repeat pattern for fabric and wallpaper printing."
+   (repeat type = half-drop / four-way mirror / brick / tossed allover / scattered)
+2. Anchor the look concretely: "The pattern looks exactly like a [REAL REFERENCE] printed textile"
+   — name a real artist/tradition/product FLUX knows (Hokusai woodblock, William Morris
+   Strawberry Thief, Marimekko, Charley Harper, Liberty of London, Anna Atkins cyanotype,
+   Wiener Werkstätte, Delftware ceramic, Rifle Paper Co., 1950s catalog engraving...).
+3. Describe each KEY motif in one clause, and — for any animal/creature — STATE THE EXACT
+   anatomy inline: "a crane in side profile with exactly two wings and two legs", "a fox
+   with exactly four legs and one bushy tail", "a moth with exactly four wings in bilateral
+   symmetry". This is how we stop extra-limb defects.
+4. For any object that could carry text (labels, blocks, tins, bottles): explicitly say
+   "the label area shows only decorative borders, no text, no letters" — UNLESS the niche
+   needs one clear letter (then say "exactly one large clear capital letter").
+5. Name colors in plain English AND give the hex once: "forest green (#2D5016)". FLUX reads both.
+6. State the flatness 2-3 times in different words: "completely flat 2D graphic shapes",
+   "solid color fills with no shading inside any shape", "no gradients, no drop shadows".
+7. Close with: "All four edges tile perfectly." (helps FLUX honor the seamless tiling flag)
+
+HARD RULES for FLUX prompts:
+  • CFG (cfg_scale) MUST be 4.0 — FLUX Dev cramps and distorts above ~5.0. Never write 7.5+.
+  • Negative prompt SHORT (≤ 8 terms). FLUX barely uses negatives; long ones hurt. Good default:
+    "photorealistic, 3D render, gradient shading, drop shadow, blurry, watermark, text, visible seam"
+  • NO weighted syntax, NO (parentheses:1.3), NO "masterpiece/best quality/8k" tag spam — FLUX ignores it.
+  • Describe what the FINISHED tile LOOKS like, not a list of ingredients.
+
+WORKED EXAMPLE (Japanese Woodblock niche → ai_generation.positive_prompt):
+  "A seamless half-drop repeat pattern for fabric and wallpaper printing. The pattern looks
+  exactly like a Hokusai woodblock print textile — bold flat graphic shapes with strong black
+  outlines and completely solid color fills, no shading inside any shape. The design shows a
+  stylized great wave crest as a flat shape with white foam tips, a white crane in flight seen
+  from the side with exactly two wings and two legs tucked under, a red koi fish in side profile
+  with exactly one dorsal fin and one tail fin, a cherry blossom branch with flat five-petaled
+  blossoms, and a small Mount Fuji silhouette. Colors are indigo navy (#1B3A6B), coral vermillion
+  (#E34234), ivory white (#F5F2EB) and gold ochre (#D4A017) on an ivory background. Every shape is
+  a completely flat 2D graphic, no gradients and no drop shadows. All four edges tile perfectly."
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Requirements:
 - EXACTLY 10 elements per niche (2-3 hero, 4-5 supporting, 2-3 filler)
-- Every element prompt follows the MANDATORY FORMAT above — no exceptions
+- Every element prompt follows the MANDATORY ELEMENT FORMAT above — no exceptions
+- ai_generation.positive_prompt follows the MANDATORY FLUX PROMPT FORMAT (130-170 words, natural prose, exact animal anatomy, no-text labels) — no exceptions
+- ai_generation.cfg_scale is ALWAYS 4.0 (FLUX Dev), never 7.5
+- ai_generation.negative_prompt is SHORT (≤ 8 terms)
 - Real hex codes for ALL colors everywhere (no "earthy brown" — use "#8B4513 Saddle Brown")
 - Focus on trends that are hot RIGHT NOW ({today}), have strong visual identity for {name} — each backed by real web evidence in why_trending
 - Target export: {file_fmt}, {dpi} DPI, {min_px}x{min_px}px min, {color_profile}, max {max_mb}MB
@@ -575,8 +629,14 @@ Return ONLY a valid JSON array of exactly {total_count} trend objects ({profile.
         ag.setdefault("negative_prompt", "")
         ag.setdefault("key_elements", [])
         ag.setdefault("avoid_elements", [])
-        ag.setdefault("cfg_scale", 7.5)
+        ag.setdefault("cfg_scale", 4.0)  # FLUX.1 Dev sweet spot (7.5 crampait l'image)
         ag.setdefault("style_weight", 0.85)
+        # Garde-fou : si Gemini renvoie un CFG type-SDXL (>5), le ramener au range FLUX
+        try:
+            if float(ag.get("cfg_scale", 4.0)) > 5.0:
+                ag["cfg_scale"] = 4.0
+        except (TypeError, ValueError):
+            ag["cfg_scale"] = 4.0
 
         # ── Normalisation des sous-niches ────────────────────────────────────
         normalized_subs = []

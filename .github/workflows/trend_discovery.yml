@@ -33,6 +33,7 @@ on:
         options:
           - 'preview'            # Gemini trends + CdCs + manifest (0 €)
           - 'audit'              # Note /100 chaque image via Gemini Vision (0 €, RUNWARE non requis)
+          - 'archive'            # Archive un CdC accompli (input niche) + régénère un remplaçant (0 €)
           - 'generate-all'       # 1 image de base par CdC (~0.006€ × nb CdCs)
           - 'generate-best'      # Variantes du meilleur CdC auto-sélectionné (~0.05 €)
           - 'generate-elements'  # 10 éléments isolés + assemblage Pillow (~0.06 €)
@@ -100,7 +101,7 @@ jobs:
           GEMINI_API_KEY:       ${{ secrets.GEMINI_API_KEY }}
           # Runware : injecté si mode=generate ou generate-best
           RUNWARE_API_KEY:      ${{ (github.event.inputs.mode == 'generate' || github.event.inputs.mode == 'generate-best' || github.event.inputs.mode == 'generate-all' || github.event.inputs.mode == 'generate-elements') && secrets.RUNWARE_API_KEY || '' }}
-          RUNWARE_MODEL:        ${{ secrets.RUNWARE_MODEL || 'runware:100@1' }}
+          RUNWARE_MODEL:        ${{ secrets.RUNWARE_MODEL || 'runware:101@1' }}
           # Sources optionnelles
           REDDIT_CLIENT_ID:     ${{ secrets.REDDIT_CLIENT_ID }}
           REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
@@ -119,6 +120,12 @@ jobs:
           elif [ "$MODE" = "audit" ]; then
             echo "=== MODE AUDIT : note Gemini Vision /100 par image ==="
             python -m trend_discovery.main audit
+          elif [ "$MODE" = "archive" ]; then
+            echo "=== MODE ARCHIVE : archive CdC accompli + régénère un remplaçant ==="
+            if [ -z "${{ github.event.inputs.niche }}" ]; then
+              echo "ERREUR : l'input 'niche' est requis pour le mode archive." && exit 1
+            fi
+            eval python -m trend_discovery.main archive --niche "'${{ github.event.inputs.niche }}'"
           elif [ "$MODE" = "generate-all" ]; then
             echo "=== MODE GENERATE-ALL : 1 image de base par CdC ==="
             python -m trend_discovery.main generate-all --yes

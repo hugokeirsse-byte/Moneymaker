@@ -243,6 +243,7 @@ class GenerationPipeline:
             brief.name, n_images, brief.positive_prompt[:80],
         )
 
+        cfg_scale = float(getattr(brief, "cfg_scale", 4.0) or 4.0)
         for i in range(n_images):
             result = self._generate_with_audit(
                 niche_name=brief.name,
@@ -250,6 +251,7 @@ class GenerationPipeline:
                 negative_prompt=brief.negative_prompt or "",
                 auditor=auditor,
                 attempt_label=f"{i+1}/{n_images}",
+                cfg_scale=cfg_scale,
             )
             results.append(result)
             logger.info("[gen_pipeline] %s [%d/%d]: %s", brief.name, i + 1, n_images, result)
@@ -298,11 +300,14 @@ class GenerationPipeline:
         if seed_image_url:
             logger.info("[gen_pipeline] seedImage Spoonflower: %s…", seed_image_url[:80])
 
+        # CFG du CdC (FLUX.1 Dev : 4.0 par défaut). Honoré pour toutes les variantes.
+        cfg_scale = float(brief_data.get("ai_generation", {}).get("cfg_scale", 4.0))
+
         for i, variant in enumerate(variants, 1):
             niche_label = f"{brief_name} — {variant.label}"
             logger.info(
-                "[gen_pipeline] %d/%d — %s | prompt: %s…",
-                i, len(variants), variant.label, variant.positive_prompt[:80],
+                "[gen_pipeline] %d/%d — %s | CFG %.1f | prompt: %s…",
+                i, len(variants), variant.label, cfg_scale, variant.positive_prompt[:80],
             )
             result = self._generate_with_audit(
                 niche_name=niche_label,
@@ -311,6 +316,7 @@ class GenerationPipeline:
                 auditor=auditor,
                 attempt_label=f"{i}/{len(variants)}",
                 seed_image_url=seed_image_url,
+                cfg_scale=cfg_scale,
             )
             results.append(result)
             logger.info("[gen_pipeline] %s", result)
@@ -331,6 +337,7 @@ class GenerationPipeline:
         attempt_label: str = "",
         max_retries: int = 1,  # 2 tentatives max (1 initiale + 1 retry)
         seed_image_url: Optional[str] = None,
+        cfg_scale: float = 4.0,
     ) -> GenerationResult:
         """
         Génère une image, l'audite, retente une seule fois si nécessaire.
@@ -341,6 +348,7 @@ class GenerationPipeline:
                 positive_prompt=positive_prompt,
                 negative_prompt=negative_prompt,
                 upscale_factor=self._upscale_factor,
+                cfg_scale=cfg_scale,
                 retries=0,  # on gère nous-mêmes les retries ici
                 seed_image_url=seed_image_url,
             )

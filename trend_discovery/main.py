@@ -765,6 +765,130 @@ def generate_approved(
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+# Mode archive : CdC accompli → archivé + remplacé par un CdC frais
+# ─────────────────────────────────────────────────────────────────────────────
+
+ARCHIVE_PATH = "./reports/accomplished_cdcs.json"
+
+
+def archive_cdcs(
+    niche_names: List[str],
+    report_path: Optional[str] = None,
+    replace: bool = True,
+    market: str = "spoonflower",
+) -> None:
+    """
+    Archive un ou plusieurs CdC « accomplis » (image validée commercialement) et,
+    si replace=True, demande à Gemini autant de CdC frais pour les remplacer —
+    en excluant tous les thèmes déjà faits (archivés + actifs restants).
+
+    Args:
+        niche_names: noms des CdC validés à archiver.
+        report_path: rapport actif. Défaut : dernier rapport.
+        replace: si True, régénère N nouveaux CdC à la place (1 appel Gemini, 0 image).
+        market: profil marché pour la régénération.
+    """
+    import json
+    import glob as _glob
+
+    if not report_path:
+        reports = sorted(_glob.glob("./reports/cahiers_des_charges_*.json"))
+        if not reports:
+            print("ERROR : Aucun rapport trouvé.")
+            return
+        report_path = reports[-1]
+
+    with open(report_path, encoding="utf-8") as fh:
+        data = json.load(fh)
+
+    briefs_key = "cahiers_des_charges" if "cahiers_des_charges" in data else "briefs"
+    all_briefs = data.get(briefs_key, [])
+    if not all_briefs:
+        print("ERROR : Aucun CdC dans le rapport.")
+        return
+
+    # ── Résolution des CdC à archiver (match exact puis partiel) ───────────────
+    to_archive = []
+    remaining = list(all_briefs)
+    for needle_raw in niche_names:
+        needle = needle_raw.strip().lower()
+        match = next((b for b in remaining if b.get("name", "").lower() == needle), None)
+        if not match:
+            match = next((b for b in remaining if needle in b.get("name", "").lower()), None)
+        if not match:
+            print(f"⚠️  CdC '{needle_raw}' introuvable — ignoré.")
+            continue
+        to_archive.append(match)
+        remaining = [b for b in remaining if b.get("name") != match.get("name")]
+
+    if not to_archive:
+        print("Aucun CdC à archiver. Disponibles : " + ", ".join(b.get("name", "") for b in all_briefs))
+        return
+
+    # ── Archivage (append au fichier d'archive) ────────────────────────────────
+    archive_data = {"accomplished": []}
+    if os.path.exists(ARCHIVE_PATH):
+        with open(ARCHIVE_PATH, encoding="utf-8") as fh:
+            archive_data = json.load(fh)
+    archive_data.setdefault("accomplished", [])
+
+    now = datetime.now(timezone.utc).isoformat()
+    for b in to_archive:
+        b["_archived_at"] = now
+        b["_source_report"] = os.path.basename(report_path)
+        archive_data["accomplished"].append(b)
+        print(f"📦 Archivé : {b.get('name')}")
+
+    with open(ARCHIVE_PATH, "w", encoding="utf-8") as fh:
+        json.dump(archive_data, fh, indent=2, ensure_ascii=False)
+    print(f"   → {ARCHIVE_PATH} ({len(archive_data['accomplished'])} CdC accomplis au total)")
+
+    # ── Régénération des remplaçants ──────────────────────────────────────────
+    new_briefs = []
+    if replace:
+        n_needed = len(to_archive)
+        # Tous les thèmes à exclure : actifs restants + tout l'historique accompli
+        done_names = (
+            [b.get("name", "") for b in remaining]
+            + [b.get("name", "") for b in archive_data["accomplished"]]
+        )
+        done_names = [n for n in done_names if n]
+
+        print(f"\n🔄 Régénération de {n_needed} CdC frais (exclusion de {len(done_names)} thèmes déjà faits)…")
+
+        from trend_discovery.generators.production_brief import BriefGenerator
+        from trend_discovery.markets.market_profile import get_profile
+
+        profile = get_profile(market)
+        profile.niche_count = n_needed
+        gen = BriefGenerator(profile)
+
+        if not gen._gemini.is_available():
+            print("⚠️  GEMINI_API_KEY absente — impossible de régénérer. CdC archivés sans remplacement.")
+        else:
+            constraints = (
+                "These themes are ALREADY DONE or in production — do NOT propose them or anything "
+                "visually similar; find genuinely different fresh niches: " + ", ".join(done_names)
+            )
+            fresh = gen.generate_all(constraints)
+            new_briefs = [b.to_dict() for b in fresh][:n_needed]
+            for nb in new_briefs:
+                print(f"✨ Nouveau CdC : {nb.get('name')} (score {nb.get('opportunity_score', nb.get('trending_score', '?'))})")
+
+    # ── Réécriture du rapport actif : remaining + nouveaux ─────────────────────
+    data[briefs_key] = remaining + new_briefs
+    data["total_briefs"] = len(data[briefs_key])
+    data["_last_archive_at"] = now
+    with open(report_path, "w", encoding="utf-8") as fh:
+        json.dump(data, fh, indent=2, ensure_ascii=False)
+
+    print(f"\n✅ Rapport actif mis à jour : {report_path}")
+    print(f"   {len(remaining)} CdC conservés + {len(new_briefs)} nouveaux = {len(data[briefs_key])} actifs")
+    if new_briefs:
+        print("→ Lancez 'generate-all' ou 'generate-best' pour générer les images des nouveaux CdC.")
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # Mode audit : note /100 chaque image via Gemini Vision
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -1184,6 +1308,25 @@ def main():
         help="Nombre max de variantes à générer (pour --best). 0 = toutes. Ex: --limit 1 pour calibrer.",
     )
 
+    # ── Sous-commande : archive ───────────────────────────────────────────────
+    archive_parser = subparsers.add_parser(
+        "archive",
+        help="Archive un CdC accompli (image validée) + régénère un CdC frais à sa place.",
+    )
+    archive_parser.add_argument(
+        "--niche", type=str, required=True,
+        help="Nom(s) du/des CdC accompli(s) à archiver (séparés par des virgules).",
+    )
+    archive_parser.add_argument(
+        "--no-replace", action="store_true",
+        help="Archive seulement, sans régénérer de remplaçant via Gemini.",
+    )
+    archive_parser.add_argument(
+        "--report", type=str, default="",
+        help="Rapport actif à modifier. Défaut : dernier rapport.",
+    )
+    archive_parser.add_argument("--market", type=str, default="spoonflower")
+
     # ── Sous-commande : audit ─────────────────────────────────────────────────
     audit_parser = subparsers.add_parser(
         "audit",
@@ -1289,6 +1432,16 @@ def main():
         gate.save_brief_data(briefs, run_id)
         print(f"\nManifest d'approbation : {manifest_path}")
         print("Éditez 'approved': true pour les niches choisies, puis lancez 'generate'.")
+        return
+
+    if args.command == "archive":
+        niche_list = [n.strip() for n in args.niche.split(",") if n.strip()]
+        archive_cdcs(
+            niche_names=niche_list,
+            report_path=args.report or None,
+            replace=not args.no_replace,
+            market=args.market,
+        )
         return
 
     if args.command == "audit":

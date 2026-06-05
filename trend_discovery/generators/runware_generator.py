@@ -29,10 +29,14 @@ logger = logging.getLogger(__name__)
 RUNWARE_API_KEY = os.getenv("RUNWARE_API_KEY", "")
 RUNWARE_BASE_URL = "https://api.runware.ai/v1"
 
-# Modèle par défaut : SDXL 1.0 (bon équilibre qualité/vitesse/coût)
-# Pour une meilleure qualité, utiliser un modèle Flux (ex: "runware:101@1")
-# Voir https://runware.ai/models pour la liste complète
-DEFAULT_MODEL = os.getenv("RUNWARE_MODEL", "runware:101@2")
+# Modèle par défaut : FLUX.1 Dev (runware:101@1) — meilleure qualité pour seamless patterns.
+# FLUX.1 Dev comprend les phrases naturelles, sweet spot CFG ~3.5–4.5, ~28 steps.
+# Alternatives : "runware:100@1" = FLUX.1 Schnell (rapide, CFG ignoré, 4 steps, moins fin).
+# Voir https://runware.ai/models pour la liste complète.
+DEFAULT_MODEL = os.getenv("RUNWARE_MODEL", "runware:101@1")
+
+# CFG par défaut adapté à FLUX.1 Dev (au-delà de ~5 l'image se crispe / se déforme)
+DEFAULT_CFG = 4.0
 
 # Taille de génération initiale (sera upscalée ensuite)
 GENERATION_SIZE = 1024  # px (carré — optimal pour seamless patterns)
@@ -98,8 +102,8 @@ class RunwareGenerator:
         negative_prompt: str = "",
         width: int = GENERATION_SIZE,
         height: int = GENERATION_SIZE,
-        steps: int = 30,
-        cfg_scale: float = 7.5,
+        steps: int = 28,
+        cfg_scale: float = DEFAULT_CFG,
         model: str = DEFAULT_MODEL,
         seed: int = -1,
         tiling: bool = True,
@@ -211,6 +215,7 @@ class RunwareGenerator:
         negative_prompt: str = "",
         upscale_factor: int = 4,  # ignoré — upscale géré localement par SpoonflowerPackager
         model: str = DEFAULT_MODEL,
+        cfg_scale: float = DEFAULT_CFG,
         retries: int = 2,
         seed_image_url: Optional[str] = None,
         strength: float = 0.25,
@@ -234,6 +239,7 @@ class RunwareGenerator:
                 positive_prompt=positive_prompt,
                 negative_prompt=negative_prompt,
                 model=model,
+                cfg_scale=cfg_scale,
                 seed_image_url=seed_image_url,
                 strength=strength,
             )
