@@ -765,6 +765,54 @@ def generate_approved(
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+# Mode audit : note /100 chaque image via Gemini Vision
+# ─────────────────────────────────────────────────────────────────────────────
+
+def run_audit(
+    image_dir: str = "./output/spoonflower",
+    report_path: Optional[str] = None,
+    output_dir: str = "./reports",
+) -> None:
+    """
+    Audit visuel de toutes les images générées via Gemini Vision.
+
+    Pour chaque PNG dans image_dir :
+      - Envoie à Gemini Vision + test 2×2 de tuilage
+      - Score /100 + liste précise de problèmes (anatomie, style, texte, layout, tuilage)
+      - Verdict : pass / fix / reject
+
+    Génère un rapport MD + JSON dans output_dir.
+    """
+    import json
+    import glob as _glob
+    from trend_discovery.generators.visual_auditor import VisualAuditor, _safe_name
+
+    auditor = VisualAuditor()
+    if not auditor.is_available():
+        logger.error("[audit] GEMINI_API_KEY absente — impossible d'auditer.")
+        return
+
+    # Charge la map CdC pour le contexte
+    if not report_path:
+        reports = sorted(_glob.glob("./reports/cahiers_des_charges_*.json"))
+        report_path = reports[-1] if reports else None
+
+    cdc_map: Dict = {}
+    if report_path and os.path.exists(report_path):
+        with open(report_path, encoding="utf-8") as fh:
+            data = json.load(fh)
+        for b in data.get("cahiers_des_charges", data.get("briefs", [])):
+            cdc_map[_safe_name(b.get("name", ""))] = b
+
+    md_path, json_path = auditor.audit_directory(image_dir, cdc_map, output_dir)
+    if md_path:
+        print(f"\n✅ Rapport d'audit : {md_path}")
+        print(f"   JSON          : {json_path}")
+    else:
+        print("❌ Audit échoué — vérifiez GEMINI_API_KEY et les images dans " + image_dir)
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # Mode generate-best : variantes du meilleur CdC du dernier rapport
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -1136,6 +1184,24 @@ def main():
         help="Nombre max de variantes à générer (pour --best). 0 = toutes. Ex: --limit 1 pour calibrer.",
     )
 
+    # ── Sous-commande : audit ─────────────────────────────────────────────────
+    audit_parser = subparsers.add_parser(
+        "audit",
+        help="Audit Gemini Vision de toutes les images : note /100 + problèmes détaillés.",
+    )
+    audit_parser.add_argument(
+        "--images", type=str, default="./output/spoonflower",
+        help="Répertoire des images PNG à auditer.",
+    )
+    audit_parser.add_argument(
+        "--report", type=str, default="",
+        help="Rapport JSON des CdCs (pour le contexte). Défaut : dernier rapport.",
+    )
+    audit_parser.add_argument(
+        "--output", type=str, default="./reports",
+        help="Répertoire de sortie pour le rapport d'audit.",
+    )
+
     # ── Sous-commande : generate-all ──────────────────────────────────────────
     gen_all_parser = subparsers.add_parser(
         "generate-all",
@@ -1223,6 +1289,14 @@ def main():
         gate.save_brief_data(briefs, run_id)
         print(f"\nManifest d'approbation : {manifest_path}")
         print("Éditez 'approved': true pour les niches choisies, puis lancez 'generate'.")
+        return
+
+    if args.command == "audit":
+        run_audit(
+            image_dir=args.images,
+            report_path=args.report or None,
+            output_dir=args.output,
+        )
         return
 
     if args.command == "generate-all":
