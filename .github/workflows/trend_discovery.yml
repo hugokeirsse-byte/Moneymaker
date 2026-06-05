@@ -48,6 +48,10 @@ on:
         description: 'Run ID de l artefact à récupérer (mode recover-artifact)'
         required: false
         default: ''
+      focus:
+        description: 'Orientation thématique des CDC (mode preview). Ex: Art Deco animals + anthropomorphized portraits, no vintage'
+        required: false
+        default: ''
       manifest_path:
         description: 'Path to approval manifest (relative to repo root)'
         required: false
@@ -121,6 +125,8 @@ jobs:
         env:
           # Tendances mondiales temps réel (GEMINI_API_KEY requis)
           GEMINI_API_KEY:       ${{ secrets.GEMINI_API_KEY }}
+          # Orientation thématique des CDC (mode preview)
+          MONEYMAKER_FOCUS:     ${{ github.event.inputs.focus || '' }}
           # Runware : injecté si mode génération ou upscale-fix
           RUNWARE_API_KEY:      ${{ (github.event.inputs.mode == 'generate' || github.event.inputs.mode == 'generate-best' || github.event.inputs.mode == 'generate-all' || github.event.inputs.mode == 'generate-elements' || github.event.inputs.mode == 'upscale-fix') && secrets.RUNWARE_API_KEY || '' }}
           RUNWARE_MODEL:        ${{ secrets.RUNWARE_MODEL || 'runware:101@1' }}

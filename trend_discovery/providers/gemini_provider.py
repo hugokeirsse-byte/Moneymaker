@@ -398,7 +398,10 @@ class GeminiProvider(DataProvider):
             pass
 
         crossover_count = getattr(profile, "crossover_count", 2)
-        total_count = profile.niche_count + crossover_count
+        # Override du nombre de niches via env (ex: viser 20 CDC sur un batch ciblé)
+        _override = os.getenv("MONEYMAKER_NICHE_COUNT", "")
+        niche_count = int(_override) if _override.isdigit() else profile.niche_count
+        total_count = niche_count + crossover_count
 
         return f"""Today is {today}. You are an expert in print-on-demand surface design for {name}.
 {archive_block}
@@ -716,15 +719,20 @@ Requirements:
 - Every element prompt follows the MANDATORY ELEMENT FORMAT above — no exceptions
 - ai_generation.positive_prompt follows the MANDATORY FLUX DEV 2 PROMPT FORMAT (5-part structure, 130-180 words, exact anatomy, anti-fusion locks, solid background) — no exceptions
 - STYLE ASSIGNMENT RULE: assign each niche to the appropriate style:
-    • STYLE A → scattered/tossed objects, folk, vintage labels, stationery, food objects
-    • STYLE B → large-scale botanical, Art Deco geometric fans/palms, tropical large-leaf all-over
-    • STYLE C → ANY niche featuring an animal as the hero motif with geometric body → MANDATORY
-    • STYLE D → humorous/narrative concept, anthropomorphized, trompe l'œil, room-specific
-  Distribution rule for 20 CDCs: minimum 3× Style C, minimum 4× Style D (incl. ≥1 room-specific),
-  remaining split between Style A and B.
-  Prioritize Style C animals: herons, cranes, swallows, dragonflies, koi, peacocks, butterflies, foxes.
-  Prioritize Style D concepts: WC/bathroom humor, portrait gallery animals, anthropomorphized food,
-  trompe l'œil shelves/racks, kitchen humor.
+    • STYLE A → scattered/tossed objects, stationery, food objects (NO vintage labels, NO retro/MCM — banned)
+    • STYLE B → large-scale botanical, tropical large-leaf all-over (Art Deco fans/palms → Style C, not here)
+    • STYLE C → Art Deco single-animal geometric tile (ONE animal, Spoonflower mirror makes the pattern) → for animals with strong silhouette geometry
+    • STYLE D → anthropomorphized animals in absurd/hilarious situations, trompe l'œil, room-specific humor → PRIORITY STYLE
+  MANDATORY distribution for 20 CDCs: MINIMUM 10× Style D, MINIMUM 5× Style C, MAXIMUM 3× Style A, MAXIMUM 2× Style B.
+  STYLE C animals (Art Deco single tile — Spoonflower mirror repeat creates the interlocking pattern):
+    owls, foxes, tigers, stags/deer with antlers, octopus, salamanders, beetles, peacocks, egrets, cranes, herons.
+  STYLE D concepts (anthropomorphized animals in WILD/ABSURD situations — the more unexpected, the better):
+    detectives solving ridiculous crimes, philosophers debating at a café, jury members at a kangaroo court,
+    barristers/judges in wigs, pickpockets with instruction guides, sushi chefs, art critics dismissing masterpieces,
+    Formula 1 racing snails, speed-dating tortoises, therapy sessions for lobsters, penguins as DJs at a rave,
+    goats at hot yoga, guinea pigs at a Michelin-starred restaurant, frogs at a wine tasting, raccoons at a heist planning session,
+    cats as Victorian surgeons, dogs running a startup, bears as astrologers, crows writing poetry.
+  NO vintage labels. NO retro/mid-century modern. NO folk patterns. NO "scattered botanicals". NO antique objects pattern.
 - ai_generation MUST NOT include a "negative_prompt" field — FLUX Dev 2 does not support it
 - ai_generation.cfg_scale is ALWAYS 4.0 (FLUX Dev 2), never 7.5
 - Real hex codes for ALL colors everywhere (no "earthy brown" — use "#8B4513 Saddle Brown")
@@ -876,6 +884,10 @@ Return ONLY a valid JSON array of exactly {total_count} trend objects ({profile.
         """
         if self._global_trends is not None:
             return self._global_trends
+
+        # Orientation thématique pilotable via env (sans toucher au code)
+        if not extra_constraints:
+            extra_constraints = os.getenv("MONEYMAKER_FOCUS", "")
 
         profile = _coerce_profile(profile)
         today = date.today().isoformat()
