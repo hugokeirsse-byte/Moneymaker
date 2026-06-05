@@ -188,6 +188,8 @@ jobs:
           else
             DATE=$(date -u +"%Y-%m-%d %H:%M UTC")
             git commit -m "report(pipeline): trends + images Spoonflower — ${DATE}"
+            # Rebase sur le remote avant de pousser pour éviter les rejets
+            git pull --rebase origin HEAD
             git push origin HEAD
           fi
 
