@@ -1,16 +1,30 @@
 """
 ElementGenerator — génère 10 éléments isolés pour un CdC.
 
-Chaque élément est un objet unique centré sur fond blanc (ou fond cible),
-généré séparément par Runware. L'assemblage en repeat pattern se fait ensuite
-gratuitement via PatternAssembler (Pillow).
+Chaque élément est un objet unique centré sur fond blanc, généré séparément
+par Runware, puis sauvegardé en PNG fond transparent dans output/elements/.
+
+Ces fichiers PNG transparents sont l'actif principal : ils peuvent être
+réassemblés à l'infini (différentes combinaisons, fonds, layouts) sans
+re-générer via Runware.
 """
 from __future__ import annotations
 
+import io
+import json
 import logging
-from typing import List, Optional, Tuple
+import os
+from datetime import datetime, timezone
+from typing import Dict, List, Optional, Tuple
 
 logger = logging.getLogger(__name__)
+
+
+def _safe_name(text: str, max_len: int = 40) -> str:
+    return (
+        "".join(c if c.isalnum() or c in (" ", "-") else "_" for c in text)
+        .strip().replace(" ", "_").lower()[:max_len]
+    )
 
 
 class ElementGenerator:
@@ -113,3 +127,73 @@ class ElementGenerator:
             len(elements),
         )
         return results
+
+    def save_elements(
+        self,
+        results: List[Tuple[dict, bytes]],
+        brief: dict,
+        output_dir: str = "./output/elements",
+    ) -> str:
+        """
+        Sauvegarde chaque élément en PNG fond transparent + un manifest JSON.
+
+        Structure :
+          output/elements/{cdc_name}/
+            manifest.json          ← métadonnées + assembly_guide
+            01_round_inkwell.png   ← fond transparent (RGBA)
+            02_pen_nib.png
+            ...
+
+        Args:
+            results : sortie de generate_all() — liste (element_dict, image_bytes)
+            brief   : CdC complet (pour assembly_guide, background_color, etc.)
+            output_dir : répertoire racine des éléments
+
+        Returns:
+            Chemin du répertoire CdC créé.
+        """
+        from PIL import Image
+        from trend_discovery.generators.pattern_assembler import PatternAssembler
+
+        cdc_name = brief.get("name", "cdc")
+        safe_cdc = _safe_name(cdc_name)
+        cdc_dir = os.path.join(output_dir, safe_cdc)
+        os.makedirs(cdc_dir, exist_ok=True)
+
+        manifest_elements = []
+        for element_dict, image_bytes in results:
+            elem_id = element_dict.get("id", len(manifest_elements) + 1)
+            elem_name = element_dict.get("name", f"element_{elem_id}")
+            safe_elem = _safe_name(elem_name)
+            filename = f"{int(elem_id):02d}_{safe_elem}.png"
+            filepath = os.path.join(cdc_dir, filename)
+
+            # Supprimer le fond blanc → RGBA transparent
+            img = Image.open(io.BytesIO(image_bytes)).convert("RGBA")
+            img_transparent = PatternAssembler._remove_white(img)
+            img_transparent.save(filepath, format="PNG")
+
+            manifest_elements.append({
+                **{k: v for k, v in element_dict.items()},
+                "file": filepath,
+                "filename": filename,
+            })
+            logger.info("[element_gen] sauvegardé : %s", filepath)
+
+        # Manifest JSON
+        manifest = {
+            "cdc_name": cdc_name,
+            "generated_at": datetime.now(timezone.utc).isoformat(),
+            "elements_dir": cdc_dir,
+            "assembly_guide": brief.get("assembly_guide", {}),
+            "elements": manifest_elements,
+        }
+        manifest_path = os.path.join(cdc_dir, "manifest.json")
+        with open(manifest_path, "w", encoding="utf-8") as f:
+            json.dump(manifest, f, indent=2, ensure_ascii=False)
+
+        logger.info(
+            "[element_gen] manifest sauvegardé : %s (%d éléments)",
+            manifest_path, len(manifest_elements),
+        )
+        return cdc_dir

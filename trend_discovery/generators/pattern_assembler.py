@@ -244,10 +244,57 @@ class PatternAssembler:
 
         return canvas
 
+    @classmethod
+    def load_from_manifest(
+        cls,
+        manifest_path: str,
+        element_ids: Optional[List[int]] = None,
+    ) -> Tuple[List[Tuple[dict, bytes]], dict]:
+        """
+        Charge des éléments sauvegardés depuis un manifest JSON.
+
+        Permet de réassembler sans re-générer : on charge les PNGs transparents
+        du disque et on les repasse à assemble() avec n'importe quel assembly_guide.
+
+        Args:
+            manifest_path : chemin vers le manifest.json d'un CdC
+            element_ids   : liste d'IDs d'éléments à charger (None = tous)
+
+        Returns:
+            (elements, assembly_guide) prêts à passer à assemble()
+        """
+        import json as _json
+
+        with open(manifest_path, encoding="utf-8") as f:
+            manifest = _json.load(f)
+
+        assembly_guide = manifest.get("assembly_guide", {})
+        raw_elements = manifest.get("elements", [])
+
+        if element_ids is not None:
+            raw_elements = [e for e in raw_elements if e.get("id") in element_ids]
+
+        results: List[Tuple[dict, bytes]] = []
+        for elem in raw_elements:
+            filepath = elem.get("file", "")
+            if not filepath or not __import__("os").path.exists(filepath):
+                logger.warning("[assembler] fichier élément manquant : %s", filepath)
+                continue
+            with open(filepath, "rb") as f:
+                image_bytes = f.read()
+            results.append((elem, image_bytes))
+
+        logger.info(
+            "[assembler] %d/%d éléments chargés depuis %s",
+            len(results), len(raw_elements), manifest_path,
+        )
+        return results, assembly_guide
+
     def assemble(
         self,
         elements: List[Tuple[dict, bytes]],
         assembly_guide: dict,
+        element_ids: Optional[List[int]] = None,
     ) -> Optional[bytes]:
         """
         Assemble les éléments générés en un repeat pattern seamless PNG.
@@ -264,6 +311,13 @@ class PatternAssembler:
         if not elements:
             logger.warning("[assembler] liste d'éléments vide — assemblage annulé")
             return None
+
+        # Filtrer par IDs si spécifié
+        if element_ids is not None:
+            elements = [(d, b) for d, b in elements if d.get("id") in element_ids]
+            if not elements:
+                logger.warning("[assembler] aucun élément correspondant aux IDs %s", element_ids)
+                return None
 
         canvas_size = self.CANVAS_SIZE
         bg_color = assembly_guide.get("background_color", "#FFFFFF")

@@ -957,7 +957,15 @@ def generate_elements(
         logger.error("[generate-elements] Aucun élément généré.")
         return
 
-    # Assemblage
+    # Sauvegarde des éléments individuels (PNG transparent) + manifest
+    elements_dir = gen.save_elements(generated, brief, output_dir="./output/elements")
+    import os as _os
+    manifest_path = _os.path.join(elements_dir, "manifest.json")
+    print(f"\nÉléments sauvegardés : {elements_dir}")
+    print(f"Manifest : {manifest_path}")
+    print("→ Réassemblage futur : python -m trend_discovery.main assemble --manifest <path>")
+
+    # Assemblage par défaut (tous les éléments, assembly_guide du CdC)
     from trend_discovery.generators.pattern_assembler import PatternAssembler
     assembler = PatternAssembler()
     assembly_guide = brief.get("assembly_guide", {})
@@ -973,7 +981,7 @@ def generate_elements(
     filepath = packager.package(pattern_bytes, brief.get("name", "elements_pattern"))
 
     if filepath:
-        print(f"\nPattern sauvegardé : {filepath}")
+        print(f"Pattern assemblé : {filepath}")
     else:
         logger.error("[generate-elements] Packaging échoué.")
 
