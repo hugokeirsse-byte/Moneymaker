@@ -52,6 +52,10 @@ on:
         description: 'Nom exact du CdC à générer (mode generate-best). Vide = meilleur score.'
         required: false
         default: ''
+      limit:
+        description: 'Nb max de variantes pour generate-best (1 = base uniquement, 0 = toutes). Ex: 1 pour calibrer.'
+        required: false
+        default: '0'
 
 permissions:
   contents: write
@@ -113,8 +117,11 @@ jobs:
           elif [ "$MODE" = "generate-best" ]; then
             echo "=== MODE GENERATE-BEST : variantes du meilleur CdC auto-sélectionné ==="
             NICHE_ARG=""
+            LIMIT_ARG=""
             [ -n "${{ github.event.inputs.niche }}" ] && NICHE_ARG="--niche '${{ github.event.inputs.niche }}'"
-            eval python -m trend_discovery.main generate --best --yes $NICHE_ARG
+            LIMIT_VAL="${{ github.event.inputs.limit || '0' }}"
+            [ "$LIMIT_VAL" != "0" ] && LIMIT_ARG="--limit $LIMIT_VAL"
+            eval python -m trend_discovery.main generate --best --yes $NICHE_ARG $LIMIT_ARG
           elif [ "$MODE" = "generate-elements" ]; then
             echo "=== MODE GENERATE-ELEMENTS : 10 éléments + assemblage Pillow ==="
             NICHE_ARG=""

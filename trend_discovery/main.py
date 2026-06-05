@@ -774,10 +774,12 @@ def generate_best_variants(
     yes: bool = False,
     output_dir: str = "./output/spoonflower",
     niche_name: Optional[str] = None,
+    max_variants: Optional[int] = None,
 ) -> None:
     """
     Auto-sélectionne le meilleur CdC du dernier rapport et génère toutes ses variantes.
     Si niche_name est fourni, cible ce CdC précis plutôt que le meilleur score.
+    Si max_variants est fourni, seules les N premières variantes sont générées.
 
     Variantes produites (1 image chacune) :
       • Base           — le prompt original du CdC
@@ -835,9 +837,12 @@ def generate_best_variants(
     engine = VariantEngine()
     variants = engine.generate_variants(best, all_briefs=others, n_fusions=n_fusions)
 
+    if max_variants and max_variants > 0:
+        variants = variants[:max_variants]
+
     print("\n" + "=" * 60)
     print(f"  MEILLEUR CdC : {best.get('name')} (score {best.get('trending_score')}/100)")
-    print(f"  {len(variants)} variantes à générer :")
+    print(f"  {len(variants)} variante(s) à générer :")
     for i, v in enumerate(variants, 1):
         print(f"    {i:2d}. {v}")
     cost_est = len(variants) * 0.006
@@ -1046,6 +1051,10 @@ def main():
         "--niche", type=str, default="",
         help="Nom du CdC à générer (pour --best). Défaut : meilleur score.",
     )
+    gen_parser.add_argument(
+        "--limit", type=int, default=0,
+        help="Nombre max de variantes à générer (pour --best). 0 = toutes. Ex: --limit 1 pour calibrer.",
+    )
 
     # ── Sous-commande : generate-elements ─────────────────────────────────────
     gen_elem_parser = subparsers.add_parser(
@@ -1135,6 +1144,7 @@ def main():
                 yes=args.yes,
                 output_dir=args.output,
                 niche_name=args.niche or None,
+                max_variants=args.limit or None,
             )
         else:
             generate_approved(
