@@ -472,7 +472,17 @@ ROLE SIZING GUIDE:
   filler    : small simple shape (accent dots, petals, leaves, small icons)
 
 COLORS: every prompt must use a specific hex from the niche's color_palette.
-Do NOT write "blue" — write "indigo blue (#1B3A6B)".
+Do NOT write "blue" — write "sky blue (#87CEEB)".
+
+⚠️ COLOR CONTRAST RULE (critical): element fill colors MUST contrast strongly against background_color.
+  • Dark background (luminance < 100, e.g. navy #1B3A6B, forest green #2D5A27, charcoal #333):
+      → Use LIGHT fills: white (#FFFFFF), cream (#F5F0E8), pale pink (#F8C8C8), sky blue (#87CEEB),
+        gold (#FFD700), coral (#E8855D), lavender (#C9A0DC), sage green (#7DB87D)
+      → NEVER use a fill color close to the background (navy fill on navy bg = invisible — just contours)
+  • Light background (luminance > 180, e.g. white #FFFFFF, ivory #F5F0E8, cream #FFF8E7):
+      → Use DARK or SATURATED fills: deep teal (#1A6B6B), forest green (#2D5A27), burgundy (#7B2D42),
+        navy (#1B3A6B), terracotta (#C26A3E), deep purple (#4A235A)
+  Verification rule: if the element fill hex is within 60 RGB distance of background_color — WRONG, change it.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 

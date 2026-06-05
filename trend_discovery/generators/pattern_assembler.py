@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import io
 import logging
+import math
 import random
 from typing import List, Optional, Tuple
 
@@ -29,9 +30,9 @@ class PatternAssembler:
     CANVAS_SIZE = 2048
 
     ROLE_SCALE = {
-        "hero": 0.20,
-        "supporting": 0.13,
-        "filler": 0.07,
+        "hero": 0.16,
+        "supporting": 0.10,
+        "filler": 0.06,
     }
 
     @staticmethod
@@ -151,10 +152,11 @@ class PatternAssembler:
         density: str,
     ) -> "Image":
         """
-        Place les éléments en disposition aléatoire (tossed layout).
+        Place les éléments en grille jittérée (distribution uniforme + variation organique).
 
-        Chaque élément est placé à une position aléatoire avec une rotation aléatoire.
-        Le nombre d'instances dépend du rôle et de la densité.
+        Algorithme : divise le canvas en cellules NxM, place un élément par cellule
+        avec décalage aléatoire ±25% et rotation douce ±15°.
+        Remplace le placement purement aléatoire qui crée des clusters et zones vides.
 
         Args:
             elements_rgba: liste de (element_dict, PIL Image RGBA redimensionnée)
@@ -167,32 +169,58 @@ class PatternAssembler:
         from PIL import Image
 
         density_map = {"sparse": 1, "medium": 2, "dense": 3}
-        density_instances = density_map.get(density, 2)
+        d = density_map.get(density, 2)
 
         canvas = Image.new("RGBA", (canvas_size, canvas_size), (0, 0, 0, 0))
 
+        # Construire la liste plate de toutes les instances à placer
+        placements = []
         for element_dict, element_img in elements_rgba:
             role = element_dict.get("role", "supporting")
-
             if role == "hero":
-                n_instances = 1
+                n = d
             elif role == "supporting":
-                n_instances = density_instances
-            else:
-                # filler
-                n_instances = density_instances * 2
+                n = d + 1
+            else:  # filler
+                n = d * 2 + 1
+            for _ in range(n):
+                placements.append((element_dict, element_img))
 
-            ew, eh = element_img.size
+        n = len(placements)
+        if n == 0:
+            return canvas
 
-            for _ in range(n_instances):
-                angle = random.uniform(-25, 25)
-                rotated = element_img.rotate(angle, expand=True, resample=Image.BICUBIC)
-                rw, rh = rotated.size
+        random.shuffle(placements)
 
-                x = random.randint(-rw // 4, canvas_size - rw * 3 // 4)
-                y = random.randint(-rh // 4, canvas_size - rh * 3 // 4)
+        # Grille : √n colonnes × rangées suffisantes, +1 rangée pour couvrir les bords
+        cols = max(2, round(math.sqrt(n * 1.2)))
+        rows = max(2, math.ceil(n / cols) + 1)
+        cell_w = canvas_size // cols
+        cell_h = canvas_size // rows
 
-                self._paste_with_wrap(canvas, rotated, x, y, canvas_size)
+        # Positions des centres de cellule, mélangées pour varier les éléments par zone
+        grid_positions = [
+            (c * cell_w + cell_w // 2, r * cell_h + cell_h // 2)
+            for r in range(rows) for c in range(cols)
+        ]
+        random.shuffle(grid_positions)
+
+        for i, (element_dict, element_img) in enumerate(placements):
+            cx, cy = grid_positions[i % len(grid_positions)]
+
+            # Jitter ±25% de la cellule pour l'aspect organique
+            jitter_x = random.randint(-cell_w // 4, cell_w // 4)
+            jitter_y = random.randint(-cell_h // 4, cell_h // 4)
+
+            # Rotation douce (±15°) — assez pour casser la rigidité, pas au point de déformer
+            angle = random.uniform(-15, 15)
+            rotated = element_img.rotate(angle, expand=True, resample=Image.BICUBIC)
+            rw, rh = rotated.size
+
+            x = cx + jitter_x - rw // 2
+            y = cy + jitter_y - rh // 2
+
+            self._paste_with_wrap(canvas, rotated, x, y, canvas_size)
 
         return canvas
 
