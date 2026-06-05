@@ -405,25 +405,29 @@ For EACH trend, return a complete JSON object with ALL of these fields — be sp
   "market_opportunity": "very_high" | "high" | "medium" | "low",
   "why_trending": "2 factual sentences: (1) the real demand evidence you found on the web, (2) why it is an OPPORTUNITY on {name} specifically — i.e. demand is rising but competition is still beatable, and the fresh angle that sets it apart",
   "target_audience": "specific {name} buyer segment + what they make (drawn from: {buyers})",
-  "sub_niches": [
+  "elements": [
     {{{{
-      "name": "specific 2-5 word sub-niche",
-      "trending_score": integer 0-100,
-      "unique_angle": "what makes this sub-niche distinct and saleable",
-      "prompt_keywords": ["keyword1", "keyword2", "keyword3"]
+      "id": 1,
+      "name": "short element name (e.g. Round Inkwell)",
+      "role": "hero" | "supporting" | "filler",
+      "prompt": "CRITICAL: ultra-precise Runware prompt for ONE SINGLE ISOLATED OBJECT. Must follow this EXACT format: 'One single [OBJECT], centered on pure white background. [STYLE ANCHOR matching the niche aesthetic]. Flat 2D vector illustration, bold black outline, solid [COLOR] fill, no gradients, no shadows, no reflections, no other objects, isolated. Simple clean geometric design, product icon style.' Keep under 60 words. Style anchor examples: 'Scandinavian folk art' / 'Japanese woodblock print' / 'vintage rubber stamp design' / 'Bauhaus geometric' / 'Art Nouveau illustration'"
     }}}}
+    // EXACTLY 10 elements total: 2-3 hero elements, 4-5 supporting elements, 2-3 filler elements
   ],
+  "assembly_guide": {{{{
+    "background_color": "#HEXCODE",
+    "layout": "tossed" | "grid" | "half-drop" | "stripe",
+    "density": "sparse" | "medium" | "dense",
+    "color_palette": ["#HEXCODE ColorName", "#HEXCODE ColorName", "#HEXCODE ColorName"],
+    "tips": "1-2 sentences: how to arrange the elements (e.g. group hero elements as anchors, scatter fillers in gaps)"
+  }}}},
   "visual_direction": {{{{
     "mood": "comma-separated mood adjectives (e.g. romantic, nostalgic, scientific)",
-    "composition": "repeat type and scale description (e.g. half-drop repeat, medium scale)",
-    "line_style": "drawing/rendering style (e.g. fine pen lines with watercolor wash)",
     "color_palette": {{{{
       "primary": ["Color Name #HEXCODE", "Color Name #HEXCODE", "Color Name #HEXCODE"],
       "accent": ["Color Name #HEXCODE", "Color Name #HEXCODE"],
       "background": "Color Name #HEXCODE"
-    }}}},
-    "style_references": ["Artist or movement name", "Artist or movement name"],
-    "texture": "surface texture description (e.g. aged paper, fine engraving lines)"
+    }}}}
   }}}},
   "spoonflower_fit": {{{{
     {repeat_field_hint}
@@ -431,23 +435,14 @@ For EACH trend, return a complete JSON object with ALL of these fields — be sp
     "top_products": ["{(profile.product_types[:1] or ['fabric'])[0]}"],
     "competition_level": "very_high" | "high" | "medium" | "low"
   }}}},
-  "ai_generation": {{{{
-    "positive_prompt": "ULTRA-COMPLETE 120-180 word prompt engineered to produce the PERFECT pattern in ONE generation (before any upscaling). Must explicitly cover, in this order: (1) main subject and the specific motifs/objects, (2) exact layout and repeat structure (e.g. half-drop, evenly spaced, balanced negative space, no large gaps), (3) art style + medium + technique (e.g. gouache, vintage engraving, flat vector, watercolor), (4) line quality and level of detail, (5) the precise color palette naming the actual hex colors, (6) lighting/shading approach (flat, soft, even — no harsh cast shadows), (7) background treatment. MUST end with exactly: {quality_suffix}",
-    "negative_prompt": "specific 40-70 word negative prompt tailored to this niche's exact pitfalls (e.g. for botanical: 'wilted, dead leaves, muddy colors'), plus seam/tiling defects, harsh shadows, text, watermarks, low resolution",
-    "key_elements": ["must-have element 1", "must-have element 2", "must-have element 3", "must-have element 4"],
-    "avoid_elements": ["thing to avoid 1", "thing to avoid 2", "thing to avoid 3"],
-    "cfg_scale": 7.5,
-    "style_weight": 0.85
-  }}}},
   "wikimedia_query": "2-5 word query to find public domain reference images on Wikimedia Commons",
   "spoonflower_query": "2-5 word query to search Spoonflower bestselling designs for this niche (e.g. 'nordic folk flat pattern')"
 }}}}
 
 Requirements:
-- EXACTLY 4 sub-niches per trend
+- EXACTLY 10 elements per niche (2-3 hero, 4-5 supporting, 2-3 filler)
 - Real hex codes for ALL colors (no "earthy brown" — use "#8B4513 Saddle Brown")
-- positive_prompt must be 120-180 words, vivid, specific, follow the 7-part structure, end with the required suffix
-- style_references must be real artists or movements (e.g. "William Morris", "Pierre-Joseph Redouté")
+- Each element prompt must be under 60 words, describe ONE SINGLE ISOLATED OBJECT on white background
 - Focus on trends that are hot RIGHT NOW ({today}), have strong visual identity for {name} — each backed by real web evidence in why_trending
 - Target export: {file_fmt}, {dpi} DPI, {min_px}x{min_px}px min, {color_profile}, max {max_mb}MB
 - wikimedia_query must find actual public domain illustration or art images
@@ -503,6 +498,16 @@ Return ONLY a valid JSON array of exactly {total_count} trend objects ({profile.
         cp.setdefault("primary", [])
         cp.setdefault("accent", [])
         cp.setdefault("background", "")
+
+        # ── Éléments et guide d'assemblage (nouveau schéma element-based) ────
+        t.setdefault("elements", [])
+        t.setdefault("assembly_guide", {
+            "background_color": "#FFFFFF",
+            "layout": "tossed",
+            "density": "medium",
+            "color_palette": [],
+            "tips": "",
+        })
 
         # ── Compatibilité plateforme ─────────────────────────────────────────
         sf = t.setdefault("spoonflower_fit", {})
