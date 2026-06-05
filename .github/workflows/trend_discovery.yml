@@ -38,6 +38,7 @@ on:
           - 'generate-best'      # Variantes du meilleur CdC auto-sélectionné (~0.05 €)
           - 'generate-elements'  # 10 éléments isolés + assemblage Pillow (~0.06 €)
           - 'generate'           # Images des CdCs approuvées (manifest requis)
+          - 'colorize'           # Variantes de couleurs sur images existantes (0 €, Pillow)
           - 'full'               # Pipeline complet sans génération d'images
       manifest_path:
         description: 'Path to approval manifest (relative to repo root)'
@@ -59,6 +60,10 @@ on:
         description: 'Nb max de variantes pour generate-best (1 = base uniquement, 0 = toutes). Ex: 1 pour calibrer.'
         required: false
         default: '0'
+      palettes:
+        description: 'Palettes colorize séparées par virgule (vide = toutes les 8). Ex: dark_moody,pastel_soft,earth_tones'
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -147,6 +152,15 @@ jobs:
             NICHE_ARG=""
             [ -n "${{ github.event.inputs.niche }}" ] && NICHE_ARG="--niche '${{ github.event.inputs.niche }}'"
             eval python -m trend_discovery.main generate-elements --yes $NICHE_ARG
+          elif [ "$MODE" = "colorize" ]; then
+            echo "=== MODE COLORIZE : variantes de couleurs (Pillow, 0 coût) ==="
+            pip install scikit-learn -q
+            PALETTE_ARG=""
+            [ -n "${{ github.event.inputs.palettes }}" ] && PALETTE_ARG="--palettes '${{ github.event.inputs.palettes }}'"
+            eval python -m trend_discovery.main colorize --yes \
+              --input ./output/spoonflower \
+              --output ./output/colorways \
+              $PALETTE_ARG
           elif [ "$MODE" = "generate" ]; then
             echo "=== MODE GENERATE : génération des images approuvées ==="
             python -m trend_discovery.main generate \

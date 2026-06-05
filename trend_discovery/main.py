@@ -1155,6 +1155,68 @@ def generate_best_variants(
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+# Mode colorize : variantes de coloris sur images existantes (0 Runware)
+# ─────────────────────────────────────────────────────────────────────────────
+
+def colorize_images(
+    input_dir: str = "./output/spoonflower",
+    output_dir: str = "./output/colorways",
+    palettes: Optional[List[str]] = None,
+    glob_pattern: str = "*.png",
+    yes: bool = False,
+) -> None:
+    """
+    Génère des variantes de coloris pour tous les PNGs d'un dossier.
+
+    Principe : remplace les couleurs dominantes par des palettes prédéfinies
+    via k-means + correspondance Lab. Aucun appel Runware — 100% gratuit.
+
+    Palettes disponibles : dark_moody, pastel_soft, earth_tones, navy_mono,
+                           forest_green, rose_blush, sage_cream, midnight_gold
+    """
+    import glob as _glob
+    from trend_discovery.generators.color_rewriter import ColorRewriter, PALETTES
+
+    files = sorted(_glob.glob(os.path.join(input_dir, glob_pattern)))
+    # Exclure les colorways déjà générés (pas de récursion)
+    files = [f for f in files if "__" not in os.path.basename(f)]
+
+    if not files:
+        print(f"ERROR : Aucun PNG trouvé dans {input_dir} (pattern: {glob_pattern})")
+        return
+
+    pal_names = palettes or list(PALETTES.keys())
+    n_out = len(files) * len(pal_names)
+
+    print("\n" + "=" * 60)
+    print(f"  COLORIZE — variantes de palette (Pillow, 0 coût Runware)")
+    print(f"  {len(files)} image(s) source × {len(pal_names)} palette(s) = {n_out} colorways")
+    print(f"  Palettes : {', '.join(pal_names)}")
+    print(f"  Sortie   : {output_dir}/")
+    print("=" * 60)
+    for i, f in enumerate(files, 1):
+        print(f"  {i:2d}. {os.path.basename(f)}")
+    print()
+
+    if not yes:
+        answer = input("Proceed? [yes/no] ").strip().lower()
+        if answer not in ("yes", "y"):
+            print("Annulé.")
+            return
+
+    rewriter = ColorRewriter(n_colors=8)
+    results = rewriter.batch_recolor(
+        input_dir=input_dir,
+        palette_names=pal_names,
+        output_dir=output_dir,
+        glob_pattern=glob_pattern,
+    )
+
+    total_ok = sum(len(v) for v in results.values())
+    print(f"\n✅ {total_ok}/{n_out} colorways générés → {output_dir}/")
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # Mode generate-elements : 10 éléments isolés + assemblage Pillow
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -1397,6 +1459,32 @@ def main():
         help="Cibler des CdC précis (noms séparés par virgules). Prioritaire sur --limit.",
     )
 
+    # ── Sous-commande : colorize ──────────────────────────────────────────────
+    colorize_parser = subparsers.add_parser(
+        "colorize",
+        help="Variantes de coloris sur images existantes — Pillow uniquement, 0 coût Runware.",
+    )
+    colorize_parser.add_argument(
+        "--input", type=str, default="./output/spoonflower",
+        help="Dossier contenant les PNGs source.",
+    )
+    colorize_parser.add_argument(
+        "--output", type=str, default="./output/colorways",
+        help="Dossier de sortie pour les colorways.",
+    )
+    colorize_parser.add_argument(
+        "--palettes", type=str, default="",
+        help="Palettes séparées par virgule (vide = toutes). Ex: dark_moody,pastel_soft",
+    )
+    colorize_parser.add_argument(
+        "--pattern", type=str, default="*.png",
+        help="Glob pattern pour filtrer les fichiers source.",
+    )
+    colorize_parser.add_argument(
+        "--yes", action="store_true",
+        help="Auto-confirmer (mode CI).",
+    )
+
     # ── Sous-commande : generate-elements ─────────────────────────────────────
     gen_elem_parser = subparsers.add_parser(
         "generate-elements",
@@ -1494,6 +1582,17 @@ def main():
             output_dir=args.output,
             limit=args.limit or None,
             niche_names=niche_list,
+        )
+        return
+
+    if args.command == "colorize":
+        pal_list = [p.strip() for p in args.palettes.split(",") if p.strip()] or None
+        colorize_images(
+            input_dir=args.input,
+            output_dir=args.output,
+            palettes=pal_list,
+            glob_pattern=args.pattern,
+            yes=args.yes,
         )
         return
 
