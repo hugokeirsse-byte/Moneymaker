@@ -543,11 +543,15 @@ Use for: Cabinet of curiosities, folk objects, vintage labels, scattered botanic
 
 ──────────────────────────────────────────────
 STYLE B — LARGE HERO MOTIF, DENSE FILL (1-3 BIG shapes dominate the tile)
-Use for: Art Deco botanical fans, tropical leaves, large geometric flowers, bold medallions.
+Use for: large tropical leaves, oversized botanicals, bold single-leaf repeats, oversized geometric flowers.
 SPOONFLOWER WALLPAPER RULE: each motif must be LARGE enough to read from 2 meters away.
 A tile with 20 tiny elements looks like fabric texture — good for cloth, WRONG for wallpaper.
 Target: 1-3 dominant shapes each filling 30-60% of the tile height/width.
-Compare to bestsellers: Art Deco aara palm (1 huge flower per tile), Art Deco fans (3-4 large fans).
+SOBER PALETTE RULE (mandatory for Style B): 2-3 colors MAXIMUM. The power comes from SCALE and
+SIMPLICITY — one giant monstera leaf on a rust background (cream + rust + sage = 3 colors). NOT 7 colors.
+Proven bestseller formula: one oversized leaf/flower centered on a bold single-color background,
+the repeat creates rhythm without clutter. Examples: pink monstera on terracotta, white peony on navy,
+sage palm on charcoal. Rich texture on the motif (brushstroke quality, NOT flat graphic).
 ──────────────────────────────────────────────
 
   PART 1 — PATTERN DECLARATION: "Large-scale [half-drop/mirror/brick] repeat pattern
@@ -712,6 +716,93 @@ STYLE D PROMPT STRUCTURE:
     Each element is fully formed with NO blending or merging between them."
   PART 5 — BACKGROUND: "Solid [rich dark / warm cream / sage green] background. All edges tile."
 
+──────────────────────────────────────────────
+STYLE E — TROMPE L'OEIL RÉALISTE (architectural illusion — the wallpaper IS the view)
+Use for: window looking out on forest/garden/ocean, arched stone opening into landscape,
+bookshelf wall with depth, vine-covered wall with hidden door, greenhouse glass panes.
+THE CONCEPT: the wallpaper creates the illusion that the wall has opened. The buyer's room
+gains a VIEW — a forest, a garden at dusk, a Parisian courtyard, a tropical canopy.
+This style is the highest-end, most photorealistic approach. It does NOT repeat as tiles —
+it is a SINGLE large mural composition (full repeat = half-drop so left/right edges match).
+——————————————————————————————
+  PART 1 — ILLUSION DECLARATION:
+    "Seamless half-drop repeat wallpaper mural creating a trompe l'oeil illusion of [SPECIFIC VIEW].
+    The viewer sees [what appears to be visible through the opening] as if standing in the room
+    looking at [the architectural element — window frame / stone arch / wrought iron gate]."
+
+  PART 2 — ARCHITECTURAL FRAME (the 'opening'):
+    Describe the frame that makes the illusion work — it must be PHOTOREALISTIC:
+    "A [carved stone arch / timber window frame / wrought iron arch / mossy stone doorway]
+    frames the view. The frame is rendered in photorealistic detail — [specific material:
+    aged limestone with lichen, dark weathered oak, wrought iron with rust bloom]. The frame
+    occupies the left and right 15% of the tile — its edges interlock in the half-drop repeat
+    so that the view between frames reads as one continuous panorama."
+
+  PART 3 — THE VIEW (what lies beyond):
+    "Beyond the frame: [SPECIFIC LANDSCAPE]. Rendered in painterly realism:
+    [foreground elements], [midground], [background with atmospheric perspective].
+    Light source: [golden hour / overcast / dappled morning light].
+    Color mood: [muted / saturated / misty]."
+
+  PART 4 — DEPTH + REALISM:
+    "The composition has 3 layers of depth: foreground [plants/ivy/flowers] hanging INTO the
+    frame, midground [the main landscape feature], background [sky/haze/distant trees].
+    Painterly brushstroke quality — NOT flat illustration. Rich textural detail on every surface."
+
+  PART 5 — TILE MECHANICS:
+    "Left and right tile edges align perfectly so the panoramic view is CONTINUOUS across
+    the wall with no visible seam. Top and bottom edges blend into the sky/ground naturally."
+
+WORKED EXAMPLE STYLE E (Forest Window):
+  "Seamless half-drop repeat wallpaper mural: a trompe l'oeil view through a weathered stone
+  arch into an ancient deciduous forest at golden hour. The arch is rendered in photorealistic
+  carved limestone — pale grey with patches of green lichen and amber rust stains. The arch
+  occupies the sides of the tile, its curved edges interlock perfectly in half-drop repeat so
+  adjacent arches create a continuous colonnade effect, with the forest vista stretching
+  uninterrupted between columns. Beyond the arch: a sunlit forest floor, ancient oak trunks
+  with deep bark texture, morning mist filtering through the canopy, shafts of golden light
+  hitting patches of forest ferns and moss. Foreground: sprays of fern fronds and ivy
+  hanging DOWN from the arch top edge into the frame. Midground: 3-4 oak trunks with
+  rich brown-grey bark. Background: pale golden haze, distant tree silhouettes.
+  Colors: limestone grey (#B8B0A0), bark brown (#5C3D2E), forest green (#2D5A27),
+  golden light (#F5D78E), mist white (#F0EDE8). Painterly realism — NOT flat illustration.
+  Each surface has visible texture: rough stone, ridged bark, velvet moss, translucent fern."
+
+──────────────────────────────────────────────
+STYLE F — RÉALISTE ÉPARS (scattered photorealistic elements on rich dark background)
+Use for: naturalist specimen studies, terrarium floor elements, geological specimens,
+forest floor scatter, underwater elements, mineral/crystal collections.
+THE AESTHETIC: like image 1 in the reference — rocks, mosses, ferns, wood pieces scattered
+on a dark navy/charcoal/forest green background. Rich detailed illustration, almost photographic.
+Each element is a SPECIMEN — precise botanical/geological accuracy, visible texture, shadow.
+——————————————————————————————
+  PART 1 — COLLECTION DECLARATION:
+    "Seamless scattered repeat pattern: a naturalist's specimen collection of [SPECIFIC ELEMENTS]
+    on a solid [DEEP COLOR (#HEX)] background. Each element is a precisely rendered specimen —
+    not stylized, not flat — but illustrated with the fidelity of a natural history museum plate."
+
+  PART 2 — SPECIMEN DESCRIPTIONS (4-6 elements):
+    For EACH element: "[SPECIFIC SPECIMEN NAME] rendered with [SPECIFIC TEXTURE DETAIL]:
+    [surface characteristic — e.g. 'slate grey with white calcite veining', 'velvet green moss
+    capsules with thread-thin stalks', 'amber-brown bark with deep longitudinal fissures']."
+    Include subtle cast shadows for each element — they rest ON the background, not float.
+
+  PART 3 — PALETTE:
+    "Background: solid [deep navy #1B2A3B / forest green #1A2F1A / charcoal #2A2A2A /
+    dark slate #1F2535] — flat uniform color, no texture.
+    Elements: naturalistic colors — no artificial palette constraints. Each specimen is true-to-life:
+    [grey slate, rust-orange lichen, viridian moss, warm tan wood, cream fungi]."
+
+  PART 4 — DENSITY + SCATTER:
+    "Elements scattered at varied scales and angles — some overlapping slightly (natural pile),
+    some isolated. Medium density — the dark background breathes between specimens.
+    NO blending between elements — each is a distinct solid object with its own shadow."
+
+  PART 5 — BACKGROUND:
+    "Solid uniform [deep color (#HEX)] background — no gradient, no texture. The specimens
+    sit ON this background like objects on a dark felt display surface.
+    All four tile edges interlock seamlessly."
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Requirements:
@@ -720,19 +811,26 @@ Requirements:
 - ai_generation.positive_prompt follows the MANDATORY FLUX DEV 2 PROMPT FORMAT (5-part structure, 130-180 words, exact anatomy, anti-fusion locks, solid background) — no exceptions
 - STYLE ASSIGNMENT RULE: assign each niche to the appropriate style:
     • STYLE A → scattered/tossed objects, stationery, food objects (NO vintage labels, NO retro/MCM — banned)
-    • STYLE B → large-scale botanical, tropical large-leaf all-over (Art Deco fans/palms → Style C, not here)
-    • STYLE C → Art Deco single-animal geometric tile (ONE animal, Spoonflower mirror makes the pattern) → for animals with strong silhouette geometry
-    • STYLE D → anthropomorphized animals in absurd/hilarious situations, trompe l'œil, room-specific humor → PRIORITY STYLE
-  MANDATORY distribution for 20 CDCs: MINIMUM 10× Style D, MINIMUM 5× Style C, MAXIMUM 3× Style A, MAXIMUM 2× Style B.
+    • STYLE B → 1-3 LARGE hero motifs (oversized single leaf/flower on bold bg) — 2-3 colors MAX, sober + impactful
+    • STYLE C → Art Deco single-animal geometric tile (ONE animal, Spoonflower mirror makes the pattern)
+    • STYLE D → anthropomorphized animals in absurd/hilarious situations, trompe l'œil shelves, room-specific humor
+    • STYLE E → trompe l'oeil réaliste architectural (window/arch/opening with photorealistic landscape beyond)
+    • STYLE F → réaliste épars (scattered photorealistic naturalist specimens on dark background — terrarium/geological)
+  OPERATOR NOTE: for a batch focused on UNEXPLORED TERRITORY, prioritize styles E and F which have never been done.
+  Adjust mandatory distribution based on MONEYMAKER_FOCUS operator instructions — follow those FIRST.
+  DEFAULT distribution if no operator focus: minimum 4× Style C, 3× Style D, 3× Style E, 3× Style F, 4× Style B, 3× Style A.
   STYLE C animals (Art Deco single tile — Spoonflower mirror repeat creates the interlocking pattern):
-    owls, foxes, tigers, stags/deer with antlers, octopus, salamanders, beetles, peacocks, egrets, cranes, herons.
-  STYLE D concepts (anthropomorphized animals in WILD/ABSURD situations — the more unexpected, the better):
-    detectives solving ridiculous crimes, philosophers debating at a café, jury members at a kangaroo court,
-    barristers/judges in wigs, pickpockets with instruction guides, sushi chefs, art critics dismissing masterpieces,
-    Formula 1 racing snails, speed-dating tortoises, therapy sessions for lobsters, penguins as DJs at a rave,
-    goats at hot yoga, guinea pigs at a Michelin-starred restaurant, frogs at a wine tasting, raccoons at a heist planning session,
-    cats as Victorian surgeons, dogs running a startup, bears as astrologers, crows writing poetry.
-  NO vintage labels. NO retro/mid-century modern. NO folk patterns. NO "scattered botanicals". NO antique objects pattern.
+    koi fish, fox, vampire bat, luna moth, manta ray, praying mantis, stag beetle, wolf, jaguar, salamander.
+  STYLE D concepts (anthropomorphized animals in WILD/ABSURD situations):
+    detectives, chefs at Michelin restaurants, DJs, judges in wigs, racing snails, speed-dating tortoises,
+    therapy lobsters, guinea pigs at fancy dinner, frogs at wine tasting, raccoon heist planners.
+  STYLE E concepts (trompe l'oeil architectural):
+    stone arch into ancient forest, timber window onto misty Japanese garden, wrought-iron gate into Mediterranean courtyard,
+    greenhouse window with tropical canopy, crumbling gothic arch into moonlit cemetery garden.
+  STYLE F concepts (realistic naturalist scatter):
+    forest floor (rocks + moss + ferns + bark), tide pool specimens, mineral/crystal collection, tropical terrarium,
+    deep sea floor, geological cross-sections, lichen + stone wall.
+  NO vintage labels. NO retro/mid-century modern. NO folk patterns. NO antique objects tossed pattern.
 - ai_generation MUST NOT include a "negative_prompt" field — FLUX Dev 2 does not support it
 - ai_generation.cfg_scale is ALWAYS 4.0 (FLUX Dev 2), never 7.5
 - Real hex codes for ALL colors everywhere (no "earthy brown" — use "#8B4513 Saddle Brown")
