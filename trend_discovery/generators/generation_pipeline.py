@@ -54,6 +54,7 @@ class GenerationPipeline:
         self,
         output_dir: str = "./output/spoonflower",
         upscale_factor: int = 4,
+        tiling: bool = True,
     ):
         from trend_discovery.generators.prompt_builder import PromptBuilder
         from trend_discovery.generators.runware_generator import RunwareGenerator
@@ -64,6 +65,7 @@ class GenerationPipeline:
         self._packager = SpoonflowerPackager(output_dir=output_dir)
         self._upscale_factor = upscale_factor
         self._output_dir = output_dir
+        self._tiling = tiling
 
     def _get_niche_keywords(self, opp) -> List[str]:
         """Extrait les mots-clés d'un OpportunityScore pour le prompt."""
@@ -109,6 +111,7 @@ class GenerationPipeline:
             positive_prompt=gen_prompt.positive,
             negative_prompt=gen_prompt.negative,
             upscale_factor=self._upscale_factor,
+            tiling=self._tiling,
         )
 
         if not image_bytes:

@@ -1015,7 +1015,9 @@ def generate_all_base(
     try:
         from trend_discovery.generators.generation_pipeline import GenerationPipeline
         from trend_discovery.generators.quality_auditor import QualityAuditor
-        pipeline = GenerationPipeline(output_dir=output_dir, upscale_factor=4)
+        # tiling=False pour les plateformes standalone (Redbubble, etc.)
+        tiling = "redbubble" not in output_dir.lower()
+        pipeline = GenerationPipeline(output_dir=output_dir, upscale_factor=4, tiling=tiling)
         auditor = QualityAuditor()
     except Exception as exc:
         logger.error("[generate-all] GenerationPipeline indisponible : %s", exc)

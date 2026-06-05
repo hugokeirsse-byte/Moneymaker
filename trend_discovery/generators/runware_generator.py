@@ -226,6 +226,7 @@ class RunwareGenerator:
         retries: int = 2,
         seed_image_url: Optional[str] = None,
         strength: float = 0.25,
+        tiling: bool = True,
     ) -> Tuple[Optional[bytes], Optional[str]]:
         """
         Génère une image (1024×1024) puis l'upscale via Runware AI (Real-ESRGAN × 4 → 4096×4096).
@@ -248,6 +249,7 @@ class RunwareGenerator:
                 cfg_scale=cfg_scale,
                 seed_image_url=seed_image_url,
                 strength=strength,
+                tiling=tiling,
             )
             if not base_url:
                 continue
