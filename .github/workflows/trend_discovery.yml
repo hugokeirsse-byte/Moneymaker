@@ -201,6 +201,10 @@ jobs:
             python -m trend_discovery.generators.upscale_existing \
               --input ./output/spoonflower \
               $LIMIT_ARG
+            echo "-- Re-upscale user uploads --"
+            python -m trend_discovery.generators.upscale_existing \
+              --input ./output/uploads/base \
+              $LIMIT_ARG || echo "(no uploads found, skipped)"
             echo "-- Auto thumbnails post-upscale --"
             python -m trend_discovery.main thumbnails \
               --pipeline ./output/spoonflower \
