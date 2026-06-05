@@ -52,6 +52,10 @@ on:
         description: 'Orientation thématique des CDC (mode preview). Ex: Art Deco animals + anthropomorphized portraits, no vintage'
         required: false
         default: ''
+      niche_count:
+        description: 'Override niche count (ex: 16 → 20 CDCs total avec 4 crossover). Vide = défaut profil (12).'
+        required: false
+        default: ''
       manifest_path:
         description: 'Path to approval manifest (relative to repo root)'
         required: false
@@ -127,6 +131,7 @@ jobs:
           GEMINI_API_KEY:       ${{ secrets.GEMINI_API_KEY }}
           # Orientation thématique des CDC (mode preview)
           MONEYMAKER_FOCUS:     ${{ github.event.inputs.focus || '' }}
+          MONEYMAKER_NICHE_COUNT: ${{ github.event.inputs.niche_count || '' }}
           # Runware : injecté si mode génération ou upscale-fix
           RUNWARE_API_KEY:      ${{ (github.event.inputs.mode == 'generate' || github.event.inputs.mode == 'generate-best' || github.event.inputs.mode == 'generate-all' || github.event.inputs.mode == 'generate-elements' || github.event.inputs.mode == 'upscale-fix') && secrets.RUNWARE_API_KEY || '' }}
           RUNWARE_MODEL:        ${{ secrets.RUNWARE_MODEL || 'runware:101@1' }}
