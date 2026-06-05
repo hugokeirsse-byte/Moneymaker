@@ -6,13 +6,7 @@ data/*.db
 data/detection_history.jsonl
 data/approvals/
 .claude/
-# Images lourdes — gitignorées, disponibles via GitHub Actions artifacts
-# output/uploads/base/        : uploads upscalés ~15 MB chacun → workflow upscale_uploads
-# output/colorways/           : colorways HSV ~10-30 MB → workflow colorize
-# output/uploads/colorways/   : colorways uploads → workflow colorize
-# output/upscaled/            : images upscalées
-# output/thumbnails/ est inclus dans git (vignettes JPEG ~50-100 KB, navigables GitHub)
-output/uploads/base/
+# output/uploads/base/ : inclus dans git pour accès workflow upscale-fix
 output/colorways/
 output/uploads/colorways/
 output/upscaled/
