@@ -539,33 +539,35 @@ Use for: Cabinet of curiosities, folk objects, vintage labels, scattered botanic
     no texture, no gradient. All four edges tile perfectly."
 
 ──────────────────────────────────────────────
-STYLE B — DENSE ALL-OVER FILL (elements cover 100% of tile — NO visible background)
-Use for: Art Deco scales/fans, tropical botanical, dense florals, geometric interlocking
-This is the SPOONFLOWER BESTSELLER STYLE — prioritize it for wallpaper-focused niches.
+STYLE B — LARGE HERO MOTIF, DENSE FILL (1-3 BIG shapes dominate the tile)
+Use for: Art Deco botanical fans, tropical leaves, large geometric flowers, bold medallions.
+SPOONFLOWER WALLPAPER RULE: each motif must be LARGE enough to read from 2 meters away.
+A tile with 20 tiny elements looks like fabric texture — good for cloth, WRONG for wallpaper.
+Target: 1-3 dominant shapes each filling 30-60% of the tile height/width.
+Compare to bestsellers: Art Deco aara palm (1 huge flower per tile), Art Deco fans (3-4 large fans).
 ──────────────────────────────────────────────
 
-  PART 1 — PATTERN DECLARATION: "Dense seamless all-over [half-drop/mirror/brick] repeat
-    pattern for high-end wallpaper printing. Zero visible background — shapes fill
-    the ENTIRE tile surface edge-to-edge with no gaps."
+  PART 1 — PATTERN DECLARATION: "Large-scale [half-drop/mirror/brick] repeat pattern
+    for high-end wallpaper printing. [N=1-3] large hero motifs dominate the tile —
+    each motif filling approximately [40-70]% of the tile height.
+    Zero visible background — motif shapes and their colored fills cover the entire tile."
 
-  PART 2 — FILL STRUCTURE ANCHOR:
-    Describe HOW shapes interlock to cover the tile. Be structural:
-    "Rows of overlapping [SHAPE] stacked like fish scales, each [SHAPE] slightly
-    overlapping the one above and beside it, so no plain background shows anywhere."
-    OR: "Large botanical leaves radiate from central stems arranged in a half-drop
-    repeat, leaf edges touching leaf edges at every tile boundary."
-    OR: "Interlocking geometric [SHAPE] tessellate like a mosaic — no grout lines,
-    no visible background, pure shape-on-shape contact."
+  PART 2 — SCALE ANCHOR (CRITICAL):
+    Specify the size of the hero motif explicitly:
+    "The central [SHAPE/FLOWER/FAN] spans approximately 70% of the tile width — it is
+    LARGE and dominant. Only [2-4] of these motifs appear in the tile — they are not
+    small repeating units but bold architectural-scale shapes."
+    DO NOT describe dozens of tiny elements. 1-3 large shapes = correct. 20+ = wrong.
 
   PART 3 — MOTIF ANATOMY + COLOR FILL:
-    Describe each shape/motif with crisp internal detail:
-    "Each fan-shaped coquille is drawn with 12 precisely spaced radiating lines
-    from base to arc tip. Colors alternate: terracotta (#C25C3A), warm gold (#D4A017),
-    sage green (#7DB87D), cream (#F5F0E8), dusty rose (#C4827A)."
+    Describe the large hero shape with crisp internal detail:
+    "Each [SHAPE] is drawn with [N] precisely spaced radiating lines from base to arc tip.
+    Colors: [2-4 hex codes only]. Each shape is filled with a single flat solid color —
+    absolutely no gradient, no texture, no shadow inside any shape."
     Crisp outlines are MANDATORY: "each shape has a clean 2px dark outline separating
     it from neighbors — no blurry edges, no soft gradients."
 
-  PART 4 — DENSITY LOCK (replaces anti-fusion for this style):
+  PART 4 — DENSITY LOCK:
     "The entire tile surface is covered with NO plain background visible anywhere.
     Every square millimeter is occupied by a motif shape or a colored fill.
     Clean crisp outlines separate each shape — no blurring, no bleeding between shapes."
@@ -574,20 +576,19 @@ This is the SPOONFLOWER BESTSELLER STYLE — prioritize it for wallpaper-focused
     "All four edges of the tile interlock perfectly with zero seam.
     Designed for high-end wallpaper and premium fabric printing."
 
-WORKED EXAMPLE STYLE B (Art Deco Fan Scales — bestseller type):
-  "Dense seamless half-drop repeat pattern for high-end wallpaper printing.
-  Zero visible background — fan shapes tile the ENTIRE surface edge-to-edge.
-  Rows of overlapping Art Deco fan coquilles stacked like scales, each fan
-  slightly overlapping the row above, covering every millimeter of the tile.
-  Each fan is drawn with 14 precisely radiating lines from a narrow base to a
-  wide rounded arc tip, all contained within a crisp dark outline. Colors alternate
-  across fans in a 5-tone warm earth palette: terracotta orange (#C25C3A), warm gold
-  (#D4A017), sage green (#7DB87D), cream (#F5F0E8), dusty rose (#C4827A).
-  Each fan is filled with a single flat solid color — absolutely no gradient, no
-  texture, no shadow inside any shape. Clean 2px dark charcoal (#2A2A2A) outline
-  separates every fan from its neighbors. The entire tile surface is covered
-  with NO plain background visible anywhere. All four edges tile perfectly.
-  Designed for high-end wallpaper and premium fabric printing."
+WORKED EXAMPLE STYLE B (Art Deco Palm Floral — aara palm type, ~8000 favorites):
+  "Large-scale half-drop repeat pattern for high-end wallpaper printing.
+  ONE large Art Deco palm fan flower dominates the center of the tile — the fan
+  spans 70% of the tile width, radiating from a narrow stem base up to a wide
+  arc of 18 precisely spaced palm frond lines. This is a LARGE architectural motif,
+  not a small repeating unit. Only 2 full flowers appear in the tile (one centered,
+  one half-visible at top edge for half-drop). Zero background visible — the fan
+  petals and the colored fills between them cover the entire tile.
+  Colors: blush pink (#F2A0A0), warm cream (#FDF6EC), golden amber (#D4A017).
+  Each palm frond line is crisp and precise — flat solid fill, no gradient,
+  no texture, no shadow inside any shape. Clean 2px outline separates each frond.
+  The entire tile surface covered with NO plain background visible anywhere.
+  Designed for Spoonflower peel-and-stick wallpaper — bold impact at room scale."
 
 WORKED EXAMPLE STYLE A (Japanese Woodblock niche → ai_generation.positive_prompt):
   "Seamless half-drop repeat pattern for high-end fabric and wallpaper printing.
