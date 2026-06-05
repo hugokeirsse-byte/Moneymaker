@@ -671,6 +671,44 @@ WORKED EXAMPLE STYLE C (Art Deco Heron tile):
   Solid uniform jet black (#0D0D0D) background across the entire tile — no texture,
   no vignette, perfectly flat. 3-color palette for maximum wallpaper printing contrast."
 
+──────────────────────────────────────────────
+STYLE D — NARRATIVE / HUMOROUS / CONCEPT (the design tells a story or creates surprise)
+Use for: anthropomorphized food/objects, trompe l'œil architecture, portrait-gallery animals,
+room-specific humor. THE HIGHEST-ENGAGEMENT CATEGORY — Spoonflower award winners repeatedly.
+
+Proven bestseller formulas to inspire (NOT copy — create original variations):
+• ANTHROPOMORPHIZED FOOD/VEGGIES: "Carrots Dance" 1539 favs — vegetables with implied human
+  bodies/poses, dancing/moving, illustrated with personality. Apply to: mushrooms hiking,
+  avocados doing yoga, lemons arguing, radishes at a dinner party.
+• PORTRAIT GALLERY ANIMALS: "Cat Cameos" 3347 favs (Award Winner) — animals in Victorian
+  portrait medallions/frames on dark rich background. Apply to: dogs as aristocrats, frogs as
+  professors, raccoons as thieves in mugshot frames, plants as royalty.
+• TROMPE L'OEIL SHELVES: "Instant Library" 864 favs — wallpaper that simulates a real wall
+  (bookshelves, wine racks, plate displays, vinyl record racks, terrarium shelves).
+  These are room-specific by nature — library/study, kitchen, WC, bar.
+
+ROOM-SPECIFIC HUMOR (specifically for WC / bathroom / kitchen niches):
+  These perform extremely well because buyers have a SPECIFIC ROOM in mind:
+  • WC / Toilet humor (non-vulgar, elegant): Victorian toilet paper roll patterns,
+    plumbing diagrams as blueprints, "throne room" gold crowns + ornate frames
+  • Bathroom: soap bar characters, rubber duck fleet, bathtub botanical garden,
+    toothbrush cavalry, vintage medicine bottles
+  • Kitchen: cookware portraits, spice jar library, recipe card pattern, knife display
+  • Study/Library: bookshelf trompe l'oeil, globe collection, map fragments
+
+STYLE D PROMPT STRUCTURE:
+  PART 1 — CONCEPT DECLARATION: "Scattered [tossed/repeat] wallpaper featuring [SPECIFIC
+    HUMOROUS CONCEPT]. The concept: [one sentence explaining the narrative/joke/surprise]."
+  PART 2 — CHARACTER/OBJECT DESCRIPTION: Describe each element with PERSONALITY:
+    "Each [CARROT/CAT/BOOK] is [ACTION/POSE/EXPRESSION] — [specific humorous detail].
+    Semi-realistic illustration style with hand-drawn quality and visible ink texture."
+  PART 3 — PALETTE + RENDERING: Rich illustrated palette (5-8 colors OK for Style D — more
+    colors = more character). "Illustrated in [STYLE: Victorian engraving / editorial
+    illustration / folk art / botanical illustration style]. Rich warm [PALETTE]."
+  PART 4 — COMPOSITION: "Tossed scattered repeat — elements at varied angles and scales.
+    Each element is fully formed with NO blending or merging between them."
+  PART 5 — BACKGROUND: "Solid [rich dark / warm cream / sage green] background. All edges tile."
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Requirements:
@@ -679,9 +717,14 @@ Requirements:
 - ai_generation.positive_prompt follows the MANDATORY FLUX DEV 2 PROMPT FORMAT (5-part structure, 130-180 words, exact anatomy, anti-fusion locks, solid background) — no exceptions
 - STYLE ASSIGNMENT RULE: assign each niche to the appropriate style:
     • STYLE A → scattered/tossed objects, folk, vintage labels, stationery, food objects
-    • STYLE B → dense botanical, Art Deco geometric, tropical, floral all-over
-    • STYLE C → ANY niche featuring an animal (bird, insect, fish, mammal) as the hero motif — MANDATORY for these
-  At least 2 niches out of {total_count} MUST use STYLE C (animal geometry). Prioritize animals with strong wing/fin/tail geometry: herons, cranes, swallows, dragonflies, koi, peacocks, butterflies, deer, foxes.
+    • STYLE B → large-scale botanical, Art Deco geometric fans/palms, tropical large-leaf all-over
+    • STYLE C → ANY niche featuring an animal as the hero motif with geometric body → MANDATORY
+    • STYLE D → humorous/narrative concept, anthropomorphized, trompe l'œil, room-specific
+  Distribution rule for 20 CDCs: minimum 3× Style C, minimum 4× Style D (incl. ≥1 room-specific),
+  remaining split between Style A and B.
+  Prioritize Style C animals: herons, cranes, swallows, dragonflies, koi, peacocks, butterflies, foxes.
+  Prioritize Style D concepts: WC/bathroom humor, portrait gallery animals, anthropomorphized food,
+  trompe l'œil shelves/racks, kitchen humor.
 - ai_generation MUST NOT include a "negative_prompt" field — FLUX Dev 2 does not support it
 - ai_generation.cfg_scale is ALWAYS 4.0 (FLUX Dev 2), never 7.5
 - Real hex codes for ALL colors everywhere (no "earthy brown" — use "#8B4513 Saddle Brown")
