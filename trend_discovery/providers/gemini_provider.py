@@ -408,18 +408,18 @@ For EACH trend, return a complete JSON object with ALL of these fields — be sp
   "elements": [
     {{{{
       "id": 1,
-      "name": "short element name (e.g. Round Inkwell)",
+      "name": "short element name",
       "role": "hero" | "supporting" | "filler",
-      "prompt": "CRITICAL: ultra-precise Runware prompt for ONE SINGLE ISOLATED OBJECT. Must follow this EXACT format: 'One single [OBJECT], centered on pure white background. [STYLE ANCHOR matching the niche aesthetic]. Flat 2D vector illustration, bold black outline, solid [COLOR] fill, no gradients, no shadows, no reflections, no other objects, isolated. Simple clean geometric design, product icon style.' Keep under 60 words. Style anchor examples: 'Scandinavian folk art' / 'Japanese woodblock print' / 'vintage rubber stamp design' / 'Bauhaus geometric' / 'Art Nouveau illustration'"
+      "prompt": "SEE MANDATORY FORMAT BELOW"
     }}}}
-    // EXACTLY 10 elements total: 2-3 hero elements, 4-5 supporting elements, 2-3 filler elements
+    // EXACTLY 10 elements: 2-3 hero, 4-5 supporting, 2-3 filler
   ],
   "assembly_guide": {{{{
     "background_color": "#HEXCODE",
     "layout": "tossed" | "grid" | "half-drop" | "stripe",
     "density": "sparse" | "medium" | "dense",
     "color_palette": ["#HEXCODE ColorName", "#HEXCODE ColorName", "#HEXCODE ColorName"],
-    "tips": "1-2 sentences: how to arrange the elements (e.g. group hero elements as anchors, scatter fillers in gaps)"
+    "tips": "1-2 sentences on grouping and arrangement"
   }}}},
   "visual_direction": {{{{
     "mood": "comma-separated mood adjectives (e.g. romantic, nostalgic, scientific)",
@@ -439,10 +439,47 @@ For EACH trend, return a complete JSON object with ALL of these fields — be sp
   "spoonflower_query": "2-5 word query to search Spoonflower bestselling designs for this niche (e.g. 'nordic folk flat pattern')"
 }}}}
 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MANDATORY ELEMENT PROMPT FORMAT (apply to EVERY element)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Each element prompt MUST follow this EXACT structure (under 65 words):
+  "One single [SPECIFIC OBJECT NAME], centered on pure white background.
+  [NICHE STYLE ANCHOR — the visual tradition this niche belongs to].
+  Flat 2D illustration, bold black outline, solid [HEX COLOR from palette] fill.
+  No gradients, no shadows, no reflections, no other objects, isolated."
+
+STYLE ANCHOR = the 3-6 word visual tradition that tells the AI model HOW to draw.
+This is the most important part. Use the tradition that exists in training data
+as inherently flat. Examples by niche type:
+  • Japanese/Asian     → "Japanese ukiyo-e woodblock print style"
+  • Nordic/Folk        → "Scandinavian folk art, Marimekko style"
+  • Victorian science  → "Victorian natural history engraving style"
+  • Arts & Crafts      → "William Morris Arts and Crafts flat design"
+  • Art Deco           → "1920s Art Deco geometric poster style"
+  • Botanical          → "botanical illustration, herbarium label style"
+  • Retro/Vintage      → "mid-century modern flat illustration style"
+  • Cyanotype          → "Anna Atkins cyanotype photogram style, white silhouette"
+
+WORKED EXAMPLES (Japanese Woodblock niche):
+  Hero:      "One single Japanese wave crest with foam tips, centered on pure white background. Japanese ukiyo-e woodblock print style, Hokusai inspired. Flat 2D illustration, bold black outline, solid indigo blue (#1B3A6B) fill, white foam at tips. No gradients, no shadows, no other objects, isolated."
+  Support:   "One single cherry blossom branch with three open flowers, centered on pure white background. Japanese woodblock print style. Flat 2D illustration, bold black outline, solid pale pink petals, dark brown branch. No gradients, no shadows, no other objects, isolated."
+  Filler:    "One single five-petal sakura blossom, centered on pure white background. Japanese woodblock print style. Flat 2D illustration, bold black outline, solid pale pink (#F4A0A0) petals, small yellow center. No gradients, no shadows, no other objects, isolated."
+
+ROLE SIZING GUIDE:
+  hero      : large recognizable shape (the dominant motif of the niche)
+  supporting: medium element with clear identity (secondary motifs)
+  filler    : small simple shape (accent dots, petals, leaves, small icons)
+
+COLORS: every prompt must use a specific hex from the niche's color_palette.
+Do NOT write "blue" — write "indigo blue (#1B3A6B)".
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 Requirements:
 - EXACTLY 10 elements per niche (2-3 hero, 4-5 supporting, 2-3 filler)
-- Real hex codes for ALL colors (no "earthy brown" — use "#8B4513 Saddle Brown")
-- Each element prompt must be under 60 words, describe ONE SINGLE ISOLATED OBJECT on white background
+- Every element prompt follows the MANDATORY FORMAT above — no exceptions
+- Real hex codes for ALL colors everywhere (no "earthy brown" — use "#8B4513 Saddle Brown")
 - Focus on trends that are hot RIGHT NOW ({today}), have strong visual identity for {name} — each backed by real web evidence in why_trending
 - Target export: {file_fmt}, {dpi} DPI, {min_px}x{min_px}px min, {color_profile}, max {max_mb}MB
 - wikimedia_query must find actual public domain illustration or art images
