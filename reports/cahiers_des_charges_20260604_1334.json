@@ -3725,6 +3725,90 @@
         "competition": 58,
         "uniqueness": 75,
         "spoonflower_fit": 88
+      },
+      "elements": [
+        {
+          "id": 1,
+          "name": "Great Wave Crest",
+          "role": "hero",
+          "prompt": "One single Japanese wave crest with foam tips, centered on pure white background. Hokusai ukiyo-e woodblock print style. Flat 2D illustration, bold black outline, solid indigo blue fill, crisp white foam at crest tips. No gradients, no shadows, no other objects, isolated. Traditional Japanese woodblock graphic design.",
+          "negative_prompt": "blurry, low quality, watermark, jpeg artifacts, pixelated, multiple objects, other objects, pattern, repeat, background scene, environment, context, table surface, hands, perspective, drop shadow, cast shadow, ambient occlusion, reflection, gradient fill, 3D render, glossy surface, metallic sheen, volumetric lighting, depth of field, bokeh, text, frame, border, group of items, realistic photo, photorealistic"
+        },
+        {
+          "id": 2,
+          "name": "Swooping Crane",
+          "role": "hero",
+          "prompt": "One single Japanese crane in flight with wings fully spread, centered on pure white background. Hokusai ukiyo-e woodblock print style. Flat 2D illustration, bold black outline, solid white body with black wingtips and small red crown. No gradients, no shadows, no other objects, isolated. Traditional Japanese woodblock graphic design.",
+          "negative_prompt": "blurry, low quality, watermark, jpeg artifacts, pixelated, multiple objects, other objects, pattern, repeat, background scene, environment, context, table surface, hands, perspective, drop shadow, cast shadow, ambient occlusion, reflection, gradient fill, 3D render, glossy surface, metallic sheen, volumetric lighting, depth of field, bokeh, text, frame, border, group of items, realistic photo, photorealistic"
+        },
+        {
+          "id": 3,
+          "name": "Koi Fish",
+          "role": "hero",
+          "prompt": "One single Japanese koi fish swimming, centered on pure white background. Ukiyo-e woodblock print style. Flat 2D illustration, bold black outline, solid coral red body with gold scale markings, simple graphic fins and tail. No gradients, no shadows, no other objects, isolated. Traditional Japanese woodblock flat design.",
+          "negative_prompt": "blurry, low quality, watermark, jpeg artifacts, pixelated, multiple objects, other objects, pattern, repeat, background scene, environment, context, table surface, hands, perspective, drop shadow, cast shadow, ambient occlusion, reflection, gradient fill, 3D render, glossy surface, metallic sheen, volumetric lighting, depth of field, bokeh, text, frame, border, group of items, realistic photo, photorealistic"
+        },
+        {
+          "id": 4,
+          "name": "Sakura Branch",
+          "role": "supporting",
+          "prompt": "One single cherry blossom branch with three open sakura flowers, centered on pure white background. Japanese woodblock print style. Flat 2D illustration, bold black outline, solid pale pink petals, dark brown branch. No gradients, no shadows, no other objects, isolated. Traditional Japanese woodblock graphic design.",
+          "negative_prompt": "blurry, low quality, watermark, jpeg artifacts, pixelated, multiple objects, other objects, pattern, repeat, background scene, environment, context, table surface, hands, perspective, drop shadow, cast shadow, ambient occlusion, reflection, gradient fill, 3D render, glossy surface, metallic sheen, volumetric lighting, depth of field, bokeh, text, frame, border, group of items, realistic photo, photorealistic"
+        },
+        {
+          "id": 5,
+          "name": "Wisteria Cluster",
+          "role": "supporting",
+          "prompt": "One single hanging wisteria flower cluster with drooping flowers, centered on pure white background. Hiroshige woodblock print style. Flat 2D illustration, bold black outline, solid purple teardrop-shaped florets hanging downward, thin stem. No gradients, no shadows, no other objects, isolated. Traditional Japanese woodblock graphic design.",
+          "negative_prompt": "blurry, low quality, watermark, jpeg artifacts, pixelated, multiple objects, other objects, pattern, repeat, background scene, environment, context, table surface, hands, perspective, drop shadow, cast shadow, ambient occlusion, reflection, gradient fill, 3D render, glossy surface, metallic sheen, volumetric lighting, depth of field, bokeh, text, frame, border, group of items, realistic photo, photorealistic"
+        },
+        {
+          "id": 6,
+          "name": "Mount Fuji",
+          "role": "supporting",
+          "prompt": "One single Mount Fuji silhouette with snow cap, centered on pure white background. Japanese woodblock print style. Flat 2D illustration, bold black outline, solid indigo blue mountain body, pure white snow cap at peak. No gradients, no shadows, no other objects, isolated. Traditional Japanese woodblock flat icon.",
+          "negative_prompt": "blurry, low quality, watermark, jpeg artifacts, pixelated, multiple objects, other objects, pattern, repeat, background scene, environment, context, table surface, hands, perspective, drop shadow, cast shadow, ambient occlusion, reflection, gradient fill, 3D render, glossy surface, metallic sheen, volumetric lighting, depth of field, bokeh, text, frame, border, group of items, realistic photo, photorealistic"
+        },
+        {
+          "id": 7,
+          "name": "Japanese Fan",
+          "role": "supporting",
+          "prompt": "One single open Japanese folding fan, centered on pure white background. Ukiyo-e woodblock print style. Flat 2D illustration, bold black outline, solid coral red fan body with gold ribbing lines radiating from handle. No gradients, no shadows, no other objects, isolated. Traditional Japanese woodblock graphic design.",
+          "negative_prompt": "blurry, low quality, watermark, jpeg artifacts, pixelated, multiple objects, other objects, pattern, repeat, background scene, environment, context, table surface, hands, perspective, drop shadow, cast shadow, ambient occlusion, reflection, gradient fill, 3D render, glossy surface, metallic sheen, volumetric lighting, depth of field, bokeh, text, frame, border, group of items, realistic photo, photorealistic"
+        },
+        {
+          "id": 8,
+          "name": "Sakura Blossom",
+          "role": "filler",
+          "prompt": "One single five-petal cherry blossom flower, centered on pure white background. Japanese woodblock print style. Flat 2D illustration, bold black outline, solid pale pink petals, small yellow dot center. No gradients, no shadows, no other objects, isolated. Simple Japanese woodblock flat filler icon.",
+          "negative_prompt": "blurry, low quality, watermark, jpeg artifacts, pixelated, multiple objects, other objects, pattern, repeat, background scene, environment, context, table surface, hands, perspective, drop shadow, cast shadow, ambient occlusion, reflection, gradient fill, 3D render, glossy surface, metallic sheen, volumetric lighting, depth of field, bokeh, text, frame, border, group of items, realistic photo, photorealistic"
+        },
+        {
+          "id": 9,
+          "name": "Small Wave",
+          "role": "filler",
+          "prompt": "One single small Japanese wave curl shape, centered on pure white background. Hokusai woodblock print style. Flat 2D illustration, bold black outline, solid indigo blue fill, tiny white foam dot at crest tip. No gradients, no shadows, no other objects, isolated. Traditional Japanese woodblock small filler motif.",
+          "negative_prompt": "blurry, low quality, watermark, jpeg artifacts, pixelated, multiple objects, other objects, pattern, repeat, background scene, environment, context, table surface, hands, perspective, drop shadow, cast shadow, ambient occlusion, reflection, gradient fill, 3D render, glossy surface, metallic sheen, volumetric lighting, depth of field, bokeh, text, frame, border, group of items, realistic photo, photorealistic"
+        },
+        {
+          "id": 10,
+          "name": "Bamboo Sprig",
+          "role": "filler",
+          "prompt": "One single bamboo sprig with three segmented sections and pointed leaves, centered on pure white background. Japanese woodblock print style. Flat 2D illustration, bold black outline, solid sage green fill, simple segmented stalk. No gradients, no shadows, no other objects, isolated. Traditional Japanese woodblock flat filler design.",
+          "negative_prompt": "blurry, low quality, watermark, jpeg artifacts, pixelated, multiple objects, other objects, pattern, repeat, background scene, environment, context, table surface, hands, perspective, drop shadow, cast shadow, ambient occlusion, reflection, gradient fill, 3D render, glossy surface, metallic sheen, volumetric lighting, depth of field, bokeh, text, frame, border, group of items, realistic photo, photorealistic"
+        }
+      ],
+      "assembly_guide": {
+        "background_color": "#1B3A6B",
+        "layout": "tossed",
+        "density": "medium",
+        "color_palette": [
+          "#1B3A6B Indigo",
+          "#E34234 Coral Red",
+          "#D4A017 Gold Ochre",
+          "#F5F2EB Ivory"
+        ],
+        "tips": "Place wave crests as dominant anchors at varied angles. Scatter cranes in flight between waves. Distribute sakura branches and fans as mid-size supporting elements. Use small sakura blossoms, small waves and bamboo sprigs as fillers in gaps."
       }
     },
     {
