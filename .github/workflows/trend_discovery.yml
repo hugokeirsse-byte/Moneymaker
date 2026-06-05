@@ -45,6 +45,7 @@ on:
           - 'generate-elements'  # 10 éléments isolés + assemblage Pillow (~0.06 €)
           - 'generate'           # Images des CdCs approuvées (manifest requis)
           - 'colorize'           # Variantes de couleurs sur images existantes (0 €, Pillow)
+          - 'listings'           # CSVs upload Spoonflower + Adobe Stock + Etsy + Redbubble (0 €)
           - 'seamless-audit'     # Vérifie + corrige les tuiles non-seamless (mirror quad, 0 €)
           - 'thumbnails'         # Génère vignettes 600×600 JPEG navigables (0 €, git-safe)
           - 'upscale-fix'        # Re-upscale IA Real-ESRGAN images existantes floues (~0.005€/img)
@@ -291,6 +292,18 @@ jobs:
             python -m trend_discovery.main seamless-audit --yes --overwrite \
               --input ./output/uploads/base \
               --output ./output/uploads/base || echo "(no uploads found, skipped)"
+          elif [ "$MODE" = "listings" ]; then
+            echo "=== MODE LISTINGS : CSVs upload Spoonflower + Adobe Stock + Etsy + Redbubble (0 €) ==="
+            mkdir -p reports/listings
+            python -m trend_discovery.main listings \
+              --reports ./reports \
+              --spoonflower ./output/spoonflower \
+              --colorways ./output/colorways \
+              --uploads ./output/uploads/base \
+              --uploads-colorways ./output/uploads/colorways \
+              --redbubble ./output/redbubble \
+              --redbubble-reports ./reports/redbubble \
+              --output ./reports/listings
           elif [ "$MODE" = "thumbnails" ]; then
             echo "=== MODE THUMBNAILS : vignettes JPEG navigables ==="
             python -m trend_discovery.main thumbnails \

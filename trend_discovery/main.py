@@ -1641,6 +1641,20 @@ def main():
         help="Auto-confirmer (mode CI).",
     )
 
+    # ── Sous-commande : listings ──────────────────────────────────────────────
+    ls_parser = subparsers.add_parser(
+        "listings",
+        help="Génère les CSVs de listing prêts à uploader (Spoonflower, Adobe Stock, Etsy, Redbubble).",
+    )
+    ls_parser.add_argument("--reports", type=str, default="./reports")
+    ls_parser.add_argument("--spoonflower", type=str, default="./output/spoonflower")
+    ls_parser.add_argument("--colorways", type=str, default="./output/colorways")
+    ls_parser.add_argument("--uploads", type=str, default="./output/uploads/base")
+    ls_parser.add_argument("--uploads-colorways", dest="uploads_colorways", type=str, default="./output/uploads/colorways")
+    ls_parser.add_argument("--redbubble", type=str, default="./output/redbubble")
+    ls_parser.add_argument("--redbubble-reports", dest="redbubble_reports", type=str, default="./reports/redbubble")
+    ls_parser.add_argument("--output", type=str, default="./reports/listings")
+
     # ── Sous-commande : thumbnails ────────────────────────────────────────────
     th_parser = subparsers.add_parser(
         "thumbnails",
@@ -1798,6 +1812,21 @@ def main():
             output_root=args.output,
             contact_sheets=not args.no_contact,
         )
+        return
+
+    if args.command == "listings":
+        from trend_discovery.generators.listing_generator import ListingGenerator
+        gen = ListingGenerator(
+            reports_dir=getattr(args, "reports", "./reports") or "./reports",
+            spoonflower_dir=getattr(args, "spoonflower", "./output/spoonflower") or "./output/spoonflower",
+            colorways_dir=getattr(args, "colorways", "./output/colorways") or "./output/colorways",
+            uploads_dir=getattr(args, "uploads", "./output/uploads/base") or "./output/uploads/base",
+            uploads_colorways_dir=getattr(args, "uploads_colorways", "./output/uploads/colorways") or "./output/uploads/colorways",
+            redbubble_dir=getattr(args, "redbubble", "./output/redbubble") or "./output/redbubble",
+            redbubble_reports_dir=getattr(args, "redbubble_reports", "./reports/redbubble") or "./reports/redbubble",
+            output_dir=getattr(args, "output", "./reports/listings") or "./reports/listings",
+        )
+        gen.run()
         return
 
     if args.command == "generate-elements":
