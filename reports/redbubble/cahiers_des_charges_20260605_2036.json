@@ -1,0 +1,2332 @@
+{
+  "generated_at": "2026-06-05T20:36:34.272370+00:00",
+  "total_briefs": 16,
+  "briefs": [
+    {
+      "name": "Plague Doctor Wash Your Hands",
+      "trending_score": 69,
+      "market_opportunity": "medium",
+      "why_trending": "Plague doctors are a staple of the dark academia and goth communities. Adding a modern twist like hand sanitizer keeps the design fresh, funny, and highly relevant to health-conscious buyers.",
+      "target_audience": "Goths and healthcare workers",
+      "sub_niches": [
+        {
+          "name": "Plague Doctor Social Distancing",
+          "trending_score": 50,
+          "unique_angle": "Plague doctor holding a 6-foot measuring tape made of bones.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "creepy-cute, clean, helpful, gothic",
+        "composition": "Centered, standing pose",
+        "line_style": "Thick, clean outlines",
+        "color_primary": [
+          "Dark Teal #005F73",
+          "Soft Cream #E9D8A6"
+        ],
+        "color_accent": [
+          "Pastel Blue #94D2BD",
+          "Deep Charcoal #1A1A1A"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": "Flat, clean vector"
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "A single cute chibi plague doctor character, centered on a pure white background. Pastel goth illustration style, cute but creepy aesthetic, soft pastel colors with dark high-contrast accents. The doctor wears a dark teal robe and a classic white bird mask, holding a small clear bottle of hand sanitizer with a tiny sparkle. A curved banner below reads 'WASH YOUR HANDS' in clean, bold gothic lettering. The design features thick outlines and flat color fills, optimized for high-contrast visibility. The color palette features dark teal (#005F73), soft cream (#E9D8A6), pastel blue (#94D2BD), and deep charcoal (#1A1A1A). Clean crisp edges, no background elements, isolated on white. Bold enough to read at sticker size. No gradients inside shapes.",
+        "negative_prompt": "",
+        "key_elements": [
+          "plague doctor",
+          "hand sanitizer",
+          "banner"
+        ],
+        "avoid_elements": [
+          "gradients",
+          "shadows",
+          "background textures"
+        ],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Doctor Schnabel von Rom (BM 1876,0510.512).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Doctor_Schnabel_von_Rom_%28BM_1876%2C0510.512%29.jpg",
+          "width": 1264,
+          "height": 1600
+        },
+        {
+          "title": "Doctor Schnabel von Rom (BM 1876,0510.512 2).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Doctor_Schnabel_von_Rom_%28BM_1876%2C0510.512_2%29.jpg",
+          "width": 1236,
+          "height": 1600
+        }
+      ],
+      "generated_at": "2026-06-05 20:36 UTC",
+      "opportunity_score": 69.0,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 85.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 75.0,
+          "detail": "Etsy listings for prints, signs, and cross-stitch patterns with recent activity (e.g., 'Arrives soon! Get it by May 2-9', 'April 24 2026' metal sign), Redbubble apparel and greeting cards, Folksy metal sign."
+        },
+        "growth": {
+          "value": 75.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=True (grounding confirmé)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 55.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 17.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "plague doctor",
+          "hand sanitizer",
+          "banner"
+        ],
+        "categories": [
+          "medium",
+          "medium"
+        ],
+        "notes": "demande MESURÉE (google_search_grounding) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "Etsy listings for prints, signs, and cross-stitch patterns with recent activity (e.g., 'Arrives soon! Get it by May 2-9', 'April 24 2026' metal sign), Redbubble apparel and greeting cards, Folksy metal sign.",
+      "seo_keywords": [
+        "plague doctor",
+        "hand sanitizer",
+        "banner"
+      ],
+      "title_seeds": [
+        "Plague Doctor Wash Your Hands seamless pattern",
+        "Plague Doctor Social Distancing repeat pattern"
+      ]
+    },
+    {
+      "name": "Axolotl Social Battery Low",
+      "trending_score": 56,
+      "market_opportunity": "very_high",
+      "why_trending": "Axolotls are one of the top-performing animal categories on Redbubble. Combining this cute creature with the highly relatable 'social battery low' concept guarantees high click-through rates.",
+      "target_audience": "Introverted Gen Z and Millennials",
+      "sub_niches": [
+        {
+          "name": "Introvert Axolotl Hideout",
+          "trending_score": 50,
+          "unique_angle": "Axolotl hiding under a rock with a 'Do Not Disturb' sign.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "exhausted, cute, lazy, soft",
+        "composition": "Centered, horizontal alignment",
+        "line_style": "Thick black outlines",
+        "color_primary": [
+          "Pastel Pink #FFC0CB",
+          "Soft Coral #FF7F50"
+        ],
+        "color_accent": [
+          "Battery Red #FF4D4D",
+          "Dark Charcoal #1C1C1C"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": "Smooth, flat vector"
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "high"
+      },
+      "ai_generation": {
+        "positive_prompt": "A single cute pink axolotl lying completely flat on its stomach, centered on a pure white background. Kawaii flat vector illustration style, thick clean black outlines, soft pastel colors, and expressive simplified shapes. The axolotl has tired, half-closed eyes and a tiny sad frown. Floating directly above its head is a digital battery icon showing a single red bar at 1% charge. The color palette features pastel pink (#FFC0CB), soft coral (#FF7F50), battery red (#FF4D4D), and dark charcoal (#1C1C1C). Perfect for die-cut stickers with no stray pixels. Clean crisp edges, no background elements, isolated on white. Bold enough to read at sticker size. No gradients inside shapes.",
+        "negative_prompt": "",
+        "key_elements": [
+          "axolotl",
+          "1% battery icon"
+        ],
+        "avoid_elements": [
+          "gradients",
+          "shadows",
+          "background textures"
+        ],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Ambystoma mexicanum - Teresa Such Ferrer.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Ambystoma_mexicanum_-_Teresa_Such_Ferrer.jpg",
+          "width": 3508,
+          "height": 4961
+        },
+        {
+          "title": "Ambystoma mexicanum - Teresa Such Ferrer (cropped).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/24/Ambystoma_mexicanum_-_Teresa_Such_Ferrer_%28cropped%29.jpg",
+          "width": 2831,
+          "height": 721
+        }
+      ],
+      "generated_at": "2026-06-05 20:36 UTC",
+      "opportunity_score": 56.2,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 83.5,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 82.0,
+          "detail": "page 'Axolotl' : 151 115 vues/mois (réel)"
+        },
+        "growth": {
+          "value": 34.1,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 78.0,
+          "detail": "évolution -32% des vues sur 12 mois (réel)"
+        },
+        "competition": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'high' → score 35 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 55.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 17.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "wikipedia"
+        ],
+        "trigger_keywords": [
+          "axolotl",
+          "1% battery icon"
+        ],
+        "categories": [
+          "very_high",
+          "high"
+        ],
+        "notes": "demande MESURÉE (wikipedia) · compétition high · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "high",
+        "score": 65.0,
+        "rationale": "compétition 'high' → marché très exploité"
+      },
+      "reusability_detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "page 'Axolotl' : 151 115 vues/mois (réel)",
+      "seo_keywords": [
+        "axolotl",
+        "1% battery icon"
+      ],
+      "title_seeds": [
+        "Axolotl Social Battery Low seamless pattern",
+        "Introvert Axolotl Hideout repeat pattern"
+      ]
+    },
+    {
+      "name": "Unbothered Capybara Iced Coffee",
+      "trending_score": 56,
+      "market_opportunity": "very_high",
+      "why_trending": "Capybaras remain a massive viral sensation on TikTok and Instagram reels as the ultimate symbol of being unbothered. Combining this with iced coffee culture and existential dread targets the highly active millennial and Gen Z office-humor demographic.",
+      "target_audience": "Corporate Gen Z and Millennials",
+      "sub_niches": [
+        {
+          "name": "Corporate Burnout Capybara",
+          "trending_score": 50,
+          "unique_angle": "Capybara holding a spreadsheet printout alongside the iced coffee with a glazed look.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "zen, tired, relatable, cute",
+        "composition": "Centered, triangular composition",
+        "line_style": "Thick black outlines",
+        "color_primary": [
+          "Warm Brown #8B5A2B",
+          "Soft Cream #FFFDD0"
+        ],
+        "color_accent": [
+          "Mint Green #A3E4D7"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": "Flat, clean vector"
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "high"
+      },
+      "ai_generation": {
+        "positive_prompt": "A single cute cartoon capybara sitting cross-legged in a state of deep zen meditation, centered on a pure white background. The capybara is holding a clear plastic cup of iced coffee with a bright green straw in one paw, looking completely unbothered yet radiating subtle existential dread with a single tiny sweat drop on its forehead. Kawaii flat vector illustration style, thick clean black outlines, slightly rounded simplified shapes, and highly expressive minimalist facial features. The color palette features warm brown (#8B5A2B), soft cream (#FFFDD0), mint green (#A3E4D7), and deep charcoal (#1A1A1A). Perfect for die-cut stickers with no stray pixels. Clean crisp edges, no background elements, isolated on white. Bold enough to read at sticker size. No gradients inside shapes.",
+        "negative_prompt": "",
+        "key_elements": [
+          "capybara",
+          "iced coffee cup",
+          "sweat drop"
+        ],
+        "avoid_elements": [
+          "gradients",
+          "shadows",
+          "background textures"
+        ],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 20:36 UTC",
+      "opportunity_score": 56.2,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 83.1,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 82.0,
+          "detail": "page 'Capybara' : 141 208 vues/mois (réel)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'high' → score 35 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 55.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 17.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding",
+          "wikipedia"
+        ],
+        "trigger_keywords": [
+          "capybara",
+          "iced coffee cup",
+          "sweat drop"
+        ],
+        "categories": [
+          "very_high",
+          "high"
+        ],
+        "notes": "demande MESURÉE (wikipedia) · compétition high · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "high",
+        "score": 65.0,
+        "rationale": "compétition 'high' → marché très exploité"
+      },
+      "reusability_detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "page 'Capybara' : 141 208 vues/mois (réel)",
+      "seo_keywords": [
+        "capybara",
+        "iced coffee cup",
+        "sweat drop"
+      ],
+      "title_seeds": [
+        "Unbothered Capybara Iced Coffee seamless pattern",
+        "Corporate Burnout Capybara repeat pattern"
+      ]
+    },
+    {
+      "name": "Overthinking Champion Trophy",
+      "trending_score": 48,
+      "market_opportunity": "high",
+      "why_trending": "Self-deprecating awards and trophies are a major trend on Etsy and Instagram. This design acts as a badge of honor for chronic overthinkers, making it an incredibly popular gift item.",
+      "target_audience": "Students and anxious professionals",
+      "sub_niches": [
+        {
+          "name": "Worst Case Scenario Planner",
+          "trending_score": 50,
+          "unique_angle": "Trophy for planning for events that will never happen.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "clean, ironic, proud, modern",
+        "composition": "Centered, symmetrical trophy",
+        "line_style": "Clean, precise outlines",
+        "color_primary": [
+          "Bright Gold #FFD700",
+          "Soft Pink #FFB6C1"
+        ],
+        "color_accent": [
+          "Slate Gray #708090",
+          "Dark Charcoal #1A1A1A"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": "Flat, modern vector"
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "A single shiny gold trophy, centered on a pure white background. Modern flat vector illustration style with geometric shapes, bold solid colors, and minimal clean shading. The trophy features a stylized pink brain resting on top of the golden cup. The base of the trophy has a silver plaque that reads 'OVERTHINKING CHAMPION' in clean, bold sans-serif lettering. The design features thick outlines and flat color fills, optimized for high-contrast visibility. The color palette features bright gold (#FFD700), soft pink (#FFB6C1), slate gray (#708090), and dark charcoal (#1A1A1A). Clean crisp edges, no background elements, isolated on white. Bold enough to read at sticker size. No gradients inside shapes.",
+        "negative_prompt": "",
+        "key_elements": [
+          "trophy",
+          "brain",
+          "plaque"
+        ],
+        "avoid_elements": [
+          "gradients",
+          "shadows",
+          "background textures"
+        ],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "American cup us soccer trophy 1891.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/American_cup_us_soccer_trophy_1891.jpg",
+          "width": 227,
+          "height": 562
+        },
+        {
+          "title": "The Trophy We Won - Flickr - Pratham Books.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/The_Trophy_We_Won_-_Flickr_-_Pratham_Books.jpg",
+          "width": 313,
+          "height": 360
+        }
+      ],
+      "generated_at": "2026-06-05 20:36 UTC",
+      "opportunity_score": 48.0,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 75.0,
+          "detail": "Redbubble stickers and t-shirts, Spreadshirt stickers."
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 55.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 17.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "trophy",
+          "brain",
+          "plaque"
+        ],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande MESURÉE (google_search_grounding) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "Redbubble stickers and t-shirts, Spreadshirt stickers.",
+      "seo_keywords": [
+        "trophy",
+        "brain",
+        "plaque"
+      ],
+      "title_seeds": [
+        "Overthinking Champion Trophy seamless pattern",
+        "Worst Case Scenario Planner repeat pattern"
+      ]
+    },
+    {
+      "name": "Anxious Cowboy Duck",
+      "trending_score": 40,
+      "market_opportunity": "very_high",
+      "why_trending": "The 'anxious cowboy' aesthetic (using cowboy hats on unexpected animals) is a huge viral trend on TikTok and Instagram. Ducks are incredibly popular in sticker culture, making this a perfect crossover.",
+      "target_audience": "Gen Z and Millennial sticker collectors",
+      "sub_niches": [
+        {
+          "name": "Cowboy Duck Duel Panic",
+          "trending_score": 50,
+          "unique_angle": "Duck sweating during a high-noon standoff, holding a tiny water gun.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "anxious, cute, funny, western",
+        "composition": "Centered, vertical alignment",
+        "line_style": "Thick black outlines",
+        "color_primary": [
+          "Bright Yellow #FFD700",
+          "Cowboy Brown #8B4513"
+        ],
+        "color_accent": [
+          "Soft Blue #ADD8E6",
+          "Dark Charcoal #1A1A1A"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": "Flat, clean vector"
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "A single cute yellow duck, centered on a pure white background. Kawaii flat vector illustration style, thick clean black outlines, soft pastel colors, and expressive simplified shapes. The duck wears an oversized brown cowboy hat and has wide, nervous eyes with tiny sweat drops on its cheek. A small speech bubble next to it reads 'howdy (anxiously)' in clean, hand-drawn style lettering. The design is highly readable and optimized for die-cut stickers. The color palette features bright yellow (#FFD700), cowboy brown (#8B4513), soft blue (#ADD8E6), and dark charcoal (#1A1A1A). Clean crisp edges, no background elements, isolated on white. Bold enough to read at sticker size. No gradients inside shapes.",
+        "negative_prompt": "",
+        "key_elements": [
+          "duck",
+          "cowboy hat",
+          "speech bubble"
+        ],
+        "avoid_elements": [
+          "gradients",
+          "shadows",
+          "background textures"
+        ],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Cartoon steamer duck walking animation.gif",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Cartoon_steamer_duck_walking_animation.gif",
+          "width": 227,
+          "height": 217
+        },
+        {
+          "title": "Darkwing Duck (Japanese) logo.png",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Darkwing_Duck_%28Japanese%29_logo.png",
+          "width": 448,
+          "height": 277
+        }
+      ],
+      "generated_at": "2026-06-05 20:36 UTC",
+      "opportunity_score": 40.5,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 10.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 75.0,
+          "detail": "No direct evidence found within the last 6 months for this exact niche."
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 55.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 17.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "duck",
+          "cowboy hat",
+          "speech bubble"
+        ],
+        "categories": [
+          "very_high",
+          "medium"
+        ],
+        "notes": "demande MESURÉE (google_search_grounding) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "No direct evidence found within the last 6 months for this exact niche.",
+      "seo_keywords": [
+        "duck",
+        "cowboy hat",
+        "speech bubble"
+      ],
+      "title_seeds": [
+        "Anxious Cowboy Duck seamless pattern",
+        "Cowboy Duck Duel Panic repeat pattern"
+      ]
+    },
+    {
+      "name": "Shrimp Driving Monster Truck",
+      "trending_score": 40,
+      "market_opportunity": "very_high",
+      "why_trending": "Absurdist humor involving marine life (especially shrimp) is currently viral on TikTok and Twitter. The contrast between a tiny, fragile shrimp and a hyper-masculine monster truck is peak internet humor.",
+      "target_audience": "Gen Z meme enthusiasts",
+      "sub_niches": [
+        {
+          "name": "Shrimp Derby Champion",
+          "trending_score": 50,
+          "unique_angle": "Shrimp in a monster truck jumping over a line of tin cans of clam chowder.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "absurd, confident, funny, bold",
+        "composition": "Dynamic diagonal action shot",
+        "line_style": "Clean, bold vector lines",
+        "color_primary": [
+          "Coral Pink #FF7F50",
+          "Vibrant Yellow #FFD700"
+        ],
+        "color_accent": [
+          "Deep Black #111111",
+          "Bright White #FFFFFF"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": "Flat, solid colors"
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "A single tiny pink shrimp driving a massive, oversized monster truck, centered on a pure white background. Modern flat vector illustration style with geometric shapes, bold solid colors, and minimal clean shading. The tiny shrimp wears an oversized red trucker hat and confidently grips a giant steering wheel with high determination. The monster truck has massive, chunky black tires with deep treads and a bright yellow body with red flame decals on the side. The color palette features coral pink (#FF7F50), vibrant yellow (#FFD700), deep black (#111111), and bright white (#FFFFFF). Clean crisp edges, no background elements, isolated on white. Bold enough to read at sticker size. No gradients inside shapes.",
+        "negative_prompt": "",
+        "key_elements": [
+          "shrimp",
+          "monster truck",
+          "trucker hat"
+        ],
+        "avoid_elements": [
+          "gradients",
+          "shadows",
+          "background textures"
+        ],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Aquatic life (1917-1918) (19560676749).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Aquatic_life_%281917-1918%29_%2819560676749%29.jpg",
+          "width": 2044,
+          "height": 812
+        },
+        {
+          "title": "His First Live Shrimp by John Hassall (1868–1948).png",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/His_First_Live_Shrimp_by_John_Hassall_%281868%E2%80%931948%29.png",
+          "width": 807,
+          "height": 1232
+        }
+      ],
+      "generated_at": "2026-06-05 20:36 UTC",
+      "opportunity_score": 40.5,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 10.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 75.0,
+          "detail": "No direct evidence found within the last 6 months for this exact niche."
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 55.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 17.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "shrimp",
+          "monster truck",
+          "trucker hat"
+        ],
+        "categories": [
+          "very_high",
+          "medium"
+        ],
+        "notes": "demande MESURÉE (google_search_grounding) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "No direct evidence found within the last 6 months for this exact niche.",
+      "seo_keywords": [
+        "shrimp",
+        "monster truck",
+        "trucker hat"
+      ],
+      "title_seeds": [
+        "Shrimp Driving Monster Truck seamless pattern",
+        "Shrimp Derby Champion repeat pattern"
+      ]
+    },
+    {
+      "name": "Pigeon Businessman French Fry",
+      "trending_score": 40,
+      "market_opportunity": "very_high",
+      "why_trending": "Pigeons are beloved in urban internet culture for their chaotic, trash-eating habits. Dressing one up as a serious corporate worker creates a hilarious contrast that performs exceptionally well on stickers.",
+      "target_audience": "Urban professionals and students",
+      "sub_niches": [
+        {
+          "name": "Commuter Pigeon Subway",
+          "trending_score": 50,
+          "unique_angle": "Pigeon holding a tiny subway pass and a half-eaten bagel.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "absurd, serious, funny, detailed",
+        "composition": "Profile view, walking pose",
+        "line_style": "Expressive ink lines",
+        "color_primary": [
+          "Slate Gray #808080",
+          "Navy Blue #000080"
+        ],
+        "color_accent": [
+          "Mustard Yellow #FFDB58",
+          "Dark Charcoal #1A1A1A"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": "Subtle vector shading"
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "A single gray pigeon character walking with purpose, centered on a pure white background. Editorial cartoon style, expressive line art, slightly exaggerated proportions, and clean vector shapes. The pigeon is dressed in a tiny navy blue business suit with a red tie, walking with an air of self-importance while carrying a single large golden-yellow french fry in its beak like a briefcase. The design features bold outlines and minimal shading for maximum readability, perfect for die-cut stickers. The color palette features slate gray (#808080), navy blue (#000080), mustard yellow (#FFDB58), and dark charcoal (#1A1A1A). Clean crisp edges, no background elements, isolated on white. Bold enough to read at sticker size. No gradients inside shapes.",
+        "negative_prompt": "",
+        "key_elements": [
+          "pigeon",
+          "business suit",
+          "french fry"
+        ],
+        "avoid_elements": [
+          "gradients",
+          "shadows",
+          "background textures"
+        ],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Hyacinth Pigeon Illustration.png",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Hyacinth_Pigeon_Illustration.png",
+          "width": 2480,
+          "height": 3508
+        },
+        {
+          "title": "Mershon's The Passenger Pigeon (Band-tailed Dove illustration).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Mershon%27s_The_Passenger_Pigeon_%28Band-tailed_Dove_illustration%29.jpg",
+          "width": 2048,
+          "height": 2953
+        }
+      ],
+      "generated_at": "2026-06-05 20:36 UTC",
+      "opportunity_score": 40.5,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 10.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 75.0,
+          "detail": "No direct evidence found within the last 6 months for this exact niche."
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 55.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 17.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "pigeon",
+          "business suit",
+          "french fry"
+        ],
+        "categories": [
+          "very_high",
+          "medium"
+        ],
+        "notes": "demande MESURÉE (google_search_grounding) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "No direct evidence found within the last 6 months for this exact niche.",
+      "seo_keywords": [
+        "pigeon",
+        "business suit",
+        "french fry"
+      ],
+      "title_seeds": [
+        "Pigeon Businessman French Fry seamless pattern",
+        "Commuter Pigeon Subway repeat pattern"
+      ]
+    },
+    {
+      "name": "Goose Chef Chaos Whisk",
+      "trending_score": 40,
+      "market_opportunity": "high",
+      "why_trending": "Geese are synonymous with chaos in gaming and meme culture (thanks to Untitled Goose Game). Bringing this chaotic energy into the kitchen appeals heavily to home cooks and bakers.",
+      "target_audience": "Home cooks and baking enthusiasts",
+      "sub_niches": [
+        {
+          "name": "Goose Baker Flour Explosion",
+          "trending_score": 50,
+          "unique_angle": "Goose covered in flour holding a rolling pin like a weapon.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "chaotic, funny, energetic, wild",
+        "composition": "Dynamic action pose",
+        "line_style": "Expressive, energetic lines",
+        "color_primary": [
+          "Pure White #FFFFFF",
+          "Bright Orange #FF8C00"
+        ],
+        "color_accent": [
+          "Steel Gray #A9A9A9",
+          "Deep Black #111111"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": "Flat, clean vector"
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "A single white goose character, centered on a pure white background. Editorial cartoon style, expressive line art, slightly exaggerated proportions, and clean vector shapes. The goose wears a tall, slightly floppy white chef hat and holds a metal wire whisk in its bright orange beak. Its eye is wide and crazed, radiating pure kitchen chaos. The design features bold outlines and minimal shading for maximum readability, perfect for die-cut stickers. The color palette features pure white (#FFFFFF), bright orange (#FF8C00), steel gray (#A9A9A9), and deep black (#111111). Clean crisp edges, no background elements, isolated on white. Bold enough to read at sticker size. No gradients inside shapes.",
+        "negative_prompt": "",
+        "key_elements": [
+          "goose",
+          "chef hat",
+          "whisk"
+        ],
+        "avoid_elements": [
+          "gradients",
+          "shadows",
+          "background textures"
+        ],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "A Wild-Goose Chase Frontispiece.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/A_Wild-Goose_Chase_Frontispiece.jpg",
+          "width": 789,
+          "height": 1131
+        },
+        {
+          "title": "Scene from The Wild Goose Chase (1915).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Scene_from_The_Wild_Goose_Chase_%281915%29.jpg",
+          "width": 1040,
+          "height": 816
+        }
+      ],
+      "generated_at": "2026-06-05 20:36 UTC",
+      "opportunity_score": 40.5,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 10.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 75.0,
+          "detail": "No direct evidence found within the last 6 months for this exact niche."
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 55.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 17.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "goose",
+          "chef hat",
+          "whisk"
+        ],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande MESURÉE (google_search_grounding) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "No direct evidence found within the last 6 months for this exact niche.",
+      "seo_keywords": [
+        "goose",
+        "chef hat",
+        "whisk"
+      ],
+      "title_seeds": [
+        "Goose Chef Chaos Whisk seamless pattern",
+        "Goose Baker Flour Explosion repeat pattern"
+      ]
+    },
+    {
+      "name": "Screaming Opossum Anxiety Badge",
+      "trending_score": 40,
+      "market_opportunity": "very_high",
+      "why_trending": "Opossums are the reigning kings of 'screaming at own existence' memes on Reddit and Instagram. The vintage badge aesthetic makes it look like an official, ironic achievement award.",
+      "target_audience": "Anxious and neurodivergent young adults",
+      "sub_niches": [
+        {
+          "name": "Social Anxiety Merit Badge",
+          "trending_score": 50,
+          "unique_angle": "Styled specifically like a retro Boy Scout merit badge but for surviving a phone call.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "chaotic, anxious, retro, ironic",
+        "composition": "Circular badge layout",
+        "line_style": "Clean vector lines",
+        "color_primary": [
+          "Slate Gray #708090",
+          "Cream #FDF5E6"
+        ],
+        "color_accent": [
+          "Dusty Rose #DCAE1D",
+          "Charcoal #2F4F4F"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": "Distressed, vintage texture"
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "A single cartoon opossum hanging upside down by its pink tail from a rustic tree branch, centered on a pure white background. The design is styled as a circular vintage retro badge with a distressed, weathered texture and muted earth tones. The opossum has wide, frantic, bloodshot eyes and an open mouth screaming in panic, with a curved banner below reading 'SCREAMING INTERNALLY' in bold, distressed athletic block lettering. Vintage badge illustration style with clean vector lines and subtle retro shading. The color palette features slate gray (#708090), dusty rose (#DCAE1D), cream (#FDF5E6), and dark charcoal (#2F4F4F). Clean crisp edges, no background elements, isolated on white. Bold enough to read at sticker size. No gradients inside shapes.",
+        "negative_prompt": "",
+        "key_elements": [
+          "opossum",
+          "banner",
+          "screaming face"
+        ],
+        "avoid_elements": [
+          "gradients",
+          "shadows",
+          "background textures"
+        ],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "An Extraordinary Animal. Neither an Opossum nor a Kangaroo but having something of both MET DP868287.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/An_Extraordinary_Animal._Neither_an_Opossum_nor_a_Kangaroo_but_having_something_of_both_MET_DP868287.jpg",
+          "width": 2596,
+          "height": 3718
+        },
+        {
+          "title": "Opossum-drawing.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Opossum-drawing.jpg",
+          "width": 1562,
+          "height": 954
+        }
+      ],
+      "generated_at": "2026-06-05 20:36 UTC",
+      "opportunity_score": 40.5,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 10.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 75.0,
+          "detail": "No direct evidence found within the last 6 months for this exact niche."
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 55.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 17.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "opossum",
+          "banner",
+          "screaming face"
+        ],
+        "categories": [
+          "very_high",
+          "medium"
+        ],
+        "notes": "demande MESURÉE (google_search_grounding) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "No direct evidence found within the last 6 months for this exact niche.",
+      "seo_keywords": [
+        "opossum",
+        "banner",
+        "screaming face"
+      ],
+      "title_seeds": [
+        "Screaming Opossum Anxiety Badge seamless pattern",
+        "Social Anxiety Merit Badge repeat pattern"
+      ]
+    },
+    {
+      "name": "Grim Reaper Boba Break",
+      "trending_score": 40,
+      "market_opportunity": "high",
+      "why_trending": "The 'pastel goth' and 'cute reaper' aesthetics are evergreen bestsellers on Redbubble and Etsy. Combining the grim reaper with boba tea taps into the massive boba-loving Gen Z demographic.",
+      "target_audience": "Pastel goth and anime fans",
+      "sub_niches": [
+        {
+          "name": "Death Before Decaf Reaper",
+          "trending_score": 50,
+          "unique_angle": "Reaper holding a boba cup with skull-shaped tapioca pearls.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "creepy-cute, relaxed, sweet, gothic",
+        "composition": "Centered, sitting pose",
+        "line_style": "Thick, clean outlines",
+        "color_primary": [
+          "Lavender Purple #D6CADD",
+          "Pastel Pink #FFB7C5"
+        ],
+        "color_accent": [
+          "Deep Obsidian #0F0F14",
+          "Soft White #F8F9FA"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": "Flat, clean vector"
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "A single cute chibi grim reaper character sitting on the ground, centered on a pure white background. Pastel goth illustration style, cute but creepy aesthetic, soft pastel colors with dark high-contrast accents. The reaper wears a dark purple cowl with a deep hood, has glowing white circular eyes, and happily sips a pastel pink strawberry boba tea with black tapioca pearls using a wide neon straw. A tiny, non-threatening scythe rests flat on the ground beside them. The color palette features lavender purple (#D6CADD), pastel pink (#FFB7C5), deep obsidian (#0F0F14), and soft white (#F8F9FA). Clean crisp edges, no background elements, isolated on white. Bold enough to read at sticker size. No gradients inside shapes.",
+        "negative_prompt": "",
+        "key_elements": [
+          "grim reaper",
+          "boba cup",
+          "scythe"
+        ],
+        "avoid_elements": [
+          "gradients",
+          "shadows",
+          "background textures"
+        ],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "A grim teacher (re, Iroquois, Slocum, and Titanic disasters), April 20, 1912 (NBY 5757).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/71/A_grim_teacher_%28re%2C_Iroquois%2C_Slocum%2C_and_Titanic_disasters%29%2C_April_20%2C_1912_%28NBY_5757%29.jpg",
+          "width": 3270,
+          "height": 3600
+        },
+        {
+          "title": "LuxuriesVersusLifeboatsPuckMagazine1912.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/23/LuxuriesVersusLifeboatsPuckMagazine1912.jpg",
+          "width": 5239,
+          "height": 7805
+        }
+      ],
+      "generated_at": "2026-06-05 20:36 UTC",
+      "opportunity_score": 40.5,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 10.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 75.0,
+          "detail": "No direct evidence found within the last 6 months for this exact niche."
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 55.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 17.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "grim reaper",
+          "boba cup",
+          "scythe"
+        ],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande MESURÉE (google_search_grounding) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "No direct evidence found within the last 6 months for this exact niche.",
+      "seo_keywords": [
+        "grim reaper",
+        "boba cup",
+        "scythe"
+      ],
+      "title_seeds": [
+        "Grim Reaper Boba Break seamless pattern",
+        "Death Before Decaf Reaper repeat pattern"
+      ]
+    },
+    {
+      "name": "Intrusive Thoughts Skateboard Brain",
+      "trending_score": 40,
+      "market_opportunity": "high",
+      "why_trending": "The phrase 'intrusive thoughts' has transitioned from clinical psychology to a massive, lighthearted internet meme. Visualizing it as a cool, unstoppable skateboarder is highly shareable and unique.",
+      "target_audience": "Gen Z and Millennial mental health advocates",
+      "sub_niches": [
+        {
+          "name": "Anxiety Kickflip Brain",
+          "trending_score": 50,
+          "unique_angle": "Brain doing a trick over a barrier labeled 'Rational Thoughts'.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "edgy, energetic, chaotic, humorous",
+        "composition": "Dynamic diagonal action shot",
+        "line_style": "Expressive, sketchy lines",
+        "color_primary": [
+          "Bubblegum Pink #FF69B4",
+          "Neon Green #39FF14"
+        ],
+        "color_accent": [
+          "Skateboard Brown #8B4513",
+          "Deep Black #000000"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": "Flat, high-contrast vector"
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "A single pink human brain character performing a radical kickflip on a skateboard, centered on a pure white background. Editorial cartoon style, expressive sketchy line art, slightly exaggerated proportions, and bold graphic elements. The brain wears cool black retro sunglasses and has a wild, chaotic, toothy grin, perfectly embodying unstoppable intrusive thoughts. The skateboard is a vibrant neon green with black wheels, kicking up tiny stylized dust clouds. The color palette features bubblegum pink (#FF69B4), neon green (#39FF14), skateboard brown (#8B4513), and deep black (#000000). Clean crisp edges, no background elements, isolated on white. Bold enough to read at sticker size. No gradients inside shapes.",
+        "negative_prompt": "",
+        "key_elements": [
+          "brain",
+          "skateboard",
+          "sunglasses"
+        ],
+        "avoid_elements": [
+          "gradients",
+          "shadows",
+          "background textures"
+        ],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Human-brain-1443446941h0A.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/77/Human-brain-1443446941h0A.jpg",
+          "width": 1920,
+          "height": 1697
+        },
+        {
+          "title": "Vertebrate-brain-cartoon cs.png",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Vertebrate-brain-cartoon_cs.png",
+          "width": 681,
+          "height": 270
+        }
+      ],
+      "generated_at": "2026-06-05 20:36 UTC",
+      "opportunity_score": 40.5,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 10.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 75.0,
+          "detail": "No direct evidence found within the last 6 months for this exact niche."
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 55.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 17.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "brain",
+          "skateboard",
+          "sunglasses"
+        ],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande MESURÉE (google_search_grounding) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "No direct evidence found within the last 6 months for this exact niche.",
+      "seo_keywords": [
+        "brain",
+        "skateboard",
+        "sunglasses"
+      ],
+      "title_seeds": [
+        "Intrusive Thoughts Skateboard Brain seamless pattern",
+        "Anxiety Kickflip Brain repeat pattern"
+      ]
+    },
+    {
+      "name": "Ghost Watering Dying Plant",
+      "trending_score": 40,
+      "market_opportunity": "high",
+      "why_trending": "The plant parent community is massive and highly active on Redbubble. Combining the struggle of keeping houseplants alive with a cute, spooky ghost taps into both the plant and spooky/goth niches.",
+      "target_audience": "Plant lovers and spooky aesthetic fans",
+      "sub_niches": [
+        {
+          "name": "Ghost of Dead Houseplants",
+          "trending_score": 50,
+          "unique_angle": "Ghost surrounded by the spirits of all the plants they killed.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "sweet, apologetic, cute, spooky",
+        "composition": "Centered, balanced composition",
+        "line_style": "Thick, clean outlines",
+        "color_primary": [
+          "Soft White #F0F8FF",
+          "Pastel Purple #D8BFD8"
+        ],
+        "color_accent": [
+          "Terracotta #E9967A",
+          "Dark Charcoal #1C1C1C"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": "Flat, clean vector"
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "A single cute translucent white ghost character, centered on a pure white background. Pastel goth illustration style, cute but creepy aesthetic, soft pastel colors with dark high-contrast accents. The ghost holds a tiny pastel purple watering can, pouring water onto a very droopy, sad green houseplant in a terracotta pot. The ghost has a sweet, apologetic expression with tiny blushing cheeks. The design features thick outlines and flat color fills, optimized for high-contrast visibility. The color palette features soft white (#F0F8FF), pastel purple (#D8BFD8), terracotta (#E9967A), and dark charcoal (#1C1C1C). Clean crisp edges, no background elements, isolated on white. Bold enough to read at sticker size. No gradients inside shapes.",
+        "negative_prompt": "",
+        "key_elements": [
+          "ghost",
+          "watering can",
+          "dying plant"
+        ],
+        "avoid_elements": [
+          "gradients",
+          "shadows",
+          "background textures"
+        ],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Casper The Friendly Ghost - Boo Moon (1953).png",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Casper_The_Friendly_Ghost_-_Boo_Moon_%281953%29.png",
+          "width": 985,
+          "height": 720
+        },
+        {
+          "title": "Cover of Casper the Friendly Ghost no. 34 (July 1955).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Cover_of_Casper_the_Friendly_Ghost_no._34_%28July_1955%29.jpg",
+          "width": 824,
+          "height": 1208
+        }
+      ],
+      "generated_at": "2026-06-05 20:36 UTC",
+      "opportunity_score": 40.5,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 10.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 75.0,
+          "detail": "No direct evidence found within the last 6 months for this exact niche."
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 55.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 17.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "ghost",
+          "watering can",
+          "dying plant"
+        ],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande MESURÉE (google_search_grounding) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "No direct evidence found within the last 6 months for this exact niche.",
+      "seo_keywords": [
+        "ghost",
+        "watering can",
+        "dying plant"
+      ],
+      "title_seeds": [
+        "Ghost Watering Dying Plant seamless pattern",
+        "Ghost of Dead Houseplants repeat pattern"
+      ]
+    },
+    {
+      "name": "Certified Chaos Goblin Badge",
+      "trending_score": 40,
+      "market_opportunity": "high",
+      "why_trending": "'Goblin mode' and 'chaos goblin' are heavily searched terms on TikTok and Etsy for identity-based stickers. This design taps into the pride of being unapologetically chaotic.",
+      "target_audience": "Gamers and neurodivergent youth",
+      "sub_niches": [
+        {
+          "name": "Late Night Hyperfocus Goblin",
+          "trending_score": 50,
+          "unique_angle": "Goblin surrounded by half-finished crafts and open browser tabs at 3 AM.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "mischievous, retro, proud, chaotic",
+        "composition": "Circular badge layout",
+        "line_style": "Clean vector lines",
+        "color_primary": [
+          "Moss Green #556B2F",
+          "Mustard Yellow #E1AD01"
+        ],
+        "color_accent": [
+          "Terracotta #C25A3F",
+          "Dark Charcoal #1C1C1C"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": "Distressed, vintage texture"
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "A single mischievous green goblin character sitting cross-legged, centered on a pure white background. The design is styled as a circular vintage retro badge with a distressed, weathered texture and muted earth tones. The goblin has large pointed ears, a wide toothy grin, and holds a single lit match with a tiny glowing sparkle. A curved banner wraps around the circular frame reading 'CERTIFIED CHAOS GOBLIN' in bold, distressed retro serif typography. Vintage badge illustration style with clean vector lines and subtle retro shading. The color palette features moss green (#556B2F), mustard yellow (#E1AD01), terracotta (#C25A3F), and dark charcoal (#1C1C1C). Clean crisp edges, no background elements, isolated on white. Bold enough to read at sticker size. No gradients inside shapes.",
+        "negative_prompt": "",
+        "key_elements": [
+          "goblin",
+          "banner",
+          "match"
+        ],
+        "avoid_elements": [
+          "gradients",
+          "shadows",
+          "background textures"
+        ],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Goblin illustration from 19th century.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Goblin_illustration_from_19th_century.jpg",
+          "width": 1195,
+          "height": 1314
+        },
+        {
+          "title": "Goblin illustration from 19th century.png",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Goblin_illustration_from_19th_century.png",
+          "width": 1195,
+          "height": 1314
+        }
+      ],
+      "generated_at": "2026-06-05 20:36 UTC",
+      "opportunity_score": 40.5,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 10.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 75.0,
+          "detail": "No direct evidence found within the last 6 months for this exact niche."
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 55.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 17.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "goblin",
+          "banner",
+          "match"
+        ],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande MESURÉE (google_search_grounding) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "No direct evidence found within the last 6 months for this exact niche.",
+      "seo_keywords": [
+        "goblin",
+        "banner",
+        "match"
+      ],
+      "title_seeds": [
+        "Certified Chaos Goblin Badge seamless pattern",
+        "Late Night Hyperfocus Goblin repeat pattern"
+      ]
+    },
+    {
+      "name": "D20 Critical Fail Dunce",
+      "trending_score": 40,
+      "market_opportunity": "high",
+      "why_trending": "The tabletop RPG (D&D) community is incredibly active on Redbubble and loves buying stickers that represent the pain of rolling a natural 1. This cute, pathetic representation is highly relatable to players.",
+      "target_audience": "Tabletop RPG players",
+      "sub_niches": [
+        {
+          "name": "Dice Jail Inmate D20",
+          "trending_score": 50,
+          "unique_angle": "D20 sitting behind tiny hand-drawn prison bars.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "sad, funny, retro, nerdy",
+        "composition": "Centered, geometric die",
+        "line_style": "Clean, sharp vector lines",
+        "color_primary": [
+          "Deep Crimson #8B0000",
+          "Parchment Cream #F5F5DC"
+        ],
+        "color_accent": [
+          "Ink Black #000000",
+          "Soft White #FFFFFF"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": "Subtle distressed texture"
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "A single 20-sided gaming die (D20), centered on a pure white background. Vintage retro badge design, distressed texture, muted earth tones, and a circular composition. The die is positioned to show the '1' face prominently. The die is wearing a tiny white dunce cap on its top corner and has small cartoon tears streaming down its sides. The design features clean vector lines and subtle retro shading, optimized for high-contrast visibility. The color palette features deep crimson (#8B0000), parchment cream (#F5F5DC), ink black (#000000), and soft white (#FFFFFF). Clean crisp edges, no background elements, isolated on white. Bold enough to read at sticker size. No gradients inside shapes.",
+        "negative_prompt": "",
+        "key_elements": [
+          "d20 die",
+          "dunce cap",
+          "tears"
+        ],
+        "avoid_elements": [
+          "gradients",
+          "shadows",
+          "background textures"
+        ],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 20:36 UTC",
+      "opportunity_score": 40.5,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 10.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 75.0,
+          "detail": "No direct evidence found within the last 6 months for this exact niche."
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 55.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 17.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "d20 die",
+          "dunce cap",
+          "tears"
+        ],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande MESURÉE (google_search_grounding) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "No direct evidence found within the last 6 months for this exact niche.",
+      "seo_keywords": [
+        "d20 die",
+        "dunce cap",
+        "tears"
+      ],
+      "title_seeds": [
+        "D20 Critical Fail Dunce seamless pattern",
+        "Dice Jail Inmate D20 repeat pattern"
+      ]
+    },
+    {
+      "name": "Sourdough Starter Drama Jar",
+      "trending_score": 40,
+      "market_opportunity": "high",
+      "why_trending": "Sourdough baking has evolved from a pandemic hobby into a permanent, highly passionate micro-niche community. Bakers love inside jokes about how dramatic and needy their starters are.",
+      "target_audience": "Home bakers and foodies",
+      "sub_niches": [
+        {
+          "name": "Sourdough Starter Neglect",
+          "trending_score": 50,
+          "unique_angle": "Jar of starter wearing a tiny cobweb hat, looking resentful.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "dramatic, funny, clean, modern",
+        "composition": "Centered, vertical jar",
+        "line_style": "Clean, bold outlines",
+        "color_primary": [
+          "Warm Beige #F5F5DC",
+          "Glass Blue #E0F7FA"
+        ],
+        "color_accent": [
+          "Label White #FFFFFF",
+          "Dark Charcoal #1A1A1A"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": "Flat, modern vector"
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "A single glass mason jar, centered on a pure white background. Modern flat vector illustration style with geometric shapes, bold solid colors, and minimal clean shading. Inside the jar is a bubbling, beige sourdough starter with a highly dramatic, crying face. A small hand-drawn label on the jar reads 'FEED ME OR LET ME DIE' in clean, bold lettering. The design features thick outlines and flat color fills, optimized for high-contrast visibility. The color palette features warm beige (#F5F5DC), glass blue (#E0F7FA), label white (#FFFFFF), and dark charcoal (#1A1A1A). Clean crisp edges, no background elements, isolated on white. Bold enough to read at sticker size. No gradients inside shapes.",
+        "negative_prompt": "",
+        "key_elements": [
+          "mason jar",
+          "sourdough starter",
+          "label"
+        ],
+        "avoid_elements": [
+          "gradients",
+          "shadows",
+          "background textures"
+        ],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 20:36 UTC",
+      "opportunity_score": 40.5,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 10.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 75.0,
+          "detail": "No direct evidence found within the last 6 months for this exact niche."
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 55.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 17.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "mason jar",
+          "sourdough starter",
+          "label"
+        ],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande MESURÉE (google_search_grounding) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "No direct evidence found within the last 6 months for this exact niche.",
+      "seo_keywords": [
+        "mason jar",
+        "sourdough starter",
+        "label"
+      ],
+      "title_seeds": [
+        "Sourdough Starter Drama Jar seamless pattern",
+        "Sourdough Starter Neglect repeat pattern"
+      ]
+    },
+    {
+      "name": "Existential Frog Void Tea",
+      "trending_score": 34,
+      "market_opportunity": "very_high",
+      "why_trending": "Cottagecore and frog aesthetics continue to dominate Pinterest and TikTok. Merging the cozy cottagecore aesthetic with existential dread creates a highly desirable sticker for Gen Z.",
+      "target_audience": "Cottagecore and nature lovers",
+      "sub_niches": [
+        {
+          "name": "Frog Overwhelmed by Choices",
+          "trending_score": 50,
+          "unique_angle": "Frog looking at a menu of 50 types of tea with sweat drops.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "cozy, existential, calm, cute",
+        "composition": "Centered, balanced composition",
+        "line_style": "Thick black outlines",
+        "color_primary": [
+          "Sage Green #8FBC8F",
+          "Mushroom Red #CD5C5C"
+        ],
+        "color_accent": [
+          "Warm Cream #FFFDD0",
+          "Dark Charcoal #1C1C1C"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": "Flat, clean vector"
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "high"
+      },
+      "ai_generation": {
+        "positive_prompt": "A single green frog sitting on a red spotted mushroom, centered on a pure white background. Kawaii flat vector illustration style, thick clean black outlines, soft pastel colors, and expressive simplified shapes. The frog has wide, completely blank white eyes, staring into the distance in a state of quiet existential dread while holding a tiny white teacup with a single curl of steam rising from it. The design is highly readable and optimized for die-cut stickers. The color palette features sage green (#8FBC8F), mushroom red (#CD5C5C), warm cream (#FFFDD0), and dark charcoal (#1C1C1C). Clean crisp edges, no background elements, isolated on white. Bold enough to read at sticker size. No gradients inside shapes.",
+        "negative_prompt": "",
+        "key_elements": [
+          "frog",
+          "mushroom",
+          "teacup"
+        ],
+        "avoid_elements": [
+          "gradients",
+          "shadows",
+          "background textures"
+        ],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "FlipFrogAnn.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/af/FlipFrogAnn.jpg",
+          "width": 410,
+          "height": 561
+        },
+        {
+          "title": "Flip the Frog opening title.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Flip_the_Frog_opening_title.jpg",
+          "width": 1140,
+          "height": 772
+        }
+      ],
+      "generated_at": "2026-06-05 20:36 UTC",
+      "opportunity_score": 34.2,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 10.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 75.0,
+          "detail": "No direct evidence found within the last 6 months for this exact niche."
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'high' → score 35 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 55.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 17.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "frog",
+          "mushroom",
+          "teacup"
+        ],
+        "categories": [
+          "very_high",
+          "high"
+        ],
+        "notes": "demande MESURÉE (google_search_grounding) · compétition high · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "high",
+        "score": 65.0,
+        "rationale": "compétition 'high' → marché très exploité"
+      },
+      "reusability_detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "No direct evidence found within the last 6 months for this exact niche.",
+      "seo_keywords": [
+        "frog",
+        "mushroom",
+        "teacup"
+      ],
+      "title_seeds": [
+        "Existential Frog Void Tea seamless pattern",
+        "Frog Overwhelmed by Choices repeat pattern"
+      ]
+    }
+  ]
+}
