@@ -275,6 +275,12 @@ jobs:
               --input ./output/uploads/base \
               --output ./output/uploads/colorways \
               $PALETTE_ARG || echo "(no uploads found, skipped)"
+            echo "-- Auto thumbnails (colorways + pipeline + uploads) --"
+            python -m trend_discovery.main thumbnails \
+              --pipeline ./output/spoonflower \
+              --colorways ./output/colorways \
+              --uploads ./output/uploads/base \
+              --output ./output/thumbnails
           elif [ "$MODE" = "seamless-audit" ]; then
             echo "=== MODE SEAMLESS-AUDIT : vérification + correction mirror quad ==="
             echo "-- Audit pipeline images (overwrite en place) --"
