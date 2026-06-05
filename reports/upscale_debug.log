@@ -1,8 +1,349 @@
-upscale_debug — 2026-06-05T16:38:47.337965
-[dbg] opened user_upload_01bc438f-3d86-4587-96e8-978ee5c50d29.png size=(4500, 4500)
-[dbg] downscaled to 1024px, payload=1500 KB
+
+=== ./output/uploads/base — 2026-06-05T18:33:17.540532 ===
+[dbg] opened user_upload_01cce38b-655e-477d-acc2-8a6c209aeeda.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=1710 KB
 [dbg] tentative imageUpscale direct avec base64...
-[dbg] imageUpscale direct → https://im.runware.ai/image/os/a05d22/ws/5/ii/2a20926f-aa61-4f3f-906b-587ac0314cf0.png
-[dbg] download → 23313 KB
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a05d22/ws/5/ii/ee60f84a-b1bf-4d74-ab0b-2f35eaa7b091.png
+[dbg] download → 22552 KB
 [dbg] upscaled size=(4096, 4096)
-[dbg] ✅ saved ./output/uploads/base/user_upload_01bc438f-3d86-4587-96e8-978ee5c50d29.png → 24.5 MB
+[dbg] ✅ saved ./output/uploads/base/user_upload_01cce38b-655e-477d-acc2-8a6c209aeeda.png → 22.5 MB
+[dbg] opened user_upload_0a9aa845-0294-44f8-824b-011a52820006.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=2559 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a07dlim3/ws/5/ii/ca30ed55-f664-40dc-869b-c895b8db683b.png
+[dbg] download → 25504 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_0a9aa845-0294-44f8-824b-011a52820006.png → 25.7 MB
+[dbg] opened user_upload_0eccb8fa-5a60-4589-b84f-c49ec5f8d8bf.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=1261 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a05d22/ws/5/ii/f2756b6e-b2cd-4442-ac84-973e278f389b.png
+[dbg] download → 15084 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_0eccb8fa-5a60-4589-b84f-c49ec5f8d8bf.png → 15.3 MB
+[dbg] opened user_upload_20350eb6-1014-437c-9e18-81323ece4488.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=1814 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a04d20/ws/5/ii/68520451-5e22-46d1-8bf9-62505a66924b.png
+[dbg] download → 22296 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_20350eb6-1014-437c-9e18-81323ece4488.png → 22.1 MB
+[dbg] opened user_upload_23022cac-a581-4025-b8b5-3460d691a3d3.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=2544 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a10dlim3/ws/5/ii/2c67a096-bf35-4660-91a8-4b304551876a.png
+[dbg] download → 31204 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_23022cac-a581-4025-b8b5-3460d691a3d3.png → 31.5 MB
+[dbg] opened user_upload_2d089f65-6a96-47de-b6c6-d43f180759d3.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=1137 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a01d21/ws/5/ii/ee01acf3-c2ce-4448-893f-79c8b0aa1960.png
+[dbg] download → 17191 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_2d089f65-6a96-47de-b6c6-d43f180759d3.png → 17.3 MB
+[dbg] opened user_upload_31686e8c-4e23-467c-85a7-bac8639c4249.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=792 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a10dlim3/ws/5/ii/488aafe9-523a-41da-b2ca-2e1a7f2d9c6e.png
+[dbg] download → 20315 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_31686e8c-4e23-467c-85a7-bac8639c4249.png → 21.1 MB
+[dbg] opened user_upload_31bb9727-2d70-42d4-aff7-dcbe68fb6ae9.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=1425 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a06dlim3/ws/5/ii/77f04b98-e935-4cf9-b4f7-d1c5a6550193.png
+[dbg] download → 25989 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_31bb9727-2d70-42d4-aff7-dcbe68fb6ae9.png → 26.8 MB
+[dbg] opened user_upload_333129d7-f8ae-4538-b881-b9ba4060b3a6.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=2328 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a03d21/ws/5/ii/8f2a51be-72ff-43d9-af62-1b7043ec0a08.png
+[dbg] download → 27682 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_333129d7-f8ae-4538-b881-b9ba4060b3a6.png → 28.6 MB
+[dbg] opened user_upload_350d8504-8d76-484a-bb74-44eda9f00a68.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=1583 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a10dlim3/ws/5/ii/950f18c1-3794-46c3-9061-03a080a5646e.png
+[dbg] download → 17445 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_350d8504-8d76-484a-bb74-44eda9f00a68.png → 18.0 MB
+[dbg] opened user_upload_3c71491b-e640-4cda-91db-07baa10131b7.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=2491 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a03d21/ws/5/ii/ac9c07d7-1da6-4d9c-898f-e76e77847a57.png
+[dbg] download → 38129 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_3c71491b-e640-4cda-91db-07baa10131b7.png → 38.6 MB
+[dbg] opened user_upload_474cdcd2-3870-4c64-9ab8-dfc5103cc9b5.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=2087 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a05d22/ws/5/ii/e4734fea-012e-4604-bed3-385d3e8086ba.png
+[dbg] download → 30994 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_474cdcd2-3870-4c64-9ab8-dfc5103cc9b5.png → 32.0 MB
+[dbg] opened user_upload_4f26c78e-ec59-43bb-b132-8eff89acf7ec.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=1081 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a10dlim3/ws/5/ii/2976524e-bd06-4f52-aae4-506772977324.png
+[dbg] download → 12895 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_4f26c78e-ec59-43bb-b132-8eff89acf7ec.png → 12.9 MB
+[dbg] opened user_upload_59712fee-bef5-47e2-96cc-1555795cbe1d.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=1211 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a10dlim3/ws/5/ii/3114a42c-5a01-4679-b858-78c3d0dc66e0.png
+[dbg] download → 19182 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_59712fee-bef5-47e2-96cc-1555795cbe1d.png → 19.0 MB
+[dbg] opened user_upload_5e05a807-76f6-4ec7-8f66-d525f9d7b3b4.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=1162 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a10dlim3/ws/5/ii/01f0c6bb-00ed-4835-aeb4-b2e888cd0ef7.png
+[dbg] download → 25025 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_5e05a807-76f6-4ec7-8f66-d525f9d7b3b4.png → 25.2 MB
+[dbg] opened user_upload_60f0e132-f4cf-4c6b-a549-372eee57229d.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=1921 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a04d20/ws/5/ii/ec248644-91a4-4b1a-88d9-0e4f15cde8ba.png
+[dbg] download → 31867 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_60f0e132-f4cf-4c6b-a549-372eee57229d.png → 33.7 MB
+[dbg] opened user_upload_6111dda1-cc8c-4475-b198-54e2ad541738.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=2318 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a02d21/ws/5/ii/762408fa-51f4-4db7-8eff-85b962710434.png
+[dbg] download → 28373 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_6111dda1-cc8c-4475-b198-54e2ad541738.png → 29.3 MB
+[dbg] opened user_upload_612cd6ab-e34e-46c8-918e-8f3e98c0520e.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=1328 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a07dlim3/ws/5/ii/ede7ab21-b97d-4e2d-aa0f-68da5c425a79.png
+[dbg] download → 17301 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_612cd6ab-e34e-46c8-918e-8f3e98c0520e.png → 17.9 MB
+[dbg] opened user_upload_62cb813a-da47-4d90-a7b9-a83c313280fb.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=2264 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a03d21/ws/5/ii/18b5cb28-c5e8-4561-9310-ee9b1212f050.png
+[dbg] download → 36076 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_62cb813a-da47-4d90-a7b9-a83c313280fb.png → 37.2 MB
+[dbg] opened user_upload_71895d9b-1670-4518-ac7b-178faadfc1a3.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=1892 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a05d22/ws/5/ii/66511dd8-190f-49b4-8fbe-caa3225ea62b.png
+[dbg] download → 23094 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_71895d9b-1670-4518-ac7b-178faadfc1a3.png → 23.1 MB
+[dbg] opened user_upload_72db08b6-1d23-449d-a11d-539caafb121b.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=1455 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a05d22/ws/5/ii/76113cb1-88ec-444f-8e75-bc3a86b8cc91.png
+[dbg] download → 31495 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_72db08b6-1d23-449d-a11d-539caafb121b.png → 32.8 MB
+[dbg] opened user_upload_73916211-d343-4b5f-835a-390df261e490.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=1715 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a02d21/ws/5/ii/7e4a15b3-1883-4623-8c5b-cc88bed5a8f3.png
+[dbg] download → 16828 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_73916211-d343-4b5f-835a-390df261e490.png → 17.3 MB
+[dbg] opened user_upload_7967732c-f929-43be-8f5c-384bf26ccf08.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=1289 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a01d21/ws/5/ii/5dce25ff-6206-4c55-8c09-3e6b081dbde5.png
+[dbg] download → 17651 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_7967732c-f929-43be-8f5c-384bf26ccf08.png → 17.9 MB
+[dbg] opened user_upload_80b245e1-9b62-444c-9b99-e3b288f85afc.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=836 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a07dlim3/ws/5/ii/0653987f-21e3-4d45-aaa5-23e7def74658.png
+[dbg] download → 20408 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_80b245e1-9b62-444c-9b99-e3b288f85afc.png → 21.5 MB
+[dbg] opened user_upload_83945e6c-3341-4991-ab1e-1dd8bda0af9c.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=2467 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a05d22/ws/5/ii/d8549e94-cc25-4e6f-a42b-4ac28d756f5b.png
+[dbg] download → 35241 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_83945e6c-3341-4991-ab1e-1dd8bda0af9c.png → 36.5 MB
+[dbg] opened user_upload_8413bb1d-b1a1-4944-b5d9-587d20f0cd19.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=971 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a10dlim3/ws/5/ii/2df70bbe-10b2-4985-b98c-01eb813c8a9d.png
+[dbg] download → 16246 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_8413bb1d-b1a1-4944-b5d9-587d20f0cd19.png → 16.6 MB
+[dbg] opened user_upload_8ad72f48-6b19-4118-9c7e-98ea4b53f854.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=1887 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a05d22/ws/5/ii/26664541-564a-43f4-a6b5-e70dec5c11f1.png
+[dbg] download → 33520 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_8ad72f48-6b19-4118-9c7e-98ea4b53f854.png → 34.0 MB
+[dbg] opened user_upload_8b8e1f20-89a9-42ee-982b-0abaf9130abf.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=1079 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a10dlim3/ws/5/ii/d1af8e7c-095f-40fa-904c-db710af40e80.png
+[dbg] download → 16129 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_8b8e1f20-89a9-42ee-982b-0abaf9130abf.png → 16.5 MB
+[dbg] opened user_upload_8f4deef4-e325-4f06-9f39-b7b67fca2b41.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=1446 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a07dlim3/ws/5/ii/e9f3a450-4eb2-4bb8-8cb6-58bd47a247bb.png
+[dbg] download → 21418 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_8f4deef4-e325-4f06-9f39-b7b67fca2b41.png → 21.7 MB
+[dbg] opened user_upload_91641f16-7a27-411f-aea2-3a6f0e5ef614.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=1496 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a03d21/ws/5/ii/f4e0d86f-aec0-4531-a6a6-adf9729ff4df.png
+[dbg] download → 26140 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_91641f16-7a27-411f-aea2-3a6f0e5ef614.png → 26.2 MB
+[dbg] opened user_upload_9576dfc2-7e05-4545-920d-2d223ee0e86c.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=2671 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a03d21/ws/5/ii/495afa66-afad-428d-ada8-ebb03f125e72.png
+[dbg] download → 33238 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_9576dfc2-7e05-4545-920d-2d223ee0e86c.png → 33.9 MB
+[dbg] opened user_upload_9a1c3d9e-45c7-4393-9f8e-a4be2f7fbb80.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=517 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a02d21/ws/5/ii/26863910-838c-4079-a47b-d0a49296d4ef.png
+[dbg] download → 10565 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_9a1c3d9e-45c7-4393-9f8e-a4be2f7fbb80.png → 10.6 MB
+[dbg] opened user_upload_9ac199a6-a43c-495c-82e6-6da1c2285765.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=1632 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a08dlim3/ws/5/ii/429821d6-37a0-4966-bb36-aa2949468444.png
+[dbg] download → 26013 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_9ac199a6-a43c-495c-82e6-6da1c2285765.png → 27.1 MB
+[dbg] opened user_upload_9d712e16-d164-49e0-8d31-1a5fd847780f.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=1526 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a03d21/ws/5/ii/caae5675-f070-4afc-898b-316a1e8571a1.png
+[dbg] download → 22522 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_9d712e16-d164-49e0-8d31-1a5fd847780f.png → 22.8 MB
+[dbg] opened user_upload_aa5d7d88-1220-4b63-b6b7-b74a7328946e.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=1721 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a05d22/ws/5/ii/1b958d94-3f10-4ec9-a680-f396ab77761c.png
+[dbg] download → 28317 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_aa5d7d88-1220-4b63-b6b7-b74a7328946e.png → 29.2 MB
+[dbg] opened user_upload_ad6402ec-31d0-464e-b021-13690f580cf6.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=1006 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a03d21/ws/5/ii/6db7b0db-5a31-4a9d-99e7-9bacc8329e44.png
+[dbg] download → 24052 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_ad6402ec-31d0-464e-b021-13690f580cf6.png → 24.6 MB
+[dbg] opened user_upload_b46169fe-4960-4f74-bc0a-1ca751dff290.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=2636 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a07dlim3/ws/5/ii/566767e3-9e70-419e-9ff8-7cd8a92aa2ec.png
+[dbg] download → 36609 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_b46169fe-4960-4f74-bc0a-1ca751dff290.png → 36.8 MB
+[dbg] opened user_upload_b6505655-627c-474a-83ff-09aa283d01e1.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=1376 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a01d21/ws/5/ii/cf043483-ef7c-4c96-b2f4-3f7c46cb4feb.png
+[dbg] download → 23476 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_b6505655-627c-474a-83ff-09aa283d01e1.png → 24.3 MB
+[dbg] opened user_upload_d045936f-c708-4413-ad47-d1bb7da64085.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=1380 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a07dlim3/ws/5/ii/db318ebb-707c-4427-8ae4-740ad3e2ca92.png
+[dbg] download → 15731 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_d045936f-c708-4413-ad47-d1bb7da64085.png → 16.6 MB
+[dbg] opened user_upload_d351578f-7d60-45d0-8ade-aa4d995c9300.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=1870 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a10dlim3/ws/5/ii/4abce66f-582a-4fc2-886e-ea790e91205e.png
+[dbg] download → 23623 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_d351578f-7d60-45d0-8ade-aa4d995c9300.png → 23.6 MB
+[dbg] opened user_upload_d479ae58-9954-4310-913a-50f5efe1890f.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=2098 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a07dlim3/ws/5/ii/3f0817af-0164-4b9c-ad25-5fc2b2c22af8.png
+[dbg] download → 34541 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_d479ae58-9954-4310-913a-50f5efe1890f.png → 35.8 MB
+[dbg] opened user_upload_e47b3b77-bacb-45b4-b140-7f133d7c013e.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=780 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a04d20/ws/5/ii/781ec6fc-2508-431d-96d4-e9cf9d9d6e10.png
+[dbg] download → 20236 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_e47b3b77-bacb-45b4-b140-7f133d7c013e.png → 20.5 MB
+[dbg] opened user_upload_e5e6133b-dd7e-4249-bee7-0ef5b71196ce.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=1700 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a06dlim3/ws/5/ii/0b19a76a-c1f6-4ced-bad7-cdaac9a4b670.png
+[dbg] download → 21905 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_e5e6133b-dd7e-4249-bee7-0ef5b71196ce.png → 22.2 MB
+[dbg] opened user_upload_e781a48e-0f23-46ba-b54e-0c6e12ae4884.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=978 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a08dlim3/ws/5/ii/c99af171-7f82-43c4-9707-33c93989030e.png
+[dbg] download → 15815 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_e781a48e-0f23-46ba-b54e-0c6e12ae4884.png → 16.1 MB
+[dbg] opened user_upload_eea3f4b7-2c41-4c19-8ffb-1313c86c68d1.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=1815 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a06dlim3/ws/5/ii/a3fc7253-247a-4167-b18c-0110c9b97221.png
+[dbg] download → 28408 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_eea3f4b7-2c41-4c19-8ffb-1313c86c68d1.png → 29.4 MB
+[dbg] opened user_upload_f91bdc14-afec-49db-b113-1611c0dc271b.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=2134 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a06dlim3/ws/5/ii/fb03c9c4-508b-4e5b-b403-48127d5e6a59.png
+[dbg] download → 30266 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_f91bdc14-afec-49db-b113-1611c0dc271b.png → 31.2 MB
+[dbg] opened user_upload_fc74c56e-ff9f-4230-a4de-c0f60e619247.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=2492 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a08dlim3/ws/5/ii/da9b4402-e3c8-4d33-855b-cf219ab86833.png
+[dbg] download → 32046 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_fc74c56e-ff9f-4230-a4de-c0f60e619247.png → 32.6 MB
+[dbg] opened user_upload_fcd9f6d4-4982-4dd5-9eaa-38a228d568ce.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=517 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a05d22/ws/5/ii/b9344809-7c2c-4194-b7e2-7d85d7428cf0.png
+[dbg] download → 17815 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_fcd9f6d4-4982-4dd5-9eaa-38a228d568ce.png → 18.5 MB
+[dbg] opened user_upload_ffd0dd46-984b-4764-a9fe-3ab4c9ab06ac.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=1694 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → ECHEC
+[dbg] fallback relay imageInference (strength=0.25, steps=4)...
+[dbg] relay_url → https://im.runware.ai/image/os/a03d21/ws/3/ii/1f4e1b7e-e372-4a56-a1a4-d4447aa0b1d2.png
+[dbg] imageUpscale relay → https://im.runware.ai/image/os/a03d21/ws/5/ii/14460ee0-47e2-49a6-8e11-e8c73bd8fa5b.png
+[dbg] download → 30433 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_ffd0dd46-984b-4764-a9fe-3ab4c9ab06ac.png → 31.2 MB
+COUT REEL MESURE : $0.3247 pour 49 images (MEASURED)
