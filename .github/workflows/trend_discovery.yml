@@ -141,10 +141,6 @@ jobs:
             LIMIT_VAL="${{ github.event.inputs.limit || '0' }}"
             [ "$LIMIT_VAL" != "0" ] && LIMIT_ARG="--limit $LIMIT_VAL"
             eval python -m trend_discovery.main generate-all --yes $NICHE_ARG $LIMIT_ARG
-            echo "-- Auto seamless audit (overwrite en place) --"
-            python -m trend_discovery.main seamless-audit --yes --overwrite \
-              --input ./output/spoonflower \
-              --output ./output/spoonflower
             echo "-- Auto thumbnails --"
             python -m trend_discovery.main thumbnails \
               --pipeline ./output/spoonflower \
