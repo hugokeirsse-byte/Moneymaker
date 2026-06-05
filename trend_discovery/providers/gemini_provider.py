@@ -523,60 +523,73 @@ to generate the finished seamless pattern in ONE shot. FLUX Dev 2 is a flow-matc
 diffusion model that understands natural descriptive English prose, NOT keyword tags.
 Write like you are briefing a skilled human textile illustrator.
 
-WRITE THE PROMPT USING THIS EXACT 5-PART STRUCTURE (130-180 words, flowing natural sentences):
+══════════════════════════════════════════════
+CHOOSE THE APPROPRIATE STYLE TEMPLATE BELOW:
+══════════════════════════════════════════════
 
-PART 1 — PATTERN DECLARATION:
-  "Seamless repeatable [REPEAT TYPE] pattern for [DESTINATION]."
-  repeat type = half-drop / four-way mirror / brick / tossed allover / scattered
-  destination = "high-end wallpaper and fabric printing" or "premium textile design"
+STYLE A — SCATTERED / TOSSED (isolated elements on solid background)
+Use for: Cabinet of curiosities, folk objects, vintage labels, scattered botanicals
 
-PART 2 — ARTISTIC STYLE ANCHOR (THE MOST IMPORTANT PART):
-  Name the EXACT visual tradition + texture technique this niche evokes.
-  Write: "The pattern looks exactly like a [REAL NAMED REFERENCE] — [technique words]."
-  Technique words MUST be ultra-precise (not "flat illustration" — use the actual tradition):
-    • Stippling: "engraved stipple dots, cross-hatch shadows"
-    • Linocut: "linocut relief print, bold carved outlines, ink bleed"
-    • Vector: "clean vector line art, uniform stroke weight, no anti-aliasing"
-    • Woodblock: "Ukiyo-e woodblock, Hokusai thick ink outline, flat ink wash"
-    • Screenprint: "two-color screenprint, halftone dot grain, registration offset"
-    • Folk art: "Scandinavian Dala horse folk painting, Marimekko flat shape"
-    • Ceramic: "Delftware blue-and-white ceramic tile, glaze pooling at outlines"
-    Real references FLUX knows: Hokusai woodblock, William Morris Strawberry Thief,
-    Marimekko, Charley Harper, Liberty of London, Anna Atkins cyanotype, Wiener
-    Werkstätte, Delftware ceramic, Rifle Paper Co., 1950s Soviet lithograph.
+  PART 1 — PATTERN DECLARATION: "Seamless tossed/scattered repeat pattern for [DESTINATION]."
+  PART 2 — STYLE ANCHOR: "The pattern looks exactly like a [REAL REFERENCE] — [technique]."
+  PART 3 — ELEMENTS: Name 5-8 elements with surgical precision + exact anatomy for animals.
+  PART 4 — ANTI-FUSION LOCKS: "NO blending, NO merging, NO morphing between any objects.
+    Distinct individual fully-formed [MOTIF TYPE] with clear spacing between each element."
+  PART 5 — BACKGROUND: "Single solid uniform [COLOR (#HEX)] background across the entire tile,
+    no texture, no gradient. All four edges tile perfectly."
 
-PART 3 — SURGICAL OBJECT DESCRIPTIONS:
-  Name each motif with ULTRA-SPECIFIC niche terminology (no generic names).
-  Bad: "a bird". Good: "a spotted snipe in side profile with its long straight beak".
-  — For any animal: STATE EXACT ANATOMY: "exactly two wings and two legs",
-    "exactly four legs and one bushy tail", "exactly four wings in bilateral symmetry".
-    This prevents extra-limb generation.
-  — For objects with text (tins, bottles, labels, blocks): say explicitly
-    "the label shows only decorative geometric borders, absolutely no text, no letters,
-    no numbers, no typography of any kind" — UNLESS one letter is the niche's motif
-    (then say "exactly one large clear capital letter centered on the label face").
-  — Name colors in plain English + give the hex once: "terracotta orange (#C25C3A)".
+──────────────────────────────────────────────
+STYLE B — DENSE ALL-OVER FILL (elements cover 100% of tile — NO visible background)
+Use for: Art Deco scales/fans, tropical botanical, dense florals, geometric interlocking
+This is the SPOONFLOWER BESTSELLER STYLE — prioritize it for wallpaper-focused niches.
+──────────────────────────────────────────────
 
-PART 4 — ANTI-FUSION LOCKS (MANDATORY — FLUX's power pushes objects to merge):
-  End the description with ALL of these:
-  "NO blending, NO merging, NO morphing between any objects. Distinct individual
-  fully-formed [MOTIF TYPE] with clear spacing between each element. No object
-  overlaps or bleeds into another."
+  PART 1 — PATTERN DECLARATION: "Dense seamless all-over [half-drop/mirror/brick] repeat
+    pattern for high-end wallpaper printing. Zero visible background — shapes fill
+    the ENTIRE tile surface edge-to-edge with no gaps."
 
-PART 5 — SOLID BACKGROUND + CLOSING:
-  "Single solid uniform [COLOR NAME (#HEX)] background across the entire tile,
-  no texture, no gradient, no secondary background shapes. All four edges tile
-  perfectly. Designed for high-end wallpaper and textile printing."
+  PART 2 — FILL STRUCTURE ANCHOR:
+    Describe HOW shapes interlock to cover the tile. Be structural:
+    "Rows of overlapping [SHAPE] stacked like fish scales, each [SHAPE] slightly
+    overlapping the one above and beside it, so no plain background shows anywhere."
+    OR: "Large botanical leaves radiate from central stems arranged in a half-drop
+    repeat, leaf edges touching leaf edges at every tile boundary."
+    OR: "Interlocking geometric [SHAPE] tessellate like a mosaic — no grout lines,
+    no visible background, pure shape-on-shape contact."
 
-HARD RULES:
-  • CFG (cfg_scale) MUST be 4.0 — FLUX Dev 2 cramps and distorts above ~5.0.
-  • NO negative_prompt field — FLUX Dev 2 does not support negative prompts.
-  • NO keyword tag spam: no (parentheses:1.3), no "masterpiece/best quality/8k".
-  • NO weighted syntax. Write flowing prose only.
-  • Flatness must be stated 2-3 times using DIFFERENT words each time.
-  • Describe what the FINISHED tile LOOKS like — not a list of ingredients.
+  PART 3 — MOTIF ANATOMY + COLOR FILL:
+    Describe each shape/motif with crisp internal detail:
+    "Each fan-shaped coquille is drawn with 12 precisely spaced radiating lines
+    from base to arc tip. Colors alternate: terracotta (#C25C3A), warm gold (#D4A017),
+    sage green (#7DB87D), cream (#F5F0E8), dusty rose (#C4827A)."
+    Crisp outlines are MANDATORY: "each shape has a clean 2px dark outline separating
+    it from neighbors — no blurry edges, no soft gradients."
 
-WORKED EXAMPLE (Japanese Woodblock niche → ai_generation.positive_prompt):
+  PART 4 — DENSITY LOCK (replaces anti-fusion for this style):
+    "The entire tile surface is covered with NO plain background visible anywhere.
+    Every square millimeter is occupied by a motif shape or a colored fill.
+    Clean crisp outlines separate each shape — no blurring, no bleeding between shapes."
+
+  PART 5 — CLOSING:
+    "All four edges of the tile interlock perfectly with zero seam.
+    Designed for high-end wallpaper and premium fabric printing."
+
+WORKED EXAMPLE STYLE B (Art Deco Fan Scales — bestseller type):
+  "Dense seamless half-drop repeat pattern for high-end wallpaper printing.
+  Zero visible background — fan shapes tile the ENTIRE surface edge-to-edge.
+  Rows of overlapping Art Deco fan coquilles stacked like scales, each fan
+  slightly overlapping the row above, covering every millimeter of the tile.
+  Each fan is drawn with 14 precisely radiating lines from a narrow base to a
+  wide rounded arc tip, all contained within a crisp dark outline. Colors alternate
+  across fans in a 5-tone warm earth palette: terracotta orange (#C25C3A), warm gold
+  (#D4A017), sage green (#7DB87D), cream (#F5F0E8), dusty rose (#C4827A).
+  Each fan is filled with a single flat solid color — absolutely no gradient, no
+  texture, no shadow inside any shape. Clean 2px dark charcoal (#2A2A2A) outline
+  separates every fan from its neighbors. The entire tile surface is covered
+  with NO plain background visible anywhere. All four edges tile perfectly.
+  Designed for high-end wallpaper and premium fabric printing."
+
+WORKED EXAMPLE STYLE A (Japanese Woodblock niche → ai_generation.positive_prompt):
   "Seamless half-drop repeat pattern for high-end fabric and wallpaper printing.
   The pattern looks exactly like a Hokusai ukiyo-e woodblock print textile —
   bold carved ink outlines, completely flat solid color fills, not a single gradient
