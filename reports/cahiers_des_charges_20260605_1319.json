@@ -1,0 +1,1775 @@
+{
+  "generated_at": "2026-06-05T13:19:32.053418+00:00",
+  "total_briefs": 16,
+  "briefs": [
+    {
+      "name": "Art Deco Egret & Lotus",
+      "trending_score": 72,
+      "market_opportunity": "very_high",
+      "why_trending": "Spoonflower's recent focus on high-end Art Deco wallpaper designs has created a surge in demand for elegant, symmetrical animal motifs. Egrets combined with geometric lotus elements offer a fresh, upscale alternative to overdone peacock patterns, capturing the luxury wallpaper market.",
+      "target_audience": "wallpaper home decorators making statement walls and dining room wallpaper",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "luxurious, symmetrical, architectural, elegant",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Cream #FAF7F0",
+          "Coral #E8855D"
+        ],
+        "color_accent": [
+          "Gold #D4A017"
+        ],
+        "color_background": "Jet Black #0D0D0D",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "mirror",
+        "pattern_scale": "large",
+        "top_products": [
+          "wallpaper"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Single elegant egret, centered on a solid jet black (#0D0D0D) background. Art Deco flat graphic silhouette style for high-end Spoonflower wallpaper tile. The egret fills 80% of the tile with equal margins on all four edges so the Spoonflower mirror repeat connects the wing tips symmetrically. The egret faces directly forward with wings fully spread left and right symmetrically, reaching within 5% of the tile edges. The egret is rendered as a single flat cream (#FAF7F0) silhouette with a single gold (#D4A017) accent on its beak and coral (#E8855D) geometric lotus flowers framing its feet. Art Deco flat graphic rendering with bold silhouettes, crisp hard edges, and zero soft shading. Feathers are drawn as precisely spaced radiating lines. Solid uniform jet black (#0D0D0D) background across the entire tile with no texture or gradients.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 13:19 UTC",
+      "opportunity_score": 71.7,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 94.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 94 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'low' → score 90 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 0.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "very_high",
+          "low"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition low",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "score Gemini 94 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Art Deco Egret & Lotus seamless pattern"
+      ]
+    },
+    {
+      "name": "Trompe L'oeil Copper Cookware",
+      "trending_score": 70,
+      "market_opportunity": "high",
+      "why_trending": "Trompe l'oeil (fool the eye) designs are highly popular for creating instant architectural interest in kitchens and dining rooms. A pattern depicting hanging copper pots, pans, and garlic braids on a dark background acts as an instant kitchen rack, meeting the demand for cozy, rustic, yet sophisticated kitchen wallpaper.",
+      "target_audience": "wallpaper home decorators making kitchen walls and tea towels",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "rustic, culinary, cozy, realistic",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Copper #C26A3E",
+          "Cream #F5F0E8"
+        ],
+        "color_accent": [
+          "Sage Green #7DB87D"
+        ],
+        "color_background": "Charcoal #2C2C2C",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "large",
+        "top_products": [
+          "wallpaper"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Large-scale basic repeat pattern for high-end kitchen wallpaper. Trompe l'oeil kitchen rack concept featuring hanging copper cookware and dried herbs. The design features: detailed copper pots, sauté pans, and colanders hanging vertically from black S-hooks, interspersed with hanging braids of garlic, dried rosemary bunches, and red chili pepper strings. Illustrated in a detailed Victorian engraving style with crisp ink outlines and solid color fills. Colors: warm copper (#C26A3E), antique cream (#F5F0E8), and sage green (#7DB87D). No blending or merging between elements; each pot and herb bundle is rendered as a distinct, fully formed object. Solid uniform charcoal (#2C2C2C) background across the entire tile. All four edges tile perfectly to create a continuous hanging rack effect.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 13:19 UTC",
+      "opportunity_score": 70.5,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 90 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'low' → score 90 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 0.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "low"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition low",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "score Gemini 90 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Trompe L'oeil Copper Cookware seamless pattern"
+      ]
+    },
+    {
+      "name": "Victorian Carnivorous Savage Garden",
+      "trending_score": 70,
+      "market_opportunity": "high",
+      "why_trending": "The carnivorous plant community (r/SavageGarden) is highly dedicated, with growers seeking unique decor for their plant rooms. A detailed, Victorian botanical engraving pattern featuring Venus flytraps, pitcher plants, and sundews meets a clear demand for dark, gothic, yet scientifically accurate botanical designs.",
+      "target_audience": "wallpaper home decorators making plant room walls and curtains",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "gothic, scientific, exotic, detailed",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Pale Pink #F8C8C8",
+          "Coral #E8855D"
+        ],
+        "color_accent": [
+          "Coral #E8855D"
+        ],
+        "color_background": "Dark Forest Green #1E352F",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "large",
+        "top_products": [
+          "wallpaper"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Large-scale basic repeat pattern for high-end plant room wallpaper. A dense, exotic garden of carnivorous plants dominates the tile. The design features: detailed Venus flytraps with open jaws, hanging Nepenthes pitcher plants, and tall Sarracenia tubes. Illustrated in a precise Victorian botanical engraving style with fine ink lines and solid color fills. Colors: soft pale pink (#F8C8C8) and warm coral (#E8855D). No gradients, no shadows, no reflections inside any shape. Clean 2px outlines separate the overlapping traps and leaves. The entire tile surface is covered with NO plain background visible anywhere, creating a rich, dark, and scientific botanical canopy. Designed for luxury plant room wallpaper.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 13:19 UTC",
+      "opportunity_score": 70.2,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 89.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 89 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'low' → score 90 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 0.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "low"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition low",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "score Gemini 89 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Victorian Carnivorous Savage Garden seamless pattern"
+      ]
+    },
+    {
+      "name": "MCM Vinyl Record & Turntable",
+      "trending_score": 70,
+      "market_opportunity": "high",
+      "why_trending": "The vinyl revival (r/vinyl) has created a massive community of audiophiles who take pride in their listening rooms. A mid-century modern pattern featuring vintage turntables, vinyl records, and headphones meets a clear demand for stylish, music-themed wallpaper and fabric for dust covers.",
+      "target_audience": "wallpaper home decorators making listening room walls and dust covers",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "retro, musical, cool, rhythmic",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Terracotta #C26A3E",
+          "Cream #FAF7F0"
+        ],
+        "color_accent": [
+          "Cream #FAF7F0"
+        ],
+        "color_background": "Deep Navy #1B2A4A",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "wallpaper"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless tossed repeat pattern for high-end listening room wallpaper. The concept: a retro tribute to vinyl record culture. The design features: vintage turntables with wooden plinths, black vinyl records with cream labels, retro over-ear headphones, and wooden cabinet speakers. Illustrated in a clean mid-century modern flat style with bold outlines and solid color fills. Colors: warm terracotta (#C26A3E) and cream (#FAF7F0). NO blending, NO merging, NO morphing between any objects. Distinct individual motifs with clear spacing, scattered stylized music notes, and retro sparkles filling the gaps. Single solid uniform deep navy (#1B2A4A) background across the entire tile. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 13:19 UTC",
+      "opportunity_score": 69.9,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 88.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 88 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'low' → score 90 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 0.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "low"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition low",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "score Gemini 88 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "MCM Vinyl Record & Turntable seamless pattern"
+      ]
+    },
+    {
+      "name": "Sumi-e Bonsai & Scholar Stone",
+      "trending_score": 70,
+      "market_opportunity": "high",
+      "why_trending": "The bonsai and penjing community (r/bonsai) has a highly developed visual culture but very few dedicated fabric options. A pattern combining stylized bonsai trees, traditional pots, and scholar stones in a minimalist Japanese ink wash style meets a clear demand for elegant, nature-focused home decor.",
+      "target_audience": "wallpaper home decorators making study wallpaper and table runners",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "serene, minimalist, botanical, artistic",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Forest Green #2D5A27",
+          "Charcoal #333333"
+        ],
+        "color_accent": [
+          "Terracotta #C26A3E"
+        ],
+        "color_background": "Warm Cream #FDF6EC",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "wallpaper"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless tossed repeat pattern for high-end home decor fabric. The pattern looks exactly like a Japanese woodblock print of a bonsai garden. The design features: gnarled pine bonsai trees in shallow ceramic pots, weathered scholar stones on wooden stands, traditional butterfly-handle shears, and copper watering cans. Illustrated in a clean, graphic style with bold black outlines and solid color fills. Colors: deep forest green (#2D5A27), charcoal grey (#333333), and warm terracotta (#C26A3E). NO blending, NO merging, NO morphing between any objects. Distinct individual motifs with clear spacing, scattered pine needle clusters, and tiny moss patches filling the gaps. Single solid uniform warm cream (#FDF6EC) background across the entire tile. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Illustration Of The Eastern Shared Training Ground.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Illustration_Of_The_Eastern_Shared_Training_Ground.jpg",
+          "width": 1280,
+          "height": 616
+        },
+        {
+          "title": "Yashu, Snow at Sano, Saimyo-ji, Sano Genzaemon and His Wife Shirotae.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Yashu%2C_Snow_at_Sano%2C_Saimyo-ji%2C_Sano_Genzaemon_and_His_Wife_Shirotae.jpg",
+          "width": 481,
+          "height": 700
+        }
+      ],
+      "generated_at": "2026-06-05 13:19 UTC",
+      "opportunity_score": 69.6,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 87.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 87 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'low' → score 90 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 0.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "low"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition low",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "score Gemini 87 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Sumi-e Bonsai & Scholar Stone seamless pattern"
+      ]
+    },
+    {
+      "name": "Mid-Century Mechanical Keycap",
+      "trending_score": 69,
+      "market_opportunity": "very_high",
+      "why_trending": "The mechanical keyboard community (r/mechanicalkeyboards) is incredibly passionate about aesthetics, custom desk mats, and tech accessories. A mid-century modern pattern featuring retro keycaps, switches, and coiled cables meets a massive, documented demand for stylish, non-generic tech-themed fabrics.",
+      "target_audience": "apparel sewists making custom desk mats and keyboard sleeves",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "retro, tech, clean, geometric",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Coral #E8855D",
+          "Cream #F5F0E8"
+        ],
+        "color_accent": [
+          "Gold #D4A017"
+        ],
+        "color_background": "Charcoal #22252A",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "quilting cotton"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless tossed repeat pattern for custom desk mats and tech accessories. The pattern looks exactly like a mid-century modern flat illustration of mechanical keyboard components. The design features: retro keycaps with vintage legends, mechanical switches with exposed stems, coiled cables with aviator connectors, and wire keycap pullers. Illustrated in a clean, graphic style with bold outlines and solid color fills. Colors: warm coral (#E8855D), cream (#F5F0E8), and mustard gold (#D4A017). NO blending, NO merging, NO morphing between any objects. Distinct individual motifs with clear spacing, scattered loose switch stems, and tiny electronic diodes filling the gaps. Single solid uniform charcoal (#22252A) background across the entire tile. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 13:19 UTC",
+      "opportunity_score": 69.0,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 85.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 85 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'low' → score 90 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 0.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "very_high",
+          "low"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition low",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "score Gemini 85 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Mid-Century Mechanical Keycap seamless pattern"
+      ]
+    },
+    {
+      "name": "Art Deco Ginkgo Biloba Fan",
+      "trending_score": 64,
+      "market_opportunity": "high",
+      "why_trending": "Ginkgo biloba leaves are a classic design motif, but when rendered in a bold, large-scale Art Deco fan layout, they become a highly sophisticated wallpaper option. The fan shape aligns perfectly with current interior design trends favoring geometric botanical statement walls in deep, dramatic colorways.",
+      "target_audience": "wallpaper home decorators making statement walls and dining room wallpaper",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "luxurious, geometric, botanical, architectural",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Gold #D4A017",
+          "Cream #F5F0E8"
+        ],
+        "color_accent": [
+          "Cream #F5F0E8"
+        ],
+        "color_background": "Charcoal #1C1C1C",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "large",
+        "top_products": [
+          "wallpaper"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Large-scale basic repeat pattern for high-end wallpaper printing. ONE large Art Deco ginkgo biloba fan leaf dominates the center of the tile — the fan spans 75% of the tile width, radiating from a narrow stem base up to a wide arc of 16 precisely spaced leaf veins. This is a LARGE architectural motif, not a small repeating unit. Only 2 full leaves appear in the tile, overlapping slightly. Zero background visible — the ginkgo leaves and the colored fills between them cover the entire tile. Colors: rich gold (#D4A017) and warm cream (#F5F0E8) on a charcoal (#1C1C1C) base. Each leaf line is crisp and precise — flat solid fill, no gradient, no texture, no shadow inside any shape. Clean 2px outline separates each leaf. The entire tile surface is covered with NO plain background visible anywhere. Designed for Spoonflower peel-and-stick wallpaper.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 13:19 UTC",
+      "opportunity_score": 63.6,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 92.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 92 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 0.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "score Gemini 92 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Art Deco Ginkgo Biloba Fan seamless pattern"
+      ]
+    },
+    {
+      "name": "Art Nouveau Wisteria Canopy",
+      "trending_score": 63,
+      "market_opportunity": "high",
+      "why_trending": "Cascading florals are highly sought after for wallpaper, as they create a beautiful 'canopy' effect in bedrooms and dining spaces. Art Nouveau wisteria, with its drooping lavender clusters and winding green vines, offers a highly decorative, flowing alternative to standard vertical stripes or ditsy florals.",
+      "target_audience": "wallpaper home decorators making bedroom walls and luxury bedding",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "romantic, flowing, botanical, dramatic",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Lavender #C9A0DC",
+          "Sage Green #7DB87D"
+        ],
+        "color_accent": [
+          "Sage Green #7DB87D"
+        ],
+        "color_background": "Deep Plum #3B1E30",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "large",
+        "top_products": [
+          "wallpaper"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Large-scale basic repeat pattern for high-end wallpaper printing. A dense canopy of cascading Art Nouveau wisteria flowers dominates the tile. Heavy, drooping wisteria flower clusters in soft lavender (#C9A0DC) hang downward from thick, winding woody vines in sage green (#7DB87D). The vines twist and interlock horizontally across the top, creating a continuous canopy with zero background visible. Illustrated in the classic William Morris Arts and Crafts flat design style, with bold outlines and solid color fills. No gradients, no shadows, no reflections inside any shape. Clean 2px outlines separate the overlapping petals and leaves. The entire tile surface is covered with NO plain background visible anywhere. Designed for luxury bedroom wallpaper.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 13:19 UTC",
+      "opportunity_score": 63.0,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 90 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 0.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "score Gemini 90 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Art Nouveau Wisteria Canopy seamless pattern"
+      ]
+    },
+    {
+      "name": "Victorian Frog Professor Portrait",
+      "trending_score": 63,
+      "market_opportunity": "very_high",
+      "why_trending": "The 'Dark Academia' and 'Whimsigoth' aesthetics are driving massive engagement on TikTok and Pinterest. Anthropomorphized animal portraits in ornate frames (specifically frogs, owls, and badgers) are highly sought after for library, study, and powder room wallpaper, offering a perfect blend of humor and vintage sophistication.",
+      "target_audience": "wallpaper home decorators making statement walls and study decor",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "academic, humorous, vintage, scholarly",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Cream #F5F0E8",
+          "Gold #D4A017"
+        ],
+        "color_accent": [
+          "Burgundy #7B2D42"
+        ],
+        "color_background": "Dark Sage Green #2D4A3E",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "large",
+        "top_products": [
+          "wallpaper"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Scattered repeat wallpaper featuring a Victorian frog professor portrait gallery. The concept: anthropomorphic frogs dressed as distinguished professors in academic robes and spectacles, framed in ornate gold medallions. Each frog is illustrated with a scholarly, serious expression, holding a tiny book or quill. Illustrated in a detailed Victorian engraving style with hand-drawn ink textures. Colors: rich burgundy (#7B2D42), warm gold (#D4A017), and antique cream (#F5F0E8). Tossed scattered repeat with framed portraits, stacks of old books, and magnifying glasses arranged at varied angles. No blending or merging between elements; each portrait frame is distinct and fully formed. Solid dark sage green (#2D4A3E) background across the entire tile. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 13:19 UTC",
+      "opportunity_score": 62.8,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 67.6,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 82.0,
+          "detail": "page 'Joseph Lister' : 15 520 vues/mois (réel)"
+        },
+        "growth": {
+          "value": 43.7,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 78.0,
+          "detail": "évolution -13% des vues sur 12 mois (réel)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'low' → score 90 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 0.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "wikipedia"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "very_high",
+          "low"
+        ],
+        "notes": "demande MESURÉE (wikipedia) · compétition low · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "page 'Joseph Lister' : 15 520 vues/mois (réel)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Victorian Frog Professor Portrait seamless pattern"
+      ]
+    },
+    {
+      "name": "MCM Monstera & Palm Shadow",
+      "trending_score": 63,
+      "market_opportunity": "medium",
+      "why_trending": "Tropical leaf patterns are a perennial favorite, but standard green-on-white designs are oversaturated. A mid-century modern take featuring overlapping monstera and fan palm leaves in a warm, earthy palette (terracotta, mustard, olive) offers a sophisticated, retro-tropical look that appeals to modern home decorators.",
+      "target_audience": "wallpaper home decorators making living room walls and outdoor cushions",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "retro, tropical, warm, graphic",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Cream #FFF8E7",
+          "Sage Green #7DB87D"
+        ],
+        "color_accent": [
+          "Sage Green #7DB87D"
+        ],
+        "color_background": "Terracotta #C26A3E",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "large",
+        "top_products": [
+          "wallpaper"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Large-scale half-drop repeat pattern for high-end wallpaper printing. Overlapping tropical leaves dominate the tile, featuring large split-leaf monsteras and radiating fan palms. The leaves are layered densely, covering 90% of the surface to create a rich, graphic jungle canopy. Illustrated in a clean mid-century modern flat style with bold outlines and solid color fills. Colors: warm cream (#FFF8E7) and sage green (#7DB87D) on a rich terracotta (#C26A3E) background. No gradients, no shadows, no reflections inside any shape. Clean 2px outlines separate the overlapping leaf shapes. The entire tile surface is covered with minimal background visible. Designed for modern living room wallpaper.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 13:19 UTC",
+      "opportunity_score": 62.7,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 89.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 89 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 0.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "medium",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "score Gemini 89 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "MCM Monstera & Palm Shadow seamless pattern"
+      ]
+    },
+    {
+      "name": "Vintage Apothecary Soap & Bath",
+      "trending_score": 62,
+      "market_opportunity": "high",
+      "why_trending": "Bathroom-specific wallpaper is a massive growth category on Spoonflower, as homeowners look for fun, themed designs for powder rooms. Vintage apothecary soap bars, bubble baths, and clawfoot tubs offer a clean, nostalgic, and slightly humorous aesthetic that is highly underserved compared to generic bathroom florals.",
+      "target_audience": "wallpaper home decorators making powder room and bathroom wallpaper",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "clean, nostalgic, whimsical, fresh",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Navy #1B3A6B",
+          "Coral #E8855D"
+        ],
+        "color_accent": [
+          "Gold #FFD700"
+        ],
+        "color_background": "Soft Cream #FFFDF9",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "wallpaper"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless tossed repeat pattern for bathroom wallpaper. The pattern looks exactly like a mid-century modern flat illustration of vintage bath products. The design features: a classic clawfoot bathtub overflowing with bubbles; wrapped apothecary soap bars with retro typography; glass bubble bath bottles with cork stoppers; and vintage perfume atomizers. Colors: deep navy (#1B3A6B), warm coral (#E8855D), and sunny gold (#FFD700). NO blending, NO merging, NO morphing between any objects. Distinct individual motifs with clear spacing and floating soap bubbles filling the gaps. Single solid uniform soft cream (#FFFDF9) background across the entire tile, no texture. All four edges tile perfectly. Designed for powder room wallpaper.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 13:19 UTC",
+      "opportunity_score": 62.4,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 88.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 88 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 0.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "score Gemini 88 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Vintage Apothecary Soap & Bath seamless pattern"
+      ]
+    },
+    {
+      "name": "Vintage Haberdashery & Notions",
+      "trending_score": 62,
+      "market_opportunity": "high",
+      "why_trending": "The crafting community on Spoonflower is highly self-referential; sewists love buying fabric that features sewing tools. Antique scissors, wooden thread spools, brass thimbles, and vintage buttons in a detailed engraving style offer a sophisticated, nostalgic tribute to the craft that is highly popular for sewing room decor.",
+      "target_audience": "apparel sewists making sewing machine covers and craft room curtains",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "nostalgic, detailed, crafty, vintage",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Charcoal #333333",
+          "Terracotta #C26A3E"
+        ],
+        "color_accent": [
+          "Gold #D4A017"
+        ],
+        "color_background": "Linen #F5F0E8",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "quilting cotton"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless tossed repeat pattern for craft room fabric. The pattern looks exactly like a Victorian haberdashery catalog engraving. The design features: ornate antique scissors, wooden thread spools wound with thread, brass thimbles, classic tomato pincushions, and coiled tape measures. Illustrated in a detailed engraving style with fine black ink lines and solid color fills. Colors: charcoal black (#333333), warm terracotta (#C26A3E), and antique gold (#D4A017). NO blending, NO merging, NO morphing between any objects. Distinct individual motifs with clear spacing, scattered loose buttons, safety pins, and needles filling the gaps. Single solid uniform linen (#F5F0E8) background across the entire tile, no texture. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 13:19 UTC",
+      "opportunity_score": 62.4,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 88.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 88 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 0.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "score Gemini 88 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Vintage Haberdashery & Notions seamless pattern"
+      ]
+    },
+    {
+      "name": "Edwardian Tea & Petit Fours",
+      "trending_score": 62,
+      "market_opportunity": "medium",
+      "why_trending": "The 'Coquette' and 'Grandmillennial' aesthetics continue to dominate home decor and apparel, driving demand for ultra-feminine, nostalgic designs. Delicate Edwardian teacups, tiered cake stands, and pastel petit fours offer a highly detailed, romantic pattern that appeals to quilters and tea towel makers.",
+      "target_audience": "quilters making baby blankets and tea towel makers",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "romantic, feminine, nostalgic, delicate",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Burgundy #7B2D42",
+          "Navy #1B3A6B"
+        ],
+        "color_accent": [
+          "Navy #1B3A6B"
+        ],
+        "color_background": "Pale Pink #FFF0F5",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "quilting cotton"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless tossed repeat pattern for high-end quilting cotton. The pattern looks exactly like an Edwardian tea party illustration. The design features: delicate porcelain teacups with ornate handles, silver teapots, three-tiered cake stands filled with pastries, and colorful French macarons. Illustrated in a detailed Victorian engraving style with fine ink lines and solid color fills. Colors: rich burgundy (#7B2D42) and deep navy (#1B3A6B). NO blending, NO merging, NO morphing between any objects. Distinct individual motifs with clear spacing, scattered sugar cubes, and ornate silver teaspoons filling the gaps. Single solid uniform pale pink (#FFF0F5) background across the entire tile, no texture. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 13:19 UTC",
+      "opportunity_score": 61.8,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 86.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 86 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 0.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "medium",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "score Gemini 86 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Edwardian Tea & Petit Fours seamless pattern"
+      ]
+    },
+    {
+      "name": "MCM Swallow & Cloud",
+      "trending_score": 56,
+      "market_opportunity": "high",
+      "why_trending": "Mid-century modern aesthetics remain a staple on Pinterest home decor boards, but buyers are moving away from generic boomerangs toward organic, stylized animal prints. Symmetrical swallows paired with retro clouds offer a whimsical yet structured look that appeals to modern nursery decorators.",
+      "target_audience": "nursery and baby room decorators making crib sheets and nursery wallpaper",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "whimsical, retro, clean, playful",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Cream #FFF8E7",
+          "Gold #FFD700"
+        ],
+        "color_accent": [
+          "Coral #E8855D"
+        ],
+        "color_background": "Deep Teal #1A4D4D",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "quilting cotton"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Single stylized swallow, centered on a solid deep teal (#1A4D4D) background. Mid-century modern flat graphic silhouette style for high-end Spoonflower wallpaper tile. The swallow fills 80% of the tile with equal margins on all four edges so the Spoonflower mirror repeat connects the wing tips symmetrically. The swallow is depicted from a top-down view with wings fully spread left and right symmetrically, reaching within 5% of the tile edges. The swallow is rendered as a single flat cream (#FFF8E7) silhouette with a single gold (#FFD700) accent on its tail feathers and coral (#E8855D) retro starbursts framing the head. Mid-century modern flat graphic rendering with bold silhouettes, crisp hard edges, and zero soft shading. Solid uniform deep teal (#1A4D4D) background across the entire tile with no texture or gradients.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 13:19 UTC",
+      "opportunity_score": 56.2,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 78.5,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 82.0,
+          "detail": "page 'List of airline codes' : 73 254 vues/mois (réel)"
+        },
+        "growth": {
+          "value": 27.9,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 78.0,
+          "detail": "évolution -44% des vues sur 12 mois (réel)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 0.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "wikipedia"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande MESURÉE (wikipedia) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "page 'List of airline codes' : 73 254 vues/mois (réel)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "MCM Swallow & Cloud seamless pattern"
+      ]
+    },
+    {
+      "name": "Anthropomorphized Citrus Picnic",
+      "trending_score": 56,
+      "market_opportunity": "medium",
+      "why_trending": "Playful, food-themed patterns with human characteristics (anthropomorphism) are highly engaging and perform exceptionally well in Spoonflower design challenges. Lemons and limes sunbathing, dancing, or relaxing on picnic blankets offer a fresh, joyful kitchen and apparel print that stands out from static fruit patterns.",
+      "target_audience": "apparel sewists making summer dresses and kitchen linen makers",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "playful, joyful, sunny, humorous",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Yellow #FFD700",
+          "Green #7DB87D"
+        ],
+        "color_accent": [
+          "Orange-Red #E8855D"
+        ],
+        "color_background": "Sky Blue #87CEEB",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "quilting cotton"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless tossed repeat pattern for summer apparel fabric. The concept: a humorous picnic featuring anthropomorphized citrus fruits. The design features: lemons with arms and legs dancing, limes wearing tiny sunglasses sunbathing on checkered red blankets, and orange slices waving cheerfully. Illustrated in a playful mid-century modern flat style with bold outlines and solid color fills. Colors: bright yellow (#FFD700), lime green (#7DB87D), and poppy red (#E8855D). NO blending, NO merging, NO morphing between any characters. Distinct individual figures with clear spacing, scattered citrus leaves, and tiny marching ants filling the gaps. Single solid uniform sky blue (#87CEEB) background across the entire tile. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "History of the nineteenth century in the United States and Europe, illustrated. Period I- During the triumphs of Napoleon's empire (1891) (14786749673).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/History_of_the_nineteenth_century_in_the_United_States_and_Europe%2C_illustrated._Period_I-_During_the_triumphs_of_Napoleon%27s_empire_%281891%29_%2814786749673%29.jpg",
+          "width": 2066,
+          "height": 1472
+        },
+        {
+          "title": "Illustration of a ceramic post-medieval flared mug (FindID 117209).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/43/Illustration_of_a_ceramic_post-medieval_flared_mug_%28FindID_117209%29.jpg",
+          "width": 3000,
+          "height": 3315
+        }
+      ],
+      "generated_at": "2026-06-05 13:19 UTC",
+      "opportunity_score": 55.7,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 71.4,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 82.0,
+          "detail": "page '7 Up' : 26 587 vues/mois (réel)"
+        },
+        "growth": {
+          "value": 38.3,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 78.0,
+          "detail": "évolution -23% des vues sur 12 mois (réel)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 0.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "wikipedia"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "medium",
+          "medium"
+        ],
+        "notes": "demande MESURÉE (wikipedia) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "page '7 Up' : 26 587 vues/mois (réel)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Anthropomorphized Citrus Picnic seamless pattern"
+      ]
+    },
+    {
+      "name": "Art Nouveau Dragonfly & Lily",
+      "trending_score": 55,
+      "market_opportunity": "high",
+      "why_trending": "The revival of organic, flowing Art Nouveau lines is trending across home decor, especially in lighting and tile design. Symmetrical dragonflies with stained-glass wings combined with water lilies offer a highly decorative, premium aesthetic that translates beautifully to luxury wallpaper and velvet fabrics.",
+      "target_audience": "wallpaper home decorators making statement walls and luxury curtains",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "romantic, flowing, decorative, rich",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Lavender #C9A0DC",
+          "Pale Pink #F8C8C8"
+        ],
+        "color_accent": [
+          "Sage Green #7DB87D"
+        ],
+        "color_background": "Deep Indigo #1B1F3B",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "mirror",
+        "pattern_scale": "large",
+        "top_products": [
+          "wallpaper"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Single symmetrical dragonfly, centered on a solid deep indigo (#1B1F3B) background. Art Nouveau stained glass style for high-end Spoonflower wallpaper tile. The dragonfly fills 80% of the tile with equal margins on all four edges so the Spoonflower mirror repeat connects the wing tips symmetrically. The dragonfly is viewed from above with wings fully spread left and right symmetrically, reaching within 5% of the tile edges. The wings are segmented like stained glass, filled with flat lavender (#C9A0DC) and pale pink (#F8C8C8) panels. The body is a flat sage green (#7DB87D) silhouette. Art Nouveau flat graphic rendering with bold black outlines, crisp hard edges, and zero soft shading. Solid uniform deep indigo (#1B1F3B) background across the entire tile with no texture or gradients.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Rougets, vitrail. Libellules et monnaie du pape, étoffe - L'animal dans la décoration, by M. P. Verneuil 1897 (New York Public Library, digitally enhanced by Rawpixel).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Rougets%2C_vitrail._Libellules_et_monnaie_du_pape%2C_%C3%A9toffe_-_L%27animal_dans_la_d%C3%A9coration%2C_by_M._P._Verneuil_1897_%28New_York_Public_Library%2C_digitally_enhanced_by_Rawpixel%29.jpg",
+          "width": 3678,
+          "height": 5520
+        }
+      ],
+      "generated_at": "2026-06-05 13:19 UTC",
+      "opportunity_score": 54.9,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 74.4,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 82.0,
+          "detail": "page 'Dragonfly' : 41 181 vues/mois (réel)"
+        },
+        "growth": {
+          "value": 27.3,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 78.0,
+          "detail": "évolution -45% des vues sur 12 mois (réel)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 0.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "wikipedia"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande MESURÉE (wikipedia) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "page 'Dragonfly' : 41 181 vues/mois (réel)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Art Nouveau Dragonfly & Lily seamless pattern"
+      ]
+    }
+  ]
+}
