@@ -194,6 +194,7 @@ jobs:
               --output ./output/thumbnails
           elif [ "$MODE" = "upscale-fix" ]; then
             echo "=== MODE UPSCALE-FIX : re-upscale IA Real-ESRGAN images existantes ==="
+            rm -f reports/upscale_debug.log
             LIMIT_ARG=""
             LIMIT_VAL="${{ github.event.inputs.limit || '0' }}"
             [ "$LIMIT_VAL" != "0" ] && LIMIT_ARG="--limit $LIMIT_VAL"

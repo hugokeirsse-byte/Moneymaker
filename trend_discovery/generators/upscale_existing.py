@@ -174,12 +174,18 @@ def fix_directory(
 
     results = {}
     ok = 0
+    total_cost = 0.0
+    cost_measured = False
     for i, fp in enumerate(files, 1):
         fname = os.path.basename(fp)
         img_dbg: list = []
+        runware.last_cost = None
         print(f"  [{i:2d}/{len(files)}] {fname[:55]}…", end=" ", flush=True)
         out = fix_image(fp, runware, out_dir, overwrite=overwrite, _dbg=img_dbg)
         dbg_lines.extend(img_dbg)
+        if getattr(runware, "last_cost", None) is not None:
+            total_cost += float(runware.last_cost)
+            cost_measured = True
         if out:
             print("✅")
             ok += 1
@@ -187,11 +193,21 @@ def fix_directory(
             print("❌")
         results[fname] = out
 
-    with open(log_path, "w") as f:
-        f.write(f"upscale_debug — {datetime.datetime.utcnow().isoformat()}\n")
-        f.write("\n".join(dbg_lines))
+    cost_line = (
+        f"COUT REEL MESURE : ${total_cost:.4f} pour {ok} images (MEASURED)"
+        if cost_measured else
+        f"COUT : non fourni par Runware (UNAVAILABLE) — estimation ~${ok*0.005:.2f} (HEURISTIC)"
+    )
+    print(f"  {cost_line}")
+    dbg_lines.append(cost_line)
 
-    print(f"\n✅ {ok}/{len(files)} images re-upscalées → {out_dir}/")
+    # Mode append : ne pas écraser le log de l'appel précédent (pipeline puis uploads)
+    with open(log_path, "a") as f:
+        f.write(f"\n=== {input_dir} — {datetime.datetime.utcnow().isoformat()} ===\n")
+        f.write("\n".join(dbg_lines))
+        f.write("\n")
+
+    print(f"\n✅ {ok}/{len(files)} images re-upscalées → {out_dir}/ — {cost_line}")
     return results
 
 

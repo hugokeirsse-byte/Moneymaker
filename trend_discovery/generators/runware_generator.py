@@ -56,6 +56,7 @@ class RunwareGenerator:
             "Authorization": f"Bearer {RUNWARE_API_KEY}",
             "Content-Type": "application/json",
         })
+        self.last_cost = None  # coût réel du dernier appel (si includeCost)
 
     def is_available(self) -> bool:
         return bool(RUNWARE_API_KEY)
@@ -184,6 +185,7 @@ class RunwareGenerator:
             "upscaleFactor": upscale_factor,
             "outputType": ["URL"],
             "outputFormat": "PNG",
+            "includeCost": True,
         }]
 
         logger.info("[runware] upscale ×%d: %s", upscale_factor, image_url)
@@ -198,7 +200,10 @@ class RunwareGenerator:
             logger.error("[runware] upscale échoué — imageURL absent: %s", result)
             return None
 
-        logger.info("[runware] upscale OK: %s", upscaled_url)
+        # Coût réel mesuré par Runware (None si non fourni)
+        self.last_cost = result.get("cost")
+
+        logger.info("[runware] upscale OK: %s (cost=%s)", upscaled_url, self.last_cost)
         return upscaled_url
 
     def download(self, url: str, timeout: int = 60) -> Optional[bytes]:
