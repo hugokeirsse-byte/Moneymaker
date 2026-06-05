@@ -41,6 +41,7 @@ on:
           - 'colorize'           # Variantes de couleurs sur images existantes (0 €, Pillow)
           - 'seamless-audit'     # Vérifie + corrige les tuiles non-seamless (mirror quad, 0 €)
           - 'thumbnails'         # Génère vignettes 600×600 JPEG navigables (0 €, git-safe)
+          - 'upscale-fix'        # Re-upscale IA Real-ESRGAN images existantes floues (~0.005€/img)
           - 'full'               # Pipeline complet sans génération d'images
       manifest_path:
         description: 'Path to approval manifest (relative to repo root)'
@@ -106,8 +107,8 @@ jobs:
         env:
           # Tendances mondiales temps réel (GEMINI_API_KEY requis)
           GEMINI_API_KEY:       ${{ secrets.GEMINI_API_KEY }}
-          # Runware : injecté si mode=generate ou generate-best
-          RUNWARE_API_KEY:      ${{ (github.event.inputs.mode == 'generate' || github.event.inputs.mode == 'generate-best' || github.event.inputs.mode == 'generate-all' || github.event.inputs.mode == 'generate-elements') && secrets.RUNWARE_API_KEY || '' }}
+          # Runware : injecté si mode génération ou upscale-fix
+          RUNWARE_API_KEY:      ${{ (github.event.inputs.mode == 'generate' || github.event.inputs.mode == 'generate-best' || github.event.inputs.mode == 'generate-all' || github.event.inputs.mode == 'generate-elements' || github.event.inputs.mode == 'upscale-fix') && secrets.RUNWARE_API_KEY || '' }}
           RUNWARE_MODEL:        ${{ secrets.RUNWARE_MODEL || 'runware:101@1' }}
           # Sources optionnelles
           REDDIT_CLIENT_ID:     ${{ secrets.REDDIT_CLIENT_ID }}
@@ -186,6 +187,21 @@ jobs:
               --output ./output/uploads/base || echo "(no uploads found, skipped)"
           elif [ "$MODE" = "thumbnails" ]; then
             echo "=== MODE THUMBNAILS : vignettes JPEG navigables ==="
+            python -m trend_discovery.main thumbnails \
+              --pipeline ./output/spoonflower \
+              --colorways ./output/colorways \
+              --uploads ./output/uploads/base \
+              --output ./output/thumbnails
+          elif [ "$MODE" = "upscale-fix" ]; then
+            echo "=== MODE UPSCALE-FIX : re-upscale IA Real-ESRGAN images existantes ==="
+            LIMIT_ARG=""
+            LIMIT_VAL="${{ github.event.inputs.limit || '0' }}"
+            [ "$LIMIT_VAL" != "0" ] && LIMIT_ARG="--limit $LIMIT_VAL"
+            echo "-- Re-upscale pipeline images --"
+            python -m trend_discovery.generators.upscale_existing \
+              --input ./output/spoonflower \
+              $LIMIT_ARG
+            echo "-- Auto thumbnails post-upscale --"
             python -m trend_discovery.main thumbnails \
               --pipeline ./output/spoonflower \
               --colorways ./output/colorways \
