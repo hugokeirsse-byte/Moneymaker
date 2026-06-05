@@ -6,8 +6,11 @@ data/*.db
 data/detection_history.jsonl
 data/approvals/
 .claude/
-# Upscaled user uploads — trop lourds pour git (~15 MB chacun × 50 = 750 MB)
-# Les colorways de ces images (output/uploads/colorways/) sont eux dans git
-# Pour récupérer les originaux upscalés : lancer le workflow upscale_uploads
+# Images lourdes — gitignorées, disponibles via GitHub Actions artifacts
+# output/uploads/base/   : 50 uploads upscalés ~15 MB chacun → workflow upscale_uploads
+# output/colorways/      : colorways HSV ~10-30 MB chacun → workflow colorize
+# output/uploads/colorways/ : colorways uploads → workflow colorize
 output/uploads/base/
+output/colorways/
+output/uploads/colorways/
 output/upscaled/

@@ -153,14 +153,19 @@ jobs:
             [ -n "${{ github.event.inputs.niche }}" ] && NICHE_ARG="--niche '${{ github.event.inputs.niche }}'"
             eval python -m trend_discovery.main generate-elements --yes $NICHE_ARG
           elif [ "$MODE" = "colorize" ]; then
-            echo "=== MODE COLORIZE : variantes de couleurs (Pillow, 0 coût) ==="
-            pip install scikit-learn -q
+            echo "=== MODE COLORIZE : variantes HSV (rotation teinte, Pillow, 0 coût) ==="
             PALETTE_ARG=""
             [ -n "${{ github.event.inputs.palettes }}" ] && PALETTE_ARG="--palettes '${{ github.event.inputs.palettes }}'"
+            echo "-- Colorize pipeline images --"
             eval python -m trend_discovery.main colorize --yes \
               --input ./output/spoonflower \
               --output ./output/colorways \
               $PALETTE_ARG
+            echo "-- Colorize user uploads --"
+            eval python -m trend_discovery.main colorize --yes \
+              --input ./output/uploads/base \
+              --output ./output/uploads/colorways \
+              $PALETTE_ARG || echo "(no uploads found, skipped)"
           elif [ "$MODE" = "generate" ]; then
             echo "=== MODE GENERATE : génération des images approuvées ==="
             python -m trend_discovery.main generate \
@@ -201,4 +206,6 @@ jobs:
           path: |
             reports/
             output/spoonflower/
+            output/colorways/
+            output/uploads/colorways/
           retention-days: 90
