@@ -6,3 +6,6 @@ data/*.db
 data/detection_history.jsonl
 data/approvals/
 .claude/
+# Upscaled user uploads — trop lourds pour git, disponibles via workflow artifact
+output/spoonflower/user_upload_*.png
+output/upscaled/

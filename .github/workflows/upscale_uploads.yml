@@ -1,0 +1,77 @@
+name: Upscale user_uploads → Spoonflower-ready
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_dir:
+        description: 'Dossier source (défaut: user_uploads)'
+        required: false
+        default: 'user_uploads'
+
+permissions:
+  contents: read
+
+jobs:
+  upscale:
+    name: Upscale JPEGs → PNG 4500×4500 300 DPI
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Installer Pillow
+        run: pip install Pillow
+
+      - name: Upscaler les images
+        run: |
+          python3 << 'PYEOF'
+          from PIL import Image
+          import os
+
+          SRC = "${{ github.event.inputs.source_dir || 'user_uploads' }}"
+          OUT = "output/upscaled"
+          TARGET = (4500, 4500)
+          DPI = (300, 300)
+          os.makedirs(OUT, exist_ok=True)
+
+          files = [f for f in os.listdir(SRC) if f.lower().endswith(('.jpg','.jpeg','.png')) and not f.startswith('.')]
+          print(f"Upscaling {len(files)} images from {SRC} → {OUT}")
+          ok = 0
+          for f in sorted(files):
+              try:
+                  img = Image.open(os.path.join(SRC, f))
+                  if img.mode in ("RGBA", "LA"):
+                      bg = Image.new("RGB", img.size, (255, 255, 255))
+                      bg.paste(img, mask=img.split()[-1])
+                      img = bg
+                  elif img.mode != "RGB":
+                      img = img.convert("RGB")
+                  w, h = img.size
+                  if w < TARGET[0] or h < TARGET[1]:
+                      scale = max(TARGET[0]/w, TARGET[1]/h)
+                      img = img.resize((int(w*scale), int(h*scale)), Image.LANCZOS)
+                  out_name = os.path.splitext(f)[0] + ".png"
+                  out_path = os.path.join(OUT, out_name)
+                  img.save(out_path, format="PNG", dpi=DPI, optimize=False)
+                  mb = os.path.getsize(out_path) / 1024 / 1024
+                  print(f"  ✅ {out_name} | {img.size[0]}×{img.size[1]} | {mb:.1f} MB")
+                  ok += 1
+              except Exception as e:
+                  print(f"  ❌ {f}: {e}")
+          print(f"\n{ok}/{len(files)} images → {OUT}/")
+          PYEOF
+
+      - name: Upload artefact
+        uses: actions/upload-artifact@v4
+        with:
+          name: upscaled-spoonflower-${{ github.run_number }}
+          path: output/upscaled/
+          retention-days: 90
