@@ -1,0 +1,2406 @@
+{
+  "generated_at": "2026-06-05T12:47:54.524663+00:00",
+  "total_briefs": 19,
+  "briefs": [
+    {
+      "name": "Mechanical Keyboard Switch",
+      "trending_score": 79,
+      "market_opportunity": "high",
+      "why_trending": "The mechanical keyboard hobby has grown into a massive global community, with enthusiasts spending thousands on custom keycaps and desk setups. There is a strong demand for tech-themed home decor, yet searching Spoonflower for keyboard-related designs yields almost nothing besides generic computer chips.",
+      "target_audience": "wallpaper home decorators and quilters making tech-themed accessories",
+      "sub_niches": [
+        {
+          "name": "Mechanical Keyboard Switch Dark Ivy",
+          "trending_score": 50,
+          "unique_angle": "A technical keyboard switch layout with cream sticker borders on dark ivy for custom desk mats.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "retro, technical, geometric, cozy",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Dark Ivy #1E2522",
+          "Teal #30D5C8"
+        ],
+        "color_accent": [
+          "Warm Ochre #D4A373",
+          "Terracotta #C25C3A",
+          "Cream #F5F0E8",
+          "Butter Yellow #FFFD37"
+        ],
+        "color_background": "Dark Ivy #1E2522",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "wallpaper",
+          "quilting cotton"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless tossed/scattered repeat pattern for tech den decor. The pattern looks exactly like a retro mechanical keyboard patent illustration — bold flat graphic silhouettes, completely flat solid color fills, not a single gradient or shadow inside any shape. The design features: mechanical keyboard switches with colorful stems; retro keycaps; coiled USB cables with metal aviator connectors; and wire keycap pullers. Colors: teal (#30D5C8), warm ochre (#D4A373), terracotta (#C25C3A), butter yellow (#FFFD37), and cream (#F5F0E8). NO blending, NO merging, NO morphing between any objects. Distinct individual motifs with clear spacing and crisp white sticker borders. Single solid uniform dark ivy (#1E2522) background across the entire tile, no texture. All four edges tile perfectly. Designed for keyboard enthusiasts and modern home decor.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 12:47 UTC",
+      "opportunity_score": 79.0,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 100.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 75.0,
+          "detail": "RAPOO blog (December 2025), Krome Keycaps blog (March 2026), Mechanical Keyboard Switches Market Size Report (May 2026)"
+        },
+        "growth": {
+          "value": 75.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=True (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'low' → score 90 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 17.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "low"
+        ],
+        "notes": "demande MESURÉE (google_search_grounding) · compétition low · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "RAPOO blog (December 2025), Krome Keycaps blog (March 2026), Mechanical Keyboard Switches Market Size Report (May 2026)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Mechanical Keyboard Switch seamless pattern",
+        "Mechanical Keyboard Switch Dark Ivy repeat pattern"
+      ]
+    },
+    {
+      "name": "Art Deco Wisteria Cascade",
+      "trending_score": 71,
+      "market_opportunity": "high",
+      "why_trending": "Biophilic design continues to dominate high-end wallpaper trends, with cascading wisteria flowers serving as a natural bridge to Art Deco geometry. While generic floral prints exist, there is a distinct shortage of highly structured, interlocking Art Deco wisteria layouts that tile seamlessly for luxury home decor.",
+      "target_audience": "wallpaper home decorators making statement walls and luxury curtains",
+      "sub_niches": [
+        {
+          "name": "Art Deco Wisteria Plum & Gold",
+          "trending_score": 50,
+          "unique_angle": "A cascading vertical stripe layout in deep plum and warm gold for high-end powder room wallpaper.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "luxurious, geometric, botanical, architectural",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Warm Gold #D4A017",
+          "Deep Plum #4A154B",
+          "Midnight Violet #120A18"
+        ],
+        "color_accent": [
+          "Terracotta #C25C3A",
+          "Cream #F5F0E8"
+        ],
+        "color_background": "Midnight Violet #120A18",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "large",
+        "top_products": [
+          "wallpaper",
+          "curtains"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Dense seamless half-drop repeat pattern for high-end wallpaper printing. Zero visible background — cascading wisteria shapes tile the ENTIRE surface edge-to-edge. Rows of overlapping Art Deco wisteria flower clusters stacked like scales, each cluster slightly overlapping the row above, covering every millimeter of the tile. Each wisteria cluster is drawn with precisely radiating petals from a narrow stem to a wide scalloped arc tip, all contained within a crisp dark outline. Colors alternate across clusters in a 5-tone palette: warm gold (#D4A017), deep plum (#4A154B), terracotta (#C25C3A), cream (#F5F0E8), and midnight violet (#120A18). Each cluster is filled with a single flat solid color — absolutely no gradient, no texture, no shadow inside any shape. Clean 2px dark charcoal (#120A18) outline separates every cluster from its neighbors. The entire tile surface is covered with NO plain background visible anywhere. All four edges tile perfectly. Designed for high-end wallpaper and premium fabric printing.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Print, Die Tausend Raben Vorsatz Papier (A Thousand Ravens Book End Paper), plate 11, in Die Quelle- Flächen Schmuck (The Source- Ornament for Flat Surfaces), 1901 (CH 18670543).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Print%2C_Die_Tausend_Raben_Vorsatz_Papier_%28A_Thousand_Ravens_Book_End_Paper%29%2C_plate_11%2C_in_Die_Quelle-_Fl%C3%A4chen_Schmuck_%28The_Source-_Ornament_for_Flat_Surfaces%29%2C_1901_%28CH_18670543%29.jpg",
+          "width": 4096,
+          "height": 3470
+        },
+        {
+          "title": "Print, Die Tausend Raben Vorsatz Papier (A Thousand Ravens Book End Paper), plate 11, in Die Quelle- Flächen Schmuck (The Source- Ornament for Flat Surfaces), 1901 (CH 18670543-2).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/31/Print%2C_Die_Tausend_Raben_Vorsatz_Papier_%28A_Thousand_Ravens_Book_End_Paper%29%2C_plate_11%2C_in_Die_Quelle-_Fl%C3%A4chen_Schmuck_%28The_Source-_Ornament_for_Flat_Surfaces%29%2C_1901_%28CH_18670543-2%29.jpg",
+          "width": 3731,
+          "height": 3143
+        }
+      ],
+      "generated_at": "2026-06-05 12:47 UTC",
+      "opportunity_score": 70.7,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 75.5,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 82.0,
+          "detail": "page 'Art Nouveau' : 48 201 vues/mois (réel)"
+        },
+        "growth": {
+          "value": 52.2,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 78.0,
+          "detail": "évolution +4% des vues sur 12 mois (réel)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'low' → score 90 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, mood"
+        },
+        "reusability": {
+          "value": 17.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "wikipedia"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "low"
+        ],
+        "notes": "demande MESURÉE (wikipedia) · compétition low · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "page 'Art Nouveau' : 48 201 vues/mois (réel)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Art Deco Wisteria Cascade seamless pattern",
+        "Art Deco Wisteria Plum & Gold repeat pattern"
+      ]
+    },
+    {
+      "name": "Art Nouveau Peacock Feather",
+      "trending_score": 66,
+      "market_opportunity": "high",
+      "why_trending": "Peacock feathers are a quintessential Art Nouveau motif, representing luxury, beauty, and decadence. By focusing on a highly stylized, dense, and overlapping layout of peacock feathers in rich jewel tones, this pattern offers a sophisticated, maximalist aesthetic that is highly sought after for statement wallpaper and velvet upholstery.",
+      "target_audience": "wallpaper home decorators and upholstery sewists",
+      "sub_niches": [
+        {
+          "name": "Art Nouveau Peacock Jewel Tones",
+          "trending_score": 50,
+          "unique_angle": "A dense, overlapping scale layout in royal blue and emerald green for luxury velvet cushions.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "luxurious, elegant, maximalist, vintage",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Royal Blue #0A1128",
+          "Deep Teal #004B49"
+        ],
+        "color_accent": [
+          "Emerald Green #1B4332",
+          "Warm Gold #D4A017"
+        ],
+        "color_background": "Royal Blue #0A1128",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "large",
+        "top_products": [
+          "wallpaper",
+          "curtains"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Dense seamless half-drop repeat pattern for high-end wallpaper printing. Zero visible background — feather shapes tile the ENTIRE surface edge-to-edge. Rows of overlapping Art Nouveau peacock feathers stacked like scales, each feather eye slightly overlapping the row above, covering every millimeter of the tile. Each feather is drawn with precisely radiating whiplash lines from a narrow stem to a wide rounded eye, all contained within a crisp dark outline. Colors alternate across feathers in a 4-tone jewel palette: royal blue (#0A1128), deep teal (#004B49), emerald green (#1B4332), and warm gold (#D4A017). Each feather is filled with a single flat solid color — absolutely no gradient, no texture, no shadow inside any shape. Clean 2px dark charcoal (#0A1128) outline separates every feather from its neighbors. The entire tile surface is covered with NO plain background visible anywhere. All four edges tile perfectly. Designed for high-end wallpaper and premium fabric printing.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Haarkam, BK-1970-105.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/34/Haarkam%2C_BK-1970-105.jpg",
+          "width": 4556,
+          "height": 4742
+        },
+        {
+          "title": "Image taken from page 25 of 'Lover or Friend?' (11115651195).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/86/Image_taken_from_page_25_of_%27Lover_or_Friend%3F%27_%2811115651195%29.jpg",
+          "width": 1202,
+          "height": 320
+        }
+      ],
+      "generated_at": "2026-06-05 12:47 UTC",
+      "opportunity_score": 65.5,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 80.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 75.0,
+          "detail": "Bazaar Arabia feature (December 2025), Spoonflower designs (including award winners), AethersAtelier brooches"
+        },
+        "growth": {
+          "value": 75.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=True (grounding confirmé)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 17.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande MESURÉE (google_search_grounding) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "Bazaar Arabia feature (December 2025), Spoonflower designs (including award winners), AethersAtelier brooches",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Art Nouveau Peacock Feather seamless pattern",
+        "Art Nouveau Peacock Jewel Tones repeat pattern"
+      ]
+    },
+    {
+      "name": "Art Nouveau Luna Moth Stained Glass",
+      "trending_score": 60,
+      "market_opportunity": "very_high",
+      "why_trending": "Luna moths are a highly coveted motif in Whimsigoth and dark academia aesthetics. By arranging their delicate wings and bodies into an interlocking, stained-glass-like geometric mosaic, this pattern taps into the massive demand for high-end, maximalist wallpapers that feel both historic and contemporary.",
+      "target_audience": "wallpaper home decorators and apparel sewists making statement jackets",
+      "sub_niches": [
+        {
+          "name": "Art Nouveau Luna Moth Stained Glass",
+          "trending_score": 50,
+          "unique_angle": "A rich plum and sage colorway designed specifically for velvet upholstery and statement drapery.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "mystical, elegant, architectural, vintage",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Deep Teal #004B49",
+          "Mustard Gold #D4A373"
+        ],
+        "color_accent": [
+          "Plum #5C3A4E",
+          "Sage Green #A3B19B",
+          "Charcoal #1A1A1A"
+        ],
+        "color_background": "Charcoal #1A1A1A",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "mirror",
+        "pattern_scale": "large",
+        "top_products": [
+          "wallpaper",
+          "apparel fabric"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Dense seamless mirror repeat pattern for high-end wallpaper. The luna moth silhouette IS the tile unit — wings spread wide and stylized into a geometric stained-glass mosaic of precisely 12 leaded glass panels per wing. The spread wings form an interlocking arch that meets its mirror neighbor at the left and right tile edges perfectly — no gap, no background. Each luna moth body is rendered in deep teal (#004B49) on a charcoal (#1A1A1A) background, with alternating wing panels of mustard gold (#D4A373) and plum (#5C3A4E). The rendering is Art Nouveau stained glass — bold flat silhouettes, thick black lead lines, zero soft rendering. The body is a single flat silhouette — no internal texture, no shading, no gradients. Graphic print quality, flat vector aesthetic. Designed for Spoonflower mirror repeat — luna moth wing tips touch at every tile edge. 4-color palette for maximum fabric printing contrast. Designed for high-end wallpaper and premium fabric printing.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 12:47 UTC",
+      "opportunity_score": 60.2,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 57.0,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 82.0,
+          "detail": "page 'List of original names of bands' : 3 437 vues/mois (réel)"
+        },
+        "growth": {
+          "value": 35.4,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 78.0,
+          "detail": "évolution -29% des vues sur 12 mois (réel)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'low' → score 90 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 17.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "wikipedia"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "very_high",
+          "low"
+        ],
+        "notes": "demande MESURÉE (wikipedia) · compétition low · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "page 'List of original names of bands' : 3 437 vues/mois (réel)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Art Nouveau Luna Moth Stained Glass seamless pattern",
+        "Art Nouveau Luna Moth Stained Glass repeat pattern"
+      ]
+    },
+    {
+      "name": "Coastal Salt Marsh Heron",
+      "trending_score": 59,
+      "market_opportunity": "very_high",
+      "why_trending": "Coastal and wetland-inspired home decor is seeing a shift away from generic seashells toward sophisticated salt marsh ecosystems. Herons, with their elegant silhouettes and long necks, are perfect for Art Deco-inspired geometric repeats that feel both organic and architectural.",
+      "target_audience": "wallpaper home decorators and luxury bedding sewists",
+      "sub_niches": [
+        {
+          "name": "Coastal Salt Marsh Heron Sage",
+          "trending_score": 50,
+          "unique_angle": "A soft sage green and terracotta colorway tailored for coastal cottage nurseries and children's bedding.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "majestic, geometric, architectural, vintage",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Sage Green #7A9A82",
+          "Ivory #FAF7F0"
+        ],
+        "color_accent": [
+          "Terracotta #D9744B"
+        ],
+        "color_background": "Sage Green #7A9A82",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "mirror",
+        "pattern_scale": "large",
+        "top_products": [
+          "wallpaper",
+          "bedding"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Dense seamless mirror repeat pattern for high-end wallpaper. Each heron is rendered as a bold graphic silhouette — wings spread wide and stylized into a fan arc of precisely 16 radiating primary feather strokes. The spread wings form an interlocking arch that meets its mirror neighbor at the left and right tile edges perfectly — no gap, no background. Each heron body is rendered entirely in cream (#FAF7F0) on a sage green (#7A9A82) background, with a single terracotta (#D9744B) accent on the long beak only. The rendering is Art Deco graphic — bold flat silhouette, crisp hard edges, zero soft rendering. The wing spread is drawn with 16 precisely spaced radiating lines from the shoulder joint to the feather tips, all within a single arc. The body is a single flat cream silhouette — no internal feather texture, no shading, no gradients. Graphic print quality, flat vector aesthetic. Designed for Spoonflower mirror repeat — heron wing tips touch at every tile edge. 3-color palette for maximum fabric printing contrast. Designed for high-end wallpaper and premium fabric printing.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Coraux madrepores toiles de mer et algues cretonne imprime canards et iris d'eau papier peint hippocampe broche canards bordure escargots et liseron boucle papillons collier - L'animal dans la decoration (1897) by M. P. Verneuil (Rawpix.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Coraux_madrepores_toiles_de_mer_et_algues_cretonne_imprime_canards_et_iris_d%27eau_papier_peint_hippocampe_broche_canards_bordure_escargots_et_liseron_boucle_papillons_collier_-_L%27animal_dans_la_decoration_%281897%29_by_M._P._Verneuil_%28Rawpix.jpg",
+          "width": 3666,
+          "height": 5814
+        },
+        {
+          "title": "Lion dpart de rampe en pierre pour en escalier monumental tortues carreaux grs canards et iris tenture pour chambre d'enfant - L'animal dans la decoration (1897) by M. P. Verneuil (ehanced by Rawpixel).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Lion_dpart_de_rampe_en_pierre_pour_en_escalier_monumental_tortues_carreaux_grs_canards_et_iris_tenture_pour_chambre_d%27enfant_-_L%27animal_dans_la_decoration_%281897%29_by_M._P._Verneuil_%28ehanced_by_Rawpixel%29.jpg",
+          "width": 5237,
+          "height": 3999
+        }
+      ],
+      "generated_at": "2026-06-05 12:47 UTC",
+      "opportunity_score": 59.1,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 50.6,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 82.0,
+          "detail": "page 'Tidal marsh' : 1 365 vues/mois (réel)"
+        },
+        "growth": {
+          "value": 41.0,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 78.0,
+          "detail": "évolution -18% des vues sur 12 mois (réel)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'low' → score 90 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 17.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "wikipedia"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "very_high",
+          "low"
+        ],
+        "notes": "demande MESURÉE (wikipedia) · compétition low · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "page 'Tidal marsh' : 1 365 vues/mois (réel)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Coastal Salt Marsh Heron seamless pattern",
+        "Coastal Salt Marsh Heron Sage repeat pattern"
+      ]
+    },
+    {
+      "name": "Art Deco Crane Geometry",
+      "trending_score": 58,
+      "market_opportunity": "very_high",
+      "why_trending": "Art Deco animal patterns, particularly elegant wading birds, are a proven bestseller category on Spoonflower. By focusing on the geometric silhouette of the crane where the wings themselves form the repeating tile structure, this niche bypasses generic bird prints to offer high-end architectural appeal.",
+      "target_audience": "wallpaper home decorators and luxury bedding sewists",
+      "sub_niches": [
+        {
+          "name": "Art Deco Crane Navy & Copper",
+          "trending_score": 50,
+          "unique_angle": "A high-contrast metallic-look copper on deep navy colorway optimized for luxury master bedroom accent walls.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "majestic, geometric, architectural, vintage",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Deep Navy #1C2B4A",
+          "Ivory #FAF7F0"
+        ],
+        "color_accent": [
+          "Copper #B87333"
+        ],
+        "color_background": "Deep Navy #1C2B4A",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "mirror",
+        "pattern_scale": "large",
+        "top_products": [
+          "wallpaper",
+          "bedding"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Dense seamless mirror repeat pattern for high-end wallpaper. The crane silhouette IS the tile unit — wings spread wide and stylized into a fan arc of precisely 16 radiating primary feather strokes. The spread wings form an interlocking arch that meets its mirror neighbor at the left and right tile edges perfectly — no gap, no background. Each crane body is rendered entirely in ivory (#FAF7F0) on a deep navy (#1C2B4A) background, with a single copper (#B87333) accent on the long beak and legs. The rendering is Art Deco graphic — bold flat silhouette, crisp hard edges, zero soft rendering. The wing spread is drawn with 16 precisely spaced radiating lines from the shoulder joint to the feather tips, all within a single arc. The body is a single flat ivory silhouette — no internal feather texture, no shading, no gradients. Graphic print quality, flat vector aesthetic. Designed for Spoonflower mirror repeat — crane wing tips touch at every tile edge. 3-color palette for maximum fabric printing contrast. Designed for high-end wallpaper and premium fabric printing.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Coraux madrepores toiles de mer et algues cretonne imprime canards et iris d'eau papier peint hippocampe broche canards bordure escargots et liseron boucle papillons collier - L'animal dans la decoration (1897) by M. P. Verneuil (Rawpix.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Coraux_madrepores_toiles_de_mer_et_algues_cretonne_imprime_canards_et_iris_d%27eau_papier_peint_hippocampe_broche_canards_bordure_escargots_et_liseron_boucle_papillons_collier_-_L%27animal_dans_la_decoration_%281897%29_by_M._P._Verneuil_%28Rawpix.jpg",
+          "width": 3666,
+          "height": 5814
+        },
+        {
+          "title": "Lion dpart de rampe en pierre pour en escalier monumental tortues carreaux grs canards et iris tenture pour chambre d'enfant - L'animal dans la decoration (1897) by M. P. Verneuil (ehanced by Rawpixel).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Lion_dpart_de_rampe_en_pierre_pour_en_escalier_monumental_tortues_carreaux_grs_canards_et_iris_tenture_pour_chambre_d%27enfant_-_L%27animal_dans_la_decoration_%281897%29_by_M._P._Verneuil_%28ehanced_by_Rawpixel%29.jpg",
+          "width": 5237,
+          "height": 3999
+        }
+      ],
+      "generated_at": "2026-06-05 12:47 UTC",
+      "opportunity_score": 58.0,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 69.3,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 82.0,
+          "detail": "page 'Modern architecture' : 19 819 vues/mois (réel)"
+        },
+        "growth": {
+          "value": 46.5,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 78.0,
+          "detail": "évolution -7% des vues sur 12 mois (réel)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 17.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "wikipedia"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "very_high",
+          "medium"
+        ],
+        "notes": "demande MESURÉE (wikipedia) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "page 'Modern architecture' : 19 819 vues/mois (réel)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Art Deco Crane Geometry seamless pattern",
+        "Art Deco Crane Navy & Copper repeat pattern"
+      ]
+    },
+    {
+      "name": "Art Deco Ginkgo Fan",
+      "trending_score": 57,
+      "market_opportunity": "very_high",
+      "why_trending": "Biophilic design continues to dominate high-end wallpaper trends, with ginkgo leaves serving as a natural bridge to Art Deco geometry. While generic ginkgo prints exist, there is a distinct shortage of highly structured, interlocking Art Deco fan layouts that tile seamlessly for luxury home decor.",
+      "target_audience": "wallpaper home decorators making statement walls and luxury curtains",
+      "sub_niches": [
+        {
+          "name": "Art Deco Ginkgo Emerald & Gold",
+          "trending_score": 50,
+          "unique_angle": "An interlocking fish-scale layout in rich emerald green and warm gold for luxury dining room wallpaper.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "luxurious, geometric, botanical, architectural",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Warm Gold #D4A017",
+          "Emerald Green #0F5257",
+          "Deep Forest #0B2524"
+        ],
+        "color_accent": [
+          "Terracotta #C25C3A",
+          "Cream #F5F0E8"
+        ],
+        "color_background": "Deep Forest #0B2524",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "large",
+        "top_products": [
+          "wallpaper",
+          "curtains"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Dense seamless half-drop repeat pattern for high-end wallpaper printing. Zero visible background — fan shapes tile the ENTIRE surface edge-to-edge. Rows of overlapping Art Deco ginkgo leaf fans stacked like scales, each leaf slightly overlapping the row above, covering every millimeter of the tile. Each ginkgo leaf is drawn with precisely radiating veins from a narrow stem to a wide scalloped arc tip, all contained within a crisp dark outline. Colors alternate across fans in a 5-tone palette: warm gold (#D4A017), emerald green (#0F5257), terracotta (#C25C3A), cream (#F5F0E8), and deep forest green (#0B2524). Each leaf is filled with a single flat solid color — absolutely no gradient, no texture, no shadow inside any shape. Clean 2px dark charcoal (#0B2524) outline separates every fan from its neighbors. The entire tile surface is covered with NO plain background visible anywhere. All four edges tile perfectly. Designed for high-end wallpaper and premium fabric printing.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Print, Die Tausend Raben Vorsatz Papier (A Thousand Ravens Book End Paper), plate 11, in Die Quelle- Flächen Schmuck (The Source- Ornament for Flat Surfaces), 1901 (CH 18670543).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Print%2C_Die_Tausend_Raben_Vorsatz_Papier_%28A_Thousand_Ravens_Book_End_Paper%29%2C_plate_11%2C_in_Die_Quelle-_Fl%C3%A4chen_Schmuck_%28The_Source-_Ornament_for_Flat_Surfaces%29%2C_1901_%28CH_18670543%29.jpg",
+          "width": 4096,
+          "height": 3470
+        },
+        {
+          "title": "Print, Die Tausend Raben Vorsatz Papier (A Thousand Ravens Book End Paper), plate 11, in Die Quelle- Flächen Schmuck (The Source- Ornament for Flat Surfaces), 1901 (CH 18670543-2).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/31/Print%2C_Die_Tausend_Raben_Vorsatz_Papier_%28A_Thousand_Ravens_Book_End_Paper%29%2C_plate_11%2C_in_Die_Quelle-_Fl%C3%A4chen_Schmuck_%28The_Source-_Ornament_for_Flat_Surfaces%29%2C_1901_%28CH_18670543-2%29.jpg",
+          "width": 3731,
+          "height": 3143
+        }
+      ],
+      "generated_at": "2026-06-05 12:47 UTC",
+      "opportunity_score": 57.0,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 73.1,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 82.0,
+          "detail": "page 'List of films with post-credits scenes' : 33 984 vues/mois (réel)"
+        },
+        "growth": {
+          "value": 15.8,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 78.0,
+          "detail": "évolution -68% des vues sur 12 mois (réel)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, mood"
+        },
+        "reusability": {
+          "value": 17.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "wikipedia"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "very_high",
+          "medium"
+        ],
+        "notes": "demande MESURÉE (wikipedia) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "page 'List of films with post-credits scenes' : 33 984 vues/mois (réel)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Art Deco Ginkgo Fan seamless pattern",
+        "Art Deco Ginkgo Emerald & Gold repeat pattern"
+      ]
+    },
+    {
+      "name": "Art Deco Gothic Bat",
+      "trending_score": 43,
+      "market_opportunity": "high",
+      "why_trending": "The 'Gothcore' and 'Whimsigoth' interior design movements have made spooky-chic decor a year-round trend, rather than just seasonal Halloween fodder. An Art Deco approach to bat silhouettes—focusing on the geometric, fan-like structure of their wings—creates a sophisticated, dark-glam pattern that is highly underserved.",
+      "target_audience": "wallpaper home decorators and apparel sewists making gothic fashion",
+      "sub_niches": [
+        {
+          "name": "Art Deco Gothic Bat Midnight Violet",
+          "trending_score": 50,
+          "unique_angle": "A dark-glam midnight violet and warm gold colorway for year-round Whimsigoth bedroom decor.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "gothic, mysterious, geometric, architectural",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Midnight Violet #120A18",
+          "Charcoal #2B2B2B"
+        ],
+        "color_accent": [
+          "Deep Plum #4A154B",
+          "Warm Gold #D4A017"
+        ],
+        "color_background": "Midnight Violet #120A18",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "mirror",
+        "pattern_scale": "large",
+        "top_products": [
+          "wallpaper",
+          "apparel fabric"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Dense seamless mirror repeat pattern for high-end wallpaper. The bat silhouette IS the tile unit — wings spread wide and stylized into a fan arc of precisely 10 radiating webbed bone segments. The spread wings form an interlocking arch that meets its mirror neighbor at the left and right tile edges perfectly — no gap, no background. Each bat body is rendered entirely in charcoal (#2B2B2B) on a midnight violet (#120A18) background, with a single warm gold (#D4A017) accent on the eyes and moon phases. The rendering is Art Deco graphic — bold flat silhouette, crisp hard edges, zero soft rendering. The wing spread is drawn with 10 precisely spaced radiating lines from the shoulder joint to the wing tips, all within a single arc. The body is a single flat charcoal silhouette — no internal fur texture, no shading, no gradients. Graphic print quality, flat vector aesthetic. Designed for Spoonflower mirror repeat — bat wing tips touch at every tile edge. 3-color palette for maximum fabric printing contrast. Designed for high-end wallpaper and premium fabric printing.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 12:47 UTC",
+      "opportunity_score": 43.0,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 0.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 75.0,
+          "detail": "None found within the last 6 months."
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'low' → score 90 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 17.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "low"
+        ],
+        "notes": "demande MESURÉE (google_search_grounding) · compétition low · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "None found within the last 6 months.",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Art Deco Gothic Bat seamless pattern",
+        "Art Deco Gothic Bat Midnight Violet repeat pattern"
+      ]
+    },
+    {
+      "name": "Vintage Seed Packet Ditsy",
+      "trending_score": 43,
+      "market_opportunity": "high",
+      "why_trending": "The cottagecore and 'slow living' movements have made vintage gardening aesthetics highly popular. While modern seed packet designs exist, there is a distinct shortage of highly detailed, 19th-century-style seed packets with vintage typography and botanical illustrations arranged in a dense, nostalgic ditsy print for quilting.",
+      "target_audience": "quilters making kitchen accessories and cottagecore apparel sewists",
+      "sub_niches": [
+        {
+          "name": "Vintage Seed Packet Dark Ivy",
+          "trending_score": 50,
+          "unique_angle": "A dense ditsy layout with cream sticker borders on dark ivy for retro kitchen aprons and table runners.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "nostalgic, botanical, domestic, cozy",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Dark Ivy #1E2522",
+          "Cream #F5F0E8"
+        ],
+        "color_accent": [
+          "Terracotta #C25C3A",
+          "Dusty Rose #C4827A",
+          "Sage Green #7DB87D",
+          "Warm Gold #D4A017"
+        ],
+        "color_background": "Dark Ivy #1E2522",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "quilting cotton",
+          "table linens"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless tossed/scattered repeat pattern for kitchen textiles. The pattern looks exactly like a collection of 19th-century vintage seed packets — fine engraved ink details, completely flat solid color fills, not a single gradient or shadow inside any shape. The design features: rectangular seed packets for heirloom tomatoes, sweet peas, and French radishes with retro typography; vintage metal garden scissors; wooden plant labels; and small burlap seed sacks. Colors: terracotta (#C25C3A), dusty rose (#C4827A), sage green (#7DB87D), warm gold (#D4A017), and cream (#F5F0E8). NO blending, NO merging, NO morphing between any objects. Distinct individual motifs with clear spacing and crisp white sticker borders. Single solid uniform dark ivy (#1E2522) background across the entire tile, no texture. All four edges tile perfectly. Designed for retro quilting cotton and kitchen accessories.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 12:47 UTC",
+      "opportunity_score": 43.0,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 0.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 75.0,
+          "detail": "None found within the last 6 months."
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'low' → score 90 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 17.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "low"
+        ],
+        "notes": "demande MESURÉE (google_search_grounding) · compétition low · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "None found within the last 6 months.",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Vintage Seed Packet Ditsy seamless pattern",
+        "Vintage Seed Packet Dark Ivy repeat pattern"
+      ]
+    },
+    {
+      "name": "Mid-Century Pyrex Butterprint Folk",
+      "trending_score": 43,
+      "market_opportunity": "high",
+      "why_trending": "Vintage kitchenware collecting has exploded on TikTok and Instagram, with Pyrex 'Butterprint' (Amish farm print) being one of the most coveted patterns. Translating this specific 1950s folk aesthetic into a modern, clean surface design taps directly into the massive retro-kitchen and quilting communities.",
+      "target_audience": "quilters making kitchen accessories and retro-themed quilts",
+      "sub_niches": [
+        {
+          "name": "Mid-Century Pyrex Butterprint Forest Teal",
+          "trending_score": 50,
+          "unique_angle": "A clean, graphic 1950s folk layout in forest teal and butter yellow for retro kitchen curtains.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "nostalgic, retro, domestic, cozy",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Forest Teal #1F6357",
+          "Turquoise #30D5C8"
+        ],
+        "color_accent": [
+          "Butter Yellow #FFFD37",
+          "White #FFFFFF"
+        ],
+        "color_background": "Forest Teal #1F6357",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "quilting cotton",
+          "table linens"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless tossed/scattered repeat pattern for retro kitchen textiles. The pattern looks exactly like a 1950s Pyrex Butterprint vintage kitchenware print — bold flat graphic silhouettes, completely flat solid color fills, not a single gradient or shadow inside any shape. The design features: a stylized Amish farmer holding a pitchfork; an Amish woman holding a harvest basket; a folk art rooster in side profile; a bundle of wheat tied with a bow; and small retro starbursts. Colors: turquoise (#30D5C8), butter yellow (#FFFD37), and crisp white (#FFFFFF). NO blending, NO merging, NO morphing between any objects. Distinct individual motifs with clear spacing between each element. Single solid uniform forest teal (#1F6357) background across the entire tile, no texture. All four edges tile perfectly. Designed for kitchen towels and retro quilting cotton.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "American 20th Century, Drawing for Plate 13 - From the Portfolio \"Folk Art of Rural Pennsylvania\", c. 1939, NGA 75413.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/American_20th_Century%2C_Drawing_for_Plate_13_-_From_the_Portfolio_%22Folk_Art_of_Rural_Pennsylvania%22%2C_c._1939%2C_NGA_75413.jpg",
+          "width": 3395,
+          "height": 4337
+        },
+        {
+          "title": "American 20th Century, Drawing for Plate 14 - From the Portfolio \"Folk Art of Rural Pennsylvania\", c. 1939, NGA 75411.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/American_20th_Century%2C_Drawing_for_Plate_14_-_From_the_Portfolio_%22Folk_Art_of_Rural_Pennsylvania%22%2C_c._1939%2C_NGA_75411.jpg",
+          "width": 3359,
+          "height": 4351
+        }
+      ],
+      "generated_at": "2026-06-05 12:47 UTC",
+      "opportunity_score": 43.0,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 0.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 75.0,
+          "detail": "None found within the last 6 months."
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'low' → score 90 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 17.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "low"
+        ],
+        "notes": "demande MESURÉE (google_search_grounding) · compétition low · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "None found within the last 6 months.",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Mid-Century Pyrex Butterprint Folk seamless pattern",
+        "Mid-Century Pyrex Butterprint Forest Teal repeat pattern"
+      ]
+    },
+    {
+      "name": "1970s Bohemian Rattan & Palm",
+      "trending_score": 43,
+      "market_opportunity": "high",
+      "why_trending": "The revival of 1970s interior design has brought rattan, wicker, and warm earth tones back to the forefront of home decor. A pattern that combines the intricate, geometric weave of rattan with stylized palm fronds offers a warm, textured, and highly nostalgic aesthetic that is perfect for wallpaper and upholstery.",
+      "target_audience": "wallpaper home decorators and upholstery sewists",
+      "sub_niches": [
+        {
+          "name": "1970s Bohemian Rattan Dark Forest",
+          "trending_score": 50,
+          "unique_angle": "An interlocking cane weave and fan palm layout in warm ochre on dark forest green for boho living rooms.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "warm, bohemian, retro, textured",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Dark Forest #283618",
+          "Warm Ochre #D4A373"
+        ],
+        "color_accent": [
+          "Olive Green #606C38",
+          "Terracotta #C25C3A",
+          "Cream #F5F0E8"
+        ],
+        "color_background": "Dark Forest #283618",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "large",
+        "top_products": [
+          "wallpaper",
+          "curtains"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Dense seamless half-drop repeat pattern for high-end wallpaper printing. Zero visible background — woven shapes tile the ENTIRE surface edge-to-edge. Rows of overlapping circular rattan cane webbing panels and stylized fan palm fronds, each slightly overlapping the row beside it, covering every millimeter of the tile. Each rattan panel is drawn with intricate geometric cane weave lines, and each palm frond is drawn with sharp radiating leaves, all within a crisp dark outline. Colors alternate across shapes in a 5-tone warm earth palette: warm ochre (#D4A373), olive green (#606C38), terracotta (#C25C3A), cream (#F5F0E8), and dark forest green (#283618). Each shape is filled with a single flat solid color — absolutely no gradient, no texture, no shadow inside any shape. Clean 2px dark charcoal (#283618) outline separates every element. All four edges tile perfectly. Designed for bohemian home decor and premium fabric printing.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 12:47 UTC",
+      "opportunity_score": 43.0,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 0.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 75.0,
+          "detail": "None found within the last 6 months."
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'low' → score 90 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 17.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "low"
+        ],
+        "notes": "demande MESURÉE (google_search_grounding) · compétition low · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "None found within the last 6 months.",
+      "seo_keywords": [],
+      "title_seeds": [
+        "1970s Bohemian Rattan & Palm seamless pattern",
+        "1970s Bohemian Rattan Dark Forest repeat pattern"
+      ]
+    },
+    {
+      "name": "Vintage Vinyl Record & Turntable",
+      "trending_score": 43,
+      "market_opportunity": "high",
+      "why_trending": "The vinyl record revival has created a passionate community of audiophiles who love decorating their listening rooms. While generic music notes are common, a pattern focusing specifically on vintage turntables, vinyl records, and retro audio gear in a warm 1970s flat illustration style is highly underserved.",
+      "target_audience": "wallpaper home decorators and quilters making music-themed accessories",
+      "sub_niches": [
+        {
+          "name": "Vintage Vinyl Record Dark Ivy",
+          "trending_score": 50,
+          "unique_angle": "A retro audio gear layout with cream sticker borders on dark ivy for music room acoustic panels.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "retro, nostalgic, musical, cozy",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Dark Ivy #1E2522",
+          "Warm Ochre #D4A373"
+        ],
+        "color_accent": [
+          "Terracotta #C25C3A",
+          "Teal #30D5C8",
+          "Cream #F5F0E8",
+          "Butter Yellow #FFFD37"
+        ],
+        "color_background": "Dark Ivy #1E2522",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "wallpaper",
+          "quilting cotton"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless tossed/scattered repeat pattern for music room decor. The pattern looks exactly like a 1970s retro audio gear illustration — bold flat graphic silhouettes, completely flat solid color fills, not a single gradient or shadow inside any shape. The design features: vintage wooden turntables; vinyl records sliding out of colorful sleeves; retro speaker cabinets; and yellow 45 RPM record adapters. Colors: warm ochre (#D4A373), terracotta (#C25C3A), teal (#30D5C8), butter yellow (#FFFD37), and cream (#F5F0E8). NO blending, NO merging, NO morphing between any objects. Distinct individual motifs with clear spacing and crisp white sticker borders. Single solid uniform dark ivy (#1E2522) background across the entire tile, no texture. All four edges tile perfectly. Designed for music lovers and retro home decor.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 12:47 UTC",
+      "opportunity_score": 43.0,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 0.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 75.0,
+          "detail": "None found within the last 6 months."
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'low' → score 90 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 17.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "low"
+        ],
+        "notes": "demande MESURÉE (google_search_grounding) · compétition low · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "None found within the last 6 months.",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Vintage Vinyl Record & Turntable seamless pattern",
+        "Vintage Vinyl Record Dark Ivy repeat pattern"
+      ]
+    },
+    {
+      "name": "Vintage Board Game & Dice",
+      "trending_score": 43,
+      "market_opportunity": "high",
+      "why_trending": "The board game renaissance has created a massive community of tabletop gamers who love hosting game nights. While generic chessboards are common, a pattern focusing specifically on vintage board game elements—meeples, polyhedral dice, retro spinners, and classic cards—in a warm mid-century style is highly underserved.",
+      "target_audience": "wallpaper home decorators and quilters making game room accessories",
+      "sub_niches": [
+        {
+          "name": "Vintage Board Game Dark Ivy",
+          "trending_score": 50,
+          "unique_angle": "A playful tabletop gaming layout with cream sticker borders on dark ivy for custom game table toppers.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "retro, playful, nostalgic, cozy",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Dark Ivy #1E2522",
+          "Warm Ochre #D4A373"
+        ],
+        "color_accent": [
+          "Teal #30D5C8",
+          "Terracotta #C25C3A",
+          "Cream #F5F0E8",
+          "Butter Yellow #FFFD37"
+        ],
+        "color_background": "Dark Ivy #1E2522",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "wallpaper",
+          "quilting cotton"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless tossed/scattered repeat pattern for game room decor. The pattern looks exactly like a collection of vintage board game elements — bold flat graphic silhouettes, completely flat solid color fills, not a single gradient or shadow inside any shape. The design features: retro circular game spinners; polyhedral D20 dice; wooden meeples; and classic playing cards. Colors: warm ochre (#D4A373), teal (#30D5C8), terracotta (#C25C3A), butter yellow (#FFFD37), and cream (#F5F0E8). NO blending, NO merging, NO morphing between any objects. Distinct individual motifs with clear spacing and crisp white sticker borders. Single solid uniform dark ivy (#1E2522) background across the entire tile, no texture. All four edges tile perfectly. Designed for tabletop gamers and retro home decor.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 12:47 UTC",
+      "opportunity_score": 43.0,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 0.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 75.0,
+          "detail": "None found within the last 6 months."
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'low' → score 90 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 17.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "low"
+        ],
+        "notes": "demande MESURÉE (google_search_grounding) · compétition low · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "None found within the last 6 months.",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Vintage Board Game & Dice seamless pattern",
+        "Vintage Board Game Dark Ivy repeat pattern"
+      ]
+    },
+    {
+      "name": "Guerilla Gardening Seed Bomb",
+      "trending_score": 43,
+      "market_opportunity": "high",
+      "why_trending": "The guerilla gardening and urban rewilding movements have gained massive traction on TikTok and Instagram, with young activists throwing 'seed bombs' to plant wildflowers in neglected urban spaces. A pattern focusing on seed bombs, clay balls, and native wildflowers in a bold, retro-protest flat illustration style is highly underserved.",
+      "target_audience": "apparel sewists making modern utility wear and nursery decorators",
+      "sub_niches": [
+        {
+          "name": "Guerilla Gardening Seed Bomb Dark Ivy",
+          "trending_score": 50,
+          "unique_angle": "An activist-themed wildflower and seed bomb layout on dark ivy for modern utility jackets.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "playful, activist, botanical, cozy",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Dark Ivy #1E2522",
+          "Terracotta #C25C3A"
+        ],
+        "color_accent": [
+          "Sage Green #7DB87D",
+          "Red #C1121F",
+          "Cream #F5F0E8",
+          "Warm Gold #D4A017"
+        ],
+        "color_background": "Dark Ivy #1E2522",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "wallpaper",
+          "quilting cotton"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless tossed/scattered repeat pattern for modern utility wear. The pattern looks exactly like a bold retro-protest flat illustration — bold flat graphic silhouettes, completely flat solid color fills, not a single gradient or shadow inside any shape. The design features: clay seed bombs; sprouting seed balls with green wildflower shoots; bold red poppies; and wooden slingshots. Colors: terracotta (#C25C3A), sage green (#7DB87D), red (#C1121F), warm gold (#D4A017), and cream (#F5F0E8). NO blending, NO merging, NO morphing between any objects. Distinct individual motifs with clear spacing and crisp white sticker borders. Single solid uniform dark ivy (#1E2522) background across the entire tile, no texture. All four edges tile perfectly. Designed for urban rewilding enthusiasts and modern home decor.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 12:47 UTC",
+      "opportunity_score": 43.0,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 0.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 75.0,
+          "detail": "None found within the last 6 months."
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'low' → score 90 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 17.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "low"
+        ],
+        "notes": "demande MESURÉE (google_search_grounding) · compétition low · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "None found within the last 6 months.",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Guerilla Gardening Seed Bomb seamless pattern",
+        "Guerilla Gardening Seed Bomb Dark Ivy repeat pattern"
+      ]
+    },
+    {
+      "name": "Alpine Edelweiss Folk Art",
+      "trending_score": 43,
+      "market_opportunity": "high",
+      "why_trending": "With the rise of 'Alpine Cottagecore' and European winter travel aesthetics on Pinterest, traditional Swiss and Austrian folk art is seeing a resurgence. Focusing on the iconic edelweiss flower combined with geometric folk borders offers a cozy, nostalgic aesthetic that is highly underserved compared to generic Scandinavian folk art.",
+      "target_audience": "quilters making winter blankets and nursery decorators",
+      "sub_niches": [
+        {
+          "name": "Alpine Edelweiss Folk Art Warm Cream",
+          "trending_score": 50,
+          "unique_angle": "A symmetrical paper-cut style layout in alpine red and forest green on warm cream for winter quilts.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "cozy, rustic, nostalgic, European",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Warm Cream #FDF0D5",
+          "Alpine Red #C1121F"
+        ],
+        "color_accent": [
+          "Forest Green #2D5A27",
+          "Cobalt Blue #003049",
+          "White #FFFFFF"
+        ],
+        "color_background": "Warm Cream #FDF0D5",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "quilting cotton",
+          "nursery fabric"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless tossed/scattered repeat pattern for alpine winter textiles. The pattern looks exactly like a traditional Swiss Scherenschnitt paper-cut design — bold flat graphic silhouettes, completely flat solid color fills, not a single gradient or shadow inside any shape. The design features: stylized white edelweiss flowers; forest green alpine ibexes in profile; symmetrical red folk hearts; and small cobalt blue gentian flowers. Colors: alpine red (#C1121F), forest green (#2D5A27), cobalt blue (#003049), and crisp white (#FFFFFF). NO blending, NO merging, NO morphing between any objects. Distinct individual motifs with clear spacing between each element. Single solid uniform warm cream (#FDF0D5) background across the entire tile, no texture. All four edges tile perfectly. Designed for cozy winter quilts and nursery decor.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 12:47 UTC",
+      "opportunity_score": 43.0,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 0.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 75.0,
+          "detail": "None found within the last 6 months."
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'low' → score 90 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 17.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "low"
+        ],
+        "notes": "demande MESURÉE (google_search_grounding) · compétition low · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "None found within the last 6 months.",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Alpine Edelweiss Folk Art seamless pattern",
+        "Alpine Edelweiss Folk Art Warm Cream repeat pattern"
+      ]
+    },
+    {
+      "name": "Minimalist Bonsai & Viewing Stone",
+      "trending_score": 43,
+      "market_opportunity": "high",
+      "why_trending": "The bonsai and suiseki (viewing stone) hobbies have a dedicated global following, with enthusiasts valuing minimalist, zen-like aesthetics. While generic Japanese waves or cherry blossoms are common, a pattern focusing specifically on stylized bonsai trees and natural viewing stones in a clean, modern flat illustration style is highly underserved.",
+      "target_audience": "wallpaper home decorators and quilters making minimalist accessories",
+      "sub_niches": [
+        {
+          "name": "Minimalist Bonsai Dark Ivy",
+          "trending_score": 50,
+          "unique_angle": "A zen-like formal upright and cascade bonsai layout on dark ivy for minimalist study wallpaper.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "minimalist, zen, botanical, cozy",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Dark Ivy #1E2522",
+          "Forest Green #2D5A27"
+        ],
+        "color_accent": [
+          "Warm Gold #D4A017",
+          "Terracotta #C25C3A",
+          "Cream #F5F0E8"
+        ],
+        "color_background": "Dark Ivy #1E2522",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "wallpaper",
+          "quilting cotton"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless tossed/scattered repeat pattern for zen home decor. The pattern looks exactly like a minimalist Japanese woodblock print — bold flat graphic silhouettes, completely flat solid color fills, not a single gradient or shadow inside any shape. The design features: formal upright and cascade style bonsai trees in ceramic pots; natural suiseki viewing stones on wooden bases; and traditional metal bonsai shears. Colors: forest green (#2D5A27), warm gold (#D4A017), terracotta (#C25C3A), and cream (#F5F0E8). NO blending, NO merging, NO morphing between any objects. Distinct individual motifs with clear spacing and crisp white sticker borders. Single solid uniform dark ivy (#1E2522) background across the entire tile, no texture. All four edges tile perfectly. Designed for minimalist home decor and premium fabric printing.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Illustration Of The Eastern Shared Training Ground.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Illustration_Of_The_Eastern_Shared_Training_Ground.jpg",
+          "width": 1280,
+          "height": 616
+        },
+        {
+          "title": "Yashu, Snow at Sano, Saimyo-ji, Sano Genzaemon and His Wife Shirotae.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Yashu%2C_Snow_at_Sano%2C_Saimyo-ji%2C_Sano_Genzaemon_and_His_Wife_Shirotae.jpg",
+          "width": 481,
+          "height": 700
+        }
+      ],
+      "generated_at": "2026-06-05 12:47 UTC",
+      "opportunity_score": 43.0,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 0.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 75.0,
+          "detail": "None found within the last 6 months."
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'low' → score 90 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 17.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "low"
+        ],
+        "notes": "demande MESURÉE (google_search_grounding) · compétition low · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "None found within the last 6 months.",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Minimalist Bonsai & Viewing Stone seamless pattern",
+        "Minimalist Bonsai Dark Ivy repeat pattern"
+      ]
+    },
+    {
+      "name": "Art Nouveau Dragonfly Mosaic",
+      "trending_score": 36,
+      "market_opportunity": "very_high",
+      "why_trending": "Dragonflies are a classic Art Nouveau motif, symbolizing change and elegance. By arranging their wings and bodies into an interlocking, stained-glass-like geometric mosaic, this pattern taps into the massive demand for high-end, maximalist wallpapers that feel both historic and contemporary.",
+      "target_audience": "wallpaper home decorators and apparel sewists making statement jackets",
+      "sub_niches": [
+        {
+          "name": "Art Nouveau Dragonfly Teal & Gold",
+          "trending_score": 50,
+          "unique_angle": "A stained-glass mosaic layout in deep teal and mustard gold for dramatic entryway statement walls.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "mystical, elegant, architectural, vintage",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Deep Teal #004B49",
+          "Mustard Gold #D4A373"
+        ],
+        "color_accent": [
+          "Plum #5C3A4E",
+          "Sage Green #A3B19B",
+          "Charcoal #1A1A1A"
+        ],
+        "color_background": "Charcoal #1A1A1A",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "mirror",
+        "pattern_scale": "large",
+        "top_products": [
+          "wallpaper",
+          "apparel fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Dense seamless mirror repeat pattern for high-end wallpaper. The dragonfly silhouette IS the tile unit — wings spread wide and stylized into a geometric stained-glass mosaic of precisely 12 leaded glass panels per wing. The spread wings form an interlocking arch that meets its mirror neighbor at the left and right tile edges perfectly — no gap, no background. Each dragonfly body is rendered in deep teal (#004B49) on a charcoal (#1A1A1A) background, with alternating wing panels of mustard gold (#D4A373) and plum (#5C3A4E). The rendering is Art Nouveau stained glass — bold flat silhouettes, thick black lead lines, zero soft rendering. The body is a single flat silhouette — no internal texture, no shading, no gradients. Graphic print quality, flat vector aesthetic. Designed for Spoonflower mirror repeat — dragonfly wing tips touch at every tile edge. 4-color palette for maximum fabric printing contrast. Designed for high-end wallpaper and premium fabric printing.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "\"Frise Libellules\" (Dragonflies Frieze) MET sf24.145.2ab.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/%22Frise_Libellules%22_%28Dragonflies_Frieze%29_MET_sf24.145.2ab.jpg",
+          "width": 503,
+          "height": 572
+        },
+        {
+          "title": "Clara Driscoll, Dragonfly Lamp, ca. 1900.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Clara_Driscoll%2C_Dragonfly_Lamp%2C_ca._1900.jpg",
+          "width": 1093,
+          "height": 1536
+        }
+      ],
+      "generated_at": "2026-06-05 12:47 UTC",
+      "opportunity_score": 35.5,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 0.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 75.0,
+          "detail": "None found within the last 6 months."
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 17.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "very_high",
+          "medium"
+        ],
+        "notes": "demande MESURÉE (google_search_grounding) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "None found within the last 6 months.",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Art Nouveau Dragonfly Mosaic seamless pattern",
+        "Art Nouveau Dragonfly Teal & Gold repeat pattern"
+      ]
+    },
+    {
+      "name": "Cottagecore Terracotta Herb Garden",
+      "trending_score": 36,
+      "market_opportunity": "high",
+      "why_trending": "The cottagecore kitchen aesthetic remains highly popular, with home cooks and gardeners seeking rustic, botanical-themed textiles. While generic herb prints are common, focusing specifically on potted herbs in beautifully textured terracotta pots offers a structured, warm, and highly domestic pattern that is perfect for kitchen linens.",
+      "target_audience": "quilters making kitchen accessories and table linen decorators",
+      "sub_niches": [
+        {
+          "name": "Cottagecore Terracotta Herb Garden Cream",
+          "trending_score": 50,
+          "unique_angle": "A relaxed, airy layout of potted herbs on a soft cream background for high-end linen napkins.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "rustic, domestic, botanical, cozy",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Cream #FDFBF7",
+          "Terracotta #D9744B"
+        ],
+        "color_accent": [
+          "Sage Green #7A9A82",
+          "Lavender #9B8CB3"
+        ],
+        "color_background": "Cream #FDFBF7",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "table linens",
+          "quilting cotton"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless tossed/scattered repeat pattern for kitchen textiles. The pattern looks exactly like a cozy cottagecore garden illustration — bold hand-drawn ink outlines, completely flat solid color fills, not a single gradient or shadow inside any shape. The design features: rosemary and lavender growing in weathered terracotta pots; a vintage galvanized watering can; a wooden-handled garden trowel; and small bundles of drying herbs hanging upside down. Colors: terracotta (#D9744B), sage green (#7A9A82), lavender (#9B8CB3), and soft cream (#FDFBF7). NO blending, NO merging, NO morphing between any objects. Distinct individual motifs with clear spacing between each element. Single solid uniform cream (#FDFBF7) background across the entire tile, no texture. All four edges tile perfectly. Designed for high-end kitchen linens and quilting cotton.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 12:47 UTC",
+      "opportunity_score": 35.5,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 0.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 75.0,
+          "detail": "None found within the last 6 months."
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 17.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande MESURÉE (google_search_grounding) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "None found within the last 6 months.",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Cottagecore Terracotta Herb Garden seamless pattern",
+        "Cottagecore Terracotta Herb Garden Cream repeat pattern"
+      ]
+    },
+    {
+      "name": "Victorian Algaeology Herbarium",
+      "trending_score": 36,
+      "market_opportunity": "high",
+      "why_trending": "With the rise of dark academia and coastal-scientific aesthetics, Victorian-era natural history studies are highly sought after. While land botanicals are common, the study of marine algae (phycology/algaeology) offers a fresh, fluid, and highly organic visual language that appeals to high-end decorators.",
+      "target_audience": "wallpaper home decorators and apparel sewists making flowing dresses",
+      "sub_niches": [
+        {
+          "name": "Victorian Algaeology Dark Slate",
+          "trending_score": 50,
+          "unique_angle": "A dark academia pressed seaweed layout on dark slate for library wallpaper and flowing apparel.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "scientific, academic, marine, vintage",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Dark Slate #1A252C",
+          "Crimson #9E2A2B"
+        ],
+        "color_accent": [
+          "Olive Green #556B2F",
+          "Deep Rust #A0522D",
+          "Cream #FFF8E7"
+        ],
+        "color_background": "Dark Slate #1A252C",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "large",
+        "top_products": [
+          "wallpaper",
+          "apparel fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless tossed/scattered repeat pattern for high-end wallpaper. The pattern looks exactly like a Victorian natural history museum herbarium sheet of marine algae — fine engraved ink details, completely flat solid color fills, not a single gradient or shadow inside any shape. The design features: feathery red Plocamium algae; broad undulating olive green Laminaria kelp fronds; branching deep rust sea oak; and small cream scientific labels with Latin cursive script. Colors: crimson (#9E2A2B), olive green (#556B2F), deep rust (#A0522D), and cream (#FFF8E7). NO blending, NO merging, NO morphing between any objects. Distinct individual specimens with clear spacing between each element. Single solid uniform dark slate (#1A252C) background across the entire tile, no texture. All four edges tile perfectly. Designed for dark academia home decor and premium fabric printing.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 12:47 UTC",
+      "opportunity_score": 35.5,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 0.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 75.0,
+          "detail": "None found within the last 6 months."
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 17.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande MESURÉE (google_search_grounding) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "1 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "None found within the last 6 months.",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Victorian Algaeology Herbarium seamless pattern",
+        "Victorian Algaeology Dark Slate repeat pattern"
+      ]
+    }
+  ]
+}
