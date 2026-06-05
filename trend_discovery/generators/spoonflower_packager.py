@@ -99,9 +99,7 @@ class SpoonflowerPackager:
                 )
                 img = img.resize((new_w, new_h), Image.LANCZOS)
 
-            # Post-processing seamless
-            img = self._make_seamless(img, Image)
-            logger.info("[packager] seamless post-processing appliqué")
+            # Runware génère avec tiling:true → seamless natif, pas de post-processing nécessaire
 
             # Sauvegarde PNG avec métadonnées DPI 300
             filename = self._safe_filename(niche_name)
