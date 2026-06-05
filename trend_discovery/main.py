@@ -1045,6 +1045,28 @@ def generate_all_base(
 
     print(f"\n{total_ok}/{n} image(s) générée(s) → {output_dir}")
 
+    # Update niche archive so future preview runs don't repeat these
+    try:
+        import json as _json
+        _archive_path = "data/niche_archive.json"
+        _archive: dict = {"niches": []}
+        if os.path.exists(_archive_path):
+            with open(_archive_path) as _fh:
+                _archive = _json.load(_fh)
+        _existing = {n["name"].lower() for n in _archive.get("niches", [])}
+        from datetime import datetime as _dt
+        _now = _dt.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+        for brief in all_briefs:
+            _name = brief.get("name", "")
+            if _name and _name.lower() not in _existing:
+                _archive.setdefault("niches", []).append({"name": _name, "generated_at": _now})
+                _existing.add(_name.lower())
+        with open(_archive_path, "w") as _fh:
+            _json.dump(_archive, _fh, indent=2, ensure_ascii=False)
+        logger.info("[generate-all] archive niches mis à jour (%d total)", len(_archive["niches"]))
+    except Exception as _exc:
+        logger.warning("[generate-all] archive niches non mis à jour : %s", _exc)
+
 
 def generate_best_variants(
     report_path: Optional[str] = None,

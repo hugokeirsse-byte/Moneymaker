@@ -377,11 +377,31 @@ class GeminiProvider(DataProvider):
                 f"{extra_constraints}\n"
             )
 
+        # Inject niche archive memory to prevent repetition
+        archive_block = ""
+        try:
+            import json as _json
+            _archive_path = "data/niche_archive.json"
+            import os as _os
+            if _os.path.exists(_archive_path):
+                with open(_archive_path) as _fh:
+                    _archive = _json.load(_fh)
+                _names = [n["name"] for n in _archive.get("niches", [])]
+                if _names:
+                    _list = "\n".join(f"- {n}" for n in _names)
+                    archive_block = (
+                        "\nALREADY GENERATED — DO NOT REPEAT THESE NICHES (or close variants):\n"
+                        f"{_list}\n"
+                        "Generate entirely NEW and DIFFERENT niches that do not overlap thematically with the above.\n"
+                    )
+        except Exception:
+            pass
+
         crossover_count = getattr(profile, "crossover_count", 2)
         total_count = profile.niche_count + crossover_count
 
         return f"""Today is {today}. You are an expert in print-on-demand surface design for {name}.
-
+{archive_block}
 Use Google Search to find REAL, CURRENT data SPECIFIC to {profile.platform_description}. Identify {total_count} OPPORTUNITY niches total: {profile.niche_count} mainstream opportunity niches + {crossover_count} crossover gap niches (see instructions at the bottom) — all with strong and growing buyer demand BUT that are NOT yet oversaturated.
 
 Research these real {name} signals before answering:
