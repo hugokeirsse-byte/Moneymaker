@@ -444,8 +444,7 @@ For EACH trend, return a complete JSON object with ALL of these fields — be sp
   "wikimedia_query": "2-5 word query to find public domain reference images on Wikimedia Commons",
   "spoonflower_query": "2-5 word query to search Spoonflower bestselling designs for this niche (e.g. 'nordic folk flat pattern')",
   "ai_generation": {{{{
-    "positive_prompt": "SEE MANDATORY FLUX PROMPT FORMAT BELOW — the full seamless-pattern prompt for FLUX.1 Dev",
-    "negative_prompt": "SHORT, max 8 comma-separated terms (FLUX ignores long negatives)",
+    "positive_prompt": "SEE MANDATORY FLUX PROMPT FORMAT BELOW — the full seamless-pattern prompt for FLUX Dev 2",
     "cfg_scale": 4.0
   }}}}
 }}}}
@@ -496,59 +495,90 @@ Do NOT write "blue" — write "sky blue (#87CEEB)".
   Verification rule: if the element fill hex is within 60 RGB distance of background_color — WRONG, change it.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-MANDATORY FLUX PROMPT FORMAT (for ai_generation.positive_prompt)
+MANDATORY FLUX DEV 2 PROMPT FORMAT (for ai_generation.positive_prompt)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-This is the single most important field. It is the prompt sent DIRECTLY to FLUX.1 Dev
-to generate the finished seamless pattern in ONE shot (not assembled from elements).
-FLUX.1 Dev is a flow-matching model that understands natural descriptive English
-prose, NOT keyword tags. Write like you are briefing a human textile illustrator.
+This is the single most important field. It is the prompt sent DIRECTLY to FLUX Dev 2
+to generate the finished seamless pattern in ONE shot. FLUX Dev 2 is a flow-matching
+diffusion model that understands natural descriptive English prose, NOT keyword tags.
+Write like you are briefing a skilled human textile illustrator.
 
-WRITE THE PROMPT THIS WAY (130-170 words, flowing natural sentences):
-1. Open with: "A seamless [REPEAT TYPE] repeat pattern for fabric and wallpaper printing."
-   (repeat type = half-drop / four-way mirror / brick / tossed allover / scattered)
-2. Anchor the look concretely: "The pattern looks exactly like a [REAL REFERENCE] printed textile"
-   — name a real artist/tradition/product FLUX knows (Hokusai woodblock, William Morris
-   Strawberry Thief, Marimekko, Charley Harper, Liberty of London, Anna Atkins cyanotype,
-   Wiener Werkstätte, Delftware ceramic, Rifle Paper Co., 1950s catalog engraving...).
-3. Describe each KEY motif in one clause, and — for any animal/creature — STATE THE EXACT
-   anatomy inline: "a crane in side profile with exactly two wings and two legs", "a fox
-   with exactly four legs and one bushy tail", "a moth with exactly four wings in bilateral
-   symmetry". This is how we stop extra-limb defects.
-4. For any object that could carry text (labels, blocks, tins, bottles): explicitly say
-   "the label area shows only decorative borders, no text, no letters" — UNLESS the niche
-   needs one clear letter (then say "exactly one large clear capital letter").
-5. Name colors in plain English AND give the hex once: "forest green (#2D5016)". FLUX reads both.
-6. State the flatness 2-3 times in different words: "completely flat 2D graphic shapes",
-   "solid color fills with no shading inside any shape", "no gradients, no drop shadows".
-7. Close with: "All four edges tile perfectly." (helps FLUX honor the seamless tiling flag)
+WRITE THE PROMPT USING THIS EXACT 5-PART STRUCTURE (130-180 words, flowing natural sentences):
 
-HARD RULES for FLUX prompts:
-  • CFG (cfg_scale) MUST be 4.0 — FLUX Dev cramps and distorts above ~5.0. Never write 7.5+.
-  • Negative prompt SHORT (≤ 8 terms). FLUX barely uses negatives; long ones hurt. Good default:
-    "photorealistic, 3D render, gradient shading, drop shadow, blurry, watermark, text, visible seam"
-  • NO weighted syntax, NO (parentheses:1.3), NO "masterpiece/best quality/8k" tag spam — FLUX ignores it.
-  • Describe what the FINISHED tile LOOKS like, not a list of ingredients.
+PART 1 — PATTERN DECLARATION:
+  "Seamless repeatable [REPEAT TYPE] pattern for [DESTINATION]."
+  repeat type = half-drop / four-way mirror / brick / tossed allover / scattered
+  destination = "high-end wallpaper and fabric printing" or "premium textile design"
+
+PART 2 — ARTISTIC STYLE ANCHOR (THE MOST IMPORTANT PART):
+  Name the EXACT visual tradition + texture technique this niche evokes.
+  Write: "The pattern looks exactly like a [REAL NAMED REFERENCE] — [technique words]."
+  Technique words MUST be ultra-precise (not "flat illustration" — use the actual tradition):
+    • Stippling: "engraved stipple dots, cross-hatch shadows"
+    • Linocut: "linocut relief print, bold carved outlines, ink bleed"
+    • Vector: "clean vector line art, uniform stroke weight, no anti-aliasing"
+    • Woodblock: "Ukiyo-e woodblock, Hokusai thick ink outline, flat ink wash"
+    • Screenprint: "two-color screenprint, halftone dot grain, registration offset"
+    • Folk art: "Scandinavian Dala horse folk painting, Marimekko flat shape"
+    • Ceramic: "Delftware blue-and-white ceramic tile, glaze pooling at outlines"
+    Real references FLUX knows: Hokusai woodblock, William Morris Strawberry Thief,
+    Marimekko, Charley Harper, Liberty of London, Anna Atkins cyanotype, Wiener
+    Werkstätte, Delftware ceramic, Rifle Paper Co., 1950s Soviet lithograph.
+
+PART 3 — SURGICAL OBJECT DESCRIPTIONS:
+  Name each motif with ULTRA-SPECIFIC niche terminology (no generic names).
+  Bad: "a bird". Good: "a spotted snipe in side profile with its long straight beak".
+  — For any animal: STATE EXACT ANATOMY: "exactly two wings and two legs",
+    "exactly four legs and one bushy tail", "exactly four wings in bilateral symmetry".
+    This prevents extra-limb generation.
+  — For objects with text (tins, bottles, labels, blocks): say explicitly
+    "the label shows only decorative geometric borders, absolutely no text, no letters,
+    no numbers, no typography of any kind" — UNLESS one letter is the niche's motif
+    (then say "exactly one large clear capital letter centered on the label face").
+  — Name colors in plain English + give the hex once: "terracotta orange (#C25C3A)".
+
+PART 4 — ANTI-FUSION LOCKS (MANDATORY — FLUX's power pushes objects to merge):
+  End the description with ALL of these:
+  "NO blending, NO merging, NO morphing between any objects. Distinct individual
+  fully-formed [MOTIF TYPE] with clear spacing between each element. No object
+  overlaps or bleeds into another."
+
+PART 5 — SOLID BACKGROUND + CLOSING:
+  "Single solid uniform [COLOR NAME (#HEX)] background across the entire tile,
+  no texture, no gradient, no secondary background shapes. All four edges tile
+  perfectly. Designed for high-end wallpaper and textile printing."
+
+HARD RULES:
+  • CFG (cfg_scale) MUST be 4.0 — FLUX Dev 2 cramps and distorts above ~5.0.
+  • NO negative_prompt field — FLUX Dev 2 does not support negative prompts.
+  • NO keyword tag spam: no (parentheses:1.3), no "masterpiece/best quality/8k".
+  • NO weighted syntax. Write flowing prose only.
+  • Flatness must be stated 2-3 times using DIFFERENT words each time.
+  • Describe what the FINISHED tile LOOKS like — not a list of ingredients.
 
 WORKED EXAMPLE (Japanese Woodblock niche → ai_generation.positive_prompt):
-  "A seamless half-drop repeat pattern for fabric and wallpaper printing. The pattern looks
-  exactly like a Hokusai woodblock print textile — bold flat graphic shapes with strong black
-  outlines and completely solid color fills, no shading inside any shape. The design shows a
-  stylized great wave crest as a flat shape with white foam tips, a white crane in flight seen
-  from the side with exactly two wings and two legs tucked under, a red koi fish in side profile
-  with exactly one dorsal fin and one tail fin, a cherry blossom branch with flat five-petaled
-  blossoms, and a small Mount Fuji silhouette. Colors are indigo navy (#1B3A6B), coral vermillion
-  (#E34234), ivory white (#F5F2EB) and gold ochre (#D4A017) on an ivory background. Every shape is
-  a completely flat 2D graphic, no gradients and no drop shadows. All four edges tile perfectly."
+  "Seamless half-drop repeat pattern for high-end fabric and wallpaper printing.
+  The pattern looks exactly like a Hokusai ukiyo-e woodblock print textile —
+  bold carved ink outlines, completely flat solid color fills, not a single gradient
+  or shadow inside any shape. The design features: a stylized Kanagawa wave crest
+  as a flat graphic shape with white foam tips; a white crane in side flight with
+  exactly two wings fully extended and exactly two legs tucked under — no extra limbs;
+  a red-orange koi in side profile with exactly one dorsal fin and one forked tail
+  fin; a cherry blossom branch with flat five-petaled open flowers; a small geometric
+  Mount Fuji silhouette. Colors: indigo navy (#1B3A6B), coral vermillion (#E34234),
+  ivory white (#F5F2EB), gold ochre (#D4A017). NO blending, NO merging, NO morphing
+  between any objects. Distinct individual motifs with clear spacing between each element.
+  Single solid uniform ivory (#F5F2EB) background across the entire tile, no texture.
+  All four edges tile perfectly. Designed for high-end wallpaper and textile printing."
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Requirements:
 - EXACTLY 10 elements per niche (2-3 hero, 4-5 supporting, 2-3 filler)
 - Every element prompt follows the MANDATORY ELEMENT FORMAT above — no exceptions
-- ai_generation.positive_prompt follows the MANDATORY FLUX PROMPT FORMAT (130-170 words, natural prose, exact animal anatomy, no-text labels) — no exceptions
-- ai_generation.cfg_scale is ALWAYS 4.0 (FLUX Dev), never 7.5
-- ai_generation.negative_prompt is SHORT (≤ 8 terms)
+- ai_generation.positive_prompt follows the MANDATORY FLUX DEV 2 PROMPT FORMAT (5-part structure, 130-180 words, exact anatomy, anti-fusion locks, solid background) — no exceptions
+- ai_generation MUST NOT include a "negative_prompt" field — FLUX Dev 2 does not support it
+- ai_generation.cfg_scale is ALWAYS 4.0 (FLUX Dev 2), never 7.5
 - Real hex codes for ALL colors everywhere (no "earthy brown" — use "#8B4513 Saddle Brown")
 - Focus on trends that are hot RIGHT NOW ({today}), have strong visual identity for {name} — each backed by real web evidence in why_trending
 - Target export: {file_fmt}, {dpi} DPI, {min_px}x{min_px}px min, {color_profile}, max {max_mb}MB
@@ -626,10 +656,11 @@ Return ONLY a valid JSON array of exactly {total_count} trend objects ({profile.
         # ── Génération IA ────────────────────────────────────────────────────
         ag = t.setdefault("ai_generation", {})
         ag.setdefault("positive_prompt", "")
-        ag.setdefault("negative_prompt", "")
+        # FLUX Dev 2 ne supporte pas les négatifs — on garde le champ vide pour compat
+        ag.pop("negative_prompt", None)  # supprime si Gemini l'a quand même généré
         ag.setdefault("key_elements", [])
         ag.setdefault("avoid_elements", [])
-        ag.setdefault("cfg_scale", 4.0)  # FLUX.1 Dev sweet spot (7.5 crampait l'image)
+        ag.setdefault("cfg_scale", 4.0)  # FLUX Dev 2 sweet spot (7.5 distort)
         ag.setdefault("style_weight", 0.85)
         # Garde-fou : si Gemini renvoie un CFG type-SDXL (>5), le ramener au range FLUX
         try:

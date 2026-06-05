@@ -123,7 +123,6 @@ class RunwareGenerator:
             "taskUUID": task_uuid,
             "model": model,
             "positivePrompt": positive_prompt,
-            "negativePrompt": negative_prompt,
             "width": width,
             "height": height,
             "steps": steps,
@@ -135,6 +134,9 @@ class RunwareGenerator:
             "includeCost": False,
             "tiling": tiling,
         }
+        # FLUX Dev 2 ignores negative prompts — only include if non-empty (for SDXL compat)
+        if negative_prompt:
+            task["negativePrompt"] = negative_prompt
         if seed != -1:
             task["seed"] = seed
         if seed_image_url:
