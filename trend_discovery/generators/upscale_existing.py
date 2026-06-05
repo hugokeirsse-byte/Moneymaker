@@ -147,8 +147,9 @@ def fix_directory(
         sys.exit(1)
 
     files = sorted(_glob.glob(os.path.join(input_dir, glob_pattern)))
-    # Exclure les colorways déjà générés
-    files = [f for f in files if "__" not in os.path.basename(f)]
+    # Exclure uniquement les colorways (suffixe "__<palette>.png"), PAS les bases
+    # qui s'appellent "<nom>___base_<date>.png" (triple underscore).
+    files = [f for f in files if "___base" in os.path.basename(f) or "user_upload" in os.path.basename(f)]
     if limit:
         files = files[:limit]
 
@@ -156,7 +157,7 @@ def fix_directory(
         print(f"Aucun PNG trouvé dans {input_dir}")
         return {}
 
-    runware = RunwareClient(api_key=api_key)
+    runware = RunwareClient()  # lit RUNWARE_API_KEY depuis l'environnement
     out_dir = output_dir or input_dir
 
     print(f"\n{'='*60}")
