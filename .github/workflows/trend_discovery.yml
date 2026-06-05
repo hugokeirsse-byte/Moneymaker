@@ -42,7 +42,12 @@ on:
           - 'seamless-audit'     # Vérifie + corrige les tuiles non-seamless (mirror quad, 0 €)
           - 'thumbnails'         # Génère vignettes 600×600 JPEG navigables (0 €, git-safe)
           - 'upscale-fix'        # Re-upscale IA Real-ESRGAN images existantes floues (~0.005€/img)
+          - 'recover-artifact'   # Récupère les upscales d'un run interrompu (0 €, depuis artefact)
           - 'full'               # Pipeline complet sans génération d'images
+      recover_run_id:
+        description: 'Run ID de l artefact à récupérer (mode recover-artifact)'
+        required: false
+        default: ''
       manifest_path:
         description: 'Path to approval manifest (relative to repo root)'
         required: false
@@ -75,7 +80,7 @@ jobs:
   discover:
     name: Pipeline Détection de Tendances
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 120
 
     steps:
       - name: Checkout
@@ -102,6 +107,15 @@ jobs:
           key: opportunities-db-${{ github.ref_name }}
           restore-keys: |
             opportunities-db-
+
+      - name: Télécharger l'artefact à récupérer (mode recover-artifact)
+        if: ${{ github.event.inputs.mode == 'recover-artifact' && github.event.inputs.recover_run_id != '' }}
+        uses: actions/download-artifact@v4
+        with:
+          path: ./_recovered
+          run-id: ${{ github.event.inputs.recover_run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          merge-multiple: true
 
       - name: Lancer le pipeline
         env:
@@ -198,15 +212,29 @@ jobs:
             LIMIT_ARG=""
             LIMIT_VAL="${{ github.event.inputs.limit || '0' }}"
             [ "$LIMIT_VAL" != "0" ] && LIMIT_ARG="--limit $LIMIT_VAL"
-            echo "-- Re-upscale pipeline images --"
+            # commit-every 8 : sauvegarde + push incrémental (reprise après timeout, petits push)
+            echo "-- Re-upscale pipeline images (commit incrémental) --"
             python -m trend_discovery.generators.upscale_existing \
               --input ./output/spoonflower \
+              --commit-every 8 \
               $LIMIT_ARG
-            echo "-- Re-upscale user uploads --"
+            echo "-- Re-upscale user uploads (commit incrémental) --"
             python -m trend_discovery.generators.upscale_existing \
               --input ./output/uploads/base \
+              --commit-every 8 \
               $LIMIT_ARG || echo "(no uploads found, skipped)"
-            echo "-- Auto thumbnails post-upscale --"
+            echo "-- Thumbnails post-upscale --"
+            python -m trend_discovery.main thumbnails \
+              --pipeline ./output/spoonflower \
+              --colorways ./output/colorways \
+              --uploads ./output/uploads/base \
+              --output ./output/thumbnails
+          elif [ "$MODE" = "recover-artifact" ]; then
+            echo "=== MODE RECOVER-ARTIFACT : récupère les upscales d'un run interrompu (0 €) ==="
+            python -m trend_discovery.generators.recover_artifact \
+              --artifact-dir ./_recovered \
+              --subdirs output/spoonflower,output/uploads/base
+            echo "-- Thumbnails post-récupération --"
             python -m trend_discovery.main thumbnails \
               --pipeline ./output/spoonflower \
               --colorways ./output/colorways \

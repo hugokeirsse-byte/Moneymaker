@@ -16,8 +16,10 @@ from __future__ import annotations
 import argparse
 import base64
 import io
+import json
 import logging
 import os
+import subprocess
 import sys
 from pathlib import Path
 from typing import Optional
@@ -26,11 +28,60 @@ logger = logging.getLogger(__name__)
 
 TARGET_SIZE = 4500
 DOWNSCALE_TO = 1024  # résolution de travail pour l'upscale IA
+MANIFEST_PATH = os.path.join("reports", "upscaled_manifest.json")
 
 
 def _image_to_base64_url(image_bytes: bytes) -> str:
     b64 = base64.b64encode(image_bytes).decode()
     return f"data:image/png;base64,{b64}"
+
+
+def _load_manifest() -> set:
+    """Liste des chemins déjà upscalés (reprise après timeout)."""
+    try:
+        with open(MANIFEST_PATH) as f:
+            return set(json.load(f).get("done", []))
+    except Exception:
+        return set()
+
+
+def _save_manifest(done: set) -> None:
+    os.makedirs(os.path.dirname(MANIFEST_PATH), exist_ok=True)
+    with open(MANIFEST_PATH, "w") as f:
+        json.dump({"done": sorted(done)}, f, indent=2)
+
+
+def _git(*args: str) -> bool:
+    """Exécute une commande git, retourne True si succès."""
+    try:
+        r = subprocess.run(["git", *args], capture_output=True, text=True, timeout=180)
+        if r.returncode != 0:
+            print(f"  [git] {' '.join(args)} → {r.stderr.strip()[:200]}", flush=True)
+        return r.returncode == 0
+    except Exception as exc:
+        print(f"  [git] {' '.join(args)} → exception {exc}", flush=True)
+        return False
+
+
+def _commit_push_batch(paths: list, done: set, label: str) -> None:
+    """Commit + push un lot de fichiers traités (petit push = pas de 413)."""
+    _git("config", "user.name", "Moneymaker Bot")
+    _git("config", "user.email", "bot@moneymaker.auto")
+    _save_manifest(done)
+    _git("add", MANIFEST_PATH, *paths)
+    if not _git("commit", "-m", f"upscale-fix: lot {label} ({len(paths)} images nettes)"):
+        return  # rien à committer
+    # pull --rebase puis push, avec retry réseau
+    for attempt in range(4):
+        _git("pull", "--rebase", "origin", "HEAD")
+        if _git("push", "origin", "HEAD"):
+            print(f"  ✅ push lot {label} OK", flush=True)
+            return
+        wait = 2 ** (attempt + 1)
+        print(f"  [git] push échoué, retry dans {wait}s…", flush=True)
+        import time as _t
+        _t.sleep(wait)
+    print(f"  ⚠️ push lot {label} échoué après 4 tentatives", flush=True)
 
 
 def fix_image(
@@ -125,6 +176,7 @@ def fix_directory(
     overwrite: bool = True,
     limit: Optional[int] = None,
     glob_pattern: str = "*.png",
+    commit_every: int = 0,
 ) -> dict:
     """
     Re-upscale IA toutes les images d'un dossier.
@@ -135,6 +187,7 @@ def fix_directory(
         overwrite  : si True, remplace l'original
         limit      : tester sur N images d'abord
         glob_pattern : filtre fichiers
+        commit_every : commit+push tous les N fichiers (0 = jamais, reprise désactivée)
 
     Returns: dict {filename: out_path ou None}
     """
@@ -150,6 +203,15 @@ def fix_directory(
     # Exclure uniquement les colorways (suffixe "__<palette>.png"), PAS les bases
     # qui s'appellent "<nom>___base_<date>.png" (triple underscore).
     files = [f for f in files if "___base" in os.path.basename(f) or "user_upload" in os.path.basename(f)]
+
+    # Reprise : sauter les images déjà traitées (manifeste commité)
+    done = _load_manifest()
+    before = len(files)
+    files = [f for f in files if f not in done]
+    skipped = before - len(files)
+    if skipped:
+        print(f"  ⏭️  {skipped} image(s) déjà traitée(s) — reprise sur {len(files)} restante(s)")
+
     if limit:
         files = files[:limit]
 
@@ -176,6 +238,9 @@ def fix_directory(
     ok = 0
     total_cost = 0.0
     cost_measured = False
+    done = _load_manifest()
+    batch_paths: list = []
+    batch_no = 0
     for i, fp in enumerate(files, 1):
         fname = os.path.basename(fp)
         img_dbg: list = []
@@ -189,9 +254,22 @@ def fix_directory(
         if out:
             print("✅")
             ok += 1
+            done.add(fp)
+            batch_paths.append(fp)
         else:
             print("❌")
         results[fname] = out
+
+        # Commit + push tous les commit_every fichiers (reprise + petits push)
+        if commit_every and len(batch_paths) >= commit_every:
+            batch_no += 1
+            _commit_push_batch(batch_paths, done, f"{input_dir}#{batch_no}")
+            batch_paths = []
+
+    # Dernier lot partiel
+    if commit_every and batch_paths:
+        batch_no += 1
+        _commit_push_batch(batch_paths, done, f"{input_dir}#{batch_no}")
 
     cost_line = (
         f"COUT REEL MESURE : ${total_cost:.4f} pour {ok} images (MEASURED)"
@@ -219,6 +297,7 @@ if __name__ == "__main__":
     parser.add_argument("--output",  default="",    help="Dossier sortie (vide = overwrite)")
     parser.add_argument("--limit",   type=int, default=0, help="Tester sur N images (0 = toutes)")
     parser.add_argument("--no-overwrite", action="store_true", help="Sauvegarde avec suffixe __sharp")
+    parser.add_argument("--commit-every", type=int, default=0, help="Commit+push tous les N fichiers (reprise)")
     args = parser.parse_args()
 
     fix_directory(
@@ -226,4 +305,5 @@ if __name__ == "__main__":
         output_dir=args.output or None,
         overwrite=not args.no_overwrite,
         limit=args.limit or None,
+        commit_every=args.commit_every,
     )
