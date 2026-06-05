@@ -1015,8 +1015,9 @@ def generate_all_base(
     try:
         from trend_discovery.generators.generation_pipeline import GenerationPipeline
         from trend_discovery.generators.quality_auditor import QualityAuditor
-        # tiling=False pour les plateformes standalone (Redbubble, etc.)
-        tiling = "redbubble" not in output_dir.lower()
+        # tiling=False for standalone illustration platforms (not seamless repeat)
+        _standalone_platforms = ("redbubble",)
+        tiling = not any(p in output_dir.lower() for p in _standalone_platforms)
         pipeline = GenerationPipeline(output_dir=output_dir, upscale_factor=4, tiling=tiling)
         auditor = QualityAuditor()
     except Exception as exc:
@@ -1842,6 +1843,7 @@ def main():
             market=args.market,
             niche_count=args.niches,
             extra_constraints="\n".join(constraints),
+            output_dir=getattr(args, "output", "./reports") or "./reports",
         )
         return
 

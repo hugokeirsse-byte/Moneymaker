@@ -466,6 +466,15 @@ For EACH trend, return a complete JSON object with ALL of these fields — be sp
   }}}},
   "wikimedia_query": "2-5 word query to find public domain reference images on Wikimedia Commons",
   "spoonflower_query": "2-5 word query to search Spoonflower bestselling designs for this niche (e.g. 'nordic folk flat pattern')",
+  "sub_niches": [
+    {{{{
+      "name": "specific sub-angle (2-4 words, e.g. 'Dark Academia Pressed Ferns')",
+      "differentiator": "what makes this distinct from the parent niche — different aesthetic, buyer, or product use case",
+      "opportunity": "very_high | high | medium | low",
+      "buyer_intent": "what specific thing does this buyer want to make/buy (e.g. 'quilting fabric for baby blanket', 'wallpaper for home office')"
+    }}}},
+    // 3-5 sub-niches — researched REAL sub-angles within this parent niche
+  ],
   "ai_generation": {{{{
     "positive_prompt": "SEE MANDATORY FLUX PROMPT FORMAT BELOW — the full seamless-pattern prompt for FLUX Dev 2",
     "cfg_scale": 4.0
@@ -816,9 +825,10 @@ Requirements:
     • STYLE D → anthropomorphized animals in absurd/hilarious situations, trompe l'œil shelves, room-specific humor
     • STYLE E → trompe l'oeil réaliste architectural (window/arch/opening with photorealistic landscape beyond)
     • STYLE F → réaliste épars (scattered photorealistic naturalist specimens on dark background — terrarium/geological)
-  OPERATOR NOTE: for a batch focused on UNEXPLORED TERRITORY, prioritize styles E and F which have never been done.
-  Adjust mandatory distribution based on MONEYMAKER_FOCUS operator instructions — follow those FIRST.
-  DEFAULT distribution if no operator focus: minimum 4× Style C, 3× Style D, 3× Style E, 3× Style F, 4× Style B, 3× Style A.
+  STYLE ASSIGNMENT — DATA-DRIVEN: For each discovered trend, assign the style that BEST FITS its organic visual character.
+  Let the trend's nature guide the choice — do NOT force a style that doesn't fit the content.
+  DIVERSITY RULE: aim for variety across the batch — no more than 4 niches of the same style per batch of 20.
+  If MONEYMAKER_FOCUS specifies a style emphasis, follow that instead.
   STYLE C animals (Art Deco single tile — Spoonflower mirror repeat creates the interlocking pattern):
     koi fish, fox, vampire bat, luna moth, manta ray, praying mantis, stag beetle, wolf, jaguar, salamander.
   STYLE D concepts (anthropomorphized animals in WILD/ABSURD situations):
@@ -853,6 +863,9 @@ ZERO INVENTED DATA: if you cannot find real evidence of demand for a crossover, 
 
 Add "crossover_gap": true and "demand_gap_evidence": "1-2 sentences: what specific evidence you found (e.g. '342 upvote post on r/aquariums asking for underwater botanical wallpaper, Etsy search shows only 8 relevant listings')" to the JSON of each crossover niche.
 These crossover niches must also follow ALL the same JSON schema as regular niches.
+
+SUB-NICHE RESEARCH (mandatory for ALL niches):
+For each niche, research 3-5 REAL sub-niches — specific micro-angles within the parent trend that have their own distinct buyer, aesthetic variation, or product use case. Each sub-niche should have meaningfully lower competition than the parent, or address a more specific buyer need. Do NOT invent sub-niches — find evidence that buyers are searching for these variations (Etsy, Pinterest, Reddit, Spoonflower search). Sub-niche names should be specific enough that a designer could immediately understand the angle (e.g. "Glow-Dark Terrarium Lichen" vs vague "dark terrarium").
 
 Return ONLY a valid JSON array of exactly {total_count} trend objects ({profile.niche_count} regular + {crossover_count} crossover gap). No text before or after. No markdown wrapper.
 """
@@ -1006,8 +1019,19 @@ For EACH concept, return a JSON object with ALL these fields:
     "cfg_scale": 4.0
   }}}},
   "wikimedia_query": "2-4 word query for reference images",
-  "redbubble_search_query": "2-4 words to search Redbubble for competition analysis"
+  "redbubble_search_query": "2-4 words to search Redbubble for competition analysis",
+  "sub_niches": [
+    {{{{
+      "name": "specific sub-angle (2-4 words)",
+      "differentiator": "what makes this distinct — different community, product, or humor angle",
+      "opportunity": "very_high | high | medium | low",
+      "best_product": "the one product type this sub-niche sells best on (sticker / t-shirt / mug / etc)"
+    }}}},
+    // 3-5 sub-niches — researched REAL micro-angles with their own buyer identity
+  ]
 }}}}
+
+SUB-NICHE RESEARCH (mandatory): For each concept, research 3-5 specific sub-angles — micro-communities or humor variants that spin off from the parent concept. Each should have a distinct buyer or product fit. Example: parent = "Anxiety Frog" → sub-niches: "Frog Therapy Journal", "Frog Existential Crisis Sticker", "Anxious Frog Mug for Mondays", "Frog I'm Fine Button Badge", "Frog Coping Mechanisms Zine Cover".
 
 Return ONLY a valid JSON array of exactly {total_count} objects. No text before or after. No markdown wrapper.
 """

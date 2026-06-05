@@ -158,11 +158,120 @@ REDBUBBLE = MarketProfile(
 )
 
 
+# ── Profil Adobe Stock ───────────────────────────────────────────────────────
+
+ADOBE_STOCK = MarketProfile(
+    key="adobe_stock",
+    display_name="Adobe Stock digital assets",
+    platform_description=(
+        "Adobe Stock, the subscription stock asset marketplace used by designers, "
+        "agencies, and marketers worldwide for commercially licensable photos, "
+        "vectors, illustrations, patterns, and templates"
+    ),
+    product_types=[
+        "seamless vector patterns",
+        "PNG texture tiles",
+        "surface design patterns",
+        "botanical illustration sets",
+        "geometric pattern collections",
+        "nature-inspired texture bundles",
+        "decorative background patterns",
+    ],
+    buyer_segments=[
+        "graphic designers and art directors buying for client projects",
+        "interior design studios sourcing patterns for wallpaper and fabric concepts",
+        "product packagers sourcing wrapping and label designs",
+        "self-publishing authors and Etsy sellers making digital products",
+        "small business owners creating merchandise and branded materials",
+    ],
+    research_signals=[
+        "Adobe Stock 'Trending' and 'Popular' collections in patterns and illustrations right now",
+        "Shutterstock and iStock trending searches — strong proxy for commercial Adobe buyer demand",
+        "Creative Market bestselling pattern packs and asset bundles",
+        "Freepik premium trending resources (fast leading indicator of commercial demand)",
+        "Google Trends for '[theme] pattern vector', '[theme] seamless texture', '[theme] background tile'",
+        "Canva trending templates and design element requests — shows what marketers need",
+    ],
+    excluded_generic=[
+        "generic rainbow gradients",
+        "basic polka dots or stripes without distinct theme",
+        "overused chevron or herringbone",
+        "plain watercolor wash without identity",
+        "generic geometric without a specific visual theme",
+    ],
+    output_format={
+        "file": "PNG",
+        "dpi": 300,
+        "min_px": 4500,
+        "color_profile": "sRGB",
+        "max_mb": 40,
+    },
+    repeat_required=True,
+    niche_count=12,
+    crossover_count=2,
+)
+
+
+# ── Profil Etsy Digital Downloads ────────────────────────────────────────────
+
+ETSY = MarketProfile(
+    key="etsy",
+    display_name="Etsy digital download bundles",
+    platform_description=(
+        "Etsy, the handmade and digital goods marketplace where sellers offer "
+        "instant-download digital files: seamless pattern bundles, clipart packs, "
+        "digital paper, Cricut-ready SVG files, and surface design asset bundles"
+    ),
+    product_types=[
+        "seamless pattern PNG bundle (10-20 coordinating files per pack)",
+        "digital paper pack for scrapbooking and junk journaling",
+        "printable wall art set (A4/Letter/square)",
+        "fabric pattern bundle (ready to upload to Spoonflower/Printify)",
+        "Cricut and Silhouette SVG clipart cut file bundle",
+        "digital planner and journal insert pages",
+    ],
+    buyer_segments=[
+        "Cricut and Silhouette craft machine owners making cards, shirts, decals, mugs",
+        "Etsy small business owners sourcing patterns for their own print-on-demand products",
+        "scrapbookers and junk journalists looking for coordinating digital paper packs",
+        "sewing and fabric creators sourcing pattern bundles",
+        "teachers and activity makers creating printable classroom and party materials",
+    ],
+    research_signals=[
+        "Etsy search autocomplete for 'seamless pattern bundle', 'digital paper pack', 'clipart bundle PNG'",
+        "Etsy Digital Downloads bestsellers by category: craft supplies > patterns > digital",
+        "Pinterest boards for 'digital download Etsy', 'scrapbook digital paper', 'Cricut SVG bundle 2025'",
+        "Creative Fabrica, Design Bundles, Momeant trending product categories",
+        "TikTok #cricut and #digitaldownload — what Cricut crafters are making and searching for",
+        "Spoonflower Design Challenge themes — these buyers often want matching digital packs",
+    ],
+    excluded_generic=[
+        "basic polka dots and stripes (extremely crowded, zero differentiation)",
+        "generic watercolor florals (millions of listings, race to zero price)",
+        "plain nursery animals without strong aesthetic identity",
+        "generic chevrons and herringbone",
+        "basic 'rustic' burlap or wood texture",
+    ],
+    output_format={
+        "file": "PNG",
+        "dpi": 300,
+        "min_px": 4500,
+        "color_profile": "sRGB",
+        "max_mb": 40,
+    },
+    repeat_required=True,
+    niche_count=12,
+    crossover_count=2,
+)
+
+
 # ── Registre des profils ──────────────────────────────────────────────────────
 
 PROFILES: Dict[str, MarketProfile] = {
     SPOONFLOWER.key: SPOONFLOWER,
     REDBUBBLE.key: REDBUBBLE,
+    ADOBE_STOCK.key: ADOBE_STOCK,
+    ETSY.key: ETSY,
 }
 
 

@@ -31,9 +31,13 @@ on:
         default: 'preview'
         type: choice
         options:
-          - 'preview'            # Gemini trends + CdCs + manifest (0 €)
+          - 'preview'              # Gemini trends + CdCs + manifest (0 €)
           - 'redbubble-preview'  # CDCs standalone Redbubble (t-shirt, sticker, mug) via Gemini (0 €)
           - 'redbubble-generate' # Génère les images standalone Redbubble (~0.006€ × nb CDCs)
+          - 'adobe-stock-preview'  # CDCs optimisés Adobe Stock via Gemini (0 €)
+          - 'adobe-stock-generate' # Génère images pour Adobe Stock (~0.006€ × nb CDCs)
+          - 'etsy-preview'         # CDCs digital download bundles Etsy via Gemini (0 €)
+          - 'etsy-generate'        # Génère images pour bundles Etsy (~0.006€ × nb CDCs)
           - 'audit'              # Note /100 chaque image via Gemini Vision (0 €, RUNWARE non requis)
           - 'archive'            # Archive un CdC accompli (input niche) + régénère un remplaçant (0 €)
           - 'generate-all'       # 1 image de base par CdC (~0.006€ × nb CdCs)
@@ -108,7 +112,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Créer les répertoires nécessaires
-        run: mkdir -p reports data output/spoonflower
+        run: mkdir -p reports data output/spoonflower output/redbubble output/adobe_stock output/etsy
 
       - name: Restaurer la base de données (cache)
         uses: actions/cache@v4
@@ -135,7 +139,7 @@ jobs:
           MONEYMAKER_FOCUS:     ${{ github.event.inputs.focus || '' }}
           MONEYMAKER_NICHE_COUNT: ${{ github.event.inputs.niche_count || '' }}
           # Runware : injecté si mode génération ou upscale-fix
-          RUNWARE_API_KEY:      ${{ (github.event.inputs.mode == 'generate' || github.event.inputs.mode == 'generate-best' || github.event.inputs.mode == 'generate-all' || github.event.inputs.mode == 'generate-elements' || github.event.inputs.mode == 'upscale-fix' || github.event.inputs.mode == 'redbubble-generate') && secrets.RUNWARE_API_KEY || '' }}
+          RUNWARE_API_KEY:      ${{ (github.event.inputs.mode == 'generate' || github.event.inputs.mode == 'generate-best' || github.event.inputs.mode == 'generate-all' || github.event.inputs.mode == 'generate-elements' || github.event.inputs.mode == 'upscale-fix' || github.event.inputs.mode == 'redbubble-generate' || github.event.inputs.mode == 'adobe-stock-generate' || github.event.inputs.mode == 'etsy-generate') && secrets.RUNWARE_API_KEY || '' }}
           RUNWARE_MODEL:        ${{ secrets.RUNWARE_MODEL || 'runware:101@1' }}
           # Sources optionnelles
           REDDIT_CLIENT_ID:     ${{ secrets.REDDIT_CLIENT_ID }}
@@ -175,6 +179,52 @@ jobs:
             python -m trend_discovery.main thumbnails \
               --pipeline ./output/redbubble \
               --output ./output/redbubble/thumbnails || true
+          elif [ "$MODE" = "adobe-stock-preview" ]; then
+            echo "=== MODE ADOBE-STOCK-PREVIEW : CDCs optimisés Adobe Stock (0 €) ==="
+            FOCUS_ARG=""
+            [ -n "${{ github.event.inputs.focus }}" ] && FOCUS_ARG="--focus '${{ github.event.inputs.focus }}'"
+            eval python -m trend_discovery.main preview --market adobe_stock --output ./reports/adobe_stock $FOCUS_ARG
+          elif [ "$MODE" = "adobe-stock-generate" ]; then
+            echo "=== MODE ADOBE-STOCK-GENERATE : images pour Adobe Stock ==="
+            LIMIT_ARG=""
+            LIMIT_VAL="${{ github.event.inputs.limit || '0' }}"
+            [ "$LIMIT_VAL" != "0" ] && LIMIT_ARG="--limit $LIMIT_VAL"
+            AS_REPORT=$(ls -t ./reports/adobe_stock/cahiers_des_charges_*.json 2>/dev/null | head -1)
+            if [ -z "$AS_REPORT" ]; then
+              echo "ERREUR : aucun rapport Adobe Stock trouvé. Lancez adobe-stock-preview d'abord." && exit 1
+            fi
+            echo "Rapport : $AS_REPORT"
+            eval python -m trend_discovery.main generate-all --yes \
+              --report "$AS_REPORT" \
+              --output ./output/adobe_stock \
+              $LIMIT_ARG
+            echo "-- Auto thumbnails Adobe Stock --"
+            python -m trend_discovery.main thumbnails \
+              --pipeline ./output/adobe_stock \
+              --output ./output/adobe_stock/thumbnails || true
+          elif [ "$MODE" = "etsy-preview" ]; then
+            echo "=== MODE ETSY-PREVIEW : CDCs digital download bundles Etsy (0 €) ==="
+            FOCUS_ARG=""
+            [ -n "${{ github.event.inputs.focus }}" ] && FOCUS_ARG="--focus '${{ github.event.inputs.focus }}'"
+            eval python -m trend_discovery.main preview --market etsy --output ./reports/etsy $FOCUS_ARG
+          elif [ "$MODE" = "etsy-generate" ]; then
+            echo "=== MODE ETSY-GENERATE : images pour bundles Etsy ==="
+            LIMIT_ARG=""
+            LIMIT_VAL="${{ github.event.inputs.limit || '0' }}"
+            [ "$LIMIT_VAL" != "0" ] && LIMIT_ARG="--limit $LIMIT_VAL"
+            ET_REPORT=$(ls -t ./reports/etsy/cahiers_des_charges_*.json 2>/dev/null | head -1)
+            if [ -z "$ET_REPORT" ]; then
+              echo "ERREUR : aucun rapport Etsy trouvé. Lancez etsy-preview d'abord." && exit 1
+            fi
+            echo "Rapport : $ET_REPORT"
+            eval python -m trend_discovery.main generate-all --yes \
+              --report "$ET_REPORT" \
+              --output ./output/etsy \
+              $LIMIT_ARG
+            echo "-- Auto thumbnails Etsy --"
+            python -m trend_discovery.main thumbnails \
+              --pipeline ./output/etsy \
+              --output ./output/etsy/thumbnails || true
           elif [ "$MODE" = "audit" ]; then
             echo "=== MODE AUDIT : note Gemini Vision /100 par image ==="
             python -m trend_discovery.main audit
@@ -318,6 +368,9 @@ jobs:
           path: |
             reports/
             output/spoonflower/
+            output/redbubble/
+            output/adobe_stock/
+            output/etsy/
             output/colorways/
             output/uploads/colorways/
             output/thumbnails/
