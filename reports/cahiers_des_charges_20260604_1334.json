@@ -85,8 +85,8 @@
         "competition_level": "medium"
       },
       "ai_generation": {
-        "positive_prompt": "A gentle tossed repeat pattern featuring nostalgic wooden toys, including vintage alphabet blocks, pull-along ducks on wheels, and small rocking horses. The motifs are spaced evenly in a playful, uncrowded layout with soft negative space. The art style is soft watercolor over delicate pencil sketches, with subtle wood grain textures visible through the paint layers. The line quality is soft and hand-drawn, avoiding harsh digital lines. The color palette consists of Mustard Yellow #E1AD01, Sage Green #8F9779, and Dusty Blue #4A76A8, with warm wood accents, all set against a cozy Creamy White #FFFDD0 background. The lighting is soft and diffused, with gentle, realistic shading that gives the toys a three-dimensional feel without harsh shadows. seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, even lighting, high detail, 300 DPI, clean background",
-        "negative_prompt": "bright plastic toys, neon colors, harsh black outlines, flat vector shapes, cluttered layout, dark backgrounds, modern digital illustrations, text, watermarks",
+        "positive_prompt": "Seamless tossed allover repeat surface pattern for fabric and wallpaper. Vintage toy illustration style, like a 1950s toy catalog engraving. Flat graphic motifs: wooden alphabet blocks with letters, pull-along duck on wheels, small wooden rocking horse, spinning top, tin soldier, wooden train. Flat 2D illustration, clean bold outlines, solid color fills ONLY — mustard yellow (#E1AD01), sage green (#8F9779), dusty blue (#4A76A8), warm brown (#8B4513) on creamy white (#FFFDD0) background. Motifs evenly scattered at varied angles, generous spacing, playful balanced layout. Perfectly seamless on all four sides, no visible tile edge. Zero gradients, zero shadows, zero shading, zero 3D, zero watercolor. Looks exactly like a vintage children's gift wrap or nursery wallpaper. Professional Spoonflower-ready surface design, 300 DPI quality.",
+        "negative_prompt": "photorealistic, 3D render, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic, depth of field, blur, gradient, watercolor, soft blurry edges, visible seam, tile border, single isolated object on white background, centered composition, photograph, canvas texture, brush stroke, realistic lighting, realistic wood grain, low quality, pixelated, text, watermark, bright plastic, neon colors",
         "key_elements": [
           "wooden blocks",
           "pull-along duck",
@@ -98,7 +98,7 @@
           "neon colors",
           "harsh outlines"
         ],
-        "cfg_scale": 7.0,
+        "cfg_scale": 8.0,
         "style_weight": 0.8
       },
       "reference_images": [],
@@ -304,8 +304,8 @@
         "competition_level": "low"
       },
       "ai_generation": {
-        "positive_prompt": "Seamless half-drop repeat surface pattern. Flat simplified motifs: vintage inkwells in round and hexagonal shapes, antique fountain pen nibs, small ink droplet accents, tiny quill feather icons. Clean flat vector illustration style with fine ink outlines, minimal color fills — royal blue (#4169E1), emerald green (#50C878), antique gold (#D4AF37) on warm parchment cream (#F5F2EB) background. Motifs evenly spaced with generous breathing room, medium scale, balanced tossed layout. Perfectly seamless tiling, all four edges connect, professional wallpaper and fabric surface design, 300 DPI, flat lay.",
-        "negative_prompt": "blurry, low quality, watermark, text, jpeg artifacts, pixelated, seam lines, visible tile edges, asymmetric repeat, 3D render, fake 3D, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic sheen, fake depth, perspective distortion, volumetric lighting, bump map, realistic photo, photorealistic, watercolor bleed, ink bleed, heavy gradients, soft blurry edges, busy cluttered layout, isolated object on white, single centered motif, white grid lines",
+        "positive_prompt": "Seamless half-drop repeat surface pattern for fabric and wallpaper. Vintage stationery and writing instruments illustration style, like a fine letter-writing paper or desk blotter pattern. Flat graphic motifs: vintage glass inkwells in round and hexagonal shapes, antique fountain pen nibs, small ink droplet accents, quill feathers. Flat 2D illustration, fine precise outlines, solid color fills ONLY — royal blue (#4169E1), emerald green (#50C878), antique gold (#D4AF37), deep burgundy (#7B2C2C) on warm parchment cream (#F5F2EB) background. Motifs evenly scattered with generous breathing room, medium scale, balanced layout. Perfectly seamless on all four sides, no visible tile edge. Zero gradients, zero shadows, zero shading, zero 3D. Looks exactly like a fine stationery wrapping paper or journal cover fabric. Professional Spoonflower-ready surface design, 300 DPI quality.",
+        "negative_prompt": "photorealistic, 3D render, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic, depth of field, blur, gradient, soft blurry edges, visible seam, tile border, white frame around image, single isolated object on white background, centered composition, photograph, canvas texture, realistic lighting, vignette, low quality, pixelated, text, watermark",
         "key_elements": [
           "glass inkwells",
           "gold nibs",
@@ -317,7 +317,7 @@
           "ballpoint pens",
           "harsh shadows"
         ],
-        "cfg_scale": 7.5,
+        "cfg_scale": 8.0,
         "style_weight": 0.85
       },
       "reference_images": [],
@@ -728,8 +728,8 @@
         "competition_level": "low"
       },
       "ai_generation": {
-        "positive_prompt": "A beautiful brick repeat pattern featuring detailed watercolor illustrations of classic glass jar terrariums filled with lush green moss, miniature ferns, and layered soil. The glass jars show soft reflections and highlights, arranged in a balanced, organic layout with elegant negative space. The art style is refined botanical illustration, with fine ink outlines and rich, layered watercolor washes. The line quality is crisp and precise, capturing the delicate veins of the ferns and the texture of the moss. The color palette features Moss Green #ADDFAD, Forest Green #228B22, and Fern Green #4F7942, set against a clean Soft Alabaster #F9F6F0 background. The lighting is soft, diffused, and even, with no harsh cast shadows, capturing the serene beauty of a miniature ecosystem. seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, even lighting, high detail, 300 DPI, clean background",
-        "negative_prompt": "cartoonish, cheap clip art, harsh black outlines, dark muddy colors, cluttered layout, heavy shadows, modern geometric patterns, text, watermarks",
+        "positive_prompt": "Seamless allover repeat surface pattern for fabric and wallpaper. Botanical illustration style, like a Victorian naturalist field guide engraving. Flat graphic motifs: detailed fern fronds, heart-shaped moss leaves, small mushrooms, pebbles, dewdrops, tiny snails. Flat 2D illustration, fine precise outlines, solid color fills ONLY — deep forest green (#2D5A27), sage (#7A9E7E), moss (#5C7A3E), stone grey (#8A8A8A) on soft cream (#F5F0E8) background. Dense naturalistic scattered arrangement, organic feel, no geometric grid. Perfectly seamless on all four sides, no visible tile edge. Zero gradients, zero shadows, zero shading, zero 3D. Looks like a botanical print fabric for terrarium enthusiasts. Professional Spoonflower-ready surface design, 300 DPI quality.",
+        "negative_prompt": "photorealistic, 3D render, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic, depth of field, blur, gradient, soft blurry edges, visible seam, tile border, single isolated object on white background, centered composition, photograph, canvas texture, brush stroke, realistic lighting, low quality, pixelated, text, watermark",
         "key_elements": [
           "glass terrariums",
           "moss",
@@ -741,7 +741,7 @@
           "harsh black outlines",
           "cluttered composition"
         ],
-        "cfg_scale": 7.5,
+        "cfg_scale": 8.0,
         "style_weight": 0.85
       },
       "reference_images": [
@@ -3575,8 +3575,8 @@
         "competition_level": "medium"
       },
       "ai_generation": {
-        "positive_prompt": "Seamless mirror repeat surface pattern. William Morris Arts and Crafts style. Stylized acanthus leaves, strawberries, small song birds and winding vine tendrils in a densely interlocking botanical layout. Flat 2D illustration, clean precise outlines, solid color fills only — forest green (#2D5016), terracotta (#B5451B), gold ochre (#D4A017), deep teal (#1B5B6B) on warm ivory (#F5F0E8) background. Zero gradients, zero shadows, zero shading, zero depth. Bold clean shapes, balanced symmetrical layout, perfectly seamless on all four sides, professional textile surface design, 300 DPI.",
-        "negative_prompt": "blurry, low quality, watermark, text, jpeg artifacts, pixelated, seam lines, visible tile edges, asymmetric repeat, 3D render, fake 3D, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic sheen, fake depth, perspective distortion, volumetric lighting, bump map, realistic photo, photorealistic, watercolor bleed, ink bleed, heavy gradients, soft blurry edges, busy cluttered layout, isolated object on white, single centered motif, white grid lines",
+        "positive_prompt": "Seamless four-way mirror repeat surface pattern for fabric and wallpaper. William Morris Arts and Crafts style, inspired by 'Strawberry Thief' and 'Willow Boughs'. Dense interlocking botanical motifs: stylized acanthus leaves, wild strawberries, song birds, winding vine tendrils, small stylized flowers. Flat 2D illustration, clean precise outlines, solid color fills ONLY — forest green (#2D5016), terracotta (#B5451B), gold ochre (#D4A017), deep teal (#1B5B6B) on warm ivory (#F5F0E8) background. Perfectly symmetrical four-way tiling, all four edges connect flawlessly, dense coverage with balanced negative space, no bare patches. Zero gradients, zero shadows, zero shading. Looks exactly like a genuine William Morris printed textile. Professional Spoonflower-ready surface design, 300 DPI quality.",
+        "negative_prompt": "photorealistic, 3D render, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic, depth of field, blur, gradient, soft blurry edges, visible seam, tile border, white frame around image, single isolated object, centered composition, photograph, watercolor bleed, canvas texture, realistic lighting, vignette, sparse layout, empty background, low quality, pixelated, text, watermark",
         "key_elements": [
           "acanthus leaves",
           "stylized birds",
@@ -3588,7 +3588,7 @@
           "watercolor wash",
           "loose sketchy lines"
         ],
-        "cfg_scale": 7.5,
+        "cfg_scale": 8.5,
         "style_weight": 0.85
       },
       "reference_images": [],
@@ -3700,8 +3700,8 @@
         "competition_level": "medium"
       },
       "ai_generation": {
-        "positive_prompt": "Seamless half-drop repeat surface pattern. Japanese ukiyo-e woodblock print style. Stylized great wave crests, flat sakura blossoms, paper crane silhouettes and koi fish motifs arranged in an elegant balanced layout. Flat 2D vector illustration, bold precise outlines, solid color fills only — indigo blue (#1B3A6B), coral red (#E34234), gold ochre (#D4A017), sage green (#5C7A4E) on ivory (#F5F2EB) background. Zero gradients, zero shadows, zero shading. Graphic print precision, perfectly seamless on all four sides, professional textile surface design, 300 DPI.",
-        "negative_prompt": "blurry, low quality, watermark, text, jpeg artifacts, pixelated, seam lines, visible tile edges, asymmetric repeat, 3D render, fake 3D, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic sheen, fake depth, perspective distortion, volumetric lighting, bump map, realistic photo, photorealistic, watercolor bleed, ink bleed, heavy gradients, soft blurry edges, busy cluttered layout, isolated object on white, single centered motif, white grid lines",
+        "positive_prompt": "Seamless half-drop repeat surface pattern for fabric and wallpaper. Japanese ukiyo-e woodblock print style, Hokusai and Hiroshige inspired. Motifs: great wave crests with white foam tips, flying cranes, swimming koi fish, cherry blossom branches, small Mount Fuji silhouettes. Flat 2D graphic illustration, bold black outlines, solid color fills ONLY — indigo navy (#1B3A6B), coral vermillion (#E34234), ivory white (#F5F2EB), gold ochre (#D4A017) on warm ivory (#F5F2EB) background. Dense balanced allover arrangement, medium spacing, motifs face different directions. Perfectly seamless on all four sides, no visible tile edge, no border around the image. Zero gradients, zero shading, zero shadows, zero 3D. Looks exactly like a Japanese woodblock print textile or gift wrapping paper. Professional Spoonflower-ready surface design, 300 DPI quality.",
+        "negative_prompt": "photorealistic, 3D render, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic, depth of field, bokeh, blur, gradient, watercolor bleed, soft edges, visible seam, tile border, white frame around image, single isolated object on white background, centered composition, photograph, canvas texture, brush stroke, realistic lighting, vignette, dark edges, low quality, pixelated, asymmetric repeat, text, watermark",
         "key_elements": [
           "wave crests",
           "sakura blossoms",
@@ -3713,7 +3713,7 @@
           "Chinese style",
           "watercolor wash"
         ],
-        "cfg_scale": 7.5,
+        "cfg_scale": 8.0,
         "style_weight": 0.85
       },
       "reference_images": [],
