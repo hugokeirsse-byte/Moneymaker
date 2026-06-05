@@ -135,7 +135,7 @@ jobs:
           MONEYMAKER_FOCUS:     ${{ github.event.inputs.focus || '' }}
           MONEYMAKER_NICHE_COUNT: ${{ github.event.inputs.niche_count || '' }}
           # Runware : injecté si mode génération ou upscale-fix
-          RUNWARE_API_KEY:      ${{ (github.event.inputs.mode == 'generate' || github.event.inputs.mode == 'generate-best' || github.event.inputs.mode == 'generate-all' || github.event.inputs.mode == 'generate-elements' || github.event.inputs.mode == 'upscale-fix') && secrets.RUNWARE_API_KEY || '' }}
+          RUNWARE_API_KEY:      ${{ (github.event.inputs.mode == 'generate' || github.event.inputs.mode == 'generate-best' || github.event.inputs.mode == 'generate-all' || github.event.inputs.mode == 'generate-elements' || github.event.inputs.mode == 'upscale-fix' || github.event.inputs.mode == 'redbubble-generate') && secrets.RUNWARE_API_KEY || '' }}
           RUNWARE_MODEL:        ${{ secrets.RUNWARE_MODEL || 'runware:101@1' }}
           # Sources optionnelles
           REDDIT_CLIENT_ID:     ${{ secrets.REDDIT_CLIENT_ID }}
