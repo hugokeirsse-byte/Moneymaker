@@ -944,10 +944,16 @@ def generate_all_base(
     report_path: Optional[str] = None,
     yes: bool = False,
     output_dir: str = "./output/spoonflower",
+    limit: Optional[int] = None,
+    niche_names: Optional[List[str]] = None,
 ) -> None:
     """
     Génère 1 image de base (prompt original) pour CHAQUE CdC du rapport.
     Idéal pour calibration : ~0.006 € × N CdCs.
+
+    Args:
+        limit: si fourni, ne génère que les N premiers CdC (test rapide).
+        niche_names: si fourni, ne génère que ces CdC précis (match partiel).
     """
     import json
     import glob as _glob
@@ -967,6 +973,26 @@ def generate_all_base(
     all_briefs = data.get("cahiers_des_charges", data.get("briefs", []))
     if not all_briefs:
         print("ERROR : Aucun CdC dans le rapport.")
+        return
+
+    # Filtrage : niches ciblées prioritaires, sinon limite sur les N premiers
+    if niche_names:
+        selected = []
+        for needle_raw in niche_names:
+            needle = needle_raw.strip().lower()
+            m = next((b for b in all_briefs if b.get("name", "").lower() == needle), None)
+            if not m:
+                m = next((b for b in all_briefs if needle in b.get("name", "").lower()), None)
+            if m and m not in selected:
+                selected.append(m)
+            elif not m:
+                print(f"⚠️  CdC '{needle_raw}' introuvable — ignoré.")
+        all_briefs = selected
+    elif limit and limit > 0:
+        all_briefs = all_briefs[:limit]
+
+    if not all_briefs:
+        print("ERROR : Aucun CdC sélectionné.")
         return
 
     n = len(all_briefs)
@@ -1362,6 +1388,14 @@ def main():
         "--output", type=str, default="./output/spoonflower",
         help="Répertoire de sortie.",
     )
+    gen_all_parser.add_argument(
+        "--limit", type=int, default=0,
+        help="Ne générer que les N premiers CdC (test rapide). 0 = tous.",
+    )
+    gen_all_parser.add_argument(
+        "--niche", type=str, default="",
+        help="Cibler des CdC précis (noms séparés par virgules). Prioritaire sur --limit.",
+    )
 
     # ── Sous-commande : generate-elements ─────────────────────────────────────
     gen_elem_parser = subparsers.add_parser(
@@ -1453,10 +1487,13 @@ def main():
         return
 
     if args.command == "generate-all":
+        niche_list = [n.strip() for n in args.niche.split(",") if n.strip()] if args.niche else None
         generate_all_base(
             report_path=args.report or None,
             yes=args.yes,
             output_dir=args.output,
+            limit=args.limit or None,
+            niche_names=niche_list,
         )
         return
 

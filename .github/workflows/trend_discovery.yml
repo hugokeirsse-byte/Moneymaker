@@ -128,7 +128,12 @@ jobs:
             eval python -m trend_discovery.main archive --niche "'${{ github.event.inputs.niche }}'"
           elif [ "$MODE" = "generate-all" ]; then
             echo "=== MODE GENERATE-ALL : 1 image de base par CdC ==="
-            python -m trend_discovery.main generate-all --yes
+            NICHE_ARG=""
+            LIMIT_ARG=""
+            [ -n "${{ github.event.inputs.niche }}" ] && NICHE_ARG="--niche '${{ github.event.inputs.niche }}'"
+            LIMIT_VAL="${{ github.event.inputs.limit || '0' }}"
+            [ "$LIMIT_VAL" != "0" ] && LIMIT_ARG="--limit $LIMIT_VAL"
+            eval python -m trend_discovery.main generate-all --yes $NICHE_ARG $LIMIT_ARG
           elif [ "$MODE" = "generate-best" ]; then
             echo "=== MODE GENERATE-BEST : variantes du meilleur CdC auto-sélectionné ==="
             NICHE_ARG=""
