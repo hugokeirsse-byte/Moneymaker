@@ -32,6 +32,7 @@ on:
         type: choice
         options:
           - 'preview'            # Gemini trends + CdCs + manifest (0 €)
+          - 'generate-all'       # 1 image de base par CdC (~0.006€ × nb CdCs)
           - 'generate-best'      # Variantes du meilleur CdC auto-sélectionné (~0.05 €)
           - 'generate-elements'  # 10 éléments isolés + assemblage Pillow (~0.06 €)
           - 'generate'           # Images des CdCs approuvées (manifest requis)
@@ -97,7 +98,7 @@ jobs:
           # Tendances mondiales temps réel (GEMINI_API_KEY requis)
           GEMINI_API_KEY:       ${{ secrets.GEMINI_API_KEY }}
           # Runware : injecté si mode=generate ou generate-best
-          RUNWARE_API_KEY:      ${{ (github.event.inputs.mode == 'generate' || github.event.inputs.mode == 'generate-best' || github.event.inputs.mode == 'generate-elements') && secrets.RUNWARE_API_KEY || '' }}
+          RUNWARE_API_KEY:      ${{ (github.event.inputs.mode == 'generate' || github.event.inputs.mode == 'generate-best' || github.event.inputs.mode == 'generate-all' || github.event.inputs.mode == 'generate-elements') && secrets.RUNWARE_API_KEY || '' }}
           RUNWARE_MODEL:        ${{ secrets.RUNWARE_MODEL || 'runware:100@1' }}
           # Sources optionnelles
           REDDIT_CLIENT_ID:     ${{ secrets.REDDIT_CLIENT_ID }}
@@ -114,6 +115,9 @@ jobs:
           if [ "$MODE" = "preview" ]; then
             echo "=== MODE PREVIEW : Gemini trends + CdCs + manifest (0 €) ==="
             python -m trend_discovery.main preview
+          elif [ "$MODE" = "generate-all" ]; then
+            echo "=== MODE GENERATE-ALL : 1 image de base par CdC ==="
+            python -m trend_discovery.main generate-all --yes
           elif [ "$MODE" = "generate-best" ]; then
             echo "=== MODE GENERATE-BEST : variantes du meilleur CdC auto-sélectionné ==="
             NICHE_ARG=""

@@ -516,8 +516,8 @@
         "competition_level": "low"
       },
       "ai_generation": {
-        "positive_prompt": "A cozy and rustic half-drop repeat pattern featuring detailed watercolor illustrations of scored sourdough boules, golden wheat ears, and flour-dusted banneton baskets. The bread loaves show realistic crust textures and intricate scored patterns. The motifs are arranged in a balanced, warm layout with soft negative space. The art style is soft watercolor over delicate pencil sketches, capturing an artisanal, French country kitchen feel. The line quality is soft and hand-drawn, showing the fine details of the wheat husks and flour dust. The color palette consists of Golden Wheat #F5C26B, Crust Brown #8B5A2B, and Flour White #F5F5F5, set against a cozy Soft Oatmeal #EAE6DF background. The lighting is soft, warm, and diffused, with gentle shading that gives the loaves a realistic, three-dimensional look. seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, even lighting, high detail, 300 DPI, clean background",
-        "negative_prompt": "cartoonish, cheap clip art, harsh black outlines, dark muddy colors, cluttered layout, heavy shadows, modern geometric patterns, text, watermarks",
+        "positive_prompt": "Seamless half-drop repeat surface pattern for fabric and wallpaper. Vintage French boulangerie label illustration style, like a 1930s artisanal bread packaging engraving. Flat graphic motifs: scored sourdough round loaves with decorative cross-hatch scoring patterns, golden wheat ear bundles, woven banneton proofing baskets, rustic wooden rolling pins, small tied flour sacks. Flat 2D illustration, clean precise outlines, solid color fills ONLY — warm ochre (#D4A017), russet brown (#8B4513), sage green (#6B7C3E) on warm cream (#FFF8E7) background. Dense balanced allover arrangement, motifs at different angles. Perfectly seamless on all four sides, no visible tile edge. Zero gradients, zero shadows, zero shading, zero 3D, zero watercolor. Looks exactly like a vintage French bakery wrapping paper or artisanal food packaging textile. Professional Spoonflower-ready surface design, 300 DPI quality.",
+        "negative_prompt": "photorealistic, 3D render, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic, depth of field, blur, gradient, soft blurry edges, visible seam, tile border, white frame, single isolated object, centered composition, photograph, watercolor, gouache, ink wash, canvas texture, realistic lighting, vignette, sparse layout, empty background, low quality, pixelated, text, watermark",
         "key_elements": [
           "sourdough boules",
           "wheat ears",
@@ -529,7 +529,7 @@
           "harsh black outlines",
           "cluttered composition"
         ],
-        "cfg_scale": 7.5,
+        "cfg_scale": 8.0,
         "style_weight": 0.85
       },
       "reference_images": [],
@@ -952,8 +952,8 @@
         "competition_level": "medium"
       },
       "ai_generation": {
-        "positive_prompt": "An elegant half-drop repeat pattern featuring hand-painted oyster shells with shimmering gold-rimmed edges, scattered delicately among soft seafoam green kelp fronds. The shells show realistic pearlescent textures with soft blue, gray, and lavender undertones. The composition is flowing and balanced, with elegant negative space that feels airy and coastal. The art style is refined watercolor with fine metallic gold ink detailing along the shell ridges. The line quality is delicate and precise, highlighting the organic curves of the shells. The color palette features Oyster Blue #4682B4, Pearly Gray #DCDCDC, and Gold Leaf #D4AF37, set against a clean Soft Alabaster #F9F6F0 background. The lighting is bright and even, with no harsh shadows, capturing a luxurious coastal aesthetic. seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, even lighting, high detail, 300 DPI, clean background",
-        "negative_prompt": "cartoonish, cheap clip art, harsh black outlines, dark muddy colors, cluttered layout, heavy shadows, modern geometric patterns, text, watermarks",
+        "positive_prompt": "Seamless half-drop repeat surface pattern for fabric and wallpaper. Classic blue-and-white Delft ceramic illustration style, like a Dutch Delftware tile or Chinoiserie porcelain print. Flat graphic motifs: oyster shells in cross-section showing concentric ring interior, graceful kelp fronds curling organically, small round pearl sphere clusters, delicate sea anemone forms. Flat 2D illustration, clean precise outlines, solid color fills ONLY — china blue (#1B4D8E), pale seafoam (#89C4C7) on soft white (#F5F5F0) background. Evenly distributed allover layout with generous balanced negative space. Perfectly seamless on all four sides, no visible tile edge. Zero gradients, zero shadows, zero shading, zero 3D, zero watercolor. Looks exactly like a classic blue-and-white coastal Delft ceramic pattern printed on fabric. Professional Spoonflower-ready surface design, 300 DPI quality.",
+        "negative_prompt": "photorealistic, 3D render, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic, depth of field, blur, gradient, soft blurry edges, visible seam, tile border, white frame, single isolated object, centered composition, photograph, watercolor, gouache, ink wash, canvas texture, realistic lighting, vignette, sparse layout, empty background, low quality, pixelated, text, watermark",
         "key_elements": [
           "oyster shells",
           "gold leaf edges",
@@ -965,7 +965,7 @@
           "harsh black outlines",
           "cluttered composition"
         ],
-        "cfg_scale": 7.5,
+        "cfg_scale": 8.0,
         "style_weight": 0.85
       },
       "reference_images": [],
@@ -1160,8 +1160,8 @@
         "competition_level": "medium"
       },
       "ai_generation": {
-        "positive_prompt": "A dense and whimsical brick repeat pattern featuring tiny garden snails with spiral shells, golden chanterelle mushrooms, fallen acorns, and delicate unfurling fiddlehead ferns. The motifs are nested closely together in a natural, organic forest floor layout with minimal negative space. The art style is reminiscent of classic children's book illustrations, rendered in fine ink outlines and soft, detailed watercolor washes. The line quality is delicate and precise, capturing the texture of the moss and the snail shells. The color palette includes Forest Green #228B22, Chanterelle Gold #E1AD01, and Acorn Brown #5C4033, set against a cozy Soft Oatmeal #EAE6DF background. The lighting is soft, diffused, and even, with no harsh shadows. seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, even lighting, high detail, 300 DPI, clean background",
-        "negative_prompt": "scary insects, bright neon colors, modern vector art, flat digital fills, harsh shadows, sparse layout, large empty gaps, tiling lines, watermark, signature",
+        "positive_prompt": "Seamless brick repeat surface pattern for fabric and wallpaper. Vintage natural history illustration style, like a mid-century nature field guide or flat children's book illustration. Flat graphic motifs: garden snails with spiral shells, golden chanterelle mushrooms, fallen acorns with textured caps, tightly coiled fiddlehead ferns, small flat moss tufts. Flat 2D illustration, clean bold outlines, solid color fills ONLY — forest green (#2D5E2D), chanterelle gold (#E1AD01), bark brown (#5C4033), pale sage (#B8C9A3) on soft oatmeal (#EAE6DF) background. Dense organic layout, motifs scattered at varied angles with minimal spacing. Perfectly seamless on all four sides, no visible tile edge. Zero gradients, zero shadows, zero shading, zero 3D, zero watercolor. Looks exactly like a vintage English woodland nursery wallpaper or nature-themed gift wrap. Professional Spoonflower-ready surface design, 300 DPI quality.",
+        "negative_prompt": "photorealistic, 3D render, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic, depth of field, blur, gradient, soft blurry edges, visible seam, tile border, white frame, single isolated object, centered composition, photograph, watercolor, gouache, ink wash, canvas texture, realistic lighting, vignette, sparse layout, empty background, low quality, pixelated, text, watermark",
         "key_elements": [
           "garden snails",
           "chanterelle mushrooms",
@@ -1173,7 +1173,7 @@
           "neon colors",
           "flat vector shapes"
         ],
-        "cfg_scale": 7.5,
+        "cfg_scale": 8.0,
         "style_weight": 0.8
       },
       "reference_images": [
@@ -1375,8 +1375,8 @@
         "competition_level": "medium"
       },
       "ai_generation": {
-        "positive_prompt": "An elegant and moody symmetrical mirror repeat pattern featuring detailed Victorian-style illustrations of Luna moths with pale green wings, dark fern fronds, and delicate antique gold stars. The moths are arranged in a structured, balanced layout with elegant negative space. The art style is inspired by 19th-century scientific engravings, with fine, precise line work and deep, rich color washes. The line quality is extremely detailed, showing the intricate patterns on the moth wings and the texture of the fern leaves. The color palette features Luna Green #77DD77, Deep Plum #4E2A47, and Antique Gold #C5A059, set against a solid Midnight Black #1A1A1A background. The lighting is soft and flat, with no harsh cast shadows, creating a sophisticated gothic aesthetic. seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, even lighting, high detail, 300 DPI, clean background",
-        "negative_prompt": "bright neon colors, modern digital vector, cartoonish style, messy lines, harsh shadows, chaotic layout, text, watermarks, tiling lines",
+        "positive_prompt": "Seamless mirror repeat surface pattern for fabric and wallpaper. Victorian entomological illustration style, like a 19th-century natural history museum display cabinet or Audubon-era scientific engraving. Flat graphic motifs: Luna moths with symmetrical wing patterns spread flat, dark fern frond silhouettes, antique gold six-pointed stars, small pinned beetle specimens, geometric display card rectangles. Flat 2D illustration, precise fine outlines, solid color fills ONLY — luna green (#77DD77), deep plum (#4E2A47), antique gold (#C5A059) on midnight black (#1A1A1A) background. Structured symmetrical layout with elegant negative space, gothic mood. Perfectly seamless on all four sides, no visible tile edge. Zero gradients, zero shadows, zero shading, zero 3D, zero color washes. Looks exactly like a Victorian gothic entomological display fabric or dark botanical wallpaper. Professional Spoonflower-ready surface design, 300 DPI quality.",
+        "negative_prompt": "photorealistic, 3D render, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic, depth of field, blur, gradient, soft blurry edges, visible seam, tile border, white frame, single isolated object, centered composition, photograph, watercolor, gouache, ink wash, canvas texture, realistic lighting, vignette, sparse layout, empty background, low quality, pixelated, text, watermark",
         "key_elements": [
           "luna moths",
           "fern fronds",
@@ -1593,8 +1593,8 @@
         "competition_level": "medium"
       },
       "ai_generation": {
-        "positive_prompt": "A luxurious symmetrical mirror repeat pattern featuring elegant Art Deco celestial motifs, including geometric gold sunbursts, stylized crescent moons, and delicate constellations. The motifs are arranged in a structured, balanced grid with clean negative space. The art style is inspired by 1920s Art Deco design, with sharp, clean vector lines and smooth metallic gold gradients that simulate gold foil. The line quality is extremely precise and crisp, showing intricate geometric details. The color palette features Deep Navy #0A192F, Midnight Blue #1B2A47, and Rich Gold #D4AF37, creating a high-contrast, dramatic look. The lighting is flat and even, with no realistic shadows, focusing entirely on the metallic gold line work. seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, even lighting, high detail, 300 DPI, clean background",
-        "negative_prompt": "blurry, watercolor, messy hand-drawn lines, boho style, soft pastel colors, realistic clouds, harsh shadows, chaotic layout, text, watermarks",
+        "positive_prompt": "Seamless mirror repeat surface pattern for fabric and wallpaper. Art Deco 1920s illustration style, like a vintage astrological chart or Lalique celestial poster. Flat graphic motifs: geometric sunburst ray fans, stylized crescent moons with flat solid fill, constellation dot-and-line patterns, Art Deco star rosettes, geometric zodiac circle medallions. Flat 2D illustration, razor-sharp precise lines, solid color fills ONLY — antique gold (#D4AF37), celestial blue (#4A7BAD) on deep navy (#0A192F) background. Precise symmetrical grid layout with equal spacing between motifs. Perfectly seamless on all four sides, no visible tile edge. Zero gradients, zero metallic effects, zero shadows, zero shading, zero 3D. Looks exactly like an Art Deco luxury astrological wallpaper or celestial fabric print. Professional Spoonflower-ready surface design, 300 DPI quality.",
+        "negative_prompt": "photorealistic, 3D render, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic, depth of field, blur, gradient, soft blurry edges, visible seam, tile border, white frame, single isolated object, centered composition, photograph, watercolor, gouache, ink wash, canvas texture, realistic lighting, vignette, sparse layout, empty background, low quality, pixelated, text, watermark",
         "key_elements": [
           "art deco sunburst",
           "crescent moon",
@@ -1808,8 +1808,8 @@
         "competition_level": "medium"
       },
       "ai_generation": {
-        "positive_prompt": "A stylish mid-century modern basic repeat pattern featuring stylized saguaro cacti, prickly pear pads, and abstract terracotta suns. The motifs are designed as flat vector shapes with clean, bold outlines, arranged in a structured and balanced layout with generous negative space. The art style is heavily inspired by 1960s graphic design and Charley Harper's illustrations, focusing on geometric simplification. The line quality is sharp and clean, with no hand-drawn imperfections. The color palette features warm Terracotta #C35237, Mustard Yellow #E1AD01, and Olive Green #708238, set against a solid Warm Sand #E6D8B8 background. The lighting is completely flat and graphic, with no shadows or gradients, ensuring a clean and modern retro look. A subtle linen texture overlay is applied to give the design a vintage textile feel. seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, even lighting, high detail, 300 DPI, clean background",
-        "negative_prompt": "photorealistic, watercolor, messy hand-drawn lines, gradients, realistic shadows, cluttered layout, neon colors, text, watermarks, tiling lines",
+        "positive_prompt": "Seamless repeat surface pattern for fabric and wallpaper. Mid-century modern graphic design style, like Charley Harper's flat geometric nature illustrations or a 1960s California modernist poster. Flat graphic motifs: stylized saguaro cacti as flat silhouettes with geometric arm shapes, prickly pear cactus pads in rounded geometric oval shapes, abstract terracotta sun disc motifs with flat rays, simple geometric desert bird silhouettes. Flat 2D illustration, sharp clean outlines, solid color fills ONLY — terracotta (#C35237), mustard yellow (#E1AD01), olive green (#708238) on warm sand (#E6D8B8) background. Structured balanced layout with generous negative space. Perfectly seamless on all four sides, no visible tile edge. Zero gradients, zero shadows, zero shading, zero 3D, zero texture overlay. Looks exactly like a mid-century modern desert wallpaper or Charley Harper-style fabric print. Professional Spoonflower-ready surface design, 300 DPI quality.",
+        "negative_prompt": "photorealistic, 3D render, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic, depth of field, blur, gradient, soft blurry edges, visible seam, tile border, white frame, single isolated object, centered composition, photograph, watercolor, gouache, ink wash, canvas texture, realistic lighting, vignette, sparse layout, empty background, low quality, pixelated, text, watermark",
         "key_elements": [
           "saguaro cactus",
           "terracotta sun",
@@ -1821,7 +1821,7 @@
           "watercolor",
           "cluttered composition"
         ],
-        "cfg_scale": 7.5,
+        "cfg_scale": 8.0,
         "style_weight": 0.85
       },
       "reference_images": [],
@@ -2018,8 +2018,8 @@
         "competition_level": "medium"
       },
       "ai_generation": {
-        "positive_prompt": "An extremely dense and delicate ditsy brick repeat pattern featuring tiny English cottage wildflowers, including blue forget-me-nots, yellow primroses, and pink clover blossoms. The flowers are arranged closely together in a seamless, carpet-like layout with almost no background showing, creating a classic Liberty-style floral print. The art style is delicate watercolor with fine, precise details on each tiny petal and leaf. The line quality is soft and hand-painted, capturing a romantic and nostalgic feel. The color palette features Forget-Me-Not Blue #6495ED, Primrose Yellow #FFEF00, and Clover Pink #FFB7C5, set against a Soft Ivory #FFFDD0 background. The lighting is soft, flat, and even, with no shadows, perfect for apparel fabric. seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, even lighting, high detail, 300 DPI, clean background",
-        "negative_prompt": "large flowers, sparse layout, modern geometric shapes, harsh black outlines, dark backgrounds, digital gradients, harsh shadows, text, watermarks",
+        "positive_prompt": "Seamless dense ditsy repeat surface pattern for fabric and wallpaper. Liberty London-style miniature floral print, like a classic English cotton lawn fabric. Flat graphic motifs: tiny forget-me-not sprays with five petals, small primrose blooms, clover flower clusters, miniature daisy sprigs with round centers, simple paired leaf shapes. Flat 2D illustration, fine clean outlines, solid color fills ONLY — cornflower blue (#6495ED), primrose yellow (#F5D033), clover pink (#E8879A), leaf green (#5A7A3A) on soft ivory (#FFFDD0) background. Extremely dense carpet-like layout, motifs cover almost all background at varied angles and sizes. Perfectly seamless on all four sides, no visible tile edge. Zero gradients, zero shadows, zero shading, zero 3D, zero watercolor. Looks exactly like a classic Liberty of London ditsy floral cotton lawn print. Professional Spoonflower-ready surface design, 300 DPI quality.",
+        "negative_prompt": "photorealistic, 3D render, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic, depth of field, blur, gradient, soft blurry edges, visible seam, tile border, white frame, single isolated object, centered composition, photograph, watercolor, gouache, ink wash, canvas texture, realistic lighting, vignette, sparse layout, empty background, low quality, pixelated, text, watermark",
         "key_elements": [
           "forget-me-nots",
           "primroses",
@@ -2031,7 +2031,7 @@
           "sparse composition",
           "harsh outlines"
         ],
-        "cfg_scale": 7.5,
+        "cfg_scale": 8.0,
         "style_weight": 0.8
       },
       "reference_images": [
@@ -2462,8 +2462,8 @@
         "competition_level": "medium"
       },
       "ai_generation": {
-        "positive_prompt": "An intricate half-drop repeat pattern featuring vintage apothecary bottles, dried lavender sprigs, chamomile flowers, and hand-labeled glass vials. The motifs are arranged in a balanced, dense layout with elegant negative space, avoiding any large gaps or crowding. The art style is inspired by 19th-century scientific botanical illustrations, rendered in fine pen lines and delicate watercolor washes. The line quality is crisp and highly detailed, showing the delicate veins of leaves and the glass reflections. The color palette consists of Sage Green #8F9779, Dusty Lavender #967BB6, and Amber Gold #D2A154, set against a warm Parchment Cream #F5F2EB background. The lighting is soft, flat, and even, with no harsh cast shadows, creating a timeless and elegant feel. seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, even lighting, high detail, 300 DPI, clean background",
-        "negative_prompt": "blurry, low resolution, modern digital gradients, harsh shadows, overlapping messy lines, wilted or dead leaves, muddy colors, text watermarks, seams, visible borders, disjointed elements",
+        "positive_prompt": "Seamless half-drop repeat surface pattern for fabric and wallpaper. Victorian apothecary illustration style, like a 19th-century pharmacy label engraving or botanist's field journal print. Flat graphic motifs: round glass apothecary bottles with handwritten paper labels, dried lavender sprigs with flower spikes, chamomile flower heads with yellow centers and white petals, small ceramic mortar and pestle, botanical specimen tag cards. Flat 2D illustration, clean precise outlines, solid color fills ONLY — amber (#D4813A), deep forest green (#1E5C2D), soft lavender (#7B68B2) on antique cream (#F7F0E3) background. Balanced dense layout with elegant negative space. Perfectly seamless on all four sides, no visible tile edge. Zero gradients, zero shadows, zero shading, zero 3D. Looks exactly like a Victorian apothecary botanical fabric or vintage pharmacy wrapping paper. Professional Spoonflower-ready surface design, 300 DPI quality.",
+        "negative_prompt": "photorealistic, 3D render, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic, depth of field, blur, gradient, soft blurry edges, visible seam, tile border, white frame, single isolated object, centered composition, photograph, watercolor, gouache, ink wash, canvas texture, realistic lighting, vignette, sparse layout, empty background, low quality, pixelated, text, watermark",
         "key_elements": [
           "apothecary bottles",
           "lavender sprigs",
@@ -2475,7 +2475,7 @@
           "neon colors",
           "harsh shadows"
         ],
-        "cfg_scale": 7.5,
+        "cfg_scale": 8.0,
         "style_weight": 0.85
       },
       "reference_images": [
@@ -2686,8 +2686,8 @@
         "competition_level": "medium"
       },
       "ai_generation": {
-        "positive_prompt": "A quirky and stylish half-drop repeat pattern featuring vintage-style sardine tins with ornate, retro-designed labels and hand-drawn fish illustrations. Some tins are closed, showing beautiful typography, while others are open, revealing silver sardines packed neatly in golden oil. The motifs are arranged in a balanced, slightly offset grid with even spacing. The art style is rich gouache with bold, hand-drawn ink outlines, capturing a rustic European packaging aesthetic. The line quality is crisp and defined, highlighting the intricate decorative borders of the tins. The color palette features Mustard Yellow #E1AD01, Cobalt Blue #0047AB, and Sardine Silver #C0C0C0, set against a Warm Cream #FDF5E6 background. The lighting is flat and even, with no harsh shadows, highlighting the detailed label designs and metallic silver textures. seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, even lighting, high detail, 300 DPI, clean background",
-        "negative_prompt": "photorealistic, modern digital vector, messy lines, dark moody lighting, harsh shadows, cluttered layout, neon colors, real text, watermarks, tiling seams",
+        "positive_prompt": "Seamless half-drop repeat surface pattern for fabric and wallpaper. Vintage European canned food packaging illustration style, like a 1950s Portuguese sardinha tin label lithograph. Flat graphic motifs: closed sardine tin cans showing Art Nouveau decorative label designs with ornate borders, open sardine tins with rows of flat illustrated fish packed neatly inside, ornate rectangular tin frame borders, small anchor accent motifs, simple fish silhouettes. Flat 2D illustration, clean crisp outlines, solid color fills ONLY — mustard yellow (#E1AD01), cobalt blue (#0047AB), flat silver grey (#A8A8A8) on warm cream (#FDF5E6) background. Balanced tossed layout with even spacing. Perfectly seamless on all four sides, no visible tile edge. Zero gradients, zero shadows, zero shading, zero 3D, zero gouache, zero metallic effects. Looks exactly like a vintage Portuguese sardine packaging pattern printed on fabric. Professional Spoonflower-ready surface design, 300 DPI quality.",
+        "negative_prompt": "photorealistic, 3D render, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic, depth of field, blur, gradient, soft blurry edges, visible seam, tile border, white frame, single isolated object, centered composition, photograph, watercolor, gouache, ink wash, canvas texture, realistic lighting, vignette, sparse layout, empty background, low quality, pixelated, text, watermark",
         "key_elements": [
           "sardine tins",
           "vintage labels",
@@ -2898,8 +2898,8 @@
         "competition_level": "low"
       },
       "ai_generation": {
-        "positive_prompt": "A stylish basic repeat pattern featuring detailed vintage 1970s SLR cameras, 35mm film canisters, and unrolled film strips. The motifs are arranged in a balanced, tossed layout with even spacing and soft negative space. The art style is refined watercolor with fine, precise ink pen outlines, capturing the metallic textures of the cameras and the glossy look of the film. The line quality is crisp and technical, showing the fine details of dials, lenses, and film sprocket holes. The color palette features Camera Silver #C0C0C0, Leather Black #1A1A1A, and Kodak Yellow #FFC72C, set against a clean Warm Gray #E5E5E5 background. The lighting is soft, flat, and even, with no harsh cast shadows, creating a classic retro photography aesthetic. A subtle film grain texture is applied to the design. seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, even lighting, high detail, 300 DPI, clean background",
-        "negative_prompt": "modern digital cameras, smartphones, cartoonish style, messy lines, harsh shadows, chaotic layout, neon colors, real text, watermarks, tiling lines",
+        "positive_prompt": "Seamless tossed repeat surface pattern for fabric and wallpaper. Vintage 1970s product catalog illustration style, like a retro photography equipment advertisement or Soviet Lomo camera poster. Flat graphic motifs: classic SLR cameras seen from front with circular lens element, cylindrical 35mm film canisters with flat color labels, curled film strip segments with small frame squares, round camera lens cross-sections, small rectangular viewfinder icons. Flat 2D illustration, clean bold outlines, solid color fills ONLY — graphite black (#1A1A1A), warm grey (#7D7D7D), film canister red (#C0392B) on cream (#F5F0E8) background. Motifs scattered at varied angles with even balanced spacing. Perfectly seamless on all four sides, no visible tile edge. Zero gradients, zero shadows, zero shading, zero 3D, zero watercolor. Looks exactly like a retro photography-themed cotton fabric or vintage wallpaper. Professional Spoonflower-ready surface design, 300 DPI quality.",
+        "negative_prompt": "photorealistic, 3D render, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic, depth of field, blur, gradient, soft blurry edges, visible seam, tile border, white frame, single isolated object, centered composition, photograph, watercolor, gouache, ink wash, canvas texture, realistic lighting, vignette, sparse layout, empty background, low quality, pixelated, text, watermark",
         "key_elements": [
           "slr cameras",
           "35mm film",
@@ -2911,7 +2911,7 @@
           "smartphones",
           "harsh shadows"
         ],
-        "cfg_scale": 7.5,
+        "cfg_scale": 8.0,
         "style_weight": 0.85
       },
       "reference_images": [],
@@ -3111,8 +3111,8 @@
         "competition_level": "medium"
       },
       "ai_generation": {
-        "positive_prompt": "A vibrant tossed repeat pattern featuring hand-painted heirloom tomatoes on leafy green vines, sliced lemons, and small sprigs of fresh basil. The elements are arranged in a lively, balanced composition with even spacing and no overlapping. The art style is expressive gouache and watercolor, with visible brushstrokes and rich paint pooling. The line quality is soft and hand-drawn, capturing a rustic, artisanal feel. The color palette features rich Tomato Red #C93C2B, bright Lemon Yellow #F4D03F, and deep Olive Green #708238, all set against a clean Warm Ivory #FFFDD0 background. The lighting is bright, flat, and sunny, with no harsh shadows, evoking a Mediterranean summer day. seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, even lighting, high detail, 300 DPI, clean background",
-        "negative_prompt": "photorealistic, digital vector, sharp geometric lines, dark moody lighting, harsh shadows, cluttered layout, neon colors, text, watermarks, tiling seams",
+        "positive_prompt": "Seamless tossed repeat surface pattern for fabric and wallpaper. Sicilian majolica ceramic tile illustration style, like a Deruta or Caltagirone hand-painted faience pottery motif. Flat graphic motifs: round whole heirloom tomatoes with green leafy calyx, tomato cross-section slices showing seed chambers, halved lemons with visible lemon segments, fresh basil sprigs with round leaves, small decorative Sicilian tile star rosettes. Flat 2D illustration, bold clean outlines, solid color fills ONLY — tomato red (#C0522B), cobalt blue (#1B4DA6), lemon yellow (#F5C118), leaf green (#4A7A2E) on warm white (#F5F2EB) background. Lively scattered layout, motifs face different directions. Perfectly seamless on all four sides, no visible tile edge. Zero gradients, zero shadows, zero shading, zero 3D, zero watercolor, zero gouache. Looks exactly like a Sicilian majolica ceramic pattern printed on cotton. Professional Spoonflower-ready surface design, 300 DPI quality.",
+        "negative_prompt": "photorealistic, 3D render, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic, depth of field, blur, gradient, soft blurry edges, visible seam, tile border, white frame, single isolated object, centered composition, photograph, watercolor, gouache, ink wash, canvas texture, realistic lighting, vignette, sparse layout, empty background, low quality, pixelated, text, watermark",
         "key_elements": [
           "heirloom tomatoes",
           "lemon slices",
@@ -3336,8 +3336,8 @@
         "competition_level": "medium"
       },
       "ai_generation": {
-        "positive_prompt": "A classic half-drop repeat pattern featuring detailed vintage botanical illustrations of lemon and orange branches. The design includes ripe yellow lemons, orange ochre fruits, rich green leaves with visible veins, and delicate white blossoms with yellow centers. The motifs are arranged in a balanced, flowing layout with elegant negative space. The art style is inspired by 19th-century scientific botanical prints, rendered in fine ink pen lines and rich watercolor washes. The line quality is crisp and highly detailed, capturing the delicate textures of the citrus skin and leaf veins. The color palette features Lemon Yellow #F4D03F, Orange Ochre #E67E22, and Leaf Green #27AE60, set against a Warm Parchment #FDF5E6 background. The lighting is soft, flat, and even, with no harsh cast shadows, creating a timeless and elegant feel. seamless repeat pattern, tileable, surface design, fabric pattern, professional textile design, flat lay, even lighting, high detail, 300 DPI, clean background",
-        "negative_prompt": "cartoonish, cheap clip art, harsh black outlines, dark muddy colors, cluttered layout, heavy shadows, modern geometric patterns, text, watermarks",
+        "positive_prompt": "Seamless half-drop repeat surface pattern for fabric and wallpaper. French Orangerie botanical illustration style, like a Sèvres porcelain print or 18th-century French citrus toile de Jouy. Flat graphic motifs: lemon tree branches with ripe round lemons and oval leaves, orange branches with spherical oranges, five-petaled citrus blossom clusters, large glossy oval leaves with flat fill, small budding fruit. Flat 2D illustration, clean elegant outlines, solid color fills ONLY — deep forest green (#1A4D1A), warm orange (#E07B22), bright lemon yellow (#F5C31D) on ivory (#F8F4E8) background. Dense botanical allover layout, branches interweaving naturally. Perfectly seamless on all four sides, no visible tile edge. Zero gradients, zero shadows, zero shading, zero 3D. Looks exactly like a French Orangerie botanical wallpaper or classic citrus fabric print. Professional Spoonflower-ready surface design, 300 DPI quality.",
+        "negative_prompt": "photorealistic, 3D render, bevel, emboss, drop shadow, cast shadow, ambient occlusion, specular highlight, glossy, shiny, metallic, depth of field, blur, gradient, soft blurry edges, visible seam, tile border, white frame, single isolated object, centered composition, photograph, watercolor, gouache, ink wash, canvas texture, realistic lighting, vignette, sparse layout, empty background, low quality, pixelated, text, watermark",
         "key_elements": [
           "lemon branches",
           "orange branches",
@@ -3349,7 +3349,7 @@
           "harsh black outlines",
           "cluttered composition"
         ],
-        "cfg_scale": 7.5,
+        "cfg_scale": 8.0,
         "style_weight": 0.85
       },
       "reference_images": [

@@ -768,6 +768,86 @@ def generate_approved(
 # Mode generate-best : variantes du meilleur CdC du dernier rapport
 # ─────────────────────────────────────────────────────────────────────────────
 
+def generate_all_base(
+    report_path: Optional[str] = None,
+    yes: bool = False,
+    output_dir: str = "./output/spoonflower",
+) -> None:
+    """
+    Génère 1 image de base (prompt original) pour CHAQUE CdC du rapport.
+    Idéal pour calibration : ~0.006 € × N CdCs.
+    """
+    import json
+    import glob as _glob
+
+    if not report_path:
+        reports = sorted(_glob.glob("./reports/cahiers_des_charges_*.json"))
+        if not reports:
+            print("ERROR : Aucun rapport trouvé. Lancez 'preview' d'abord.")
+            return
+        report_path = reports[-1]
+
+    logger.info("[generate-all] rapport : %s", report_path)
+
+    with open(report_path, encoding="utf-8") as fh:
+        data = json.load(fh)
+
+    all_briefs = data.get("cahiers_des_charges", data.get("briefs", []))
+    if not all_briefs:
+        print("ERROR : Aucun CdC dans le rapport.")
+        return
+
+    n = len(all_briefs)
+    cost_est = n * 0.006
+    print("\n" + "=" * 60)
+    print(f"  {n} CdCs → 1 image de base chacun")
+    print(f"  Coût estimé : ~{cost_est:.3f} € ({n} images × ~0.006 €)")
+    print("  Rapport : " + report_path)
+    print("=" * 60)
+    for i, b in enumerate(all_briefs, 1):
+        print(f"  {i:2d}. {b.get('name')}")
+    print()
+
+    if not yes:
+        answer = input("Proceed? [yes/no] ").strip().lower()
+        if answer not in ("yes", "y"):
+            print("Annulé.")
+            return
+
+    try:
+        from trend_discovery.generators.generation_pipeline import GenerationPipeline
+        from trend_discovery.generators.quality_auditor import QualityAuditor
+        pipeline = GenerationPipeline(output_dir=output_dir, upscale_factor=4)
+        auditor = QualityAuditor()
+    except Exception as exc:
+        logger.error("[generate-all] GenerationPipeline indisponible : %s", exc)
+        return
+
+    if not pipeline._runware.is_available():
+        logger.error("[generate-all] RUNWARE_API_KEY absente — impossible de générer.")
+        return
+
+    from trend_discovery.generators.variant_engine import VariantEngine
+    engine = VariantEngine()
+
+    total_ok = 0
+    for brief in all_briefs:
+        name = brief.get("name", "?")
+        logger.info("[generate-all] '%s'…", name)
+        variants = engine.generate_variants(brief, all_briefs=[], n_fusions=0)
+        if not variants:
+            logger.warning("[generate-all] Aucune variante pour '%s' — ignoré", name)
+            continue
+        base_variant = variants[:1]  # Base uniquement
+        results = pipeline.run_variants(brief, base_variant, auditor=auditor)
+        ok = sum(1 for r in results if r.success)
+        total_ok += ok
+        status = "✅" if ok else "❌"
+        print(f"  {status} {name}")
+
+    print(f"\n{total_ok}/{n} image(s) générée(s) → {output_dir}")
+
+
 def generate_best_variants(
     report_path: Optional[str] = None,
     n_fusions: int = 2,
@@ -1056,6 +1136,24 @@ def main():
         help="Nombre max de variantes à générer (pour --best). 0 = toutes. Ex: --limit 1 pour calibrer.",
     )
 
+    # ── Sous-commande : generate-all ──────────────────────────────────────────
+    gen_all_parser = subparsers.add_parser(
+        "generate-all",
+        help="1 image de base par CdC (calibration globale). Coût ≈ 0.006€ × nb CdCs.",
+    )
+    gen_all_parser.add_argument(
+        "--report", type=str, default="",
+        help="Chemin vers le rapport JSON. Défaut : dernier rapport.",
+    )
+    gen_all_parser.add_argument(
+        "--yes", action="store_true",
+        help="Auto-confirmer (mode CI).",
+    )
+    gen_all_parser.add_argument(
+        "--output", type=str, default="./output/spoonflower",
+        help="Répertoire de sortie.",
+    )
+
     # ── Sous-commande : generate-elements ─────────────────────────────────────
     gen_elem_parser = subparsers.add_parser(
         "generate-elements",
@@ -1125,6 +1223,14 @@ def main():
         gate.save_brief_data(briefs, run_id)
         print(f"\nManifest d'approbation : {manifest_path}")
         print("Éditez 'approved': true pour les niches choisies, puis lancez 'generate'.")
+        return
+
+    if args.command == "generate-all":
+        generate_all_base(
+            report_path=args.report or None,
+            yes=args.yes,
+            output_dir=args.output,
+        )
         return
 
     if args.command == "generate-elements":
