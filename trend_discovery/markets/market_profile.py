@@ -98,10 +98,71 @@ SPOONFLOWER = MarketProfile(
 )
 
 
+# ── Profil Redbubble ─────────────────────────────────────────────────────────
+
+REDBUBBLE = MarketProfile(
+    key="redbubble",
+    display_name="Redbubble print-on-demand",
+    platform_description=(
+        "Redbubble, the global print-on-demand marketplace where independent artists "
+        "sell standalone graphic designs printed on t-shirts, stickers, phone cases, "
+        "mugs, tote bags, art prints, throw pillows and more"
+    ),
+    product_types=[
+        "t-shirts and hoodies",
+        "stickers (die-cut, transparent, holographic)",
+        "phone cases",
+        "mugs and travel mugs",
+        "tote bags",
+        "art prints and posters",
+        "throw pillows",
+        "notebooks and journals",
+    ],
+    buyer_segments=[
+        "Gen Z and millennials expressing niche identity",
+        "niche hobby communities (plant parents, cat people, gamers, hikers, crafters)",
+        "humor/meme culture buyers looking for relatable gift",
+        "mental health / anxiety humor community",
+        "astrology / witchy aesthetic community",
+        "cottagecore / dark academia aesthetic community",
+        "science and nerd humor buyers",
+    ],
+    research_signals=[
+        "Redbubble trending searches and bestseller categories RIGHT NOW",
+        "TikTok #redbubble and #rbdesign viral designs this week",
+        "Reddit r/redbubble, r/printondemand — what is selling, what buyers request",
+        "Etsy sticker trends — sticker designs crossover heavily with Redbubble",
+        "Twitter/Instagram humor accounts — jokes that translate well to merch",
+        "Pinterest boards for 'funny gifts', 'niche stickers', 'aesthetic shirts'",
+    ],
+    excluded_generic=[
+        "generic inspirational quotes",
+        "plain gradient backgrounds",
+        "stock photo style",
+        "corporate clipart",
+        "generic 'live laugh love' style",
+        "basic rainbow pride (oversaturated)",
+        "generic cat/dog without personality",
+    ],
+    output_format={
+        "file": "PNG",
+        "dpi": 300,
+        "min_px": 4500,
+        "color_profile": "sRGB",
+        "max_mb": 40,
+        "background": "white",  # white bg for most products; transparent option for stickers
+    },
+    repeat_required=False,
+    niche_count=14,
+    crossover_count=2,
+)
+
+
 # ── Registre des profils ──────────────────────────────────────────────────────
 
 PROFILES: Dict[str, MarketProfile] = {
     SPOONFLOWER.key: SPOONFLOWER,
+    REDBUBBLE.key: REDBUBBLE,
 }
 
 

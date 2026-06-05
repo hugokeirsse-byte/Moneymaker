@@ -857,6 +857,161 @@ These crossover niches must also follow ALL the same JSON schema as regular nich
 Return ONLY a valid JSON array of exactly {total_count} trend objects ({profile.niche_count} regular + {crossover_count} crossover gap). No text before or after. No markdown wrapper.
 """
 
+    def _build_redbubble_prompt(
+        self,
+        profile: MarketProfile,
+        today: str,
+        extra_constraints: str = "",
+    ) -> str:
+        """
+        Prompt Gemini dédié aux designs standalone Redbubble (t-shirts, stickers, mugs).
+
+        Complètement distinct du prompt Spoonflower seamless : ici on cherche des
+        concepts humor/niche/identité pour illustrations centrées sur fond blanc,
+        pas des tuiles seamless.
+        """
+        products = ", ".join(profile.product_types)
+        buyers = ", ".join(profile.buyer_segments)
+        signals = "\n".join(f"- {s}" for s in profile.research_signals)
+        excluded = ", ".join(profile.excluded_generic)
+
+        crossover_count = getattr(profile, "crossover_count", 2)
+        _override = os.getenv("MONEYMAKER_NICHE_COUNT", "")
+        niche_count = int(_override) if _override.isdigit() else profile.niche_count
+        total_count = niche_count + crossover_count
+
+        extra_block = ""
+        if extra_constraints:
+            extra_block = f"\nOPERATOR CONSTRAINTS (must respect):\n{extra_constraints}\n"
+
+        archive_block = ""
+        try:
+            import json as _json, os as _os
+            _archive_path = "data/redbubble_archive.json"
+            if _os.path.exists(_archive_path):
+                with open(_archive_path) as _fh:
+                    _archive = _json.load(_fh)
+                _names = [n["name"] for n in _archive.get("niches", [])]
+                if _names:
+                    _list = "\n".join(f"- {n}" for n in _names)
+                    archive_block = (
+                        "\nALREADY DONE — DO NOT REPEAT:\n"
+                        f"{_list}\n"
+                        "Generate entirely new concepts.\n"
+                    )
+        except Exception:
+            pass
+
+        return f"""Today is {today}. You are an expert in print-on-demand merchandise for {profile.display_name}.
+{archive_block}
+Use Google Search to find REAL, CURRENT trending design concepts on Redbubble RIGHT NOW.
+Research what is actually selling, what buyers are searching for, what is going viral.
+
+Research these signals:
+{signals}
+
+Products: {products}
+Buyers: {buyers}
+{extra_block}
+
+Identify {total_count} OPPORTUNITY concepts: {niche_count} mainstream + {crossover_count} micro-niche crossover.
+Each concept is a STANDALONE ILLUSTRATION (NOT a seamless pattern) — one centered image that works
+printed on a t-shirt, cut out as a sticker, or featured on a phone case.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WHAT WORKS ON REDBUBBLE — the proven formula:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. CUTE + ABSURD: an adorable animal doing something completely unexpected
+   Examples: "axolotl holding a coffee and crying softly", "frog in a tiny raincoat labeled 'I'm fine'",
+   "capybara sitting in hot spring with cucumbers, absolutely unbothered"
+
+2. NICHE IDENTITY BADGE: a design that says "this is who I am" to a specific community
+   Examples: "plant parent certificate (mock official document)", "certified chaos goblin",
+   "I paused my game for this (angry pixel character)"
+
+3. RELATABLE HUMOR: captures a universal feeling with personality
+   Examples: "anxiety hamster running on wheel labeled 'my brain at 3am'",
+   "cat pushing mug off table labeled 'monday'", "skeleton sitting at desk 'waiting for the weekend'"
+
+4. DARK CUTE (kawaii meets dark/horror): pastel colors + creepy subject
+   Examples: "cute skull with flower crown", "sleeping vampire bat holding teddy bear",
+   "adorable plague doctor saying 'get well soon'"
+
+5. VERY SPECIFIC NICHE: so targeted that the exact person MUST buy it
+   Examples: "houseplant humidifier check (plant parent daily routine)", "DnD critical fail face",
+   "sourdough starter grief support group"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SELECTION RULES:
+- OPPORTUNITY = high demand + low competition on Redbubble RIGHT NOW
+- Exclude: {excluded}
+- Every concept needs a SPECIFIC community who will instantly recognize themselves
+- The design must work at STICKER SIZE (2cm) AND POSTER SIZE (50cm) — bold, clear, readable
+- 2-5 colors max (more colors = harder to read at small scale, higher print cost)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MANDATORY FLUX PROMPT FORMAT FOR REDBUBBLE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+The ai_generation.positive_prompt MUST follow this structure (80-120 words):
+
+  PART 1 — SUBJECT: "Single [CHARACTER/OBJECT], centered on pure white background."
+  PART 2 — STYLE ANCHOR: "[STYLE] illustration — [2-3 style descriptors]."
+    Proven FLUX-compatible style anchors for merch:
+    • Cute/kawaii      → "kawaii flat vector illustration, thick black outline, pastel colors"
+    • Vintage badge    → "vintage retro badge design, distressed texture, muted earth tones, circular composition"
+    • Editorial humor  → "editorial cartoon style, expressive line art, slightly exaggerated proportions"
+    • Dark cute        → "pastel goth illustration, cute but creepy aesthetic, soft colors with dark accents"
+    • Flat modern      → "modern flat vector illustration, geometric shapes, bold solid colors, minimal shading"
+    • Naturalist       → "vintage natural history engraving style, fine crosshatch lines, sepia and black tones"
+  PART 3 — CHARACTER DETAIL: "[POSE/EXPRESSION/PROPS — specific and funny if humor concept]."
+  PART 4 — COLOR PALETTE: "Colors: [3-4 specific HEX codes only]. High contrast."
+  PART 5 — TECHNICAL: "Clean crisp edges, no background elements, isolated on white.
+    Bold enough to read at sticker size. No gradients inside shapes."
+
+WORKED EXAMPLE (Anxiety Frog):
+  "Single cartoon frog in a tiny yellow raincoat, centered on pure white background.
+  Kawaii flat vector illustration, thick black outline, slightly rounded shapes, expressive eyes.
+  The frog has wide anxious eyes and holds a tiny sign reading 'I'm fine' while standing
+  in a puddle. Slightly hunched posture conveying gentle existential dread.
+  Colors: sage green (#7FA87F), sunshine yellow (#F5D547), warm white (#FAFAFA), black (#1A1A1A).
+  Clean crisp edges, no background elements, isolated on white. Bold enough to read at sticker size."
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+For EACH concept, return a JSON object with ALL these fields:
+{{{{
+  "name": "2-4 word concept name (e.g. 'Anxiety Frog Raincoat')",
+  "concept": "one sentence: the core idea — what makes someone say 'I NEED this'",
+  "trending_score": integer 0-100,
+  "market_opportunity": "very_high" | "high" | "medium" | "low",
+  "why_trending": "2 sentences: (1) real demand evidence found on web, (2) why it is an opportunity NOW",
+  "target_buyer": "the exact person who buys this — their identity, what they'll put it on",
+  "best_products": ["t-shirt", "sticker"],
+  "humor_level": "wholesome" | "relatable" | "absurdist" | "dark-cute" | "niche-pride",
+  "niche_community": "the specific community this speaks to (e.g. 'plant parents', 'anxious millennials')",
+  "color_count": 2,
+  "visual_direction": {{{{
+    "style": "kawaii|vintage-badge|editorial-cartoon|dark-cute|flat-modern|naturalist",
+    "mood": "comma-separated mood adjectives",
+    "color_palette": {{{{
+      "primary": ["Color Name #HEXCODE", "Color Name #HEXCODE"],
+      "accent": ["Color Name #HEXCODE"],
+      "background": "White #FFFFFF"
+    }}}}
+  }}}},
+  "ai_generation": {{{{
+    "positive_prompt": "SEE MANDATORY FLUX FORMAT — 80-120 words",
+    "cfg_scale": 4.0
+  }}}},
+  "wikimedia_query": "2-4 word query for reference images",
+  "redbubble_search_query": "2-4 words to search Redbubble for competition analysis"
+}}}}
+
+Return ONLY a valid JSON array of exactly {total_count} objects. No text before or after. No markdown wrapper.
+"""
+
     # ── Normalisation d'une tendance brute Gemini ──────────────────────────────
 
     def _normalize_trend(self, t: Dict) -> Dict:
@@ -989,7 +1144,11 @@ Return ONLY a valid JSON array of exactly {total_count} trend objects ({profile.
 
         profile = _coerce_profile(profile)
         today = date.today().isoformat()
-        prompt = self._build_trend_prompt(profile, today, extra_constraints)
+        # Redbubble uses a dedicated standalone-illustration prompt
+        if profile.key == "redbubble":
+            prompt = self._build_redbubble_prompt(profile, today, extra_constraints)
+        else:
+            prompt = self._build_trend_prompt(profile, today, extra_constraints)
 
         raw = self._call_gemini(prompt)
         if not raw:
