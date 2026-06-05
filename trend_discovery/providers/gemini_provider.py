@@ -605,62 +605,70 @@ WORKED EXAMPLE STYLE A (Japanese Woodblock niche → ai_generation.positive_prom
   All four edges tile perfectly. Designed for high-end wallpaper and textile printing."
 
 ──────────────────────────────────────────────
-STYLE C — ANIMAL GEOMETRY (animal body becomes the tile unit — 2-3 colors max)
-Use for: birds, insects, fish, mammals whose silhouette/wings can become a geometric repeat.
-THE PROVEN BESTSELLER FORMULA: Art Deco Swans ~7500 favorites, Art Deco Cranes, Heron Fan tiles.
-CRITICAL INSIGHT: the animal IS NOT ON a background — the animal IS the tile. Its shape
-interlocks with copies of itself. Spoonflower mirror repeat makes this perfect automatically.
+STYLE C — ANIMAL GEOMETRY (one animal centered = one tile — Spoonflower mirror does the rest)
+Use for: birds, insects, fish, mammals with strong wing/fin/tail geometry.
+THE PROVEN BESTSELLER FORMULA: Art Deco Swans 7500+ favorites, Art Deco Cranes, Herons.
+HOW IT WORKS: the artist draws ONE animal, uploads it as a tile, Spoonflower mirror repeat
+makes wings/fins touch automatically → instant dense interlocking pattern.
+Generate ONE animal only — NOT a repeating pattern, NOT multiple animals, just ONE.
 ──────────────────────────────────────────────
 
-  PART 1 — PATTERN DECLARATION: "Dense seamless mirror repeat pattern for high-end wallpaper.
-    The [ANIMAL] silhouette IS the tile unit — wings/fins/body spread to fill the entire tile,
-    interlocking with mirror copies at every edge. Absolutely no visible background."
+  PART 1 — SINGLE ANIMAL DECLARATION:
+    "Single [ANIMAL], centered on a solid [COLOR] background. Art Deco flat graphic
+    silhouette style for high-end Spoonflower wallpaper tile.
+    The animal fills 75-85% of the tile — equal margin on all 4 edges so Spoonflower
+    mirror repeat will connect [wing tips / fin tips / tail] symmetrically."
 
-  PART 2 — ANIMAL GEOMETRY ANCHOR:
-    Describe HOW the animal's anatomy becomes geometry:
-    "Each [ANIMAL] is rendered as a bold graphic silhouette — [WING/TAIL/FIN/BODY PART]
-    spread wide and stylized into [GEOMETRIC SHAPE: fan arc / radiating spokes / sweep /
-    chevron]. The [BODY PART] forms an interlocking arch/fan/curve that meets its mirror
-    neighbor at [TOP/BOTTOM/SIDE] edge perfectly."
-    Body parts become geometric: wings→fans, tail feathers→radiating lines, fish scales→arcs.
+  PART 2 — POSE & ANATOMY (CRITICAL — this determines if mirror repeat works):
+    The animal MUST be posed symmetrically from left to right (facing front or spread):
+    "The [ANIMAL] faces directly forward / is seen from above / wings fully spread
+    left and right symmetrically. [Wings / fins / tail] extend toward the LEFT and
+    RIGHT tile edges — these are the connection points for Spoonflower mirror repeat."
+    For birds: wings fully spread, tips near left and right edges, head centered at top.
+    For fish: top view, fins spread left/right, tail tip near bottom edge.
+    For insects: dorsal view, wings spread left/right symmetrically.
+    For mammals: frontal silhouette, antlers/ears near top edge.
 
-  PART 3 — MINIMAL PALETTE (2-3 COLORS MAXIMUM — this is the law):
+  PART 3 — MINIMAL PALETTE (2-3 COLORS MAXIMUM — non-negotiable):
     High contrast is MANDATORY. Proven combinations:
-    - Jet black (#0D0D0D) + cream (#F5F0E8) + single gold accent (#C9A84C)
-    - Deep navy (#1C2B4A) + ivory (#FAF7F0) + copper (#B87333)
-    - Charcoal (#2C2C2C) + blush (#F2C9C0) + no third color
-    - Forest (#2D4A2D) + linen (#F0EBE0) + amber (#D4A017)
-    "Each [ANIMAL] is rendered entirely in [COLOR 1] on a [COLOR 2] background.
-    [Optional: Gold/copper accent only on [SPECIFIC DETAIL — beak/eye/feather tip]]."
-    NO gradients, NO shadows, NO textures inside shapes. Flat graphic vector quality.
+    - Jet black (#0D0D0D) background + cream (#F5F0E8) animal + gold (#C9A84C) accent only on beak/eye
+    - Deep navy (#1C2B4A) background + ivory (#FAF7F0) animal + copper (#B87333) accent
+    - Charcoal (#2C2C2C) background + blush (#F2C9C0) animal (2 colors only)
+    - Forest green (#2D4A2D) background + linen (#F0EBE0) animal + amber (#D4A017) accent
+    "The [ANIMAL] is rendered as a single flat [COLOR 1] silhouette on a solid uniform
+    [COLOR 2 (#HEX)] background — no gradient, no texture on the background.
+    [Optional single accent: [COLOR 3] only on [beak/eye/feather tip/fin edge]]."
 
-  PART 4 — ART DECO / GRAPHIC TREATMENT:
-    "The rendering style is Art Deco graphic — bold flat silhouette, crisp hard edges,
-    zero soft rendering. Every line is a precise arc or straight geometric stroke.
-    The [ANIMAL FEATURE] is drawn with [N] precisely spaced radiating lines like a fan.
-    The entire body is a single flat [COLOR] silhouette — no internal feather detail,
-    no fur texture, no photographic shading. Graphic print quality."
+  PART 4 — ART DECO FLAT GRAPHIC TREATMENT:
+    "Art Deco flat graphic rendering — bold silhouette, crisp hard edges, zero soft shading.
+    [Wing feathers / fin rays / tail] drawn as [N] precisely spaced radiating lines, all
+    crisp and sharp. The entire body is a single flat [COLOR] — no internal feather
+    texture, no fur detail, no photographic shading anywhere. Clean vector-print quality.
+    Outlines are firm and precise — no blurry edges."
 
   PART 5 — CLOSING:
-    "The tile is designed for Spoonflower mirror repeat — all four edges have the
-    [ANIMAL BODY PART] touching their mirror counterpart perfectly. 2-color palette
-    ensures maximum production contrast for fabric and wallpaper printing."
+    "Solid uniform [COLOR (#HEX)] background across the entire tile — no texture,
+    no vignette, no gradient. Clean flat color to the edges.
+    [Wing / fin] tips reach within 5% of the left and right tile edges to enable
+    perfect Spoonflower mirror interlocking. 2-3 color palette for maximum
+    fabric and wallpaper printing contrast."
 
-WORKED EXAMPLE STYLE C (Art Deco Herons):
-  "Dense seamless mirror repeat pattern for high-end wallpaper.
-  Each heron is rendered as a bold graphic silhouette — wings spread wide and
-  stylized into a fan arc of precisely 16 radiating primary feather strokes.
-  The spread wings form an interlocking arch that meets its mirror neighbor at
-  the left and right tile edges perfectly — no gap, no background.
-  Each heron body is rendered entirely in cream (#F5F0E8) on a jet black (#0D0D0D)
-  background, with a single gold (#C9A84C) accent on the long beak only.
-  The rendering is Art Deco graphic — bold flat silhouette, crisp hard edges,
-  zero soft rendering. The wing spread is drawn with 16 precisely spaced radiating
-  lines from the shoulder joint to the feather tips, all within a single arc.
-  The body is a single flat cream silhouette — no internal feather texture, no
-  shading, no gradients. Graphic print quality, flat vector aesthetic.
-  Designed for Spoonflower mirror repeat — heron wing tips touch at every tile
-  edge. 3-color palette for maximum fabric printing contrast."
+WORKED EXAMPLE STYLE C (Art Deco Heron tile):
+  "Single great blue heron, centered on a solid jet black (#0D0D0D) background.
+  Art Deco flat graphic silhouette style for high-end Spoonflower wallpaper tile.
+  The heron fills 80% of the tile — equal margin on all 4 edges so Spoonflower
+  mirror repeat will connect wing tips symmetrically.
+  The heron faces directly forward, wings fully spread left and right symmetrically.
+  Wings extend toward the LEFT and RIGHT tile edges — wing tips reach within 5%
+  of the tile edge on both sides. Long neck extended upward, head at the top center.
+  The heron is rendered as a single flat cream (#F5F0E8) silhouette on the black background,
+  with a single gold (#C9A84C) accent on the long beak only — no other colors.
+  Art Deco flat graphic rendering — bold silhouette, crisp hard edges, zero soft shading.
+  Primary feathers drawn as 16 precisely spaced radiating lines from shoulder to tip,
+  all crisp and sharp. The entire body is flat cream — no internal feather texture,
+  no shading, no gradients. Clean vector-print quality.
+  Solid uniform jet black (#0D0D0D) background across the entire tile — no texture,
+  no vignette, perfectly flat. 3-color palette for maximum wallpaper printing contrast."
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
