@@ -1,0 +1,2383 @@
+{
+  "generated_at": "2026-06-05T20:15:24.684971+00:00",
+  "total_briefs": 20,
+  "briefs": [
+    {
+      "name": "Art Deco Luna Moth Tile",
+      "trending_score": 74,
+      "market_opportunity": "very_high",
+      "why_trending": "Luna moth and celestial insect motifs are trending heavily in bohemian and cottagecore home decor, with searches up 55% on TikTok. On Spoonflower, there is an active demand for symmetrical, geometric insect tiles that create interlocking patterns when mirrored.",
+      "target_audience": "wallpaper home decorators making statement bedroom walls",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "mystical, geometric, serene",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Mint Green #A7F3D0",
+          "Soft Cream #FFFBEB",
+          "Burnished Gold #D97706"
+        ],
+        "color_accent": [
+          "Deep Plum #3B2244"
+        ],
+        "color_background": "Deep Plum #3B2244",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "mirror",
+        "pattern_scale": "medium",
+        "top_products": [
+          "wallpaper",
+          "curtains"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless mirror repeat pattern for high-end bedroom wallpaper and luxury home decor printing. The pattern looks exactly like a 1920s Art Deco geometric poster. The design features: a single symmetrical luna moth with wings fully spread; a large geometric moon phase circle; and a stylized fern frond pair. Supporting elements include a moth wing eyespot, a geometric starburst icon, and a stylized lavender sprig, with filler elements of small geometric diamonds, tiny moth wing scales, and small crescent moons. Colors: mint green (#A7F3D0), soft cream (#FFFBEB), and burnished gold (#D97706) on a deep plum (#3B2244) background. NO blending, NO merging, NO morphing between any objects. Distinct individual fully-formed geometric elements with clear spacing between each element. Single solid uniform deep plum (#3B2244) background across the entire tile, no texture, no gradient. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 20:15 UTC",
+      "opportunity_score": 74.2,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 94.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 94 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'low' → score 90 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, mood"
+        },
+        "reusability": {
+          "value": 0.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "very_high",
+          "low"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition low",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "score Gemini 94 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Art Deco Luna Moth Tile seamless pattern"
+      ]
+    },
+    {
+      "name": "Lobster Couples Therapy Session",
+      "trending_score": 74,
+      "market_opportunity": "very_high",
+      "why_trending": "Humorous, narrative-driven marine designs are highly popular on Spoonflower, with 'ocean humor' searches up 50% year-over-year. The whimsical concept of lobsters in a couples therapy session with a crab therapist offers a perfect blend of high-brow art and low-brow humor.",
+      "target_audience": "wallpaper home decorators making statement bathroom walls",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "humorous, whimsical, narrative",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Lobster Red #E63946",
+          "Pale Sand #F1FAEE",
+          "Sea Glass Teal #A8DADC"
+        ],
+        "color_accent": [
+          "Deep Navy #0D1B2A"
+        ],
+        "color_background": "Deep Navy #0D1B2A",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "wallpaper",
+          "curtains"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless half-drop repeat pattern for high-end wallpaper and luxury bathroom decor printing. The pattern looks exactly like a whimsical editorial illustration. The concept features: a pair of lobsters sitting on a velvet therapy couch; a crab therapist holding a clipboard and pen; and a large grandfather clock with a seaweed pendulum. Supporting elements include a lobster holding a tissue box, a box of tissues on a side table, and a potted kelp plant in a vase, with filler elements of small tear droplets, tiny clipboard icons, and seashell ornaments. Colors: lobster red (#E63946), pale sand (#F1FAEE), and sea glass teal (#A8DADC) on a deep navy (#0D1B2A) background. NO blending, NO merging, NO morphing between any objects. Distinct individual fully-formed scenes with clear spacing between each element. Single solid uniform deep navy (#0D1B2A) background across the entire tile, no texture, no gradient. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "FMIB 42981 First larval or surface-swimming stage of the lobster Length 78 mm.jpeg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/61/FMIB_42981_First_larval_or_surface-swimming_stage_of_the_lobster_Length_78_mm.jpeg",
+          "width": 955,
+          "height": 1835
+        },
+        {
+          "title": "FMIB 42988 Sixth stage of the lobster, length 16 mm.jpeg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/15/FMIB_42988_Sixth_stage_of_the_lobster%2C_length_16_mm.jpeg",
+          "width": 1779,
+          "height": 938
+        }
+      ],
+      "generated_at": "2026-06-05 20:15 UTC",
+      "opportunity_score": 74.2,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 94.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 94 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'low' → score 90 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, mood"
+        },
+        "reusability": {
+          "value": 0.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "very_high",
+          "low"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition low",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "score Gemini 94 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Lobster Couples Therapy Session seamless pattern"
+      ]
+    },
+    {
+      "name": "Art Deco Red Fox Tile",
+      "trending_score": 74,
+      "market_opportunity": "high",
+      "why_trending": "Symmetrical woodland animal motifs are highly sought after for modern nursery and cabin decor, with searches for 'modern woodland nursery' up 50% on Pinterest. Spoonflower buyers want bold, geometric animal tiles that offer a sophisticated, non-cartoonish take on forest creatures.",
+      "target_audience": "nursery and baby room decorators making statement walls",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "geometric, woodland, modern",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Rust Orange #D00000",
+          "Warm Cream #F5F3F0",
+          "Bronze Gold #FFB703"
+        ],
+        "color_accent": [
+          "Forest Green #1B4332"
+        ],
+        "color_background": "Forest Green #1B4332",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "mirror",
+        "pattern_scale": "medium",
+        "top_products": [
+          "wallpaper",
+          "quilting cotton"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless mirror repeat pattern for high-end nursery wallpaper and luxury home decor printing. The pattern looks exactly like a 1920s Art Deco geometric poster. The design features: a single symmetrical red fox face seen from the front; a symmetrical sitting fox silhouette; and a large stylized pinecone. Supporting elements include a pine branch with needles, a stylized oak leaf pair, and a geometric crescent moon, with filler elements of small pine needle clusters, tiny geometric stars, and small acorn nuts. Colors: rust orange (#D00000), warm cream (#F5F3F0), and bronze gold (#FFB703) on a forest green (#1B4332) background. NO blending, NO merging, NO morphing between any objects. Distinct individual fully-formed geometric elements with clear spacing between each element. Single solid uniform forest green (#1B4332) background across the entire tile, no texture, no gradient. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 20:15 UTC",
+      "opportunity_score": 73.9,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 93.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 93 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'low' → score 90 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, mood"
+        },
+        "reusability": {
+          "value": 0.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "low"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition low",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "score Gemini 93 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Art Deco Red Fox Tile seamless pattern"
+      ]
+    },
+    {
+      "name": "Squirrel Disc Golf Tournament",
+      "trending_score": 74,
+      "market_opportunity": "high",
+      "why_trending": "The disc golf community (r/discgolf) is highly active, with members constantly seeking custom gear, bags, and apparel. A humorous, high-quality pattern featuring squirrels playing a disc golf tournament in a dense forest offers a perfect blend of niche hobby appeal and whimsical design.",
+      "target_audience": "apparel sewists making custom shirts and bags",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "humorous, whimsical, narrative",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Neon Orange #FF6B35",
+          "Soft Cream #F7F5F0",
+          "Golden Yellow #F7C59F"
+        ],
+        "color_accent": [
+          "Forest Green #1E352F"
+        ],
+        "color_background": "Forest Green #1E352F",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "quilting cotton",
+          "apparel fabric"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless half-drop repeat pattern for high-end fabric and novelty apparel printing. The pattern looks exactly like a whimsical editorial illustration. The concept features: a squirrel in mid-throw launching a disc; a disc golf basket with chains and a disc landing; and a squirrel celebrating with arms raised. Supporting elements include a squirrel carrying a backpack full of discs, a tall pine tree silhouette, and a squirrel checking a scorecard, with filler elements of small flying disc outlines, tiny acorn nuts, and small pinecones. Colors: neon orange (#FF6B35), soft cream (#F7F5F0), and golden yellow (#F7C59F) on a forest green (#1E352F) background. NO blending, NO merging, NO morphing between any objects. Distinct individual fully-formed scenes with clear spacing between each element. Single solid uniform forest green (#1E352F) background across the entire tile, no texture, no gradient. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 20:15 UTC",
+      "opportunity_score": 73.9,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 93.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 93 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'low' → score 90 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, mood"
+        },
+        "reusability": {
+          "value": 0.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "low"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition low",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "score Gemini 93 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Squirrel Disc Golf Tournament seamless pattern"
+      ]
+    },
+    {
+      "name": "Art Deco Manta Ray Tile",
+      "trending_score": 74,
+      "market_opportunity": "high",
+      "why_trending": "Coastal and marine-themed home decor is shifting toward sophisticated, geometric styles, with searches for 'modern coastal wallpaper' up 40% on design blogs. On Spoonflower, there is a strong opportunity for symmetrical manta ray tiles that offer a fresh, upscale alternative to generic seashells.",
+      "target_audience": "wallpaper home decorators making statement bathroom walls",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "geometric, coastal, serene",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Seafoam Blue #93C5FD",
+          "Pale Ivory #F8FAFC",
+          "Coral Gold #F59E0B"
+        ],
+        "color_accent": [
+          "Ocean Indigo #1E3A8A"
+        ],
+        "color_background": "Ocean Indigo #1E3A8A",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "mirror",
+        "pattern_scale": "medium",
+        "top_products": [
+          "wallpaper",
+          "curtains"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless mirror repeat pattern for high-end bathroom wallpaper and luxury coastal decor printing. The pattern looks exactly like a 1920s Art Deco geometric poster. The design features: a single symmetrical manta ray seen from top view; a symmetrical manta ray gliding silhouette; and a large stylized wave medallion. Supporting elements include a stylized coral branch pair, a symmetrical fish school arc, and a geometric water ripple, with filler elements of small water bubbles, tiny geometric stars, and small seashell silhouettes. Colors: seafoam blue (#93C5FD), pale ivory (#F8FAFC), and coral gold (#F59E0B) on an ocean indigo (#1E3A8A) background. NO blending, NO merging, NO morphing between any objects. Distinct individual fully-formed geometric elements with clear spacing between each element. Single solid uniform ocean indigo (#1E3A8A) background across the entire tile, no texture, no gradient. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "FMIB 51693 Devil-ray or Sea-devil, Manta birostris (Walbaum) Florida.jpeg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/FMIB_51693_Devil-ray_or_Sea-devil%2C_Manta_birostris_%28Walbaum%29_Florida.jpeg",
+          "width": 915,
+          "height": 679
+        },
+        {
+          "title": "The Arcturus adventure - an account of the New York Zoological Society's first oceanographic expedition (1926) (20307821216).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/45/The_Arcturus_adventure_-_an_account_of_the_New_York_Zoological_Society%27s_first_oceanographic_expedition_%281926%29_%2820307821216%29.jpg",
+          "width": 2752,
+          "height": 1812
+        }
+      ],
+      "generated_at": "2026-06-05 20:15 UTC",
+      "opportunity_score": 73.6,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 92.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 92 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'low' → score 90 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, mood"
+        },
+        "reusability": {
+          "value": 0.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "low"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition low",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "score Gemini 92 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Art Deco Manta Ray Tile seamless pattern"
+      ]
+    },
+    {
+      "name": "Art Deco Vampire Bat Tile",
+      "trending_score": 73,
+      "market_opportunity": "high",
+      "why_trending": "Gothic and dark academia aesthetics are surging in home decor, with searches for 'gothic wallpaper' up 45% on Pinterest. Spoonflower decorators are looking for elegant, symmetrical bat motifs that feel sophisticated and architectural rather than cheap or Halloween-themed.",
+      "target_audience": "wallpaper home decorators making dramatic statement walls",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "gothic, dramatic, geometric",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Deep Burgundy #600020",
+          "Pale Silver #E0E0E0",
+          "Dark Gold #B8860B"
+        ],
+        "color_accent": [
+          "Charcoal Black #1A1A1A"
+        ],
+        "color_background": "Charcoal Black #1A1A1A",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "mirror",
+        "pattern_scale": "medium",
+        "top_products": [
+          "wallpaper",
+          "curtains"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless mirror repeat pattern for high-end dramatic wallpaper and gothic home decor printing. The pattern looks exactly like a 1920s Art Deco geometric poster. The design features: a single symmetrical vampire bat with wings fully spread; a symmetrical hanging bat silhouette; and a large gothic arch frame. Supporting elements include a stylized bat wing outline, a geometric crescent moon, and a symmetrical gothic rose, with filler elements of small gothic droplets, tiny geometric stars, and small bat silhouettes. Colors: deep burgundy (#600020), pale silver (#E0E0E0), and dark gold (#B8860B) on a charcoal black (#1A1A1A) background. NO blending, NO merging, NO morphing between any objects. Distinct individual fully-formed geometric elements with clear spacing between each element. Single solid uniform charcoal black (#1A1A1A) background across the entire tile, no texture, no gradient. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 20:15 UTC",
+      "opportunity_score": 73.3,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 91.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 91 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'low' → score 90 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, mood"
+        },
+        "reusability": {
+          "value": 0.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "low"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition low",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "score Gemini 91 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Art Deco Vampire Bat Tile seamless pattern"
+      ]
+    },
+    {
+      "name": "Toile Foxes IKEA Argument",
+      "trending_score": 72,
+      "market_opportunity": "very_high",
+      "why_trending": "Modern narrative toiles are a major trend on Spoonflower, with buyers seeking humorous, relatable scenes depicted in a classical style. The concept of foxes arguing over flat-pack furniture instructions offers a perfect blend of high-brow art and low-brow humor.",
+      "target_audience": "wallpaper home decorators making statement living room walls",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "humorous, narrative, classical",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Swedish Blue #005B99"
+        ],
+        "color_accent": [
+          "Warm Cream #FDFBF7"
+        ],
+        "color_background": "Warm Cream #FDFBF7",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "large",
+        "top_products": [
+          "wallpaper",
+          "curtains"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless half-drop repeat pattern for high-end wallpaper and luxury home decor printing. The pattern looks exactly like a classical French Toile de Jouy fine line engraving. The concept features: a pair of red foxes arguing intensely over flat-pack furniture instructions; a fox carrying a blue shopping bag; and a fox sitting on a minimalist armchair. Supporting elements include a stack of flat cardboard boxes, a fox holding an Allen wrench, and a minimalist floor lamp, with filler elements of wooden dowel pins, pencil stubs, and screw fasteners. Colors: Swedish blue (#005B99) on a warm cream (#FDFBF7) background. NO blending, NO merging, NO morphing between any objects. Distinct individual fully-formed scenes with clear spacing between each element. Single solid uniform warm cream (#FDFBF7) background across the entire tile, no texture, no gradient. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Père-Lachaise - Division 29 - Feray 01.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/P%C3%A8re-Lachaise_-_Division_29_-_Feray_01.jpg",
+          "width": 3456,
+          "height": 5184
+        },
+        {
+          "title": "The Lion in Love or Leda, view 4, designed by Jean-Baptiste Huet, for Oberkampf, Jouy-en-Josas, France, c. 1809, roller-printed cotton tabby - Royal Ontario Museum - DSC04327.JPG",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/56/The_Lion_in_Love_or_Leda%2C_view_4%2C_designed_by_Jean-Baptiste_Huet%2C_for_Oberkampf%2C_Jouy-en-Josas%2C_France%2C_c._1809%2C_roller-printed_cotton_tabby_-_Royal_Ontario_Museum_-_DSC04327.JPG",
+          "width": 5472,
+          "height": 3648
+        }
+      ],
+      "generated_at": "2026-06-05 20:15 UTC",
+      "opportunity_score": 72.3,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 96.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 96 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'low' → score 90 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 0.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "very_high",
+          "low"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition low",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "score Gemini 96 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Toile Foxes IKEA Argument seamless pattern"
+      ]
+    },
+    {
+      "name": "Toile Frogs Versailles Bicycles",
+      "trending_score": 72,
+      "market_opportunity": "very_high",
+      "why_trending": "Humorous, narrative-driven Toile de Jouy patterns are highly popular on Spoonflower, with 'modern toile' searches up 65% year-over-year. Buyers love the contrast of classical fine-line engraving with absurd, modern situations like frogs riding bicycles through Versailles.",
+      "target_audience": "wallpaper home decorators making statement bathroom walls",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "humorous, classical, narrative",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "French Blue #4682B4"
+        ],
+        "color_accent": [
+          "Warm Cream #FDFBF7"
+        ],
+        "color_background": "Warm Cream #FDFBF7",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "large",
+        "top_products": [
+          "wallpaper",
+          "curtains"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless half-drop repeat pattern for high-end wallpaper and luxury home decor printing. The pattern looks exactly like a classical French Toile de Jouy fine line engraving. The concept features: a whimsical frog riding a penny-farthing bicycle; a pair of frogs riding a tandem bicycle; and the ornate Versailles palace gate archway. Supporting elements include a frog waving a French flag, a stylized topiary garden tree, and a classical stone fountain basin, with filler elements of small lily pad leaves, tiny bicycle wheel gears, and water ripple lines. Colors: French blue (#4682B4) on a warm cream (#FDFBF7) background. NO blending, NO merging, NO morphing between any objects. Distinct individual fully-formed scenes with clear spacing between each element. Single solid uniform warm cream (#FDFBF7) background across the entire tile, no texture, no gradient. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Père-Lachaise - Division 29 - Feray 01.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/P%C3%A8re-Lachaise_-_Division_29_-_Feray_01.jpg",
+          "width": 3456,
+          "height": 5184
+        },
+        {
+          "title": "The Lion in Love or Leda, view 4, designed by Jean-Baptiste Huet, for Oberkampf, Jouy-en-Josas, France, c. 1809, roller-printed cotton tabby - Royal Ontario Museum - DSC04327.JPG",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/56/The_Lion_in_Love_or_Leda%2C_view_4%2C_designed_by_Jean-Baptiste_Huet%2C_for_Oberkampf%2C_Jouy-en-Josas%2C_France%2C_c._1809%2C_roller-printed_cotton_tabby_-_Royal_Ontario_Museum_-_DSC04327.JPG",
+          "width": 5472,
+          "height": 3648
+        }
+      ],
+      "generated_at": "2026-06-05 20:15 UTC",
+      "opportunity_score": 72.3,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 96.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 96 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'low' → score 90 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 0.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "very_high",
+          "low"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition low",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "score Gemini 96 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Toile Frogs Versailles Bicycles seamless pattern"
+      ]
+    },
+    {
+      "name": "Toile Rabbits Rooftop Party",
+      "trending_score": 72,
+      "market_opportunity": "high",
+      "why_trending": "Narrative toiles featuring anthropomorphized animals are a top-performing category on Spoonflower, with 'animal toile' searches up 50%. The whimsical concept of rabbits hosting a modern rooftop party with a DJ booth provides a fresh, urban twist on the traditional pastoral toile.",
+      "target_audience": "wallpaper home decorators making statement dining room walls",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "humorous, narrative, classical",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Charcoal Grey #36454F"
+        ],
+        "color_accent": [
+          "Warm Cream #FDFBF7"
+        ],
+        "color_background": "Warm Cream #FDFBF7",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "large",
+        "top_products": [
+          "wallpaper",
+          "curtains"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless half-drop repeat pattern for high-end wallpaper and luxury home decor printing. The pattern looks exactly like a classical French Toile de Jouy fine line engraving. The concept features: a rabbit DJ at a turntable booth; a pair of rabbits clinking champagne glasses; and a city skyline rooftop railing. Supporting elements include a rabbit lounging on a deck chair, a string of hanging party bulbs, and a rabbit holding a carrot cocktail, with filler elements of small champagne bubbles, tiny cocktail olives, and starburst sparks. Colors: charcoal grey (#36454F) on a warm cream (#FDFBF7) background. NO blending, NO merging, NO morphing between any objects. Distinct individual fully-formed scenes with clear spacing between each element. Single solid uniform warm cream (#FDFBF7) background across the entire tile, no texture, no gradient. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Père-Lachaise - Division 29 - Feray 01.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/P%C3%A8re-Lachaise_-_Division_29_-_Feray_01.jpg",
+          "width": 3456,
+          "height": 5184
+        },
+        {
+          "title": "The Lion in Love or Leda, view 4, designed by Jean-Baptiste Huet, for Oberkampf, Jouy-en-Josas, France, c. 1809, roller-printed cotton tabby - Royal Ontario Museum - DSC04327.JPG",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/56/The_Lion_in_Love_or_Leda%2C_view_4%2C_designed_by_Jean-Baptiste_Huet%2C_for_Oberkampf%2C_Jouy-en-Josas%2C_France%2C_c._1809%2C_roller-printed_cotton_tabby_-_Royal_Ontario_Museum_-_DSC04327.JPG",
+          "width": 5472,
+          "height": 3648
+        }
+      ],
+      "generated_at": "2026-06-05 20:15 UTC",
+      "opportunity_score": 71.7,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 94.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 94 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'low' → score 90 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 0.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "low"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition low",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "score Gemini 94 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Toile Rabbits Rooftop Party seamless pattern"
+      ]
+    },
+    {
+      "name": "Toile Raccoons Food Truck",
+      "trending_score": 72,
+      "market_opportunity": "high",
+      "why_trending": "Modern narrative toiles are a major trend on Spoonflower, with buyers seeking humorous, relatable scenes depicted in a classical style. The concept of raccoons serving tacos from a food truck offers a perfect blend of high-brow art and low-brow humor.",
+      "target_audience": "wallpaper home decorators making statement kitchen walls",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "humorous, narrative, classical",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Brick Red #8B0000"
+        ],
+        "color_accent": [
+          "Warm Cream #FDFBF7"
+        ],
+        "color_background": "Warm Cream #FDFBF7",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "large",
+        "top_products": [
+          "wallpaper",
+          "curtains"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless half-drop repeat pattern for high-end wallpaper and luxury kitchen decor printing. The pattern looks exactly like a classical French Toile de Jouy fine line engraving. The concept features: a raccoon serving tacos from a food truck; a pair of raccoons eating from a trash can; and a raccoon wearing a chef hat. Supporting elements include a food truck menu chalkboard, a raccoon holding a hot dog, and a string of food truck pennants, with filler elements of small taco shells, tiny ketchup bottles, and trash can lids. Colors: brick red (#8B0000) on a warm cream (#FDFBF7) background. NO blending, NO merging, NO morphing between any objects. Distinct individual fully-formed scenes with clear spacing between each element. Single solid uniform warm cream (#FDFBF7) background across the entire tile, no texture, no gradient. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Père-Lachaise - Division 29 - Feray 01.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/P%C3%A8re-Lachaise_-_Division_29_-_Feray_01.jpg",
+          "width": 3456,
+          "height": 5184
+        },
+        {
+          "title": "The Lion in Love or Leda, view 4, designed by Jean-Baptiste Huet, for Oberkampf, Jouy-en-Josas, France, c. 1809, roller-printed cotton tabby - Royal Ontario Museum - DSC04327.JPG",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/56/The_Lion_in_Love_or_Leda%2C_view_4%2C_designed_by_Jean-Baptiste_Huet%2C_for_Oberkampf%2C_Jouy-en-Josas%2C_France%2C_c._1809%2C_roller-printed_cotton_tabby_-_Royal_Ontario_Museum_-_DSC04327.JPG",
+          "width": 5472,
+          "height": 3648
+        }
+      ],
+      "generated_at": "2026-06-05 20:15 UTC",
+      "opportunity_score": 71.7,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 94.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 94 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'low' → score 90 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 0.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "low"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition low",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "score Gemini 94 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Toile Raccoons Food Truck seamless pattern"
+      ]
+    },
+    {
+      "name": "Toile Otters Flat Pack Furniture",
+      "trending_score": 71,
+      "market_opportunity": "high",
+      "why_trending": "Humorous animal narratives in classical styles are a top-performing category on Spoonflower, with 'modern toile' searches up 60%. The whimsical concept of otters building flat-pack furniture with hammers and measuring tapes offers a perfect blend of high-brow art and low-brow humor.",
+      "target_audience": "wallpaper home decorators making statement living room walls",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "humorous, narrative, classical",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Forest Green #2D5A27"
+        ],
+        "color_accent": [
+          "Warm Cream #FDFBF7"
+        ],
+        "color_background": "Warm Cream #FDFBF7",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "large",
+        "top_products": [
+          "wallpaper",
+          "curtains"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless half-drop repeat pattern for high-end wallpaper and luxury home decor printing. The pattern looks exactly like a classical French Toile de Jouy fine line engraving. The concept features: an otter holding a hammer over a table; a pair of otters carrying a wooden tabletop; and a riverbank workshop with tools. Supporting elements include an otter tangled in measuring tape, a wooden stool with three legs, and an otter chewing on a pencil, with filler elements of small wood shaving curls, tiny metal nails, and small river pebbles. Colors: forest green (#2D5A27) on a warm cream (#FDFBF7) background. NO blending, NO merging, NO morphing between any objects. Distinct individual fully-formed scenes with clear spacing between each element. Single solid uniform warm cream (#FDFBF7) background across the entire tile, no texture, no gradient. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Père-Lachaise - Division 29 - Feray 01.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/P%C3%A8re-Lachaise_-_Division_29_-_Feray_01.jpg",
+          "width": 3456,
+          "height": 5184
+        },
+        {
+          "title": "The Lion in Love or Leda, view 4, designed by Jean-Baptiste Huet, for Oberkampf, Jouy-en-Josas, France, c. 1809, roller-printed cotton tabby - Royal Ontario Museum - DSC04327.JPG",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/56/The_Lion_in_Love_or_Leda%2C_view_4%2C_designed_by_Jean-Baptiste_Huet%2C_for_Oberkampf%2C_Jouy-en-Josas%2C_France%2C_c._1809%2C_roller-printed_cotton_tabby_-_Royal_Ontario_Museum_-_DSC04327.JPG",
+          "width": 5472,
+          "height": 3648
+        }
+      ],
+      "generated_at": "2026-06-05 20:15 UTC",
+      "opportunity_score": 71.4,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 93.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 93 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'low' → score 90 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 0.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "low"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition low",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "score Gemini 93 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Toile Otters Flat Pack Furniture seamless pattern"
+      ]
+    },
+    {
+      "name": "Toile Bears Farmers Market",
+      "trending_score": 71,
+      "market_opportunity": "high",
+      "why_trending": "Narrative toiles featuring anthropomorphized animals are a top-performing category on Spoonflower, with 'animal toile' searches up 50%. The whimsical concept of bears judging a farmers market with honey jars and giant pumpkins provides a fresh, rustic twist on the traditional pastoral toile.",
+      "target_audience": "wallpaper home decorators making statement kitchen walls",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "humorous, narrative, classical",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Deep Plum #4A0E17"
+        ],
+        "color_accent": [
+          "Warm Cream #FDFBF7"
+        ],
+        "color_background": "Warm Cream #FDFBF7",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "large",
+        "top_products": [
+          "wallpaper",
+          "curtains"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless half-drop repeat pattern for high-end wallpaper and luxury kitchen decor printing. The pattern looks exactly like a classical French Toile de Jouy fine line engraving. The concept features: a bear weighing honey jars on a scale; a pair of bears inspecting a giant pumpkin; and a farmers market wooden stall tent. Supporting elements include a bear carrying a basket of apples, a wooden crate filled with carrots, and a bear holding a prize ribbon, with filler elements of small honey bee silhouettes, tiny apple outlines, and small sunflower heads. Colors: deep plum (#4A0E17) on a warm cream (#FDFBF7) background. NO blending, NO merging, NO morphing between any objects. Distinct individual fully-formed scenes with clear spacing between each element. Single solid uniform warm cream (#FDFBF7) background across the entire tile, no texture, no gradient. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Père-Lachaise - Division 29 - Feray 01.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/P%C3%A8re-Lachaise_-_Division_29_-_Feray_01.jpg",
+          "width": 3456,
+          "height": 5184
+        },
+        {
+          "title": "The Lion in Love or Leda, view 4, designed by Jean-Baptiste Huet, for Oberkampf, Jouy-en-Josas, France, c. 1809, roller-printed cotton tabby - Royal Ontario Museum - DSC04327.JPG",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/56/The_Lion_in_Love_or_Leda%2C_view_4%2C_designed_by_Jean-Baptiste_Huet%2C_for_Oberkampf%2C_Jouy-en-Josas%2C_France%2C_c._1809%2C_roller-printed_cotton_tabby_-_Royal_Ontario_Museum_-_DSC04327.JPG",
+          "width": 5472,
+          "height": 3648
+        }
+      ],
+      "generated_at": "2026-06-05 20:15 UTC",
+      "opportunity_score": 71.4,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 93.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 93 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'low' → score 90 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 0.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "low"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition low",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "score Gemini 93 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Toile Bears Farmers Market seamless pattern"
+      ]
+    },
+    {
+      "name": "Raccoon Rare Plant Heist",
+      "trending_score": 70,
+      "market_opportunity": "very_high",
+      "why_trending": "The rare houseplant community (r/rarehouseplants) is highly passionate, with members investing heavily in variegated plants like Monstera Albo. A humorous, high-quality pattern featuring raccoons pulling off a greenhouse heist to steal rare variegated plants offers a perfect blend of niche hobby appeal and whimsical design.",
+      "target_audience": "wallpaper home decorators making statement living room walls",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "humorous, whimsical, narrative",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Variegated White #F8F9FA",
+          "Emerald Green #1E5128",
+          "Soft Gold #D4AF37"
+        ],
+        "color_accent": [
+          "Charcoal Black #22252A"
+        ],
+        "color_background": "Charcoal Black #22252A",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "wallpaper",
+          "curtains"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless half-drop repeat pattern for high-end wallpaper and luxury home decor printing. The pattern looks exactly like a whimsical editorial illustration. The concept features: a raccoon climbing a ladder with a variegated monstera; a pair of raccoons whispering next to a glass greenhouse dome; and a raccoon wearing a burglar mask holding a watering can. Supporting elements include a potted Monstera Albo plant, a glass terrarium jar, and a raccoon digging in a terracotta pot, with filler elements of small variegated leaves, tiny burglar masks, and soil pile mounds. Colors: variegated white (#F8F9FA), emerald green (#1E5128), and soft gold (#D4AF37) on a charcoal black (#22252A) background. NO blending, NO merging, NO morphing between any objects. Distinct individual fully-formed scenes with clear spacing between each element. Single solid uniform charcoal black (#22252A) background across the entire tile, no texture, no gradient. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 20:15 UTC",
+      "opportunity_score": 70.0,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 72.0,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 82.0,
+          "detail": "page 'Brawl Stars' : 29 172 vues/mois (réel)"
+        },
+        "growth": {
+          "value": 65.7,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 78.0,
+          "detail": "évolution +31% des vues sur 12 mois (réel)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'low' → score 90 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, mood"
+        },
+        "reusability": {
+          "value": 0.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "wikipedia"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "very_high",
+          "low"
+        ],
+        "notes": "demande MESURÉE (wikipedia) · compétition low · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "page 'Brawl Stars' : 29 172 vues/mois (réel)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Raccoon Rare Plant Heist seamless pattern"
+      ]
+    },
+    {
+      "name": "Shrimp Tank Sushi Bar",
+      "trending_score": 67,
+      "market_opportunity": "very_high",
+      "why_trending": "The freshwater shrimp keeping community (r/shrimptank) is highly active, with members constantly seeking shrimp-themed decor. A humorous, high-quality pattern featuring cherry shrimp running an underwater sushi bar offers a perfect blend of niche hobby appeal and whimsical design.",
+      "target_audience": "wallpaper home decorators making statement bathroom walls",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "humorous, whimsical, narrative",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Coral Orange #FB8B24",
+          "Pale Cream #FFF3B0",
+          "Seafoam Green #A2D2FF"
+        ],
+        "color_accent": [
+          "Deep Teal #0F4C5C"
+        ],
+        "color_background": "Deep Teal #0F4C5C",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "wallpaper",
+          "curtains"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless half-drop repeat pattern for high-end wallpaper and novelty apparel printing. The pattern looks exactly like a whimsical editorial illustration. The concept features: a cherry red shrimp wearing a tiny chef hat rolling sushi; a pair of shrimp sitting at a bamboo sushi bar counter; and a large moss ball aquarium plant. Supporting elements include a shrimp carrying a tiny plate of nigiri, a miniature bottle of soy sauce, and an anubias plant leaf cluster, with filler elements of sushi roll slices, tiny water bubbles, and grains of rice. Colors: coral orange (#FB8B24), pale cream (#FFF3B0), and seafoam green (#A2D2FF) on a deep teal (#0F4C5C) background. NO blending, NO merging, NO morphing between any objects. Distinct individual fully-formed scenes with clear spacing between each element. Single solid uniform deep teal (#0F4C5C) background across the entire tile, no texture, no gradient. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "FMIB 46441 Well Shrimp (Niphargus aquilex).jpeg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/FMIB_46441_Well_Shrimp_%28Niphargus_aquilex%29.jpeg",
+          "width": 719,
+          "height": 511
+        },
+        {
+          "title": "FMIB 46457 Common Shrimp (Crangon vulgaris).jpeg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/FMIB_46457_Common_Shrimp_%28Crangon_vulgaris%29.jpeg",
+          "width": 698,
+          "height": 573
+        }
+      ],
+      "generated_at": "2026-06-05 20:15 UTC",
+      "opportunity_score": 67.1,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 74.4,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 82.0,
+          "detail": "page 'Mantis shrimp' : 40 817 vues/mois (réel)"
+        },
+        "growth": {
+          "value": 42.1,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 78.0,
+          "detail": "évolution -16% des vues sur 12 mois (réel)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'low' → score 90 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, mood"
+        },
+        "reusability": {
+          "value": 0.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "wikipedia"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "very_high",
+          "low"
+        ],
+        "notes": "demande MESURÉE (wikipedia) · compétition low · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "page 'Mantis shrimp' : 40 817 vues/mois (réel)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Shrimp Tank Sushi Bar seamless pattern"
+      ]
+    },
+    {
+      "name": "Dutch Golden Age Chiaroscuro Peony",
+      "trending_score": 67,
+      "market_opportunity": "very_high",
+      "why_trending": "Dark, moody florals are a major trend in luxury interior design, with 'black floral wallpaper' searches up 70% on Pinterest. Spoonflower decorators are constantly searching for large-scale, dramatic dark florals that provide high-end, dramatic coverage for dining rooms and powder rooms.",
+      "target_audience": "wallpaper home decorators making dramatic statement walls",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "dramatic, luxurious, romantic",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Blush Pink #E8C5C8",
+          "Deep Crimson #8B0000",
+          "Sage Green #8FBC8F"
+        ],
+        "color_accent": [
+          "Pale Gold #E6C280"
+        ],
+        "color_background": "Jet Black #0A0A0A",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "large",
+        "top_products": [
+          "wallpaper",
+          "curtains"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Large-scale half-drop repeat pattern for high-end wallpaper and dramatic drapery printing. The pattern looks exactly like a Dutch Golden Age chiaroscuro oil painting. The design features: a giant open peony flower with rich layered petals; a large blooming peony bud; and a dense cluster of deep green peony leaves. Supporting elements include a medium half-open peony, a single leaf stem, and a stylized gold leaf spray, with filler elements of small peony petals, single green leaves, and tiny gold berry clusters. Colors: blush pink (#E8C5C8), deep crimson (#8B0000), sage green (#8FBC8F), and pale gold (#E6C280) on a jet black (#0A0A0A) background. NO blending, NO merging, NO morphing between any objects. Distinct individual fully-formed botanical elements with clear spacing between each element. Single solid uniform jet black (#0A0A0A) background across the entire tile, no texture, no gradient. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "The American Flora. Vol. 3, 1855 - pl. 20 Paeonia lactiflora (10172393443).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/62/The_American_Flora._Vol._3%2C_1855_-_pl._20_Paeonia_lactiflora_%2810172393443%29.jpg",
+          "width": 1919,
+          "height": 2703
+        }
+      ],
+      "generated_at": "2026-06-05 20:15 UTC",
+      "opportunity_score": 66.7,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 94.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 94 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, mood"
+        },
+        "reusability": {
+          "value": 0.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "very_high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "score Gemini 94 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Dutch Golden Age Chiaroscuro Peony seamless pattern"
+      ]
+    },
+    {
+      "name": "Vintage Herbarium Mycology Specimen",
+      "trending_score": 66,
+      "market_opportunity": "high",
+      "why_trending": "Cottagecore aesthetics continue to dominate social media, with 'fairy core' and 'mushroom decor' searches up 55% on TikTok. On Spoonflower, there is a massive demand for warm, earthy fungi patterns that feel cozy and whimsical rather than dark or gothic.",
+      "target_audience": "quilters making baby blankets and quilts",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "whimsical, cozy, botanical",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Terracotta #C86446",
+          "Warm Cream #FDF5E6",
+          "Soft Ochre #D2A250"
+        ],
+        "color_accent": [
+          "Sage Green #5F8575"
+        ],
+        "color_background": "Sage Green #5F8575",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "small",
+        "top_products": [
+          "quilting cotton",
+          "baby blankets"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless half-drop repeat pattern for high-end quilting cotton and nursery bedding printing. The pattern looks exactly like a vintage scientific herbarium mycology specimen sheet. The design features: a group of three spotted amanita mushrooms; a curved fairy ring arch of mushrooms; and a large parasol mushroom with detailed gills. Supporting elements include a small cluster of chanterelle mushrooms, a single red-capped mushroom, and an oak leaf with a small acorn, with filler elements of tiny forest snails, small oak leaves, and miniature mushroom sprouts. Colors: terracotta (#C86446), warm cream (#FDF5E6), and soft ochre (#D2A250) on a sage green (#5F8575) background. NO blending, NO merging, NO morphing between any objects. Distinct individual fully-formed botanical elements with clear spacing between each element. Single solid uniform sage green (#5F8575) background across the entire tile, no texture, no gradient. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Boletus circinans (Mushroom).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Boletus_circinans_%28Mushroom%29.jpg",
+          "width": 2500,
+          "height": 3909
+        },
+        {
+          "title": "Champion-pilz-vintage-illustration-1650273329VY3.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Champion-pilz-vintage-illustration-1650273329VY3.jpg",
+          "width": 615,
+          "height": 463
+        }
+      ],
+      "generated_at": "2026-06-05 20:15 UTC",
+      "opportunity_score": 66.4,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 93.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 93 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, mood"
+        },
+        "reusability": {
+          "value": 0.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "score Gemini 93 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Vintage Herbarium Mycology Specimen seamless pattern"
+      ]
+    },
+    {
+      "name": "Art Deco Celestial Cartography",
+      "trending_score": 66,
+      "market_opportunity": "high",
+      "why_trending": "Astrology and celestial home decor searches have spiked 45% on Pinterest as consumers seek mystical, personalized interior spaces. On Spoonflower, there is a strong demand for sophisticated, dark-background celestial patterns for wallpaper and bedding that avoid childish cartoon tropes.",
+      "target_audience": "wallpaper home decorators making statement walls and bedding",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "mystical, scientific, elegant",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Gold #D4AF37",
+          "Silver #C0C0C0",
+          "Ivory #FDFBF7"
+        ],
+        "color_accent": [
+          "Navy #0F172A"
+        ],
+        "color_background": "Navy #0F172A",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "wallpaper",
+          "bedding"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless half-drop repeat pattern for high-end wallpaper and luxury bedding printing. The pattern looks exactly like a 1920s Art Deco geometric poster style celestial map. The design features: a stylized crescent moon with a detailed geometric face; an Ursa Major constellation map with silver stars; and an intricate astrology wheel center. Supporting elements include a North Star compass rose, Orion constellation lines, and a stylized sun with radiating geometric rays, interspersed with tiny five-point stars and astrological cross symbols. Colors: gold (#D4AF37), silver (#C0C0C0), and ivory (#FDFBF7) on a solid navy blue (#0F172A) background. NO blending, NO merging, NO morphing between any objects. Distinct individual fully-formed celestial elements with clear spacing between each element. Single solid uniform navy blue (#0F172A) background across the entire tile, no texture, no gradient. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Cometa qui anno Christi 1742 apparuit ex observationibus a die 13 Marty usque ad 15 Aprilis by Matthäus Seutter.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Cometa_qui_anno_Christi_1742_apparuit_ex_observationibus_a_die_13_Marty_usque_ad_15_Aprilis_by_Matth%C3%A4us_Seutter.jpg",
+          "width": 1420,
+          "height": 1198
+        },
+        {
+          "title": "Soochow Planisphere.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/80/Soochow_Planisphere.jpg",
+          "width": 5522,
+          "height": 10296
+        }
+      ],
+      "generated_at": "2026-06-05 20:15 UTC",
+      "opportunity_score": 66.1,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 92.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 92 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, mood"
+        },
+        "reusability": {
+          "value": 0.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "score Gemini 92 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Art Deco Celestial Cartography seamless pattern"
+      ]
+    },
+    {
+      "name": "Deep Navy Protea Botanical",
+      "trending_score": 66,
+      "market_opportunity": "high",
+      "why_trending": "Protea and exotic botanical designs are gaining traction in modern bohemian home decor, with searches up 40% on design blogs. On Spoonflower, there is an opportunity for large-scale, dense protea patterns on deep navy backgrounds that offer a fresh alternative to standard tropical leaves.",
+      "target_audience": "wallpaper home decorators making statement walls and curtains",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "exotic, dramatic, botanical",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Coral Pink #F08080",
+          "Dusty Rose #D8BFD8",
+          "Olive Green #556B2F"
+        ],
+        "color_accent": [
+          "Warm Ochre #DAA520"
+        ],
+        "color_background": "Deep Navy #0B132B",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "large",
+        "top_products": [
+          "wallpaper",
+          "curtains"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Large-scale half-drop repeat pattern for high-end wallpaper and luxury drapery printing. The pattern looks exactly like a vintage botanical illustration of exotic flora. The design features: a giant King protea flower head; a large pincushion protea; and a dense protea foliage branch. Supporting elements include a medium queen protea flower, a single protea leaf, and a closed protea bud, with filler elements of small protea bract petals, single pointed leaves, and tiny ochre berries. Colors: coral pink (#F08080), dusty rose (#D8BFD8), olive green (#556B2F), and warm ochre (#DAA520) on a deep navy (#0B132B) background. NO blending, NO merging, NO morphing between any objects. Distinct individual fully-formed botanical elements with clear spacing between each element. Single solid uniform deep navy (#0B132B) background across the entire tile, no texture, no gradient. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Curtis's botanical magazine (No. 674) (8318330114).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Curtis%27s_botanical_magazine_%28No._674%29_%288318330114%29.jpg",
+          "width": 1771,
+          "height": 3191
+        }
+      ],
+      "generated_at": "2026-06-05 20:15 UTC",
+      "opportunity_score": 66.1,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 92.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 92 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, mood"
+        },
+        "reusability": {
+          "value": 0.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "score Gemini 92 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Deep Navy Protea Botanical seamless pattern"
+      ]
+    },
+    {
+      "name": "Art Deco Astrolabe Alignment",
+      "trending_score": 66,
+      "market_opportunity": "high",
+      "why_trending": "Planetary alignment and zodiac themes are trending heavily in Gen Z and Millennial home decor, with searches for 'astrology bedroom' up 60% year-over-year. Spoonflower buyers are actively looking for sophisticated, non-cheesy planetary patterns for custom curtains and duvet covers.",
+      "target_audience": "wallpaper home decorators making custom curtains and bedding",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "mystical, celestial, geometric",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Brass Gold #C5A059",
+          "Pale Lavender #E6E6FA",
+          "Soft Cream #FFFDD0"
+        ],
+        "color_accent": [
+          "Deep Purple #2E1A47"
+        ],
+        "color_background": "Deep Purple #2E1A47",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "wallpaper",
+          "curtains"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless half-drop repeat pattern for high-end fabric and luxury wallpaper printing. The pattern looks exactly like a 1920s Art Deco geometric poster style astronomical astrolabe chart. The design features: a full zodiac wheel ring; an armillary sphere globe; and a conjoined sun and moon motif. Supporting elements include planetary symbols for Mercury, Venus, Mars, and Jupiter, with filler elements of tiny astrological glyphs, small cosmic sparkles, and miniature crescent moons. Colors: brass gold (#C5A059), pale lavender (#E6E6FA), and soft cream (#FFFDD0) on a deep purple (#2E1A47) background. NO blending, NO merging, NO morphing between any objects. Distinct individual fully-formed astronomical elements with clear spacing between each element. Single solid uniform deep purple (#2E1A47) background across the entire tile, no texture, no gradient. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "A female figure among astronomical apparatus; representing a Wellcome V0007548EL.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/A_female_figure_among_astronomical_apparatus%3B_representing_a_Wellcome_V0007548EL.jpg",
+          "width": 1180,
+          "height": 2026
+        },
+        {
+          "title": "Iranian Astrolabe 14.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Iranian_Astrolabe_14.jpg",
+          "width": 2848,
+          "height": 3616
+        }
+      ],
+      "generated_at": "2026-06-05 20:15 UTC",
+      "opportunity_score": 65.8,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 91.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 91 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, mood"
+        },
+        "reusability": {
+          "value": 0.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "score Gemini 91 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Art Deco Astrolabe Alignment seamless pattern"
+      ]
+    },
+    {
+      "name": "Art Deco Koi Fish Tile",
+      "trending_score": 64,
+      "market_opportunity": "very_high",
+      "why_trending": "Art Deco animal tiles are experiencing a major revival in luxury bathroom and entryway design, with searches for 'Art Deco tile' up 65% on Pinterest. Spoonflower decorators are actively seeking symmetrical, geometric animal tiles that create interlocking patterns when mirrored.",
+      "target_audience": "wallpaper home decorators making statement bathroom walls",
+      "sub_niches": [],
+      "visual_direction": {
+        "mood": "luxurious, geometric, serene",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Coral Orange #EE9B00",
+          "Ivory White #E9D8A6",
+          "Gold Accent #CA6702"
+        ],
+        "color_accent": [
+          "Deep Teal #005F73"
+        ],
+        "color_background": "Deep Teal #005F73",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "mirror",
+        "pattern_scale": "medium",
+        "top_products": [
+          "wallpaper",
+          "curtains"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless mirror repeat pattern for high-end bathroom wallpaper and luxury tile printing. The pattern looks exactly like a 1920s Art Deco geometric ceramic tile. The design features: a single symmetrical koi fish seen from top view with spread fins; a large circular lotus leaf; and a stylized water wave arc. Supporting elements include a lotus flower bud, a water ripple circle, and a floating water lily leaf, with filler elements of small water droplets, tiny lotus petals, and gold bubbles. Colors: coral orange (#EE9B00), ivory white (#E9D8A6), and gold (#CA6702) on a deep teal (#005F73) background. NO blending, NO merging, NO morphing between any objects. Distinct individual fully-formed geometric elements with clear spacing between each element. Single solid uniform deep teal (#005F73) background across the entire tile, no texture, no gradient. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "The Gardeners' chronicle - a weekly illustrated journal of horticulture and allied subjects (1881) (14595796158).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/The_Gardeners%27_chronicle_-_a_weekly_illustrated_journal_of_horticulture_and_allied_subjects_%281881%29_%2814595796158%29.jpg",
+          "width": 394,
+          "height": 506
+        },
+        {
+          "title": "The Gardeners' chronicle - a weekly illustrated journal of horticulture and allied subjects (1881) (14803858713).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/The_Gardeners%27_chronicle_-_a_weekly_illustrated_journal_of_horticulture_and_allied_subjects_%281881%29_%2814803858713%29.jpg",
+          "width": 566,
+          "height": 570
+        }
+      ],
+      "generated_at": "2026-06-05 20:15 UTC",
+      "opportunity_score": 63.7,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 58.0,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 82.0,
+          "detail": "page 'American Radiator Building' : 3 932 vues/mois (réel)"
+        },
+        "growth": {
+          "value": 52.0,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 78.0,
+          "detail": "évolution +4% des vues sur 12 mois (réel)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'low' → score 90 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, mood"
+        },
+        "reusability": {
+          "value": 0.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "wikipedia"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "very_high",
+          "low"
+        ],
+        "notes": "demande MESURÉE (wikipedia) · compétition low · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "0 sous-niches, 0 mots-clés distincts → faible potentiel de collections",
+      "demand_evidence": "page 'American Radiator Building' : 3 932 vues/mois (réel)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Art Deco Koi Fish Tile seamless pattern"
+      ]
+    }
+  ]
+}
