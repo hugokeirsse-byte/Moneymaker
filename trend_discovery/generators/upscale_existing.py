@@ -63,13 +63,15 @@ def fix_image(
         # 2. Encoder en base64 et passer par imageInference (seedImage) pour obtenir
         #    une URL Runware CDN — imageUpscale n'accepte pas les data: URLs directement.
         b64_url = _image_to_base64_url(small_bytes)
+        # imageUpscale n'accepte que des URLs CDN Runware, pas du base64.
+        # On passe l'image par imageInference (img2img minimal) pour obtenir l'URL.
         relay_url = runware.generate(
-            positive_prompt="seamless pattern tile",
+            positive_prompt="seamless repeat pattern tile",
             seed_image_url=b64_url,
-            strength=0.01,   # quasi-identique à l'original
-            steps=1,
+            strength=0.05,  # 5% modification — quasi-identique à l'original
+            steps=4,        # minimum stable pour FLUX Dev
             cfg_scale=1.0,
-            tiling=True,
+            tiling=False,
         )
         if not relay_url:
             logger.error("[upscale_existing] relay imageInference échoué pour %s", fname)
