@@ -1,0 +1,8 @@
+upscale_debug — 2026-06-05T16:38:47.337965
+[dbg] opened user_upload_01bc438f-3d86-4587-96e8-978ee5c50d29.png size=(4500, 4500)
+[dbg] downscaled to 1024px, payload=1500 KB
+[dbg] tentative imageUpscale direct avec base64...
+[dbg] imageUpscale direct → https://im.runware.ai/image/os/a05d22/ws/5/ii/2a20926f-aa61-4f3f-906b-587ac0314cf0.png
+[dbg] download → 23313 KB
+[dbg] upscaled size=(4096, 4096)
+[dbg] ✅ saved ./output/uploads/base/user_upload_01bc438f-3d86-4587-96e8-978ee5c50d29.png → 24.5 MB
