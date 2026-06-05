@@ -39,6 +39,8 @@ on:
           - 'generate-elements'  # 10 éléments isolés + assemblage Pillow (~0.06 €)
           - 'generate'           # Images des CdCs approuvées (manifest requis)
           - 'colorize'           # Variantes de couleurs sur images existantes (0 €, Pillow)
+          - 'seamless-audit'     # Vérifie + corrige les tuiles non-seamless (mirror quad, 0 €)
+          - 'thumbnails'         # Génère vignettes 600×600 JPEG navigables (0 €, git-safe)
           - 'full'               # Pipeline complet sans génération d'images
       manifest_path:
         description: 'Path to approval manifest (relative to repo root)'
@@ -139,6 +141,16 @@ jobs:
             LIMIT_VAL="${{ github.event.inputs.limit || '0' }}"
             [ "$LIMIT_VAL" != "0" ] && LIMIT_ARG="--limit $LIMIT_VAL"
             eval python -m trend_discovery.main generate-all --yes $NICHE_ARG $LIMIT_ARG
+            echo "-- Auto seamless audit (overwrite en place) --"
+            python -m trend_discovery.main seamless-audit --yes --overwrite \
+              --input ./output/spoonflower \
+              --output ./output/spoonflower
+            echo "-- Auto thumbnails --"
+            python -m trend_discovery.main thumbnails \
+              --pipeline ./output/spoonflower \
+              --colorways ./output/colorways \
+              --uploads ./output/uploads/base \
+              --output ./output/thumbnails
           elif [ "$MODE" = "generate-best" ]; then
             echo "=== MODE GENERATE-BEST : variantes du meilleur CdC auto-sélectionné ==="
             NICHE_ARG=""
@@ -166,6 +178,23 @@ jobs:
               --input ./output/uploads/base \
               --output ./output/uploads/colorways \
               $PALETTE_ARG || echo "(no uploads found, skipped)"
+          elif [ "$MODE" = "seamless-audit" ]; then
+            echo "=== MODE SEAMLESS-AUDIT : vérification + correction mirror quad ==="
+            echo "-- Audit pipeline images (overwrite en place) --"
+            python -m trend_discovery.main seamless-audit --yes --overwrite \
+              --input ./output/spoonflower \
+              --output ./output/spoonflower
+            echo "-- Audit user uploads --"
+            python -m trend_discovery.main seamless-audit --yes --overwrite \
+              --input ./output/uploads/base \
+              --output ./output/uploads/base || echo "(no uploads found, skipped)"
+          elif [ "$MODE" = "thumbnails" ]; then
+            echo "=== MODE THUMBNAILS : vignettes JPEG navigables ==="
+            python -m trend_discovery.main thumbnails \
+              --pipeline ./output/spoonflower \
+              --colorways ./output/colorways \
+              --uploads ./output/uploads/base \
+              --output ./output/thumbnails
           elif [ "$MODE" = "generate" ]; then
             echo "=== MODE GENERATE : génération des images approuvées ==="
             python -m trend_discovery.main generate \
@@ -208,4 +237,5 @@ jobs:
             output/spoonflower/
             output/colorways/
             output/uploads/colorways/
+            output/thumbnails/
           retention-days: 90

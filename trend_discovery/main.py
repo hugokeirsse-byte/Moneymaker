@@ -1190,11 +1190,12 @@ def colorize_images(
     """
     Génère des variantes de coloris pour tous les PNGs d'un dossier.
 
-    Principe : remplace les couleurs dominantes par des palettes prédéfinies
-    via k-means + correspondance Lab. Aucun appel Runware — 100% gratuit.
+    Principe : rotation HSV (hue_shift + sat_mult + val_mult).
+    Aucun appel Runware — 100% gratuit. Détail préservé intégralement.
 
-    Palettes disponibles : dark_moody, pastel_soft, earth_tones, navy_mono,
-                           forest_green, rose_blush, sage_cream, midnight_gold
+    Palettes disponibles : cool_ocean, forest_dusk, rose_gold, midnight,
+                           lavender_mist, earth_autumn, sage_morning, deep_ruby
+    (Alias legacy : dark_moody, pastel_soft, earth_tones, navy_mono, etc.)
     """
     import glob as _glob
     from trend_discovery.generators.color_rewriter import ColorRewriter, PALETTES
@@ -1226,7 +1227,7 @@ def colorize_images(
             print("Annulé.")
             return
 
-    rewriter = ColorRewriter(n_colors=8)
+    rewriter = ColorRewriter()
     results = rewriter.batch_recolor(
         input_dir=input_dir,
         palette_names=pal_names,
@@ -1236,6 +1237,106 @@ def colorize_images(
 
     total_ok = sum(len(v) for v in results.values())
     print(f"\n✅ {total_ok}/{n_out} colorways générés → {output_dir}/")
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Mode seamless-audit : vérification + correction automatique des tuiles
+# ─────────────────────────────────────────────────────────────────────────────
+
+def seamless_audit(
+    input_dir: str = "./output/spoonflower",
+    output_dir: Optional[str] = None,
+    fix: bool = True,
+    overwrite: bool = False,
+    threshold: float = 12.0,
+    yes: bool = False,
+) -> None:
+    """
+    Audite tous les PNGs d'un dossier et corrige les tuiles non-seamless.
+
+    Méthode : mirror quad 2×2 (orig | flip_H / flip_V | rot180).
+    La symétrie garantit ZÉRO couture visible.
+    L'image corrigée est redimensionnée à 4500×4500 px 300 DPI.
+
+    Si overwrite=False : les images corrigées sont sauvegardées avec le suffixe
+    __seamless.png ; l'original est préservé.
+    """
+    import glob as _glob
+    from trend_discovery.generators.seamless_auditor import SeamlessAuditor
+
+    files = sorted(_glob.glob(os.path.join(input_dir, "*.png")))
+    files = [f for f in files if "__seamless" not in os.path.basename(f)]
+
+    if not files:
+        print(f"Aucun PNG trouvé dans {input_dir}")
+        return
+
+    auditor = SeamlessAuditor(threshold=threshold)
+
+    print("\n" + "=" * 60)
+    print(f"  SEAMLESS AUDIT — vérification + correction")
+    print(f"  {len(files)} image(s) | seuil MAD={threshold} | fix={fix}")
+    print(f"  Dossier : {input_dir}/")
+    print("=" * 60)
+
+    if not yes:
+        answer = input("Proceed? [yes/no] ").strip().lower()
+        if answer not in ("yes", "y"):
+            print("Annulé.")
+            return
+
+    report = auditor.audit_and_fix_dir(
+        input_dir=input_dir,
+        output_dir=output_dir,
+        fix=fix,
+        overwrite=overwrite,
+    )
+
+    n_ok  = sum(1 for e in report.values() if e.get("is_seamless"))
+    n_fix = sum(1 for e in report.values() if e.get("was_fixed"))
+    print(f"\n✅ Audit terminé : {n_ok}/{len(report)} déjà seamless | {n_fix} corrigées")
+
+    report_path = auditor.save_report(report)
+    print(f"   Rapport → {report_path}")
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Mode thumbnails : vignettes + planches-contact navigables dans GitHub
+# ─────────────────────────────────────────────────────────────────────────────
+
+def generate_thumbnails(
+    pipeline_dir: str = "./output/spoonflower",
+    colorways_dir: str = "./output/colorways",
+    uploads_dir: str = "./output/uploads/base",
+    uploads_colorways_dir: str = "./output/uploads/colorways",
+    output_root: str = "./output/thumbnails",
+    contact_sheets: bool = True,
+) -> None:
+    """
+    Génère des miniatures JPEG (600×600) + planches-contact pour tous les dossiers.
+
+    Sortie : output/thumbnails/
+      pipeline/        — 1 JPG par image pipeline
+      colorways/       — 1 JPG par colorway
+      uploads/         — 1 JPG par upload utilisateur
+      uploads_colorways/
+      contact_pipeline.jpg
+      contact_colorways.jpg
+      contact_uploads.jpg
+
+    Taille typique : ~50-100 KB/vignette → git-safe.
+    """
+    from trend_discovery.generators.thumbnail_generator import ThumbnailGenerator
+
+    gen = ThumbnailGenerator()
+    gen.generate_all(
+        pipeline_dir=pipeline_dir,
+        colorways_dir=colorways_dir,
+        uploads_dir=uploads_dir,
+        uploads_colorways_dir=uploads_colorways_dir,
+        output_root=output_root,
+        make_contact_sheets=contact_sheets,
+    )
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -1507,6 +1608,62 @@ def main():
         help="Auto-confirmer (mode CI).",
     )
 
+    # ── Sous-commande : seamless-audit ───────────────────────────────────────
+    sa_parser = subparsers.add_parser(
+        "seamless-audit",
+        help="Détecte et corrige automatiquement les tuiles non-seamless (mirror quad).",
+    )
+    sa_parser.add_argument(
+        "--input", type=str, default="./output/spoonflower",
+        help="Dossier des PNGs à auditer.",
+    )
+    sa_parser.add_argument(
+        "--output", type=str, default="",
+        help="Dossier de sortie (vide = même dossier que --input).",
+    )
+    sa_parser.add_argument(
+        "--threshold", type=float, default=12.0,
+        help="Seuil MAD [0-255] en dessous duquel une image est considérée seamless.",
+    )
+    sa_parser.add_argument(
+        "--overwrite", action="store_true",
+        help="Remplace les originaux (défaut : ajoute __seamless.png en parallèle).",
+    )
+    sa_parser.add_argument(
+        "--no-fix", action="store_true",
+        help="Rapport uniquement, sans correction.",
+    )
+    sa_parser.add_argument(
+        "--yes", action="store_true",
+        help="Auto-confirmer (mode CI).",
+    )
+
+    # ── Sous-commande : thumbnails ────────────────────────────────────────────
+    th_parser = subparsers.add_parser(
+        "thumbnails",
+        help="Génère des vignettes JPEG (600×600) navigables depuis GitHub.",
+    )
+    th_parser.add_argument(
+        "--pipeline", type=str, default="./output/spoonflower",
+        help="Dossier des images pipeline.",
+    )
+    th_parser.add_argument(
+        "--colorways", type=str, default="./output/colorways",
+        help="Dossier des colorways.",
+    )
+    th_parser.add_argument(
+        "--uploads", type=str, default="./output/uploads/base",
+        help="Dossier des uploads utilisateur.",
+    )
+    th_parser.add_argument(
+        "--output", type=str, default="./output/thumbnails",
+        help="Dossier de sortie des vignettes.",
+    )
+    th_parser.add_argument(
+        "--no-contact", action="store_true",
+        help="Ne pas générer les planches-contact.",
+    )
+
     # ── Sous-commande : generate-elements ─────────────────────────────────────
     gen_elem_parser = subparsers.add_parser(
         "generate-elements",
@@ -1615,6 +1772,28 @@ def main():
             palettes=pal_list,
             glob_pattern=args.pattern,
             yes=args.yes,
+        )
+        return
+
+    if args.command == "seamless-audit":
+        seamless_audit(
+            input_dir=args.input,
+            output_dir=args.output or None,
+            fix=not args.no_fix,
+            overwrite=args.overwrite,
+            threshold=args.threshold,
+            yes=args.yes,
+        )
+        return
+
+    if args.command == "thumbnails":
+        generate_thumbnails(
+            pipeline_dir=args.pipeline,
+            colorways_dir=args.colorways,
+            uploads_dir=args.uploads,
+            uploads_colorways_dir=os.path.join(os.path.dirname(args.uploads.rstrip("/")), "colorways"),
+            output_root=args.output,
+            contact_sheets=not args.no_contact,
         )
         return
 
