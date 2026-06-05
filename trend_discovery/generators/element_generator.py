@@ -38,12 +38,18 @@ class ElementGenerator:
     Max 10 appels Runware par CdC.
     """
 
+    # Fond chroma-key utilisé pour la génération — vert lime pur (#00FF00)
+    # Permet une suppression propre sans effacer les éléments blancs/clairs (grues, neige, mousse)
+    CHROMA_BG = "bright solid lime green (#00FF00)"
+
     ELEMENT_NEGATIVE = (
         "multiple objects, other objects, pattern, repeat, background scene, "
         "environment, context, table surface, hands, perspective, drop shadow, "
         "cast shadow, ambient occlusion, reflection, gradient fill, 3D render, "
         "glossy surface, metallic sheen, volumetric lighting, depth of field, "
-        "bokeh, watermark, text, frame, border, group of items"
+        "bokeh, watermark, text, frame, border, group of items, "
+        "white background, grey background, black background, colored background "
+        "(background must be solid lime green only)"
     )
 
     def __init__(self):
@@ -79,8 +85,11 @@ class ElementGenerator:
             )
             return None
 
+        # Fond vert lime pour chroma-key : préserve les éléments blancs/crème/clairs
+        # que la suppression par luminance effacerait (grues blanches, mousse, neige, etc.)
         full_prompt = (
-            f"{base_prompt}, centered on pure white background, isolated object, no other objects"
+            f"{base_prompt}, centered on {self.CHROMA_BG} background, "
+            "isolated single object, no other objects, no shadows on background"
         )
 
         image_bytes, _url = self._runware.generate_and_upscale(

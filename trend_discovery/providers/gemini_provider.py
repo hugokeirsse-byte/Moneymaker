@@ -416,11 +416,17 @@ For EACH trend, return a complete JSON object with ALL of these fields — be sp
   ],
   "assembly_guide": {{{{
     "background_color": "#HEXCODE",
-    "layout": "tossed" | "grid" | "half-drop" | "stripe",
+    "layout": "sticker" | "tessellate" | "grid",
     "density": "sparse" | "medium" | "dense",
+    "sticker_border": true,
+    "sticker_border_color": "#HEXCODE (usually white #FFFFFF or a light accent color)",
     "color_palette": ["#HEXCODE ColorName", "#HEXCODE ColorName", "#HEXCODE ColorName"],
     "tips": "1-2 sentences on grouping and arrangement"
   }}}},
+  // layout guide:
+  // "sticker"     → elements placed like patches/stickers on background (tossed, varied rotation, visible spacing)
+  // "tessellate"  → single motif repeated side-by-side in offset rows (mermaid scales, fish scales, geometric tiles)
+  // "grid"        → strict regular grid (symmetric geometric patterns)
   "visual_direction": {{{{
     "mood": "comma-separated mood adjectives (e.g. romantic, nostalgic, scientific)",
     "color_palette": {{{{
