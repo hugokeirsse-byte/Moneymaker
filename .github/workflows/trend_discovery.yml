@@ -31,10 +31,11 @@ on:
         default: 'preview'
         type: choice
         options:
-          - 'preview'         # Gemini trends + CdCs + manifest (0 €)
-          - 'generate-best'   # Variantes du meilleur CdC auto-sélectionné (~0.05 €)
-          - 'generate'        # Images des CdCs approuvées (manifest requis)
-          - 'full'            # Pipeline complet sans génération d'images
+          - 'preview'            # Gemini trends + CdCs + manifest (0 €)
+          - 'generate-best'      # Variantes du meilleur CdC auto-sélectionné (~0.05 €)
+          - 'generate-elements'  # 10 éléments isolés + assemblage Pillow (~0.06 €)
+          - 'generate'           # Images des CdCs approuvées (manifest requis)
+          - 'full'               # Pipeline complet sans génération d'images
       manifest_path:
         description: 'Path to approval manifest (relative to repo root)'
         required: false
@@ -92,7 +93,7 @@ jobs:
           # Tendances mondiales temps réel (GEMINI_API_KEY requis)
           GEMINI_API_KEY:       ${{ secrets.GEMINI_API_KEY }}
           # Runware : injecté si mode=generate ou generate-best
-          RUNWARE_API_KEY:      ${{ (github.event.inputs.mode == 'generate' || github.event.inputs.mode == 'generate-best') && secrets.RUNWARE_API_KEY || '' }}
+          RUNWARE_API_KEY:      ${{ (github.event.inputs.mode == 'generate' || github.event.inputs.mode == 'generate-best' || github.event.inputs.mode == 'generate-elements') && secrets.RUNWARE_API_KEY || '' }}
           RUNWARE_MODEL:        ${{ secrets.RUNWARE_MODEL || 'runware:100@1' }}
           # Sources optionnelles
           REDDIT_CLIENT_ID:     ${{ secrets.REDDIT_CLIENT_ID }}
@@ -114,6 +115,11 @@ jobs:
             NICHE_ARG=""
             [ -n "${{ github.event.inputs.niche }}" ] && NICHE_ARG="--niche '${{ github.event.inputs.niche }}'"
             eval python -m trend_discovery.main generate --best --yes $NICHE_ARG
+          elif [ "$MODE" = "generate-elements" ]; then
+            echo "=== MODE GENERATE-ELEMENTS : 10 éléments + assemblage Pillow ==="
+            NICHE_ARG=""
+            [ -n "${{ github.event.inputs.niche }}" ] && NICHE_ARG="--niche '${{ github.event.inputs.niche }}'"
+            eval python -m trend_discovery.main generate-elements --yes $NICHE_ARG
           elif [ "$MODE" = "generate" ]; then
             echo "=== MODE GENERATE : génération des images approuvées ==="
             python -m trend_discovery.main generate \

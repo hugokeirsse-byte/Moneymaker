@@ -872,6 +872,113 @@ def generate_best_variants(
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+# Mode generate-elements : 10 éléments isolés + assemblage Pillow
+# ─────────────────────────────────────────────────────────────────────────────
+
+def generate_elements(
+    report_path: Optional[str] = None,
+    niche_name: Optional[str] = None,
+    yes: bool = False,
+    output_dir: str = "./output/spoonflower",
+) -> None:
+    """
+    Génère 10 éléments isolés via Runware puis les assemble en pattern seamless
+    avec PatternAssembler (Pillow, gratuit).
+
+    Pipeline :
+      1. Charge le dernier rapport CdC
+      2. Sélectionne le brief par niche_name ou meilleur opportunity_score
+      3. ElementGenerator → 10 appels Runware (un par élément)
+      4. PatternAssembler → canvas 2048×2048 seamless
+      5. SpoonflowerPackager → PNG 4500×4500 300 DPI prêt à uploader
+    """
+    import json
+    import glob as _glob
+
+    # Résolution du rapport
+    if not report_path:
+        reports = sorted(_glob.glob("./reports/cahiers_des_charges_*.json"))
+        if not reports:
+            print("ERROR : Aucun rapport trouvé. Lancez 'preview' d'abord.")
+            return
+        report_path = reports[-1]
+
+    logger.info("[generate-elements] rapport : %s", report_path)
+
+    with open(report_path, encoding="utf-8") as fh:
+        data = json.load(fh)
+
+    all_briefs = data.get("cahiers_des_charges", data.get("briefs", []))
+    if not all_briefs:
+        print("ERROR : Aucun CdC dans le rapport.")
+        return
+
+    def _score(b: dict) -> float:
+        return float(b.get("opportunity_score", b.get("trending_score", 0)))
+
+    if niche_name:
+        needle = niche_name.strip().lower()
+        brief = next((b for b in all_briefs if b.get("name", "").lower() == needle), None)
+        if not brief:
+            brief = next((b for b in all_briefs if needle in b.get("name", "").lower()), None)
+        if not brief:
+            available = [b.get("name") for b in all_briefs]
+            print(f"ERROR : CdC '{niche_name}' introuvable. Disponibles : {available}")
+            return
+    else:
+        brief = sorted(all_briefs, key=_score, reverse=True)[0]
+
+    elements = brief.get("elements", [])
+    n_elements = len(elements[:10])
+    cost_est = n_elements * 0.006
+
+    print("\n" + "=" * 60)
+    print(f"  CdC : {brief.get('name')} (score {brief.get('trending_score')}/100)")
+    print(f"  {n_elements} éléments à générer (max 10 appels Runware)")
+    print(f"  Coût estimé : ~{cost_est:.3f} € ({n_elements} images × ~0.006 €)")
+    print("=" * 60)
+
+    if not yes:
+        answer = input("\nProceed? [yes/no] ").strip().lower()
+        if answer not in ("yes", "y"):
+            print("Annulé.")
+            return
+
+    from trend_discovery.generators.element_generator import ElementGenerator
+    gen = ElementGenerator()
+
+    if not gen.is_available():
+        logger.error("[generate-elements] RUNWARE_API_KEY absente — impossible de générer.")
+        return
+
+    # Génération des éléments
+    generated = gen.generate_all(brief)
+    if not generated:
+        logger.error("[generate-elements] Aucun élément généré.")
+        return
+
+    # Assemblage
+    from trend_discovery.generators.pattern_assembler import PatternAssembler
+    assembler = PatternAssembler()
+    assembly_guide = brief.get("assembly_guide", {})
+    pattern_bytes = assembler.assemble(generated, assembly_guide)
+
+    if not pattern_bytes:
+        logger.error("[generate-elements] Assemblage échoué.")
+        return
+
+    # Packaging Spoonflower
+    from trend_discovery.generators.spoonflower_packager import SpoonflowerPackager
+    packager = SpoonflowerPackager(output_dir=output_dir)
+    filepath = packager.package(pattern_bytes, brief.get("name", "elements_pattern"))
+
+    if filepath:
+        print(f"\nPattern sauvegardé : {filepath}")
+    else:
+        logger.error("[generate-elements] Packaging échoué.")
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # CLI entry point
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -932,6 +1039,28 @@ def main():
         help="Nom du CdC à générer (pour --best). Défaut : meilleur score.",
     )
 
+    # ── Sous-commande : generate-elements ─────────────────────────────────────
+    gen_elem_parser = subparsers.add_parser(
+        "generate-elements",
+        help="Génère 10 éléments isolés via Runware + assemble en pattern seamless (Pillow).",
+    )
+    gen_elem_parser.add_argument(
+        "--niche", type=str, default="",
+        help="Nom du CdC à générer (partiel OK). Défaut : meilleur score.",
+    )
+    gen_elem_parser.add_argument(
+        "--yes", action="store_true",
+        help="Auto-confirmer (mode CI, pas de prompt interactif).",
+    )
+    gen_elem_parser.add_argument(
+        "--report", type=str, default="",
+        help="Chemin vers le rapport JSON. Défaut : dernier rapport.",
+    )
+    gen_elem_parser.add_argument(
+        "--output", type=str, default="./output/spoonflower",
+        help="Répertoire de sortie pour le PNG Spoonflower.",
+    )
+
     # ── Arguments legacy (compatibilité ascendante) ────────────────────────────
     parser.add_argument("--keywords", type=str, default="")
     parser.add_argument("--categories", type=str, default="")
@@ -979,6 +1108,15 @@ def main():
         gate.save_brief_data(briefs, run_id)
         print(f"\nManifest d'approbation : {manifest_path}")
         print("Éditez 'approved': true pour les niches choisies, puis lancez 'generate'.")
+        return
+
+    if args.command == "generate-elements":
+        generate_elements(
+            report_path=args.report or None,
+            niche_name=args.niche or None,
+            yes=args.yes,
+            output_dir=args.output,
+        )
         return
 
     if args.command == "generate":
