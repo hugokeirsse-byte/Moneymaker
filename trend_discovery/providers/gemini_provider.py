@@ -47,6 +47,67 @@ def _coerce_profile(profile: Union[MarketProfile, str, None]) -> MarketProfile:
     return SPOONFLOWER
 
 
+def _auto_naturalist_typography(t: Dict) -> Dict:
+    """
+    Auto-génère les layers de typographie pour une planche naturaliste.
+
+    Extraits :
+      - Nom commun  : brief name sans le suffixe "Plate" → position top
+      - Nom sci.    : premier genre+espèce trouvé dans positive_prompt → italic_caption
+    Couleur texte   : couleur sombre de la palette (luminance < 100) ou #1A1A2E.
+    """
+    import re
+
+    name = t.get("name", "")
+    common_name = re.sub(r"\s*\b(?:plate|planche|specimen|anatomy)\b\s*$", "",
+                         name, flags=re.IGNORECASE).strip()
+
+    positive_prompt = t.get("ai_generation", {}).get("positive_prompt", "")
+    # Genre + espèce : Majuscule suivie de 1-2 mots en minuscules
+    sci_match = re.search(r"\b([A-Z][a-z]+(?:\s+[a-z]+){1,2})\b", positive_prompt)
+    scientific_name = sci_match.group(1) if sci_match else ""
+    # Évite de dupliquer le nom commun
+    if scientific_name.lower() == common_name.lower():
+        scientific_name = ""
+
+    # Couleur texte : cherche la plus sombre dans color_primary
+    vd = t.get("visual_direction", {})
+    colors_raw = vd.get("color_primary", vd.get("color_palette", {}).get("primary", []))
+    text_color = "#1A1A2E"
+    for c_str in colors_raw:
+        hex_m = re.search(r"#([0-9A-Fa-f]{6})", str(c_str))
+        if hex_m:
+            h = hex_m.group(1)
+            r, g, b = int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16)
+            if 0.299 * r + 0.587 * g + 0.114 * b < 100:
+                text_color = f"#{h}"
+                break
+
+    layers = []
+    if common_name:
+        layers.append({
+            "text": common_name,
+            "position": "top",
+            "font_style": "serif",
+            "size_pt": 32,
+            "color": text_color,
+            "y_offset_pct": 0.01,
+            "max_width_pct": 0.80,
+        })
+    if scientific_name:
+        layers.append({
+            "text": scientific_name,
+            "position": "bottom",
+            "font_style": "serif_italic",
+            "size_pt": 26,
+            "color": text_color,
+            "y_offset_pct": -0.02,
+            "max_width_pct": 0.72,
+        })
+
+    return {"apply": bool(layers), "layers": layers}
+
+
 class GeminiProvider(DataProvider):
     """
     Recherche les tendances POD mondiales via Gemini 2.0 Flash + Google Search.
@@ -1396,6 +1457,17 @@ Return ONLY a valid JSON array of exactly {total_count} objects ({niche_count} m
                 sub.setdefault("prompt_keywords", [])
                 normalized_subs.append(sub)
         t["sub_niches"] = normalized_subs
+
+        # ── Typographie (auto-générée pour planches naturalistes) ────────────
+        if not t.get("typography"):
+            name = t.get("name", "")
+            if any(kw in name.lower() for kw in ("plate", "planche", "specimen", "anatomy")):
+                t["typography"] = _auto_naturalist_typography(t)
+            else:
+                t.setdefault("typography", {"apply": False, "layers": []})
+        else:
+            t["typography"].setdefault("apply", False)
+            t["typography"].setdefault("layers", [])
 
         # ── Champs legacy (compat prompt builder existant) ───────────────────
         primary = cp.get("primary", [])

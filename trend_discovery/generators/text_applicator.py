@@ -320,6 +320,71 @@ def apply_typography(
     return out
 
 
+# ── Auto-typographie pour planches naturalistes ───────────────────────────────
+
+def _auto_naturalist_typography(brief: Dict) -> Dict:
+    """
+    Auto-génère les layers de typographie pour une planche naturaliste dont le
+    CDC ne contient pas de bloc typography.layers (Gemini n'a pas rempli le champ).
+
+    Produit :
+      - Nom commun   → position "top" en serif
+      - Nom sci.     → position "bottom" en serif_italic (extrait du prompt FLUX)
+    """
+    name = brief.get("name", "")
+    common_name = re.sub(
+        r"\s*\b(?:plate|planche|specimen|anatomy)\b\s*$",
+        "", name, flags=re.IGNORECASE
+    ).strip()
+
+    # Cherche le nom scientifique dans le positive_prompt
+    positive_prompt = (
+        brief.get("ai_generation", {}).get("positive_prompt", "")
+        or brief.get("positive_prompt", "")
+    )
+    sci_match = re.search(r"\b([A-Z][a-z]+(?:\s+[a-z]+){1,2})\b", positive_prompt)
+    scientific_name = sci_match.group(1) if sci_match else ""
+    if scientific_name.lower() == common_name.lower():
+        scientific_name = ""
+
+    # Couleur texte sombre depuis la palette du CDC
+    vd = brief.get("visual_direction", {})
+    colors_raw = vd.get("color_primary", vd.get("color_palette", {}).get("primary", []))
+    text_color = "#1A1A2E"
+    for c_str in colors_raw:
+        hex_m = re.search(r"#([0-9A-Fa-f]{6})", str(c_str))
+        if hex_m:
+            h = hex_m.group(1)
+            r, g, b = int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16)
+            if 0.299 * r + 0.587 * g + 0.114 * b < 100:
+                text_color = f"#{h}"
+                break
+
+    layers: List[Dict] = []
+    if common_name:
+        layers.append({
+            "text": common_name,
+            "position": "top",
+            "font_style": "serif",
+            "size_pt": 32,
+            "color": text_color,
+            "y_offset_pct": 0.01,
+            "max_width_pct": 0.80,
+        })
+    if scientific_name:
+        layers.append({
+            "text": scientific_name,
+            "position": "bottom",
+            "font_style": "serif_italic",
+            "size_pt": 26,
+            "color": text_color,
+            "y_offset_pct": -0.02,
+            "max_width_pct": 0.72,
+        })
+
+    return {"apply": bool(layers), "layers": layers}
+
+
 # ── Correspondance image → CDC via slug ───────────────────────────────────────
 
 def _slug(name: str) -> str:
@@ -385,9 +450,14 @@ def batch_apply_typography(
             continue
 
         typography = brief.get("typography")
+        # Auto-génère la typographie pour les planches naturalistes sans layers
         if not typography or not typography.get("apply", False):
-            skipped += 1
-            continue
+            name = brief.get("name", "")
+            if any(kw in name.lower() for kw in ("plate", "planche", "specimen", "anatomy")):
+                typography = _auto_naturalist_typography(brief)
+            if not typography or not typography.get("apply", False):
+                skipped += 1
+                continue
 
         if output_dir:
             out_path = str(Path(output_dir) / img_path.name)
