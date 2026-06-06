@@ -1,0 +1,3139 @@
+{
+  "generated_at": "2026-06-06T15:57:18.111558+00:00",
+  "total_briefs": 16,
+  "briefs": [
+    {
+      "name": "Fountain Pen Ink Bottle Anatomy",
+      "trending_score": 78,
+      "market_opportunity": "very_high",
+      "why_trending": "Fountain pen users are obsessed with ink properties like sheen, shading, and shimmer, which are rarely represented on merch. A naturalist-style ink bottle diagram captures this tactile, artistic obsession perfectly.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "Flex Nib Anatomy Sticker",
+          "trending_score": 70,
+          "unique_angle": "Anatomical diagram focusing on line variation and flex tines.",
+          "prompt_keywords": [
+            "flex nib diagram",
+            "tines spreading",
+            "line variation",
+            "vintage pen engraving"
+          ]
+        },
+        {
+          "name": "Ink Swatch Card Art Print",
+          "trending_score": 76,
+          "unique_angle": "Grid layout of watercolor ink swatches with chromatography rings.",
+          "prompt_keywords": [
+            "ink swatches grid",
+            "chromatography rings",
+            "watercolor sheen",
+            "art print layout"
+          ]
+        },
+        {
+          "name": "Grail Pen Quest Journal",
+          "trending_score": 62,
+          "unique_angle": "Vintage academic logbook for tracking grail pen acquisitions.",
+          "prompt_keywords": [
+            "grail pen tracker",
+            "vintage scroll design",
+            "fountain pen logbook",
+            "academic aesthetic"
+          ]
+        },
+        {
+          "name": "Sheen & Shimmer Mug",
+          "trending_score": 69,
+          "unique_angle": "Macro ink droplet print showing high sheen and shimmer properties.",
+          "prompt_keywords": [
+            "macro ink droplet",
+            "metallic gold sheen",
+            "shimmering ink",
+            "ceramic mug print"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "tactile, academic, vintage, precise",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Deep Indigo #1A237E",
+          "Aged Paper #F5F0E8"
+        ],
+        "color_accent": [
+          "Sheen Gold #C4933F"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Single vintage glass ink bottle, centered on pure white background. Rendered as a 19th century natural history museum plate in the style of James Sowerby. Fine pen and ink engraving — precise cross-hatching on the faceted glass bottle, showing ink level inside, with a detailed fountain pen nib dipped into the neck. Handwritten field note text around specimen reads 'Atramentum Shimmeris — Shading, Sheen & Shimmer, 50ml'. Small scale bar and collection date notation bottom right. Colors: deep indigo (#1A237E), warm cream (#F5F0E8), metallic gold accent (#C4933F), dark ink (#1A1209). White background. Isolated specimen. Bold enough to read at sticker size.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-06 15:57 UTC",
+      "opportunity_score": 77.7,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 88.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 88 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'low' (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "flex nib diagram",
+          "tines spreading",
+          "line variation",
+          "vintage pen engraving",
+          "ink swatches grid",
+          "chromatography rings",
+          "watercolor sheen",
+          "art print layout",
+          "grail pen tracker",
+          "vintage scroll design",
+          "fountain pen logbook",
+          "academic aesthetic",
+          "macro ink droplet",
+          "metallic gold sheen",
+          "shimmering ink"
+        ],
+        "categories": [
+          "very_high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 10.0,
+        "rationale": "compétition 'medium' → marché encore ouvert"
+      },
+      "reusability_detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 88 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "flex nib diagram",
+        "tines spreading",
+        "line variation",
+        "vintage pen engraving",
+        "ink swatches grid",
+        "chromatography rings",
+        "watercolor sheen",
+        "art print layout",
+        "grail pen tracker",
+        "vintage scroll design",
+        "fountain pen logbook",
+        "academic aesthetic",
+        "macro ink droplet",
+        "metallic gold sheen",
+        "shimmering ink",
+        "ceramic mug print"
+      ],
+      "title_seeds": [
+        "Fountain Pen Ink Bottle Anatomy seamless pattern",
+        "Flex Nib Anatomy Sticker repeat pattern",
+        "Ink Swatch Card Art Print repeat pattern",
+        "Grail Pen Quest Journal repeat pattern",
+        "Sheen & Shimmer Mug repeat pattern"
+      ]
+    },
+    {
+      "name": "Kubernetes Pod Lifecycle Editorial",
+      "trending_score": 77,
+      "market_opportunity": "very_high",
+      "why_trending": "DevOps and SRE engineers deal with the complex, often frustrating reality of managing containerized applications. An editorial cartoon capturing the absurdity of 'CrashLoopBackOff' errors resonates deeply with their dark humor.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "YAML Indentation Error Mug",
+          "trending_score": 78,
+          "unique_angle": "Syntax-highlighted code block showing a fatal indentation error.",
+          "prompt_keywords": [
+            "YAML indentation",
+            "syntax error highlight",
+            "devops humor mug",
+            "minimalist code text"
+          ]
+        },
+        {
+          "name": "PagerDuty Survivor Sticker",
+          "trending_score": 74,
+          "unique_angle": "Retro survivalist badge for on-call engineers.",
+          "prompt_keywords": [
+            "retro survival badge",
+            "PagerDuty on-call",
+            "2am alert humor",
+            "distressed sticker design"
+          ]
+        },
+        {
+          "name": "Helm Chart Navigator Notebook",
+          "trending_score": 65,
+          "unique_angle": "Nautical chart style map of a Helm deployment.",
+          "prompt_keywords": [
+            "nautical chart style",
+            "Helm chart map",
+            "microservices sea monster",
+            "technical notebook cover"
+          ]
+        },
+        {
+          "name": "Legacy Code Archaeologist T-Shirt",
+          "trending_score": 71,
+          "unique_angle": "Archaeological excavation of legacy code blocks.",
+          "prompt_keywords": [
+            "archaeology excavation",
+            "legacy code block",
+            "COBOL Fortran humor",
+            "vintage line art t-shirt"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "satirical, dry, chaotic, tech-weary",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Charcoal #2C2C2C",
+          "Tech Blue #1E88E5"
+        ],
+        "color_accent": [
+          "Critical Red #D32F2F",
+          "Warning Yellow #FBC02D"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Single editorial cartoon illustration, centered on pure white background. Expressive hand-drawn linework — New Yorker cartoon quality. A tiny, exhausted cartoon character representing a Kubernetes Pod, wearing a hard hat and holding a sign that reads 'CrashLoopBackOff'. The pod is surrounded by a massive, tangled web of power cords and server racks labeled 'YAML Config'. A giant hand labeled 'OOMKilled' reaches down from the top of the frame. Thought bubble reads: 'I was only trying to run a simple hello-world app.' Colors: warm charcoal (#2C2C2C), tech blue (#1E88E5), critical red (#D32F2F), warning yellow (#FBC02D). White background. Text legible at sticker size.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "\"A Triumph of Civilization- How Disputes Are Settled in 1900.\" (Editorial cartoon reacting to the Streetcar Strike of 1900). - DPLA - 5c420989cacc63995286fdc41fdcc58c.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/29/%22A_Triumph_of_Civilization-_How_Disputes_Are_Settled_in_1900.%22_%28Editorial_cartoon_reacting_to_the_Streetcar_Strike_of_1900%29._-_DPLA_-_5c420989cacc63995286fdc41fdcc58c.jpg",
+          "width": 1412,
+          "height": 2000
+        }
+      ],
+      "generated_at": "2026-06-06 15:57 UTC",
+      "opportunity_score": 77.3,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 87.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 87 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'low' (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "YAML indentation",
+          "syntax error highlight",
+          "devops humor mug",
+          "minimalist code text",
+          "retro survival badge",
+          "PagerDuty on-call",
+          "2am alert humor",
+          "distressed sticker design",
+          "nautical chart style",
+          "Helm chart map",
+          "microservices sea monster",
+          "technical notebook cover",
+          "archaeology excavation",
+          "legacy code block",
+          "COBOL Fortran humor"
+        ],
+        "categories": [
+          "very_high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 10.0,
+        "rationale": "compétition 'medium' → marché encore ouvert"
+      },
+      "reusability_detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 87 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "yaml indentation",
+        "syntax error highlight",
+        "devops humor mug",
+        "minimalist code text",
+        "retro survival badge",
+        "pagerduty on-call",
+        "2am alert humor",
+        "distressed sticker design",
+        "nautical chart style",
+        "helm chart map",
+        "microservices sea monster",
+        "technical notebook cover",
+        "archaeology excavation",
+        "legacy code block",
+        "cobol fortran humor",
+        "vintage line art t-shirt"
+      ],
+      "title_seeds": [
+        "Kubernetes Pod Lifecycle Editorial seamless pattern",
+        "YAML Indentation Error Mug repeat pattern",
+        "PagerDuty Survivor Sticker repeat pattern",
+        "Helm Chart Navigator Notebook repeat pattern",
+        "Legacy Code Archaeologist T-Shirt repeat pattern"
+      ]
+    },
+    {
+      "name": "Film Development Reel Risograph",
+      "trending_score": 77,
+      "market_opportunity": "very_high",
+      "why_trending": "Analog photographers love the physical, tactile process of shooting and developing film. A risograph print of a development reel speaks directly to this tactile, retro-artistic aesthetic.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "Portra 400 Tonez Mug",
+          "trending_score": 77,
+          "unique_angle": "Kodak Portra 400 film box style parody mug.",
+          "prompt_keywords": [
+            "Portra 400 box style",
+            "film photography humor",
+            "warm tones yellow green",
+            "retro camera mug"
+          ]
+        },
+        {
+          "name": "Expired Film Club Sticker",
+          "trending_score": 71,
+          "unique_angle": "Distressed postal stamp style celebrating expired film.",
+          "prompt_keywords": [
+            "expired film stamp",
+            "color shift aesthetic",
+            "analog photography sticker",
+            "distressed retro badge"
+          ]
+        },
+        {
+          "name": "Rangefinder Silhouette Tote",
+          "trending_score": 66,
+          "unique_angle": "Minimalist silhouette of a classic rangefinder camera.",
+          "prompt_keywords": [
+            "Leica M3 silhouette",
+            "rangefinder camera outline",
+            "minimalist black ink",
+            "canvas tote design"
+          ]
+        },
+        {
+          "name": "Darkroom Timer Notebook",
+          "trending_score": 69,
+          "unique_angle": "Glowing red-on-black darkroom timer aesthetic.",
+          "prompt_keywords": [
+            "darkroom red light",
+            "timer graphic",
+            "exposure logbook",
+            "analog photographer notebook"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "tactile, retro, artistic, analog",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Teal #00A79D",
+          "Soy Yellow #D4AC0D"
+        ],
+        "color_accent": [
+          "Fluorescent Pink #F76C8A"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Single risograph-style illustration, centered on pure white background. Bold limited-palette print aesthetic — a 2-color risograph zine cover. A classic plastic film developing reel with a strip of 35mm film winding into its spirals. Community text: 'DARKROOM RITUALS — AGITATE EVERY 30S'. Deliberate register variation between color layers — slight 3px misalignment on the color fill. Heavy grain texture on all solid fills. Black key layer with single fluorescent pink (#F76C8A) and teal (#00A79D) color overlays. White background. Strong graphic silhouette. Reads at 2cm sticker size.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-06 15:57 UTC",
+      "opportunity_score": 77.0,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 86.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 86 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'low' (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "Portra 400 box style",
+          "film photography humor",
+          "warm tones yellow green",
+          "retro camera mug",
+          "expired film stamp",
+          "color shift aesthetic",
+          "analog photography sticker",
+          "distressed retro badge",
+          "Leica M3 silhouette",
+          "rangefinder camera outline",
+          "minimalist black ink",
+          "canvas tote design",
+          "darkroom red light",
+          "timer graphic",
+          "exposure logbook"
+        ],
+        "categories": [
+          "very_high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 10.0,
+        "rationale": "compétition 'medium' → marché encore ouvert"
+      },
+      "reusability_detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 86 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "portra 400 box style",
+        "film photography humor",
+        "warm tones yellow green",
+        "retro camera mug",
+        "expired film stamp",
+        "color shift aesthetic",
+        "analog photography sticker",
+        "distressed retro badge",
+        "leica m3 silhouette",
+        "rangefinder camera outline",
+        "minimalist black ink",
+        "canvas tote design",
+        "darkroom red light",
+        "timer graphic",
+        "exposure logbook",
+        "analog photographer notebook"
+      ],
+      "title_seeds": [
+        "Film Development Reel Risograph seamless pattern",
+        "Portra 400 Tonez Mug repeat pattern",
+        "Expired Film Club Sticker repeat pattern",
+        "Rangefinder Silhouette Tote repeat pattern",
+        "Darkroom Timer Notebook repeat pattern"
+      ]
+    },
+    {
+      "name": "Sourdough Cultivator Guild Seal",
+      "trending_score": 77,
+      "market_opportunity": "very_high",
+      "why_trending": "Sourdough baking has evolved from a pandemic trend into a deeply rooted artisan hobby where bakers treat their starters like pets. A vintage guild seal validates this identity as a serious craft rather than a casual hobby.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "Crumb Shot Inspector Mug",
+          "trending_score": 73,
+          "unique_angle": "Magnifying glass inspecting open crumb structure.",
+          "prompt_keywords": [
+            "magnifying glass bread",
+            "open crumb structure",
+            "sourdough inspector",
+            "baker humor mug"
+          ]
+        },
+        {
+          "name": "Wild Yeast Cultivator Sticker",
+          "trending_score": 76,
+          "unique_angle": "Vintage apothecary jar label with write-on space.",
+          "prompt_keywords": [
+            "vintage jar label",
+            "starter name banner",
+            "wild yeast culture",
+            "write-on sticker design"
+          ]
+        },
+        {
+          "name": "Lame Blade Guild Tote",
+          "trending_score": 63,
+          "unique_angle": "Crossed scoring lames with wheat stalk patterns.",
+          "prompt_keywords": [
+            "crossed scoring lames",
+            "wheat stalk pattern",
+            "bread scoring art",
+            "artisan baker tote"
+          ]
+        },
+        {
+          "name": "Hydration Percentage Chart Notebook",
+          "trending_score": 68,
+          "unique_angle": "Quick-reference hydration percentage chart.",
+          "prompt_keywords": [
+            "bakers percentage chart",
+            "hydration level grid",
+            "sourdough recipe log",
+            "minimalist notebook cover"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "artisan, rustic, traditional, proud",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Warm Amber #C4933F",
+          "Dark Brown #2C1A0E"
+        ],
+        "color_accent": [
+          "Muted Gold #A8882A"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Circular vintage badge design, centered on pure white background. Styled as a 1930s artisan baker's guild seal — the type printed on flour sack labels. Bold serif typography: primary text 'SOURDOUGH CULTIVATOR'. Inner ring text reads 'LIVING CULTURE — FEEDING RATIO 1:2:2 — EST. WHEN STARTER SURVIVED'. Center illustration: a ceramic sourdough crock with an active starter bubbling over the top, rendered in woodblock print style. Border: wheat stalks and measuring scales. Distressed badge edges. Colors: warm amber (#C4933F), cream (#F5F0E8), dark brown (#2C1A0E), muted gold (#A8882A). White background. Clean circular composition. Works at 2cm sticker AND 30cm print.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-06 15:57 UTC",
+      "opportunity_score": 76.8,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 85.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 85 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'low' (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "magnifying glass bread",
+          "open crumb structure",
+          "sourdough inspector",
+          "baker humor mug",
+          "vintage jar label",
+          "starter name banner",
+          "wild yeast culture",
+          "write-on sticker design",
+          "crossed scoring lames",
+          "wheat stalk pattern",
+          "bread scoring art",
+          "artisan baker tote",
+          "bakers percentage chart",
+          "hydration level grid",
+          "sourdough recipe log"
+        ],
+        "categories": [
+          "very_high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 10.0,
+        "rationale": "compétition 'medium' → marché encore ouvert"
+      },
+      "reusability_detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 85 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "magnifying glass bread",
+        "open crumb structure",
+        "sourdough inspector",
+        "baker humor mug",
+        "vintage jar label",
+        "starter name banner",
+        "wild yeast culture",
+        "write-on sticker design",
+        "crossed scoring lames",
+        "wheat stalk pattern",
+        "bread scoring art",
+        "artisan baker tote",
+        "bakers percentage chart",
+        "hydration level grid",
+        "sourdough recipe log",
+        "minimalist notebook cover"
+      ],
+      "title_seeds": [
+        "Sourdough Cultivator Guild Seal seamless pattern",
+        "Crumb Shot Inspector Mug repeat pattern",
+        "Wild Yeast Cultivator Sticker repeat pattern",
+        "Lame Blade Guild Tote repeat pattern",
+        "Hydration Percentage Chart Notebook repeat pattern"
+      ]
+    },
+    {
+      "name": "SOTA Ultralight Radio Operator",
+      "trending_score": 77,
+      "market_opportunity": "very_high",
+      "why_trending": "SOTA activators are the ultimate crossover community, combining the gram-counting obsession of ultralight backpacking with the technical challenge of portable amateur radio. A technical diagram of an ultralight radio setup validates this unique dual identity.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "EFHW Antenna Deployer Sticker",
+          "trending_score": 71,
+          "unique_angle": "Field diagram of an End-Fed Half-Wave antenna deployment.",
+          "prompt_keywords": [
+            "EFHW wire antenna",
+            "portable radio setup",
+            "field day antenna",
+            "ham radio sticker"
+          ]
+        },
+        {
+          "name": "QRP Mountain Topper Mug",
+          "trending_score": 75,
+          "unique_angle": "Mountain Topper transceiver layout with peak silhouettes.",
+          "prompt_keywords": [
+            "Mountain Topper radio",
+            "QRP transceiver",
+            "summit activation",
+            "ham radio hiker mug"
+          ]
+        },
+        {
+          "name": "Peak Activation Log Book",
+          "trending_score": 64,
+          "unique_angle": "Summit contact logbook with waterproof-style cover design.",
+          "prompt_keywords": [
+            "SOTA contact log",
+            "summit activation book",
+            "portable ham radio log",
+            "waterproof style cover"
+          ]
+        },
+        {
+          "name": "Trekking Pole Mast Tote",
+          "trending_score": 68,
+          "unique_angle": "Trekking pole antenna mast schematic with dual-use text.",
+          "prompt_keywords": [
+            "trekking pole mast",
+            "dual use gear",
+            "ultralight ham radio",
+            "canvas tote bag"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "minimalist, precise, adventurous, technical",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Dyneema Grey #E8E8E8",
+          "Charcoal #2C2C2C"
+        ],
+        "color_accent": [
+          "Signal Orange #FF6F00"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Single technical diagram of an ultralight SOTA (Summits on the Air) radio setup, centered on pure white background. Flat vector illustration — precision of an engineering manual. Items labeled with real SOTA and ultralight terminology: 'QRP Transceiver (180g)', 'EFHW Wire Antenna (45g)', 'Carbon Fiber Trekking Pole (used as antenna mast) (150g)', and 'LiFePO4 Battery (120g)'. Annotation-style text pointing to the setup reads: 'Base weight: 4.2 lbs. DX contacts: Infinite.' Dry minimalist annotation style. Colors: off-white (#F8F8F6), charcoal (#2C2C2C), signal orange (#FF6F00). Zero gradients. White background. Clean vector edges. Reads clearly at sticker size.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Demonstration diagram for the main circulation pump model HUP GZN-317.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Demonstration_diagram_for_the_main_circulation_pump_model_HUP_GZN-317.jpg",
+          "width": 3383,
+          "height": 2246
+        },
+        {
+          "title": "Homer Dudley (October 1940). \"The Carrier Nature of Speech\". Bell System Technical Journal, XIX(4);495-515. -- Fig.8 Schematic circuit of the voder.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Homer_Dudley_%28October_1940%29._%22The_Carrier_Nature_of_Speech%22._Bell_System_Technical_Journal%2C_XIX%284%29%3B495-515._--_Fig.8_Schematic_circuit_of_the_voder.jpg",
+          "width": 1734,
+          "height": 1000
+        }
+      ],
+      "generated_at": "2026-06-06 15:57 UTC",
+      "opportunity_score": 76.8,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 85.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 85 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'low' (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "EFHW wire antenna",
+          "portable radio setup",
+          "field day antenna",
+          "ham radio sticker",
+          "Mountain Topper radio",
+          "QRP transceiver",
+          "summit activation",
+          "ham radio hiker mug",
+          "SOTA contact log",
+          "summit activation book",
+          "portable ham radio log",
+          "waterproof style cover",
+          "trekking pole mast",
+          "dual use gear",
+          "ultralight ham radio"
+        ],
+        "categories": [
+          "very_high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 10.0,
+        "rationale": "compétition 'medium' → marché encore ouvert"
+      },
+      "reusability_detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 85 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "efhw wire antenna",
+        "portable radio setup",
+        "field day antenna",
+        "ham radio sticker",
+        "mountain topper radio",
+        "qrp transceiver",
+        "summit activation",
+        "ham radio hiker mug",
+        "sota contact log",
+        "summit activation book",
+        "portable ham radio log",
+        "waterproof style cover",
+        "trekking pole mast",
+        "dual use gear",
+        "ultralight ham radio",
+        "canvas tote bag"
+      ],
+      "title_seeds": [
+        "SOTA Ultralight Radio Operator seamless pattern",
+        "EFHW Antenna Deployer Sticker repeat pattern",
+        "QRP Mountain Topper Mug repeat pattern",
+        "Peak Activation Log Book repeat pattern",
+        "Trekking Pole Mast Tote repeat pattern"
+      ]
+    },
+    {
+      "name": "Ultralight Backpacking Base Weight Diagram",
+      "trending_score": 76,
+      "market_opportunity": "high",
+      "why_trending": "Ultralight backpackers are notoriously obsessed with their 'base weight' (weight of gear excluding consumables). A technical diagram that pokes fun at this obsessive gram-counting resonates deeply with the community.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "Cold Soak Jar Decal",
+          "trending_score": 78,
+          "unique_angle": "Measurement lines designed for cold-soaking in a Talenti jar.",
+          "prompt_keywords": [
+            "Talenti jar decal",
+            "cold soak measurements",
+            "stove-less hiking",
+            "thru-hiker gear sticker"
+          ]
+        },
+        {
+          "name": "LighterPack Master Mug",
+          "trending_score": 72,
+          "unique_angle": "Pie chart mocking LighterPack list obsession.",
+          "prompt_keywords": [
+            "LighterPack pie chart",
+            "gear list obsession",
+            "backpacking humor mug",
+            "clean vector chart"
+          ]
+        },
+        {
+          "name": "Dyneema Obsession Sticker",
+          "trending_score": 64,
+          "unique_angle": "Faux-Dyneema fabric texture with self-deprecating text.",
+          "prompt_keywords": [
+            "Dyneema fabric texture",
+            "DCF gear sticker",
+            "ultralight backpacking humor",
+            "translucent grey vector"
+          ]
+        },
+        {
+          "name": "Thru-Hike Log Book",
+          "trending_score": 69,
+          "unique_angle": "Minimalist trail logbook with topographic accents.",
+          "prompt_keywords": [
+            "thru-hike logbook",
+            "trail mileage tracker",
+            "minimalist mountain design",
+            "backpacking notebook"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "minimalist, precise, dry, obsessive",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Dyneema Grey #E8E8E8",
+          "Charcoal #2C2C2C"
+        ],
+        "color_accent": [
+          "Safety Orange #FF6F00"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Single technical diagram of an ultralight backpacking gear layout, centered on pure white background. Flat vector illustration — precision of a gear catalog. Items labeled with real ultralight terminology: 'DCF Shelter (240g)', 'Titanium Pot (used as mug, bowl, and shovel) (55g)', 'Cut-Down Toothbrush (2g)', and 'Cold Soak Jar (no stove, no regrets) (40g)'. Annotation-style text pointing to the toothbrush reads: 'Worn weight doesn't count'. Dry minimalist annotation style. Colors: off-white (#F8F8F6), charcoal (#2C2C2C), safety orange (#FF6F00). Zero gradients. White background. Clean vector edges. Reads clearly at sticker size.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Schemat mechanizmy.jpeg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Schemat_mechanizmy.jpeg",
+          "width": 1000,
+          "height": 1369
+        }
+      ],
+      "generated_at": "2026-06-06 15:57 UTC",
+      "opportunity_score": 76.5,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 84.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 84 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'low' (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "Talenti jar decal",
+          "cold soak measurements",
+          "stove-less hiking",
+          "thru-hiker gear sticker",
+          "LighterPack pie chart",
+          "gear list obsession",
+          "backpacking humor mug",
+          "clean vector chart",
+          "Dyneema fabric texture",
+          "DCF gear sticker",
+          "ultralight backpacking humor",
+          "translucent grey vector",
+          "thru-hike logbook",
+          "trail mileage tracker",
+          "minimalist mountain design"
+        ],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 10.0,
+        "rationale": "compétition 'medium' → marché encore ouvert"
+      },
+      "reusability_detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 84 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "talenti jar decal",
+        "cold soak measurements",
+        "stove-less hiking",
+        "thru-hiker gear sticker",
+        "lighterpack pie chart",
+        "gear list obsession",
+        "backpacking humor mug",
+        "clean vector chart",
+        "dyneema fabric texture",
+        "dcf gear sticker",
+        "ultralight backpacking humor",
+        "translucent grey vector",
+        "thru-hike logbook",
+        "trail mileage tracker",
+        "minimalist mountain design",
+        "backpacking notebook"
+      ],
+      "title_seeds": [
+        "Ultralight Backpacking Base Weight Diagram seamless pattern",
+        "Cold Soak Jar Decal repeat pattern",
+        "LighterPack Master Mug repeat pattern",
+        "Dyneema Obsession Sticker repeat pattern",
+        "Thru-Hike Log Book repeat pattern"
+      ]
+    },
+    {
+      "name": "Analog Renaissance Guild",
+      "trending_score": 76,
+      "market_opportunity": "very_high",
+      "why_trending": "There is a growing cultural movement rejecting digital saturation in favor of tactile, physical mediums. This crossover badge unites film photographers and fountain pen users under a single, proud 'Analog Renaissance' identity.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "Tactile & Slow Sticker",
+          "trending_score": 76,
+          "unique_angle": "Minimalist graphic combining a fountain pen nib and film roll.",
+          "prompt_keywords": [
+            "Tactile & Slow",
+            "fountain pen nib icon",
+            "35mm film roll",
+            "minimalist aesthetic sticker"
+          ]
+        },
+        {
+          "name": "Film & Ink Journal",
+          "trending_score": 72,
+          "unique_angle": "Dual-purpose layout for exposure logging and journaling.",
+          "prompt_keywords": [
+            "film exposure log",
+            "fountain pen friendly paper",
+            "analog journal cover",
+            "retro elegant design"
+          ]
+        },
+        {
+          "name": "Mechanical Appreciation Mug",
+          "trending_score": 65,
+          "unique_angle": "Cross-section schematic of a mechanical camera shutter.",
+          "prompt_keywords": [
+            "mechanical shutter gears",
+            "anti-touchscreen humor",
+            "analog lifestyle",
+            "engineering mug design"
+          ]
+        },
+        {
+          "name": "Sprocket & Nib Tote",
+          "trending_score": 70,
+          "unique_angle": "Repeating geometric pattern of film sprockets and pen nibs.",
+          "prompt_keywords": [
+            "film sprocket pattern",
+            "fountain pen nib pattern",
+            "analog geometric art",
+            "canvas tote bag"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "tactile, nostalgic, elegant, proud",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Warm Amber #C4933F",
+          "Dark Charcoal #2C2C2C"
+        ],
+        "color_accent": [
+          "Aged Cream #F5F0E8"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Circular vintage badge design, centered on pure white background. Styled as a 1930s guild seal celebrating the analog lifestyle. Bold serif typography: primary text 'ANALOG RENAISSANCE GUILD'. Inner ring text reads 'SILVER HALIDE & IRON GALL — TACTILE & SLOW'. Center illustration: a classic mechanical rangefinder camera crossed with a vintage fountain pen nib, rendered in bold woodblock print style. Border: film sprocket holes and ink droplets. Distressed badge edges. Colors: warm amber (#C4933F), dark charcoal (#2C2C2C), aged cream (#F5F0E8). White background. Clean circular composition. Works at 2cm sticker AND 30cm print.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-06 15:57 UTC",
+      "opportunity_score": 76.5,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 84.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 84 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'low' (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "Tactile & Slow",
+          "fountain pen nib icon",
+          "35mm film roll",
+          "minimalist aesthetic sticker",
+          "film exposure log",
+          "fountain pen friendly paper",
+          "analog journal cover",
+          "retro elegant design",
+          "mechanical shutter gears",
+          "anti-touchscreen humor",
+          "analog lifestyle",
+          "engineering mug design",
+          "film sprocket pattern",
+          "fountain pen nib pattern",
+          "analog geometric art"
+        ],
+        "categories": [
+          "very_high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 10.0,
+        "rationale": "compétition 'medium' → marché encore ouvert"
+      },
+      "reusability_detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 84 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "tactile & slow",
+        "fountain pen nib icon",
+        "35mm film roll",
+        "minimalist aesthetic sticker",
+        "film exposure log",
+        "fountain pen friendly paper",
+        "analog journal cover",
+        "retro elegant design",
+        "mechanical shutter gears",
+        "anti-touchscreen humor",
+        "analog lifestyle",
+        "engineering mug design",
+        "film sprocket pattern",
+        "fountain pen nib pattern",
+        "analog geometric art",
+        "canvas tote bag"
+      ],
+      "title_seeds": [
+        "Analog Renaissance Guild seamless pattern",
+        "Tactile & Slow Sticker repeat pattern",
+        "Film & Ink Journal repeat pattern",
+        "Mechanical Appreciation Mug repeat pattern",
+        "Sprocket & Nib Tote repeat pattern"
+      ]
+    },
+    {
+      "name": "Farrier Hoof Nippers & Anvil Badge",
+      "trending_score": 76,
+      "market_opportunity": "high",
+      "why_trending": "Farriers are highly skilled trade professionals with a strong sense of craft pride. They prefer rugged, authentic designs that feature their actual tools (like hoof nippers and rasps) over generic horse clip art.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "Hoof Rasp Specialist Sticker",
+          "trending_score": 70,
+          "unique_angle": "Technical patent drawing of a farrier's hoof rasp.",
+          "prompt_keywords": [
+            "hoof rasp patent",
+            "farrier tool drawing",
+            "cross-hatched texture",
+            "rugged tool sticker"
+          ]
+        },
+        {
+          "name": "Forge Temperature Mug",
+          "trending_score": 68,
+          "unique_angle": "Color-coded steel temperature guide for blacksmiths.",
+          "prompt_keywords": [
+            "steel temperature chart",
+            "forge heat gradient",
+            "blacksmith color scale",
+            "industrial mug design"
+          ]
+        },
+        {
+          "name": "Anvil Ring Club T-Shirt",
+          "trending_score": 65,
+          "unique_angle": "Soundwave graphic representing the ring of a steel anvil.",
+          "prompt_keywords": [
+            "anvil ring soundwave",
+            "cast steel anvil",
+            "blacksmith pride t-shirt",
+            "industrial line art"
+          ]
+        },
+        {
+          "name": "Shoeing Log Book",
+          "trending_score": 72,
+          "unique_angle": "Faux-leather printed cover for farrier client tracking.",
+          "prompt_keywords": [
+            "shoeing schedule tracker",
+            "farrier client log",
+            "rugged leather texture print",
+            "horse hoof notebook"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "rugged, industrial, traditional, proud",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Iron Black #1A1A1A",
+          "Steel Grey #708090"
+        ],
+        "color_accent": [
+          "Forge Red #D32F2F"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Circular vintage badge design, centered on pure white background. Styled as a 1920s ironworkers' union seal. Bold serif typography: primary text 'GUILD OF THE HOT SHOE'. Inner ring text reads 'NO FOOT, NO HORSE — EST. BY FIRE'. Center illustration: a pair of professional hoof nippers crossed with a farrier's rasp over a traditional anvil, rendered in bold woodblock print style. Border: horseshoe nails and chain links. Distressed badge edges. Colors: iron black (#1A1A1A), steel grey (#708090), forge red (#D32F2F). White background. Clean circular composition. Works at 2cm sticker AND 30cm print.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-06 15:57 UTC",
+      "opportunity_score": 76.2,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 83.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 83 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'low' (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "hoof rasp patent",
+          "farrier tool drawing",
+          "cross-hatched texture",
+          "rugged tool sticker",
+          "steel temperature chart",
+          "forge heat gradient",
+          "blacksmith color scale",
+          "industrial mug design",
+          "anvil ring soundwave",
+          "cast steel anvil",
+          "blacksmith pride t-shirt",
+          "industrial line art",
+          "shoeing schedule tracker",
+          "farrier client log",
+          "rugged leather texture print"
+        ],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 10.0,
+        "rationale": "compétition 'medium' → marché encore ouvert"
+      },
+      "reusability_detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 83 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "hoof rasp patent",
+        "farrier tool drawing",
+        "cross-hatched texture",
+        "rugged tool sticker",
+        "steel temperature chart",
+        "forge heat gradient",
+        "blacksmith color scale",
+        "industrial mug design",
+        "anvil ring soundwave",
+        "cast steel anvil",
+        "blacksmith pride t-shirt",
+        "industrial line art",
+        "shoeing schedule tracker",
+        "farrier client log",
+        "rugged leather texture print",
+        "horse hoof notebook"
+      ],
+      "title_seeds": [
+        "Farrier Hoof Nippers & Anvil Badge seamless pattern",
+        "Hoof Rasp Specialist Sticker repeat pattern",
+        "Forge Temperature Mug repeat pattern",
+        "Anvil Ring Club T-Shirt repeat pattern",
+        "Shoeing Log Book repeat pattern"
+      ]
+    },
+    {
+      "name": "Lactobacillus Fermentation Plate",
+      "trending_score": 76,
+      "market_opportunity": "high",
+      "why_trending": "Home fermenters view their hobby as a beautiful partnership with beneficial microbes. A scientifically accurate, vintage naturalist illustration of Lactobacillus and Saccharomyces celebrates this microscopic collaboration.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "Kahm Yeast Inspector Sticker",
+          "trending_score": 75,
+          "unique_angle": "Vintage laboratory warning sign for Kahm yeast identification.",
+          "prompt_keywords": [
+            "Kahm yeast vs mold",
+            "fermentation warning sign",
+            "vintage laboratory sticker",
+            "microbiology humor"
+          ]
+        },
+        {
+          "name": "Brine Percentage Calculator Mug",
+          "trending_score": 71,
+          "unique_angle": "Quick-reference brine percentage calculation chart.",
+          "prompt_keywords": [
+            "salt brine formula",
+            "fermentation calculator",
+            "lacto-ferment chart",
+            "science mug design"
+          ]
+        },
+        {
+          "name": "Kombucha Mother Scoby Tote",
+          "trending_score": 63,
+          "unique_angle": "Layered watercolor depiction of a kombucha SCOBY.",
+          "prompt_keywords": [
+            "SCOBY watercolor",
+            "kombucha mother culture",
+            "symbiotic bacteria yeast",
+            "artistic canvas tote"
+          ]
+        },
+        {
+          "name": "Fermentation Log Book",
+          "trending_score": 68,
+          "unique_angle": "Vintage botanical cover with structured tracking tables inside.",
+          "prompt_keywords": [
+            "fermentation logbook",
+            "pH tracking grid",
+            "home fermenter journal",
+            "vintage botanical cover"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "scientific, organic, vintage, detailed",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Olive Green #556B2F",
+          "Aged Paper #F5F0E8"
+        ],
+        "color_accent": [
+          "Ferment Red #B22222",
+          "Yeast Gold #DAA520"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Single microscopic view of lacto-fermentation microbes, centered on pure white background. Rendered as a 19th century natural history museum plate in the style of Ernst Haeckel's biological illustrations. Fine pen and ink engraving — precise cross-hatching on rod-shaped Lactobacillus bacteria and budding Saccharomyces yeast cells. Handwritten field note text around specimen reads 'Lactobacillus & Saccharomyces — pH < 4.6 Anaerobic Specimen'. Small scale bar and incubation temperature notation bottom right. Colors: olive green (#556B2F), cream (#F5F0E8), ferment red (#B22222), yeast gold (#DAA520). White background. Isolated specimen. Bold enough to read at sticker size.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-06 15:57 UTC",
+      "opportunity_score": 76.2,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 83.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 83 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'low' (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "Kahm yeast vs mold",
+          "fermentation warning sign",
+          "vintage laboratory sticker",
+          "microbiology humor",
+          "salt brine formula",
+          "fermentation calculator",
+          "lacto-ferment chart",
+          "science mug design",
+          "SCOBY watercolor",
+          "kombucha mother culture",
+          "symbiotic bacteria yeast",
+          "artistic canvas tote",
+          "fermentation logbook",
+          "pH tracking grid",
+          "home fermenter journal"
+        ],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 10.0,
+        "rationale": "compétition 'medium' → marché encore ouvert"
+      },
+      "reusability_detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 83 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "kahm yeast vs mold",
+        "fermentation warning sign",
+        "vintage laboratory sticker",
+        "microbiology humor",
+        "salt brine formula",
+        "fermentation calculator",
+        "lacto-ferment chart",
+        "science mug design",
+        "scoby watercolor",
+        "kombucha mother culture",
+        "symbiotic bacteria yeast",
+        "artistic canvas tote",
+        "fermentation logbook",
+        "ph tracking grid",
+        "home fermenter journal",
+        "vintage botanical cover"
+      ],
+      "title_seeds": [
+        "Lactobacillus Fermentation Plate seamless pattern",
+        "Kahm Yeast Inspector Sticker repeat pattern",
+        "Brine Percentage Calculator Mug repeat pattern",
+        "Kombucha Mother Scoby Tote repeat pattern",
+        "Fermentation Log Book repeat pattern"
+      ]
+    },
+    {
+      "name": "POTA Activator Badge",
+      "trending_score": 76,
+      "market_opportunity": "high",
+      "why_trending": "Parks on the Air (POTA) has revitalized amateur radio, turning it into an outdoor adventure sport. Activators love collecting physical badges and stickers to display on their portable radio cases.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "SOTA Summit Activator Sticker",
+          "trending_score": 73,
+          "unique_angle": "Rugged mountain peak with vertical antenna mast.",
+          "prompt_keywords": [
+            "SOTA mountain peak",
+            "vertical antenna mast",
+            "CQ SOTA text",
+            "rugged outdoor ham sticker"
+          ]
+        },
+        {
+          "name": "QRP Low Power Club Mug",
+          "trending_score": 66,
+          "unique_angle": "Minimalist layout celebrating low-power radio transmission.",
+          "prompt_keywords": [
+            "QRP low power",
+            "5 watts or less",
+            "ham radio battery icon",
+            "minimalist operator mug"
+          ]
+        },
+        {
+          "name": "QSL Card Collector Notebook",
+          "trending_score": 69,
+          "unique_angle": "Vintage postal logbook aesthetic for QSL tracking.",
+          "prompt_keywords": [
+            "QSL card tracker",
+            "vintage postal log",
+            "amateur radio contacts",
+            "retro notebook cover"
+          ]
+        },
+        {
+          "name": "Morse Code CW Operator Tote",
+          "trending_score": 72,
+          "unique_angle": "Telegraph key patent drawing with Morse code border.",
+          "prompt_keywords": [
+            "telegraph key patent",
+            "Morse code pattern",
+            "CW operator pride",
+            "canvas tote bag design"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "adventurous, retro, rugged, proud",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Forest Green #2D5A27",
+          "Cream #F5F0E8"
+        ],
+        "color_accent": [
+          "Signal Orange #FF6F00"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Circular vintage badge design, centered on pure white background. Styled as a 1950s national park ranger patch. Bold sans-serif typography: primary text 'POTA ACTIVATOR'. Inner ring text reads 'PARKS ON THE AIR — CQ CQ CQ — 73 DE ACTIVATOR'. Center illustration: a portable dipole antenna strung between two pine trees, with a radio wave signal radiating outwards, rendered in distressed linocut style. Border: pine needles and topographic contour lines. Colors: forest green (#2D5A27), cream (#F5F0E8), signal orange (#FF6F00). White background. Clean circular composition. Works at 2cm sticker AND 30cm print.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Patch of the Maryland–National Capital Park Police, Prince George's County Division (1986).png",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Patch_of_the_Maryland%E2%80%93National_Capital_Park_Police%2C_Prince_George%27s_County_Division_%281986%29.png",
+          "width": 1008,
+          "height": 1223
+        }
+      ],
+      "generated_at": "2026-06-06 15:57 UTC",
+      "opportunity_score": 75.8,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 82.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 82 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'low' (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "SOTA mountain peak",
+          "vertical antenna mast",
+          "CQ SOTA text",
+          "rugged outdoor ham sticker",
+          "QRP low power",
+          "5 watts or less",
+          "ham radio battery icon",
+          "minimalist operator mug",
+          "QSL card tracker",
+          "vintage postal log",
+          "amateur radio contacts",
+          "retro notebook cover",
+          "telegraph key patent",
+          "Morse code pattern",
+          "CW operator pride"
+        ],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 10.0,
+        "rationale": "compétition 'medium' → marché encore ouvert"
+      },
+      "reusability_detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 82 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "sota mountain peak",
+        "vertical antenna mast",
+        "cq sota text",
+        "rugged outdoor ham sticker",
+        "qrp low power",
+        "5 watts or less",
+        "ham radio battery icon",
+        "minimalist operator mug",
+        "qsl card tracker",
+        "vintage postal log",
+        "amateur radio contacts",
+        "retro notebook cover",
+        "telegraph key patent",
+        "morse code pattern",
+        "cw operator pride",
+        "canvas tote bag design"
+      ],
+      "title_seeds": [
+        "POTA Activator Badge seamless pattern",
+        "SOTA Summit Activator Sticker repeat pattern",
+        "QRP Low Power Club Mug repeat pattern",
+        "QSL Card Collector Notebook repeat pattern",
+        "Morse Code CW Operator Tote repeat pattern"
+      ]
+    },
+    {
+      "name": "Arborist Rigging & Climbing Guild",
+      "trending_score": 76,
+      "market_opportunity": "high",
+      "why_trending": "Arborists are proud of their highly technical, high-risk profession. They prefer designs that feature their actual climbing and rigging gear (like friction hitches, carabiners, and chainsaws) over generic tree care clip art.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "Friction Hitch Specialist Sticker",
+          "trending_score": 71,
+          "unique_angle": "Technical knot-tying diagram for climbing hitches.",
+          "prompt_keywords": [
+            "Prusik knot wraps",
+            "VT friction hitch",
+            "arborist climbing rope",
+            "technical knot sticker"
+          ]
+        },
+        {
+          "name": "Chainsaw Safety Inspector Mug",
+          "trending_score": 65,
+          "unique_angle": "Chainsaw kickback zone warning graphic.",
+          "prompt_keywords": [
+            "chainsaw kickback zone",
+            "safety chaps icon",
+            "arborist safety humor",
+            "rugged mug design"
+          ]
+        },
+        {
+          "name": "Canopy Research Journal",
+          "trending_score": 68,
+          "unique_angle": "Forestry logbook design with climbing gear checklists.",
+          "prompt_keywords": [
+            "tree health assessment",
+            "canopy height log",
+            "arborist gear inspection",
+            "forest green notebook"
+          ]
+        },
+        {
+          "name": "Throw Line Master Tote",
+          "trending_score": 70,
+          "unique_angle": "Graphic pattern of throw weights and neon rigging lines.",
+          "prompt_keywords": [
+            "throw weight neon line",
+            "tree canopy access",
+            "arborist rigging art",
+            "heavy-duty tote bag"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "rugged, technical, adventurous, proud",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Forest Green #1B4D3E",
+          "Cream #F5F0E8"
+        ],
+        "color_accent": [
+          "Rope Orange #FF5722"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Circular vintage badge design, centered on pure white background. Styled as a 1940s forestry service badge. Bold serif typography: primary text 'ARBORIST RIGGING GUILD'. Inner ring text reads 'BLAKE'S HITCH & SPLICE — EST. IN THE CANOPY'. Center illustration: a detailed friction hitch knot (like a Blake's hitch) tied around a climbing rope, crossed with a professional chainsaw, rendered in bold woodblock print style. Border: oak leaves and climbing carabiners. Distressed badge edges. Colors: forest green (#1B4D3E), cream (#F5F0E8), rope orange (#FF5722). White background. Clean circular composition. Works at 2cm sticker AND 30cm print.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-06 15:57 UTC",
+      "opportunity_score": 75.8,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 82.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 82 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'low' (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "Prusik knot wraps",
+          "VT friction hitch",
+          "arborist climbing rope",
+          "technical knot sticker",
+          "chainsaw kickback zone",
+          "safety chaps icon",
+          "arborist safety humor",
+          "rugged mug design",
+          "tree health assessment",
+          "canopy height log",
+          "arborist gear inspection",
+          "forest green notebook",
+          "throw weight neon line",
+          "tree canopy access",
+          "arborist rigging art"
+        ],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 10.0,
+        "rationale": "compétition 'medium' → marché encore ouvert"
+      },
+      "reusability_detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 82 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "prusik knot wraps",
+        "vt friction hitch",
+        "arborist climbing rope",
+        "technical knot sticker",
+        "chainsaw kickback zone",
+        "safety chaps icon",
+        "arborist safety humor",
+        "rugged mug design",
+        "tree health assessment",
+        "canopy height log",
+        "arborist gear inspection",
+        "forest green notebook",
+        "throw weight neon line",
+        "tree canopy access",
+        "arborist rigging art",
+        "heavy-duty tote bag"
+      ],
+      "title_seeds": [
+        "Arborist Rigging & Climbing Guild seamless pattern",
+        "Friction Hitch Specialist Sticker repeat pattern",
+        "Chainsaw Safety Inspector Mug repeat pattern",
+        "Canopy Research Journal repeat pattern",
+        "Throw Line Master Tote repeat pattern"
+      ]
+    },
+    {
+      "name": "Long-Arm Stapler Zine Guild",
+      "trending_score": 76,
+      "market_opportunity": "high",
+      "why_trending": "Zine makers share a unique, hands-on subculture centered around self-publishing and analog printing. The long-arm stapler is the ultimate insider tool that immediately signals membership in this community.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "Half-Fold Master Sticker",
+          "trending_score": 72,
+          "unique_angle": "Dotted fold line diagram for an 8-page mini-zine.",
+          "prompt_keywords": [
+            "8-page mini-zine fold",
+            "dotted fold lines",
+            "zine maker sticker",
+            "DIY print aesthetic"
+          ]
+        },
+        {
+          "name": "Photocopier Warmth Mug",
+          "trending_score": 64,
+          "unique_angle": "Retro halftone graphic celebrating photocopier warmth.",
+          "prompt_keywords": [
+            "photocopier halftone",
+            "warm paper smell",
+            "zine maker humor",
+            "retro copy shop mug"
+          ]
+        },
+        {
+          "name": "Zine Distro Tote",
+          "trending_score": 75,
+          "unique_angle": "Bold punk-style 'ZINE DISTRO' stamped graphic.",
+          "prompt_keywords": [
+            "zine distro stamp",
+            "indie print fair",
+            "heavy canvas tote",
+            "punk self-publishing art"
+          ]
+        },
+        {
+          "name": "Layout Grid Notebook",
+          "trending_score": 69,
+          "unique_angle": "Non-photo blue grid layout board aesthetic.",
+          "prompt_keywords": [
+            "non-photo blue grid",
+            "zine layout board",
+            "self-publishing planner",
+            "indie notebook cover"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "indie, punk, tactile, DIY",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Soy Black #1A1A1A",
+          "Warm Red #F4543C"
+        ],
+        "color_accent": [
+          "Teal #00A79D"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Single risograph-style illustration, centered on pure white background. Bold limited-palette print aesthetic — a 2-color risograph zine cover. A classic long-arm stapler in profile, with a half-assembled zine positioned under the stapler head. Community text: 'LONG-ARM STAPLER GUILD — 8-PAGE FOLD OR BUST'. Deliberate register variation between color layers — slight 3px misalignment on the color fill. Heavy grain texture on all solid fills. Black key layer with single warm red (#F4543C) and teal (#00A79D) color overlays. White background. Strong graphic silhouette. Reads at 2cm sticker size.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-06 15:57 UTC",
+      "opportunity_score": 75.5,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 81.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 81 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'low' (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "8-page mini-zine fold",
+          "dotted fold lines",
+          "zine maker sticker",
+          "DIY print aesthetic",
+          "photocopier halftone",
+          "warm paper smell",
+          "zine maker humor",
+          "retro copy shop mug",
+          "zine distro stamp",
+          "indie print fair",
+          "heavy canvas tote",
+          "punk self-publishing art",
+          "non-photo blue grid",
+          "zine layout board",
+          "self-publishing planner"
+        ],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 10.0,
+        "rationale": "compétition 'medium' → marché encore ouvert"
+      },
+      "reusability_detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 81 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "8-page mini-zine fold",
+        "dotted fold lines",
+        "zine maker sticker",
+        "diy print aesthetic",
+        "photocopier halftone",
+        "warm paper smell",
+        "zine maker humor",
+        "retro copy shop mug",
+        "zine distro stamp",
+        "indie print fair",
+        "heavy canvas tote",
+        "punk self-publishing art",
+        "non-photo blue grid",
+        "zine layout board",
+        "self-publishing planner",
+        "indie notebook cover"
+      ],
+      "title_seeds": [
+        "Long-Arm Stapler Zine Guild seamless pattern",
+        "Half-Fold Master Sticker repeat pattern",
+        "Photocopier Warmth Mug repeat pattern",
+        "Zine Distro Tote repeat pattern",
+        "Layout Grid Notebook repeat pattern"
+      ]
+    },
+    {
+      "name": "Capsicum Chinense Anatomy Plate",
+      "trending_score": 76,
+      "market_opportunity": "high",
+      "why_trending": "Superhot pepper growers are deeply passionate about the botany of their plants, focusing on specific cultivars like the Carolina Reaper or Ghost Pepper. A scientifically accurate botanical plate appeals to their horticultural pride.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "Capsaicin Molecule Sticker",
+          "trending_score": 70,
+          "unique_angle": "Minimalist chemical structure of the capsaicin molecule.",
+          "prompt_keywords": [
+            "capsaicin chemical structure",
+            "molecule diagram",
+            "hot pepper science",
+            "minimalist sticker design"
+          ]
+        },
+        {
+          "name": "Seed Isolation Bag Mug",
+          "trending_score": 63,
+          "unique_angle": "Organza isolation bag illustration with humorous text.",
+          "prompt_keywords": [
+            "organza isolation bag",
+            "pepper cross-pollination",
+            "chili grower humor",
+            "gardening mug design"
+          ]
+        },
+        {
+          "name": "Overwintering Club Journal",
+          "trending_score": 67,
+          "unique_angle": "Botanical cover with structured overwintering logs.",
+          "prompt_keywords": [
+            "pepper overwintering",
+            "indoor plant care",
+            "chili grower logbook",
+            "botanical notebook cover"
+          ]
+        },
+        {
+          "name": "Scoville Scale Poster",
+          "trending_score": 74,
+          "unique_angle": "Detailed vintage-style Scoville heat scale chart.",
+          "prompt_keywords": [
+            "Scoville heat scale",
+            "vintage pepper chart",
+            "chili heat levels",
+            "botanical art print"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "botanical, detailed, scientific, vibrant",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Pepper Red #C0392B",
+          "Aged Paper #F5F0E8"
+        ],
+        "color_accent": [
+          "Foliage Green #27AE60",
+          "Capsaicin Yellow #F1C40F"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Single Carolina Reaper pepper (Capsicum chinense), centered on pure white background. Rendered as a 19th century botanical plate in the style of Pierre-Joseph Redouté's illustrations. Fine pen and ink engraving — precise cross-hatching on the bumpy, blistered skin texture, showing the characteristic scorpion-like tail, with a cross-section showing the internal placenta and seeds where capsaicin is concentrated. Handwritten field note text around specimen reads 'Capsicum chinense — Carolina Reaper, Placenta Wall - High Capsaicin, Scoville: 2,200,000 SHU'. Small scale bar and Scoville rating notation bottom right. Colors: pepper red (#C0392B), cream (#F5F0E8), foliage green (#27AE60), capsaicin yellow (#F1C40F). White background. Isolated specimen. Bold enough to read at sticker size.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-06 15:57 UTC",
+      "opportunity_score": 75.5,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 81.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 81 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'low' (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "capsaicin chemical structure",
+          "molecule diagram",
+          "hot pepper science",
+          "minimalist sticker design",
+          "organza isolation bag",
+          "pepper cross-pollination",
+          "chili grower humor",
+          "gardening mug design",
+          "pepper overwintering",
+          "indoor plant care",
+          "chili grower logbook",
+          "botanical notebook cover",
+          "Scoville heat scale",
+          "vintage pepper chart",
+          "chili heat levels"
+        ],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 10.0,
+        "rationale": "compétition 'medium' → marché encore ouvert"
+      },
+      "reusability_detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 81 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "capsaicin chemical structure",
+        "molecule diagram",
+        "hot pepper science",
+        "minimalist sticker design",
+        "organza isolation bag",
+        "pepper cross-pollination",
+        "chili grower humor",
+        "gardening mug design",
+        "pepper overwintering",
+        "indoor plant care",
+        "chili grower logbook",
+        "botanical notebook cover",
+        "scoville heat scale",
+        "vintage pepper chart",
+        "chili heat levels",
+        "botanical art print"
+      ],
+      "title_seeds": [
+        "Capsicum Chinense Anatomy Plate seamless pattern",
+        "Capsaicin Molecule Sticker repeat pattern",
+        "Seed Isolation Bag Mug repeat pattern",
+        "Overwintering Club Journal repeat pattern",
+        "Scoville Scale Poster repeat pattern"
+      ]
+    },
+    {
+      "name": "Lake Tanganyika Cichlid Plate",
+      "trending_score": 75,
+      "market_opportunity": "high",
+      "why_trending": "Cichlid keepers are incredibly proud of their highly specific African Rift Lake setups. They prefer scientifically accurate, beautiful representations of their fish over generic cartoon clip art.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "Mbuna Cichlid Species Poster",
+          "trending_score": 72,
+          "unique_angle": "Multi-species grid layout of colorful Mbuna cichlids.",
+          "prompt_keywords": [
+            "Mbuna cichlids grid",
+            "Lake Malawi species",
+            "vintage fish poster",
+            "ichthyology art print"
+          ]
+        },
+        {
+          "name": "Water Parameters Log Book",
+          "trending_score": 65,
+          "unique_angle": "Water chemistry tracking tables with high-pH reference ranges.",
+          "prompt_keywords": [
+            "water parameters log",
+            "aquarium water chemistry",
+            "cichlid tank tracker",
+            "minimalist notebook"
+          ]
+        },
+        {
+          "name": "Hardscape Architect Sticker",
+          "trending_score": 68,
+          "unique_angle": "Architectural seal celebrating hardscape design.",
+          "prompt_keywords": [
+            "aquarium hardscape",
+            "rockwork arrangement",
+            "cichlid cave builder",
+            "architect seal sticker"
+          ]
+        },
+        {
+          "name": "Shell Dweller Cichlid Mug",
+          "trending_score": 73,
+          "unique_angle": "Snail shell habitat illustration with community humor.",
+          "prompt_keywords": [
+            "shell dweller cichlid",
+            "Neolamprologus multifasciatus",
+            "snail shell fish",
+            "aquarist humor mug"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "scientific, elegant, detailed, organic",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Prussian Blue #003153",
+          "Aged Paper #F5F0E8"
+        ],
+        "color_accent": [
+          "Electric Blue #00E5FF",
+          "Ochre #C4933F"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Single Frontosa Cichlid (Cyphotilapia frontosa), centered on pure white background. Rendered as a 19th century natural history museum plate in the style of Marcus Elieser Bloch's ichthyology illustrations. Fine pen and ink engraving — precise cross-hatching on the scales, anatomically correct prominent forehead hump, distinct vertical black bands, and flowing fin filaments. Handwritten field note text around specimen reads 'Cyphotilapia frontosa — Lake Tanganyika — Specimen F1 Wild Caught'. Small scale bar and collection depth notation bottom right. Colors: prussian blue (#003153), cream (#F5F0E8), electric blue (#00E5FF), ochre (#C4933F). White background. Isolated specimen. Bold enough to read at sticker size.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-06 15:57 UTC",
+      "opportunity_score": 75.2,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 80.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 80 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'low' (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "Mbuna cichlids grid",
+          "Lake Malawi species",
+          "vintage fish poster",
+          "ichthyology art print",
+          "water parameters log",
+          "aquarium water chemistry",
+          "cichlid tank tracker",
+          "minimalist notebook",
+          "aquarium hardscape",
+          "rockwork arrangement",
+          "cichlid cave builder",
+          "architect seal sticker",
+          "shell dweller cichlid",
+          "Neolamprologus multifasciatus",
+          "snail shell fish"
+        ],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 10.0,
+        "rationale": "compétition 'medium' → marché encore ouvert"
+      },
+      "reusability_detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 80 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "mbuna cichlids grid",
+        "lake malawi species",
+        "vintage fish poster",
+        "ichthyology art print",
+        "water parameters log",
+        "aquarium water chemistry",
+        "cichlid tank tracker",
+        "minimalist notebook",
+        "aquarium hardscape",
+        "rockwork arrangement",
+        "cichlid cave builder",
+        "architect seal sticker",
+        "shell dweller cichlid",
+        "neolamprologus multifasciatus",
+        "snail shell fish",
+        "aquarist humor mug"
+      ],
+      "title_seeds": [
+        "Lake Tanganyika Cichlid Plate seamless pattern",
+        "Mbuna Cichlid Species Poster repeat pattern",
+        "Water Parameters Log Book repeat pattern",
+        "Hardscape Architect Sticker repeat pattern",
+        "Shell Dweller Cichlid Mug repeat pattern"
+      ]
+    },
+    {
+      "name": "Bookbinder Bone Folder & Awl",
+      "trending_score": 75,
+      "market_opportunity": "high",
+      "why_trending": "Bookbinders are passionate about the physical, structural craft of making books. They love designs that feature their actual tools (like bone folders, awls, and linen thread) over generic reading quotes.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "Kettle Stitch Specialist Sticker",
+          "trending_score": 74,
+          "unique_angle": "Technical diagram of a kettle stitch thread path.",
+          "prompt_keywords": [
+            "kettle stitch diagram",
+            "bookbinding thread path",
+            "signature sewing",
+            "craftsman sticker"
+          ]
+        },
+        {
+          "name": "Paper Grain Inspector Mug",
+          "trending_score": 70,
+          "unique_angle": "Paper grain direction diagram with humorous text.",
+          "prompt_keywords": [
+            "paper grain direction",
+            "bookbinding humor",
+            "folding along grain",
+            "craftsman mug design"
+          ]
+        },
+        {
+          "name": "Signature Folding Journal",
+          "trending_score": 62,
+          "unique_angle": "Geometric pattern of folded signatures on the cover.",
+          "prompt_keywords": [
+            "book signature layout",
+            "page imposition planner",
+            "bookbinding journal",
+            "geometric pattern cover"
+          ]
+        },
+        {
+          "name": "Book Press Operator Tote",
+          "trending_score": 68,
+          "unique_angle": "Vintage wooden book press line art.",
+          "prompt_keywords": [
+            "wooden book press",
+            "vintage bookbinding gear",
+            "slow craft illustration",
+            "canvas tote bag"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "tactile, craft-focused, literary, DIY",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Soy Black #1A1A1A",
+          "Linen Cream #F5F0E8"
+        ],
+        "color_accent": [
+          "Cobalt Blue #0047AB"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Single risograph-style illustration, centered on pure white background. Bold limited-palette print aesthetic — a 2-color risograph zine cover. A classic bone folder tool crossed with a bookbinding awl, with a spool of linen thread and a needle nearby. Community text: 'GUILD OF THE BONE FOLDER — RESPECT THE GRAIN'. Deliberate register variation between color layers — slight 3px misalignment on the color fill. Heavy grain texture on all solid fills. Black key layer with single cobalt blue (#0047AB) and linen cream (#F5F0E8) color overlays. White background. Strong graphic silhouette. Reads at 2cm sticker size.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-06 15:57 UTC",
+      "opportunity_score": 75.2,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 80.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 80 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'low' (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [
+          "kettle stitch diagram",
+          "bookbinding thread path",
+          "signature sewing",
+          "craftsman sticker",
+          "paper grain direction",
+          "bookbinding humor",
+          "folding along grain",
+          "craftsman mug design",
+          "book signature layout",
+          "page imposition planner",
+          "bookbinding journal",
+          "geometric pattern cover",
+          "wooden book press",
+          "vintage bookbinding gear",
+          "slow craft illustration"
+        ],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 10.0,
+        "rationale": "compétition 'medium' → marché encore ouvert"
+      },
+      "reusability_detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 80 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "kettle stitch diagram",
+        "bookbinding thread path",
+        "signature sewing",
+        "craftsman sticker",
+        "paper grain direction",
+        "bookbinding humor",
+        "folding along grain",
+        "craftsman mug design",
+        "book signature layout",
+        "page imposition planner",
+        "bookbinding journal",
+        "geometric pattern cover",
+        "wooden book press",
+        "vintage bookbinding gear",
+        "slow craft illustration",
+        "canvas tote bag"
+      ],
+      "title_seeds": [
+        "Bookbinder Bone Folder & Awl seamless pattern",
+        "Kettle Stitch Specialist Sticker repeat pattern",
+        "Paper Grain Inspector Mug repeat pattern",
+        "Signature Folding Journal repeat pattern",
+        "Book Press Operator Tote repeat pattern"
+      ]
+    },
+    {
+      "name": "Mechanical Keyboard Switch Cross-Section",
+      "trending_score": 72,
+      "market_opportunity": "very_high",
+      "why_trending": "Keyboard enthusiasts are deeply opinionated about switch types (linear, tactile, clicky) and their internal components. A technical diagram of a switch cross-section speaks directly to this engineering-focused aesthetic.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "Krytox 205g0 Lubricant Mug",
+          "trending_score": 72,
+          "unique_angle": "Chemical label style typography celebrating Krytox 205g0.",
+          "prompt_keywords": [
+            "minimalist typography",
+            "chemical label style",
+            "Krytox 205g0",
+            "lubricant jar design"
+          ]
+        },
+        {
+          "name": "Desk Mat Switch Anatomy",
+          "trending_score": 75,
+          "unique_angle": "Blueprint schematic of multiple switch types side-by-side.",
+          "prompt_keywords": [
+            "blueprint schematic",
+            "desk mat design",
+            "linear tactile clicky",
+            "technical keyboard drawing"
+          ]
+        },
+        {
+          "name": "Linear vs Tactile Debate Sticker",
+          "trending_score": 64,
+          "unique_angle": "Force curve graph comparison with community-insider annotations.",
+          "prompt_keywords": [
+            "force curve graph",
+            "linear vs tactile",
+            "keyboard enthusiast humor",
+            "technical chart sticker"
+          ]
+        },
+        {
+          "name": "Artisan Keycap Collector Journal",
+          "trending_score": 68,
+          "unique_angle": "Isometric grid layout of custom artisan keycaps.",
+          "prompt_keywords": [
+            "isometric grid",
+            "artisan keycaps",
+            "resin cast keys",
+            "collector journal cover"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "precise, minimalist, geeky, clean",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Charcoal #2C2C2C",
+          "Off-White #F8F8F6"
+        ],
+        "color_accent": [
+          "Linear Red #D63031"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Single mechanical keyboard switch cross-section diagram, centered on pure white background. Flat vector illustration — precision of an engineering patent drawing. Switch components labeled with real keyboard terminology: 'Stem (Lubed with Krytox 205g0)', 'Gold-Plated Spring (62g Bottom Out)', 'Leaf Contact', and 'Housing'. Annotation-style text pointing to the stem reads: 'Smoothness: Infinite'. Dry minimalist annotation style. Colors: off-white (#F8F8F6), charcoal (#2C2C2C), linear red (#D63031). Zero gradients. White background. Clean vector edges. Reads clearly at sticker size.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Romance of Modern Invention Ritchie Telautograph.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Romance_of_Modern_Invention_Ritchie_Telautograph.jpg",
+          "width": 400,
+          "height": 461
+        }
+      ],
+      "generated_at": "2026-06-06 15:57 UTC",
+      "opportunity_score": 72.2,
+      "confidence": 65.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 72.6,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 82.0,
+          "detail": "page 'The Chemical Brothers' : 31 704 vues/mois (réel)"
+        },
+        "growth": {
+          "value": 29.6,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 78.0,
+          "detail": "évolution -41% des vues sur 12 mois (réel)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'low' (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "wikipedia"
+        ],
+        "trigger_keywords": [
+          "minimalist typography",
+          "chemical label style",
+          "Krytox 205g0",
+          "lubricant jar design",
+          "blueprint schematic",
+          "desk mat design",
+          "linear tactile clicky",
+          "technical keyboard drawing",
+          "force curve graph",
+          "linear vs tactile",
+          "keyboard enthusiast humor",
+          "technical chart sticker",
+          "isometric grid",
+          "artisan keycaps",
+          "resin cast keys"
+        ],
+        "categories": [
+          "very_high",
+          "medium"
+        ],
+        "notes": "demande MESURÉE (wikipedia) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 10.0,
+        "rationale": "compétition 'medium' → marché encore ouvert"
+      },
+      "reusability_detail": "4 sous-niches, 16 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "page 'The Chemical Brothers' : 31 704 vues/mois (réel)",
+      "seo_keywords": [
+        "minimalist typography",
+        "chemical label style",
+        "krytox 205g0",
+        "lubricant jar design",
+        "blueprint schematic",
+        "desk mat design",
+        "linear tactile clicky",
+        "technical keyboard drawing",
+        "force curve graph",
+        "linear vs tactile",
+        "keyboard enthusiast humor",
+        "technical chart sticker",
+        "isometric grid",
+        "artisan keycaps",
+        "resin cast keys",
+        "collector journal cover"
+      ],
+      "title_seeds": [
+        "Mechanical Keyboard Switch Cross-Section seamless pattern",
+        "Krytox 205g0 Lubricant Mug repeat pattern",
+        "Desk Mat Switch Anatomy repeat pattern",
+        "Linear vs Tactile Debate Sticker repeat pattern",
+        "Artisan Keycap Collector Journal repeat pattern"
+      ]
+    }
+  ]
+}
