@@ -1,0 +1,3221 @@
+{
+  "generated_at": "2026-06-06T15:40:18.555283+00:00",
+  "total_briefs": 16,
+  "briefs": [
+    {
+      "name": "YAML Indentation Guide",
+      "trending_score": 79,
+      "market_opportunity": "very_high",
+      "why_trending": "DevOps and Infrastructure engineering is dominated by writing YAML files for Kubernetes. The extreme sensitivity of YAML to single-space indentation errors is a universal industry pain point that engineers love to joke about.",
+      "target_audience": "DevOps Engineers, SREs, Kubernetes Administrators",
+      "sub_niches": [
+        {
+          "name": "Kubernetes Pod CrashLoopBackOff Sticker",
+          "trending_score": 85,
+          "unique_angle": "Captures the specific panic of a pod failing to start in production.",
+          "prompt_keywords": [
+            "terminal output",
+            "crashloopbackoff",
+            "kubernetes pod",
+            "cli error",
+            "monochrome terminal"
+          ]
+        },
+        {
+          "name": "Terraform Apply Anxiety Mug",
+          "trending_score": 78,
+          "unique_angle": "Focuses on the high-stakes infrastructure-as-code deployment phase.",
+          "prompt_keywords": [
+            "terraform apply",
+            "infrastructure as code",
+            "terminal prompt",
+            "yes/no confirmation",
+            "devops humor"
+          ]
+        },
+        {
+          "name": "Git Commit Force Push Decal",
+          "trending_score": 80,
+          "unique_angle": "A classic developer joke styled as an industrial emergency warning sign.",
+          "prompt_keywords": [
+            "git push force",
+            "emergency warning sign",
+            "industrial label",
+            "hazard stripes",
+            "git commit"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "frustrated, technical, minimalist, dry",
+        "composition": "Centered, isolated code block",
+        "line_style": "Clean vector paths",
+        "color_primary": [
+          "Terminal Black #1E1E1E",
+          "Off-White #F8F8F6"
+        ],
+        "color_accent": [
+          "Syntax Red #E74C3C"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [
+          "IDE code editor interface"
+        ],
+        "texture": "Subtle digital screen scanlines"
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Single code editor window showing a Kubernetes deployment YAML file, centered on pure white background. Flat vector illustration — precision of an IDE interface. Labeled with real DevOps jargon: 'apiVersion: apps/v1', 'kind: Deployment', '  spec: (Missing 2 Spaces)', '    containers: (Indentation Error)'. Status indicator: 'Build Status: FAILED (YAML is a programming language, change my mind)'. Small text at bottom: 'Death by spaces.' Dry minimalist annotation style. Colors: off-white (#F8F8F6), terminal black (#1E1E1E), syntax red (#E74C3C). Zero gradients. White background. Clean vector edges. Reads clearly at sticker size.",
+        "negative_prompt": "",
+        "key_elements": [
+          "Kubernetes deployment syntax",
+          "Indentation error indicators",
+          "Failed build status"
+        ],
+        "avoid_elements": [
+          "3D renders",
+          "gradients",
+          "generic code"
+        ],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Ascii art alphabet.png",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/72/Ascii_art_alphabet.png",
+          "width": 1233,
+          "height": 77
+        },
+        {
+          "title": "KraftwerkInASCII.png",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/23/KraftwerkInASCII.png",
+          "width": 1942,
+          "height": 804
+        }
+      ],
+      "generated_at": "2026-06-06 15:40 UTC",
+      "opportunity_score": 78.9,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 78.4,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 82.0,
+          "detail": "page 'JSON' : 72 596 vues/mois (réel)"
+        },
+        "growth": {
+          "value": 94.0,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 78.0,
+          "detail": "évolution +88% des vues sur 12 mois (réel)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 75.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, références de style, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 87.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 15 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "wikipedia"
+        ],
+        "trigger_keywords": [
+          "Kubernetes deployment syntax",
+          "Indentation error indicators",
+          "Failed build status",
+          "terminal output",
+          "crashloopbackoff",
+          "kubernetes pod",
+          "cli error",
+          "monochrome terminal",
+          "terraform apply",
+          "infrastructure as code",
+          "terminal prompt",
+          "yes/no confirmation",
+          "devops humor",
+          "git push force",
+          "emergency warning sign"
+        ],
+        "categories": [
+          "very_high",
+          "medium"
+        ],
+        "notes": "demande MESURÉE (wikipedia) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 15 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "page 'JSON' : 72 596 vues/mois (réel)",
+      "seo_keywords": [
+        "kubernetes deployment syntax",
+        "indentation error indicators",
+        "failed build status",
+        "terminal output",
+        "crashloopbackoff",
+        "kubernetes pod",
+        "cli error",
+        "monochrome terminal",
+        "terraform apply",
+        "infrastructure as code",
+        "terminal prompt",
+        "yes/no confirmation",
+        "devops humor",
+        "git push force",
+        "emergency warning sign",
+        "industrial label",
+        "hazard stripes",
+        "git commit"
+      ],
+      "title_seeds": [
+        "YAML Indentation Guide seamless pattern",
+        "Kubernetes Pod CrashLoopBackOff Sticker repeat pattern",
+        "Terraform Apply Anxiety Mug repeat pattern",
+        "Git Commit Force Push Decal repeat pattern"
+      ]
+    },
+    {
+      "name": "Mechanical Keyboard Switch Patent",
+      "trending_score": 74,
+      "market_opportunity": "very_high",
+      "why_trending": "The custom mechanical keyboard community is obsessed with the internal components of switches (spring weights, stem materials, housing plastics). A design that highlights these individual parts with technical accuracy is highly coveted.",
+      "target_audience": "Mechanical Keyboard Enthusiasts, Custom Builders",
+      "sub_niches": [
+        {
+          "name": "Linear Switch Lubing Station Sticker",
+          "trending_score": 78,
+          "unique_angle": "Focuses on the meditative, repetitive process of switch lubing.",
+          "prompt_keywords": [
+            "lubing station",
+            "acrylic tray",
+            "switch stems",
+            "krytox brush",
+            "linear switch"
+          ]
+        },
+        {
+          "name": "62g Spring Weight Mug",
+          "trending_score": 70,
+          "unique_angle": "Appeals to the spring-swapping enthusiasts who obsess over actuation force.",
+          "prompt_keywords": [
+            "coiled spring",
+            "bottom out force",
+            "spring weight",
+            "minimalist keyboard",
+            "62g spring"
+          ]
+        },
+        {
+          "name": "Ortholinear Layout Schematic Poster",
+          "trending_score": 75,
+          "unique_angle": "Targets the ergonomic and non-standard keyboard layout subculture.",
+          "prompt_keywords": [
+            "ortholinear layout",
+            "keyboard grid",
+            "ergonomic layout",
+            "keycap profile",
+            "schematic poster"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "minimalist, precise, technical, clean",
+        "composition": "Centered exploded view",
+        "line_style": "Fine technical lines",
+        "color_primary": [
+          "Off-White #F8F8F6",
+          "Charcoal #2C2C2C"
+        ],
+        "color_accent": [
+          "Tactile Copper #D35400"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [
+          "Patent drawings",
+          "Engineering schematics"
+        ],
+        "texture": "Clean blueprint finish"
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Single mechanical keyboard tactile switch exploded diagram, centered on pure white background. Flat vector illustration — the precision of a technical manual, the wit of an insider joke. Labeled with annotation-style text using real community jargon: 'Stem (Lubed with Krytox 205g0)', '62g Gold-Plated Spring', 'Polycarbonate Top Housing', 'Leaf Contact'. Status indicator: 'Endgame Status: Pending'. Small text at bottom: 'Do not disturb, lubing switches.' Dry minimalist annotation style. Colors: off-white (#F8F8F6), charcoal (#2C2C2C), tactile copper (#D35400). Zero gradients. White background. Clean vector edges. Reads clearly at sticker size.",
+        "negative_prompt": "",
+        "key_elements": [
+          "Exploded switch components",
+          "Lubing annotations",
+          "Endgame status text"
+        ],
+        "avoid_elements": [
+          "3D renders",
+          "shadows",
+          "generic keyboard layouts"
+        ],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "James Stimpson's Patent Drawing for an Improvement in the Mode of Opening and Shutting Switches on Railroads - DPLA - 1517502f4854e76bafcc6a811e086612.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/James_Stimpson%27s_Patent_Drawing_for_an_Improvement_in_the_Mode_of_Opening_and_Shutting_Switches_on_Railroads_-_DPLA_-_1517502f4854e76bafcc6a811e086612.jpg",
+          "width": 4064,
+          "height": 5088
+        },
+        {
+          "title": "Magnetic Switch drawing US Patent 4489297.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Magnetic_Switch_drawing_US_Patent_4489297.jpg",
+          "width": 640,
+          "height": 480
+        }
+      ],
+      "generated_at": "2026-06-06 15:40 UTC",
+      "opportunity_score": 74.2,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 85.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 85 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 75.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, références de style, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 87.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 15 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [
+          "Exploded switch components",
+          "Lubing annotations",
+          "Endgame status text",
+          "lubing station",
+          "acrylic tray",
+          "switch stems",
+          "krytox brush",
+          "linear switch",
+          "coiled spring",
+          "bottom out force",
+          "spring weight",
+          "minimalist keyboard",
+          "62g spring",
+          "ortholinear layout",
+          "keyboard grid"
+        ],
+        "categories": [
+          "very_high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 15 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 85 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "exploded switch components",
+        "lubing annotations",
+        "endgame status text",
+        "lubing station",
+        "acrylic tray",
+        "switch stems",
+        "krytox brush",
+        "linear switch",
+        "coiled spring",
+        "bottom out force",
+        "spring weight",
+        "minimalist keyboard",
+        "62g spring",
+        "ortholinear layout",
+        "keyboard grid",
+        "ergonomic layout",
+        "keycap profile",
+        "schematic poster"
+      ],
+      "title_seeds": [
+        "Mechanical Keyboard Switch Patent seamless pattern",
+        "Linear Switch Lubing Station Sticker repeat pattern",
+        "62g Spring Weight Mug repeat pattern",
+        "Ortholinear Layout Schematic Poster repeat pattern"
+      ]
+    },
+    {
+      "name": "Sourdough Starter Guild Badge",
+      "trending_score": 73,
+      "market_opportunity": "high",
+      "why_trending": "Sourdough baking has evolved from a pandemic trend into a permanent lifestyle hobby. Bakers treat their starters like pets, making a 'guild' badge highly appealing for personalizing jars and baking journals.",
+      "target_audience": "Artisan Home Bakers, Sourdough Enthusiasts",
+      "sub_niches": [
+        {
+          "name": "Banneton Basket Scoring Pattern Sticker",
+          "trending_score": 76,
+          "unique_angle": "Appeals to the artistic side of bread scoring and aesthetics.",
+          "prompt_keywords": [
+            "banneton basket",
+            "bread scoring",
+            "lame blade",
+            "floured boule",
+            "scoring pattern"
+          ]
+        },
+        {
+          "name": "80 Percent Hydration Club Mug",
+          "trending_score": 70,
+          "unique_angle": "A badge of honor for mastering sticky, difficult doughs.",
+          "prompt_keywords": [
+            "80 percent hydration",
+            "baking percentage",
+            "wet dough",
+            "artisan baker",
+            "hydration calculator"
+          ]
+        },
+        {
+          "name": "Lame Blade Safety Cover Case",
+          "trending_score": 55,
+          "unique_angle": "Focuses on the dangerous tool of the trade: the razor-sharp lame.",
+          "prompt_keywords": [
+            "lame blade",
+            "razor blade",
+            "baking tool",
+            "safety warning",
+            "vintage razor"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "rustic, heritage, organic, proud",
+        "composition": "Circular badge",
+        "line_style": "Woodblock print lines",
+        "color_primary": [
+          "Warm Amber #C4933F",
+          "Dark Brown #2C1A0E"
+        ],
+        "color_accent": [
+          "Muted Gold #A8882A"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [
+          "1930s agricultural labels",
+          "Vintage flour sacks"
+        ],
+        "texture": "Distressed paper/flour sack texture"
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Circular vintage badge design, centered on pure white background. Styled as a 1930s artisan baker's guild seal — the type printed on flour sack labels. Bold serif typography: primary text 'SOURDOUGH CULTIVATOR'. Inner ring text reads 'LIVING CULTURE — EST. WHEN STARTER SURVIVED'. Center illustration: a ceramic sourdough crock with an active starter bubbling over the top, rendered in woodblock print style. Border: wheat stalks and measuring scales. Distressed badge edges. Colors: warm amber (#C4933F), cream (#F5F0E8), dark brown (#2C1A0E), muted gold (#A8882A). White background. Clean circular composition. Works at 2cm sticker AND 30cm print.",
+        "negative_prompt": "",
+        "key_elements": [
+          "Sourdough crock",
+          "Wheat stalks",
+          "Vintage typography"
+        ],
+        "avoid_elements": [
+          "modern vector icons",
+          "bright neon colors",
+          "cute cartoon faces"
+        ],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-06 15:40 UTC",
+      "opportunity_score": 73.3,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 82.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 82 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 75.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, références de style, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 87.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 14 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [
+          "Sourdough crock",
+          "Wheat stalks",
+          "Vintage typography",
+          "banneton basket",
+          "bread scoring",
+          "lame blade",
+          "floured boule",
+          "scoring pattern",
+          "80 percent hydration",
+          "baking percentage",
+          "wet dough",
+          "artisan baker",
+          "hydration calculator",
+          "razor blade",
+          "baking tool"
+        ],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 14 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 82 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "sourdough crock",
+        "wheat stalks",
+        "vintage typography",
+        "banneton basket",
+        "bread scoring",
+        "lame blade",
+        "floured boule",
+        "scoring pattern",
+        "80 percent hydration",
+        "baking percentage",
+        "wet dough",
+        "artisan baker",
+        "hydration calculator",
+        "razor blade",
+        "baking tool",
+        "safety warning",
+        "vintage razor"
+      ],
+      "title_seeds": [
+        "Sourdough Starter Guild Badge seamless pattern",
+        "Banneton Basket Scoring Pattern Sticker repeat pattern",
+        "80 Percent Hydration Club Mug repeat pattern",
+        "Lame Blade Safety Cover Case repeat pattern"
+      ]
+    },
+    {
+      "name": "Ultralight Backpacking Base Weight",
+      "trending_score": 73,
+      "market_opportunity": "high",
+      "why_trending": "Ultralight backpacking has transitioned from a fringe subculture to a dominant outdoor philosophy. Hikers who obsess over their 'base weight' love self-deprecating humor about their extreme weight-saving methods.",
+      "target_audience": "Ultralight Hikers, Thru-hikers, Gram Counters",
+      "sub_niches": [
+        {
+          "name": "Cold Soaking Jar Sticker",
+          "trending_score": 78,
+          "unique_angle": "Targets the extreme culinary sacrifices of stove-less hikers.",
+          "prompt_keywords": [
+            "cold soak jar",
+            "talenti jar",
+            "dehydrated food",
+            "trail food",
+            "stove-less hiking"
+          ]
+        },
+        {
+          "name": "LighterPack Approved Mug",
+          "trending_score": 72,
+          "unique_angle": "Celebrates the digital tool used by hikers to obsess over grams.",
+          "prompt_keywords": [
+            "lighterpack",
+            "gear list",
+            "spreadsheet",
+            "base weight",
+            "gram counter"
+          ]
+        },
+        {
+          "name": "Dyneema Patch Kit Decal",
+          "trending_score": 75,
+          "unique_angle": "A meta-design that looks like a real repair patch on gear.",
+          "prompt_keywords": [
+            "dyneema tape",
+            "repair patch",
+            "green tape",
+            "tent repair",
+            "cuben fiber"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "minimalist, obsessive, technical, dry",
+        "composition": "Centered pocket scale",
+        "line_style": "Clean vector lines",
+        "color_primary": [
+          "Dyneema Grey #7F8C8D",
+          "Off-White #F8F8F6"
+        ],
+        "color_accent": [
+          "Ultralight Green #2ECC71"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [
+          "Digital scale interface",
+          "Spreadsheet layouts"
+        ],
+        "texture": "Zero texture, flat vector"
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Single digital pocket scale weighing a cut-down toothbrush, centered on pure white background. Flat vector illustration — precision of a gear list spreadsheet. Labeled with real ultralight backpacking jargon: 'Toothbrush (Handle Cut): 2.4g', 'Dyneema Food Bag: 12g', 'Titanium Spoon: 9.5g'. Status indicator: 'Base Weight: 4.2 kg (Sub-10lb Club)'. Small text at bottom: 'Worn weight doesn't count.' Dry minimalist annotation style. Colors: off-white (#F8F8F6), dyneema grey (#7F8C8D), ultralight green (#2ECC71). Zero gradients. White background. Clean vector edges. Reads clearly at sticker size.",
+        "negative_prompt": "",
+        "key_elements": [
+          "Digital scale",
+          "Cut-down toothbrush",
+          "Weight annotations"
+        ],
+        "avoid_elements": [
+          "heavy textures",
+          "mountains",
+          "generic hiking boots"
+        ],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Peoples' pocket stair builder and carpenters' hand book . . . (1880) (14784962005).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Peoples%27_pocket_stair_builder_and_carpenters%27_hand_book_._._._%281880%29_%2814784962005%29.jpg",
+          "width": 1560,
+          "height": 2744
+        },
+        {
+          "title": "Peoples' pocket stair builder and carpenters' hand book . . . (1880) (14784972535).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Peoples%27_pocket_stair_builder_and_carpenters%27_hand_book_._._._%281880%29_%2814784972535%29.jpg",
+          "width": 1490,
+          "height": 2634
+        }
+      ],
+      "generated_at": "2026-06-06 15:40 UTC",
+      "opportunity_score": 73.3,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 82.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 82 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 75.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, références de style, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 87.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 15 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [
+          "Digital scale",
+          "Cut-down toothbrush",
+          "Weight annotations",
+          "cold soak jar",
+          "talenti jar",
+          "dehydrated food",
+          "trail food",
+          "stove-less hiking",
+          "lighterpack",
+          "gear list",
+          "spreadsheet",
+          "base weight",
+          "gram counter",
+          "dyneema tape",
+          "repair patch"
+        ],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 15 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 82 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "digital scale",
+        "cut-down toothbrush",
+        "weight annotations",
+        "cold soak jar",
+        "talenti jar",
+        "dehydrated food",
+        "trail food",
+        "stove-less hiking",
+        "lighterpack",
+        "gear list",
+        "spreadsheet",
+        "base weight",
+        "gram counter",
+        "dyneema tape",
+        "repair patch",
+        "green tape",
+        "tent repair",
+        "cuben fiber"
+      ],
+      "title_seeds": [
+        "Ultralight Backpacking Base Weight seamless pattern",
+        "Cold Soaking Jar Sticker repeat pattern",
+        "LighterPack Approved Mug repeat pattern",
+        "Dyneema Patch Kit Decal repeat pattern"
+      ]
+    },
+    {
+      "name": "Ultralight Analog Photographer",
+      "trending_score": 73,
+      "market_opportunity": "very_high",
+      "why_trending": "There is a massive cultural crossover of young hikers who refuse to shoot digital, carrying vintage mechanical cameras on long-distance thru-hikes. They obsess over the weight of their camera gear just as much as their shelter.",
+      "target_audience": "Thru-hikers, Analog Photographers, Outdoor Creatives",
+      "sub_niches": [
+        {
+          "name": "Rollei 35 Weight Breakdown Sticker",
+          "trending_score": 78,
+          "unique_angle": "Targets the collectors of the smallest mechanical 35mm camera ever made.",
+          "prompt_keywords": [
+            "rollei 35",
+            "compact camera",
+            "weight breakdown",
+            "mechanical shutter",
+            "german engineering"
+          ]
+        },
+        {
+          "name": "No Batteries Required Mug",
+          "trending_score": 70,
+          "unique_angle": "Focuses on the reliability of mechanical gear in the wilderness.",
+          "prompt_keywords": [
+            "mechanical shutter",
+            "no batteries",
+            "fm2 camera",
+            "trail photography",
+            "manual camera"
+          ]
+        },
+        {
+          "name": "Trailside Darkroom Changing Bag Tote",
+          "trending_score": 68,
+          "unique_angle": "Appeals to the extreme DIY hikers who develop film on the trail.",
+          "prompt_keywords": [
+            "changing bag",
+            "lightproof bag",
+            "film loading",
+            "trail darkroom",
+            "field developing"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "minimalist, adventurous, technical, analog",
+        "composition": "Centered camera and pouch",
+        "line_style": "Clean vector lines",
+        "color_primary": [
+          "Titanium Grey #95A5A6",
+          "Off-White #F8F8F6"
+        ],
+        "color_accent": [
+          "Film Gold #F1C40F"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [
+          "Camera schematics",
+          "Ultralight gear layouts"
+        ],
+        "texture": "Zero texture, flat vector"
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Single mechanical 35mm camera (Olympus XA) inside a Dyneema camera pouch, centered on pure white background. Flat vector illustration — precision of an ultralight gear list. Labeled with real crossover jargon: 'Olympus XA (Rangefinder): 225g', 'Dyneema Pouch (Waterproof): 14g', 'Portra 400 (Unboxed): 21g'. Status indicator: 'Total Camera Base Weight: 260g (Acceptable)'. Small text at bottom: 'Miles per frame.' Dry minimalist annotation style. Colors: off-white (#F8F8F6), titanium grey (#95A5A6), film gold (#F1C40F). Zero gradients. White background. Clean vector edges. Reads clearly at sticker size.",
+        "negative_prompt": "",
+        "key_elements": [
+          "Olympus XA camera",
+          "Dyneema pouch",
+          "Weight breakdown annotations"
+        ],
+        "avoid_elements": [
+          "heavy digital DSLRs",
+          "generic mountain clip art",
+          "gradients"
+        ],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-06 15:40 UTC",
+      "opportunity_score": 73.3,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 82.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 82 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 75.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, références de style, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 87.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 14 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [
+          "Olympus XA camera",
+          "Dyneema pouch",
+          "Weight breakdown annotations",
+          "rollei 35",
+          "compact camera",
+          "weight breakdown",
+          "mechanical shutter",
+          "german engineering",
+          "no batteries",
+          "fm2 camera",
+          "trail photography",
+          "manual camera",
+          "changing bag",
+          "lightproof bag",
+          "film loading"
+        ],
+        "categories": [
+          "very_high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 14 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 82 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "olympus xa camera",
+        "dyneema pouch",
+        "weight breakdown annotations",
+        "rollei 35",
+        "compact camera",
+        "weight breakdown",
+        "mechanical shutter",
+        "german engineering",
+        "no batteries",
+        "fm2 camera",
+        "trail photography",
+        "manual camera",
+        "changing bag",
+        "lightproof bag",
+        "film loading",
+        "trail darkroom",
+        "field developing"
+      ],
+      "title_seeds": [
+        "Ultralight Analog Photographer seamless pattern",
+        "Rollei 35 Weight Breakdown Sticker repeat pattern",
+        "No Batteries Required Mug repeat pattern",
+        "Trailside Darkroom Changing Bag Tote repeat pattern"
+      ]
+    },
+    {
+      "name": "Analog Film Canister Stack",
+      "trending_score": 73,
+      "market_opportunity": "high",
+      "why_trending": "Gen Z and Millennials have driven a massive revival in analog film photography. The community is highly visual and aesthetic-focused, making the textured, retro risograph style a perfect match for their taste.",
+      "target_audience": "Film Photographers, Darkroom Hobbyists",
+      "sub_niches": [
+        {
+          "name": "C-41 Darkroom Chemistry Sticker",
+          "trending_score": 75,
+          "unique_angle": "Appeals to the darkroom and home-developing enthusiasts.",
+          "prompt_keywords": [
+            "c-41 chemistry",
+            "darkroom bottles",
+            "developer blix",
+            "home developing",
+            "film processing"
+          ]
+        },
+        {
+          "name": "120 Medium Format Spool Tote",
+          "trending_score": 70,
+          "unique_angle": "Targets medium-format photographers who view 35mm as amateur.",
+          "prompt_keywords": [
+            "120 film spool",
+            "medium format",
+            "hasselblad spool",
+            "film leader",
+            "analog photography"
+          ]
+        },
+        {
+          "name": "Halation Effect Art Print",
+          "trending_score": 72,
+          "unique_angle": "Focuses on a highly specific optical effect prized by night photographers.",
+          "prompt_keywords": [
+            "halation effect",
+            "cinestill 800t",
+            "red glow",
+            "night photography",
+            "analog aesthetic"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "retro, analog, grainy, artistic",
+        "composition": "Vertical canister stack",
+        "line_style": "Slightly misaligned print lines",
+        "color_primary": [
+          "Fluorescent Pink #F76C8A",
+          "Teal #00A79D"
+        ],
+        "color_accent": [
+          "Soy Yellow #D4AC0D"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [
+          "Riso zines",
+          "Retro print advertisements"
+        ],
+        "texture": "Heavy risograph ink texture"
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Single risograph-style illustration, centered on pure white background. Bold limited-palette print aesthetic — like a 2-color risograph zine cover. A stack of three 35mm film canisters in profile — bold graphic silhouette, film leader pulling out of the middle canister, labeled 'ISO 400' and 'EXP 36'. Community text: 'KEEP ANALOG ALIVE'. Deliberate register variation between color layers — slight 3px misalignment on the color fill. Heavy grain texture on all solid fills. Black key layer with single fluorescent pink (#F76C8A) and teal (#00A79D) color overlays. White background. Strong graphic silhouette. Reads at 2cm sticker size.",
+        "negative_prompt": "",
+        "key_elements": [
+          "35mm canisters",
+          "Film leader",
+          "Misaligned color layers"
+        ],
+        "avoid_elements": [
+          "clean digital vectors",
+          "modern DSLRs",
+          "smooth gradients"
+        ],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "35mm Film Canisters (18541635532).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/35mm_Film_Canisters_%2818541635532%29.jpg",
+          "width": 2448,
+          "height": 2899
+        },
+        {
+          "title": "35mm Film Canisters (23404906964).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/70/35mm_Film_Canisters_%2823404906964%29.jpg",
+          "width": 2192,
+          "height": 2965
+        }
+      ],
+      "generated_at": "2026-06-06 15:40 UTC",
+      "opportunity_score": 72.8,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 80.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 80 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 75.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, références de style, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 87.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 15 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [
+          "35mm canisters",
+          "Film leader",
+          "Misaligned color layers",
+          "c-41 chemistry",
+          "darkroom bottles",
+          "developer blix",
+          "home developing",
+          "film processing",
+          "120 film spool",
+          "medium format",
+          "hasselblad spool",
+          "film leader",
+          "analog photography",
+          "halation effect",
+          "cinestill 800t"
+        ],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 15 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 80 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "35mm canisters",
+        "film leader",
+        "misaligned color layers",
+        "c-41 chemistry",
+        "darkroom bottles",
+        "developer blix",
+        "home developing",
+        "film processing",
+        "120 film spool",
+        "medium format",
+        "hasselblad spool",
+        "analog photography",
+        "halation effect",
+        "cinestill 800t",
+        "red glow",
+        "night photography",
+        "analog aesthetic"
+      ],
+      "title_seeds": [
+        "Analog Film Canister Stack seamless pattern",
+        "C-41 Darkroom Chemistry Sticker repeat pattern",
+        "120 Medium Format Spool Tote repeat pattern",
+        "Halation Effect Art Print repeat pattern"
+      ]
+    },
+    {
+      "name": "Yeast Herder's Guild",
+      "trending_score": 73,
+      "market_opportunity": "high",
+      "why_trending": "Both hobbies are deeply rooted in the science of fermentation and the care of Saccharomyces cerevisiae. Enthusiasts who do both feel a strong sense of pride in 'herding' living micro-organisms and want a unified identity badge.",
+      "target_audience": "Homebrewers, Sourdough Bakers, Fermentation Hobbyists",
+      "sub_niches": [
+        {
+          "name": "Saccharomyces Cerevisiae Anatomy Sticker",
+          "trending_score": 76,
+          "unique_angle": "Focuses on the microscopic organism driving both fermentation processes.",
+          "prompt_keywords": [
+            "yeast cell",
+            "saccharomyces cerevisiae",
+            "budding yeast",
+            "microbiology diagram",
+            "fermentation science"
+          ]
+        },
+        {
+          "name": "Fermentation Lock & Starter Jar Mug",
+          "trending_score": 78,
+          "unique_angle": "Juxtaposes the iconic tools of the brewer and the baker.",
+          "prompt_keywords": [
+            "3-piece airlock",
+            "mason jar starter",
+            "fermentation lock",
+            "homebrew setup",
+            "sourdough jar"
+          ]
+        },
+        {
+          "name": "Wild Capture Yeast Hunter Tote",
+          "trending_score": 70,
+          "unique_angle": "Appeals to the advanced, foraging-focused fermentation enthusiasts.",
+          "prompt_keywords": [
+            "wild yeast capture",
+            "yeast hunter",
+            "foraged fermentation",
+            "wild capture",
+            "local flora"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "heritage, scientific, rustic, collaborative",
+        "composition": "Circular cooperative seal",
+        "line_style": "Woodblock print style",
+        "color_primary": [
+          "Warm Amber #C4933F",
+          "Dark Brown #2C1A0E"
+        ],
+        "color_accent": [
+          "Muted Gold #A8882A"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [
+          "1930s agricultural cooperative seals",
+          "Vintage brewery labels"
+        ],
+        "texture": "Distressed burlap texture"
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Circular vintage badge design, centered on pure white background. Styled as a 1930s cooperative guild seal for wild fermentation enthusiasts. Bold serif typography: primary text 'YEAST HERDER'S GUILD'. Inner ring text reads 'SACCHAROMYCES CEREVISIAE — BREAD & BEER'. Center illustration: a bubbling fermentation carboy side-by-side with a scored sourdough boule, rendered in woodblock print style. Border: hops vines and wheat stalks. Distressed badge edges. Colors: warm amber (#C4933F), cream (#F5F0E8), dark brown (#2C1A0E), muted gold (#A8882A). White background. Clean circular composition. Works at 2cm sticker AND 30cm print.",
+        "negative_prompt": "",
+        "key_elements": [
+          "Fermentation carboy",
+          "Sourdough boule",
+          "Hops and wheat border"
+        ],
+        "avoid_elements": [
+          "modern laboratory glassware",
+          "flat vector icons",
+          "neon colors"
+        ],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-06 15:40 UTC",
+      "opportunity_score": 72.8,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 80.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 80 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 75.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, références de style, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 87.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 15 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [
+          "Fermentation carboy",
+          "Sourdough boule",
+          "Hops and wheat border",
+          "yeast cell",
+          "saccharomyces cerevisiae",
+          "budding yeast",
+          "microbiology diagram",
+          "fermentation science",
+          "3-piece airlock",
+          "mason jar starter",
+          "fermentation lock",
+          "homebrew setup",
+          "sourdough jar",
+          "wild yeast capture",
+          "yeast hunter"
+        ],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 15 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 80 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "fermentation carboy",
+        "sourdough boule",
+        "hops and wheat border",
+        "yeast cell",
+        "saccharomyces cerevisiae",
+        "budding yeast",
+        "microbiology diagram",
+        "fermentation science",
+        "3-piece airlock",
+        "mason jar starter",
+        "fermentation lock",
+        "homebrew setup",
+        "sourdough jar",
+        "wild yeast capture",
+        "yeast hunter",
+        "foraged fermentation",
+        "wild capture",
+        "local flora"
+      ],
+      "title_seeds": [
+        "Yeast Herder's Guild seamless pattern",
+        "Saccharomyces Cerevisiae Anatomy Sticker repeat pattern",
+        "Fermentation Lock & Starter Jar Mug repeat pattern",
+        "Wild Capture Yeast Hunter Tote repeat pattern"
+      ]
+    },
+    {
+      "name": "Fountain Pen Nib Anatomy",
+      "trending_score": 72,
+      "market_opportunity": "high",
+      "why_trending": "Fountain pen collecting has seen a massive resurgence among analog-journaling enthusiasts on TikTok and Reddit. The existing designs are overly simplified cartoons, leaving a massive gap for authentic, highly detailed technical art.",
+      "target_audience": "Fountain Pen Collectors, Calligraphers, Analog Journalers",
+      "sub_niches": [
+        {
+          "name": "Flex Nib Calligraphy Sticker",
+          "trending_score": 74,
+          "unique_angle": "Appeals to the calligraphy and copperplate script community.",
+          "prompt_keywords": [
+            "vintage flex nib",
+            "calligraphy pen",
+            "flared tines",
+            "ink splatter",
+            "copperplate script"
+          ]
+        },
+        {
+          "name": "Stub Nib Ink Swatch Card",
+          "trending_score": 76,
+          "unique_angle": "Focuses on ink properties like sheen and shading, a major obsession in the community.",
+          "prompt_keywords": [
+            "ink swatch",
+            "stub nib",
+            "sheen ink",
+            "shading ink",
+            "chromatography"
+          ]
+        },
+        {
+          "name": "Eyedropper Conversion Guide Mug",
+          "trending_score": 65,
+          "unique_angle": "Focuses on a specific, slightly messy pen modification process.",
+          "prompt_keywords": [
+            "eyedropper pen",
+            "silicone grease",
+            "o-ring",
+            "ink capacity",
+            "schematic"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "academic, precise, elegant, vintage",
+        "composition": "Centered single nib",
+        "line_style": "Fine pen-and-ink engraving",
+        "color_primary": [
+          "Deep Indigo #1A237E",
+          "Warm Cream #FDFBF7"
+        ],
+        "color_accent": [
+          "Metallic Gold #D4AF37"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [
+          "19th century scientific engravings",
+          "Natural history plates"
+        ],
+        "texture": "Aged museum paper"
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Single fountain pen nib, centered on pure white background. Rendered as a 19th century natural history museum plate in the style of scientific instrument engravings. Fine pen and ink engraving style — precise cross-hatching on the metallic surface, anatomically correct breather hole, tine alignment, and iridium tip clearly rendered. Handwritten field note text around specimen reads 'Penna Scriptoria — Nib Anatomy, Fine Point'. Small scale bar and calibration markings bottom right. Colors: deep indigo (#1A237E), warm cream (#FDFBF7), metallic gold (#D4AF37), dark ink (#1E1E1E). White background. Isolated specimen. Bold enough to read at sticker size.",
+        "negative_prompt": "",
+        "key_elements": [
+          "Fountain pen nib",
+          "Breather hole",
+          "Tines",
+          "Engraving lines"
+        ],
+        "avoid_elements": [
+          "modern vector graphics",
+          "cartoon styles",
+          "generic ballpoint pens"
+        ],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-06 15:40 UTC",
+      "opportunity_score": 72.2,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 78.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 78 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 75.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, références de style, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 87.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 15 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [
+          "Fountain pen nib",
+          "Breather hole",
+          "Tines",
+          "Engraving lines",
+          "vintage flex nib",
+          "calligraphy pen",
+          "flared tines",
+          "ink splatter",
+          "copperplate script",
+          "ink swatch",
+          "stub nib",
+          "sheen ink",
+          "shading ink",
+          "chromatography",
+          "eyedropper pen"
+        ],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 15 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 78 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "fountain pen nib",
+        "breather hole",
+        "tines",
+        "engraving lines",
+        "vintage flex nib",
+        "calligraphy pen",
+        "flared tines",
+        "ink splatter",
+        "copperplate script",
+        "ink swatch",
+        "stub nib",
+        "sheen ink",
+        "shading ink",
+        "chromatography",
+        "eyedropper pen",
+        "silicone grease",
+        "o-ring",
+        "ink capacity",
+        "schematic"
+      ],
+      "title_seeds": [
+        "Fountain Pen Nib Anatomy seamless pattern",
+        "Flex Nib Calligraphy Sticker repeat pattern",
+        "Stub Nib Ink Swatch Card repeat pattern",
+        "Eyedropper Conversion Guide Mug repeat pattern"
+      ]
+    },
+    {
+      "name": "Entomologist Pinning Board",
+      "trending_score": 72,
+      "market_opportunity": "high",
+      "why_trending": "Insect collecting and taxidermy have transitioned into a highly popular home decor and hobbyist movement. True entomology enthusiasts despise generic 'cute' bugs and highly prefer scientifically accurate, pinned specimen aesthetics.",
+      "target_audience": "Amateur Entomologists, Insect Collectors, Oddities Enthusiasts",
+      "sub_niches": [
+        {
+          "name": "Spreading Board Butterfly Sticker",
+          "trending_score": 72,
+          "unique_angle": "Focuses on the delicate process of setting butterfly wings.",
+          "prompt_keywords": [
+            "spreading board",
+            "monarch butterfly",
+            "tracing paper strips",
+            "entomology pins",
+            "specimen preparation"
+          ]
+        },
+        {
+          "name": "Insect Pin Size Chart Mug",
+          "trending_score": 65,
+          "unique_angle": "Appeals to the highly specific tools used by professional curators.",
+          "prompt_keywords": [
+            "insect pins",
+            "pin size chart",
+            "entomology tools",
+            "curator guide",
+            "technical chart"
+          ]
+        },
+        {
+          "name": "Ethanol Vial Specimen Label Notebook",
+          "trending_score": 70,
+          "unique_angle": "Targets the archival and wet-specimen preservation community.",
+          "prompt_keywords": [
+            "wet specimen",
+            "ethanol preservation",
+            "collection log",
+            "archival label",
+            "museum catalog"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "scientific, archival, Victorian, precise",
+        "composition": "Centered pinned beetle",
+        "line_style": "Fine engraving cross-hatching",
+        "color_primary": [
+          "Deep Forest Green #1E4620",
+          "Warm Cream #FDFBF7"
+        ],
+        "color_accent": [
+          "Beetle Amber #B37D14"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [
+          "Victorian entomological plates",
+          "Scientific taxonomy diagrams"
+        ],
+        "texture": "Aged parchment paper"
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Single Hercules beetle (Dynastes hercules) pinned on a cork board, centered on pure white background. Rendered as a 19th century entomological specimen plate. Fine pen and ink engraving style — precise cross-hatching on the chitinous shell, anatomically correct tarsi, antennae, and thoracic horn. Tiny paper labels pinned beneath the specimen read 'Dynastes hercules — Coll. June 2026'. Small scale bar and pinning pin visible. Colors: deep forest green (#1E4620), warm cream (#FDFBF7), beetle amber (#B37D14), dark ink (#1E1E1E). White background. Isolated specimen. Bold enough to read at sticker size.",
+        "negative_prompt": "",
+        "key_elements": [
+          "Hercules beetle",
+          "Pinning pin",
+          "Taxonomy labels"
+        ],
+        "avoid_elements": [
+          "cute cartoon eyes",
+          "simplified vector bugs",
+          "bright neon colors"
+        ],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Carl Gustav Jablonsky -.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Carl_Gustav_Jablonsky_-.jpg",
+          "width": 2076,
+          "height": 3180
+        },
+        {
+          "title": "Illustration of Brentidae beetle (1891) by Edward Whymper.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Illustration_of_Brentidae_beetle_%281891%29_by_Edward_Whymper.jpg",
+          "width": 600,
+          "height": 1398
+        }
+      ],
+      "generated_at": "2026-06-06 15:40 UTC",
+      "opportunity_score": 71.5,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 76.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 76 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 75.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, références de style, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 87.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 15 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [
+          "Hercules beetle",
+          "Pinning pin",
+          "Taxonomy labels",
+          "spreading board",
+          "monarch butterfly",
+          "tracing paper strips",
+          "entomology pins",
+          "specimen preparation",
+          "insect pins",
+          "pin size chart",
+          "entomology tools",
+          "curator guide",
+          "technical chart",
+          "wet specimen",
+          "ethanol preservation"
+        ],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 15 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 76 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "hercules beetle",
+        "pinning pin",
+        "taxonomy labels",
+        "spreading board",
+        "monarch butterfly",
+        "tracing paper strips",
+        "entomology pins",
+        "specimen preparation",
+        "insect pins",
+        "pin size chart",
+        "entomology tools",
+        "curator guide",
+        "technical chart",
+        "wet specimen",
+        "ethanol preservation",
+        "collection log",
+        "archival label",
+        "museum catalog"
+      ],
+      "title_seeds": [
+        "Entomologist Pinning Board seamless pattern",
+        "Spreading Board Butterfly Sticker repeat pattern",
+        "Insect Pin Size Chart Mug repeat pattern",
+        "Ethanol Vial Specimen Label Notebook repeat pattern"
+      ]
+    },
+    {
+      "name": "Risograph Duplicator Patent",
+      "trending_score": 71,
+      "market_opportunity": "high",
+      "why_trending": "The indie art and zine community has elevated the Risograph machine to legendary status due to its unique texture and limited-palette aesthetic. Merch celebrating the machine itself acts as a secret handshake among printmakers.",
+      "target_audience": "Zine Makers, Indie Printmakers, Graphic Designers",
+      "sub_niches": [
+        {
+          "name": "Misregistration Appreciation Sticker",
+          "trending_score": 74,
+          "unique_angle": "Celebrates the beautiful flaws of analog printing processes.",
+          "prompt_keywords": [
+            "misregistration",
+            "riso error",
+            "color alignment",
+            "printmaker humor",
+            "analog print"
+          ]
+        },
+        {
+          "name": "Soy-Based Ink Drum Tote",
+          "trending_score": 68,
+          "unique_angle": "Focuses on the specific consumable ink tubes used in the machines.",
+          "prompt_keywords": [
+            "soy ink",
+            "riso drum",
+            "ink canister",
+            "print shop",
+            "soy-based"
+          ]
+        },
+        {
+          "name": "Zine Assembly Line Notebook",
+          "trending_score": 78,
+          "unique_angle": "A highly practical and iconic folding template for zine creators.",
+          "prompt_keywords": [
+            "zine folding guide",
+            "8-page zine",
+            "one-sheet zine",
+            "diy publishing",
+            "folding template"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "indie, tactile, retro, industrial",
+        "composition": "Centered duplicator machine",
+        "line_style": "Grainy, misregistered lines",
+        "color_primary": [
+          "Fluorescent Pink #F76C8A"
+        ],
+        "color_accent": [
+          "Soy Yellow #D4AC0D"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [
+          "Vintage mimeograph patents",
+          "Riso machine manuals"
+        ],
+        "texture": "Heavy ink roller texture"
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Single risograph-style illustration, centered on pure white background. Bold limited-palette print aesthetic — a 2-color risograph zine cover. A hand-cranked Risograph duplicator machine in profile — bold graphic silhouette, paper feeding through the drum, a stack of freshly printed zines emerging. Community text: 'PRINT IS NOT DEAD'. Deliberate register variation between color layers — slight 3px misalignment on the color fill. Heavy grain texture on all solid fills. Black key layer with single fluorescent pink (#F76C8A) color overlay. White background. Strong graphic silhouette. Reads at 2cm sticker size.",
+        "negative_prompt": "",
+        "key_elements": [
+          "Risograph machine",
+          "Paper feed",
+          "Grainy texture"
+        ],
+        "avoid_elements": [
+          "clean vector lines",
+          "modern office copiers",
+          "photorealistic renders"
+        ],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Drawing of AB Dick Mimeo machine from USP 825264.gif",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Drawing_of_AB_Dick_Mimeo_machine_from_USP_825264.gif",
+          "width": 1730,
+          "height": 2814
+        }
+      ],
+      "generated_at": "2026-06-06 15:40 UTC",
+      "opportunity_score": 71.2,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 75.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 75 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 75.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, références de style, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 87.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 15 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [
+          "Risograph machine",
+          "Paper feed",
+          "Grainy texture",
+          "misregistration",
+          "riso error",
+          "color alignment",
+          "printmaker humor",
+          "analog print",
+          "soy ink",
+          "riso drum",
+          "ink canister",
+          "print shop",
+          "soy-based",
+          "zine folding guide",
+          "8-page zine"
+        ],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 15 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 75 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "risograph machine",
+        "paper feed",
+        "grainy texture",
+        "misregistration",
+        "riso error",
+        "color alignment",
+        "printmaker humor",
+        "analog print",
+        "soy ink",
+        "riso drum",
+        "ink canister",
+        "print shop",
+        "soy-based",
+        "zine folding guide",
+        "8-page zine",
+        "one-sheet zine",
+        "diy publishing",
+        "folding template"
+      ],
+      "title_seeds": [
+        "Risograph Duplicator Patent seamless pattern",
+        "Misregistration Appreciation Sticker repeat pattern",
+        "Soy-Based Ink Drum Tote repeat pattern",
+        "Zine Assembly Line Notebook repeat pattern"
+      ]
+    },
+    {
+      "name": "Urban Sketcher's Pocket Palette",
+      "trending_score": 71,
+      "market_opportunity": "high",
+      "why_trending": "Urban sketching has grown rapidly as a mindful, portable art hobby. Sketchers are highly obsessed with their micro-gear setups (altoid tin palettes, water brushes) and love displaying art that reflects this portable lifestyle.",
+      "target_audience": "Urban Sketchers, Plein Air Painters, Journalers",
+      "sub_niches": [
+        {
+          "name": "Altoid Tin Watercolor Palette Sticker",
+          "trending_score": 78,
+          "unique_angle": "Focuses on the iconic DIY gear hack beloved by urban sketchers.",
+          "prompt_keywords": [
+            "altoid tin palette",
+            "diy watercolor",
+            "half pans",
+            "pocket palette",
+            "sketching gear"
+          ]
+        },
+        {
+          "name": "Water Brush Pen Diagram Mug",
+          "trending_score": 65,
+          "unique_angle": "Appeals to the tool-obsessed nature of portable artists.",
+          "prompt_keywords": [
+            "water brush pen",
+            "technical diagram",
+            "sketching tool",
+            "nylon bristles",
+            "reservoir"
+          ]
+        },
+        {
+          "name": "Fountain Pen & Wash Tote",
+          "trending_score": 72,
+          "unique_angle": "Celebrates the classic 'line and wash' technique.",
+          "prompt_keywords": [
+            "line and wash",
+            "waterproof ink",
+            "watercolor wash",
+            "fountain pen sketch",
+            "urban sketching"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "artistic, bohemian, compact, creative",
+        "composition": "Top-down pocket palette",
+        "line_style": "Loose, sketchy print lines",
+        "color_primary": [
+          "Warm Red #F4543C",
+          "Soy Yellow #D4AC0D"
+        ],
+        "color_accent": [
+          "Teal #00A79D"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [
+          "Sketchbook pages",
+          "Risograph art prints"
+        ],
+        "texture": "Granular watercolor paper texture"
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Single risograph-style illustration, centered on pure white background. Bold limited-palette print aesthetic — a 2-color risograph zine cover. An open metal watercolor pocket palette with 12 half-pans of paint, a water brush lying across it, and a tiny sketchbook showing a loose architectural line drawing. Community text: 'SKETCH THE CITY'. Deliberate register variation between color layers — slight 3px misalignment on the color fill. Heavy grain texture on all solid fills. Black key layer with single warm red (#F4543C) and soy yellow (#D4AC0D) color overlays. White background. Strong graphic silhouette. Reads at 2cm sticker size.",
+        "negative_prompt": "",
+        "key_elements": [
+          "Watercolor palette",
+          "Water brush",
+          "Sketchbook"
+        ],
+        "avoid_elements": [
+          "clean digital vectors",
+          "large studio easels",
+          "messy paint splatters"
+        ],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-06 15:40 UTC",
+      "opportunity_score": 71.0,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 74.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 74 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 75.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, références de style, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 87.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 15 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [
+          "Watercolor palette",
+          "Water brush",
+          "Sketchbook",
+          "altoid tin palette",
+          "diy watercolor",
+          "half pans",
+          "pocket palette",
+          "sketching gear",
+          "water brush pen",
+          "technical diagram",
+          "sketching tool",
+          "nylon bristles",
+          "reservoir",
+          "line and wash",
+          "waterproof ink"
+        ],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 15 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 74 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "watercolor palette",
+        "water brush",
+        "sketchbook",
+        "altoid tin palette",
+        "diy watercolor",
+        "half pans",
+        "pocket palette",
+        "sketching gear",
+        "water brush pen",
+        "technical diagram",
+        "sketching tool",
+        "nylon bristles",
+        "reservoir",
+        "line and wash",
+        "waterproof ink",
+        "watercolor wash",
+        "fountain pen sketch",
+        "urban sketching"
+      ],
+      "title_seeds": [
+        "Urban Sketcher's Pocket Palette seamless pattern",
+        "Altoid Tin Watercolor Palette Sticker repeat pattern",
+        "Water Brush Pen Diagram Mug repeat pattern",
+        "Fountain Pen & Wash Tote repeat pattern"
+      ]
+    },
+    {
+      "name": "Arborist Rigging Knot Guide",
+      "trending_score": 71,
+      "market_opportunity": "medium",
+      "why_trending": "Professional arborists are highly proud of their dangerous, highly skilled trade. They view themselves as tactical tree athletes and love displaying gear stickers that showcase their mastery of ropework and rigging.",
+      "target_audience": "Professional Arborists, Tree Climbers, Utility Workers",
+      "sub_niches": [
+        {
+          "name": "Port-A-Wrap Friction Device Sticker",
+          "trending_score": 75,
+          "unique_angle": "Focuses on the specific heavy-duty hardware used in rigging.",
+          "prompt_keywords": [
+            "port-a-wrap",
+            "friction brake",
+            "lowering device",
+            "rigging hardware",
+            "arborist gear"
+          ]
+        },
+        {
+          "name": "Throw Line Target Practice Mug",
+          "trending_score": 68,
+          "unique_angle": "Captures the daily frustration of setting a climbing line.",
+          "prompt_keywords": [
+            "throw line",
+            "throw weight",
+            "target practice",
+            "branch climbing",
+            "arborist humor"
+          ]
+        },
+        {
+          "name": "Chainsaw Scabbard Decal",
+          "trending_score": 72,
+          "unique_angle": "A product-specific shape designed for tool customization.",
+          "prompt_keywords": [
+            "chainsaw bar",
+            "scabbard decal",
+            "stihl orange",
+            "husqvarna",
+            "tool sticker"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "rugged, safety-conscious, traditional, athletic",
+        "composition": "Circular union badge",
+        "line_style": "Bold woodblock outlines",
+        "color_primary": [
+          "Forest Green #27AE60",
+          "Dark Bark #3E2723"
+        ],
+        "color_accent": [
+          "High-Viz Orange #E67E22"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [
+          "1940s labor union badges",
+          "Forestry service emblems"
+        ],
+        "texture": "Slightly weathered canvas"
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Circular vintage badge design, centered on pure white background. Styled as a 1940s forestry and tree care union badge. Bold sans-serif typography: primary text 'ARBORIST RIGGING GUILD'. Inner ring text reads 'RUNNING BOWLINE — TRUST THE ROPE'. Center illustration: a perfectly tied running bowline knot around a thick tree trunk section, rendered in clean woodblock style. Border: chainsaw chains and oak leaves. Distressed badge edges. Colors: forest green (#27AE60), cream (#F5F0E8), dark bark (#3E2723). White background. Clean circular composition. Works at 2cm sticker AND 30cm print.",
+        "negative_prompt": "",
+        "key_elements": [
+          "Running bowline knot",
+          "Tree trunk",
+          "Chainsaw chain border"
+        ],
+        "avoid_elements": [
+          "generic cartoon trees",
+          "cheap clip art",
+          "bright neon gradients"
+        ],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-06 15:40 UTC",
+      "opportunity_score": 70.7,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 73.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 73 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 75.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, références de style, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 87.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 15 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [
+          "Running bowline knot",
+          "Tree trunk",
+          "Chainsaw chain border",
+          "port-a-wrap",
+          "friction brake",
+          "lowering device",
+          "rigging hardware",
+          "arborist gear",
+          "throw line",
+          "throw weight",
+          "target practice",
+          "branch climbing",
+          "arborist humor",
+          "chainsaw bar",
+          "scabbard decal"
+        ],
+        "categories": [
+          "medium",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 15 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 73 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "running bowline knot",
+        "tree trunk",
+        "chainsaw chain border",
+        "port-a-wrap",
+        "friction brake",
+        "lowering device",
+        "rigging hardware",
+        "arborist gear",
+        "throw line",
+        "throw weight",
+        "target practice",
+        "branch climbing",
+        "arborist humor",
+        "chainsaw bar",
+        "scabbard decal",
+        "stihl orange",
+        "husqvarna",
+        "tool sticker"
+      ],
+      "title_seeds": [
+        "Arborist Rigging Knot Guide seamless pattern",
+        "Port-A-Wrap Friction Device Sticker repeat pattern",
+        "Throw Line Target Practice Mug repeat pattern",
+        "Chainsaw Scabbard Decal repeat pattern"
+      ]
+    },
+    {
+      "name": "QRP Field Radio Station",
+      "trending_score": 70,
+      "market_opportunity": "high",
+      "why_trending": "Portable ham radio operation (POTA/SOTA) has exploded as operators combine hiking with radio sport. These operators are highly proud of their lightweight, field-assembled stations and love displaying gear stickers.",
+      "target_audience": "Ham Radio Operators, POTA/SOTA Activators, Electronics Hobbyists",
+      "sub_niches": [
+        {
+          "name": "CW Morse Code Keyer Sticker",
+          "trending_score": 70,
+          "unique_angle": "Targets the traditional, high-skill Morse code (CW) operators.",
+          "prompt_keywords": [
+            "morse keyer",
+            "magnetic paddle",
+            "cw operator",
+            "dit dah",
+            "telegraph key"
+          ]
+        },
+        {
+          "name": "SOTA Summit Activator Mug",
+          "trending_score": 65,
+          "unique_angle": "Targets the extreme hiking branch of amateur radio (Summits on the Air).",
+          "prompt_keywords": [
+            "sota activator",
+            "mountain peak",
+            "antenna mast",
+            "summit radio",
+            "elevation"
+          ]
+        },
+        {
+          "name": "SWR Meter Calibration Chart Notebook",
+          "trending_score": 68,
+          "unique_angle": "Appeals to the technical calibration obsession of radio builders.",
+          "prompt_keywords": [
+            "swr meter",
+            "analog dial",
+            "calibration chart",
+            "standing wave ratio",
+            "needle meter"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "rugged, technical, utilitarian, adventurous",
+        "composition": "Centered transceiver and antenna",
+        "line_style": "Clean schematic lines",
+        "color_primary": [
+          "Tactical Olive #556B2F",
+          "Off-White #F8F8F6"
+        ],
+        "color_accent": [
+          "Signal Orange #FF4500"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [
+          "Military radio manuals",
+          "Electronics schematics"
+        ],
+        "texture": "Zero texture, flat vector"
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Single portable QRP transceiver and wire antenna diagram, centered on pure white background. Flat vector illustration — precision of a field radio technical manual. Labeled with real amateur radio hardware: 'EFHW Antenna (Strung in Pine Tree)', 'QRP Transceiver (5 Watts)', 'CW Morse Key', '12V LiFePO4 Battery'. Status indicator: 'SWR: 1.1 (Miraculous)'. Small text at bottom: 'Parks on the Air (POTA) Active.' Dry minimalist annotation style. Colors: off-white (#F8F8F6), tactical olive (#556B2F), signal orange (#FF4500). Zero gradients. White background. Clean vector edges. Reads clearly at sticker size.",
+        "negative_prompt": "",
+        "key_elements": [
+          "QRP transceiver",
+          "EFHW antenna",
+          "Morse key",
+          "Battery"
+        ],
+        "avoid_elements": [
+          "generic satellite dishes",
+          "cartoon walkie-talkies",
+          "world maps"
+        ],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Diagram Schematic of the V2 rocket (numbered).png",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Diagram_Schematic_of_the_V2_rocket_%28numbered%29.png",
+          "width": 4025,
+          "height": 2000
+        },
+        {
+          "title": "Schematic diagram on the general class amateur radio test.JPG",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Schematic_diagram_on_the_general_class_amateur_radio_test.JPG",
+          "width": 961,
+          "height": 742
+        }
+      ],
+      "generated_at": "2026-06-06 15:40 UTC",
+      "opportunity_score": 70.3,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 72.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 72 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 75.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, références de style, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 87.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 15 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [
+          "QRP transceiver",
+          "EFHW antenna",
+          "Morse key",
+          "Battery",
+          "morse keyer",
+          "magnetic paddle",
+          "cw operator",
+          "dit dah",
+          "telegraph key",
+          "sota activator",
+          "mountain peak",
+          "antenna mast",
+          "summit radio",
+          "elevation",
+          "swr meter"
+        ],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 15 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 72 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "qrp transceiver",
+        "efhw antenna",
+        "morse key",
+        "battery",
+        "morse keyer",
+        "magnetic paddle",
+        "cw operator",
+        "dit dah",
+        "telegraph key",
+        "sota activator",
+        "mountain peak",
+        "antenna mast",
+        "summit radio",
+        "elevation",
+        "swr meter",
+        "analog dial",
+        "calibration chart",
+        "standing wave ratio",
+        "needle meter"
+      ],
+      "title_seeds": [
+        "QRP Field Radio Station seamless pattern",
+        "CW Morse Code Keyer Sticker repeat pattern",
+        "SOTA Summit Activator Mug repeat pattern",
+        "SWR Meter Calibration Chart Notebook repeat pattern"
+      ]
+    },
+    {
+      "name": "Bookbinder's Bone Folder Guild",
+      "trending_score": 70,
+      "market_opportunity": "high",
+      "why_trending": "Hand bookbinding and book restoration have seen a massive surge in popularity among craft hobbyists. These makers are highly dedicated to the traditional techniques and tools of the craft, making tool-specific merch highly desirable.",
+      "target_audience": "Hand Bookbinders, Book Restorers, Fanfiction Binders",
+      "sub_niches": [
+        {
+          "name": "Teflon vs Bone Folder Sticker",
+          "trending_score": 68,
+          "unique_angle": "Captures the friendly material rivalry inside the craft community.",
+          "prompt_keywords": [
+            "teflon folder",
+            "bone folder",
+            "bookbinding tools",
+            "material debate",
+            "craft humor"
+          ]
+        },
+        {
+          "name": "Book Signature Sewing Guide Mug",
+          "trending_score": 74,
+          "unique_angle": "Focuses on the precise structural sewing technique of binding.",
+          "prompt_keywords": [
+            "kettle stitch",
+            "book signature",
+            "sewing frame",
+            "binding thread",
+            "technical diagram"
+          ]
+        },
+        {
+          "name": "PVA Glue Cultivator Tote",
+          "trending_score": 70,
+          "unique_angle": "Focuses on the specific archival adhesive used by binders.",
+          "prompt_keywords": [
+            "pva glue",
+            "archival adhesive",
+            "vintage label",
+            "bookbinding glue",
+            "acid-free"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "classic, archival, elegant, craft-focused",
+        "composition": "Circular guild seal",
+        "line_style": "Fine woodblock engraving",
+        "color_primary": [
+          "Gold Foil #D4AF37",
+          "Dark Navy #1A252C"
+        ],
+        "color_accent": [
+          "Archival Cream #F5F0E8"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [
+          "1920s trade guild seals",
+          "Gold-stamped leather book covers"
+        ],
+        "texture": "Pressed leather texture"
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Circular vintage badge design, centered on pure white background. Styled as a 1920s bookbinder's guild seal — the type stamped in gold foil on leather bindings. Bold serif typography: primary text 'GUILD OF THE BONE FOLDER'. Inner ring text reads 'SIGNATURES ALIGNED — PVA FOREVER'. Center illustration: two crossed bone folders over an open book signature, rendered in woodblock print style. Border: decorative bookbinding corner flourishes and sewing threads. Distressed badge edges. Colors: gold foil (#D4AF37), cream (#F5F0E8), dark navy (#1A252C). White background. Clean circular composition. Works at 2cm sticker AND 30cm print.",
+        "negative_prompt": "",
+        "key_elements": [
+          "Crossed bone folders",
+          "Book signature",
+          "Gold flourishes"
+        ],
+        "avoid_elements": [
+          "generic modern books",
+          "e-readers",
+          "bright cartoon colors"
+        ],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-06 15:40 UTC",
+      "opportunity_score": 70.3,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 72.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 72 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 75.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, références de style, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 87.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 15 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [
+          "Crossed bone folders",
+          "Book signature",
+          "Gold flourishes",
+          "teflon folder",
+          "bone folder",
+          "bookbinding tools",
+          "material debate",
+          "craft humor",
+          "kettle stitch",
+          "book signature",
+          "sewing frame",
+          "binding thread",
+          "technical diagram",
+          "pva glue",
+          "archival adhesive"
+        ],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 15 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 72 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "crossed bone folders",
+        "book signature",
+        "gold flourishes",
+        "teflon folder",
+        "bone folder",
+        "bookbinding tools",
+        "material debate",
+        "craft humor",
+        "kettle stitch",
+        "sewing frame",
+        "binding thread",
+        "technical diagram",
+        "pva glue",
+        "archival adhesive",
+        "vintage label",
+        "bookbinding glue",
+        "acid-free"
+      ],
+      "title_seeds": [
+        "Bookbinder's Bone Folder Guild seamless pattern",
+        "Teflon vs Bone Folder Sticker repeat pattern",
+        "Book Signature Sewing Guide Mug repeat pattern",
+        "PVA Glue Cultivator Tote repeat pattern"
+      ]
+    },
+    {
+      "name": "Farrier Hoof Anatomy",
+      "trending_score": 70,
+      "market_opportunity": "medium",
+      "why_trending": "Professional farriers and hoof-care specialists are highly proud of their trade's scientific and anatomical complexity. They reject generic 'horse lover' designs in favor of precise, technical representations of their craft.",
+      "target_audience": "Professional Farriers, Equine Veterinarians, Hoof Care Specialists",
+      "sub_niches": [
+        {
+          "name": "Anvil & Forge Patent Sticker",
+          "trending_score": 65,
+          "unique_angle": "Focuses on the blacksmithing and forging side of the trade.",
+          "prompt_keywords": [
+            "farrier anvil",
+            "shoeing tongs",
+            "patent drawing",
+            "blacksmith forge",
+            "hot shoeing"
+          ]
+        },
+        {
+          "name": "Hoof Angle Gauge Mug",
+          "trending_score": 72,
+          "unique_angle": "Appeals to the obsession with precise hoof balance and geometry.",
+          "prompt_keywords": [
+            "hoof gauge",
+            "toe angle",
+            "farrier measurement",
+            "hoof balance",
+            "veterinary tool"
+          ]
+        },
+        {
+          "name": "Mustad Nail Size Chart Poster",
+          "trending_score": 58,
+          "unique_angle": "Focuses on the specific hardware fasteners used in shoeing.",
+          "prompt_keywords": [
+            "horseshoe nails",
+            "mustad nails",
+            "size chart",
+            "hardware print",
+            "farrier tools"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "veterinary, historical, precise, rugged",
+        "composition": "Centered hoof cross-section",
+        "line_style": "Fine veterinary engraving",
+        "color_primary": [
+          "Deep Charcoal #2C3E50",
+          "Warm Cream #FDFBF7"
+        ],
+        "color_accent": [
+          "Natural Horn #D2B48C"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [
+          "19th century veterinary manuals",
+          "Anatomical study plates"
+        ],
+        "texture": "Aged medical parchment"
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Single equine hoof cross-section, centered on pure white background. Rendered as a 19th century veterinary anatomy plate. Fine pen and ink engraving style — precise cross-hatching on the hoof wall, anatomically correct coffin bone (phalanx III), frog, and sole clearly rendered. Handwritten field note text around specimen reads 'Ungula Equina — Farrier's Guide to Balance'. Small scale bar and angle measurements bottom right. Colors: deep charcoal (#2C3E50), warm cream (#FDFBF7), natural horn (#D2B48C), dark ink (#1E1E1E). White background. Isolated specimen. Bold enough to read at sticker size.",
+        "negative_prompt": "",
+        "key_elements": [
+          "Hoof cross-section",
+          "Coffin bone",
+          "Anatomy labels"
+        ],
+        "avoid_elements": [
+          "cartoon horses",
+          "generic horseshoes",
+          "low-quality clip art"
+        ],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "1914 Cyclopedia outward appearance horse (14777090722).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/1914_Cyclopedia_outward_appearance_horse_%2814777090722%29.jpg",
+          "width": 2289,
+          "height": 3582
+        },
+        {
+          "title": "Anatomy of the horses foot.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Anatomy_of_the_horses_foot.jpg",
+          "width": 512,
+          "height": 425
+        }
+      ],
+      "generated_at": "2026-06-06 15:40 UTC",
+      "opportunity_score": 69.8,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 70.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 70 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 75.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, références de style, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 87.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 15 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [
+          "Hoof cross-section",
+          "Coffin bone",
+          "Anatomy labels",
+          "farrier anvil",
+          "shoeing tongs",
+          "patent drawing",
+          "blacksmith forge",
+          "hot shoeing",
+          "hoof gauge",
+          "toe angle",
+          "farrier measurement",
+          "hoof balance",
+          "veterinary tool",
+          "horseshoe nails",
+          "mustad nails"
+        ],
+        "categories": [
+          "medium",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 15 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 70 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "hoof cross-section",
+        "coffin bone",
+        "anatomy labels",
+        "farrier anvil",
+        "shoeing tongs",
+        "patent drawing",
+        "blacksmith forge",
+        "hot shoeing",
+        "hoof gauge",
+        "toe angle",
+        "farrier measurement",
+        "hoof balance",
+        "veterinary tool",
+        "horseshoe nails",
+        "mustad nails",
+        "size chart",
+        "hardware print",
+        "farrier tools"
+      ],
+      "title_seeds": [
+        "Farrier Hoof Anatomy seamless pattern",
+        "Anvil & Forge Patent Sticker repeat pattern",
+        "Hoof Angle Gauge Mug repeat pattern",
+        "Mustad Nail Size Chart Poster repeat pattern"
+      ]
+    },
+    {
+      "name": "Cichlid Aquarium Water Chemistry",
+      "trending_score": 69,
+      "market_opportunity": "medium",
+      "why_trending": "Cichlid keeping is a highly technical branch of fishkeeping where water hardness and pH are constantly monitored. Hobbyists love the 'mad scientist' aspect of testing and want merch that reflects this technical pride.",
+      "target_audience": "Advanced Aquarists, Fishroom Owners, Cichlid Keepers",
+      "sub_niches": [
+        {
+          "name": "Tanganyika vs Malawi pH Sticker",
+          "trending_score": 65,
+          "unique_angle": "Targets the friendly rivalry between keepers of different rift lake species.",
+          "prompt_keywords": [
+            "tanganyika pH",
+            "malawi cichlids",
+            "water hardness",
+            "rift lake",
+            "aquarium parameters"
+          ]
+        },
+        {
+          "name": "Nitrogen Cycle Flowchart Poster",
+          "trending_score": 74,
+          "unique_angle": "An essential biological process turned into clean wall art.",
+          "prompt_keywords": [
+            "nitrogen cycle",
+            "aquarium cycle",
+            "beneficial bacteria",
+            "ammonia nitrite nitrate",
+            "flowchart"
+          ]
+        },
+        {
+          "name": "Water Change Day Reminder Mug",
+          "trending_score": 68,
+          "unique_angle": "Focuses on the most common, repetitive maintenance chore in the hobby.",
+          "prompt_keywords": [
+            "water change",
+            "gravel vacuum",
+            "aquarium siphon",
+            "fishroom chore",
+            "aquarist humor"
+          ]
+        }
+      ],
+      "visual_direction": {
+        "mood": "scientific, clean, precise, slightly obsessive",
+        "composition": "Centered test tube rack",
+        "line_style": "Clean vector paths",
+        "color_primary": [
+          "Aquarium Blue #008080",
+          "Off-White #F8F8F6"
+        ],
+        "color_accent": [
+          "Warning Yellow #FFD700"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [
+          "Chemistry lab manuals",
+          "Water testing guides"
+        ],
+        "texture": "Zero texture, flat vector"
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Single aquarium water test tube rack diagram, centered on pure white background. Flat vector illustration — precision of an aquatic chemistry manual. Labeled with real fishkeeping parameters: 'pH: 8.2 (Tanganyika Standard)', 'Ammonia: 0 ppm (Safe)', 'Nitrite: 0 ppm (Safe)', 'Nitrate: 10 ppm (Water Change Due)'. Status indicator: 'Cichlid Aggression Level: High'. Small text at bottom: 'Hard water, happy fish.' Dry minimalist annotation style. Colors: off-white (#F8F8F6), aquarium blue (#008080), warning yellow (#FFD700). Zero gradients. White background. Clean vector edges. Reads clearly at sticker size.",
+        "negative_prompt": "",
+        "key_elements": [
+          "Test tube rack",
+          "Liquid color indicators",
+          "Chemical parameters"
+        ],
+        "avoid_elements": [
+          "generic cartoon fish",
+          "messy water splashes",
+          "3D glassware"
+        ],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Chemical test tubes 2013.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Chemical_test_tubes_2013.jpg",
+          "width": 2560,
+          "height": 1920
+        },
+        {
+          "title": "Rubber bung with flask.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Rubber_bung_with_flask.jpg",
+          "width": 960,
+          "height": 1280
+        }
+      ],
+      "generated_at": "2026-06-06 15:40 UTC",
+      "opportunity_score": 69.2,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 68.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 68 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 75.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, références de style, trait+texture, mood"
+        },
+        "reusability": {
+          "value": 87.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 15 mots-clés distincts → fort potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [
+          "Test tube rack",
+          "Liquid color indicators",
+          "Chemical parameters",
+          "tanganyika pH",
+          "malawi cichlids",
+          "water hardness",
+          "rift lake",
+          "aquarium parameters",
+          "nitrogen cycle",
+          "aquarium cycle",
+          "beneficial bacteria",
+          "ammonia nitrite nitrate",
+          "flowchart",
+          "water change",
+          "gravel vacuum"
+        ],
+        "categories": [
+          "medium",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 15 mots-clés distincts → fort potentiel de collections",
+      "demand_evidence": "score Gemini 68 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [
+        "test tube rack",
+        "liquid color indicators",
+        "chemical parameters",
+        "tanganyika ph",
+        "malawi cichlids",
+        "water hardness",
+        "rift lake",
+        "aquarium parameters",
+        "nitrogen cycle",
+        "aquarium cycle",
+        "beneficial bacteria",
+        "ammonia nitrite nitrate",
+        "flowchart",
+        "water change",
+        "gravel vacuum",
+        "aquarium siphon",
+        "fishroom chore",
+        "aquarist humor"
+      ],
+      "title_seeds": [
+        "Cichlid Aquarium Water Chemistry seamless pattern",
+        "Tanganyika vs Malawi pH Sticker repeat pattern",
+        "Nitrogen Cycle Flowchart Poster repeat pattern",
+        "Water Change Day Reminder Mug repeat pattern"
+      ]
+    }
+  ]
+}
