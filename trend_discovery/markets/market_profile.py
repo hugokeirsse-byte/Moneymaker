@@ -119,21 +119,28 @@ REDBUBBLE = MarketProfile(
         "notebooks and journals",
     ],
     buyer_segments=[
-        "Gen Z and millennials expressing niche identity",
-        "niche hobby communities (plant parents, cat people, gamers, hikers, crafters)",
-        "humor/meme culture buyers looking for relatable gift",
-        "mental health / anxiety humor community",
-        "astrology / witchy aesthetic community",
-        "cottagecore / dark academia aesthetic community",
-        "science and nerd humor buyers",
+        "hobbyist communities with strong identity (mycologists, birders, ham radio operators, mechanical keyboard builders, sourdough bakers, fountain pen collectors, cichlid keepers, film photographers)",
+        "skilled trade professionals proud of craft identity (electricians, welders, machinists, arborists, farriers, glassblowers)",
+        "niche fandom and gaming communities (specific game/anime that have <5k Redbubble designs)",
+        "academic and research communities (PhD culture, specific scientific disciplines, field researchers)",
+        "alternative sports and outdoor communities (ultralight backpacking, open-water swimming, trail running, competitive archery, roller derby)",
+        "indie art and maker culture (risograph printers, zine makers, letterpress, bookbinders, natural dyers)",
+        "crossover buyers who combine two identities and can't find merch that speaks to both",
     ],
     research_signals=[
-        "Redbubble trending searches and bestseller categories RIGHT NOW",
-        "TikTok #redbubble and #rbdesign viral designs this week",
-        "Reddit r/redbubble, r/printondemand — what is selling, what buyers request",
-        "Etsy sticker trends — sticker designs crossover heavily with Redbubble",
-        "Twitter/Instagram humor accounts — jokes that translate well to merch",
-        "Pinterest boards for 'funny gifts', 'niche stickers', 'aesthetic shirts'",
+        # CHECK A — Redbubble competition mapping
+        "Search Redbubble for the community's core keyword — record result count and assess quality (are results generic or community-authentic?)",
+        # CHECK B — Reddit purchase intent
+        "Search Reddit in the community's primary subreddit for posts mentioning 'merch', 'sticker', 'shirt', 'I wish someone made' — record subreddit size and any direct merch request threads",
+        # CHECK C — Etsy demand crossover
+        "Search Etsy for '[community keyword] sticker' and '[community keyword] shirt' — record listing count and check for recent sales evidence ('X sold in last 24h')",
+        # CHECK D — TikTok / social trend velocity
+        "Search TikTok for the community's main hashtag(s) — record view counts; check for viral community content posted in the last 30 days",
+        # CHECK E — Pinterest visual identity
+        "Search Pinterest for '[community] aesthetic' or '[community] art' — confirm the community has a distinct visual language that would translate to sticker/shirt design",
+        # Bonus signals
+        "Check r/redbubble and r/printondemand for buyer requests and underserved niche discussions from the last 3 months",
+        "Search Google Trends for the community keyword in the last 12 months — check if interest is rising, stable, or declining",
     ],
     excluded_generic=[
         "generic inspirational quotes",
@@ -141,8 +148,12 @@ REDBUBBLE = MarketProfile(
         "stock photo style",
         "corporate clipart",
         "generic 'live laugh love' style",
-        "basic rainbow pride (oversaturated)",
-        "generic cat/dog without personality",
+        "basic rainbow pride (oversaturated, >100k results on Redbubble)",
+        "generic cat/dog without community-specific context",
+        "anxiety / mental health without specific community hook (>200k results)",
+        "axolotl / capybara / frog / void cat (market exhausted)",
+        "skeleton / skull without specific niche context (>300k results)",
+        "cottagecore (saturated), dark academia (saturated), witchy (saturated)",
     ],
     output_format={
         "file": "PNG",
