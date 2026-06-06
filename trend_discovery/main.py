@@ -1838,27 +1838,6 @@ def main():
         help="Répertoire de sortie pour le PNG Spoonflower.",
     )
 
-    # ── Sous-commande : listings ──────────────────────────────────────────────
-    listings_parser = subparsers.add_parser(
-        "listings",
-        help="Génère les fiches produit CSV + Markdown prêtes-à-publier par plateforme.",
-    )
-    listings_parser.add_argument(
-        "--reports", type=str, default="./reports",
-        help="Dossier des rapports CdC JSON.",
-    )
-    listings_parser.add_argument(
-        "--output", type=str, default="./reports/listings",
-        help="Dossier de sortie des listings.",
-    )
-    # These args are accepted but ignored (kept for workflow compat)
-    listings_parser.add_argument("--spoonflower", type=str, default="")
-    listings_parser.add_argument("--colorways", type=str, default="")
-    listings_parser.add_argument("--uploads", type=str, default="")
-    listings_parser.add_argument("--uploads-colorways", type=str, default="")
-    listings_parser.add_argument("--redbubble", type=str, default="")
-    listings_parser.add_argument("--redbubble-reports", type=str, default="")
-
     # ── Arguments legacy (compatibilité ascendante) ────────────────────────────
     parser.add_argument("--keywords", type=str, default="")
     parser.add_argument("--categories", type=str, default="")
@@ -1982,18 +1961,10 @@ def main():
         return
 
     if args.command == "listings":
-        from trend_discovery.generators.listing_generator import ListingGenerator
-        gen = ListingGenerator(
+        generate_listings(
             reports_dir=getattr(args, "reports", "./reports") or "./reports",
-            spoonflower_dir=getattr(args, "spoonflower", "./output/spoonflower") or "./output/spoonflower",
-            colorways_dir=getattr(args, "colorways", "./output/colorways") or "./output/colorways",
-            uploads_dir=getattr(args, "uploads", "./output/uploads/base") or "./output/uploads/base",
-            uploads_colorways_dir=getattr(args, "uploads_colorways", "./output/uploads/colorways") or "./output/uploads/colorways",
-            redbubble_dir=getattr(args, "redbubble", "./output/redbubble") or "./output/redbubble",
-            redbubble_reports_dir=getattr(args, "redbubble_reports", "./reports/redbubble") or "./reports/redbubble",
             output_dir=getattr(args, "output", "./reports/listings") or "./reports/listings",
         )
-        gen.run()
         return
 
     if args.command == "generate-elements":
@@ -2002,13 +1973,6 @@ def main():
             niche_name=args.niche or None,
             yes=args.yes,
             output_dir=args.output,
-        )
-        return
-
-    if args.command == "listings":
-        generate_listings(
-            reports_dir=getattr(args, "reports", "./reports") or "./reports",
-            output_dir=getattr(args, "output", "./reports/listings") or "./reports/listings",
         )
         return
 
