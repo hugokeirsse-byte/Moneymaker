@@ -915,53 +915,71 @@ Return ONLY a valid JSON array of exactly {total_count} trend objects ({profile.
         except Exception:
             pass
 
-        return f"""Today is {today}. You are an expert in print-on-demand merchandise for {profile.display_name}.
+        return f"""Today is {today}. You are a senior print-on-demand market analyst specializing in {profile.display_name}.
+Your job is to find the WHITE SPACE — the gaps where demand is real but competition is thin.
 {archive_block}
-Use Google Search to find REAL, CURRENT trending design concepts on Redbubble RIGHT NOW.
-Research what is actually selling, what buyers are searching for, what is going viral.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHASE 1 — MAP THE OVERSATURATED TERRITORY (do this FIRST)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Research these signals:
+Search Redbubble RIGHT NOW for each of these to get approximate result counts:
+- "axolotl", "capybara", "frog raincoat", "anxiety", "void cat", "skeleton",
+  "plant parent", "mental health", "kawaii cat", "skull flowers", "cottagecore",
+  "dark academia", "mushroom", "among us", "gaming", "astrology cat"
+
+These are OVERSATURATED. A concept that overlaps significantly with any of them
+WILL NOT RANK because thousands of designs already exist. Do NOT produce concepts
+anchored to these themes.
+
+Excluded generic categories: {excluded}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHASE 2 — FIND UNDERSERVED MICRO-COMMUNITIES (primary research phase)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Research these signals using web search:
 {signals}
 
-Products: {products}
-Buyers: {buyers}
+Target communities that:
+a) Have REAL purchase intent (they already buy merch — search Reddit, Etsy, TikTok)
+b) Have SPECIFIC identity markers (jargon, inside jokes, tools, rituals only they know)
+c) Are UNDERSERVED on Redbubble (search the community keyword → few or low-quality results)
+
+Look specifically for:
+- Hobbyist communities with dedicated subreddits >10k members but few Redbubble results
+- Professions with strong identity pride that resent generic "I love my job" designs
+- Life-stage transitions that create strong "this is ME right now" identity (new hobbies, career shifts)
+- Emerging cultural moments from the last 3 months (TikTok trends, viral Reddit communities, new shows/games)
+- Crossover communities that combine two interests nobody has targeted together yet
+
+Products available: {products}
+Buyer segments: {buyers}
 {extra_block}
 
-Identify {total_count} OPPORTUNITY concepts: {niche_count} mainstream + {crossover_count} micro-niche crossover.
-Each concept is a STANDALONE ILLUSTRATION (NOT a seamless pattern) — one centered image that works
-printed on a t-shirt, cut out as a sticker, or featured on a phone case.
-
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-WHAT WORKS ON REDBUBBLE — the proven formula:
+PHASE 3 — SELECT {total_count} OPPORTUNITY CONCEPTS
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-1. CUTE + ABSURD: an adorable animal doing something completely unexpected
-   Examples: "axolotl holding a coffee and crying softly", "frog in a tiny raincoat labeled 'I'm fine'",
-   "capybara sitting in hot spring with cucumbers, absolutely unbothered"
+From your research, pick {niche_count} mainstream-niche + {crossover_count} crossover-gap concepts.
 
-2. NICHE IDENTITY BADGE: a design that says "this is who I am" to a specific community
-   Examples: "plant parent certificate (mock official document)", "certified chaos goblin",
-   "I paused my game for this (angry pixel character)"
+OPPORTUNITY FORMULA: score each candidate on:
+  DEMAND: evidence of active community + purchase intent (Reddit/TikTok/Etsy searches)
+  COMPETITION: Redbubble result count for the core search term (lower = better)
+  SPECIFICITY: only people in this community "get" the design immediately
+  SCALABILITY: works as sticker, t-shirt AND mug (not just one product)
 
-3. RELATABLE HUMOR: captures a universal feeling with personality
-   Examples: "anxiety hamster running on wheel labeled 'my brain at 3am'",
-   "cat pushing mug off table labeled 'monday'", "skeleton sitting at desk 'waiting for the weekend'"
-
-4. DARK CUTE (kawaii meets dark/horror): pastel colors + creepy subject
-   Examples: "cute skull with flower crown", "sleeping vampire bat holding teddy bear",
-   "adorable plague doctor saying 'get well soon'"
-
-5. VERY SPECIFIC NICHE: so targeted that the exact person MUST buy it
-   Examples: "houseplant humidifier check (plant parent daily routine)", "DnD critical fail face",
-   "sourdough starter grief support group"
+Reject any concept where:
+- The Redbubble search returns >30,000 results for the core keyword
+- The design idea could describe 50+ existing Redbubble products without modification
+- The "community" is broader than 2 overlapping interest categories
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-SELECTION RULES:
-- OPPORTUNITY = high demand + low competition on Redbubble RIGHT NOW
-- Exclude: {excluded}
-- Every concept needs a SPECIFIC community who will instantly recognize themselves
-- The design must work at STICKER SIZE (2cm) AND POSTER SIZE (50cm) — bold, clear, readable
-- 2-5 colors max (more colors = harder to read at small scale, higher print cost)
+DESIGN RULES FOR REDBUBBLE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- STANDALONE ILLUSTRATION (not seamless): one centered image on white
+- Works at STICKER SIZE (2cm) AND POSTER SIZE (50cm) — bold outlines, readable at thumbnail
+- 2-5 colors max (readability + cost)
+- Style must match the community's aesthetic (birders ≠ kawaii; ham radio ≠ pastel goth)
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 MANDATORY FLUX PROMPT FORMAT FOR REDBUBBLE:
@@ -969,45 +987,47 @@ MANDATORY FLUX PROMPT FORMAT FOR REDBUBBLE:
 
 The ai_generation.positive_prompt MUST follow this structure (80-120 words):
 
-  PART 1 — SUBJECT: "Single [CHARACTER/OBJECT], centered on pure white background."
-  PART 2 — STYLE ANCHOR: "[STYLE] illustration — [2-3 style descriptors]."
-    Proven FLUX-compatible style anchors for merch:
-    • Cute/kawaii      → "kawaii flat vector illustration, thick black outline, pastel colors"
-    • Vintage badge    → "vintage retro badge design, distressed texture, muted earth tones, circular composition"
-    • Editorial humor  → "editorial cartoon style, expressive line art, slightly exaggerated proportions"
-    • Dark cute        → "pastel goth illustration, cute but creepy aesthetic, soft colors with dark accents"
-    • Flat modern      → "modern flat vector illustration, geometric shapes, bold solid colors, minimal shading"
-    • Naturalist       → "vintage natural history engraving style, fine crosshatch lines, sepia and black tones"
-  PART 3 — CHARACTER DETAIL: "[POSE/EXPRESSION/PROPS — specific and funny if humor concept]."
-  PART 4 — COLOR PALETTE: "Colors: [3-4 specific HEX codes only]. High contrast."
-  PART 5 — TECHNICAL: "Clean crisp edges, no background elements, isolated on white.
-    Bold enough to read at sticker size. No gradients inside shapes."
+  PART 1 — SUBJECT: "Single [CHARACTER/OBJECT/SCENE], centered on pure white background."
+  PART 2 — STYLE ANCHOR: "[STYLE] illustration — [2-3 style descriptors matching the community's aesthetic]."
+    FLUX-compatible style anchors (choose the one that fits the community):
+    • Hobbyist pride    → "vintage naturalist illustration, fine line engraving style, aged paper tones"
+    • Tech/nerd humor  → "flat vector infographic style, monochrome with single accent color, precise geometric shapes"
+    • Artisan craft    → "woodblock print aesthetic, bold black lines, limited 2-color risograph palette"
+    • Identity badge   → "vintage retro badge design, distressed texture, circular composition, muted earthy tones"
+    • Dark/ironic      → "editorial cartoon style, expressive linework, slightly exaggerated proportions"
+    • Cute/character   → "kawaii flat vector illustration, thick black outline, pastel colors, simple shapes"
+    • Cottagecore      → "botanical illustration style, delicate ink lines, watercolor wash texture"
+  PART 3 — SUBJECT DETAIL: "[SPECIFIC OBJECT/CHARACTER with precise details that only this community recognizes]."
+  PART 4 — COLOR PALETTE: "Colors: [3-4 specific HEX codes only, chosen for community aesthetic]. High contrast."
+  PART 5 — TECHNICAL: "Clean crisp edges, no background elements, isolated on white. Bold enough to read at sticker size. No gradients inside shapes."
 
-WORKED EXAMPLE (Anxiety Frog):
-  "Single cartoon frog in a tiny yellow raincoat, centered on pure white background.
-  Kawaii flat vector illustration, thick black outline, slightly rounded shapes, expressive eyes.
-  The frog has wide anxious eyes and holds a tiny sign reading 'I'm fine' while standing
-  in a puddle. Slightly hunched posture conveying gentle existential dread.
-  Colors: sage green (#7FA87F), sunshine yellow (#F5D547), warm white (#FAFAFA), black (#1A1A1A).
-  Clean crisp edges, no background elements, isolated on white. Bold enough to read at sticker size."
+WORKED EXAMPLE (Mushroom Forager):
+  "Single detailed fly agaric mushroom with field notes handwritten around it, centered on pure white background.
+  Vintage naturalist illustration, fine line engraving style, reminiscent of 19th century field guides.
+  Mushroom rendered with precise anatomical detail — gills, ring, volva clearly visible; handwritten text reads
+  'Amanita muscaria — DO NOT EAT'. Small magnifying glass and field journal tucked beside it.
+  Colors: brick red (#C0392B), warm cream (#F5F0E8), forest green (#2D5016), dark ink (#1A1209).
+  Clean crisp edges, no background elements, isolated on white. Bold enough to read at sticker size. No gradients inside shapes."
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 For EACH concept, return a JSON object with ALL these fields:
 {{{{
-  "name": "2-4 word concept name (e.g. 'Anxiety Frog Raincoat')",
-  "concept": "one sentence: the core idea — what makes someone say 'I NEED this'",
+  "name": "2-4 word concept name (specific, not generic — e.g. 'Ham Radio Operator Pride')",
+  "concept": "one sentence: the core idea — why THIS community will say 'finally, someone made this'",
   "trending_score": integer 0-100,
   "market_opportunity": "very_high" | "high" | "medium" | "low",
-  "why_trending": "2 sentences: (1) real demand evidence found on web, (2) why it is an opportunity NOW",
-  "target_buyer": "the exact person who buys this — their identity, what they'll put it on",
-  "best_products": ["t-shirt", "sticker"],
+  "competition_evidence": "Redbubble result count for core keyword + quality assessment (e.g. '<500 results, mostly low-quality generic')",
+  "demand_evidence": "1-2 sentences of REAL evidence: Reddit community size, TikTok search volume, Etsy search data, or trending signal found",
+  "why_trending": "2 sentences: (1) what specific signal shows demand, (2) why competition is low NOW",
+  "target_buyer": "the exact person — their hobby/identity, what platform they found you on, what they put the design on",
+  "best_products": ["sticker", "t-shirt"],
   "humor_level": "wholesome" | "relatable" | "absurdist" | "dark-cute" | "niche-pride",
-  "niche_community": "the specific community this speaks to (e.g. 'plant parents', 'anxious millennials')",
-  "color_count": 2,
+  "niche_community": "specific community name (e.g. 'amateur mycologists', 'ham radio operators', 'cichlid fishkeepers')",
+  "color_count": 3,
   "visual_direction": {{{{
-    "style": "kawaii|vintage-badge|editorial-cartoon|dark-cute|flat-modern|naturalist",
-    "mood": "comma-separated mood adjectives",
+    "style": "kawaii|vintage-badge|editorial-cartoon|dark-cute|flat-modern|naturalist|woodblock|infographic",
+    "mood": "comma-separated mood adjectives matching the community's self-image",
     "color_palette": {{{{
       "primary": ["Color Name #HEXCODE", "Color Name #HEXCODE"],
       "accent": ["Color Name #HEXCODE"],
@@ -1023,15 +1043,19 @@ For EACH concept, return a JSON object with ALL these fields:
   "sub_niches": [
     {{{{
       "name": "specific sub-angle (2-4 words)",
-      "differentiator": "what makes this distinct — different community, product, or humor angle",
+      "differentiator": "distinct community sub-group, product fit, or angle within the parent niche",
       "opportunity": "very_high | high | medium | low",
-      "best_product": "the one product type this sub-niche sells best on (sticker / t-shirt / mug / etc)"
+      "best_product": "the one product type this sub-niche sells best on (sticker / t-shirt / mug / tote / print)"
     }}}},
-    // 3-5 sub-niches — researched REAL micro-angles with their own buyer identity
+    // 3-5 sub-niches — each a distinct micro-angle with its own buyer identity, NOT just name variations
   ]
 }}}}
 
-SUB-NICHE RESEARCH (mandatory): For each concept, research 3-5 specific sub-angles — micro-communities or humor variants that spin off from the parent concept. Each should have a distinct buyer or product fit. Example: parent = "Anxiety Frog" → sub-niches: "Frog Therapy Journal", "Frog Existential Crisis Sticker", "Anxious Frog Mug for Mondays", "Frog I'm Fine Button Badge", "Frog Coping Mechanisms Zine Cover".
+EVIDENCE REQUIREMENT: trending_score must reflect MEASURED evidence.
+- 80+: actual trending data found (search volume, viral posts, Etsy bestseller)
+- 60-79: strong community evidence (active subreddit + Etsy demand + low RB competition)
+- 40-59: reasonable inference from adjacent trends
+- Below 40: do not include — it means insufficient evidence
 
 Return ONLY a valid JSON array of exactly {total_count} objects. No text before or after. No markdown wrapper.
 """
