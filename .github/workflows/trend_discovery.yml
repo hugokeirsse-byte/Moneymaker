@@ -402,7 +402,7 @@ jobs:
             echo "=== MODE RECOVER-ARTIFACT : récupère les upscales d'un run interrompu (0 €) ==="
             python -m trend_discovery.generators.recover_artifact \
               --artifact-dir ./_recovered \
-              --subdirs output/spoonflower,output/uploads/base
+              --subdirs output/spoonflower,output/redbubble,output/uploads/base
             echo "-- Thumbnails post-récupération --"
             python -m trend_discovery.main thumbnails \
               --pipeline ./output/spoonflower \
