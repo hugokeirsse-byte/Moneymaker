@@ -435,12 +435,16 @@ jobs:
             echo "Aucun nouveau rapport à commiter."
           else
             DATE=$(date -u +"%Y-%m-%d %H:%M UTC")
-            git commit -m "report(pipeline): trends + images Spoonflower — ${DATE}"
-            # Stash les fichiers non-stagés avant le rebase pour éviter le blocage
-            git stash --include-untracked 2>/dev/null || true
-            git pull --rebase origin HEAD
-            git push origin HEAD
-            git stash pop 2>/dev/null || true
+            git commit -m "report(pipeline): trends + images — ${DATE}"
+            # Retry loop : rebase + push avec backoff exponentiel (concurrent runs)
+            DELAY=2
+            for attempt in 1 2 3 4; do
+              echo "Push attempt $attempt/4..."
+              git pull --rebase origin HEAD && git push origin HEAD && break
+              echo "Échec push (attempt $attempt/4) — retry dans ${DELAY}s"
+              sleep $DELAY
+              DELAY=$((DELAY * 2))
+            done
           fi
 
       - name: Upload rapports et images comme artefacts
