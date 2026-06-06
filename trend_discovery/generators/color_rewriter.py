@@ -182,6 +182,111 @@ def _hsv_rotate(arr_rgb: np.ndarray, hue_shift: float, sat_mult: float, val_mult
     return np.stack([R2, G2, B2], axis=2)
 
 
+# ── Sélection intelligente de palette basée sur les hex couleurs du CDC ───────
+
+# Plage de teinte (degrés) → palette la plus proche
+_HUE_PALETTE_MAP: List[Tuple[Tuple[int, int], str]] = [
+    ((0,   20),  "deep_ruby"),        # rouge
+    ((20,  45),  "earth_autumn"),     # orange / ambre / terracotta
+    ((45,  75),  "rose_gold"),        # jaune / or chaud
+    ((75,  150), "forest_dusk"),      # vert
+    ((150, 195), "cool_ocean"),       # teal / cyan
+    ((195, 265), "midnight"),         # bleu
+    ((265, 305), "lavender_mist"),    # violet / lavande
+    ((305, 345), "rose_gold"),        # rose / magenta
+    ((345, 360), "deep_ruby"),        # rouge (fin de cercle)
+]
+
+
+def _hex_to_hue(hex_color: str) -> Optional[float]:
+    """Convertit un hex color en teinte HSV (0-360), ou None si achromatique."""
+    try:
+        h = hex_color.lstrip("#")
+        if len(h) not in (6, 8):
+            return None
+        r, g, b = int(h[0:2], 16) / 255.0, int(h[2:4], 16) / 255.0, int(h[4:6], 16) / 255.0
+        maxc, minc = max(r, g, b), min(r, g, b)
+        delta = maxc - minc
+        if delta < 0.08 or maxc < 0.05:  # achromatique ou trop sombre
+            return None
+        if maxc == r:
+            hue = ((g - b) / delta) % 6.0
+        elif maxc == g:
+            hue = (b - r) / delta + 2.0
+        else:
+            hue = (r - g) / delta + 4.0
+        return (hue / 6.0) * 360.0
+    except Exception:
+        return None
+
+
+def _extract_hex_colors(brief: dict) -> List[str]:
+    """Extrait tous les codes hex du CDC (palette primaire + accent + fond)."""
+    import re
+    hexes = []
+    vd = brief.get("visual_direction", {}) or {}
+    cp = vd.get("color_palette", {}) or {}
+    for source in [cp.get("primary", []), cp.get("accent", []), [cp.get("background", "")]]:
+        if isinstance(source, list):
+            for item in source:
+                found = re.findall(r"#[0-9A-Fa-f]{6}", str(item))
+                hexes.extend(found)
+        elif isinstance(source, str):
+            found = re.findall(r"#[0-9A-Fa-f]{6}", source)
+            hexes.extend(found)
+    # Also check assembly_guide and elements
+    ag = brief.get("assembly_guide", {}) or {}
+    for item in [ag.get("background_color", ""), str(ag.get("color_palette", []))]:
+        hexes.extend(re.findall(r"#[0-9A-Fa-f]{6}", str(item)))
+    return list(dict.fromkeys(hexes))  # deduplicate, preserve order
+
+
+def _hue_to_palette(hue_deg: float) -> str:
+    """Retourne le nom de palette le plus proche pour une teinte donnée."""
+    for (lo, hi), pal in _HUE_PALETTE_MAP:
+        if lo <= hue_deg < hi:
+            return pal
+    return "earth_autumn"
+
+
+def select_palettes_for_cdc(hex_colors: List[str], n: int = 4) -> List[str]:
+    """
+    Sélectionne les n palettes HSV les plus pertinentes pour une liste de hex couleurs.
+
+    Priorité : couleurs saturées et lisibles d'abord, achromatiques ignorées.
+    Toujours retourne exactement n palettes (complétion avec palettes génériques si besoin).
+
+    Args:
+        hex_colors : liste de codes hex extraits du CDC
+        n          : nombre de palettes à retourner (défaut 4)
+
+    Returns:
+        Liste de n noms de palettes de PALETTES.
+    """
+    defaults = ["cool_ocean", "earth_autumn", "midnight", "rose_gold"]
+    if not hex_colors:
+        return defaults[:n]
+
+    selected = []
+    for hex_col in hex_colors:
+        hue = _hex_to_hue(hex_col)
+        if hue is not None:
+            pal = _hue_to_palette(hue)
+            if pal not in selected:
+                selected.append(pal)
+        if len(selected) >= n:
+            break
+
+    # Complétion avec les defaults si pas assez de couleurs saturées
+    for pal in defaults:
+        if pal not in selected:
+            selected.append(pal)
+        if len(selected) >= n:
+            break
+
+    return selected[:n]
+
+
 class ColorRewriter:
     """
     Ré-colorise un motif PNG par rotation HSV.
@@ -293,4 +398,56 @@ class ColorRewriter:
         for fp in files:
             generated = self.recolor_file(fp, palette_names, output_dir)
             results[os.path.basename(fp)] = generated
+        return results
+
+    def batch_recolor_smart(
+        self,
+        input_dir: str,
+        reports_dir: str = "./reports",
+        output_dir: str = "./output/colorways",
+        glob_pattern: str = "*.png",
+        fallback_palettes: Optional[List[str]] = None,
+    ) -> Dict[str, List[str]]:
+        """
+        Ré-colorise tous les PNGs en sélectionnant automatiquement les 4 palettes
+        les plus pertinentes pour chaque design selon les hex couleurs de son CDC.
+
+        Si aucun CDC correspondant n'est trouvé, repli sur fallback_palettes
+        (défaut: cool_ocean, earth_autumn, midnight, rose_gold).
+        """
+        import glob as _glob
+        from trend_discovery.generators.listing_generator import load_all_briefs, _slug
+
+        fallback = fallback_palettes or ["cool_ocean", "earth_autumn", "midnight", "rose_gold"]
+        sf_briefs, _ = load_all_briefs(reports_dir)
+        files = sorted(_glob.glob(os.path.join(input_dir, glob_pattern)))
+        results = {}
+
+        for fp in files:
+            stem = Path(fp).stem
+            # Extraire le slug niche depuis le nom de fichier
+            import re
+            m = re.match(r"^(.+?)___base_", stem)
+            niche_slug = m.group(1) if m else stem
+
+            # Chercher le CDC correspondant
+            brief = None
+            for b in sf_briefs:
+                if _slug(b.get("name", "")) == niche_slug:
+                    brief = b
+                    break
+
+            if brief:
+                hex_colors = _extract_hex_colors(brief)
+                palettes = select_palettes_for_cdc(hex_colors) if hex_colors else fallback
+                logger.info(
+                    "[color_rewriter] %s → palettes CDC: %s", stem[:40], palettes
+                )
+            else:
+                palettes = fallback
+                logger.debug("[color_rewriter] %s → palettes génériques (CDC non trouvé)", stem[:40])
+
+            generated = self.recolor_file(fp, palettes, output_dir)
+            results[os.path.basename(fp)] = generated
+
         return results

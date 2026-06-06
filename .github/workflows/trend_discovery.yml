@@ -31,26 +31,27 @@ on:
         default: 'preview'
         type: choice
         options:
-          - 'preview'              # Gemini trends + CdCs + manifest (0 €)
-          - 'redbubble-preview'  # CDCs standalone Redbubble (t-shirt, sticker, mug) via Gemini (0 €)
-          - 'redbubble-generate' # Génère les images standalone Redbubble (~0.006€ × nb CDCs)
+          - 'preview'              # Gemini trends + CdCs + manifest — Spoonflower (0 €)
+          - 'redbubble-preview'    # CDCs standalone Redbubble (t-shirt, sticker, mug) via Gemini (0 €)
+          - 'redbubble-generate'   # Génère les images standalone Redbubble (~0.006€ × nb CDCs)
           - 'adobe-stock-preview'  # CDCs optimisés Adobe Stock via Gemini (0 €)
           - 'adobe-stock-generate' # Génère images pour Adobe Stock (~0.006€ × nb CDCs)
           - 'etsy-preview'         # CDCs digital download bundles Etsy via Gemini (0 €)
           - 'etsy-generate'        # Génère images pour bundles Etsy (~0.006€ × nb CDCs)
-          - 'audit'              # Note /100 chaque image via Gemini Vision (0 €, RUNWARE non requis)
-          - 'archive'            # Archive un CdC accompli (input niche) + régénère un remplaçant (0 €)
-          - 'generate-all'       # 1 image de base par CdC (~0.006€ × nb CdCs)
-          - 'generate-best'      # Variantes du meilleur CdC auto-sélectionné (~0.05 €)
-          - 'generate-elements'  # 10 éléments isolés + assemblage Pillow (~0.06 €)
-          - 'generate'           # Images des CdCs approuvées (manifest requis)
-          - 'colorize'           # Variantes de couleurs sur images existantes (0 €, Pillow)
-          - 'listings'           # CSVs upload Spoonflower + Adobe Stock + Etsy + Redbubble (0 €)
-          - 'seamless-audit'     # Vérifie + corrige les tuiles non-seamless (mirror quad, 0 €)
-          - 'thumbnails'         # Génère vignettes 600×600 JPEG navigables (0 €, git-safe)
-          - 'upscale-fix'        # Re-upscale IA Real-ESRGAN images existantes floues (~0.005€/img)
-          - 'recover-artifact'   # Récupère les upscales d'un run interrompu (0 €, depuis artefact)
-          - 'full'               # Pipeline complet sans génération d'images
+          - 'audit'                # Note /100 chaque image via Gemini Vision (0 €)
+          - 'archive'              # Archive un CdC accompli (input niche) + régénère un remplaçant (0 €)
+          - 'generate-all'         # 1 image de base par CdC (~0.006€ × nb CdCs)
+          - 'generate-best'        # Variantes du meilleur CdC auto-sélectionné (~0.05 €)
+          - 'generate-elements'    # 10 éléments isolés + assemblage Pillow (~0.06 €)
+          - 'generate'             # Images des CdCs approuvées (manifest requis)
+          - 'colorize'             # Variantes de couleurs sur images existantes (0 €, Pillow)
+          - 'bg-remove'            # Supprime fond blanc → PNG transparent Redbubble stickers (0 €)
+          - 'seamless-audit'       # Vérifie + corrige les tuiles non-seamless (mirror quad, 0 €)
+          - 'thumbnails'           # Génère vignettes 600×600 JPEG navigables (0 €, git-safe)
+          - 'listings'             # CSVs upload Spoonflower + Adobe Stock + Etsy + Redbubble (0 €)
+          - 'upscale-fix'          # Re-upscale IA Real-ESRGAN images existantes floues (~0.005€/img)
+          - 'recover-artifact'     # Récupère les upscales d'un run interrompu (0 €, depuis artefact)
+          - 'full'                 # Pipeline complet sans génération d'images
       recover_run_id:
         description: 'Run ID de l artefact à récupérer (mode recover-artifact)'
         required: false
@@ -113,7 +114,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Créer les répertoires nécessaires
-        run: mkdir -p reports data output/spoonflower output/redbubble output/adobe_stock output/etsy
+        run: mkdir -p reports data output/spoonflower output/redbubble output/adobe_stock output/etsy output/colorways output/thumbnails
 
       - name: Restaurer la base de données (cache)
         uses: actions/cache@v4
@@ -155,7 +156,7 @@ jobs:
         run: |
           MODE="${{ github.event.inputs.mode || 'preview' }}"
           if [ "$MODE" = "preview" ]; then
-            echo "=== MODE PREVIEW : Gemini trends + CdCs + manifest (0 €) ==="
+            echo "=== MODE PREVIEW : Gemini trends + CdCs + manifest — Spoonflower (0 €) ==="
             python -m trend_discovery.main preview
           elif [ "$MODE" = "redbubble-preview" ]; then
             echo "=== MODE REDBUBBLE-PREVIEW : CDCs standalone Redbubble (0 €) ==="
@@ -266,11 +267,18 @@ jobs:
             echo "=== MODE COLORIZE : variantes HSV (rotation teinte, Pillow, 0 coût) ==="
             PALETTE_ARG=""
             [ -n "${{ github.event.inputs.palettes }}" ] && PALETTE_ARG="--palettes '${{ github.event.inputs.palettes }}'"
-            echo "-- Colorize pipeline images --"
-            eval python -m trend_discovery.main colorize --yes \
+            echo "-- Colorize pipeline images (smart CDC palettes) --"
+            eval python -m trend_discovery.main colorize --yes --smart \
               --input ./output/spoonflower \
               --output ./output/colorways \
+              --reports ./reports \
               $PALETTE_ARG
+            echo "-- Colorize Redbubble images (smart CDC palettes) --"
+            eval python -m trend_discovery.main colorize --yes --smart \
+              --input ./output/redbubble \
+              --output ./output/colorways \
+              --reports ./reports/redbubble \
+              $PALETTE_ARG || echo "(no redbubble images found, skipped)"
             echo "-- Colorize user uploads --"
             eval python -m trend_discovery.main colorize --yes \
               --input ./output/uploads/base \
@@ -279,6 +287,17 @@ jobs:
             echo "-- Auto thumbnails (colorways + pipeline + uploads) --"
             python -m trend_discovery.main thumbnails \
               --pipeline ./output/spoonflower \
+              --colorways ./output/colorways \
+              --uploads ./output/uploads/base \
+              --output ./output/thumbnails
+          elif [ "$MODE" = "bg-remove" ]; then
+            echo "=== MODE BG-REMOVE : suppression fond blanc → PNG transparent Redbubble (0 €) ==="
+            python -m trend_discovery.main bg-remove --yes \
+              --input ./output/redbubble \
+              --output ./output/redbubble
+            echo "-- Auto thumbnails après bg-remove --"
+            python -m trend_discovery.main thumbnails \
+              --pipeline ./output/redbubble \
               --colorways ./output/colorways \
               --uploads ./output/uploads/base \
               --output ./output/thumbnails
@@ -317,7 +336,6 @@ jobs:
             LIMIT_ARG=""
             LIMIT_VAL="${{ github.event.inputs.limit || '0' }}"
             [ "$LIMIT_VAL" != "0" ] && LIMIT_ARG="--limit $LIMIT_VAL"
-            # commit-every 8 : sauvegarde + push incrémental (reprise après timeout, petits push)
             echo "-- Re-upscale pipeline images (commit incrémental) --"
             python -m trend_discovery.generators.upscale_existing \
               --input ./output/spoonflower \

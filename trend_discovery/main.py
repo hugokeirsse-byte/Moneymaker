@@ -1189,12 +1189,17 @@ def colorize_images(
     palettes: Optional[List[str]] = None,
     glob_pattern: str = "*.png",
     yes: bool = False,
+    smart: bool = False,
+    reports_dir: str = "./reports",
 ) -> None:
     """
     Génère des variantes de coloris pour tous les PNGs d'un dossier.
 
     Principe : rotation HSV (hue_shift + sat_mult + val_mult).
     Aucun appel Runware — 100% gratuit. Détail préservé intégralement.
+
+    Si smart=True : lit les CDCs pour choisir les 4 palettes les plus adaptées
+    à chaque design plutôt que les 4 génériques.
 
     Palettes disponibles : cool_ocean, forest_dusk, rose_gold, midnight,
                            lavender_mist, earth_autumn, sage_morning, deep_ruby
@@ -1212,12 +1217,16 @@ def colorize_images(
         return
 
     pal_names = palettes or list(PALETTES.keys())
-    n_out = len(files) * len(pal_names)
+    mode_label = "SMART (palettes CDC)" if smart else "standard"
+    n_out = len(files) * (4 if smart else len(pal_names))
 
     print("\n" + "=" * 60)
-    print(f"  COLORIZE — variantes de palette (Pillow, 0 coût Runware)")
-    print(f"  {len(files)} image(s) source × {len(pal_names)} palette(s) = {n_out} colorways")
-    print(f"  Palettes : {', '.join(pal_names)}")
+    print(f"  COLORIZE — variantes de palette {mode_label} (Pillow, 0 coût Runware)")
+    if not smart:
+        print(f"  {len(files)} image(s) source × {len(pal_names)} palette(s) = {n_out} colorways")
+        print(f"  Palettes : {', '.join(pal_names)}")
+    else:
+        print(f"  {len(files)} image(s) source × 4 palettes CDC-adaptées ≈ {n_out} colorways")
     print(f"  Sortie   : {output_dir}/")
     print("=" * 60)
     for i, f in enumerate(files, 1):
@@ -1231,15 +1240,73 @@ def colorize_images(
             return
 
     rewriter = ColorRewriter()
-    results = rewriter.batch_recolor(
-        input_dir=input_dir,
-        palette_names=pal_names,
-        output_dir=output_dir,
-        glob_pattern=glob_pattern,
-    )
+    if smart:
+        results = rewriter.batch_recolor_smart(
+            input_dir=input_dir,
+            reports_dir=reports_dir,
+            output_dir=output_dir,
+            glob_pattern=glob_pattern,
+            fallback_palettes=pal_names or None,
+        )
+    else:
+        results = rewriter.batch_recolor(
+            input_dir=input_dir,
+            palette_names=pal_names,
+            output_dir=output_dir,
+            glob_pattern=glob_pattern,
+        )
 
     total_ok = sum(len(v) for v in results.values())
-    print(f"\n✅ {total_ok}/{n_out} colorways générés → {output_dir}/")
+    print(f"\n✅ {total_ok} colorways générés → {output_dir}/")
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Mode bg-remove : suppression fond blanc pour stickers Redbubble
+# ─────────────────────────────────────────────────────────────────────────────
+
+def remove_backgrounds(
+    input_dir: str = "./output/redbubble",
+    output_dir: str = "./output/redbubble",
+    tolerance: int = 28,
+    yes: bool = False,
+) -> None:
+    """
+    Supprime le fond blanc de tous les PNGs d'un dossier (flood-fill BFS depuis les 4 coins).
+    Génère des PNG RGBA transparents prêts pour die-cut sticker sur Redbubble.
+    """
+    import glob as _glob
+    from trend_discovery.generators.bg_remover import batch_remove_background
+
+    files = sorted(_glob.glob(os.path.join(input_dir, "*.png")))
+    files = [f for f in files if "_transparent" not in os.path.basename(f)]
+
+    if not files:
+        print(f"ERROR : Aucun PNG trouvé dans {input_dir}")
+        return
+
+    print("\n" + "=" * 60)
+    print(f"  BG-REMOVE — suppression fond blanc (flood-fill BFS)")
+    print(f"  {len(files)} image(s) | tolérance {tolerance} | sortie RGBA transparent")
+    print(f"  Source  : {input_dir}/")
+    print(f"  Sortie  : {output_dir}/")
+    print("=" * 60)
+    for i, f in enumerate(files, 1):
+        print(f"  {i:2d}. {os.path.basename(f)}")
+    print()
+
+    if not yes:
+        answer = input("Proceed? [yes/no] ").strip().lower()
+        if answer not in ("yes", "y"):
+            print("Annulé.")
+            return
+
+    generated = batch_remove_background(
+        input_dir=input_dir,
+        output_dir=output_dir,
+        tolerance=tolerance,
+        skip_existing=True,
+    )
+    print(f"\n✅ {len(generated)} PNG transparents → {output_dir}/")
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -1458,6 +1525,44 @@ def generate_elements(
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+# Mode listings : génère les fiches produit CSV + Markdown par plateforme
+# ─────────────────────────────────────────────────────────────────────────────
+
+def generate_listings(
+    reports_dir: str = "./reports",
+    output_dir: str = "./reports/listings",
+) -> None:
+    """
+    Génère les fiches produit prêtes-à-publier (titre, description, tags, catégorie)
+    pour chaque CdC × chaque plateforme configurée.
+
+    Lit le dernier rapport CdC JSON et produit :
+      - listings_YYYYMMDD.json  — toutes les fiches
+      - listings_YYYYMMDD.md    — format copier-coller par plateforme
+    """
+    import glob as _glob
+    from trend_discovery.generators.listing_exporter import ListingExporter
+
+    # Trouve le dernier rapport CdC JSON dans reports_dir
+    pattern = os.path.join(reports_dir, "cahiers_des_charges_*.json")
+    reports = sorted(_glob.glob(pattern))
+    if not reports:
+        # Essai dans le répertoire principal
+        reports = sorted(_glob.glob("./reports/cahiers_des_charges_*.json"))
+    if not reports:
+        print(f"ERROR : Aucun rapport CdC trouvé dans {reports_dir}")
+        return
+
+    latest = reports[-1]
+    logger.info("[listings] rapport : %s", latest)
+
+    exporter = ListingExporter()
+    out_path = exporter.export_all(latest, output_dir)
+    print(f"✅ Listings exportés → {output_dir}/")
+    return out_path
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # CLI entry point
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -1610,6 +1715,36 @@ def main():
         "--yes", action="store_true",
         help="Auto-confirmer (mode CI).",
     )
+    colorize_parser.add_argument(
+        "--smart", action="store_true",
+        help="Sélection de palette intelligente basée sur les hex couleurs du CDC.",
+    )
+    colorize_parser.add_argument(
+        "--reports", type=str, default="./reports",
+        help="Dossier des rapports CDC (pour --smart).",
+    )
+
+    # ── Sous-commande : bg-remove ─────────────────────────────────────────────
+    bg_parser = subparsers.add_parser(
+        "bg-remove",
+        help="Supprime le fond blanc des PNGs Redbubble → PNG RGBA transparent pour die-cut stickers.",
+    )
+    bg_parser.add_argument(
+        "--input", type=str, default="./output/redbubble",
+        help="Dossier source (PNG fond blanc).",
+    )
+    bg_parser.add_argument(
+        "--output", type=str, default="./output/redbubble",
+        help="Dossier de sortie (PNG transparent). Défaut = même dossier.",
+    )
+    bg_parser.add_argument(
+        "--tolerance", type=int, default=28,
+        help="Distance max du blanc pour être considéré fond [0-255] (défaut: 28).",
+    )
+    bg_parser.add_argument(
+        "--yes", action="store_true",
+        help="Auto-confirmer (mode CI).",
+    )
 
     # ── Sous-commande : seamless-audit ───────────────────────────────────────
     sa_parser = subparsers.add_parser(
@@ -1703,6 +1838,27 @@ def main():
         help="Répertoire de sortie pour le PNG Spoonflower.",
     )
 
+    # ── Sous-commande : listings ──────────────────────────────────────────────
+    listings_parser = subparsers.add_parser(
+        "listings",
+        help="Génère les fiches produit CSV + Markdown prêtes-à-publier par plateforme.",
+    )
+    listings_parser.add_argument(
+        "--reports", type=str, default="./reports",
+        help="Dossier des rapports CdC JSON.",
+    )
+    listings_parser.add_argument(
+        "--output", type=str, default="./reports/listings",
+        help="Dossier de sortie des listings.",
+    )
+    # These args are accepted but ignored (kept for workflow compat)
+    listings_parser.add_argument("--spoonflower", type=str, default="")
+    listings_parser.add_argument("--colorways", type=str, default="")
+    listings_parser.add_argument("--uploads", type=str, default="")
+    listings_parser.add_argument("--uploads-colorways", type=str, default="")
+    listings_parser.add_argument("--redbubble", type=str, default="")
+    listings_parser.add_argument("--redbubble-reports", type=str, default="")
+
     # ── Arguments legacy (compatibilité ascendante) ────────────────────────────
     parser.add_argument("--keywords", type=str, default="")
     parser.add_argument("--categories", type=str, default="")
@@ -1789,6 +1945,17 @@ def main():
             palettes=pal_list,
             glob_pattern=args.pattern,
             yes=args.yes,
+            smart=getattr(args, "smart", False),
+            reports_dir=getattr(args, "reports", "./reports") or "./reports",
+        )
+        return
+
+    if args.command == "bg-remove":
+        remove_backgrounds(
+            input_dir=args.input,
+            output_dir=args.output,
+            tolerance=args.tolerance,
+            yes=args.yes,
         )
         return
 
@@ -1835,6 +2002,13 @@ def main():
             niche_name=args.niche or None,
             yes=args.yes,
             output_dir=args.output,
+        )
+        return
+
+    if args.command == "listings":
+        generate_listings(
+            reports_dir=getattr(args, "reports", "./reports") or "./reports",
+            output_dir=getattr(args, "output", "./reports/listings") or "./reports/listings",
         )
         return
 
