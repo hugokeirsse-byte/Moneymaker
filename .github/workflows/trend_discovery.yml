@@ -172,7 +172,7 @@ jobs:
             LIMIT_VAL="${{ github.event.inputs.limit || '0' }}"
             [ "$LIMIT_VAL" != "0" ] && LIMIT_ARG="--limit $LIMIT_VAL"
             IMAGES_PER_CDC="${{ github.event.inputs.images_per_niche || '2' }}"
-            RB_REPORT=$(ls -t ./reports/redbubble/cahiers_des_charges_*.json 2>/dev/null | head -1)
+            RB_REPORT=$(ls ./reports/redbubble/cahiers_des_charges_*.json 2>/dev/null | sort | tail -1)
             if [ -z "$RB_REPORT" ]; then
               echo "ERREUR : aucun rapport Redbubble trouvé. Lancez redbubble-preview d'abord." && exit 1
             fi
