@@ -440,7 +440,7 @@ jobs:
             DELAY=2
             for attempt in 1 2 3 4; do
               echo "Push attempt $attempt/4..."
-              git pull --rebase origin HEAD && git push origin HEAD && break
+              git pull --rebase --autostash origin HEAD && git push origin HEAD && break
               echo "Échec push (attempt $attempt/4) — retry dans ${DELAY}s"
               sleep $DELAY
               DELAY=$((DELAY * 2))
