@@ -47,6 +47,8 @@ on:
           - 'colorize'             # Variantes de couleurs sur images existantes (0 €, Pillow)
           - 'bg-remove'            # Supprime fond blanc → PNG transparent Redbubble stickers (0 €)
           - 'text-apply'           # Applique typographie CDC sur images Redbubble (PIL, 0 €)
+          - 'text-fix'             # Efface texte FLUX déformé + applique typo CDC propre (Gemini Vision + PIL, 0 €)
+          - 'assemble'             # Assemble illustrations individuelles → seamless tile Spoonflower (Pillow, 0 €)
           - 'seamless-audit'       # Vérifie + corrige les tuiles non-seamless (mirror quad, 0 €)
           - 'thumbnails'           # Génère vignettes 600×600 JPEG navigables (0 €, git-safe)
           - 'listings'             # CSVs upload Spoonflower + Adobe Stock + Etsy + Redbubble (0 €)
@@ -115,7 +117,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Créer les répertoires nécessaires
-        run: mkdir -p reports data output/spoonflower output/redbubble output/adobe_stock output/etsy output/colorways output/thumbnails
+        run: mkdir -p reports data output/spoonflower output/redbubble output/redbubble_fixed output/redbubble_with_text output/adobe_stock output/etsy output/colorways output/thumbnails
 
       - name: Restaurer la base de données (cache)
         uses: actions/cache@v4
@@ -323,6 +325,38 @@ jobs:
               --images ./output/redbubble \
               --reports ./reports/redbubble \
               --output ./output/redbubble_with_text
+          elif [ "$MODE" = "text-fix" ]; then
+            echo "=== MODE TEXT-FIX : érase texte FLUX + typo CDC propre (Gemini Vision + PIL, 0 €) ==="
+            mkdir -p output/redbubble_fixed
+            python -m trend_discovery.main text-fix \
+              --images ./output/redbubble \
+              --reports ./reports/redbubble \
+              --output ./output/redbubble_fixed
+            echo "-- Auto thumbnails après text-fix --"
+            python -m trend_discovery.main thumbnails \
+              --pipeline ./output/redbubble_fixed \
+              --output ./output/thumbnails || true
+          elif [ "$MODE" = "assemble" ]; then
+            echo "=== MODE ASSEMBLE : illustrations → seamless tiles Spoonflower (Pillow, 0 €) ==="
+            VARIANTS_VAL="${{ github.event.inputs.limit || '3' }}"
+            [ "$VARIANTS_VAL" = "0" ] && VARIANTS_VAL="3"
+            mkdir -p output/spoonflower
+            echo "-- Assemblage sur fond navy (cabinet de naturaliste) --"
+            python -m trend_discovery.main assemble --yes \
+              --input ./output/redbubble \
+              --output ./output/spoonflower \
+              --background navy \
+              --variants "$VARIANTS_VAL"
+            echo "-- Assemblage sur fond ivory (herbarium / parchemin) --"
+            python -m trend_discovery.main assemble --yes \
+              --input ./output/redbubble \
+              --output ./output/spoonflower \
+              --background ivory \
+              --variants "$VARIANTS_VAL"
+            echo "-- Auto thumbnails après assemblage --"
+            python -m trend_discovery.main thumbnails \
+              --pipeline ./output/spoonflower \
+              --output ./output/thumbnails || true
           elif [ "$MODE" = "listings" ]; then
             echo "=== MODE LISTINGS : CSVs upload Spoonflower + Adobe Stock + Etsy + Redbubble (0 €) ==="
             mkdir -p reports/listings
@@ -418,6 +452,8 @@ jobs:
             reports/
             output/spoonflower/
             output/redbubble/
+            output/redbubble_fixed/
+            output/redbubble_with_text/
             output/adobe_stock/
             output/etsy/
             output/colorways/

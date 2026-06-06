@@ -411,3 +411,215 @@ def batch_apply_typography(
         len(processed), skipped,
     )
     return processed
+
+
+# ── Érase texte FLUX (Gemini Vision + PIL fill) ───────────────────────────────
+
+def _estimate_bg_color(img: Image.Image) -> Tuple[int, int, int]:
+    """Estime la couleur de fond en échantillonnant les 4 coins de l'image."""
+    W, H = img.size
+    patch = max(10, min(40, W // 100))
+    corners = [
+        img.crop((0, 0, patch, patch)),
+        img.crop((W - patch, 0, W, patch)),
+        img.crop((0, H - patch, patch, H)),
+        img.crop((W - patch, H - patch, W, H)),
+    ]
+    r_all, g_all, b_all = [], [], []
+    for c in corners:
+        for px in c.convert("RGB").getdata():
+            r_all.append(px[0])
+            g_all.append(px[1])
+            b_all.append(px[2])
+    n = len(r_all)
+    return (sum(r_all) // n, sum(g_all) // n, sum(b_all) // n)
+
+
+def _detect_text_regions_gemini(image_path: str) -> List[Dict]:
+    """
+    Détecte les régions de texte dans une image via Gemini Vision.
+    Retourne une liste de {x_min, y_min, x_max, y_max} en pourcentages [0-100].
+    """
+    api_key = os.environ.get("GEMINI_API_KEY", "")
+    if not api_key:
+        logger.warning("[text_applicator] GEMINI_API_KEY absente — détection texte ignorée")
+        return []
+
+    try:
+        import google.generativeai as genai
+        genai.configure(api_key=api_key)
+        model = genai.GenerativeModel("gemini-1.5-flash")
+
+        img_pil = Image.open(image_path).convert("RGB")
+
+        prompt = (
+            "Find ALL text regions in this image (titles, labels, captions, scientific names, watermarks). "
+            "Return a JSON array: "
+            '[{"text":"...", "x_min":N, "y_min":N, "x_max":N, "y_max":N}] '
+            "where N are percentages of image dimensions (0=top-left, 100=bottom-right). "
+            "Add 3% padding around each region. "
+            "If no text is visible, return []. Return ONLY the JSON array, no markdown."
+        )
+
+        response = model.generate_content([img_pil, prompt])
+        raw = response.text.strip()
+        if "```" in raw:
+            raw = re.sub(r"```[a-z]*\n?", "", raw).strip().rstrip("`").strip()
+
+        regions = json.loads(raw)
+        logger.info("[text_applicator] %d région(s) de texte détectée(s) dans %s",
+                    len(regions), Path(image_path).name)
+        return regions
+    except Exception as exc:
+        logger.warning("[text_applicator] détection texte Gemini échouée: %s", exc)
+        return []
+
+
+def _fill_text_region(
+    img: Image.Image,
+    region: Dict,
+    bg_color: Tuple[int, int, int],
+    padding_px: int = 6,
+) -> Image.Image:
+    """
+    Efface une région de texte en la remplissant avec la couleur de fond.
+    Un léger flou gaussien est appliqué sur les bords pour lisser la transition.
+    """
+    from PIL import ImageFilter
+
+    W, H = img.size
+    x_min = max(0, int(region.get("x_min", 0) / 100 * W) - padding_px)
+    y_min = max(0, int(region.get("y_min", 0) / 100 * H) - padding_px)
+    x_max = min(W, int(region.get("x_max", 100) / 100 * W) + padding_px)
+    y_max = min(H, int(region.get("y_max", 100) / 100 * H) + padding_px)
+
+    if x_max <= x_min or y_max <= y_min:
+        return img
+
+    mode = img.mode
+    img_work = img.convert("RGB")
+    draw = ImageDraw.Draw(img_work)
+    draw.rectangle([x_min, y_min, x_max, y_max], fill=bg_color)
+
+    # Légère zone de flou pour les transitions de bord
+    blur_pad = 12
+    bx0 = max(0, x_min - blur_pad)
+    by0 = max(0, y_min - blur_pad)
+    bx1 = min(W, x_max + blur_pad)
+    by1 = min(H, y_max + blur_pad)
+    edge_patch = img_work.crop((bx0, by0, bx1, by1))
+    edge_patch = edge_patch.filter(ImageFilter.GaussianBlur(radius=5))
+    # Ne coller que les bords floutés, pas le centre (déjà propre)
+    center_patch = img_work.crop((x_min, y_min, x_max, y_max))
+    img_work.paste(edge_patch, (bx0, by0))
+    img_work.paste(center_patch, (x_min, y_min))
+
+    return img_work.convert(mode) if mode == "RGBA" else img_work
+
+
+def erase_flux_text(
+    image_path: str,
+    output_path: Optional[str] = None,
+) -> str:
+    """
+    Détecte et efface le texte rendu par FLUX dans une illustration.
+
+    Utilise Gemini Vision pour localiser les régions de texte, puis les
+    remplace par la couleur de fond estimée via PIL (aucun coût Runware).
+
+    Args:
+        image_path:  Chemin vers le PNG source.
+        output_path: Chemin de sortie (None = écrase l'original).
+
+    Returns:
+        Chemin du fichier résultant.
+    """
+    regions = _detect_text_regions_gemini(image_path)
+    if not regions:
+        if output_path and output_path != image_path:
+            import shutil
+            shutil.copy2(image_path, output_path)
+        return output_path or image_path
+
+    img = Image.open(image_path)
+    bg_color = _estimate_bg_color(img)
+    logger.info("[text_applicator] couleur de fond estimée: rgb%s", bg_color)
+
+    for region in regions:
+        try:
+            img = _fill_text_region(img, region, bg_color)
+        except Exception as exc:
+            logger.warning("[text_applicator] erreur érase région: %s", exc)
+
+    out = output_path or image_path
+    img_out = img.convert("RGB")
+    img_out.save(out, format="PNG", dpi=(300, 300))
+    logger.info("[text_applicator] texte effacé → %s", out)
+    return out
+
+
+def batch_fix_text(
+    cdc_json_path: str,
+    images_dir: str,
+    output_dir: Optional[str] = None,
+    overwrite: bool = False,
+    erase_only: bool = False,
+) -> List[str]:
+    """
+    Pipeline complet de correction du texte FLUX :
+      1. Détecte et efface les régions de texte via Gemini Vision + PIL
+      2. Applique la typographie propre définie dans le CDC (si erase_only=False)
+
+    Args:
+        cdc_json_path: CDC JSON Redbubble.
+        images_dir:    Dossier des PNG sources (illustrations avec texte FLUX).
+        output_dir:    Dossier de sortie (None = écrase les originaux).
+        overwrite:     Re-traite même si le fichier de sortie existe déjà.
+        erase_only:    Si True, efface le texte sans appliquer la typo CDC.
+
+    Returns:
+        Liste des chemins de fichiers traités.
+    """
+    with open(cdc_json_path, encoding="utf-8") as f:
+        cdc = json.load(f)
+
+    briefs = cdc.get("briefs", cdc) if isinstance(cdc, dict) else cdc
+    images = sorted(Path(images_dir).glob("*.png"))
+
+    if not images:
+        logger.warning("[text_applicator] aucune image PNG dans %s", images_dir)
+        return []
+
+    if output_dir:
+        Path(output_dir).mkdir(parents=True, exist_ok=True)
+
+    processed = []
+
+    for img_path in images:
+        if output_dir:
+            out_path = str(Path(output_dir) / img_path.name)
+        else:
+            out_path = str(img_path)
+
+        if not overwrite and output_dir and Path(out_path).exists():
+            processed.append(out_path)
+            continue
+
+        try:
+            logger.info("[text_applicator] fix texte : %s", img_path.name)
+            intermediate = erase_flux_text(str(img_path), out_path)
+
+            if not erase_only:
+                brief = _find_cdc_for_image(str(img_path), briefs)
+                if brief:
+                    typography = brief.get("typography")
+                    if typography and typography.get("apply", False):
+                        apply_typography(intermediate, typography, out_path)
+                        logger.info("[text_applicator] typo CDC appliquée : %s", img_path.name)
+
+            processed.append(out_path)
+        except Exception as exc:
+            logger.error("[text_applicator] échec %s: %s", img_path.name, exc)
+
+    logger.info("[text_applicator] batch_fix_text terminé: %d fichiers traités", len(processed))
+    return processed

@@ -1611,6 +1611,144 @@ def apply_text(
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+# Mode assemble : illustrations individuelles → seamless tile Spoonflower
+# ─────────────────────────────────────────────────────────────────────────────
+
+def assemble_specimens(
+    input_dir: str = "./output/redbubble",
+    output_dir: str = "./output/spoonflower",
+    background: str = "navy",
+    n_specimens: int = 9,
+    scale_min: float = 0.14,
+    scale_max: float = 0.30,
+    rotation_range: float = 18.0,
+    tile_size: int = 4500,
+    seed: int = 42,
+    variants: int = 3,
+    yes: bool = False,
+) -> None:
+    """
+    Assemble des illustrations individuelles (PNGs standalone) en seamless tile
+    pour Spoonflower — aucun appel Runware, 100% Pillow.
+
+    Les illustrations sources sont placées en scatter tossed sur un fond uni
+    avec wrapping seamless (éléments dupliqués sur les bords opposés).
+    Le tile résultant est 4500×4500px 300 DPI, prêt pour Spoonflower.
+
+    Args:
+        input_dir:       Dossier des PNGs sources (illustrations individuelles).
+        output_dir:      Dossier de sortie des tiles seamless.
+        background:      Fond : 'navy', 'charcoal', 'forest', 'ivory', 'cream',
+                         'white', 'slate', ou un code #HEX direct.
+        n_specimens:     Nombre d'illustrations à placer par tile.
+        scale_min/max:   Plage de taille relative des illustrations (fraction du tile).
+        rotation_range:  Rotation max en degrés (±).
+        tile_size:       Taille du tile en pixels (défaut: 4500).
+        seed:            Graine aléatoire pour reproductibilité.
+        variants:        Nombre de compositions différentes à générer.
+        yes:             Auto-confirmer (mode CI).
+    """
+    import glob as _glob
+    from trend_discovery.generators.specimen_assembler import batch_assemble, BACKGROUNDS
+
+    files = sorted(_glob.glob(os.path.join(input_dir, "*.png")))
+    files = [f for f in files if "_seamless" not in os.path.basename(f)
+             and "thumbnail" not in os.path.basename(f).lower()]
+
+    if not files:
+        print(f"ERROR : Aucun PNG trouvé dans {input_dir}")
+        return
+
+    bg_hex = BACKGROUNDS.get(background, background)
+
+    print("\n" + "=" * 60)
+    print("  ASSEMBLE — illustrations → seamless tile Spoonflower (Pillow, 0 coût)")
+    print(f"  {len(files)} illustration(s) source")
+    print(f"  {n_specimens} specimens par tile | {variants} variante(s)")
+    print(f"  Fond : {background} ({bg_hex}) | tile {tile_size}×{tile_size}px 300 DPI")
+    print(f"  Source  : {input_dir}/")
+    print(f"  Sortie  : {output_dir}/")
+    print("=" * 60)
+    for i, f in enumerate(files, 1):
+        print(f"  {i:2d}. {os.path.basename(f)}")
+    print()
+
+    if not yes:
+        answer = input("Proceed? [yes/no] ").strip().lower()
+        if answer not in ("yes", "y"):
+            print("Annulé.")
+            return
+
+    results = batch_assemble(
+        input_dir=input_dir,
+        output_dir=output_dir,
+        background=background,
+        n_specimens=n_specimens,
+        scale_min=scale_min,
+        scale_max=scale_max,
+        rotation_range=rotation_range,
+        tile_size=tile_size,
+        seed=seed,
+        variants=variants,
+    )
+
+    print(f"\n✅ {len(results)} tile(s) seamless → {output_dir}/")
+    for r in results:
+        print(f"   {os.path.basename(r)}")
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Mode text-fix : érase texte FLUX + applique typo CDC propre
+# ─────────────────────────────────────────────────────────────────────────────
+
+def fix_text(
+    images_dir: str = "./output/redbubble",
+    reports_dir: str = "./reports/redbubble",
+    output_dir: Optional[str] = None,
+    overwrite: bool = False,
+    erase_only: bool = False,
+) -> None:
+    """
+    Corrige les images où FLUX a rendu du texte illisible ou déformé.
+
+    Pipeline en 2 étapes :
+      1. Gemini Vision détecte les régions de texte → PIL les remplace par
+         la couleur de fond estimée (gratuit, 0 Runware).
+      2. La typographie propre définie dans le CDC est appliquée via PIL.
+
+    Args:
+        images_dir:  Dossier contenant les PNG Redbubble à corriger.
+        reports_dir: Dossier contenant les CDC JSON Redbubble.
+        output_dir:  Dossier de sortie (None = écrase les originaux).
+        overwrite:   Re-traite même si le fichier de sortie existe déjà.
+        erase_only:  Si True, efface seulement le texte sans appliquer la typo.
+    """
+    import glob as _glob
+    from trend_discovery.generators.text_applicator import batch_fix_text
+
+    pattern = os.path.join(reports_dir, "cahiers_des_charges_*.json")
+    cdcs = sorted(_glob.glob(pattern))
+    if not cdcs:
+        print(f"ERROR : Aucun CDC trouvé dans {reports_dir}")
+        return
+
+    latest_cdc = cdcs[-1]
+    logger.info("[text-fix] CDC : %s", latest_cdc)
+    logger.info("[text-fix] images : %s", images_dir)
+
+    processed = batch_fix_text(
+        cdc_json_path=latest_cdc,
+        images_dir=images_dir,
+        output_dir=output_dir,
+        overwrite=overwrite,
+        erase_only=erase_only,
+    )
+    print(f"✅ Texte corrigé sur {len(processed)} image(s)")
+    if output_dir:
+        print(f"   → {output_dir}/")
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # CLI entry point
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -1860,6 +1998,82 @@ def main():
         help="Re-applique même si le fichier de sortie existe déjà.",
     )
 
+    # ── Sous-commande : assemble ──────────────────────────────────────────────
+    asm_parser = subparsers.add_parser(
+        "assemble",
+        help="Assemble des illustrations individuelles en seamless tile Spoonflower (Pillow, 0 coût).",
+    )
+    asm_parser.add_argument(
+        "--input", type=str, default="./output/redbubble",
+        help="Dossier des PNGs sources (illustrations individuelles).",
+    )
+    asm_parser.add_argument(
+        "--output", type=str, default="./output/spoonflower",
+        help="Dossier de sortie des tiles seamless.",
+    )
+    asm_parser.add_argument(
+        "--background", type=str, default="navy",
+        help="Fond : navy, charcoal, forest, ivory, cream, white, slate, ou #HEX.",
+    )
+    asm_parser.add_argument(
+        "--n-specimens", dest="n_specimens", type=int, default=9,
+        help="Nombre d'illustrations à placer par tile.",
+    )
+    asm_parser.add_argument(
+        "--scale-min", dest="scale_min", type=float, default=0.14,
+        help="Taille minimale des specimens (fraction du tile).",
+    )
+    asm_parser.add_argument(
+        "--scale-max", dest="scale_max", type=float, default=0.30,
+        help="Taille maximale des specimens (fraction du tile).",
+    )
+    asm_parser.add_argument(
+        "--rotation", type=float, default=18.0,
+        help="Rotation max en degrés (±).",
+    )
+    asm_parser.add_argument(
+        "--tile-size", dest="tile_size", type=int, default=4500,
+        help="Taille du tile en pixels (défaut: 4500).",
+    )
+    asm_parser.add_argument(
+        "--seed", type=int, default=42,
+        help="Graine aléatoire pour la composition.",
+    )
+    asm_parser.add_argument(
+        "--variants", type=int, default=3,
+        help="Nombre de compositions différentes à générer.",
+    )
+    asm_parser.add_argument(
+        "--yes", action="store_true",
+        help="Auto-confirmer (mode CI).",
+    )
+
+    # ── Sous-commande : text-fix ──────────────────────────────────────────────
+    tf_parser = subparsers.add_parser(
+        "text-fix",
+        help="Efface le texte FLUX déformé + applique la typographie CDC propre (Gemini Vision + PIL).",
+    )
+    tf_parser.add_argument(
+        "--images", type=str, default="./output/redbubble",
+        help="Dossier des PNG Redbubble à corriger.",
+    )
+    tf_parser.add_argument(
+        "--reports", type=str, default="./reports/redbubble",
+        help="Dossier contenant les CDC JSON Redbubble.",
+    )
+    tf_parser.add_argument(
+        "--output", type=str, default=None,
+        help="Dossier de sortie (vide = écrase les originaux).",
+    )
+    tf_parser.add_argument(
+        "--overwrite", action="store_true",
+        help="Re-traite même si le fichier de sortie existe déjà.",
+    )
+    tf_parser.add_argument(
+        "--erase-only", dest="erase_only", action="store_true",
+        help="Efface seulement le texte FLUX sans appliquer la typo CDC.",
+    )
+
     # ── Sous-commande : thumbnails ────────────────────────────────────────────
     th_parser = subparsers.add_parser(
         "thumbnails",
@@ -2043,6 +2257,32 @@ def main():
             reports_dir=getattr(args, "reports", "./reports/redbubble"),
             output_dir=getattr(args, "output", None),
             overwrite=getattr(args, "overwrite", False),
+        )
+        return
+
+    if args.command == "assemble":
+        assemble_specimens(
+            input_dir=args.input,
+            output_dir=args.output,
+            background=args.background,
+            n_specimens=args.n_specimens,
+            scale_min=args.scale_min,
+            scale_max=args.scale_max,
+            rotation_range=args.rotation,
+            tile_size=args.tile_size,
+            seed=args.seed,
+            variants=args.variants,
+            yes=args.yes,
+        )
+        return
+
+    if args.command == "text-fix":
+        fix_text(
+            images_dir=getattr(args, "images", "./output/redbubble"),
+            reports_dir=getattr(args, "reports", "./reports/redbubble"),
+            output_dir=getattr(args, "output", None),
+            overwrite=getattr(args, "overwrite", False),
+            erase_only=getattr(args, "erase_only", False),
         )
         return
 
