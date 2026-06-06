@@ -298,19 +298,28 @@ class GenerationPipeline:
             brief_name, len(variants),
         )
 
+        ai_gen = brief_data.get("ai_generation", {})
         spf_refs = brief_data.get("spoonflower_references", [])
-        seed_image_url: Optional[str] = spf_refs[0].get("image_url") if spf_refs else None
+        # ai_generation.seed_image_url takes priority over spoonflower_references
+        seed_image_url: Optional[str] = (
+            ai_gen.get("seed_image_url")
+            or (spf_refs[0].get("image_url") if spf_refs else None)
+        )
         if seed_image_url:
-            logger.info("[gen_pipeline] seedImage Spoonflower: %s…", seed_image_url[:80])
+            logger.info("[gen_pipeline] seedImage: %s…", seed_image_url[:80])
 
         # CFG du CdC (FLUX.1 Dev : 4.0 par défaut). Honoré pour toutes les variantes.
-        cfg_scale = float(brief_data.get("ai_generation", {}).get("cfg_scale", 4.0))
+        cfg_scale = float(ai_gen.get("cfg_scale", 4.0))
+        # strength for img2img (default 0.6 when reference image provided, ignored otherwise)
+        strength = float(ai_gen.get("strength", 0.6))
+        # tiling=False for non-seamless images (naturalist plates, Redbubble prints)
+        tiling = bool(ai_gen.get("tiling", True))
 
         for i, variant in enumerate(variants, 1):
             niche_label = f"{brief_name} — {variant.label}"
             logger.info(
-                "[gen_pipeline] %d/%d — %s | CFG %.1f | prompt: %s…",
-                i, len(variants), variant.label, cfg_scale, variant.positive_prompt[:80],
+                "[gen_pipeline] %d/%d — %s | CFG %.1f | tiling=%s | prompt: %s…",
+                i, len(variants), variant.label, cfg_scale, tiling, variant.positive_prompt[:80],
             )
             result = self._generate_with_audit(
                 niche_name=niche_label,
@@ -320,6 +329,8 @@ class GenerationPipeline:
                 attempt_label=f"{i}/{len(variants)}",
                 seed_image_url=seed_image_url,
                 cfg_scale=cfg_scale,
+                strength=strength,
+                tiling=tiling,
             )
             results.append(result)
             logger.info("[gen_pipeline] %s", result)
@@ -341,6 +352,8 @@ class GenerationPipeline:
         max_retries: int = 1,  # 2 tentatives max (1 initiale + 1 retry)
         seed_image_url: Optional[str] = None,
         cfg_scale: float = 4.0,
+        strength: float = 0.6,
+        tiling: bool = True,
     ) -> GenerationResult:
         """
         Génère une image, l'audite, retente une seule fois si nécessaire.
@@ -354,6 +367,8 @@ class GenerationPipeline:
                 cfg_scale=cfg_scale,
                 retries=0,  # on gère nous-mêmes les retries ici
                 seed_image_url=seed_image_url,
+                strength=strength,
+                tiling=tiling,
             )
 
             if not image_bytes:

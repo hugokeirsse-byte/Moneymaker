@@ -52,12 +52,15 @@
         "competition_level": "medium"
       },
       "ai_generation": {
-        "positive_prompt": "Single technical diagram of a sourdough fermentation cycle, centered on pure white background. Flat vector illustration with the precision of a biochemistry textbook. Showcases a circular metabolic pathway with three main nodes: wild yeast (Saccharomyces exiguus), lactic acid bacteria (Lactobacillus sanfranciscensis), and starch breakdown. Includes clean geometric vector shapes, thin connector lines, and blank rectangular label boxes. Colors: warm amber (#D9A05B), clean slate blue (#4A6984), off-white (#F8F8F6). Zero gradients. White background. Clean vector edges. Reads at sticker size. ZERO written words, letters, or legible text. Only abstract decorative marks allowed (hanko seal, pencil border lines). Imperfect hand-drawn pencil border frame, slightly uneven ruled margins, as if sketched in a field notebook. Small decorative red circular hanko seal stamp in the bottom right corner (abstract Japanese ink stamp, geometric pattern only, no readable letters or text). Japanese washi paper texture. 19th century museum natural history plate aesthetic.",
-        "negative_prompt": "",
+        "positive_prompt": "Sourdough starter culture, wild yeast cells and lactobacillus bacteria, magnified microscopy view, organic circular forms, delicate scientific illustration, pale gold and ivory tones. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
         "key_elements": [],
         "avoid_elements": [],
         "cfg_scale": 4.0,
-        "style_weight": 0.85
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
       },
       "reference_images": [],
       "generated_at": "2026-06-06 16:25 UTC",
@@ -130,7 +133,8 @@
         "Baking Science Print repeat pattern",
         "Fermentation Lab Sticker repeat pattern",
         "Artisan Baker Apron repeat pattern"
-      ]
+      ],
+      "positive_prompt": "Sourdough starter culture, wild yeast cells and lactobacillus bacteria, magnified microscopy view, organic circular forms, delicate scientific illustration, pale gold and ivory tones. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
     },
     {
       "name": "Fountain Pen Nib Capillary Action Diagram",
@@ -182,12 +186,15 @@
         "competition_level": "medium"
       },
       "ai_generation": {
-        "positive_prompt": "Circular vintage badge design, centered on pure white background. Styled as a 1920s patent office technical drawing of a fountain pen nib. Center illustration: a detailed fountain pen nib in profile, showing the slit, breather hole, and capillary ink flow channels, rendered in woodblock print style. Surrounding border: concentric circular lines and geometric measurement marks. Inner ring left blank for text overlay. Colors: deep indigo ink (#1A237E), warm brass (#B5A642), cream (#F5F0E8). White background. Clean circular composition. ZERO written words, letters, or legible text. Only abstract decorative marks allowed (hanko seal, pencil border lines). Imperfect hand-drawn pencil border frame, slightly uneven ruled margins, as if sketched in a field notebook. Small decorative red circular hanko seal stamp in the bottom right corner (abstract Japanese ink stamp, geometric pattern only, no readable letters or text). Japanese washi paper texture. 19th century museum natural history plate aesthetic.",
-        "negative_prompt": "",
+        "positive_prompt": "Vintage fountain pen nib, iridium tip close-up, precise technical botanical-style illustration, dark steel blue and warm silver tones. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
         "key_elements": [],
         "avoid_elements": [],
         "cfg_scale": 4.0,
-        "style_weight": 0.85
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
       },
       "reference_images": [],
       "generated_at": "2026-06-06 16:25 UTC",
@@ -260,7 +267,8 @@
         "Writing Instrument Print repeat pattern",
         "Pen Collector Sticker repeat pattern",
         "Technical Drawing Journal repeat pattern"
-      ]
+      ],
+      "positive_prompt": "Vintage fountain pen nib, iridium tip close-up, precise technical botanical-style illustration, dark steel blue and warm silver tones. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
     },
     {
       "name": "Koji-Kin Fermentation Plate",
@@ -312,12 +320,15 @@
         "competition_level": "medium"
       },
       "ai_generation": {
-        "positive_prompt": "Single Aspergillus oryzae spore-bearing conidiophore, centered on pure white background. Rendered as a 19th century natural history museum plate in the style of Ernst Haeckel's Kunstformen der Natur. Fine pen and ink engraving style with precise cross-hatching. Detailed spherical vesicle with radiating phialides and chains of globose conidia spores. Muted olive green (#556B2F), pale ochre (#E8D8B0), warm white (#FAFAF8), dark charcoal ink (#1A1A1A). White background. Isolated specimen. Bold at sticker size. ZERO written words, letters, or legible text. Only abstract decorative marks allowed (hanko seal, pencil border lines). Imperfect hand-drawn pencil border frame, slightly uneven ruled margins, as if sketched in a field notebook. Small decorative red circular hanko seal stamp in the bottom right corner (abstract Japanese ink stamp, geometric pattern only, no readable letters or text). Japanese washi paper texture. 19th century museum natural history plate aesthetic.",
-        "negative_prompt": "",
+        "positive_prompt": "Aspergillus oryzae spore head, koji mold colony, magnified botanical specimen study, olive gold and sage green tones. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
         "key_elements": [],
         "avoid_elements": [],
         "cfg_scale": 4.0,
-        "style_weight": 0.85
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
       },
       "reference_images": [],
       "generated_at": "2026-06-06 16:25 UTC",
@@ -390,7 +401,8 @@
         "Miso Maker Plate repeat pattern",
         "Sake Brewer Botanical repeat pattern",
         "Mycology Lab Sticker repeat pattern"
-      ]
+      ],
+      "positive_prompt": "Aspergillus oryzae spore head, koji mold colony, magnified botanical specimen study, olive gold and sage green tones. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
     },
     {
       "name": "British Soldiers Lichen Plate",
@@ -442,12 +454,15 @@
         "competition_level": "medium"
       },
       "ai_generation": {
-        "positive_prompt": "Single Cladonia cristatella lichen specimen cluster, centered on pure white background. Rendered as a 19th century natural history museum plate. Fine pen and ink engraving style with precise cross-hatching. Showcases the upright, branching green podetia topped with bright red, rounded apothecia (fruiting bodies). Muted pale green (#98FB98), scarlet red (#FF2400), warm white (#FAFAF8), dark charcoal ink (#1A1A1A). White background. Isolated specimen. Bold at sticker size. ZERO written words, letters, or legible text. Only abstract decorative marks allowed (hanko seal, pencil border lines). Imperfect hand-drawn pencil border frame, slightly uneven ruled margins, as if sketched in a field notebook. Small decorative red circular hanko seal stamp in the bottom right corner (abstract Japanese ink stamp, geometric pattern only, no readable letters or text). Japanese washi paper texture. 19th century museum natural history plate aesthetic.",
-        "negative_prompt": "",
+        "positive_prompt": "Cladonia cristatella lichen, scarlet-tipped podetia branching upward, miniature forest of fruiting bodies, bright crimson red caps and pale grey-green stems. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
         "key_elements": [],
         "avoid_elements": [],
         "cfg_scale": 4.0,
-        "style_weight": 0.85
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
       },
       "reference_images": [],
       "generated_at": "2026-06-06 16:25 UTC",
@@ -520,7 +535,8 @@
         "Lichenology Study Print repeat pattern",
         "Nature Hiker Sticker repeat pattern",
         "Field Botanist Journal repeat pattern"
-      ]
+      ],
+      "positive_prompt": "Cladonia cristatella lichen, scarlet-tipped podetia branching upward, miniature forest of fruiting bodies, bright crimson red caps and pale grey-green stems. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
     },
     {
       "name": "Common Haircap Moss Plate",
@@ -572,12 +588,15 @@
         "competition_level": "medium"
       },
       "ai_generation": {
-        "positive_prompt": "Single Polytrichum commune moss specimen with sporophytes, centered on pure white background. Rendered as a 19th century natural history museum plate. Fine pen and ink engraving style with precise cross-hatching. Showcases the dense, star-like green leaves and the tall, slender setae supporting angular, hairy calyptra spore capsules. Muted forest green (#228B22), golden straw (#DAA520), warm white (#FAFAF8), dark charcoal ink (#1A1A1A). White background. Isolated specimen. Bold at sticker size. ZERO written words, letters, or legible text. Only abstract decorative marks allowed (hanko seal, pencil border lines). Imperfect hand-drawn pencil border frame, slightly uneven ruled margins, as if sketched in a field notebook. Small decorative red circular hanko seal stamp in the bottom right corner (abstract Japanese ink stamp, geometric pattern only, no readable letters or text). Japanese washi paper texture. 19th century museum natural history plate aesthetic.",
-        "negative_prompt": "",
+        "positive_prompt": "Polytrichum commune moss, star-shaped rosette with central spore capsule, viewed from above, geometric symmetry, deep forest green and warm amber. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
         "key_elements": [],
         "avoid_elements": [],
         "cfg_scale": 4.0,
-        "style_weight": 0.85
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
       },
       "reference_images": [
         {
@@ -657,7 +676,8 @@
         "Bryology Study Print repeat pattern",
         "Terrarium Builder Sticker repeat pattern",
         "Field Bryologist Journal repeat pattern"
-      ]
+      ],
+      "positive_prompt": "Polytrichum commune moss, star-shaped rosette with central spore capsule, viewed from above, geometric symmetry, deep forest green and warm amber. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
     },
     {
       "name": "Sacred Lotus Seed Pod Plate",
@@ -709,12 +729,15 @@
         "competition_level": "medium"
       },
       "ai_generation": {
-        "positive_prompt": "Single Nelumbo nucifera dried lotus seed pod, centered on pure white background. Rendered as a 19th century natural history museum plate. Fine pen and ink engraving style with precise cross-hatching. Showcases the distinctive cone-shaped, pitted receptacle with individual seed chambers containing dark, oval seeds. Muted sepia brown (#5C4033), dusty tan (#D2B48C), warm white (#FAFAF8), dark charcoal ink (#1A1A1A). White background. Isolated specimen. Bold at sticker size. ZERO written words, letters, or legible text. Only abstract decorative marks allowed (hanko seal, pencil border lines). Imperfect hand-drawn pencil border frame, slightly uneven ruled margins, as if sketched in a field notebook. Small decorative red circular hanko seal stamp in the bottom right corner (abstract Japanese ink stamp, geometric pattern only, no readable letters or text). Japanese washi paper texture. 19th century museum natural history plate aesthetic.",
-        "negative_prompt": "",
+        "positive_prompt": "Nelumbo nucifera dried lotus seed pod, cross-section revealing chambers, architectural botanical specimen, warm ochre and dusty rose tones. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
         "key_elements": [],
         "avoid_elements": [],
         "cfg_scale": 4.0,
-        "style_weight": 0.85
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
       },
       "reference_images": [
         {
@@ -800,7 +823,8 @@
         "Botanical Study Print repeat pattern",
         "Floral Designer Sticker repeat pattern",
         "Field Botanist Journal repeat pattern"
-      ]
+      ],
+      "positive_prompt": "Nelumbo nucifera dried lotus seed pod, cross-section revealing chambers, architectural botanical specimen, warm ochre and dusty rose tones. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
     },
     {
       "name": "Organ Pipe Coral Plate",
@@ -852,12 +876,15 @@
         "competition_level": "medium"
       },
       "ai_generation": {
-        "positive_prompt": "Single Tubipora musica organ pipe coral skeleton specimen, centered on pure white background. Rendered as a 19th century natural history museum plate. Fine pen and ink engraving style with precise cross-hatching. Showcases the cluster of parallel, vertical calcium carbonate tubes connected by horizontal platforms, resembling organ pipes. Muted dark red (#8B0000), dusty rose (#E0115F), warm white (#FAFAF8), dark charcoal ink (#1A1A1A). White background. Isolated specimen. Bold at sticker size. ZERO written words, letters, or legible text. Only abstract decorative marks allowed (hanko seal, pencil border lines). Imperfect hand-drawn pencil border frame, slightly uneven ruled margins, as if sketched in a field notebook. Small decorative red circular hanko seal stamp in the bottom right corner (abstract Japanese ink stamp, geometric pattern only, no readable letters or text). Japanese washi paper texture. 19th century museum natural history plate aesthetic.",
-        "negative_prompt": "",
+        "positive_prompt": "Tubipora musica organ pipe coral, parallel crimson tubes in cross-section, precise natural architecture, deep terracotta red and pale cream. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
         "key_elements": [],
         "avoid_elements": [],
         "cfg_scale": 4.0,
-        "style_weight": 0.85
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
       },
       "reference_images": [
         {
@@ -937,7 +964,8 @@
         "Marine Biology Study Print repeat pattern",
         "Reef Keeper Sticker repeat pattern",
         "Oceanographic Journal repeat pattern"
-      ]
+      ],
+      "positive_prompt": "Tubipora musica organ pipe coral, parallel crimson tubes in cross-section, precise natural architecture, deep terracotta red and pale cream. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
     },
     {
       "name": "Common Starfish Plate",
@@ -989,12 +1017,15 @@
         "competition_level": "medium"
       },
       "ai_generation": {
-        "positive_prompt": "Single Asterias rubens common starfish specimen, centered on pure white background. Rendered as a 19th century natural history museum plate. Fine pen and ink engraving style with precise cross-hatching. Showcases the five tapered arms with detailed calcareous ossicles and tiny tube feet visible on the underside. Muted orange-ochre (#D2691E), pale cream (#FFF8DC), warm white (#FAFAF8), dark charcoal ink (#1A1A1A). White background. Isolated specimen. Bold at sticker size. ZERO written words, letters, or legible text. Only abstract decorative marks allowed (hanko seal, pencil border lines). Imperfect hand-drawn pencil border frame, slightly uneven ruled margins, as if sketched in a field notebook. Small decorative red circular hanko seal stamp in the bottom right corner (abstract Japanese ink stamp, geometric pattern only, no readable letters or text). Japanese washi paper texture. 19th century museum natural history plate aesthetic.",
-        "negative_prompt": "",
+        "positive_prompt": "Asterias rubens sea star, radial symmetry from above, five-armed natural mandala, textured orange surface detail, warm burnt sienna and terracotta. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
         "key_elements": [],
         "avoid_elements": [],
         "cfg_scale": 4.0,
-        "style_weight": 0.85
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
       },
       "reference_images": [
         {
@@ -1074,7 +1105,8 @@
         "Marine Biology Study Print repeat pattern",
         "Beachcomber Sticker repeat pattern",
         "Oceanographic Journal repeat pattern"
-      ]
+      ],
+      "positive_prompt": "Asterias rubens sea star, radial symmetry from above, five-armed natural mandala, textured orange surface detail, warm burnt sienna and terracotta. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
     },
     {
       "name": "Paper Birch Bark Plate",
@@ -1126,12 +1158,15 @@
         "competition_level": "medium"
       },
       "ai_generation": {
-        "positive_prompt": "Single rectangular peeling section of Betula papyrifera paper birch bark, centered on pure white background. Rendered as a 19th century natural history museum plate. Fine pen and ink engraving style with precise cross-hatching. Showcases the papery, curling layers, horizontal dark lenticels, and subtle pinkish-tan inner bark. Muted birch white (#F5F5F5), soft tan (#D2B48C), warm white (#FAFAF8), dark charcoal ink (#1A1A1A). White background. Isolated specimen. Bold at sticker size. ZERO written words, letters, or legible text. Only abstract decorative marks allowed (hanko seal, pencil border lines). Imperfect hand-drawn pencil border frame, slightly uneven ruled margins, as if sketched in a field notebook. Small decorative red circular hanko seal stamp in the bottom right corner (abstract Japanese ink stamp, geometric pattern only, no readable letters or text). Japanese washi paper texture. 19th century museum natural history plate aesthetic.",
-        "negative_prompt": "",
+        "positive_prompt": "Betula papyrifera birch bark peeling curl, delicate horizontal lenticels and paper-thin layers, chalk white and warm taupe with dark markings. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
         "key_elements": [],
         "avoid_elements": [],
         "cfg_scale": 4.0,
-        "style_weight": 0.85
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
       },
       "reference_images": [],
       "generated_at": "2026-06-06 16:25 UTC",
@@ -1204,7 +1239,8 @@
         "Dendrology Study Print repeat pattern",
         "Forester Gear Sticker repeat pattern",
         "Field Dendrologist Journal repeat pattern"
-      ]
+      ],
+      "positive_prompt": "Betula papyrifera birch bark peeling curl, delicate horizontal lenticels and paper-thin layers, chalk white and warm taupe with dark markings. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
     },
     {
       "name": "Zombie Ant Fungus Plate",
@@ -1256,12 +1292,15 @@
         "competition_level": "medium"
       },
       "ai_generation": {
-        "positive_prompt": "Single Ophiocordyceps unilateralis zombie ant fungus specimen, centered on pure white background. Rendered as a 19th century natural history museum plate. Fine pen and ink engraving style with precise cross-hatching. Showcases a dead carpenter ant clamped onto the underside of a leaf, with a long, wiry fungal stroma erupting from its head, ending in a spherical perithecial cushion. Muted olive brown (#6B8E23), dark ant black (#111111), warm white (#FAFAF8), dark charcoal ink (#1A1A1A). White background. Isolated specimen. Bold at sticker size. ZERO written words, letters, or legible text. Only abstract decorative marks allowed (hanko seal, pencil border lines). Imperfect hand-drawn pencil border frame, slightly uneven ruled margins, as if sketched in a field notebook. Small decorative red circular hanko seal stamp in the bottom right corner (abstract Japanese ink stamp, geometric pattern only, no readable letters or text). Japanese washi paper texture. 19th century museum natural history plate aesthetic.",
-        "negative_prompt": "",
+        "positive_prompt": "Ophiocordyceps unilateralis fungal stroma emerging from ant head, precise entomological specimen study, muted amber and dark umber tones. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
         "key_elements": [],
         "avoid_elements": [],
         "cfg_scale": 4.0,
-        "style_weight": 0.85
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
       },
       "reference_images": [],
       "generated_at": "2026-06-06 16:25 UTC",
@@ -1334,7 +1373,8 @@
         "Mycology Study Print repeat pattern",
         "Mycologist Gear Sticker repeat pattern",
         "Field Mycologist Journal repeat pattern"
-      ]
+      ],
+      "positive_prompt": "Ophiocordyceps unilateralis fungal stroma emerging from ant head, precise entomological specimen study, muted amber and dark umber tones. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
     },
     {
       "name": "Maidenhair Tree Botanical Plate",
@@ -1386,12 +1426,15 @@
         "competition_level": "medium"
       },
       "ai_generation": {
-        "positive_prompt": "Single Ginkgo biloba twig with fan-shaped leaves and paired seeds, centered on pure white background. Rendered as a 19th century natural history museum plate. Fine pen and ink engraving style with precise cross-hatching. Showcases the unique dichotomous venation of the leaves and the fleshy, plum-like seeds. Muted ginkgo yellow-green (#9ACD32), soft ochre (#E6C280), warm white (#FAFAF8), dark charcoal ink (#1A1A1A). White background. Isolated specimen. Bold at sticker size. ZERO written words, letters, or legible text. Only abstract decorative marks allowed (hanko seal, pencil border lines). Imperfect hand-drawn pencil border frame, slightly uneven ruled margins, as if sketched in a field notebook. Small decorative red circular hanko seal stamp in the bottom right corner (abstract Japanese ink stamp, geometric pattern only, no readable letters or text). Japanese washi paper texture. 19th century museum natural history plate aesthetic.",
-        "negative_prompt": "",
+        "positive_prompt": "Ginkgo biloba fan-shaped leaf, perfect bilobed specimen, autumn coloring with visible venation, golden yellow and pale sage green. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
         "key_elements": [],
         "avoid_elements": [],
         "cfg_scale": 4.0,
-        "style_weight": 0.85
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
       },
       "reference_images": [
         {
@@ -1471,7 +1514,8 @@
         "Botanical Study Print repeat pattern",
         "Arborist Gear Sticker repeat pattern",
         "Field Botanist Journal repeat pattern"
-      ]
+      ],
+      "positive_prompt": "Ginkgo biloba fan-shaped leaf, perfect bilobed specimen, autumn coloring with visible venation, golden yellow and pale sage green. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
     },
     {
       "name": "Blue Dragon Nudibranch Plate",
@@ -1523,12 +1567,15 @@
         "competition_level": "medium"
       },
       "ai_generation": {
-        "positive_prompt": "Single Glaucus atlanticus blue dragon nudibranch specimen, centered on pure white background. Rendered as a 19th century natural history museum plate. Fine pen and ink engraving style with precise cross-hatching. Showcases the flattened body, dark blue ventral surface, and radiating finger-like cerata arranged in clusters. Muted cobalt blue (#0047AB), pale silver-grey (#C0C0C0), warm white (#FAFAF8), dark charcoal ink (#1A1A1A). White background. Isolated specimen. Bold at sticker size. ZERO written words, letters, or legible text. Only abstract decorative marks allowed (hanko seal, pencil border lines). Imperfect hand-drawn pencil border frame, slightly uneven ruled margins, as if sketched in a field notebook. Small decorative red circular hanko seal stamp in the bottom right corner (abstract Japanese ink stamp, geometric pattern only, no readable letters or text). Japanese washi paper texture. 19th century museum natural history plate aesthetic.",
-        "negative_prompt": "",
+        "positive_prompt": "Glaucus atlanticus blue sea dragon, cerata outstretched, ethereal floating specimen, electric blue and silver-white tones. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
         "key_elements": [],
         "avoid_elements": [],
         "cfg_scale": 4.0,
-        "style_weight": 0.85
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
       },
       "reference_images": [
         {
@@ -1614,7 +1661,8 @@
         "Marine Biology Study Print repeat pattern",
         "Nudibranch Lover Sticker repeat pattern",
         "Oceanographic Journal repeat pattern"
-      ]
+      ],
+      "positive_prompt": "Glaucus atlanticus blue sea dragon, cerata outstretched, ethereal floating specimen, electric blue and silver-white tones. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
     },
     {
       "name": "Dawn Redwood Botanical Plate",
@@ -1666,12 +1714,15 @@
         "competition_level": "medium"
       },
       "ai_generation": {
-        "positive_prompt": "Single Metasequoia glyptostroboides dawn redwood branchlet with small, peltate female cones, centered on pure white background. Rendered as a 19th century natural history museum plate. Fine pen and ink engraving style with precise cross-hatching. Showcases the opposite, linear leaves and the long-stalked, boxy cones. Muted redwood green (#556B2F), cone brown (#8B5A2B), warm white (#FAFAF8), dark charcoal ink (#1A1A1A). White background. Isolated specimen. Bold at sticker size. ZERO written words, letters, or legible text. Only abstract decorative marks allowed (hanko seal, pencil border lines). Imperfect hand-drawn pencil border frame, slightly uneven ruled margins, as if sketched in a field notebook. Small decorative red circular hanko seal stamp in the bottom right corner (abstract Japanese ink stamp, geometric pattern only, no readable letters or text). Japanese washi paper texture. 19th century museum natural history plate aesthetic.",
-        "negative_prompt": "",
+        "positive_prompt": "Metasequoia glyptostroboides branch with feathery needles and small cones, living fossil botanical specimen, soft sage green and warm rust. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
         "key_elements": [],
         "avoid_elements": [],
         "cfg_scale": 4.0,
-        "style_weight": 0.85
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
       },
       "reference_images": [],
       "generated_at": "2026-06-06 16:25 UTC",
@@ -1744,7 +1795,8 @@
         "Paleobotany Study Print repeat pattern",
         "Bonsai Enthusiast Sticker repeat pattern",
         "Field Botanist Journal repeat pattern"
-      ]
+      ],
+      "positive_prompt": "Metasequoia glyptostroboides branch with feathery needles and small cones, living fossil botanical specimen, soft sage green and warm rust. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
     },
     {
       "name": "Paua Abalone Shell Plate",
@@ -1796,12 +1848,15 @@
         "competition_level": "medium"
       },
       "ai_generation": {
-        "positive_prompt": "Single Haliotis iris paua abalone shell interior, centered on pure white background. Rendered as a 19th century natural history museum plate. Fine pen and ink engraving style with precise cross-hatching. Showcases the iridescent, swirling nacreous interior with a row of respiratory pores along the margin. Muted teal-blue (#008080), soft violet (#8A2BE2), warm white (#FAFAF8), dark charcoal ink (#1A1A1A). White background. Isolated specimen. Bold at sticker size. ZERO written words, letters, or legible text. Only abstract decorative marks allowed (hanko seal, pencil border lines). Imperfect hand-drawn pencil border frame, slightly uneven ruled margins, as if sketched in a field notebook. Small decorative red circular hanko seal stamp in the bottom right corner (abstract Japanese ink stamp, geometric pattern only, no readable letters or text). Japanese washi paper texture. 19th century museum natural history plate aesthetic.",
-        "negative_prompt": "",
+        "positive_prompt": "Haliotis iris paua abalone shell, iridescent interior surface, swirling opalescent patterns, deep teal, violet and emerald iridescence on cream. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
         "key_elements": [],
         "avoid_elements": [],
         "cfg_scale": 4.0,
-        "style_weight": 0.85
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
       },
       "reference_images": [],
       "generated_at": "2026-06-06 16:25 UTC",
@@ -1874,7 +1929,8 @@
         "Conchology Study Print repeat pattern",
         "Ocean Lover Sticker repeat pattern",
         "Oceanographic Journal repeat pattern"
-      ]
+      ],
+      "positive_prompt": "Haliotis iris paua abalone shell, iridescent interior surface, swirling opalescent patterns, deep teal, violet and emerald iridescence on cream. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
     },
     {
       "name": "Welwitschia Mirabilis Botanical Plate",
@@ -1926,12 +1982,15 @@
         "competition_level": "medium"
       },
       "ai_generation": {
-        "positive_prompt": "Single Welwitschia mirabilis desert plant specimen, centered on pure white background. Rendered as a 19th century natural history museum plate in the style of Curtis's Botanical Magazine. Fine pen and ink engraving style with precise cross-hatching. Showcases the woody, low stem with two split, wind-shredded strap-like leaves curling on the ground, and small cone-like inflorescences. Muted sage green (#87A987), dusty terracotta (#C07A60), warm white (#FAFAF8), dark charcoal ink (#1A1A1A). White background. Isolated specimen. Bold at sticker size. ZERO written words, letters, or legible text. Only abstract decorative marks allowed (hanko seal, pencil border lines). Imperfect hand-drawn pencil border frame, slightly uneven ruled margins, as if sketched in a field notebook. Small decorative red circular hanko seal stamp in the bottom right corner (abstract Japanese ink stamp, geometric pattern only, no readable letters or text). Japanese washi paper texture. 19th century museum natural history plate aesthetic.",
-        "negative_prompt": "",
+        "positive_prompt": "Welwitschia mirabilis ancient desert plant, two massive strap-leaves spiraling outward, primordial botanical curiosity, dusty olive and warm terracotta. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
         "key_elements": [],
         "avoid_elements": [],
         "cfg_scale": 4.0,
-        "style_weight": 0.85
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
       },
       "reference_images": [
         {
@@ -2017,7 +2076,8 @@
         "Namib Desert Flora Print repeat pattern",
         "Botanical Oddity Sticker repeat pattern",
         "Arid Plant Journal repeat pattern"
-      ]
+      ],
+      "positive_prompt": "Welwitschia mirabilis ancient desert plant, two massive strap-leaves spiraling outward, primordial botanical curiosity, dusty olive and warm terracotta. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
     },
     {
       "name": "Red Lionfish Fin Anatomy Plate",
@@ -2069,12 +2129,15 @@
         "competition_level": "medium"
       },
       "ai_generation": {
-        "positive_prompt": "Single Pterois volitans lionfish pectoral fin and spine anatomy, centered on pure white background. Rendered as a 19th century natural history museum plate. Fine pen and ink engraving style with precise cross-hatching. Showcases the elongated, venomous dorsal spines and the fan-like, delicate pectoral fin rays in anatomical detail. Muted crimson red (#990000), soft sand beige (#F4A460), warm white (#FAFAF8), dark charcoal ink (#1A1A1A). White background. Isolated specimen. Bold at sticker size. ZERO written words, letters, or legible text. Only abstract decorative marks allowed (hanko seal, pencil border lines). Imperfect hand-drawn pencil border frame, slightly uneven ruled margins, as if sketched in a field notebook. Small decorative red circular hanko seal stamp in the bottom right corner (abstract Japanese ink stamp, geometric pattern only, no readable letters or text). Japanese washi paper texture. 19th century museum natural history plate aesthetic.",
-        "negative_prompt": "",
+        "positive_prompt": "Pterois volitans pectoral fin spine, single venomous ray with elaborate membrane, precise anatomical specimen, deep crimson and warm ivory. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
         "key_elements": [],
         "avoid_elements": [],
         "cfg_scale": 4.0,
-        "style_weight": 0.85
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
       },
       "reference_images": [
         {
@@ -2160,7 +2223,8 @@
         "Ichthyology Study Print repeat pattern",
         "Marine Aquarist Sticker repeat pattern",
         "Reef Keeper Journal repeat pattern"
-      ]
+      ],
+      "positive_prompt": "Pterois volitans pectoral fin spine, single venomous ray with elaborate membrane, precise anatomical specimen, deep crimson and warm ivory. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
     },
     {
       "name": "Chambered Nautilus Shell Plate",
@@ -2212,12 +2276,15 @@
         "competition_level": "medium"
       },
       "ai_generation": {
-        "positive_prompt": "Single Nautilus pompilius shell cut in a perfect sagittal cross-section, centered on pure white background. Rendered as a 19th century natural history museum plate. Fine pen and ink engraving style with precise cross-hatching. Showcases the logarithmic spiral of the internal chambers (septa) and the central siphuncle tube. Muted pearlescent cream (#FDF5E6), soft amber (#D2B48C), warm white (#FAFAF8), dark charcoal ink (#1A1A1A). White background. Isolated specimen. Bold at sticker size. ZERO written words, letters, or legible text. Only abstract decorative marks allowed (hanko seal, pencil border lines). Imperfect hand-drawn pencil border frame, slightly uneven ruled margins, as if sketched in a field notebook. Small decorative red circular hanko seal stamp in the bottom right corner (abstract Japanese ink stamp, geometric pattern only, no readable letters or text). Japanese washi paper texture. 19th century museum natural history plate aesthetic.",
-        "negative_prompt": "",
+        "positive_prompt": "Nautilus pompilius shell cross-section, perfect logarithmic spiral chambers, golden ratio botanical mathematics, warm ivory and deep sepia. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
         "key_elements": [],
         "avoid_elements": [],
         "cfg_scale": 4.0,
-        "style_weight": 0.85
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
       },
       "reference_images": [
         {
@@ -2303,7 +2370,8 @@
         "Malacology Study Print repeat pattern",
         "Sacred Geometry Sticker repeat pattern",
         "Oceanographic Tote Bag repeat pattern"
-      ]
+      ],
+      "positive_prompt": "Nautilus pompilius shell cross-section, perfect logarithmic spiral chambers, golden ratio botanical mathematics, warm ivory and deep sepia. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
     },
     {
       "name": "Pecopteris Carboniferous Fern Plate",
@@ -2355,12 +2423,15 @@
         "competition_level": "medium"
       },
       "ai_generation": {
-        "positive_prompt": "Single Pecopteris carboniferous fern fossil frond, centered on pure white background. Rendered as a 19th century natural history museum plate. Fine pen and ink engraving style with precise cross-hatching. Showcases the detailed carbonized compression of pinnules on a shale matrix, highlighting the venation of each tiny leaf. Muted slate grey (#708090), dark carbon black (#1C1C1C), warm white (#FAFAF8), dark charcoal ink (#1A1A1A). White background. Isolated specimen. Bold at sticker size. ZERO written words, letters, or legible text. Only abstract decorative marks allowed (hanko seal, pencil border lines). Imperfect hand-drawn pencil border frame, slightly uneven ruled margins, as if sketched in a field notebook. Small decorative red circular hanko seal stamp in the bottom right corner (abstract Japanese ink stamp, geometric pattern only, no readable letters or text). Japanese washi paper texture. 19th century museum natural history plate aesthetic.",
-        "negative_prompt": "",
+        "positive_prompt": "Pecopteris fern fossil impression, carboniferous frond with pinnate leaflets, stone-preserved botanical specimen, warm sepia and pale limestone. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
         "key_elements": [],
         "avoid_elements": [],
         "cfg_scale": 4.0,
-        "style_weight": 0.85
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
       },
       "reference_images": [
         {
@@ -2446,7 +2517,8 @@
         "Coal Measure Fossil Print repeat pattern",
         "Geology Field Sticker repeat pattern",
         "Paleobotany Specimen Tote repeat pattern"
-      ]
+      ],
+      "positive_prompt": "Pecopteris fern fossil impression, carboniferous frond with pinnate leaflets, stone-preserved botanical specimen, warm sepia and pale limestone. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
     },
     {
       "name": "Tawny Owl Feather Plate",
@@ -2498,12 +2570,15 @@
         "competition_level": "medium"
       },
       "ai_generation": {
-        "positive_prompt": "Single Strix aluco tawny owl primary flight feather, centered on pure white background. Rendered as a 19th century natural history museum plate. Fine pen and ink engraving style with precise cross-hatching. Showcases the soft, fringed leading edge (silent flight adaptation) and the mottled brown and cream barring patterns. Muted chestnut brown (#8B4513), soft cream (#FFFDD0), warm white (#FAFAF8), dark charcoal ink (#1A1A1A). White background. Isolated specimen. Bold at sticker size. ZERO written words, letters, or legible text. Only abstract decorative marks allowed (hanko seal, pencil border lines). Imperfect hand-drawn pencil border frame, slightly uneven ruled margins, as if sketched in a field notebook. Small decorative red circular hanko seal stamp in the bottom right corner (abstract Japanese ink stamp, geometric pattern only, no readable letters or text). Japanese washi paper texture. 19th century museum natural history plate aesthetic.",
-        "negative_prompt": "",
+        "positive_prompt": "Strix aluco tawny owl primary feather, single specimen with intricate barb detail, precise ornithological study, warm tawny brown and cream with dark banding. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
         "key_elements": [],
         "avoid_elements": [],
         "cfg_scale": 4.0,
-        "style_weight": 0.85
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
       },
       "reference_images": [
         {
@@ -2591,7 +2666,8 @@
         "Ornithology Study Print repeat pattern",
         "Birder Gear Sticker repeat pattern",
         "Feather Collector Journal repeat pattern"
-      ]
+      ],
+      "positive_prompt": "Strix aluco tawny owl primary feather, single specimen with intricate barb detail, precise ornithological study, warm tawny brown and cream with dark banding. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
     },
     {
       "name": "Elrathia Kingii Trilobite Fossil Plate",
@@ -2643,12 +2719,15 @@
         "competition_level": "medium"
       },
       "ai_generation": {
-        "positive_prompt": "Single Elrathia kingii trilobite fossil, centered on pure white background. Rendered as a 19th century natural history museum plate. Fine pen and ink engraving style with precise cross-hatching. Showcases the three-lobed exoskeleton, distinct cephalon, thorax segments, and pygidium preserved in a shale matrix. Muted dark shale grey (#4F4F4F), iron oxide rust (#B22222), warm white (#FAFAF8), dark charcoal ink (#1A1A1A). White background. Isolated specimen. Bold at sticker size. ZERO written words, letters, or legible text. Only abstract decorative marks allowed (hanko seal, pencil border lines). Imperfect hand-drawn pencil border frame, slightly uneven ruled margins, as if sketched in a field notebook. Small decorative red circular hanko seal stamp in the bottom right corner (abstract Japanese ink stamp, geometric pattern only, no readable letters or text). Japanese washi paper texture. 19th century museum natural history plate aesthetic.",
-        "negative_prompt": "",
+        "positive_prompt": "Elrathia kingii trilobite fossil, perfectly preserved exoskeleton from above, Cambrian arthropod specimen, warm limestone and dark iron tones. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
         "key_elements": [],
         "avoid_elements": [],
         "cfg_scale": 4.0,
-        "style_weight": 0.85
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
       },
       "reference_images": [],
       "generated_at": "2026-06-06 16:25 UTC",
@@ -2723,7 +2802,8 @@
         "Cambrian Explosion Print repeat pattern",
         "Geology Field Sticker repeat pattern",
         "Paleontology Lab Notebook repeat pattern"
-      ]
+      ],
+      "positive_prompt": "Elrathia kingii trilobite fossil, perfectly preserved exoskeleton from above, Cambrian arthropod specimen, warm limestone and dark iron tones. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
     },
     {
       "name": "Banded Rhodochrosite Mineral Plate",
@@ -2775,12 +2855,15 @@
         "competition_level": "medium"
       },
       "ai_generation": {
-        "positive_prompt": "Single stalactitic Rhodochrosite mineral cross-section slice, centered on pure white background. Rendered as a 19th century natural history museum plate. Fine pen and ink engraving style with precise cross-hatching. Showcases the concentric, banded circular layers of pink and white manganese carbonate crystals. Muted rose pink (#FF69B4), deep raspberry (#C71585), warm white (#FAFAF8), dark charcoal ink (#1A1A1A). White background. Isolated specimen. Bold at sticker size. ZERO written words, letters, or legible text. Only abstract decorative marks allowed (hanko seal, pencil border lines). Imperfect hand-drawn pencil border frame, slightly uneven ruled margins, as if sketched in a field notebook. Small decorative red circular hanko seal stamp in the bottom right corner (abstract Japanese ink stamp, geometric pattern only, no readable letters or text). Japanese washi paper texture. 19th century museum natural history plate aesthetic.",
-        "negative_prompt": "",
+        "positive_prompt": "Banded rhodochrosite mineral cross-section, concentric pink and white rings, geological stalactite slice specimen, deep rose pink and cream white bands. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
         "key_elements": [],
         "avoid_elements": [],
         "cfg_scale": 4.0,
-        "style_weight": 0.85
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
       },
       "reference_images": [],
       "generated_at": "2026-06-06 16:25 UTC",
@@ -2855,7 +2938,8 @@
         "Mineralogy Study Print repeat pattern",
         "Rockhound Gear Sticker repeat pattern",
         "Geology Field Journal repeat pattern"
-      ]
+      ],
+      "positive_prompt": "Banded rhodochrosite mineral cross-section, concentric pink and white rings, geological stalactite slice specimen, deep rose pink and cream white bands. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
     },
     {
       "name": "Rosalia Alpina Entomology Plate",
@@ -2907,12 +2991,15 @@
         "competition_level": "medium"
       },
       "ai_generation": {
-        "positive_prompt": "Single Rosalia alpina longhorn beetle, centered on pure white background. Rendered as a 19th century natural history museum plate. Fine pen and ink engraving style with precise cross-hatching. Showcases the distinctive elongated antennae with tufts of black hair, and the velvety blue-grey elytra with black spots. Muted steel blue (#4682B4), charcoal black (#222222), warm white (#FAFAF8), dark charcoal ink (#1A1A1A). White background. Isolated specimen. Bold at sticker size. ZERO written words, letters, or legible text. Only abstract decorative marks allowed (hanko seal, pencil border lines). Imperfect hand-drawn pencil border frame, slightly uneven ruled margins, as if sketched in a field notebook. Small decorative red circular hanko seal stamp in the bottom right corner (abstract Japanese ink stamp, geometric pattern only, no readable letters or text). Japanese washi paper texture. 19th century museum natural history plate aesthetic.",
-        "negative_prompt": "",
+        "positive_prompt": "Rosalia alpina longhorn beetle, pinned entomology specimen from above, elegant blue-grey elytra with dark spots, long elegant antennae, slate blue and velvet black. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
         "key_elements": [],
         "avoid_elements": [],
         "cfg_scale": 4.0,
-        "style_weight": 0.85
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
       },
       "reference_images": [],
       "generated_at": "2026-06-06 16:25 UTC",
@@ -2987,8 +3074,9 @@
         "Coleoptera Collector Print repeat pattern",
         "Insect Pinning Sticker repeat pattern",
         "Entomology Lab Notebook repeat pattern"
-      ]
+      ],
+      "positive_prompt": "Rosalia alpina longhorn beetle, pinned entomology specimen from above, elegant blue-grey elytra with dark spots, long elegant antennae, slate blue and velvet black. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
     }
   ],
-  "_style_patch": "pencil-border-hanko-v2"
+  "_style_patch": "japanese-circle-minimalist-v2-with-reference"
 }
