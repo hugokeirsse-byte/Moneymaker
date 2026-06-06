@@ -1563,6 +1563,54 @@ def generate_listings(
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+# Mode text-apply : applique la typographie CDC sur les images générées
+# ─────────────────────────────────────────────────────────────────────────────
+
+def apply_text(
+    images_dir: str = "./output/redbubble",
+    reports_dir: str = "./reports/redbubble",
+    output_dir: Optional[str] = None,
+    overwrite: bool = False,
+) -> None:
+    """
+    Applique la typographie définie dans le CDC sur chaque image générée.
+
+    Lit le dernier CDC Redbubble JSON, fait correspondre chaque PNG à son
+    brief via le slug du nom de niche, puis applique les couches de texte
+    définies dans `typography.layers` avec PIL (polices système, précision
+    300 DPI).
+
+    Args:
+        images_dir:  Dossier contenant les PNG Redbubble générés.
+        reports_dir: Dossier contenant les CDC JSON Redbubble.
+        output_dir:  Dossier de sortie (None = écrase les originaux).
+        overwrite:   Re-applique même si le fichier de sortie existe déjà.
+    """
+    import glob as _glob
+    from trend_discovery.generators.text_applicator import batch_apply_typography
+
+    pattern = os.path.join(reports_dir, "cahiers_des_charges_*.json")
+    cdcs = sorted(_glob.glob(pattern))
+    if not cdcs:
+        print(f"ERROR : Aucun CDC trouvé dans {reports_dir}")
+        return
+
+    latest_cdc = cdcs[-1]
+    logger.info("[text-apply] CDC : %s", latest_cdc)
+    logger.info("[text-apply] images : %s", images_dir)
+
+    processed = batch_apply_typography(
+        cdc_json_path=latest_cdc,
+        images_dir=images_dir,
+        output_dir=output_dir,
+        overwrite=overwrite,
+    )
+    print(f"✅ Typographie appliquée sur {len(processed)} image(s)")
+    if output_dir:
+        print(f"   → {output_dir}/")
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # CLI entry point
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -1790,6 +1838,28 @@ def main():
     ls_parser.add_argument("--redbubble-reports", dest="redbubble_reports", type=str, default="./reports/redbubble")
     ls_parser.add_argument("--output", type=str, default="./reports/listings")
 
+    # ── Sous-commande : text-apply ────────────────────────────────────────────
+    ta_parser = subparsers.add_parser(
+        "text-apply",
+        help="Applique la typographie CDC (via Python/PIL) sur les images Redbubble générées.",
+    )
+    ta_parser.add_argument(
+        "--images", type=str, default="./output/redbubble",
+        help="Dossier des PNG Redbubble générés.",
+    )
+    ta_parser.add_argument(
+        "--reports", type=str, default="./reports/redbubble",
+        help="Dossier contenant les CDC JSON Redbubble.",
+    )
+    ta_parser.add_argument(
+        "--output", type=str, default=None,
+        help="Dossier de sortie (vide = écrase les originaux).",
+    )
+    ta_parser.add_argument(
+        "--overwrite", action="store_true",
+        help="Re-applique même si le fichier de sortie existe déjà.",
+    )
+
     # ── Sous-commande : thumbnails ────────────────────────────────────────────
     th_parser = subparsers.add_parser(
         "thumbnails",
@@ -1964,6 +2034,15 @@ def main():
         generate_listings(
             reports_dir=getattr(args, "reports", "./reports") or "./reports",
             output_dir=getattr(args, "output", "./reports/listings") or "./reports/listings",
+        )
+        return
+
+    if args.command == "text-apply":
+        apply_text(
+            images_dir=getattr(args, "images", "./output/redbubble"),
+            reports_dir=getattr(args, "reports", "./reports/redbubble"),
+            output_dir=getattr(args, "output", None),
+            overwrite=getattr(args, "overwrite", False),
         )
         return
 

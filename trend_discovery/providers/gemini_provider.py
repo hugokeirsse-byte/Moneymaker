@@ -1013,6 +1013,24 @@ OPPORTUNITY SCORING (use for trending_score):
   0-39:   DO NOT INCLUDE — insufficient evidence
 
 ═══════════════════════════════════════════════════════════════════════
+⚠️  MANDATORY TEXT SEPARATION RULE — READ BEFORE WRITING ANY PROMPT
+═══════════════════════════════════════════════════════════════════════
+
+The pipeline uses TWO separate tools:
+  1. FLUX Dev 2 → generates the ILLUSTRATION ONLY (no text, no labels, no typography)
+  2. text_applicator.py → adds all text AFTER generation, using fonts and precise placement
+
+This separation is non-negotiable: AI image models render text poorly (garbled letters,
+wrong spelling). A Python tool adds the text with real fonts at print quality (300 DPI).
+
+CONSEQUENCE FOR YOUR OUTPUT:
+  • ai_generation.positive_prompt: ZERO text, labels, typography, written words.
+    Describe ONLY the visual elements: specimen, shape, illustration style, colors.
+    "NO TEXT" means no annotation labels, no titles, no Latin names, no slogans, no badge text.
+  • typography.layers: ALL text goes here — titles, subtitles, labels, annotations, curved badge text.
+    Each layer specifies: text content, position, font_style, size_pt, color, and positioning params.
+
+═══════════════════════════════════════════════════════════════════════
 REDBUBBLE DESIGN STYLE TEMPLATES  (choose the one that fits the community's authentic aesthetic)
 ═══════════════════════════════════════════════════════════════════════
 
@@ -1027,20 +1045,20 @@ Latin nomenclature, aged paper quality. Strong merch for stickers, art prints, t
     natural history museum plate — the kind found in Audubon, Ernst Haeckel, or Anna Atkins publications."
   PART 2: "Fine pen and ink engraving style — precise cross-hatching, crisp botanical detail.
     [SPECIFIC SPECIMEN ANATOMY: 3-4 anatomically accurate features this community would recognize]."
-  PART 3: "[FIELD NOTE DETAIL: handwritten-style text naming the specimen with correct taxonomy/jargon]."
+  PART 3: "[VISUAL DETAIL: ink quality, cross-hatching density, anatomical accuracy — NO TEXT]."
   PART 4: "Colors: [2-4 HEX codes — muted, naturalistic]. No digital gradients. Ink line quality."
-  PART 5: "White background. Isolated specimen. Bold enough to read at sticker size.
-    Print-ready illustration quality — no halftone, no digital texture."
+  PART 5: "White background. Isolated specimen. NO text, NO labels, NO written words anywhere.
+    Bold enough to read at sticker size. Print-ready illustration quality."
+  → Text (Latin name, field notes, scale bar) goes in typography.layers, NOT in this prompt.
 
 WORKED EXAMPLE (Amateur Mycologist):
-  "Single fly agaric mushroom (Amanita muscaria), centered on pure white background.
+  "Single fly agaric mushroom, centered on pure white background.
   Rendered as a 19th century natural history museum plate in the style of James Sowerby's
   British Fungi illustrations. Fine pen and ink engraving — precise cross-hatching on cap surface,
   anatomically correct gills visible in cross-section, ring (annulus) clearly rendered on stem,
-  volva at base. Handwritten field note text around specimen reads 'Amanita muscaria — Fly Agaric,
-  DO NOT EAT'. Small scale bar and collection date notation bottom right.
+  volva at base. Small magnifying glass and field journal beside the specimen.
   Colors: scarlet cap (#C0392B), cream spots (#F5F0E8), warm white (#FAFAF8), dark ink (#1A1209).
-  White background. Isolated specimen. Bold enough to read at sticker size."
+  NO text, NO labels, NO written words. White background. Isolated specimen. Bold at sticker size."
 
 ──────────────────────────────────────────────────────────────────────
 STYLE 2 — VINTAGE BADGE / MEMBERSHIP CERTIFICATE / GUILD SEAL
@@ -1051,21 +1069,23 @@ like a vintage club patch, union badge, or official certificate. Instantly recog
   PROMPT STRUCTURE:
   PART 1: "Circular vintage badge design, centered on pure white background.
     Styled as a [1920s/1940s/1950s] [trade guild seal / club membership badge / official certificate]."
-  PART 2: "Bold vintage typography: primary text '[COMMUNITY-SPECIFIC TITLE/MOTTO]'.
-    Inner ring text: '[SECONDARY COMMUNITY JARGON OR YEAR OR MOTTO]'.
-    Center illustration: [SPECIFIC TOOL/OBJECT/SYMBOL the community uses daily]."
-  PART 3: "[SPECIFIC DESIGN DETAILS: border elements, stars, wreaths, banners — styled to era]."
+  PART 2: "Center illustration: [SPECIFIC TOOL/OBJECT/SYMBOL the community uses daily],
+    rendered in woodblock/letterpress style. Surrounding: circular border, decorative elements
+    (wreaths, stars, banners, measuring tools) — era-appropriate graphic ornaments. NO TEXT."
+  PART 3: "[SPECIFIC DESIGN DETAILS: border elements, stars, wreaths — NO typography, NO letters]."
   PART 4: "Colors: [2-3 HEX codes — muted earth tones, aged feel]. Distressed texture.
-    Letterpress-quality printing aesthetic."
-  PART 5: "White background. Clean circular composition. Works at 2cm sticker AND 30cm print."
+    Letterpress-quality printing aesthetic. All text areas left BLANK for Python typography."
+  PART 5: "White background. Clean circular composition. NO text, NO lettering, NO words.
+    All typography (title, inner ring text, motto) will be added by a separate tool."
+  → Badge text (title, inner ring, motto) goes in typography.layers, NOT in this prompt.
 
 WORKED EXAMPLE (Sourdough Baker):
   "Circular vintage badge design, centered on pure white background.
   Styled as a 1930s artisan baker's guild seal — the type printed on flour sack labels.
-  Bold serif typography: primary text 'SOURDOUGH CULTIVATOR'. Inner ring text reads
-  'LIVING CULTURE — EST. WHEN STARTER SURVIVED'. Center illustration: a ceramic sourdough
-  crock with an active starter bubbling over the top, rendered in woodblock print style.
-  Border: wheat stalks and measuring scales. Distressed badge edges.
+  Center illustration: a ceramic sourdough crock with an active starter bubbling over the top,
+  rendered in woodblock print style. Surrounding border: wheat stalks and measuring scales.
+  Inner ring left blank for text overlay. Outer border: distressed badge edge with rope ornament.
+  Decorative stars at compass points. NO text, NO lettering, NO written words anywhere.
   Colors: warm amber (#C4933F), cream (#F5F0E8), dark brown (#2C1A0E), muted gold (#A8882A).
   White background. Clean circular composition. Works at 2cm sticker AND 30cm print."
 
@@ -1078,24 +1098,23 @@ diagram, data visualization, or exploded engineering drawing — but with dry hu
   PROMPT STRUCTURE:
   PART 1: "Single [TECHNICAL OBJECT / SYSTEM DIAGRAM], centered on pure white background.
     Flat vector illustration — the precision of a technical manual, the wit of an insider joke."
-  PART 2: "[SPECIFIC TECHNICAL ELEMENTS with correct community terminology].
-    Labeled with [annotation-style text using real community jargon/abbreviations]."
-  PART 3: "[IRONIC OR DRY HUMOR ELEMENT: a label, status indicator, or annotation that subverts
-    the technical seriousness with community self-awareness]."
-  PART 4: "Colors: [2-3 HEX codes — monochrome with one accent color, OR technical diagram palette:
-    blueprint blue, white lines]. Bold geometric shapes, zero gradients."
-  PART 5: "White background. Clean vector edges. Reads clearly at sticker size."
+  PART 2: "[SPECIFIC TECHNICAL ELEMENTS — shapes, components, connectors, status indicators].
+    Leave text areas as blank rectangles or placeholder boxes. NO actual text in the image."
+  PART 3: "[VISUAL DIAGRAM STRUCTURE: layout, component shapes, indicator lights, color coding].
+    Annotation leader lines present but NO labels — text added by Python tool after generation."
+  PART 4: "Colors: [2-3 HEX codes — monochrome with one accent color]. Bold geometric shapes, zero gradients."
+  PART 5: "White background. Clean vector edges. All label areas left blank. Reads at sticker size."
+  → Annotation text (component names, ironic labels, captions) goes in typography.layers.
 
 WORKED EXAMPLE (SRE / Infrastructure Engineer):
-  "Single server rack diagram with status indicators, centered on pure white background.
+  "Single server rack unit diagram, centered on pure white background.
   Flat vector illustration — precision of a data center technical manual.
-  Rack units labeled with real server hardware: '1U: Load Balancer (ON FIRE)',
-  '2U: Database (also ON FIRE)', '4U: Backup System (has not been tested since 2019)',
-  '1U: Monitoring Alert (going off, everyone ignoring it)'. Status LEDs: all red.
-  Temperature indicator: critical. Power supply indicator: 'praying'.
-  Small text at bottom: 'This is fine.' Dry minimalist annotation style.
+  4 rack units visible: 1U slot with cooling fans and blinking status LED (red),
+  2U slot with cable bundle entry, 4U slot with blank panel, 1U slot with power supply.
+  Status LED strip at right: all indicators solid red. Blank label tags on each unit —
+  text placeholder rectangles left empty. Temperature gauge at top: needle in red zone.
   Colors: off-white (#F8F8F6), charcoal (#2C2C2C), critical red (#D63031). Zero gradients.
-  White background. Clean vector edges. Reads clearly at sticker size."
+  NO text, NO words, NO labels. White background. Clean vector edges. Reads at sticker size."
 
 ──────────────────────────────────────────────────────────────────────
 STYLE 4 — EDITORIAL CARTOON / SATIRICAL ILLUSTRATION
@@ -1240,8 +1259,31 @@ JSON SCHEMA — return EXACTLY this structure for each concept
     }}}}
   }}}},
   "ai_generation": {{{{
-    "positive_prompt": "SEE STYLE TEMPLATES — 80-130 words following the template for the chosen style_template number",
+    "positive_prompt": "SEE STYLE TEMPLATES — 80-130 words, ZERO text/labels/typography, illustration only",
     "cfg_scale": 4.0
+  }}}},
+  "typography": {{{{
+    "apply": true,
+    "layers": [
+      {{{{
+        "text": "EXACT TEXT TO RENDER (community jargon, Latin name, badge title, annotation label...)",
+        "position": "top_arc | bottom_arc | center | top | bottom | annotation | italic_caption",
+        "font_style": "serif_bold | serif | serif_italic | mono | sans | sans_bold",
+        "size_pt": 60,
+        "color": "#HEXCODE",
+        "arc_radius_pct": 38,
+        "y_offset_pct": 0.0,
+        "x_pct": 0.5,
+        "y_pct": 0.5
+      }}}},
+      // Include ALL text that makes the design community-specific:
+      // Style 1 → italic_caption for Latin name + annotation for field notes
+      // Style 2 → top_arc for badge title + bottom_arc for motto/year
+      // Style 3 → annotation layers for each labeled component
+      // Style 4 → bottom for caption + center for ironic label
+      // Style 5 → top for main slogan + bottom for subtext
+      // Style 6 → bottom for community catchphrase
+    ]
   }}}},
   "crossover_gap": false,
   "demand_gap_evidence": "",

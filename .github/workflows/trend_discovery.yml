@@ -46,6 +46,7 @@ on:
           - 'generate'             # Images des CdCs approuvées (manifest requis)
           - 'colorize'             # Variantes de couleurs sur images existantes (0 €, Pillow)
           - 'bg-remove'            # Supprime fond blanc → PNG transparent Redbubble stickers (0 €)
+          - 'text-apply'           # Applique typographie CDC sur images Redbubble (PIL, 0 €)
           - 'seamless-audit'       # Vérifie + corrige les tuiles non-seamless (mirror quad, 0 €)
           - 'thumbnails'           # Génère vignettes 600×600 JPEG navigables (0 €, git-safe)
           - 'listings'             # CSVs upload Spoonflower + Adobe Stock + Etsy + Redbubble (0 €)
@@ -315,6 +316,13 @@ jobs:
             python -m trend_discovery.main seamless-audit --yes --overwrite \
               --input ./output/uploads/base \
               --output ./output/uploads/base || echo "(no uploads found, skipped)"
+          elif [ "$MODE" = "text-apply" ]; then
+            echo "=== MODE TEXT-APPLY : typographie CDC → images Redbubble (PIL, 0 €) ==="
+            mkdir -p output/redbubble_with_text
+            python -m trend_discovery.main text-apply \
+              --images ./output/redbubble \
+              --reports ./reports/redbubble \
+              --output ./output/redbubble_with_text
           elif [ "$MODE" = "listings" ]; then
             echo "=== MODE LISTINGS : CSVs upload Spoonflower + Adobe Stock + Etsy + Redbubble (0 €) ==="
             mkdir -p reports/listings
