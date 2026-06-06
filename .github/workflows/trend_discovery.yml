@@ -168,15 +168,19 @@ jobs:
             LIMIT_ARG=""
             LIMIT_VAL="${{ github.event.inputs.limit || '0' }}"
             [ "$LIMIT_VAL" != "0" ] && LIMIT_ARG="--limit $LIMIT_VAL"
+            IMAGES_PER_CDC="${{ github.event.inputs.images_per_niche || '2' }}"
             RB_REPORT=$(ls -t ./reports/redbubble/cahiers_des_charges_*.json 2>/dev/null | head -1)
             if [ -z "$RB_REPORT" ]; then
               echo "ERREUR : aucun rapport Redbubble trouvé. Lancez redbubble-preview d'abord." && exit 1
             fi
-            echo "Rapport : $RB_REPORT"
-            eval python -m trend_discovery.main generate-all --yes \
-              --report "$RB_REPORT" \
-              --output ./output/redbubble \
-              $LIMIT_ARG
+            echo "Rapport : $RB_REPORT — $IMAGES_PER_CDC image(s) par CDC"
+            for i in $(seq 1 $IMAGES_PER_CDC); do
+              echo "-- Génération image $i/$IMAGES_PER_CDC --"
+              eval python -m trend_discovery.main generate-all --yes \
+                --report "$RB_REPORT" \
+                --output ./output/redbubble \
+                $LIMIT_ARG
+            done
             echo "-- Auto thumbnails Redbubble --"
             python -m trend_discovery.main thumbnails \
               --pipeline ./output/redbubble \
