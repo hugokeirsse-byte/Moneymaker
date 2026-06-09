@@ -56,6 +56,7 @@ class RunwareGenerator:
             "Authorization": f"Bearer {RUNWARE_API_KEY}",
             "Content-Type": "application/json",
         })
+        self.last_cost = None  # coût réel du dernier appel (si includeCost)
 
     def is_available(self) -> bool:
         return bool(RUNWARE_API_KEY)
@@ -184,6 +185,7 @@ class RunwareGenerator:
             "upscaleFactor": upscale_factor,
             "outputType": ["URL"],
             "outputFormat": "PNG",
+            "includeCost": True,
         }]
 
         logger.info("[runware] upscale ×%d: %s", upscale_factor, image_url)
@@ -198,7 +200,10 @@ class RunwareGenerator:
             logger.error("[runware] upscale échoué — imageURL absent: %s", result)
             return None
 
-        logger.info("[runware] upscale OK: %s", upscaled_url)
+        # Coût réel mesuré par Runware (None si non fourni)
+        self.last_cost = result.get("cost")
+
+        logger.info("[runware] upscale OK: %s (cost=%s)", upscaled_url, self.last_cost)
         return upscaled_url
 
     def download(self, url: str, timeout: int = 60) -> Optional[bytes]:
@@ -215,21 +220,20 @@ class RunwareGenerator:
         self,
         positive_prompt: str,
         negative_prompt: str = "",
-        upscale_factor: int = 4,  # ignoré — upscale géré localement par SpoonflowerPackager
+        upscale_factor: int = 4,
         model: str = DEFAULT_MODEL,
         cfg_scale: float = DEFAULT_CFG,
         retries: int = 2,
         seed_image_url: Optional[str] = None,
         strength: float = 0.25,
+        tiling: bool = True,
     ) -> Tuple[Optional[bytes], Optional[str]]:
         """
-        Génère une image et la télécharge.
-
-        L'upscale (1024 → 4500 px) est fait gratuitement via Pillow LANCZOS
-        dans SpoonflowerPackager — pas d'appel Runware supplémentaire.
+        Génère une image (1024×1024) puis l'upscale via Runware AI (Real-ESRGAN × 4 → 4096×4096).
+        L'upscale IA est obligatoire pour la qualité Spoonflower (sans ça = flou LANCZOS).
 
         Returns:
-            (image_bytes, image_url)
+            (image_bytes_4096, image_url_original_1024)
         """
         for attempt in range(retries + 1):
             if attempt > 0:
@@ -237,6 +241,7 @@ class RunwareGenerator:
                 logger.info("[runware] retry %d/%d dans %ds", attempt, retries, wait)
                 time.sleep(wait)
 
+            # Étape 1 — génération native 1024×1024
             base_url = self.generate(
                 positive_prompt=positive_prompt,
                 negative_prompt=negative_prompt,
@@ -244,10 +249,21 @@ class RunwareGenerator:
                 cfg_scale=cfg_scale,
                 seed_image_url=seed_image_url,
                 strength=strength,
+                tiling=tiling,
             )
             if not base_url:
                 continue
 
+            # Étape 2 — upscale IA ×4 via Runware (1024 → 4096)
+            upscaled_url = self.upscale(base_url, upscale_factor=upscale_factor)
+            if upscaled_url:
+                image_bytes = self.download(upscaled_url)
+                if image_bytes:
+                    logger.info("[runware] ✅ image 4096×4096 via upscale IA × %d", upscale_factor)
+                    return image_bytes, base_url
+
+            # Fallback : si l'upscale échoue, retourne quand même le 1024×1024
+            logger.warning("[runware] upscale IA échoué — fallback sur 1024×1024 (qualité réduite)")
             image_bytes = self.download(base_url)
             if image_bytes:
                 return image_bytes, base_url

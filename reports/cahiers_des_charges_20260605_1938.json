@@ -1,0 +1,2718 @@
+{
+  "generated_at": "2026-06-05T19:38:22.992723+00:00",
+  "total_briefs": 20,
+  "briefs": [
+    {
+      "name": "Art Deco Isopod Tile",
+      "trending_score": 75,
+      "market_opportunity": "very_high",
+      "why_trending": "The terrarium and exotic pet hobby has exploded on Reddit, with r/isopods boasting over 50,000 highly passionate members. There is a massive, documented demand for elegant, isopod-themed wallpaper for terrarium rooms, yet Spoonflower currently offers zero high-end geometric designs, leaving this passionate community completely underserved.",
+      "target_audience": "wallpaper home decorators making statement accent walls for plant and terrarium rooms",
+      "sub_niches": [
+        {
+          "name": "Rubber Ducky Isopod Tessellation",
+          "trending_score": 50,
+          "unique_angle": "Symmetrical interlocking rubber ducky isopods in a classic M.C. Escher style layout.",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Zebra Isopod Chevron",
+          "trending_score": 50,
+          "unique_angle": "High-contrast black and white striped isopods forming architectural chevron bands.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "luxurious, sophisticated, geometric, opulent",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Deep Slate Blue #1E293B",
+          "Cream #F8FAFC",
+          "Mustard Yellow #EAB308"
+        ],
+        "color_accent": [
+          "Soft Copper #D97706"
+        ],
+        "color_background": "Deep Slate Blue #1E293B",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "mirror",
+        "pattern_scale": "large",
+        "top_products": [
+          "wallpaper",
+          "home decor"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Single rubber ducky isopod, centered on a solid deep slate blue (#1E293B) background. Art Deco flat graphic silhouette style for high-end Spoonflower wallpaper tile. The isopod fills 80% of the tile with equal margins on all four edges so Spoonflower mirror repeat will connect segment tips symmetrically. The isopod faces directly forward, segments fully spread left and right symmetrically, extending toward the left and right tile edges. The isopod is rendered as a single flat cream (#F8FAFC) silhouette on the slate background, with a single gold (#EAB308) accent on the head and tail. Art Deco flat graphic rendering with bold silhouettes, crisp hard edges, and zero soft shading. Solid uniform deep slate blue (#1E293B) background across the entire tile, no texture, perfectly flat. 3-color palette for maximum wallpaper printing contrast. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Print, Die Tausend Raben Vorsatz Papier (A Thousand Ravens Book End Paper), plate 11, in Die Quelle- Flächen Schmuck (The Source- Ornament for Flat Surfaces), 1901 (CH 18670543).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Print%2C_Die_Tausend_Raben_Vorsatz_Papier_%28A_Thousand_Ravens_Book_End_Paper%29%2C_plate_11%2C_in_Die_Quelle-_Fl%C3%A4chen_Schmuck_%28The_Source-_Ornament_for_Flat_Surfaces%29%2C_1901_%28CH_18670543%29.jpg",
+          "width": 4096,
+          "height": 3470
+        },
+        {
+          "title": "Print, Die Tausend Raben Vorsatz Papier (A Thousand Ravens Book End Paper), plate 11, in Die Quelle- Flächen Schmuck (The Source- Ornament for Flat Surfaces), 1901 (CH 18670543-2).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/31/Print%2C_Die_Tausend_Raben_Vorsatz_Papier_%28A_Thousand_Ravens_Book_End_Paper%29%2C_plate_11%2C_in_Die_Quelle-_Fl%C3%A4chen_Schmuck_%28The_Source-_Ornament_for_Flat_Surfaces%29%2C_1901_%28CH_18670543-2%29.jpg",
+          "width": 3731,
+          "height": 3143
+        }
+      ],
+      "generated_at": "2026-06-05 19:38 UTC",
+      "opportunity_score": 75.2,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 93.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 93 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'low' (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, mood"
+        },
+        "reusability": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "very_high",
+          "low"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition low · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "score Gemini 93 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Art Deco Isopod Tile seamless pattern",
+        "Rubber Ducky Isopod Tessellation repeat pattern",
+        "Zebra Isopod Chevron repeat pattern"
+      ]
+    },
+    {
+      "name": "Wine-Tasting Frogs Bistro",
+      "trending_score": 75,
+      "market_opportunity": "very_high",
+      "why_trending": "Humorous kitchen decor is seeing a massive surge on TikTok, with users showcasing 'bistro-chic' dining spaces. Anthropomorphized frogs participating in sophisticated human activities like wine tasting offer a perfect blend of cottagecore charm and witty humor that stands out in kitchen textiles.",
+      "target_audience": "kitchen and dining decorators making table linens, tea towels, and curtains",
+      "sub_niches": [
+        {
+          "name": "Sommelier Toad",
+          "trending_score": 50,
+          "unique_angle": "Plump toads wearing tiny aprons and holding vintage wine lists.",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Champagne Lilypad",
+          "trending_score": 50,
+          "unique_angle": "Frogs popping champagne corks on floating lilypads.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "sophisticated, humorous, cozy, theatrical",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Burgundy #800020",
+          "Olive Green #808000",
+          "Pale Gold #E6C280"
+        ],
+        "color_accent": [
+          "Ivory #FFFFF0",
+          "Rose Pink #FFC0CB"
+        ],
+        "color_background": "Burgundy #800020",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "quilting cotton",
+          "table linens"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless repeat pattern for high-end kitchen table linens and tea towels. The pattern looks exactly like a Victorian-era hand-drawn editorial illustration with bold ink outlines and flat solid color fills. The design features: dapper green frogs in French bistro settings, some wearing monocles and sniffing wine corks, others swirling tiny glasses of red wine, alongside wicker bistro chairs, vintage wine bottles, and small grape clusters. Colors: deep burgundy (#800020), olive green (#808000), pale gold (#E6C280), and soft ivory (#FFFFF0). NO blending, NO merging, NO morphing between any objects. Distinct individual fully-formed frog characters with clear spacing between each element. Single solid uniform burgundy (#800020) background across the entire tile, no texture, no gradient. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Fables of Florian13.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Fables_of_Florian13.jpg",
+          "width": 1775,
+          "height": 1887
+        },
+        {
+          "title": "Fables of Florian28.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Fables_of_Florian28.jpg",
+          "width": 1764,
+          "height": 1869
+        }
+      ],
+      "generated_at": "2026-06-05 19:38 UTC",
+      "opportunity_score": 74.8,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 92.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 92 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'low' (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, mood"
+        },
+        "reusability": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "very_high",
+          "low"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition low · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "score Gemini 92 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Wine-Tasting Frogs Bistro seamless pattern",
+        "Sommelier Toad repeat pattern",
+        "Champagne Lilypad repeat pattern"
+      ]
+    },
+    {
+      "name": "Therapy Session Lobsters",
+      "trending_score": 74,
+      "market_opportunity": "very_high",
+      "why_trending": "Bathroom-specific humor is a massive sales driver on Spoonflower, with decorators looking for quirky, marine-themed designs that go beyond basic seashells. Lobsters lying on Victorian chaise lounges during therapy sessions offer a hilarious, sophisticated, and highly memorable concept.",
+      "target_audience": "bathroom and WC decorators making quirky shower curtains, wallpaper, and bath mats",
+      "sub_niches": [
+        {
+          "name": "Anxious Crab Support Group",
+          "trending_score": 50,
+          "unique_angle": "Crabs sitting in a circle of folding chairs sharing their feelings.",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Inkblot Squid",
+          "trending_score": 50,
+          "unique_angle": "Squids looking at Rorschach inkblots made of actual squid ink.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "humorous, theatrical, quirky, marine",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Seafoam Blue #AFEEEE",
+          "Coral Red #FF7F50",
+          "Deep Teal #008080"
+        ],
+        "color_accent": [
+          "Cream #FFFDD0",
+          "Soft Pink #FFB6C1"
+        ],
+        "color_background": "Seafoam Blue #AFEEEE",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "wallpaper",
+          "home decor"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless repeat pattern for high-end bathroom wallpaper and shower curtains. The pattern looks exactly like a hand-drawn storybook illustration with crisp ink outlines and flat solid color fills. The design features: red lobsters lying on elegant Victorian chaise lounges looking stressed, other lobsters acting as therapists holding tiny notepads, alongside tissue boxes, vintage hourglasses, potted seaweed, and floating bubbles. Colors: soft seafoam blue (#AFEEEE), coral red (#FF7F50), deep teal (#008080), and soft pink (#FFB6C1). NO blending, NO merging, NO morphing between any objects. Distinct individual fully-formed lobster characters with clear spacing between each element. Single solid uniform seafoam blue (#AFEEEE) background across the entire tile, no texture, no gradient. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "European Lobster vintage poster.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/European_Lobster_vintage_poster.jpg",
+          "width": 2500,
+          "height": 1606
+        },
+        {
+          "title": "Fish III- Oyster Patties, Boiled Turbot, Fried Whitebait, Mackerel, Mayonnaise of Salmon, Lobster, and Crab from Mrs. Beeton& -39;s Book of Household Management. Digitally enhanced from our own 1923 edition.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Fish_III-_Oyster_Patties%2C_Boiled_Turbot%2C_Fried_Whitebait%2C_Mackerel%2C_Mayonnaise_of_Salmon%2C_Lobster%2C_and_Crab_from_Mrs._Beeton%26_-39%3Bs_Book_of_Household_Management._Digitally_enhanced_from_our_own_1923_edition.jpg",
+          "width": 1562,
+          "height": 2500
+        }
+      ],
+      "generated_at": "2026-06-05 19:38 UTC",
+      "opportunity_score": 74.5,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 91.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 91 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'low' (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, mood"
+        },
+        "reusability": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "very_high",
+          "low"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition low · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "score Gemini 91 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Therapy Session Lobsters seamless pattern",
+        "Anxious Crab Support Group repeat pattern",
+        "Inkblot Squid repeat pattern"
+      ]
+    },
+    {
+      "name": "Art Deco Egret Tile",
+      "trending_score": 74,
+      "market_opportunity": "high",
+      "why_trending": "Coastal and wetland themes are highly popular for modern bathroom wallpapers, but decorators are seeking highly structured, geometric interpretations rather than loose, painterly styles. A symmetrical egret with wings spread wide in a perfect geometric arch provides an opulent, architectural wallpaper design.",
+      "target_audience": "bathroom and bedroom wallpaper decorators making statement accent walls",
+      "sub_niches": [
+        {
+          "name": "Heron Reed Lattice",
+          "trending_score": 50,
+          "unique_angle": "Egrets framed by interlocking geometric reed stalks forming a trellis.",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Sunburst Crane",
+          "trending_score": 50,
+          "unique_angle": "Cranes flying upward against a radiating Art Deco sunburst.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "luxurious, sophisticated, geometric, opulent",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Deep Navy #0F172A",
+          "Soft Ivory #F8FAFC",
+          "Pale Sage #CBD5E1"
+        ],
+        "color_accent": [
+          "Warm Gold #F59E0B"
+        ],
+        "color_background": "Deep Navy #0F172A",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "mirror",
+        "pattern_scale": "large",
+        "top_products": [
+          "wallpaper",
+          "home decor"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Single egret, centered on a solid deep navy (#0F172A) background. Art Deco flat graphic silhouette style for high-end Spoonflower wallpaper tile. The egret fills 80% of the tile with equal margins on all four edges so Spoonflower mirror repeat will connect wing tips symmetrically. The egret faces directly forward, wings fully spread left and right symmetrically, extending toward the left and right tile edges. The egret is rendered as a single flat soft ivory (#F8FAFC) silhouette on the navy background, with a single gold (#F59E0B) accent on the beak and eyes. Art Deco flat graphic rendering with bold silhouettes, crisp hard edges, and zero soft shading. Solid uniform deep navy (#0F172A) background across the entire tile, no texture, perfectly flat. 3-color palette for maximum wallpaper printing contrast. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Costumes Parisiens (1914) fashion illustration in high resolution by George Barbier. Original from The Rijksmuseum. Digitally enhanced by rawpixel. - 50805010413.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/26/Costumes_Parisiens_%281914%29_fashion_illustration_in_high_resolution_by_George_Barbier._Original_from_The_Rijksmuseum._Digitally_enhanced_by_rawpixel._-_50805010413.jpg",
+          "width": 1605,
+          "height": 2500
+        }
+      ],
+      "generated_at": "2026-06-05 19:38 UTC",
+      "opportunity_score": 74.5,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 91.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 91 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'low', ~5 annonces Etsy (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, mood"
+        },
+        "reusability": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 10.0,
+        "rationale": "compétition 'medium' → marché encore ouvert"
+      },
+      "reusability_detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "score Gemini 91 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Art Deco Egret Tile seamless pattern",
+        "Heron Reed Lattice repeat pattern",
+        "Sunburst Crane repeat pattern"
+      ]
+    },
+    {
+      "name": "Raccoon Heist Planners",
+      "trending_score": 74,
+      "market_opportunity": "high",
+      "why_trending": "Raccoons are a beloved 'trash animal' internet phenomenon. Moving away from standard forest themes, portraying them as organized heist planners with blueprints and flashlights taps into a highly engaging, narrative-driven aesthetic that parents love for children's playrooms.",
+      "target_audience": "playroom and nursery decorators making wallpaper and kids' apparel",
+      "sub_niches": [
+        {
+          "name": "Possum Getaway Drivers",
+          "trending_score": 50,
+          "unique_angle": "Opossums driving retro getaway cars filled with stolen trash.",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Badger Safe-Crackers",
+          "trending_score": 50,
+          "unique_angle": "Badgers using stethoscopes to crack open vintage safes.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "mysterious, humorous, adventurous, playful",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Midnight Blue #191970",
+          "Silver Gray #C0C0C0",
+          "Bright Yellow #FFD700"
+        ],
+        "color_accent": [
+          "Cream #FFFDD0",
+          "Soft Coral #FF8C00"
+        ],
+        "color_background": "Midnight Blue #191970",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "wallpaper",
+          "quilting cotton"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless repeat pattern for high-end children's playroom wallpaper. The pattern looks exactly like a hand-drawn storybook illustration with crisp ink outlines and flat solid color fills. The design features: mischievous raccoons wearing black sleep masks, some holding rolled-up blueprints, others pointing vintage yellow flashlights, interspersed with coiled climbing ropes, walkie-talkies, and tiny brass keys. Colors: deep midnight blue (#191970), silver gray (#C0C0C0), bright yellow (#FFD700), and warm cream (#FFFDD0). NO blending, NO merging, NO morphing between any objects. Distinct individual fully-formed raccoon characters with clear spacing between each element. Single solid uniform midnight blue (#191970) background across the entire tile, no texture, no gradient. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 19:38 UTC",
+      "opportunity_score": 74.2,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 90 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'low' (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, mood"
+        },
+        "reusability": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "low"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition low · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "score Gemini 90 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Raccoon Heist Planners seamless pattern",
+        "Possum Getaway Drivers repeat pattern",
+        "Badger Safe-Crackers repeat pattern"
+      ]
+    },
+    {
+      "name": "Michelin Guinea Pig Chefs",
+      "trending_score": 74,
+      "market_opportunity": "high",
+      "why_trending": "Kitchen textiles are a staple of the Spoonflower marketplace, with buyers constantly searching for unique, animal-themed tea towels and aprons. Plump guinea pigs wearing tall chef hats and tasting soup with tiny spoons offer a highly charming, cozy, and humorous kitchen aesthetic.",
+      "target_audience": "kitchen decorators making tea towels, aprons, table runners, and oven mitts",
+      "sub_niches": [
+        {
+          "name": "Patisserie Hamsters",
+          "trending_score": 50,
+          "unique_angle": "Fluffy hamsters baking tiny croissants and decorating macarons.",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Chinchilla Pasta Makers",
+          "trending_score": 50,
+          "unique_angle": "Chinchillas operating vintage hand-cranked pasta rollers.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "cozy, humorous, culinary, charming",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Warm Charcoal #333333",
+          "Copper Orange #D2691E",
+          "Creamy White #FFFDD0"
+        ],
+        "color_accent": [
+          "Soft Gold #FFD700",
+          "Pale Sage #8FBC8F"
+        ],
+        "color_background": "Warm Charcoal #333333",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "quilting cotton",
+          "table linens"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless repeat pattern for high-end kitchen textiles and aprons. The pattern looks exactly like a hand-drawn storybook illustration with bold ink outlines and flat solid color fills. The design features: plump guinea pigs wearing tall white chef hats, some tasting soup from tiny spoons, others holding copper pans, alongside copper stock pots, whisks, rolling pins, garlic bulbs, and rosemary sprigs. Colors: warm charcoal (#333333), copper orange (#D2691E), creamy white (#FFFDD0), and soft gold (#FFD700). NO blending, NO merging, NO morphing between any objects. Distinct individual fully-formed guinea pig characters with clear spacing between each element. Single solid uniform charcoal (#333333) background across the entire tile, no texture, no gradient. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 19:38 UTC",
+      "opportunity_score": 74.0,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 89.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 89 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'low' (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, mood"
+        },
+        "reusability": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "low"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition low · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "score Gemini 89 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Michelin Guinea Pig Chefs seamless pattern",
+        "Patisserie Hamsters repeat pattern",
+        "Chinchilla Pasta Makers repeat pattern"
+      ]
+    },
+    {
+      "name": "Crow Poets Writing Poetry",
+      "trending_score": 74,
+      "market_opportunity": "high",
+      "why_trending": "Dark academia and gothic-adjacent aesthetics continue to perform exceptionally well on Spoonflower, particularly for study decor and apparel. Crows wearing wire-rimmed spectacles, holding feather quills, and writing poetry on parchment scrolls offer a highly literary, moody, and humorous design.",
+      "target_audience": "study and library decorators making wallpaper, and apparel sewists making dark academia dresses",
+      "sub_niches": [
+        {
+          "name": "Raven Bookkeepers",
+          "trending_score": 50,
+          "unique_angle": "Ravens organizing massive library card catalogs and ledger books.",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Magpie Inkwells",
+          "trending_score": 50,
+          "unique_angle": "Magpies stealing shiny silver pen nibs and glass inkwells.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "literary, gothic, dark academia, humorous",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Dark Plum #3B2244",
+          "Silver Gray #B0C4DE",
+          "Parchment Cream #FDF5E6"
+        ],
+        "color_accent": [
+          "Antique Gold #C5A059",
+          "Charcoal #1C1C1C"
+        ],
+        "color_background": "Dark Plum #3B2244",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "wallpaper",
+          "apparel fabric"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless repeat pattern for high-end dark academia wallpaper. The pattern looks exactly like a Victorian natural history engraving with fine ink linework and flat solid color fills. The design features: literary crows wearing wire-rimmed spectacles, some writing with feather quills on parchment scrolls, others perched on glass inkwells, alongside stacks of poetry books, wax-sealed letters, and tiny ink splats. Colors: dark plum (#3B2244), silver gray (#B0C4DE), parchment cream (#FDF5E6), and antique gold (#C5A059). NO blending, NO merging, NO morphing between any objects. Distinct individual fully-formed crow characters with clear spacing between each element. Single solid uniform dark plum (#3B2244) background across the entire tile, no texture, no gradient. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 19:38 UTC",
+      "opportunity_score": 74.0,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 89.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 89 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'low', ~5 annonces Etsy (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, mood"
+        },
+        "reusability": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "low"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition low · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "score Gemini 89 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Crow Poets Writing Poetry seamless pattern",
+        "Raven Bookkeepers repeat pattern",
+        "Magpie Inkwells repeat pattern"
+      ]
+    },
+    {
+      "name": "Art Deco Stag Tile",
+      "trending_score": 74,
+      "market_opportunity": "medium",
+      "why_trending": "Woodland and lodge themes are classic, but modern decorators are seeking highly structured, geometric interpretations rather than loose, painterly styles. A symmetrical stag head with magnificent antlers radiating in a perfect geometric arch provides an opulent, architectural wallpaper design.",
+      "target_audience": "study and library wallpaper decorators making statement accent walls",
+      "sub_niches": [
+        {
+          "name": "Stag Pine Trellis",
+          "trending_score": 50,
+          "unique_angle": "Stag heads framed by interlocking geometric pine branches forming a trellis.",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Antler Chevron",
+          "trending_score": 50,
+          "unique_angle": "Antlers stylized into sharp, repeating Art Deco chevron bands.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "luxurious, sophisticated, geometric, opulent",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Forest Green #14532D",
+          "Cream #FEF08A",
+          "Warm Taupe #A16207"
+        ],
+        "color_accent": [
+          "Soft Gold #FACC15"
+        ],
+        "color_background": "Forest Green #14532D",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "mirror",
+        "pattern_scale": "large",
+        "top_products": [
+          "wallpaper",
+          "home decor"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Single stag head, centered on a solid forest green (#14532D) background. Art Deco flat graphic silhouette style for high-end Spoonflower wallpaper tile. The stag fills 80% of the tile with equal margins on all four edges so Spoonflower mirror repeat will connect antler tips symmetrically. The stag faces directly forward, antlers fully spread left and right symmetrically, extending toward the left and right tile edges. The stag is rendered as a single flat cream (#FEF08A) silhouette on the forest green background, with a single gold (#FACC15) accent on the eyes and antler tips. Art Deco flat graphic rendering with bold silhouettes, crisp hard edges, and zero soft shading. Solid uniform forest green (#14532D) background across the entire tile, no texture, perfectly flat. 3-color palette for maximum wallpaper printing contrast. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Cerfs - L'animal dans la décoration, by M. P. Verneuil 1897 (New York Public Library, digitally enhanced by Rawpixel).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Cerfs_-_L%27animal_dans_la_d%C3%A9coration%2C_by_M._P._Verneuil_1897_%28New_York_Public_Library%2C_digitally_enhanced_by_Rawpixel%29.jpg",
+          "width": 5201,
+          "height": 3876
+        },
+        {
+          "title": "Cerfs et noisetiers bordure carreaux cramiques hippocampe et algues pied de coffret bronze lzards et pavots broderie - L'animal dans la decoration (1897) by M. P. Verneuil (ehanced by Rawpixel).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/24/Cerfs_et_noisetiers_bordure_carreaux_cramiques_hippocampe_et_algues_pied_de_coffret_bronze_lzards_et_pavots_broderie_-_L%27animal_dans_la_decoration_%281897%29_by_M._P._Verneuil_%28ehanced_by_Rawpixel%29.jpg",
+          "width": 3687,
+          "height": 5543
+        }
+      ],
+      "generated_at": "2026-06-05 19:38 UTC",
+      "opportunity_score": 74.0,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 89.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 89 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'low', ~15 annonces Etsy (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, mood"
+        },
+        "reusability": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "medium",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 10.0,
+        "rationale": "compétition 'medium' → marché encore ouvert"
+      },
+      "reusability_detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "score Gemini 89 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Art Deco Stag Tile seamless pattern",
+        "Stag Pine Trellis repeat pattern",
+        "Antler Chevron repeat pattern"
+      ]
+    },
+    {
+      "name": "Formula 1 Racing Snails",
+      "trending_score": 74,
+      "market_opportunity": "high",
+      "why_trending": "Playful, high-contrast children's patterns featuring slow animals in high-speed scenarios are trending across Pinterest nursery boards. This niche offers a fresh, humorous alternative to generic woodland creatures, capturing the attention of modern parents looking for quirky storytelling designs.",
+      "target_audience": "nursery and baby room decorators making playful wallpapers and baby blankets",
+      "sub_niches": [
+        {
+          "name": "Snail Pit Crew",
+          "trending_score": 50,
+          "unique_angle": "Snails holding tiny wrenches and changing miniature tires.",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Grand Prix Dandelions",
+          "trending_score": 50,
+          "unique_angle": "Snails racing through a track lined with giant dandelions.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "playful, humorous, whimsical, dynamic",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Sage Green #8FBC8F",
+          "Cream #FFFDD0",
+          "Coral Red #FF4040"
+        ],
+        "color_accent": [
+          "Mustard Yellow #FFDB58",
+          "Charcoal #36454F"
+        ],
+        "color_background": "Sage Green #8FBC8F",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "quilting cotton",
+          "wallpaper"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless repeat pattern for high-end nursery wallpaper. The pattern looks exactly like a hand-drawn children's storybook illustration with bold ink outlines and flat solid color fills. The design features: stylized garden snails wearing red and yellow racing helmets with numbers, speeding past checkered finish flags, tiny orange traffic cones, and dandelion finish lines. Colors: soft sage green (#8FBC8F), warm cream (#FFFDD0), coral red (#FF4040), and mustard yellow (#FFDB58). NO blending, NO merging, NO morphing between any objects. Distinct individual fully-formed snails and racing elements with clear spacing between each element. Single solid uniform sage green (#8FBC8F) background across the entire tile, no texture, no gradient. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 19:38 UTC",
+      "opportunity_score": 73.7,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 88.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 88 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'low' (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, mood"
+        },
+        "reusability": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "low"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition low · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "score Gemini 88 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Formula 1 Racing Snails seamless pattern",
+        "Snail Pit Crew repeat pattern",
+        "Grand Prix Dandelions repeat pattern"
+      ]
+    },
+    {
+      "name": "Victorian Apothecary Cat Surgeons",
+      "trending_score": 74,
+      "market_opportunity": "high",
+      "why_trending": "Quirky medical and anatomical themes are highly popular among apparel sewists making scrub tops, face masks, and novelty dresses. Cats dressed as Victorian surgeons holding tiny scalpels and examining anatomical charts offer a highly unique, humorous, and detailed narrative pattern.",
+      "target_audience": "apparel sewists making quirky scrub tops and dresses, and study decorators",
+      "sub_niches": [
+        {
+          "name": "Apothecary Cat Botanist",
+          "trending_score": 50,
+          "unique_angle": "Cats grinding catnip and valerian root in stone mortars.",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Anatomical Mouse Chart",
+          "trending_score": 50,
+          "unique_angle": "Cats pointing at detailed anatomical drawings of clockwork mice.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "scholarly, medical, humorous, historical",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Deep Teal #005F73",
+          "Cream #F4F1DE",
+          "Soft Coral #E07A5F"
+        ],
+        "color_accent": [
+          "Sage Green #81B29A",
+          "Pale Yellow #F2CC8F"
+        ],
+        "color_background": "Deep Teal #005F73",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "quilting cotton",
+          "apparel fabric"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless repeat pattern for high-end medical scrub fabric and apparel. The pattern looks exactly like a Victorian-era hand-drawn illustration with crisp ink outlines and flat solid color fills. The design features: cats dressed as Victorian surgeons wearing spectacles, some holding scalpels, others pointing at anatomical fish charts, alongside vintage medicine bottles, surgical scissors, and rolled bandages. Colors: deep teal (#005F73), cream (#F4F1DE), soft coral (#E07A5F), and sage green (#81B29A). NO blending, NO merging, NO morphing between any objects. Distinct individual fully-formed cat characters with clear spacing between each element. Single solid uniform deep teal (#005F73) background across the entire tile, no texture, no gradient. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "The American Flora. Vol. 3, 1855 - Carl Linnæus portrait (10172400814).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/The_American_Flora._Vol._3%2C_1855_-_Carl_Linn%C3%A6us_portrait_%2810172400814%29.jpg",
+          "width": 1919,
+          "height": 2703
+        }
+      ],
+      "generated_at": "2026-06-05 19:38 UTC",
+      "opportunity_score": 73.7,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 88.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 88 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'low' (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, mood"
+        },
+        "reusability": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "low"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition low · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "score Gemini 88 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Victorian Apothecary Cat Surgeons seamless pattern",
+        "Apothecary Cat Botanist repeat pattern",
+        "Anatomical Mouse Chart repeat pattern"
+      ]
+    },
+    {
+      "name": "Barrister Owls in Wigs",
+      "trending_score": 73,
+      "market_opportunity": "medium",
+      "why_trending": "Dark academia home decor remains a dominant force on Pinterest, with decorators seeking scholarly, gothic-adjacent elements. Wise owls wearing traditional white powdered barrister wigs and black robes offer a perfect, humorous nod to classical academia for library and study wallpapers.",
+      "target_audience": "study and office decorators making wallpaper, library curtains, and book bags",
+      "sub_niches": [
+        {
+          "name": "Owl Courtroom Jury",
+          "trending_score": 50,
+          "unique_angle": "A row of solemn owls sitting in a wooden jury box.",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Legal Eagle Quill",
+          "trending_score": 50,
+          "unique_angle": "Owls signing massive leather-bound legal ledgers with quills.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "scholarly, dark academia, gothic, humorous",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Forest Green #1E3F20",
+          "Parchment Cream #F5F5DC",
+          "Soft Gold #DAA520"
+        ],
+        "color_accent": [
+          "Pale Pink #FFD1DC",
+          "White #FFFFFF"
+        ],
+        "color_background": "Forest Green #1E3F20",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "large",
+        "top_products": [
+          "wallpaper",
+          "home decor"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless repeat pattern for high-end dark academia wallpaper. The pattern looks exactly like a Victorian natural history engraving with fine ink linework and flat solid color fills. The design features: scholarly owls wearing white powdered barrister wigs and black legal robes, alongside brass scales of justice, stacks of leather-bound books, rolled-up parchment scrolls, and glass inkwells with quills. Colors: dark forest green (#1E3F20), parchment cream (#F5F5DC), soft gold (#DAA520), and pale pink (#FFD1DC). NO blending, NO merging, NO morphing between any objects. Distinct individual fully-formed owl characters with clear spacing between each element. Single solid uniform forest green (#1E3F20) background across the entire tile, no texture, no gradient. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "A natural history of birds (Numb. IX) (9241099904).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/A_natural_history_of_birds_%28Numb._IX%29_%289241099904%29.jpg",
+          "width": 1209,
+          "height": 1626
+        },
+        {
+          "title": "A natural history of birds (Numb. IX) (9315171870).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/A_natural_history_of_birds_%28Numb._IX%29_%289315171870%29.jpg",
+          "width": 1269,
+          "height": 1632
+        }
+      ],
+      "generated_at": "2026-06-05 19:38 UTC",
+      "opportunity_score": 73.3,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 87.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 87 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'low' (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, mood"
+        },
+        "reusability": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "medium",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 10.0,
+        "rationale": "compétition 'medium' → marché encore ouvert"
+      },
+      "reusability_detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "score Gemini 87 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Barrister Owls in Wigs seamless pattern",
+        "Owl Courtroom Jury repeat pattern",
+        "Legal Eagle Quill repeat pattern"
+      ]
+    },
+    {
+      "name": "Renaissance Celestial Bear Cartographers",
+      "trending_score": 73,
+      "market_opportunity": "high",
+      "why_trending": "Celestial and astrological nursery themes are evergreen, but modern parents are moving away from generic stars toward narrative-driven, cozy animal designs. Grizzly bears wearing wizard hats and looking through brass telescopes at celestial globes offer a highly charming, cozy, and imaginative nursery aesthetic.",
+      "target_audience": "nursery and baby room decorators making cozy quilts, pajamas, and wallpaper",
+      "sub_niches": [
+        {
+          "name": "Ursa Major Mapping",
+          "trending_score": 50,
+          "unique_angle": "Bears tracing the Ursa Major constellation on antique parchment.",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Astrolabe Bears",
+          "trending_score": 50,
+          "unique_angle": "Bears holding intricate brass astrolabes and measuring star angles.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "imaginative, cozy, celestial, whimsical",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Deep Navy #1B263B",
+          "Warm Ochre #E09F3E",
+          "Soft Cream #F5F3E5"
+        ],
+        "color_accent": [
+          "Pale Blue #A9D6E5",
+          "White #FFFFFF"
+        ],
+        "color_background": "Deep Navy #1B263B",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "quilting cotton",
+          "wallpaper"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless repeat pattern for high-end children's bedding and nursery wallpaper. The pattern looks exactly like a hand-drawn storybook illustration with bold ink outlines and flat solid color fills. The design features: cozy grizzly bears wearing starry wizard hats, some looking through brass telescopes, others examining celestial star maps, alongside vintage celestial globes, hourglasses, crescent moons, and constellations. Colors: deep navy (#1B263B), warm ochre (#E09F3E), soft cream (#F5F3E5), and pale blue (#A9D6E5). NO blending, NO merging, NO morphing between any objects. Distinct individual fully-formed bear characters with clear spacing between each element. Single solid uniform navy (#1B263B) background across the entire tile, no texture, no gradient. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 19:38 UTC",
+      "opportunity_score": 73.3,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 87.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 87 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'low' (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, mood"
+        },
+        "reusability": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "low"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition low · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "score Gemini 87 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Renaissance Celestial Bear Cartographers seamless pattern",
+        "Ursa Major Mapping repeat pattern",
+        "Astrolabe Bears repeat pattern"
+      ]
+    },
+    {
+      "name": "Bauhaus DJ Penguins",
+      "trending_score": 73,
+      "market_opportunity": "high",
+      "why_trending": "Whimsical, high-energy animal patterns are highly sought after for children's bedding and playrooms. Penguins wearing neon headphones and spinning vinyl records on ice-block turntables offer a fresh, modern, and humorous twist on traditional winter/arctic themes.",
+      "target_audience": "nursery and baby room decorators making playful bedding, pajamas, and wallpaper",
+      "sub_niches": [
+        {
+          "name": "Primary Color Penguins",
+          "trending_score": 50,
+          "unique_angle": "Penguins rendered in bold Bauhaus primary colors and geometric shapes.",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Turntable Geometry",
+          "trending_score": 50,
+          "unique_angle": "Ice turntables stylized as interlocking circles and triangles.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "energetic, humorous, modern, playful",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Deep Indigo #4B0082",
+          "Ice Blue #ADD8E6",
+          "Bright Yellow #FFD700"
+        ],
+        "color_accent": [
+          "White #FFFFFF",
+          "Neon Pink #FF69B4"
+        ],
+        "color_background": "Deep Indigo #4B0082",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "quilting cotton",
+          "wallpaper"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless repeat pattern for high-end children's bedding and modern nursery wallpaper. The pattern looks exactly like a hand-drawn storybook illustration with bold ink outlines and flat solid color fills. The design features: cute penguins wearing neon pink headphones and spinning records on ice-block turntables, other penguins dancing, alongside retro boomboxes, vinyl records, sound waves, and neon pink music notes. Colors: deep indigo (#4B0082), ice blue (#ADD8E6), bright yellow (#FFD700), and neon pink (#FF69B4). NO blending, NO merging, NO morphing between any objects. Distinct individual fully-formed penguin characters with clear spacing between each element. Single solid uniform indigo (#4B0082) background across the entire tile, no texture, no gradient. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 19:38 UTC",
+      "opportunity_score": 73.0,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 86.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 86 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'low' (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, mood"
+        },
+        "reusability": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "low"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition low · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "score Gemini 86 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Bauhaus DJ Penguins seamless pattern",
+        "Primary Color Penguins repeat pattern",
+        "Turntable Geometry repeat pattern"
+      ]
+    },
+    {
+      "name": "Speed-Dating Tortoises",
+      "trending_score": 73,
+      "market_opportunity": "high",
+      "why_trending": "Quirky, slow-paced animal narratives are highly engaging for apparel sewists looking for conversation-starting prints. Tortoises wearing name tags at speed-dating tables provide a hilarious, charming concept that is completely unrepresented in current fabric markets.",
+      "target_audience": "apparel sewists making quirky dresses and shirts, and quilters making baby blankets",
+      "sub_niches": [
+        {
+          "name": "Slow-Motion Romance",
+          "trending_score": 50,
+          "unique_angle": "Tortoises offering single lettuce leaves as romantic gestures.",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Name Tag Tortoise",
+          "trending_score": 50,
+          "unique_angle": "Tortoises wearing name tags like 'Speedy' and 'Flash' looking nervous.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "romantic, humorous, charming, whimsical",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Terracotta #E2725B",
+          "Sage Green #9C9F84",
+          "Pale Cream #FDF5E6"
+        ],
+        "color_accent": [
+          "Soft Coral #F08080",
+          "Light Yellow #FFFACD"
+        ],
+        "color_background": "Terracotta #E2725B",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "quilting cotton",
+          "apparel fabric"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless repeat pattern for high-end quilting cotton and novelty apparel. The pattern looks exactly like a hand-drawn storybook illustration with crisp ink outlines and flat solid color fills. The design features: cute tortoises wearing tiny paper name tags, sitting at miniature round tables with single roses, sipping tea, alongside tiny brass bells, love letters, and floating red hearts. Colors: warm terracotta (#E2725B), sage green (#9C9F84), pale cream (#FDF5E6), and soft coral (#F08080). NO blending, NO merging, NO morphing between any objects. Distinct individual fully-formed tortoise characters with clear spacing between each element. Single solid uniform terracotta (#E2725B) background across the entire tile, no texture, no gradient. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 19:38 UTC",
+      "opportunity_score": 72.8,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 85.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 85 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'low' (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, mood"
+        },
+        "reusability": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "low"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition low · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "score Gemini 85 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Speed-Dating Tortoises seamless pattern",
+        "Slow-Motion Romance repeat pattern",
+        "Name Tag Tortoise repeat pattern"
+      ]
+    },
+    {
+      "name": "Mycological Spore Prints Foraging",
+      "trending_score": 70,
+      "market_opportunity": "high",
+      "why_trending": "The mushroom foraging community on Reddit (r/mushroomhunting, 120,000+ members) is highly active, with members constantly seeking foraging-themed fabric for canvas bags and outdoor apparel. Combining detailed spore prints and vintage foraging knives with fresh chanterelles and morels creates a highly unique, scientific, and functional design.",
+      "target_audience": "apparel sewists making foraging bags, aprons, and outdoor apparel",
+      "sub_niches": [
+        {
+          "name": "Spore Print Mandala",
+          "trending_score": 50,
+          "unique_angle": "Circular spore prints arranged in a sacred geometry mandala layout.",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Forager's Tool Grid",
+          "trending_score": 50,
+          "unique_angle": "A structured flat-lay grid of vintage compasses, magnifying glasses, and wild mushrooms.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "scientific, botanical, rustic, adventurous",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Dark Charcoal #222525",
+          "Cream #F5F5DC",
+          "Ochre Yellow #DAA520"
+        ],
+        "color_accent": [
+          "Terracotta #CD5C5C",
+          "Soft Sage #8FBC8F"
+        ],
+        "color_background": "Dark Charcoal #222525",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "quilting cotton",
+          "apparel fabric"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless repeat pattern for high-end foraging bags and outdoor apparel. The pattern looks exactly like a vintage scientific botanical illustration with fine ink linework and flat solid color fills. The design features: detailed circular mushroom spore prints, vintage foraging knives with wooden handles and small cleaning brushes, fresh chanterelles, textured morels, wicker baskets, oak leaves, and pine cones. Colors: dark charcoal (#222525), cream (#F5F5DC), ochre yellow (#DAA520), and terracotta (#CD5C5C). NO blending, NO merging, NO morphing between any objects. Distinct individual fully-formed mushroom and foraging elements with clear spacing between each element. Single solid uniform charcoal (#222525) background across the entire tile, no texture, no gradient. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Boletus circinans (Mushroom).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Boletus_circinans_%28Mushroom%29.jpg",
+          "width": 2500,
+          "height": 3909
+        }
+      ],
+      "generated_at": "2026-06-05 19:38 UTC",
+      "opportunity_score": 70.4,
+      "confidence": 65.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 74.3,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 82.0,
+          "detail": "page 'Mushroom' : 40 567 vues/mois (réel)"
+        },
+        "growth": {
+          "value": 40.8,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 78.0,
+          "detail": "évolution -18% des vues sur 12 mois (réel)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'low', ~5 annonces Etsy (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, mood"
+        },
+        "reusability": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "wikipedia"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "low"
+        ],
+        "notes": "demande MESURÉE (wikipedia) · compétition low · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "page 'Mushroom' : 40 567 vues/mois (réel)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Mycological Spore Prints Foraging seamless pattern",
+        "Spore Print Mandala repeat pattern",
+        "Forager's Tool Grid repeat pattern"
+      ]
+    },
+    {
+      "name": "Shrimp Breeder Tea Party",
+      "trending_score": 68,
+      "market_opportunity": "very_high",
+      "why_trending": "The freshwater aquarium hobby has exploded on Reddit, with r/shrimptank boasting over 150,000 highly passionate members. There is a massive, documented demand for cute, shrimp-themed home decor and fabric, yet Spoonflower currently only offers generic marine patterns, leaving this passionate community completely underserved.",
+      "target_audience": "nursery and baby room decorators making playful bedding, pajamas, and wallpaper",
+      "sub_niches": [
+        {
+          "name": "Caridina Shrimp Botanical",
+          "trending_score": 50,
+          "unique_angle": "Scientific botanical style pairing crystal red shrimp with aquatic mosses.",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Neocaridina Bubble Tea",
+          "trending_score": 50,
+          "unique_angle": "Kawaii-style cherry shrimp swimming inside bubble tea cups.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "cozy, whimsical, humorous, marine",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Moss Green #2E4A3F",
+          "Cherry Red #E63946",
+          "Cream #F1FAEE"
+        ],
+        "color_accent": [
+          "Soft Coral #F4A261",
+          "Gold #E9C46A"
+        ],
+        "color_background": "Moss Green #2E4A3F",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "half-drop",
+        "pattern_scale": "medium",
+        "top_products": [
+          "quilting cotton",
+          "wallpaper"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless repeat pattern for high-end children's bedding and nursery wallpaper. The pattern looks exactly like a hand-drawn storybook illustration with bold ink outlines and flat solid color fills. The design features: cute cherry red shrimp and crystal black shrimp wearing tiny black top hats and lace bonnets, sitting on green moss balls, sipping tea from acorn cups, alongside java ferns, miniature ramshorn snails, and floating water bubbles. Colors: deep moss green (#2E4A3F), cherry red (#E63946), cream (#F1FAEE), and soft coral (#F4A261). NO blending, NO merging, NO morphing between any objects. Distinct individual fully-formed shrimp characters and tea party elements with clear spacing between each element. Single solid uniform moss green (#2E4A3F) background across the entire tile, no texture, no gradient. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Crab and shrimp varieties vintage poster.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Crab_and_shrimp_varieties_vintage_poster.jpg",
+          "width": 2500,
+          "height": 1901
+        },
+        {
+          "title": "Shrimp varieties vintage poster.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Shrimp_varieties_vintage_poster.jpg",
+          "width": 1667,
+          "height": 2500
+        }
+      ],
+      "generated_at": "2026-06-05 19:38 UTC",
+      "opportunity_score": 68.3,
+      "confidence": 65.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 58.4,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 82.0,
+          "detail": "page 'List of foods named after people' : 4 204 vues/mois (réel)"
+        },
+        "growth": {
+          "value": 58.6,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 78.0,
+          "detail": "évolution +17% des vues sur 12 mois (réel)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'low' (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, mood"
+        },
+        "reusability": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "wikipedia"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "very_high",
+          "low"
+        ],
+        "notes": "demande MESURÉE (wikipedia) · compétition low · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "page 'List of foods named after people' : 4 204 vues/mois (réel)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Shrimp Breeder Tea Party seamless pattern",
+        "Caridina Shrimp Botanical repeat pattern",
+        "Neocaridina Bubble Tea repeat pattern"
+      ]
+    },
+    {
+      "name": "Medieval Woodcut Cat Tarot",
+      "trending_score": 66,
+      "market_opportunity": "very_high",
+      "why_trending": "The tarot and occult community on Reddit (r/tarot, 350,000+ members) is highly active, with members constantly seeking unique fabric for altar cloths and tarot bags. Combining this passionate hobby with the universal appeal of cats dressed as Major Arcana cards in ornate frames creates a highly lucrative, underserved niche.",
+      "target_audience": "quilters making altar cloths, and apparel sewists making mystical dresses",
+      "sub_niches": [
+        {
+          "name": "Rider-Waite Cat Arcana",
+          "trending_score": 50,
+          "unique_angle": "Direct feline interpretations of the classic 1910 Pamela Colman Smith illustrations.",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Gothic Cathedral Cat Tarot",
+          "trending_score": 50,
+          "unique_angle": "Stained-glass style frames with dark, moody medieval cat saints.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "mystical, esoteric, humorous, literary",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Midnight Purple #2E1A47",
+          "Cream #FFFDD0",
+          "Antique Gold #DAA520"
+        ],
+        "color_accent": [
+          "Soft Rose #FFB6C1",
+          "White #FFFFFF"
+        ],
+        "color_background": "Midnight Purple #2E1A47",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "quilting cotton",
+          "apparel fabric"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Seamless repeat pattern for high-end mystical quilting cotton and altar cloths. The pattern looks exactly like a medieval woodcut engraving with fine ink cross-hatching and flat solid color fills. The design features: mystical cats dressed as Major Arcana tarot cards, including 'The Fool' cat stepping off a cliff with a tiny bindle and 'The Magician' cat raising a wand over a table of elemental symbols, each card framed by an ornate gothic arch. Interspersed between the cards are golden chalices, medieval swords, pentacle coins, crescent moons, and mystical eyes of providence. Colors: deep midnight purple (#2E1A47), parchment cream (#FFFDD0), antique gold (#DAA520), and soft rose (#FFB6C1). NO blending, NO merging, NO morphing between any objects. Distinct individual fully-formed cat tarot cards and symbols with clear spacing between each element. Single solid uniform midnight purple (#2E1A47) background across the entire tile, no texture. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-05 19:38 UTC",
+      "opportunity_score": 66.4,
+      "confidence": 65.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 68.7,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 82.0,
+          "detail": "page 'Pope Joan' : 18 061 vues/mois (réel)"
+        },
+        "growth": {
+          "value": 25.5,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 78.0,
+          "detail": "évolution -49% des vues sur 12 mois (réel)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'low', ~5 annonces Etsy (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, mood"
+        },
+        "reusability": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "wikipedia"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "very_high",
+          "low"
+        ],
+        "notes": "demande MESURÉE (wikipedia) · compétition low · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "page 'Pope Joan' : 18 061 vues/mois (réel)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Medieval Woodcut Cat Tarot seamless pattern",
+        "Rider-Waite Cat Arcana repeat pattern",
+        "Gothic Cathedral Cat Tarot repeat pattern"
+      ]
+    },
+    {
+      "name": "Art Deco Octopus Tile",
+      "trending_score": 64,
+      "market_opportunity": "very_high",
+      "why_trending": "Symmetrical Art Deco animal tiles are highly sought after for luxury bathroom wallpapers. An octopus with tentacles radiating in elegant, geometric curves offers a sophisticated, high-contrast design that perfectly captures the opulent 1920s aesthetic while remaining highly functional as a repeating tile.",
+      "target_audience": "bathroom wallpaper home decorators making statement accent walls",
+      "sub_niches": [
+        {
+          "name": "Nouveau Octopus Damask",
+          "trending_score": 50,
+          "unique_angle": "Blending Art Deco geometry with fluid Art Nouveau tentacle swirls.",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Kraken Key Pattern",
+          "trending_score": 50,
+          "unique_angle": "Octopus tentacles interlocking to form a classic Greek key border.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "luxurious, sophisticated, geometric, opulent",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Deep Teal #1D3557",
+          "Cream #F1FAEE",
+          "Soft Coral #E63946"
+        ],
+        "color_accent": [
+          "Gold #E9C46A"
+        ],
+        "color_background": "Deep Teal #1D3557",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "mirror",
+        "pattern_scale": "large",
+        "top_products": [
+          "wallpaper",
+          "home decor"
+        ],
+        "competition_level": "low"
+      },
+      "ai_generation": {
+        "positive_prompt": "Single octopus, centered on a solid deep teal (#1D3557) background. Art Deco flat graphic silhouette style for high-end Spoonflower wallpaper tile. The octopus fills 80% of the tile with equal margins on all four edges so Spoonflower mirror repeat will connect tentacle tips symmetrically. The octopus faces directly forward, tentacles fully spread left and right symmetrically, extending toward the left and right tile edges. The octopus is rendered as a single flat cream (#F1FAEE) silhouette on the deep teal background, with a single gold (#E9C46A) accent on the eyes and tentacle suction cups. Art Deco flat graphic rendering with bold silhouettes, crisp hard edges, and zero soft shading. Tentacles are drawn as precisely spaced radiating lines. Solid uniform deep teal (#1D3557) background across the entire tile, no texture, perfectly flat. 3-color palette for maximum wallpaper printing contrast. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Print, Die Tausend Raben Vorsatz Papier (A Thousand Ravens Book End Paper), plate 11, in Die Quelle- Flächen Schmuck (The Source- Ornament for Flat Surfaces), 1901 (CH 18670543).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Print%2C_Die_Tausend_Raben_Vorsatz_Papier_%28A_Thousand_Ravens_Book_End_Paper%29%2C_plate_11%2C_in_Die_Quelle-_Fl%C3%A4chen_Schmuck_%28The_Source-_Ornament_for_Flat_Surfaces%29%2C_1901_%28CH_18670543%29.jpg",
+          "width": 4096,
+          "height": 3470
+        },
+        {
+          "title": "Print, Die Tausend Raben Vorsatz Papier (A Thousand Ravens Book End Paper), plate 11, in Die Quelle- Flächen Schmuck (The Source- Ornament for Flat Surfaces), 1901 (CH 18670543-2).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/31/Print%2C_Die_Tausend_Raben_Vorsatz_Papier_%28A_Thousand_Ravens_Book_End_Paper%29%2C_plate_11%2C_in_Die_Quelle-_Fl%C3%A4chen_Schmuck_%28The_Source-_Ornament_for_Flat_Surfaces%29%2C_1901_%28CH_18670543-2%29.jpg",
+          "width": 3731,
+          "height": 3143
+        }
+      ],
+      "generated_at": "2026-06-05 19:38 UTC",
+      "opportunity_score": 64.4,
+      "confidence": 65.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 52.7,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 82.0,
+          "detail": "page 'Michelin House' : 1 844 vues/mois (réel)"
+        },
+        "growth": {
+          "value": 43.7,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 78.0,
+          "detail": "évolution -13% des vues sur 12 mois (réel)"
+        },
+        "competition": {
+          "value": 90.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'low' (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, mood"
+        },
+        "reusability": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "wikipedia"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "very_high",
+          "low"
+        ],
+        "notes": "demande MESURÉE (wikipedia) · compétition low · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "low",
+        "score": 10.0,
+        "rationale": "compétition 'low' → marché encore ouvert"
+      },
+      "reusability_detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "page 'Michelin House' : 1 844 vues/mois (réel)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Art Deco Octopus Tile seamless pattern",
+        "Nouveau Octopus Damask repeat pattern",
+        "Kraken Key Pattern repeat pattern"
+      ]
+    },
+    {
+      "name": "Art Deco Tiger Tile",
+      "trending_score": 60,
+      "market_opportunity": "high",
+      "why_trending": "Bold, statement animal prints are highly popular for modern apparel and accent wallpapers. A symmetrical tiger face framed by geometric Art Deco sunburst lines offers a powerful, high-contrast design that perfectly captures the opulent 1920s aesthetic while remaining highly functional as a repeating tile.",
+      "target_audience": "apparel sewists making statement jackets, and wallpaper decorators",
+      "sub_niches": [
+        {
+          "name": "Tiger Stripe Chevron",
+          "trending_score": 50,
+          "unique_angle": "Tiger stripes stylized into sharp, repeating Art Deco chevron bands.",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Bengal Palm Fan",
+          "trending_score": 50,
+          "unique_angle": "Symmetrical tiger faces framed by stylized geometric palm fronds.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "luxurious, sophisticated, geometric, opulent",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Jet Black #111111",
+          "Terracotta Orange #E76F51",
+          "Cream #F4F1DE"
+        ],
+        "color_accent": [
+          "Antique Gold #D4AF37"
+        ],
+        "color_background": "Jet Black #111111",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "mirror",
+        "pattern_scale": "large",
+        "top_products": [
+          "wallpaper",
+          "apparel fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Single tiger face, centered on a solid jet black (#111111) background. Art Deco flat graphic silhouette style for high-end Spoonflower wallpaper tile. The tiger fills 80% of the tile with equal margins on all four edges so Spoonflower mirror repeat will connect stripe and cheek tips symmetrically. The tiger faces directly forward, whiskers and stripes fully spread left and right symmetrically, extending toward the left and right tile edges. The tiger is rendered as a single flat terracotta orange (#E76F51) silhouette on the black background, with a single gold (#D4AF37) accent on the eyes and nose. Art Deco flat graphic rendering with bold silhouettes, crisp hard edges, and zero soft shading. Solid uniform jet black (#111111) background across the entire tile, no texture, perfectly flat. 3-color palette for maximum wallpaper printing contrast. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Aigles et chne papier peint antilopes tigres cactus et palmiers bordure - L'animal dans la decoration (1897) by M. P. Verneuil (New York Public Library, enhanced by Rawpixel) 506'874347 o.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Aigles_et_chne_papier_peint_antilopes_tigres_cactus_et_palmiers_bordure_-_L%27animal_dans_la_decoration_%281897%29_by_M._P._Verneuil_%28New_York_Public_Library%2C_enhanced_by_Rawpixel%29_506%27874347_o.jpg",
+          "width": 3671,
+          "height": 5509
+        },
+        {
+          "title": "The year's at the spring; an anthology of recent poetry (1920) (14804805503).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/da/The_year%27s_at_the_spring%3B_an_anthology_of_recent_poetry_%281920%29_%2814804805503%29.jpg",
+          "width": 2202,
+          "height": 2952
+        }
+      ],
+      "generated_at": "2026-06-05 19:38 UTC",
+      "opportunity_score": 60.5,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 90.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 90 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'high', ~250 annonces Etsy (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, mood"
+        },
+        "reusability": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 65.0,
+        "rationale": "compétition 'medium' → marché très exploité"
+      },
+      "reusability_detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "score Gemini 90 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Art Deco Tiger Tile seamless pattern",
+        "Tiger Stripe Chevron repeat pattern",
+        "Bengal Palm Fan repeat pattern"
+      ]
+    },
+    {
+      "name": "Art Deco Peacock Tile",
+      "trending_score": 56,
+      "market_opportunity": "high",
+      "why_trending": "Peacock motifs are a classic interior design staple, but modern decorators are seeking highly structured, geometric interpretations rather than loose, painterly styles. A symmetrical peacock with tail feathers fanned in a perfect geometric arch provides an opulent, architectural wallpaper design.",
+      "target_audience": "wallpaper home decorators making statement accent walls and dining room decor",
+      "sub_niches": [
+        {
+          "name": "Peacock Feather Scales",
+          "trending_score": 50,
+          "unique_angle": "Feather eyes arranged in a tight, overlapping scallop scale pattern.",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Chrysanthemum Peacock",
+          "trending_score": 50,
+          "unique_angle": "Peacock tails stylized to look like geometric chrysanthemum blooms.",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "luxurious, sophisticated, geometric, opulent",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Charcoal #264653",
+          "Emerald Green #2A9D8F",
+          "Ochre Gold #E9C46A"
+        ],
+        "color_accent": [
+          "Soft Cream #F4F1DE"
+        ],
+        "color_background": "Charcoal #264653",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "mirror",
+        "pattern_scale": "large",
+        "top_products": [
+          "wallpaper",
+          "home decor"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Single peacock, centered on a solid charcoal (#264653) background. Art Deco flat graphic silhouette style for high-end Spoonflower wallpaper tile. The peacock fills 80% of the tile with equal margins on all four edges so Spoonflower mirror repeat will connect wing and feather tips symmetrically. The peacock faces directly forward, tail feathers fully spread left and right symmetrically in a perfect geometric arch, extending toward the left and right tile edges. The peacock is rendered as a single flat emerald green (#2A9D8F) silhouette on the charcoal background, with a single gold (#E9C46A) accent on the crown and feather eyes. Art Deco flat graphic rendering with bold silhouettes, crisp hard edges, and zero soft shading. Solid uniform charcoal (#264653) background across the entire tile, no texture, perfectly flat. 3-color palette for maximum wallpaper printing contrast. All four edges tile perfectly.",
+        "negative_prompt": "",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85
+      },
+      "reference_images": [
+        {
+          "title": "Paons et pavots bordure grondins algues et coquilles plat en mail cloisonn - L'animal dans la decoration (1897) by M. P. Verneuil (New York Public Library, enhanced by Rawpixel) 506'789311 o.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Paons_et_pavots_bordure_grondins_algues_et_coquilles_plat_en_mail_cloisonn_-_L%27animal_dans_la_decoration_%281897%29_by_M._P._Verneuil_%28New_York_Public_Library%2C_enhanced_by_Rawpixel%29_506%27789311_o.jpg",
+          "width": 3710,
+          "height": 5637
+        },
+        {
+          "title": "Papillons et pavots veilleuse maux translucides paons vase maux cloisonns oiseaux tenture capricornes jeu de fond sauterelles borduref - L'animal dans la decoration (1897) by M. P. Verneuil (ehanced by Rawpixel).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Papillons_et_pavots_veilleuse_maux_translucides_paons_vase_maux_cloisonns_oiseaux_tenture_capricornes_jeu_de_fond_sauterelles_borduref_-_L%27animal_dans_la_decoration_%281897%29_by_M._P._Verneuil_%28ehanced_by_Rawpixel%29.jpg",
+          "width": 3715,
+          "height": 5621
+        }
+      ],
+      "generated_at": "2026-06-05 19:38 UTC",
+      "opportunity_score": 56.1,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 92.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 92 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 35.0,
+          "kind": "measured",
+          "source": "google_search_grounding",
+          "confidence": 70.0,
+          "detail": "trending_now=False (grounding confirmé)"
+        },
+        "competition": {
+          "value": 15.0,
+          "kind": "measured",
+          "source": "etsy_search",
+          "confidence": 80.0,
+          "detail": "compétition Etsy 'very_high', ~500 annonces Etsy (grounding confirmé)"
+        },
+        "visual_potential": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: ≥3 couleurs primaires, accents, mood"
+        },
+        "reusability": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "etsy_search",
+          "google_search_grounding"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 85.0,
+        "rationale": "compétition 'medium' → marché très exploité"
+      },
+      "reusability_detail": "2 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "score Gemini 92 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Art Deco Peacock Tile seamless pattern",
+        "Peacock Feather Scales repeat pattern",
+        "Chrysanthemum Peacock repeat pattern"
+      ]
+    }
+  ]
+}

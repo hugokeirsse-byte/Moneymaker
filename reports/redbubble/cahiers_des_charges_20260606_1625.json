@@ -1,0 +1,3082 @@
+{
+  "generated_at": "2026-06-06T16:25:13.807173+00:00",
+  "total_briefs": 22,
+  "briefs": [
+    {
+      "name": "Sourdough Fermentation Chemistry Diagram",
+      "trending_score": 66,
+      "market_opportunity": "very_high",
+      "why_trending": "Sourdough bakers are deeply proud of the science behind their loaves. They want to display their passion for wild fermentation through clean, academic diagrams rather than generic 'baking' clip art.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "Baking Science Print",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Fermentation Lab Sticker",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Artisan Baker Apron",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "scientific, precise, clean, academic",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Warm Amber #D9A05B",
+          "Clean Slate Blue #4A6984"
+        ],
+        "color_accent": [
+          "Off-White #F8F8F6"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Sourdough starter culture, wild yeast cells and lactobacillus bacteria, magnified microscopy view, organic circular forms, delicate scientific illustration, pale gold and ivory tones. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-06 16:25 UTC",
+      "opportunity_score": 66.2,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 88.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 88 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 37.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "very_high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "score Gemini 88 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Sourdough Fermentation Chemistry Diagram seamless pattern",
+        "Baking Science Print repeat pattern",
+        "Fermentation Lab Sticker repeat pattern",
+        "Artisan Baker Apron repeat pattern"
+      ],
+      "positive_prompt": "Sourdough starter culture, wild yeast cells and lactobacillus bacteria, magnified microscopy view, organic circular forms, delicate scientific illustration, pale gold and ivory tones. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
+    },
+    {
+      "name": "Fountain Pen Nib Capillary Action Diagram",
+      "trending_score": 66,
+      "market_opportunity": "very_high",
+      "why_trending": "Fountain pen collectors are deeply proud of the engineering behind their pens. They want to display their passion for writing instruments through clean, vintage patent-style diagrams rather than generic 'writing' clip art.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "Writing Instrument Print",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Pen Collector Sticker",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Technical Drawing Journal",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "scientific, precise, vintage, academic",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Deep Indigo Ink #1A237E",
+          "Warm Brass #B5A642"
+        ],
+        "color_accent": [
+          "Cream #F5F0E8"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Vintage fountain pen nib, iridium tip close-up, precise technical botanical-style illustration, dark steel blue and warm silver tones. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-06 16:25 UTC",
+      "opportunity_score": 66.2,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 88.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 88 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 37.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "very_high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "score Gemini 88 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Fountain Pen Nib Capillary Action Diagram seamless pattern",
+        "Writing Instrument Print repeat pattern",
+        "Pen Collector Sticker repeat pattern",
+        "Technical Drawing Journal repeat pattern"
+      ],
+      "positive_prompt": "Vintage fountain pen nib, iridium tip close-up, precise technical botanical-style illustration, dark steel blue and warm silver tones. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
+    },
+    {
+      "name": "Koji-Kin Fermentation Plate",
+      "trending_score": 65,
+      "market_opportunity": "very_high",
+      "why_trending": "The global rise of home fermentation, koji-making, and artisanal miso/sake brewing has created a highly passionate community of amateur microbiologists. They want to display their pride in their craft but find only generic 'beer' or 'cooking' merch.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "Miso Maker Plate",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Sake Brewer Botanical",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Mycology Lab Sticker",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "scientific, historical, academic, precise",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Olive Green #556B2F",
+          "Pale Ochre #E8D8B0"
+        ],
+        "color_accent": [
+          "Warm White #FAFAF8"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Aspergillus oryzae spore head, koji mold colony, magnified botanical specimen study, olive gold and sage green tones. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-06 16:25 UTC",
+      "opportunity_score": 65.2,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 85.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 85 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 37.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "very_high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "score Gemini 85 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Koji-Kin Fermentation Plate seamless pattern",
+        "Miso Maker Plate repeat pattern",
+        "Sake Brewer Botanical repeat pattern",
+        "Mycology Lab Sticker repeat pattern"
+      ],
+      "positive_prompt": "Aspergillus oryzae spore head, koji mold colony, magnified botanical specimen study, olive gold and sage green tones. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
+    },
+    {
+      "name": "British Soldiers Lichen Plate",
+      "trending_score": 65,
+      "market_opportunity": "high",
+      "why_trending": "The intersection of lichenology and scientific illustration has created a strong demand for high-quality, anatomically accurate lichen illustrations. Collectors want authentic museum-grade representations over generic clip art.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "Lichenology Study Print",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Nature Hiker Sticker",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Field Botanist Journal",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "scientific, elegant, detailed, archival",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Pale Green #98FB98",
+          "Scarlet Red #FF2400"
+        ],
+        "color_accent": [
+          "Warm White #FAFAF8"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Cladonia cristatella lichen, scarlet-tipped podetia branching upward, miniature forest of fruiting bodies, bright crimson red caps and pale grey-green stems. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-06 16:25 UTC",
+      "opportunity_score": 64.7,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 83.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 83 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 37.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "score Gemini 83 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "British Soldiers Lichen Plate seamless pattern",
+        "Lichenology Study Print repeat pattern",
+        "Nature Hiker Sticker repeat pattern",
+        "Field Botanist Journal repeat pattern"
+      ],
+      "positive_prompt": "Cladonia cristatella lichen, scarlet-tipped podetia branching upward, miniature forest of fruiting bodies, bright crimson red caps and pale grey-green stems. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
+    },
+    {
+      "name": "Common Haircap Moss Plate",
+      "trending_score": 65,
+      "market_opportunity": "high",
+      "why_trending": "The intersection of terrarium building and scientific illustration has created a strong demand for high-quality, anatomically accurate moss illustrations. Collectors want authentic museum-grade representations over generic clip art.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "Bryology Study Print",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Terrarium Builder Sticker",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Field Bryologist Journal",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "scientific, elegant, detailed, archival",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Forest Green #228B22",
+          "Golden Straw #DAA520"
+        ],
+        "color_accent": [
+          "Warm White #FAFAF8"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Polytrichum commune moss, star-shaped rosette with central spore capsule, viewed from above, geometric symmetry, deep forest green and warm amber. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
+      },
+      "reference_images": [
+        {
+          "title": "Polytrichum commune GS199.png",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Polytrichum_commune_GS199.png",
+          "width": 556,
+          "height": 2283
+        }
+      ],
+      "generated_at": "2026-06-06 16:25 UTC",
+      "opportunity_score": 64.7,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 83.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 83 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 37.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "score Gemini 83 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Common Haircap Moss Plate seamless pattern",
+        "Bryology Study Print repeat pattern",
+        "Terrarium Builder Sticker repeat pattern",
+        "Field Bryologist Journal repeat pattern"
+      ],
+      "positive_prompt": "Polytrichum commune moss, star-shaped rosette with central spore capsule, viewed from above, geometric symmetry, deep forest green and warm amber. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
+    },
+    {
+      "name": "Sacred Lotus Seed Pod Plate",
+      "trending_score": 65,
+      "market_opportunity": "high",
+      "why_trending": "The intersection of botanical collecting and scientific illustration has created a strong demand for high-quality, anatomically accurate seed pod illustrations. Collectors want authentic museum-grade representations over generic clip art.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "Botanical Study Print",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Floral Designer Sticker",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Field Botanist Journal",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "scientific, elegant, detailed, archival",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Sepia Brown #5C4033",
+          "Dusty Tan #D2B48C"
+        ],
+        "color_accent": [
+          "Warm White #FAFAF8"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Nelumbo nucifera dried lotus seed pod, cross-section revealing chambers, architectural botanical specimen, warm ochre and dusty rose tones. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
+      },
+      "reference_images": [
+        {
+          "title": "Naturalis Biodiversity Center - RMNH.ART.283-Cypripedium macranthum-Nelumbo nucifera-Caltha palustris var. enkoso-Plantago asiatica-Hosta spp.-indet.-Yūshi Ishizaki- Cock Blomhoff Collection -pencil drawing-water colour.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Naturalis_Biodiversity_Center_-_RMNH.ART.283-Cypripedium_macranthum-Nelumbo_nucifera-Caltha_palustris_var._enkoso-Plantago_asiatica-Hosta_spp.-indet.-Y%C5%ABshi_Ishizaki-_Cock_Blomhoff_Collection_-pencil_drawing-water_colour.jpg",
+          "width": 1365,
+          "height": 1920
+        },
+        {
+          "title": "Naturalis Biodiversity Center - RMNH.ART.696 - Nelumbo nucifera - Yūshi Ishizaki - Cock Blomhoff Collection - pencil drawing - water colour.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Naturalis_Biodiversity_Center_-_RMNH.ART.696_-_Nelumbo_nucifera_-_Y%C5%ABshi_Ishizaki_-_Cock_Blomhoff_Collection_-_pencil_drawing_-_water_colour.jpg",
+          "width": 1592,
+          "height": 1920
+        }
+      ],
+      "generated_at": "2026-06-06 16:25 UTC",
+      "opportunity_score": 64.7,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 83.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 83 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 37.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "score Gemini 83 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Sacred Lotus Seed Pod Plate seamless pattern",
+        "Botanical Study Print repeat pattern",
+        "Floral Designer Sticker repeat pattern",
+        "Field Botanist Journal repeat pattern"
+      ],
+      "positive_prompt": "Nelumbo nucifera dried lotus seed pod, cross-section revealing chambers, architectural botanical specimen, warm ochre and dusty rose tones. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
+    },
+    {
+      "name": "Organ Pipe Coral Plate",
+      "trending_score": 65,
+      "market_opportunity": "high",
+      "why_trending": "The intersection of reef keeping and scientific illustration has created a strong demand for high-quality, anatomically accurate coral illustrations. Collectors want authentic museum-grade representations over generic clip art.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "Marine Biology Study Print",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Reef Keeper Sticker",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Oceanographic Journal",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "scientific, elegant, detailed, archival",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Dark Red #8B0000",
+          "Dusty Rose #E0115F"
+        ],
+        "color_accent": [
+          "Warm White #FAFAF8"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Tubipora musica organ pipe coral, parallel crimson tubes in cross-section, precise natural architecture, deep terracotta red and pale cream. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
+      },
+      "reference_images": [
+        {
+          "title": "FMIB 50048 Tubipora musica (Linn).jpeg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/67/FMIB_50048_Tubipora_musica_%28Linn%29.jpeg",
+          "width": 745,
+          "height": 692
+        }
+      ],
+      "generated_at": "2026-06-06 16:25 UTC",
+      "opportunity_score": 64.7,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 83.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 83 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 37.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "score Gemini 83 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Organ Pipe Coral Plate seamless pattern",
+        "Marine Biology Study Print repeat pattern",
+        "Reef Keeper Sticker repeat pattern",
+        "Oceanographic Journal repeat pattern"
+      ],
+      "positive_prompt": "Tubipora musica organ pipe coral, parallel crimson tubes in cross-section, precise natural architecture, deep terracotta red and pale cream. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
+    },
+    {
+      "name": "Common Starfish Plate",
+      "trending_score": 65,
+      "market_opportunity": "high",
+      "why_trending": "The intersection of beachcombing and scientific illustration has created a strong demand for high-quality, anatomically accurate starfish illustrations. Collectors want authentic museum-grade representations over generic clip art.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "Marine Biology Study Print",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Beachcomber Sticker",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Oceanographic Journal",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "scientific, elegant, detailed, archival",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Orange-Ochre #D2691E",
+          "Pale Cream #FFF8DC"
+        ],
+        "color_accent": [
+          "Warm White #FAFAF8"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Asterias rubens sea star, radial symmetry from above, five-armed natural mandala, textured orange surface detail, warm burnt sienna and terracotta. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
+      },
+      "reference_images": [
+        {
+          "title": "FMIB 50118 Asterias rubens (Lamarck).jpeg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/FMIB_50118_Asterias_rubens_%28Lamarck%29.jpeg",
+          "width": 665,
+          "height": 640
+        }
+      ],
+      "generated_at": "2026-06-06 16:25 UTC",
+      "opportunity_score": 64.7,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 83.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 83 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 37.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "score Gemini 83 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Common Starfish Plate seamless pattern",
+        "Marine Biology Study Print repeat pattern",
+        "Beachcomber Sticker repeat pattern",
+        "Oceanographic Journal repeat pattern"
+      ],
+      "positive_prompt": "Asterias rubens sea star, radial symmetry from above, five-armed natural mandala, textured orange surface detail, warm burnt sienna and terracotta. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
+    },
+    {
+      "name": "Paper Birch Bark Plate",
+      "trending_score": 65,
+      "market_opportunity": "high",
+      "why_trending": "The intersection of forestry and scientific illustration has created a strong demand for high-quality, anatomically accurate bark illustrations. Collectors want authentic museum-grade representations over generic clip art.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "Dendrology Study Print",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Forester Gear Sticker",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Field Dendrologist Journal",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "scientific, elegant, detailed, archival",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Birch White #F5F5F5",
+          "Soft Tan #D2B48C"
+        ],
+        "color_accent": [
+          "Warm White #FAFAF8"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Betula papyrifera birch bark peeling curl, delicate horizontal lenticels and paper-thin layers, chalk white and warm taupe with dark markings. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-06 16:25 UTC",
+      "opportunity_score": 64.7,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 83.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 83 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 37.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "score Gemini 83 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Paper Birch Bark Plate seamless pattern",
+        "Dendrology Study Print repeat pattern",
+        "Forester Gear Sticker repeat pattern",
+        "Field Dendrologist Journal repeat pattern"
+      ],
+      "positive_prompt": "Betula papyrifera birch bark peeling curl, delicate horizontal lenticels and paper-thin layers, chalk white and warm taupe with dark markings. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
+    },
+    {
+      "name": "Zombie Ant Fungus Plate",
+      "trending_score": 65,
+      "market_opportunity": "high",
+      "why_trending": "The intersection of mycology and scientific illustration has created a strong demand for high-quality, anatomically accurate fungi illustrations. Collectors want authentic museum-grade representations over generic clip art.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "Mycology Study Print",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Mycologist Gear Sticker",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Field Mycologist Journal",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "scientific, elegant, detailed, archival",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Olive Brown #6B8E23",
+          "Dark Ant Black #111111"
+        ],
+        "color_accent": [
+          "Warm White #FAFAF8"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Ophiocordyceps unilateralis fungal stroma emerging from ant head, precise entomological specimen study, muted amber and dark umber tones. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-06 16:25 UTC",
+      "opportunity_score": 64.7,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 83.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 83 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 37.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "score Gemini 83 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Zombie Ant Fungus Plate seamless pattern",
+        "Mycology Study Print repeat pattern",
+        "Mycologist Gear Sticker repeat pattern",
+        "Field Mycologist Journal repeat pattern"
+      ],
+      "positive_prompt": "Ophiocordyceps unilateralis fungal stroma emerging from ant head, precise entomological specimen study, muted amber and dark umber tones. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
+    },
+    {
+      "name": "Maidenhair Tree Botanical Plate",
+      "trending_score": 65,
+      "market_opportunity": "high",
+      "why_trending": "The intersection of botanical collecting and scientific illustration has created a strong demand for high-quality, anatomically accurate ginkgo illustrations. Collectors want authentic museum-grade representations over generic clip art.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "Botanical Study Print",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Arborist Gear Sticker",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Field Botanist Journal",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "scientific, elegant, detailed, archival",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Ginkgo Yellow-Green #9ACD32",
+          "Soft Ochre #E6C280"
+        ],
+        "color_accent": [
+          "Warm White #FAFAF8"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Ginkgo biloba fan-shaped leaf, perfect bilobed specimen, autumn coloring with visible venation, golden yellow and pale sage green. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
+      },
+      "reference_images": [
+        {
+          "title": "Autumn leaves - Lavinia Bassi.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/0/07/Autumn_leaves_-_Lavinia_Bassi.jpg",
+          "width": 4961,
+          "height": 3295
+        }
+      ],
+      "generated_at": "2026-06-06 16:25 UTC",
+      "opportunity_score": 64.7,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 83.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 83 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 37.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "score Gemini 83 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Maidenhair Tree Botanical Plate seamless pattern",
+        "Botanical Study Print repeat pattern",
+        "Arborist Gear Sticker repeat pattern",
+        "Field Botanist Journal repeat pattern"
+      ],
+      "positive_prompt": "Ginkgo biloba fan-shaped leaf, perfect bilobed specimen, autumn coloring with visible venation, golden yellow and pale sage green. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
+    },
+    {
+      "name": "Blue Dragon Nudibranch Plate",
+      "trending_score": 65,
+      "market_opportunity": "high",
+      "why_trending": "The intersection of marine biology and scientific illustration has created a strong demand for high-quality, anatomically accurate nudibranch illustrations. Collectors want authentic museum-grade representations over generic clip art.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "Marine Biology Study Print",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Nudibranch Lover Sticker",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Oceanographic Journal",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "scientific, elegant, detailed, archival",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Cobalt Blue #0047AB",
+          "Pale Silver-Grey #C0C0C0"
+        ],
+        "color_accent": [
+          "Warm White #FAFAF8"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Glaucus atlanticus blue sea dragon, cerata outstretched, ethereal floating specimen, electric blue and silver-white tones. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
+      },
+      "reference_images": [
+        {
+          "title": "Glaucus atlanticus jaws 1852.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/32/Glaucus_atlanticus_jaws_1852.jpg",
+          "width": 263,
+          "height": 200
+        },
+        {
+          "title": "Glaucus radula.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/48/Glaucus_radula.jpg",
+          "width": 119,
+          "height": 126
+        }
+      ],
+      "generated_at": "2026-06-06 16:25 UTC",
+      "opportunity_score": 64.7,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 83.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 83 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 37.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "score Gemini 83 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Blue Dragon Nudibranch Plate seamless pattern",
+        "Marine Biology Study Print repeat pattern",
+        "Nudibranch Lover Sticker repeat pattern",
+        "Oceanographic Journal repeat pattern"
+      ],
+      "positive_prompt": "Glaucus atlanticus blue sea dragon, cerata outstretched, ethereal floating specimen, electric blue and silver-white tones. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
+    },
+    {
+      "name": "Dawn Redwood Botanical Plate",
+      "trending_score": 65,
+      "market_opportunity": "high",
+      "why_trending": "The intersection of paleobotany and scientific illustration has created a strong demand for high-quality, anatomically accurate dawn redwood illustrations. Collectors want authentic museum-grade representations over generic clip art.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "Paleobotany Study Print",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Bonsai Enthusiast Sticker",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Field Botanist Journal",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "scientific, elegant, detailed, archival",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Redwood Green #556B2F",
+          "Cone Brown #8B5A2B"
+        ],
+        "color_accent": [
+          "Warm White #FAFAF8"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Metasequoia glyptostroboides branch with feathery needles and small cones, living fossil botanical specimen, soft sage green and warm rust. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-06 16:25 UTC",
+      "opportunity_score": 64.7,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 83.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 83 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 37.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "score Gemini 83 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Dawn Redwood Botanical Plate seamless pattern",
+        "Paleobotany Study Print repeat pattern",
+        "Bonsai Enthusiast Sticker repeat pattern",
+        "Field Botanist Journal repeat pattern"
+      ],
+      "positive_prompt": "Metasequoia glyptostroboides branch with feathery needles and small cones, living fossil botanical specimen, soft sage green and warm rust. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
+    },
+    {
+      "name": "Paua Abalone Shell Plate",
+      "trending_score": 65,
+      "market_opportunity": "high",
+      "why_trending": "The intersection of conchology and scientific illustration has created a strong demand for high-quality, anatomically accurate shell illustrations. Collectors want authentic museum-grade representations over generic clip art.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "Conchology Study Print",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Ocean Lover Sticker",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Oceanographic Journal",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "scientific, elegant, detailed, archival",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Teal-Blue #008080",
+          "Soft Violet #8A2BE2"
+        ],
+        "color_accent": [
+          "Warm White #FAFAF8"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Haliotis iris paua abalone shell, iridescent interior surface, swirling opalescent patterns, deep teal, violet and emerald iridescence on cream. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-06 16:25 UTC",
+      "opportunity_score": 64.7,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 83.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 83 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 37.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "score Gemini 83 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Paua Abalone Shell Plate seamless pattern",
+        "Conchology Study Print repeat pattern",
+        "Ocean Lover Sticker repeat pattern",
+        "Oceanographic Journal repeat pattern"
+      ],
+      "positive_prompt": "Haliotis iris paua abalone shell, iridescent interior surface, swirling opalescent patterns, deep teal, violet and emerald iridescence on cream. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
+    },
+    {
+      "name": "Welwitschia Mirabilis Botanical Plate",
+      "trending_score": 64,
+      "market_opportunity": "high",
+      "why_trending": "The rare plant hobby has moved past monsteras into bizarre, ancient desert species. Collectors want to show off their obsession with botanical anomalies through authentic, museum-grade art.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "Namib Desert Flora Print",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Botanical Oddity Sticker",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Arid Plant Journal",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "ancient, botanical, academic, rare",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Sage Green #87A987",
+          "Dusty Terracotta #C07A60"
+        ],
+        "color_accent": [
+          "Warm White #FAFAF8"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Welwitschia mirabilis ancient desert plant, two massive strap-leaves spiraling outward, primordial botanical curiosity, dusty olive and warm terracotta. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
+      },
+      "reference_images": [
+        {
+          "title": "Welwitschia mirabilis00.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/0/05/Welwitschia_mirabilis00.jpg",
+          "width": 1705,
+          "height": 2074
+        },
+        {
+          "title": "Welwitschia mirabilis female reproductive diagram.png",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Welwitschia_mirabilis_female_reproductive_diagram.png",
+          "width": 816,
+          "height": 458
+        }
+      ],
+      "generated_at": "2026-06-06 16:25 UTC",
+      "opportunity_score": 64.3,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 82.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 82 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 37.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "score Gemini 82 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Welwitschia Mirabilis Botanical Plate seamless pattern",
+        "Namib Desert Flora Print repeat pattern",
+        "Botanical Oddity Sticker repeat pattern",
+        "Arid Plant Journal repeat pattern"
+      ],
+      "positive_prompt": "Welwitschia mirabilis ancient desert plant, two massive strap-leaves spiraling outward, primordial botanical curiosity, dusty olive and warm terracotta. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
+    },
+    {
+      "name": "Red Lionfish Fin Anatomy Plate",
+      "trending_score": 64,
+      "market_opportunity": "high",
+      "why_trending": "The intersection of marine aquarism and scientific illustration has created a strong demand for high-quality, anatomically accurate fish illustrations. Collectors want authentic museum-grade representations over generic clip art.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "Ichthyology Study Print",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Marine Aquarist Sticker",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Reef Keeper Journal",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "scientific, elegant, detailed, archival",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Crimson Red #990000",
+          "Soft Sand Beige #F4A460"
+        ],
+        "color_accent": [
+          "Warm White #FAFAF8"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Pterois volitans pectoral fin spine, single venomous ray with elaborate membrane, precise anatomical specimen, deep crimson and warm ivory. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
+      },
+      "reference_images": [
+        {
+          "title": "Pterois volitans Ford 37.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/32/Pterois_volitans_Ford_37.jpg",
+          "width": 1716,
+          "height": 1416
+        },
+        {
+          "title": "Pterois volitans in habitat.png",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Pterois_volitans_in_habitat.png",
+          "width": 9921,
+          "height": 7015
+        }
+      ],
+      "generated_at": "2026-06-06 16:25 UTC",
+      "opportunity_score": 64.3,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 82.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 82 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 37.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "score Gemini 82 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Red Lionfish Fin Anatomy Plate seamless pattern",
+        "Ichthyology Study Print repeat pattern",
+        "Marine Aquarist Sticker repeat pattern",
+        "Reef Keeper Journal repeat pattern"
+      ],
+      "positive_prompt": "Pterois volitans pectoral fin spine, single venomous ray with elaborate membrane, precise anatomical specimen, deep crimson and warm ivory. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
+    },
+    {
+      "name": "Chambered Nautilus Shell Plate",
+      "trending_score": 64,
+      "market_opportunity": "high",
+      "why_trending": "The intersection of marine biology and sacred geometry has created a strong demand for high-quality, scientifically accurate shell illustrations. Collectors want authentic museum-grade representations over generic clip art.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "Malacology Study Print",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Sacred Geometry Sticker",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Oceanographic Tote Bag",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "scientific, geometric, elegant, archival",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Pearlescent Cream #FDF5E6",
+          "Soft Amber #D2B48C"
+        ],
+        "color_accent": [
+          "Warm White #FAFAF8"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Nautilus pompilius shell cross-section, perfect logarithmic spiral chambers, golden ratio botanical mathematics, warm ivory and deep sepia. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
+      },
+      "reference_images": [
+        {
+          "title": "FMIB 50404 Nautilus pompilius (Linnaeus), showing the interior of the lower celi, to which the animal is fixed like a waterspout.jpeg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/97/FMIB_50404_Nautilus_pompilius_%28Linnaeus%29%2C_showing_the_interior_of_the_lower_celi%2C_to_which_the_animal_is_fixed_like_a_waterspout.jpeg",
+          "width": 526,
+          "height": 325
+        },
+        {
+          "title": "FMIB 50405 Nautilus pompilius (Linnaeus), showing the lower celi and the partition giving passage to the waterspout.jpeg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/59/FMIB_50405_Nautilus_pompilius_%28Linnaeus%29%2C_showing_the_lower_celi_and_the_partition_giving_passage_to_the_waterspout.jpeg",
+          "width": 552,
+          "height": 377
+        }
+      ],
+      "generated_at": "2026-06-06 16:25 UTC",
+      "opportunity_score": 64.0,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 81.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 81 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 37.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "score Gemini 81 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Chambered Nautilus Shell Plate seamless pattern",
+        "Malacology Study Print repeat pattern",
+        "Sacred Geometry Sticker repeat pattern",
+        "Oceanographic Tote Bag repeat pattern"
+      ],
+      "positive_prompt": "Nautilus pompilius shell cross-section, perfect logarithmic spiral chambers, golden ratio botanical mathematics, warm ivory and deep sepia. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
+    },
+    {
+      "name": "Pecopteris Carboniferous Fern Plate",
+      "trending_score": 64,
+      "market_opportunity": "high",
+      "why_trending": "Fossil hunting and paleontology have a massive, dedicated following. Collectors love the aesthetic of 19th-century geological survey plates, which are currently unavailable in high-quality print-on-demand formats.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "Coal Measure Fossil Print",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Geology Field Sticker",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Paleobotany Specimen Tote",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "prehistoric, geological, academic, archival",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Slate Grey #708090",
+          "Carbon Black #1C1C1C"
+        ],
+        "color_accent": [
+          "Warm White #FAFAF8"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Pecopteris fern fossil impression, carboniferous frond with pinnate leaflets, stone-preserved botanical specimen, warm sepia and pale limestone. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
+      },
+      "reference_images": [
+        {
+          "title": "A pictorial atlas of fossil remains, consisting of coloured illustrations selected from Parkinson's \"Organic remains of a former world,\" and Artis's \"Antediluvian phytology.\" (1850) (14778888402).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/A_pictorial_atlas_of_fossil_remains%2C_consisting_of_coloured_illustrations_selected_from_Parkinson%27s_%22Organic_remains_of_a_former_world%2C%22_and_Artis%27s_%22Antediluvian_phytology.%22_%281850%29_%2814778888402%29.jpg",
+          "width": 1966,
+          "height": 2556
+        },
+        {
+          "title": "A pictorial atlas of fossil remains, consisting of coloured illustrations selected from Parkinson's \"Organic remains of a former world,\" and Artis's \"Antediluvian phytology.\" (1850) (14799218913).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/A_pictorial_atlas_of_fossil_remains%2C_consisting_of_coloured_illustrations_selected_from_Parkinson%27s_%22Organic_remains_of_a_former_world%2C%22_and_Artis%27s_%22Antediluvian_phytology.%22_%281850%29_%2814799218913%29.jpg",
+          "width": 1964,
+          "height": 2640
+        }
+      ],
+      "generated_at": "2026-06-06 16:25 UTC",
+      "opportunity_score": 63.8,
+      "confidence": 30.0,
+      "score_breakdown": {
+        "demand": {
+          "value": 80.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "score Gemini 80 (heuristique, aucune mesure Wikipedia)"
+        },
+        "growth": {
+          "value": 50.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 30.0,
+          "detail": "croissance neutre (aucune mesure Wikipedia)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 37.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande heuristique (Gemini) · compétition medium",
+        "provenance_label": "🟠 FAIBLE (majoritairement heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "score Gemini 80 (heuristique, aucune mesure Wikipedia)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Pecopteris Carboniferous Fern Plate seamless pattern",
+        "Coal Measure Fossil Print repeat pattern",
+        "Geology Field Sticker repeat pattern",
+        "Paleobotany Specimen Tote repeat pattern"
+      ],
+      "positive_prompt": "Pecopteris fern fossil impression, carboniferous frond with pinnate leaflets, stone-preserved botanical specimen, warm sepia and pale limestone. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
+    },
+    {
+      "name": "Tawny Owl Feather Plate",
+      "trending_score": 61,
+      "market_opportunity": "high",
+      "why_trending": "The intersection of birding and scientific illustration has created a strong demand for high-quality, anatomically accurate feather illustrations. Collectors want authentic museum-grade representations over generic clip art.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "Ornithology Study Print",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Birder Gear Sticker",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Feather Collector Journal",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "scientific, elegant, detailed, archival",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Chestnut Brown #8B4513",
+          "Soft Cream #FFFDD0"
+        ],
+        "color_accent": [
+          "Warm White #FAFAF8"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Strix aluco tawny owl primary feather, single specimen with intricate barb detail, precise ornithological study, warm tawny brown and cream with dark banding. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
+      },
+      "reference_images": [
+        {
+          "title": "A history of the birds of Europe (Plate 48) (6050332210).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/A_history_of_the_birds_of_Europe_%28Plate_48%29_%286050332210%29.jpg",
+          "width": 1173,
+          "height": 1795
+        },
+        {
+          "title": "Birds from Moidart and elsewhere (Plate 12) (8510237791).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Birds_from_Moidart_and_elsewhere_%28Plate_12%29_%288510237791%29.jpg",
+          "width": 1365,
+          "height": 2093
+        }
+      ],
+      "generated_at": "2026-06-06 16:25 UTC",
+      "opportunity_score": 60.6,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 69.6,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 82.0,
+          "detail": "page 'Eurasian eagle-owl' : 20 629 vues/mois (réel)"
+        },
+        "growth": {
+          "value": 49.7,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 78.0,
+          "detail": "évolution -1% des vues sur 12 mois (réel)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 37.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "wikipedia"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande MESURÉE (wikipedia) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "page 'Eurasian eagle-owl' : 20 629 vues/mois (réel)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Tawny Owl Feather Plate seamless pattern",
+        "Ornithology Study Print repeat pattern",
+        "Birder Gear Sticker repeat pattern",
+        "Feather Collector Journal repeat pattern"
+      ],
+      "positive_prompt": "Strix aluco tawny owl primary feather, single specimen with intricate barb detail, precise ornithological study, warm tawny brown and cream with dark banding. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
+    },
+    {
+      "name": "Elrathia Kingii Trilobite Fossil Plate",
+      "trending_score": 60,
+      "market_opportunity": "high",
+      "why_trending": "Trilobites are the ultimate symbol of ancient marine life. Fossil collectors love the aesthetic of 19th-century geological survey plates, which are currently unavailable in high-quality print-on-demand formats.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "Cambrian Explosion Print",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Geology Field Sticker",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Paleontology Lab Notebook",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "prehistoric, geological, academic, archival",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Dark Shale Grey #4F4F4F",
+          "Iron Oxide Rust #B22222"
+        ],
+        "color_accent": [
+          "Warm White #FAFAF8"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Elrathia kingii trilobite fossil, perfectly preserved exoskeleton from above, Cambrian arthropod specimen, warm limestone and dark iron tones. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-06 16:25 UTC",
+      "opportunity_score": 60.3,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 72.1,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 82.0,
+          "detail": "page 'Trilobite' : 29 341 vues/mois (réel)"
+        },
+        "growth": {
+          "value": 42.9,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 78.0,
+          "detail": "évolution -14% des vues sur 12 mois (réel)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 37.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "wikipedia"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande MESURÉE (wikipedia) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "page 'Trilobite' : 29 341 vues/mois (réel)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Elrathia Kingii Trilobite Fossil Plate seamless pattern",
+        "Cambrian Explosion Print repeat pattern",
+        "Geology Field Sticker repeat pattern",
+        "Paleontology Lab Notebook repeat pattern"
+      ],
+      "positive_prompt": "Elrathia kingii trilobite fossil, perfectly preserved exoskeleton from above, Cambrian arthropod specimen, warm limestone and dark iron tones. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
+    },
+    {
+      "name": "Banded Rhodochrosite Mineral Plate",
+      "trending_score": 59,
+      "market_opportunity": "high",
+      "why_trending": "The intersection of mineral collecting and scientific illustration has created a strong demand for high-quality, anatomically accurate mineral illustrations. Collectors want authentic museum-grade representations over generic clip art.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "Mineralogy Study Print",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Rockhound Gear Sticker",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Geology Field Journal",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "scientific, elegant, detailed, archival",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Rose Pink #FF69B4",
+          "Deep Raspberry #C71585"
+        ],
+        "color_accent": [
+          "Warm White #FAFAF8"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Banded rhodochrosite mineral cross-section, concentric pink and white rings, geological stalactite slice specimen, deep rose pink and cream white bands. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-06 16:25 UTC",
+      "opportunity_score": 59.2,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 70.6,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 82.0,
+          "detail": "page 'Mineral' : 23 878 vues/mois (réel)"
+        },
+        "growth": {
+          "value": 38.2,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 78.0,
+          "detail": "évolution -24% des vues sur 12 mois (réel)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 37.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "wikipedia"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande MESURÉE (wikipedia) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "page 'Mineral' : 23 878 vues/mois (réel)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Banded Rhodochrosite Mineral Plate seamless pattern",
+        "Mineralogy Study Print repeat pattern",
+        "Rockhound Gear Sticker repeat pattern",
+        "Geology Field Journal repeat pattern"
+      ],
+      "positive_prompt": "Banded rhodochrosite mineral cross-section, concentric pink and white rings, geological stalactite slice specimen, deep rose pink and cream white bands. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
+    },
+    {
+      "name": "Rosalia Alpina Entomology Plate",
+      "trending_score": 55,
+      "market_opportunity": "high",
+      "why_trending": "Entomology and insect pinning have seen a massive resurgence among alternative artists and nature lovers. The Rosalia alpina is highly prized for its unique coloration, making it a perfect subject for high-end apparel and stickers.",
+      "target_audience": "",
+      "sub_niches": [
+        {
+          "name": "Coleoptera Collector Print",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Insect Pinning Sticker",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        },
+        {
+          "name": "Entomology Lab Notebook",
+          "trending_score": 50,
+          "unique_angle": "",
+          "prompt_keywords": []
+        }
+      ],
+      "visual_direction": {
+        "mood": "scientific, elegant, detailed, archival",
+        "composition": "",
+        "line_style": "",
+        "color_primary": [
+          "Steel Blue #4682B4",
+          "Charcoal Black #222222"
+        ],
+        "color_accent": [
+          "Warm White #FAFAF8"
+        ],
+        "color_background": "White #FFFFFF",
+        "style_references": [],
+        "texture": ""
+      },
+      "spoonflower": {
+        "repeat_type": "basic",
+        "pattern_scale": "medium",
+        "top_products": [
+          "fabric"
+        ],
+        "competition_level": "medium"
+      },
+      "ai_generation": {
+        "positive_prompt": "Rosalia alpina longhorn beetle, pinned entomology specimen from above, elegant blue-grey elytra with dark spots, long elegant antennae, slate blue and velvet black. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers.",
+        "negative_prompt": "text, letters, words, numbers, label, caption, roman alphabet, museum border, rectangular frame, dark background, busy composition, multiple specimens, collage, grid",
+        "key_elements": [],
+        "avoid_elements": [],
+        "cfg_scale": 4.0,
+        "style_weight": 0.85,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/moneymaker/claude/trend-niche-discovery-MFQQj/references/japanese_botanical_ref.png",
+        "strength": 0.65,
+        "tiling": false
+      },
+      "reference_images": [],
+      "generated_at": "2026-06-06 16:25 UTC",
+      "opportunity_score": 55.3,
+      "confidence": 53.3,
+      "score_breakdown": {
+        "demand": {
+          "value": 63.0,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 82.0,
+          "detail": "page 'Longhorn beetle' : 8 072 vues/mois (réel)"
+        },
+        "growth": {
+          "value": 28.0,
+          "kind": "measured",
+          "source": "wikipedia",
+          "confidence": 78.0,
+          "detail": "évolution -44% des vues sur 12 mois (réel)"
+        },
+        "competition": {
+          "value": 60.0,
+          "kind": "heuristic",
+          "source": "gemini",
+          "confidence": 40.0,
+          "detail": "compétition 'medium' → score 60 (LOW=bon, opinion Gemini)"
+        },
+        "visual_potential": {
+          "value": 35.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "richesse visuelle: accents, mood"
+        },
+        "reusability": {
+          "value": 37.5,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections"
+        },
+        "platform_fit": {
+          "value": 100.0,
+          "kind": "heuristic",
+          "source": "internal_rules",
+          "confidence": 35.0,
+          "detail": "complétude spoonflower_fit + repeat → 100"
+        }
+      },
+      "signals": {
+        "sources": [
+          "wikipedia"
+        ],
+        "trigger_keywords": [],
+        "categories": [
+          "high",
+          "medium"
+        ],
+        "notes": "demande MESURÉE (wikipedia) · compétition medium · croissance mesurée",
+        "provenance_label": "🟡 MIXTE (réel + heuristique)"
+      },
+      "saturation": {
+        "level": "medium",
+        "score": 40.0,
+        "rationale": "compétition 'medium' → marché modérément exploité"
+      },
+      "reusability_detail": "3 sous-niches, 0 mots-clés distincts → moyen potentiel de collections",
+      "demand_evidence": "page 'Longhorn beetle' : 8 072 vues/mois (réel)",
+      "seo_keywords": [],
+      "title_seeds": [
+        "Rosalia Alpina Entomology Plate seamless pattern",
+        "Coleoptera Collector Print repeat pattern",
+        "Insect Pinning Sticker repeat pattern",
+        "Entomology Lab Notebook repeat pattern"
+      ],
+      "positive_prompt": "Rosalia alpina longhorn beetle, pinned entomology specimen from above, elegant blue-grey elytra with dark spots, long elegant antennae, slate blue and velvet black. Minimalist Japanese botanical study. Single specimen inside a slightly wobbly hand-drawn ink circle. Small square kanji hanko seal bottom right. Cream white background (#FDFCF7). Zen composition, generous white space. No text, no letters, no numbers."
+    }
+  ],
+  "_style_patch": "japanese-circle-minimalist-v2-with-reference"
+}

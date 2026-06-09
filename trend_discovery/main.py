@@ -1015,7 +1015,10 @@ def generate_all_base(
     try:
         from trend_discovery.generators.generation_pipeline import GenerationPipeline
         from trend_discovery.generators.quality_auditor import QualityAuditor
-        pipeline = GenerationPipeline(output_dir=output_dir, upscale_factor=4)
+        # tiling=False for standalone illustration platforms (not seamless repeat)
+        _standalone_platforms = ("redbubble",)
+        tiling = not any(p in output_dir.lower() for p in _standalone_platforms)
+        pipeline = GenerationPipeline(output_dir=output_dir, upscale_factor=4, tiling=tiling)
         auditor = QualityAuditor()
     except Exception as exc:
         logger.error("[generate-all] GenerationPipeline indisponible : %s", exc)
@@ -1186,12 +1189,17 @@ def colorize_images(
     palettes: Optional[List[str]] = None,
     glob_pattern: str = "*.png",
     yes: bool = False,
+    smart: bool = False,
+    reports_dir: str = "./reports",
 ) -> None:
     """
     Génère des variantes de coloris pour tous les PNGs d'un dossier.
 
     Principe : rotation HSV (hue_shift + sat_mult + val_mult).
     Aucun appel Runware — 100% gratuit. Détail préservé intégralement.
+
+    Si smart=True : lit les CDCs pour choisir les 4 palettes les plus adaptées
+    à chaque design plutôt que les 4 génériques.
 
     Palettes disponibles : cool_ocean, forest_dusk, rose_gold, midnight,
                            lavender_mist, earth_autumn, sage_morning, deep_ruby
@@ -1209,12 +1217,16 @@ def colorize_images(
         return
 
     pal_names = palettes or list(PALETTES.keys())
-    n_out = len(files) * len(pal_names)
+    mode_label = "SMART (palettes CDC)" if smart else "standard"
+    n_out = len(files) * (4 if smart else len(pal_names))
 
     print("\n" + "=" * 60)
-    print(f"  COLORIZE — variantes de palette (Pillow, 0 coût Runware)")
-    print(f"  {len(files)} image(s) source × {len(pal_names)} palette(s) = {n_out} colorways")
-    print(f"  Palettes : {', '.join(pal_names)}")
+    print(f"  COLORIZE — variantes de palette {mode_label} (Pillow, 0 coût Runware)")
+    if not smart:
+        print(f"  {len(files)} image(s) source × {len(pal_names)} palette(s) = {n_out} colorways")
+        print(f"  Palettes : {', '.join(pal_names)}")
+    else:
+        print(f"  {len(files)} image(s) source × 4 palettes CDC-adaptées ≈ {n_out} colorways")
     print(f"  Sortie   : {output_dir}/")
     print("=" * 60)
     for i, f in enumerate(files, 1):
@@ -1228,15 +1240,73 @@ def colorize_images(
             return
 
     rewriter = ColorRewriter()
-    results = rewriter.batch_recolor(
-        input_dir=input_dir,
-        palette_names=pal_names,
-        output_dir=output_dir,
-        glob_pattern=glob_pattern,
-    )
+    if smart:
+        results = rewriter.batch_recolor_smart(
+            input_dir=input_dir,
+            reports_dir=reports_dir,
+            output_dir=output_dir,
+            glob_pattern=glob_pattern,
+            fallback_palettes=pal_names or None,
+        )
+    else:
+        results = rewriter.batch_recolor(
+            input_dir=input_dir,
+            palette_names=pal_names,
+            output_dir=output_dir,
+            glob_pattern=glob_pattern,
+        )
 
     total_ok = sum(len(v) for v in results.values())
-    print(f"\n✅ {total_ok}/{n_out} colorways générés → {output_dir}/")
+    print(f"\n✅ {total_ok} colorways générés → {output_dir}/")
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Mode bg-remove : suppression fond blanc pour stickers Redbubble
+# ─────────────────────────────────────────────────────────────────────────────
+
+def remove_backgrounds(
+    input_dir: str = "./output/redbubble",
+    output_dir: str = "./output/redbubble",
+    tolerance: int = 28,
+    yes: bool = False,
+) -> None:
+    """
+    Supprime le fond blanc de tous les PNGs d'un dossier (flood-fill BFS depuis les 4 coins).
+    Génère des PNG RGBA transparents prêts pour die-cut sticker sur Redbubble.
+    """
+    import glob as _glob
+    from trend_discovery.generators.bg_remover import batch_remove_background
+
+    files = sorted(_glob.glob(os.path.join(input_dir, "*.png")))
+    files = [f for f in files if "_transparent" not in os.path.basename(f)]
+
+    if not files:
+        print(f"ERROR : Aucun PNG trouvé dans {input_dir}")
+        return
+
+    print("\n" + "=" * 60)
+    print(f"  BG-REMOVE — suppression fond blanc (flood-fill BFS)")
+    print(f"  {len(files)} image(s) | tolérance {tolerance} | sortie RGBA transparent")
+    print(f"  Source  : {input_dir}/")
+    print(f"  Sortie  : {output_dir}/")
+    print("=" * 60)
+    for i, f in enumerate(files, 1):
+        print(f"  {i:2d}. {os.path.basename(f)}")
+    print()
+
+    if not yes:
+        answer = input("Proceed? [yes/no] ").strip().lower()
+        if answer not in ("yes", "y"):
+            print("Annulé.")
+            return
+
+    generated = batch_remove_background(
+        input_dir=input_dir,
+        output_dir=output_dir,
+        tolerance=tolerance,
+        skip_existing=True,
+    )
+    print(f"\n✅ {len(generated)} PNG transparents → {output_dir}/")
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -1455,6 +1525,230 @@ def generate_elements(
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+# Mode listings : génère les fiches produit CSV + Markdown par plateforme
+# ─────────────────────────────────────────────────────────────────────────────
+
+def generate_listings(
+    reports_dir: str = "./reports",
+    output_dir: str = "./reports/listings",
+) -> None:
+    """
+    Génère les fiches produit prêtes-à-publier (titre, description, tags, catégorie)
+    pour chaque CdC × chaque plateforme configurée.
+
+    Lit le dernier rapport CdC JSON et produit :
+      - listings_YYYYMMDD.json  — toutes les fiches
+      - listings_YYYYMMDD.md    — format copier-coller par plateforme
+    """
+    import glob as _glob
+    from trend_discovery.generators.listing_exporter import ListingExporter
+
+    # Trouve le dernier rapport CdC JSON dans reports_dir
+    pattern = os.path.join(reports_dir, "cahiers_des_charges_*.json")
+    reports = sorted(_glob.glob(pattern))
+    if not reports:
+        # Essai dans le répertoire principal
+        reports = sorted(_glob.glob("./reports/cahiers_des_charges_*.json"))
+    if not reports:
+        print(f"ERROR : Aucun rapport CdC trouvé dans {reports_dir}")
+        return
+
+    latest = reports[-1]
+    logger.info("[listings] rapport : %s", latest)
+
+    exporter = ListingExporter()
+    out_path = exporter.export_all(latest, output_dir)
+    print(f"✅ Listings exportés → {output_dir}/")
+    return out_path
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Mode text-apply : applique la typographie CDC sur les images générées
+# ─────────────────────────────────────────────────────────────────────────────
+
+def apply_text(
+    images_dir: str = "./output/redbubble",
+    reports_dir: str = "./reports/redbubble",
+    output_dir: Optional[str] = None,
+    overwrite: bool = False,
+) -> None:
+    """
+    Applique la typographie définie dans le CDC sur chaque image générée.
+
+    Lit le dernier CDC Redbubble JSON, fait correspondre chaque PNG à son
+    brief via le slug du nom de niche, puis applique les couches de texte
+    définies dans `typography.layers` avec PIL (polices système, précision
+    300 DPI).
+
+    Args:
+        images_dir:  Dossier contenant les PNG Redbubble générés.
+        reports_dir: Dossier contenant les CDC JSON Redbubble.
+        output_dir:  Dossier de sortie (None = écrase les originaux).
+        overwrite:   Re-applique même si le fichier de sortie existe déjà.
+    """
+    import glob as _glob
+    from trend_discovery.generators.text_applicator import batch_apply_typography
+
+    pattern = os.path.join(reports_dir, "cahiers_des_charges_*.json")
+    cdcs = sorted(_glob.glob(pattern))
+    if not cdcs:
+        print(f"ERROR : Aucun CDC trouvé dans {reports_dir}")
+        return
+
+    latest_cdc = cdcs[-1]
+    logger.info("[text-apply] CDC : %s", latest_cdc)
+    logger.info("[text-apply] images : %s", images_dir)
+
+    processed = batch_apply_typography(
+        cdc_json_path=latest_cdc,
+        images_dir=images_dir,
+        output_dir=output_dir,
+        overwrite=overwrite,
+    )
+    print(f"✅ Typographie appliquée sur {len(processed)} image(s)")
+    if output_dir:
+        print(f"   → {output_dir}/")
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Mode assemble : illustrations individuelles → seamless tile Spoonflower
+# ─────────────────────────────────────────────────────────────────────────────
+
+def assemble_specimens(
+    input_dir: str = "./output/redbubble",
+    output_dir: str = "./output/spoonflower",
+    background: str = "navy",
+    n_specimens: int = 9,
+    scale_min: float = 0.14,
+    scale_max: float = 0.30,
+    rotation_range: float = 18.0,
+    tile_size: int = 4500,
+    seed: int = 42,
+    variants: int = 3,
+    yes: bool = False,
+) -> None:
+    """
+    Assemble des illustrations individuelles (PNGs standalone) en seamless tile
+    pour Spoonflower — aucun appel Runware, 100% Pillow.
+
+    Les illustrations sources sont placées en scatter tossed sur un fond uni
+    avec wrapping seamless (éléments dupliqués sur les bords opposés).
+    Le tile résultant est 4500×4500px 300 DPI, prêt pour Spoonflower.
+
+    Args:
+        input_dir:       Dossier des PNGs sources (illustrations individuelles).
+        output_dir:      Dossier de sortie des tiles seamless.
+        background:      Fond : 'navy', 'charcoal', 'forest', 'ivory', 'cream',
+                         'white', 'slate', ou un code #HEX direct.
+        n_specimens:     Nombre d'illustrations à placer par tile.
+        scale_min/max:   Plage de taille relative des illustrations (fraction du tile).
+        rotation_range:  Rotation max en degrés (±).
+        tile_size:       Taille du tile en pixels (défaut: 4500).
+        seed:            Graine aléatoire pour reproductibilité.
+        variants:        Nombre de compositions différentes à générer.
+        yes:             Auto-confirmer (mode CI).
+    """
+    import glob as _glob
+    from trend_discovery.generators.specimen_assembler import batch_assemble, BACKGROUNDS
+
+    files = sorted(_glob.glob(os.path.join(input_dir, "*.png")))
+    files = [f for f in files if "_seamless" not in os.path.basename(f)
+             and "thumbnail" not in os.path.basename(f).lower()]
+
+    if not files:
+        print(f"ERROR : Aucun PNG trouvé dans {input_dir}")
+        return
+
+    bg_hex = BACKGROUNDS.get(background, background)
+
+    print("\n" + "=" * 60)
+    print("  ASSEMBLE — illustrations → seamless tile Spoonflower (Pillow, 0 coût)")
+    print(f"  {len(files)} illustration(s) source")
+    print(f"  {n_specimens} specimens par tile | {variants} variante(s)")
+    print(f"  Fond : {background} ({bg_hex}) | tile {tile_size}×{tile_size}px 300 DPI")
+    print(f"  Source  : {input_dir}/")
+    print(f"  Sortie  : {output_dir}/")
+    print("=" * 60)
+    for i, f in enumerate(files, 1):
+        print(f"  {i:2d}. {os.path.basename(f)}")
+    print()
+
+    if not yes:
+        answer = input("Proceed? [yes/no] ").strip().lower()
+        if answer not in ("yes", "y"):
+            print("Annulé.")
+            return
+
+    results = batch_assemble(
+        input_dir=input_dir,
+        output_dir=output_dir,
+        background=background,
+        n_specimens=n_specimens,
+        scale_min=scale_min,
+        scale_max=scale_max,
+        rotation_range=rotation_range,
+        tile_size=tile_size,
+        seed=seed,
+        variants=variants,
+    )
+
+    print(f"\n✅ {len(results)} tile(s) seamless → {output_dir}/")
+    for r in results:
+        print(f"   {os.path.basename(r)}")
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Mode text-fix : érase texte FLUX + applique typo CDC propre
+# ─────────────────────────────────────────────────────────────────────────────
+
+def fix_text(
+    images_dir: str = "./output/redbubble",
+    reports_dir: str = "./reports/redbubble",
+    output_dir: Optional[str] = None,
+    overwrite: bool = False,
+    erase_only: bool = False,
+) -> None:
+    """
+    Corrige les images où FLUX a rendu du texte illisible ou déformé.
+
+    Pipeline en 2 étapes :
+      1. Gemini Vision détecte les régions de texte → PIL les remplace par
+         la couleur de fond estimée (gratuit, 0 Runware).
+      2. La typographie propre définie dans le CDC est appliquée via PIL.
+
+    Args:
+        images_dir:  Dossier contenant les PNG Redbubble à corriger.
+        reports_dir: Dossier contenant les CDC JSON Redbubble.
+        output_dir:  Dossier de sortie (None = écrase les originaux).
+        overwrite:   Re-traite même si le fichier de sortie existe déjà.
+        erase_only:  Si True, efface seulement le texte sans appliquer la typo.
+    """
+    import glob as _glob
+    from trend_discovery.generators.text_applicator import batch_fix_text
+
+    pattern = os.path.join(reports_dir, "cahiers_des_charges_*.json")
+    cdcs = sorted(_glob.glob(pattern))
+    if not cdcs:
+        print(f"ERROR : Aucun CDC trouvé dans {reports_dir}")
+        return
+
+    latest_cdc = cdcs[-1]
+    logger.info("[text-fix] CDC : %s", latest_cdc)
+    logger.info("[text-fix] images : %s", images_dir)
+
+    processed = batch_fix_text(
+        cdc_json_path=latest_cdc,
+        images_dir=images_dir,
+        output_dir=output_dir,
+        overwrite=overwrite,
+        erase_only=erase_only,
+    )
+    print(f"✅ Texte corrigé sur {len(processed)} image(s)")
+    if output_dir:
+        print(f"   → {output_dir}/")
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # CLI entry point
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -1607,6 +1901,36 @@ def main():
         "--yes", action="store_true",
         help="Auto-confirmer (mode CI).",
     )
+    colorize_parser.add_argument(
+        "--smart", action="store_true",
+        help="Sélection de palette intelligente basée sur les hex couleurs du CDC.",
+    )
+    colorize_parser.add_argument(
+        "--reports", type=str, default="./reports",
+        help="Dossier des rapports CDC (pour --smart).",
+    )
+
+    # ── Sous-commande : bg-remove ─────────────────────────────────────────────
+    bg_parser = subparsers.add_parser(
+        "bg-remove",
+        help="Supprime le fond blanc des PNGs Redbubble → PNG RGBA transparent pour die-cut stickers.",
+    )
+    bg_parser.add_argument(
+        "--input", type=str, default="./output/redbubble",
+        help="Dossier source (PNG fond blanc).",
+    )
+    bg_parser.add_argument(
+        "--output", type=str, default="./output/redbubble",
+        help="Dossier de sortie (PNG transparent). Défaut = même dossier.",
+    )
+    bg_parser.add_argument(
+        "--tolerance", type=int, default=28,
+        help="Distance max du blanc pour être considéré fond [0-255] (défaut: 28).",
+    )
+    bg_parser.add_argument(
+        "--yes", action="store_true",
+        help="Auto-confirmer (mode CI).",
+    )
 
     # ── Sous-commande : seamless-audit ───────────────────────────────────────
     sa_parser = subparsers.add_parser(
@@ -1636,6 +1960,118 @@ def main():
     sa_parser.add_argument(
         "--yes", action="store_true",
         help="Auto-confirmer (mode CI).",
+    )
+
+    # ── Sous-commande : listings ──────────────────────────────────────────────
+    ls_parser = subparsers.add_parser(
+        "listings",
+        help="Génère les CSVs de listing prêts à uploader (Spoonflower, Adobe Stock, Etsy, Redbubble).",
+    )
+    ls_parser.add_argument("--reports", type=str, default="./reports")
+    ls_parser.add_argument("--spoonflower", type=str, default="./output/spoonflower")
+    ls_parser.add_argument("--colorways", type=str, default="./output/colorways")
+    ls_parser.add_argument("--uploads", type=str, default="./output/uploads/base")
+    ls_parser.add_argument("--uploads-colorways", dest="uploads_colorways", type=str, default="./output/uploads/colorways")
+    ls_parser.add_argument("--redbubble", type=str, default="./output/redbubble")
+    ls_parser.add_argument("--redbubble-reports", dest="redbubble_reports", type=str, default="./reports/redbubble")
+    ls_parser.add_argument("--output", type=str, default="./reports/listings")
+
+    # ── Sous-commande : text-apply ────────────────────────────────────────────
+    ta_parser = subparsers.add_parser(
+        "text-apply",
+        help="Applique la typographie CDC (via Python/PIL) sur les images Redbubble générées.",
+    )
+    ta_parser.add_argument(
+        "--images", type=str, default="./output/redbubble",
+        help="Dossier des PNG Redbubble générés.",
+    )
+    ta_parser.add_argument(
+        "--reports", type=str, default="./reports/redbubble",
+        help="Dossier contenant les CDC JSON Redbubble.",
+    )
+    ta_parser.add_argument(
+        "--output", type=str, default=None,
+        help="Dossier de sortie (vide = écrase les originaux).",
+    )
+    ta_parser.add_argument(
+        "--overwrite", action="store_true",
+        help="Re-applique même si le fichier de sortie existe déjà.",
+    )
+
+    # ── Sous-commande : assemble ──────────────────────────────────────────────
+    asm_parser = subparsers.add_parser(
+        "assemble",
+        help="Assemble des illustrations individuelles en seamless tile Spoonflower (Pillow, 0 coût).",
+    )
+    asm_parser.add_argument(
+        "--input", type=str, default="./output/redbubble",
+        help="Dossier des PNGs sources (illustrations individuelles).",
+    )
+    asm_parser.add_argument(
+        "--output", type=str, default="./output/spoonflower",
+        help="Dossier de sortie des tiles seamless.",
+    )
+    asm_parser.add_argument(
+        "--background", type=str, default="navy",
+        help="Fond : navy, charcoal, forest, ivory, cream, white, slate, ou #HEX.",
+    )
+    asm_parser.add_argument(
+        "--n-specimens", dest="n_specimens", type=int, default=9,
+        help="Nombre d'illustrations à placer par tile.",
+    )
+    asm_parser.add_argument(
+        "--scale-min", dest="scale_min", type=float, default=0.14,
+        help="Taille minimale des specimens (fraction du tile).",
+    )
+    asm_parser.add_argument(
+        "--scale-max", dest="scale_max", type=float, default=0.30,
+        help="Taille maximale des specimens (fraction du tile).",
+    )
+    asm_parser.add_argument(
+        "--rotation", type=float, default=18.0,
+        help="Rotation max en degrés (±).",
+    )
+    asm_parser.add_argument(
+        "--tile-size", dest="tile_size", type=int, default=4500,
+        help="Taille du tile en pixels (défaut: 4500).",
+    )
+    asm_parser.add_argument(
+        "--seed", type=int, default=42,
+        help="Graine aléatoire pour la composition.",
+    )
+    asm_parser.add_argument(
+        "--variants", type=int, default=3,
+        help="Nombre de compositions différentes à générer.",
+    )
+    asm_parser.add_argument(
+        "--yes", action="store_true",
+        help="Auto-confirmer (mode CI).",
+    )
+
+    # ── Sous-commande : text-fix ──────────────────────────────────────────────
+    tf_parser = subparsers.add_parser(
+        "text-fix",
+        help="Efface le texte FLUX déformé + applique la typographie CDC propre (Gemini Vision + PIL).",
+    )
+    tf_parser.add_argument(
+        "--images", type=str, default="./output/redbubble",
+        help="Dossier des PNG Redbubble à corriger.",
+    )
+    tf_parser.add_argument(
+        "--reports", type=str, default="./reports/redbubble",
+        help="Dossier contenant les CDC JSON Redbubble.",
+    )
+    tf_parser.add_argument(
+        "--output", type=str, default=None,
+        help="Dossier de sortie (vide = écrase les originaux).",
+    )
+    tf_parser.add_argument(
+        "--overwrite", action="store_true",
+        help="Re-traite même si le fichier de sortie existe déjà.",
+    )
+    tf_parser.add_argument(
+        "--erase-only", dest="erase_only", action="store_true",
+        help="Efface seulement le texte FLUX sans appliquer la typo CDC.",
     )
 
     # ── Sous-commande : thumbnails ────────────────────────────────────────────
@@ -1772,6 +2208,17 @@ def main():
             palettes=pal_list,
             glob_pattern=args.pattern,
             yes=args.yes,
+            smart=getattr(args, "smart", False),
+            reports_dir=getattr(args, "reports", "./reports") or "./reports",
+        )
+        return
+
+    if args.command == "bg-remove":
+        remove_backgrounds(
+            input_dir=args.input,
+            output_dir=args.output,
+            tolerance=args.tolerance,
+            yes=args.yes,
         )
         return
 
@@ -1794,6 +2241,48 @@ def main():
             uploads_colorways_dir=os.path.join(os.path.dirname(args.uploads.rstrip("/")), "colorways"),
             output_root=args.output,
             contact_sheets=not args.no_contact,
+        )
+        return
+
+    if args.command == "listings":
+        generate_listings(
+            reports_dir=getattr(args, "reports", "./reports") or "./reports",
+            output_dir=getattr(args, "output", "./reports/listings") or "./reports/listings",
+        )
+        return
+
+    if args.command == "text-apply":
+        apply_text(
+            images_dir=getattr(args, "images", "./output/redbubble"),
+            reports_dir=getattr(args, "reports", "./reports/redbubble"),
+            output_dir=getattr(args, "output", None),
+            overwrite=getattr(args, "overwrite", False),
+        )
+        return
+
+    if args.command == "assemble":
+        assemble_specimens(
+            input_dir=args.input,
+            output_dir=args.output,
+            background=args.background,
+            n_specimens=args.n_specimens,
+            scale_min=args.scale_min,
+            scale_max=args.scale_max,
+            rotation_range=args.rotation,
+            tile_size=args.tile_size,
+            seed=args.seed,
+            variants=args.variants,
+            yes=args.yes,
+        )
+        return
+
+    if args.command == "text-fix":
+        fix_text(
+            images_dir=getattr(args, "images", "./output/redbubble"),
+            reports_dir=getattr(args, "reports", "./reports/redbubble"),
+            output_dir=getattr(args, "output", None),
+            overwrite=getattr(args, "overwrite", False),
+            erase_only=getattr(args, "erase_only", False),
         )
         return
 
@@ -1840,6 +2329,7 @@ def main():
             market=args.market,
             niche_count=args.niches,
             extra_constraints="\n".join(constraints),
+            output_dir=getattr(args, "output", "./reports") or "./reports",
         )
         return
 

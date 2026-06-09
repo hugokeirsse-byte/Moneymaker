@@ -47,6 +47,67 @@ def _coerce_profile(profile: Union[MarketProfile, str, None]) -> MarketProfile:
     return SPOONFLOWER
 
 
+def _auto_naturalist_typography(t: Dict) -> Dict:
+    """
+    Auto-génère les layers de typographie pour une planche naturaliste.
+
+    Extraits :
+      - Nom commun  : brief name sans le suffixe "Plate" → position top
+      - Nom sci.    : premier genre+espèce trouvé dans positive_prompt → italic_caption
+    Couleur texte   : couleur sombre de la palette (luminance < 100) ou #1A1A2E.
+    """
+    import re
+
+    name = t.get("name", "")
+    common_name = re.sub(r"\s*\b(?:plate|planche|specimen|anatomy)\b\s*$", "",
+                         name, flags=re.IGNORECASE).strip()
+
+    positive_prompt = t.get("ai_generation", {}).get("positive_prompt", "")
+    # Genre + espèce : Majuscule suivie de 1-2 mots en minuscules
+    sci_match = re.search(r"\b([A-Z][a-z]+(?:\s+[a-z]+){1,2})\b", positive_prompt)
+    scientific_name = sci_match.group(1) if sci_match else ""
+    # Évite de dupliquer le nom commun
+    if scientific_name.lower() == common_name.lower():
+        scientific_name = ""
+
+    # Couleur texte : cherche la plus sombre dans color_primary
+    vd = t.get("visual_direction", {})
+    colors_raw = vd.get("color_primary", vd.get("color_palette", {}).get("primary", []))
+    text_color = "#1A1A2E"
+    for c_str in colors_raw:
+        hex_m = re.search(r"#([0-9A-Fa-f]{6})", str(c_str))
+        if hex_m:
+            h = hex_m.group(1)
+            r, g, b = int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16)
+            if 0.299 * r + 0.587 * g + 0.114 * b < 100:
+                text_color = f"#{h}"
+                break
+
+    layers = []
+    if common_name:
+        layers.append({
+            "text": common_name,
+            "position": "top",
+            "font_style": "serif",
+            "size_pt": 32,
+            "color": text_color,
+            "y_offset_pct": 0.01,
+            "max_width_pct": 0.80,
+        })
+    if scientific_name:
+        layers.append({
+            "text": scientific_name,
+            "position": "bottom",
+            "font_style": "serif_italic",
+            "size_pt": 26,
+            "color": text_color,
+            "y_offset_pct": -0.02,
+            "max_width_pct": 0.72,
+        })
+
+    return {"apply": bool(layers), "layers": layers}
+
+
 class GeminiProvider(DataProvider):
     """
     Recherche les tendances POD mondiales via Gemini 2.0 Flash + Google Search.
@@ -398,7 +459,10 @@ class GeminiProvider(DataProvider):
             pass
 
         crossover_count = getattr(profile, "crossover_count", 2)
-        total_count = profile.niche_count + crossover_count
+        # Override du nombre de niches via env (ex: viser 20 CDC sur un batch ciblé)
+        _override = os.getenv("MONEYMAKER_NICHE_COUNT", "")
+        niche_count = int(_override) if _override.isdigit() else profile.niche_count
+        total_count = niche_count + crossover_count
 
         return f"""Today is {today}. You are an expert in print-on-demand surface design for {name}.
 {archive_block}
@@ -463,6 +527,15 @@ For EACH trend, return a complete JSON object with ALL of these fields — be sp
   }}}},
   "wikimedia_query": "2-5 word query to find public domain reference images on Wikimedia Commons",
   "spoonflower_query": "2-5 word query to search Spoonflower bestselling designs for this niche (e.g. 'nordic folk flat pattern')",
+  "sub_niches": [
+    {{{{
+      "name": "specific sub-angle (2-4 words, e.g. 'Dark Academia Pressed Ferns')",
+      "differentiator": "what makes this distinct from the parent niche — different aesthetic, buyer, or product use case",
+      "opportunity": "very_high | high | medium | low",
+      "buyer_intent": "what specific thing does this buyer want to make/buy (e.g. 'quilting fabric for baby blanket', 'wallpaper for home office')"
+    }}}},
+    // 3-5 sub-niches — researched REAL sub-angles within this parent niche
+  ],
   "ai_generation": {{{{
     "positive_prompt": "SEE MANDATORY FLUX PROMPT FORMAT BELOW — the full seamless-pattern prompt for FLUX Dev 2",
     "cfg_scale": 4.0
@@ -540,11 +613,15 @@ Use for: Cabinet of curiosities, folk objects, vintage labels, scattered botanic
 
 ──────────────────────────────────────────────
 STYLE B — LARGE HERO MOTIF, DENSE FILL (1-3 BIG shapes dominate the tile)
-Use for: Art Deco botanical fans, tropical leaves, large geometric flowers, bold medallions.
+Use for: large tropical leaves, oversized botanicals, bold single-leaf repeats, oversized geometric flowers.
 SPOONFLOWER WALLPAPER RULE: each motif must be LARGE enough to read from 2 meters away.
 A tile with 20 tiny elements looks like fabric texture — good for cloth, WRONG for wallpaper.
 Target: 1-3 dominant shapes each filling 30-60% of the tile height/width.
-Compare to bestsellers: Art Deco aara palm (1 huge flower per tile), Art Deco fans (3-4 large fans).
+SOBER PALETTE RULE (mandatory for Style B): 2-3 colors MAXIMUM. The power comes from SCALE and
+SIMPLICITY — one giant monstera leaf on a rust background (cream + rust + sage = 3 colors). NOT 7 colors.
+Proven bestseller formula: one oversized leaf/flower centered on a bold single-color background,
+the repeat creates rhythm without clutter. Examples: pink monstera on terracotta, white peony on navy,
+sage palm on charcoal. Rich texture on the motif (brushstroke quality, NOT flat graphic).
 ──────────────────────────────────────────────
 
   PART 1 — PATTERN DECLARATION: "Large-scale [half-drop/mirror/brick] repeat pattern
@@ -709,6 +786,93 @@ STYLE D PROMPT STRUCTURE:
     Each element is fully formed with NO blending or merging between them."
   PART 5 — BACKGROUND: "Solid [rich dark / warm cream / sage green] background. All edges tile."
 
+──────────────────────────────────────────────
+STYLE E — TROMPE L'OEIL RÉALISTE (architectural illusion — the wallpaper IS the view)
+Use for: window looking out on forest/garden/ocean, arched stone opening into landscape,
+bookshelf wall with depth, vine-covered wall with hidden door, greenhouse glass panes.
+THE CONCEPT: the wallpaper creates the illusion that the wall has opened. The buyer's room
+gains a VIEW — a forest, a garden at dusk, a Parisian courtyard, a tropical canopy.
+This style is the highest-end, most photorealistic approach. It does NOT repeat as tiles —
+it is a SINGLE large mural composition (full repeat = half-drop so left/right edges match).
+——————————————————————————————
+  PART 1 — ILLUSION DECLARATION:
+    "Seamless half-drop repeat wallpaper mural creating a trompe l'oeil illusion of [SPECIFIC VIEW].
+    The viewer sees [what appears to be visible through the opening] as if standing in the room
+    looking at [the architectural element — window frame / stone arch / wrought iron gate]."
+
+  PART 2 — ARCHITECTURAL FRAME (the 'opening'):
+    Describe the frame that makes the illusion work — it must be PHOTOREALISTIC:
+    "A [carved stone arch / timber window frame / wrought iron arch / mossy stone doorway]
+    frames the view. The frame is rendered in photorealistic detail — [specific material:
+    aged limestone with lichen, dark weathered oak, wrought iron with rust bloom]. The frame
+    occupies the left and right 15% of the tile — its edges interlock in the half-drop repeat
+    so that the view between frames reads as one continuous panorama."
+
+  PART 3 — THE VIEW (what lies beyond):
+    "Beyond the frame: [SPECIFIC LANDSCAPE]. Rendered in painterly realism:
+    [foreground elements], [midground], [background with atmospheric perspective].
+    Light source: [golden hour / overcast / dappled morning light].
+    Color mood: [muted / saturated / misty]."
+
+  PART 4 — DEPTH + REALISM:
+    "The composition has 3 layers of depth: foreground [plants/ivy/flowers] hanging INTO the
+    frame, midground [the main landscape feature], background [sky/haze/distant trees].
+    Painterly brushstroke quality — NOT flat illustration. Rich textural detail on every surface."
+
+  PART 5 — TILE MECHANICS:
+    "Left and right tile edges align perfectly so the panoramic view is CONTINUOUS across
+    the wall with no visible seam. Top and bottom edges blend into the sky/ground naturally."
+
+WORKED EXAMPLE STYLE E (Forest Window):
+  "Seamless half-drop repeat wallpaper mural: a trompe l'oeil view through a weathered stone
+  arch into an ancient deciduous forest at golden hour. The arch is rendered in photorealistic
+  carved limestone — pale grey with patches of green lichen and amber rust stains. The arch
+  occupies the sides of the tile, its curved edges interlock perfectly in half-drop repeat so
+  adjacent arches create a continuous colonnade effect, with the forest vista stretching
+  uninterrupted between columns. Beyond the arch: a sunlit forest floor, ancient oak trunks
+  with deep bark texture, morning mist filtering through the canopy, shafts of golden light
+  hitting patches of forest ferns and moss. Foreground: sprays of fern fronds and ivy
+  hanging DOWN from the arch top edge into the frame. Midground: 3-4 oak trunks with
+  rich brown-grey bark. Background: pale golden haze, distant tree silhouettes.
+  Colors: limestone grey (#B8B0A0), bark brown (#5C3D2E), forest green (#2D5A27),
+  golden light (#F5D78E), mist white (#F0EDE8). Painterly realism — NOT flat illustration.
+  Each surface has visible texture: rough stone, ridged bark, velvet moss, translucent fern."
+
+──────────────────────────────────────────────
+STYLE F — RÉALISTE ÉPARS (scattered photorealistic elements on rich dark background)
+Use for: naturalist specimen studies, terrarium floor elements, geological specimens,
+forest floor scatter, underwater elements, mineral/crystal collections.
+THE AESTHETIC: like image 1 in the reference — rocks, mosses, ferns, wood pieces scattered
+on a dark navy/charcoal/forest green background. Rich detailed illustration, almost photographic.
+Each element is a SPECIMEN — precise botanical/geological accuracy, visible texture, shadow.
+——————————————————————————————
+  PART 1 — COLLECTION DECLARATION:
+    "Seamless scattered repeat pattern: a naturalist's specimen collection of [SPECIFIC ELEMENTS]
+    on a solid [DEEP COLOR (#HEX)] background. Each element is a precisely rendered specimen —
+    not stylized, not flat — but illustrated with the fidelity of a natural history museum plate."
+
+  PART 2 — SPECIMEN DESCRIPTIONS (4-6 elements):
+    For EACH element: "[SPECIFIC SPECIMEN NAME] rendered with [SPECIFIC TEXTURE DETAIL]:
+    [surface characteristic — e.g. 'slate grey with white calcite veining', 'velvet green moss
+    capsules with thread-thin stalks', 'amber-brown bark with deep longitudinal fissures']."
+    Include subtle cast shadows for each element — they rest ON the background, not float.
+
+  PART 3 — PALETTE:
+    "Background: solid [deep navy #1B2A3B / forest green #1A2F1A / charcoal #2A2A2A /
+    dark slate #1F2535] — flat uniform color, no texture.
+    Elements: naturalistic colors — no artificial palette constraints. Each specimen is true-to-life:
+    [grey slate, rust-orange lichen, viridian moss, warm tan wood, cream fungi]."
+
+  PART 4 — DENSITY + SCATTER:
+    "Elements scattered at varied scales and angles — some overlapping slightly (natural pile),
+    some isolated. Medium density — the dark background breathes between specimens.
+    NO blending between elements — each is a distinct solid object with its own shadow."
+
+  PART 5 — BACKGROUND:
+    "Solid uniform [deep color (#HEX)] background — no gradient, no texture. The specimens
+    sit ON this background like objects on a dark felt display surface.
+    All four tile edges interlock seamlessly."
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Requirements:
@@ -716,15 +880,28 @@ Requirements:
 - Every element prompt follows the MANDATORY ELEMENT FORMAT above — no exceptions
 - ai_generation.positive_prompt follows the MANDATORY FLUX DEV 2 PROMPT FORMAT (5-part structure, 130-180 words, exact anatomy, anti-fusion locks, solid background) — no exceptions
 - STYLE ASSIGNMENT RULE: assign each niche to the appropriate style:
-    • STYLE A → scattered/tossed objects, folk, vintage labels, stationery, food objects
-    • STYLE B → large-scale botanical, Art Deco geometric fans/palms, tropical large-leaf all-over
-    • STYLE C → ANY niche featuring an animal as the hero motif with geometric body → MANDATORY
-    • STYLE D → humorous/narrative concept, anthropomorphized, trompe l'œil, room-specific
-  Distribution rule for 20 CDCs: minimum 3× Style C, minimum 4× Style D (incl. ≥1 room-specific),
-  remaining split between Style A and B.
-  Prioritize Style C animals: herons, cranes, swallows, dragonflies, koi, peacocks, butterflies, foxes.
-  Prioritize Style D concepts: WC/bathroom humor, portrait gallery animals, anthropomorphized food,
-  trompe l'œil shelves/racks, kitchen humor.
+    • STYLE A → scattered/tossed objects, stationery, food objects (NO vintage labels, NO retro/MCM — banned)
+    • STYLE B → 1-3 LARGE hero motifs (oversized single leaf/flower on bold bg) — 2-3 colors MAX, sober + impactful
+    • STYLE C → Art Deco single-animal geometric tile (ONE animal, Spoonflower mirror makes the pattern)
+    • STYLE D → anthropomorphized animals in absurd/hilarious situations, trompe l'œil shelves, room-specific humor
+    • STYLE E → trompe l'oeil réaliste architectural (window/arch/opening with photorealistic landscape beyond)
+    • STYLE F → réaliste épars (scattered photorealistic naturalist specimens on dark background — terrarium/geological)
+  STYLE ASSIGNMENT — DATA-DRIVEN: For each discovered trend, assign the style that BEST FITS its organic visual character.
+  Let the trend's nature guide the choice — do NOT force a style that doesn't fit the content.
+  DIVERSITY RULE: aim for variety across the batch — no more than 4 niches of the same style per batch of 20.
+  If MONEYMAKER_FOCUS specifies a style emphasis, follow that instead.
+  STYLE C animals (Art Deco single tile — Spoonflower mirror repeat creates the interlocking pattern):
+    koi fish, fox, vampire bat, luna moth, manta ray, praying mantis, stag beetle, wolf, jaguar, salamander.
+  STYLE D concepts (anthropomorphized animals in WILD/ABSURD situations):
+    detectives, chefs at Michelin restaurants, DJs, judges in wigs, racing snails, speed-dating tortoises,
+    therapy lobsters, guinea pigs at fancy dinner, frogs at wine tasting, raccoon heist planners.
+  STYLE E concepts (trompe l'oeil architectural):
+    stone arch into ancient forest, timber window onto misty Japanese garden, wrought-iron gate into Mediterranean courtyard,
+    greenhouse window with tropical canopy, crumbling gothic arch into moonlit cemetery garden.
+  STYLE F concepts (realistic naturalist scatter):
+    forest floor (rocks + moss + ferns + bark), tide pool specimens, mineral/crystal collection, tropical terrarium,
+    deep sea floor, geological cross-sections, lichen + stone wall.
+  NO vintage labels. NO retro/mid-century modern. NO folk patterns. NO antique objects tossed pattern.
 - ai_generation MUST NOT include a "negative_prompt" field — FLUX Dev 2 does not support it
 - ai_generation.cfg_scale is ALWAYS 4.0 (FLUX Dev 2), never 7.5
 - Real hex codes for ALL colors everywhere (no "earthy brown" — use "#8B4513 Saddle Brown")
@@ -748,7 +925,452 @@ ZERO INVENTED DATA: if you cannot find real evidence of demand for a crossover, 
 Add "crossover_gap": true and "demand_gap_evidence": "1-2 sentences: what specific evidence you found (e.g. '342 upvote post on r/aquariums asking for underwater botanical wallpaper, Etsy search shows only 8 relevant listings')" to the JSON of each crossover niche.
 These crossover niches must also follow ALL the same JSON schema as regular niches.
 
+SUB-NICHE RESEARCH (mandatory for ALL niches):
+For each niche, research 3-5 REAL sub-niches — specific micro-angles within the parent trend that have their own distinct buyer, aesthetic variation, or product use case. Each sub-niche should have meaningfully lower competition than the parent, or address a more specific buyer need. Do NOT invent sub-niches — find evidence that buyers are searching for these variations (Etsy, Pinterest, Reddit, Spoonflower search). Sub-niche names should be specific enough that a designer could immediately understand the angle (e.g. "Glow-Dark Terrarium Lichen" vs vague "dark terrarium").
+
 Return ONLY a valid JSON array of exactly {total_count} trend objects ({profile.niche_count} regular + {crossover_count} crossover gap). No text before or after. No markdown wrapper.
+"""
+
+    def _build_redbubble_prompt(
+        self,
+        profile: MarketProfile,
+        today: str,
+        extra_constraints: str = "",
+    ) -> str:
+        """
+        Prompt Gemini dédié aux designs standalone Redbubble (t-shirts, stickers, mugs).
+
+        Complètement distinct du prompt Spoonflower seamless : ici on cherche des
+        concepts humor/niche/identité pour illustrations centrées sur fond blanc,
+        pas des tuiles seamless.
+        """
+        products = ", ".join(profile.product_types)
+        buyers = ", ".join(profile.buyer_segments)
+        signals = "\n".join(f"- {s}" for s in profile.research_signals)
+        excluded = ", ".join(profile.excluded_generic)
+
+        crossover_count = getattr(profile, "crossover_count", 2)
+        _override = os.getenv("MONEYMAKER_NICHE_COUNT", "")
+        niche_count = int(_override) if _override.isdigit() else profile.niche_count
+        total_count = niche_count + crossover_count
+
+        extra_block = ""
+        if extra_constraints:
+            extra_block = f"\nOPERATOR CONSTRAINTS (must respect):\n{extra_constraints}\n"
+
+        archive_block = ""
+        try:
+            import json as _json, os as _os
+            _archive_path = "data/redbubble_archive.json"
+            if _os.path.exists(_archive_path):
+                with open(_archive_path) as _fh:
+                    _archive = _json.load(_fh)
+                _names = [n["name"] for n in _archive.get("niches", [])]
+                if _names:
+                    _list = "\n".join(f"- {n}" for n in _names)
+                    archive_block = (
+                        "\nALREADY DONE — DO NOT REPEAT:\n"
+                        f"{_list}\n"
+                        "Generate entirely new concepts.\n"
+                    )
+        except Exception:
+            pass
+
+        return f"""Today is {today}. You are a principal market analyst at a print-on-demand studio specializing in {profile.display_name}.
+
+MANDATE: Find the white space — niches where buyer demand is documented and real, but the Redbubble
+design supply is thin, low-quality, or misses the community's authentic aesthetic.
+
+This is a RESEARCH TASK. You must complete every phase in order. The final JSON must contain the
+evidence you found — not what you predict or imagine. Invented data → concept invalid.
+{archive_block}{extra_block}
+═══════════════════════════════════════════════════════════════════════
+PHASE 1 — SATURATION MAPPING  (complete before proposing any concept)
+═══════════════════════════════════════════════════════════════════════
+
+Search Redbubble.com right now for each keyword below. Record the approximate result count.
+BLACKLIST: any concept that is within 2 degrees of a term returning >40,000 results.
+
+High-saturation terms to measure:
+  anxiety · axolotl · capybara · frog · void cat · skeleton · skull ·
+  plant mom · mental health · kawaii cat · cottagecore · dark academia ·
+  mushroom · gaming · gamer · astrology · moon phases · witchy · pastel goth ·
+  rainbow pride · be kind · motivational quote · feminist quote ·
+  cat pushing things · depressed · overthinking · introvert
+
+Permanently excluded categories (always blacklisted):
+  {excluded}
+
+After searching, write down the approximate result count you found for each term.
+Use this map to avoid them. Do NOT rely on memory — search it now.
+
+═══════════════════════════════════════════════════════════════════════
+PHASE 2 — PLATFORM RESEARCH  (run all 5 checks for each candidate community)
+═══════════════════════════════════════════════════════════════════════
+
+Research these Redbubble-specific signals:
+{signals}
+
+For every community you consider, complete ALL five checks:
+
+  CHECK A — REDBUBBLE COMPETITION:
+    Search Redbubble for the community's core keyword.
+    Record: result count + quality (are existing designs authentic or generic/low-effort?).
+    PASS threshold: <20,000 results, OR results exist but are visually generic/miss community aesthetics.
+
+  CHECK B — REDDIT COMMUNITY SIZE & PURCHASE INTENT:
+    Find the primary subreddit(s) for this community.
+    Search recent posts for: "merch", "sticker", "shirt", "I wish someone made", "where can I buy".
+    Record: subreddit size (members) + any direct merch request posts found.
+    PASS threshold: >5,000 members, at least one merch-adjacent post found.
+
+  CHECK C — ETSY DEMAND SIGNAL:
+    Search Etsy for "[community keyword] sticker" and "[community keyword] shirt".
+    Record: number of listings found + whether top listings have recent sales (check "X sold in last 24h").
+    PASS threshold: some demand exists on Etsy (>10 listings) with evidence of actual sales.
+
+  CHECK D — TIKTOK / SOCIAL TREND SIGNAL:
+    Search TikTok for the community hashtag(s). Check view counts.
+    Alternatively: search YouTube or Instagram for community content posted in the last 30 days.
+    Record: top hashtag view count or evidence of recent activity.
+    PASS threshold: >1M hashtag views on TikTok, OR active YouTube/Instagram community.
+
+  CHECK E — VISUAL IDENTITY TRANSLATES TO MERCH:
+    Search Pinterest for "[community] aesthetic" or "[community] art".
+    Confirm: does this community have a distinct, consistent visual language that works on a sticker/shirt?
+    Record: Pinterest board evidence + visual aesthetic description.
+    PASS threshold: at least one active Pinterest board with recognizable visual identity.
+
+MINIMUM REQUIRED: a concept must PASS at least 3 of 5 checks to be included.
+Concepts passing all 5 checks get priority. Document which checks passed in demand_evidence.
+
+Products available: {products}
+Target buyer segments: {buyers}
+
+═══════════════════════════════════════════════════════════════════════
+PHASE 3 — CONCEPT SELECTION & ANTI-CLONE FILTER
+═══════════════════════════════════════════════════════════════════════
+
+From your research, select {niche_count} mainstream-niche concepts + {crossover_count} crossover-gap concepts.
+Sort by opportunity score (demand strength × competition weakness × community specificity), best first.
+
+ANTI-CLONE FILTER (mandatory):
+Before finalizing any concept, ask: "Could this appear as a variation of an existing top-20 Redbubble design?"
+  → If YES → reject or find a community-authentic visual angle that no existing design has used.
+  → The design must be specific enough that a community insider sees it and thinks "finally, someone who GETS us."
+
+COMMUNITY AUTHENTICITY TEST: the design must include at least one element that:
+  - Uses real community jargon, insider terminology, or tool names
+  - References a specific technique, ritual, or experience only this community has
+  - Would confuse an outsider but immediately resonate with a community member
+
+REJECT if: the concept could be described as "cute [generic animal] + [generic emotion]" or
+"[profession] appreciation" without any community-specific visual hook.
+
+OPPORTUNITY SCORING (use for trending_score):
+  80-100: MEASURED evidence — actual trending data (TikTok viral, Etsy bestseller, Reddit viral merch request)
+  60-79:  STRONG evidence — 4-5 checks passed, community large + Redbubble competition thin
+  40-59:  REASONABLE inference — 3 checks passed, adjacent trend with clear crossover
+  0-39:   DO NOT INCLUDE — insufficient evidence
+
+═══════════════════════════════════════════════════════════════════════
+⚠️  MANDATORY TEXT SEPARATION RULE — READ BEFORE WRITING ANY PROMPT
+═══════════════════════════════════════════════════════════════════════
+
+The pipeline uses TWO separate tools:
+  1. FLUX Dev 2 → generates the ILLUSTRATION ONLY (no text, no labels, no typography)
+  2. text_applicator.py → adds all text AFTER generation, using fonts and precise placement
+
+This separation is non-negotiable: AI image models render text poorly (garbled letters,
+wrong spelling). A Python tool adds the text with real fonts at print quality (300 DPI).
+
+CONSEQUENCE FOR YOUR OUTPUT:
+  • ai_generation.positive_prompt: ZERO text, labels, typography, written words.
+    Describe ONLY the visual elements: specimen, shape, illustration style, colors.
+    "NO TEXT" means no annotation labels, no titles, no Latin names, no slogans, no badge text.
+  • typography.layers: ALL text goes here — titles, subtitles, labels, annotations, curved badge text.
+    Each layer specifies: text content, position, font_style, size_pt, color, and positioning params.
+
+═══════════════════════════════════════════════════════════════════════
+REDBUBBLE DESIGN STYLE TEMPLATES  (choose the one that fits the community's authentic aesthetic)
+═══════════════════════════════════════════════════════════════════════
+
+STYLE 1 — VINTAGE NATURALIST / SCIENTIFIC ILLUSTRATION
+Use for: nature hobbyists (mycologists, birders, entomologists, fishkeepers, fossil hunters),
+amateur scientists, field guide aesthetics. These communities HATE generic cute designs.
+THE AESTHETIC: 19th century natural history museum plate — precise anatomical detail, field notes,
+Latin nomenclature, aged paper quality. Strong merch for stickers, art prints, tote bags.
+
+  PROMPT STRUCTURE:
+  PART 1: "Single [SPECIMEN], centered on pure white background. Rendered as a 19th century
+    natural history museum plate — the kind found in Audubon, Ernst Haeckel, or Anna Atkins publications."
+  PART 2: "Fine pen and ink engraving style — precise cross-hatching, crisp botanical detail.
+    [SPECIFIC SPECIMEN ANATOMY: 3-4 anatomically accurate features this community would recognize]."
+  PART 3: "[VISUAL DETAIL: ink quality, cross-hatching density, anatomical accuracy — NO TEXT]."
+  PART 4: "Colors: [2-4 HEX codes — muted, naturalistic]. No digital gradients. Ink line quality."
+  PART 5: "White background. Isolated specimen. NO text, NO labels, NO written words anywhere.
+    Bold enough to read at sticker size. Print-ready illustration quality."
+  → Text (Latin name, field notes, scale bar) goes in typography.layers, NOT in this prompt.
+
+WORKED EXAMPLE (Amateur Mycologist):
+  "Single fly agaric mushroom, centered on pure white background.
+  Rendered as a 19th century natural history museum plate in the style of James Sowerby's
+  British Fungi illustrations. Fine pen and ink engraving — precise cross-hatching on cap surface,
+  anatomically correct gills visible in cross-section, ring (annulus) clearly rendered on stem,
+  volva at base. Small magnifying glass and field journal beside the specimen.
+  Colors: scarlet cap (#C0392B), cream spots (#F5F0E8), warm white (#FAFAF8), dark ink (#1A1209).
+  NO text, NO labels, NO written words. White background. Isolated specimen. Bold at sticker size."
+
+──────────────────────────────────────────────────────────────────────
+STYLE 2 — VINTAGE BADGE / MEMBERSHIP CERTIFICATE / GUILD SEAL
+Use for: hobbyist pride communities (craft brewers, sourdough bakers, amateur radio, mechanical
+keyboard builders, fountain pen collectors, film photographers). The design is an IDENTITY ARTIFACT —
+like a vintage club patch, union badge, or official certificate. Instantly recognizable to the community.
+
+  PROMPT STRUCTURE:
+  PART 1: "Circular vintage badge design, centered on pure white background.
+    Styled as a [1920s/1940s/1950s] [trade guild seal / club membership badge / official certificate]."
+  PART 2: "Center illustration: [SPECIFIC TOOL/OBJECT/SYMBOL the community uses daily],
+    rendered in woodblock/letterpress style. Surrounding: circular border, decorative elements
+    (wreaths, stars, banners, measuring tools) — era-appropriate graphic ornaments. NO TEXT."
+  PART 3: "[SPECIFIC DESIGN DETAILS: border elements, stars, wreaths — NO typography, NO letters]."
+  PART 4: "Colors: [2-3 HEX codes — muted earth tones, aged feel]. Distressed texture.
+    Letterpress-quality printing aesthetic. All text areas left BLANK for Python typography."
+  PART 5: "White background. Clean circular composition. NO text, NO lettering, NO words.
+    All typography (title, inner ring text, motto) will be added by a separate tool."
+  → Badge text (title, inner ring, motto) goes in typography.layers, NOT in this prompt.
+
+WORKED EXAMPLE (Sourdough Baker):
+  "Circular vintage badge design, centered on pure white background.
+  Styled as a 1930s artisan baker's guild seal — the type printed on flour sack labels.
+  Center illustration: a ceramic sourdough crock with an active starter bubbling over the top,
+  rendered in woodblock print style. Surrounding border: wheat stalks and measuring scales.
+  Inner ring left blank for text overlay. Outer border: distressed badge edge with rope ornament.
+  Decorative stars at compass points. NO text, NO lettering, NO written words anywhere.
+  Colors: warm amber (#C4933F), cream (#F5F0E8), dark brown (#2C1A0E), muted gold (#A8882A).
+  White background. Clean circular composition. Works at 2cm sticker AND 30cm print."
+
+──────────────────────────────────────────────────────────────────────
+STYLE 3 — FLAT MODERN VECTOR / TECHNICAL DIAGRAM
+Use for: tech communities, engineers, cyclists, runners, data people, SRE/DevOps, scientists.
+These communities respond to precision and wit, NOT cuteness. The design looks like a technical
+diagram, data visualization, or exploded engineering drawing — but with dry humor or community irony.
+
+  PROMPT STRUCTURE:
+  PART 1: "Single [TECHNICAL OBJECT / SYSTEM DIAGRAM], centered on pure white background.
+    Flat vector illustration — the precision of a technical manual, the wit of an insider joke."
+  PART 2: "[SPECIFIC TECHNICAL ELEMENTS — shapes, components, connectors, status indicators].
+    Leave text areas as blank rectangles or placeholder boxes. NO actual text in the image."
+  PART 3: "[VISUAL DIAGRAM STRUCTURE: layout, component shapes, indicator lights, color coding].
+    Annotation leader lines present but NO labels — text added by Python tool after generation."
+  PART 4: "Colors: [2-3 HEX codes — monochrome with one accent color]. Bold geometric shapes, zero gradients."
+  PART 5: "White background. Clean vector edges. All label areas left blank. Reads at sticker size."
+  → Annotation text (component names, ironic labels, captions) goes in typography.layers.
+
+WORKED EXAMPLE (SRE / Infrastructure Engineer):
+  "Single server rack unit diagram, centered on pure white background.
+  Flat vector illustration — precision of a data center technical manual.
+  4 rack units visible: 1U slot with cooling fans and blinking status LED (red),
+  2U slot with cable bundle entry, 4U slot with blank panel, 1U slot with power supply.
+  Status LED strip at right: all indicators solid red. Blank label tags on each unit —
+  text placeholder rectangles left empty. Temperature gauge at top: needle in red zone.
+  Colors: off-white (#F8F8F6), charcoal (#2C2C2C), critical red (#D63031). Zero gradients.
+  NO text, NO words, NO labels. White background. Clean vector edges. Reads at sticker size."
+
+──────────────────────────────────────────────────────────────────────
+STYLE 4 — EDITORIAL CARTOON / SATIRICAL ILLUSTRATION
+Use for: professions with strong dark-humor culture (nurses, teachers, lawyers, academics,
+social workers), hobbyists with self-aware community in-jokes, niche fandoms. The design
+captures a SHARED EXPERIENCE that makes the community say "this is exactly us."
+NOT generic meme format. Must reference something specific to the community's lived reality.
+
+  PROMPT STRUCTURE:
+  PART 1: "Single editorial cartoon illustration, centered on pure white background.
+    Expressive hand-drawn linework — like a New Yorker cartoon panel meets community merch."
+  PART 2: "[SPECIFIC CHARACTER/SCENARIO using real community context — not a generic archetype].
+    [VISUAL IRONY: the gap between the expected and actual reality this community experiences daily]."
+  PART 3: "[CAPTION or LABEL using community-specific jargon that makes insiders instantly recognize it]."
+  PART 4: "Colors: [3-4 HEX codes]. Semi-flat with subtle hand-drawn texture. Expressive ink outlines."
+  PART 5: "White background. One central composition. Text legible at sticker size."
+
+WORKED EXAMPLE (Academic Researcher / PhD):
+  "Single editorial cartoon illustration, centered on pure white background.
+  Expressive hand-drawn linework — New Yorker cartoon quality.
+  A lone researcher at a computer, surrounded by a towering spiral of increasingly specific
+  academic papers labeled: 'THE LITERATURE', each paper title more obscure than the last.
+  The researcher holds a coffee mug labeled 'GRANT PENDING'. Thought bubble reads:
+  'My n=12 study will change everything.' Computer screen shows: 'Reviewer 2 has responded.'
+  Semi-flat illustration with visible pencil texture. Slight exaggeration in the spiral height.
+  Colors: warm charcoal (#2C2C2C), academic paper cream (#F5F0E0), burnt sienna highlight (#C0622A),
+  muted blue accent (#3A6B8A). White background. Text legible at sticker size."
+
+──────────────────────────────────────────────────────────────────────
+STYLE 5 — RISOGRAPH / WOODBLOCK LIMITED-PALETTE PRINT
+Use for: indie art communities, zine culture, printmaking, alternative music fans, underground
+craft communities. This aesthetic IS the identity signal — it says "I know what a risograph is."
+Bold 2-3 color limited palette, intentional registration variation, grain texture.
+
+  PROMPT STRUCTURE:
+  PART 1: "Single risograph-style illustration, centered on pure white background.
+    Bold limited-palette print aesthetic — like a 2-color risograph zine cover."
+  PART 2: "[SUBJECT with strong graphic silhouette — must read at thumbnail size].
+    [COMMUNITY-SPECIFIC SUBJECT that would appear in a zine for this community]."
+  PART 3: "Deliberate risograph register variation — slight misalignment between color layers.
+    Grain texture on all filled areas. Bold black key layer with flat color overlays."
+  PART 4: "Colors: [2-3 HEX codes only — classic riso colors: fluorescent pink (#F76C8A),
+    teal (#00A79D), warm red (#F4543C), soy (#D4AC0D)]. Heavy grain on fills."
+  PART 5: "White background. Strong graphic composition. Reads at 2cm sticker size."
+
+WORKED EXAMPLE (Zine / Indie Print Community):
+  "Single risograph-style illustration, centered on pure white background.
+  Bold limited-palette print aesthetic — a 2-color risograph zine cover.
+  A hand-cranked Risograph duplicator machine in profile — bold graphic silhouette,
+  paper feeding through the drum, a stack of freshly printed zines emerging.
+  Community text: 'PRINT IS NOT DEAD'. Deliberate register variation between color layers —
+  slight 3px misalignment on the color fill. Heavy grain texture on all solid fills.
+  Black key layer with single fluorescent pink (#F76C8A) color overlay.
+  White background. Strong graphic silhouette. Reads at 2cm sticker size."
+
+──────────────────────────────────────────────────────────────────────
+STYLE 6 — KAWAII CHARACTER  (strict anti-saturation rules apply)
+Use ONLY if: the concept involves a community NOT already represented in the axolotl/capybara/frog
+wave — and the character has a community-specific prop, tool, or role that makes it instantly
+recognizable to insiders. Generic "cute animal + emotion" → REJECTED. Must clear Phase 1 saturation check.
+
+  THE AUTHENTIC KAWAII TEST: replace the animal with a random other animal. Does the design still work?
+    → If YES: the character is generic. Reject.
+    → If NO (only this specific animal/character with these specific props works for this community): VALID.
+
+  PROMPT STRUCTURE:
+  PART 1: "Single [SPECIFIC CHARACTER] with [COMMUNITY-SPECIFIC PROPS/TOOLS], centered on white background.
+    Kawaii flat vector illustration — thick black outline, pastel fill, simple rounded shapes."
+  PART 2: "[CHARACTER DETAILS with props that ONLY THIS COMMUNITY uses — real tool names, jargon].
+    [EXPRESSION that captures the community's shared experience or inside joke]."
+  PART 3: "[OPTIONAL TEXT ELEMENT using community-specific phrase or jargon — not a generic quote]."
+  PART 4: "Colors: [3-4 HEX codes — pastel palette]. High contrast outline on white background."
+  PART 5: "White background. Bold enough to read at 2cm sticker size. No gradients inside shapes."
+
+WORKED EXAMPLE (Mechanical Keyboard Enthusiast):
+  "Single chibi keycap character carrying a set of switch lubricating tools, centered on white.
+  Kawaii flat vector illustration — thick black outline, pastel fill, simple rounded shapes.
+  The keycap character has tiny arms holding: a Tribosys 3204 lubricant bottle and a tiny
+  switch opener. Text bubble: 'Linears only.' A half-assembled keyboard lies at its feet labeled
+  'endgame (temporary)'. Expression: blissfully satisfied.
+  Colors: coral pink (#F7A8A0), pale yellow (#FFF3C4), light grey (#E8E8E8), black (#1A1A1A).
+  White background. Bold outline at 2cm sticker size. No gradients."
+
+═══════════════════════════════════════════════════════════════════════
+MANDATORY CROSSOVER GAP NICHES — the last {crossover_count} entries MUST be crossover-gap concepts
+═══════════════════════════════════════════════════════════════════════
+
+These are NOT invented. You must find real unmet demand at the intersection of two communities
+before including a crossover-gap concept.
+
+RESEARCH PROTOCOL for each crossover gap:
+1. Search Reddit for posts in niche communities asking for specific merch:
+   r/fountainpens, r/sourdough, r/hamradio, r/mechanicalkeyboards, r/fermentation,
+   r/mycology, r/birdingforbeginners, r/aquariums, r/minipainting, r/analog,
+   r/ultralight, r/caving, r/beekeeping, r/wetfelting, r/fishkeeping, r/cichlids,
+   r/homebrewing, r/longtail, r/openwater, r/pikeplants, r/hydroponics
+   Look for: "I wish someone made [merch] for [hobby]", "can't find [design] anywhere",
+   "does anyone sell [item] for [community]"
+
+2. Confirm low Redbubble supply: search "[hobby keyword] sticker" on Redbubble.
+   PASS: fewer than 2,000 quality results for the combined niche intersection.
+
+3. Confirm the two communities share a potential visual overlap — a crossover aesthetic
+   that serves BOTH identities simultaneously (e.g. sourdough baker + dark academia →
+   vintage bread chemistry diagram; ham radio + retro tech → oscilloscope waveform art print).
+
+4. Document WHAT you found in demand_gap_evidence: quote the actual Reddit post/thread,
+   the Redbubble result count, and the visual overlap logic.
+
+ZERO INVENTED CROSSOVERS: if you cannot find real evidence of demand at the intersection,
+pick a different community pair where you DO find evidence.
+
+Each crossover-gap concept must have:
+  "crossover_gap": true
+  "demand_gap_evidence": "concrete evidence: subreddit + post quote + RB result count + visual overlap"
+
+═══════════════════════════════════════════════════════════════════════
+JSON SCHEMA — return EXACTLY this structure for each concept
+═══════════════════════════════════════════════════════════════════════
+
+{{{{
+  "name": "2-4 word concept name — specific, not generic (e.g. 'Sourdough Starter Guild Badge')",
+  "concept": "one sentence: what makes an insider say 'finally, someone who GETS us'",
+  "style_template": "1|2|3|4|5|6",
+  "trending_score": integer 0-100 (see OPPORTUNITY SCORING above — must match evidence level),
+  "market_opportunity": "very_high" | "high" | "medium" | "low",
+  "competition_evidence": "Redbubble search keyword + result count found + quality note (e.g. 'redbubble search: ham radio sticker → 847 results, mostly generic call sign designs, no naturalist style')",
+  "demand_evidence": "which of the 5 checks passed (A/B/C/D/E) + key findings for each: subreddit name+size, TikTok hashtag views, Etsy listing count, Pinterest board, any viral merch post found",
+  "why_trending": "2 sentences: (1) specific signal proving demand exists RIGHT NOW, (2) specific reason competition is beatable",
+  "target_buyer": "precise person: hobby, platform where they discovered you, product they buy first, where they put it",
+  "best_products": ["sticker", "t-shirt"],
+  "humor_level": "wholesome" | "relatable" | "absurdist" | "dark-cute" | "niche-pride",
+  "niche_community": "specific community name with subreddit if applicable (e.g. 'amateur mycologists (r/mycology, 289k members)')",
+  "color_count": 3,
+  "visual_direction": {{{{
+    "style": "naturalist|vintage-badge|technical-diagram|editorial-cartoon|risograph|kawaii",
+    "mood": "comma-separated mood adjectives that match HOW THIS COMMUNITY sees itself",
+    "color_palette": {{{{
+      "primary": ["Color Name #HEXCODE", "Color Name #HEXCODE"],
+      "accent": ["Color Name #HEXCODE"],
+      "background": "White #FFFFFF"
+    }}}}
+  }}}},
+  "ai_generation": {{{{
+    "positive_prompt": "SEE STYLE TEMPLATES — 80-130 words, ZERO text/labels/typography, illustration only",
+    "cfg_scale": 4.0
+  }}}},
+  "typography": {{{{
+    "apply": true,
+    "layers": [
+      {{{{
+        "text": "EXACT TEXT TO RENDER (community jargon, Latin name, badge title, annotation label...)",
+        "position": "top_arc | bottom_arc | center | top | bottom | annotation | italic_caption",
+        "font_style": "serif_bold | serif | serif_italic | mono | sans | sans_bold",
+        "size_pt": 60,
+        "color": "#HEXCODE",
+        "arc_radius_pct": 38,
+        "y_offset_pct": 0.0,
+        "x_pct": 0.5,
+        "y_pct": 0.5
+      }}}},
+      // Include ALL text that makes the design community-specific:
+      // Style 1 → italic_caption for Latin name + annotation for field notes
+      // Style 2 → top_arc for badge title + bottom_arc for motto/year
+      // Style 3 → annotation layers for each labeled component
+      // Style 4 → bottom for caption + center for ironic label
+      // Style 5 → top for main slogan + bottom for subtext
+      // Style 6 → bottom for community catchphrase
+    ]
+  }}}},
+  "crossover_gap": false,
+  "demand_gap_evidence": "",
+  "wikimedia_query": "2-5 word query for public domain reference images on Wikimedia Commons",
+  "redbubble_search_query": "the exact 2-4 word search you ran on Redbubble in Phase 1/Check A",
+  "sub_niches": [
+    {{{{
+      "name": "specific sub-angle (2-4 words) — must be distinct, not just a name variation",
+      "differentiator": "what sub-community, product type, or visual angle makes this distinct from the parent",
+      "opportunity": "very_high | high | medium | low",
+      "best_product": "sticker | t-shirt | mug | tote | art-print | phone-case | notebook"
+    }}}},
+    // 3-5 sub-niches — each with a distinct buyer or product fit. Researched, not invented.
+  ]
+}}}}
+
+SUB-NICHE RESEARCH (mandatory): for each concept, find 3-5 real sub-angles within the community.
+Each must have a distinct buyer or product context. Search Etsy and Reddit to confirm these
+sub-angles have actual demand. Example: parent = "Amateur Radio Pride" → sub-niches:
+  "CW Morse Code Art Print" (the subset who still use code, not just digital modes),
+  "QRP Low-Power Field Radio Sticker" (the portable/backpacking ham radio crowd),
+  "SDR Waterfall Display Art" (software-defined radio crowd, younger and tech-forward),
+  "ARRL License Class Humor Mug" (exam culture, General/Extra/Technician jokes),
+  "Portable Mast Setup Cartoon" (POTA/SOTA activators — park/summit on the air community).
+
+Return ONLY a valid JSON array of exactly {total_count} objects ({niche_count} mainstream + {crossover_count} crossover-gap). No text before or after. No markdown wrapper.
 """
 
     # ── Normalisation d'une tendance brute Gemini ──────────────────────────────
@@ -771,6 +1393,10 @@ Return ONLY a valid JSON array of exactly {total_count} trend objects ({profile.
         t.setdefault("crossover_gap", False)    # True pour les niches micro-niche crossover
         t.setdefault("demand_gap_evidence", "")  # Preuve concrète de demande inassouvie (crossover uniquement)
         t.setdefault("wikimedia_query", t.get("name", ""))
+        # Champs Redbubble spécifiques (ignorés si Spoonflower)
+        t.setdefault("style_template", "")          # "1"-"6" pour les 6 styles Redbubble
+        t.setdefault("competition_evidence", "")    # résultat Redbubble + note qualité
+        t.setdefault("demand_evidence", "")         # checks A-E passés + données trouvées
 
         # ── Direction visuelle ───────────────────────────────────────────────
         vd = t.setdefault("visual_direction", {})
@@ -832,6 +1458,17 @@ Return ONLY a valid JSON array of exactly {total_count} trend objects ({profile.
                 normalized_subs.append(sub)
         t["sub_niches"] = normalized_subs
 
+        # ── Typographie (auto-générée pour planches naturalistes) ────────────
+        if not t.get("typography"):
+            name = t.get("name", "")
+            if any(kw in name.lower() for kw in ("plate", "planche", "specimen", "anatomy")):
+                t["typography"] = _auto_naturalist_typography(t)
+            else:
+                t.setdefault("typography", {"apply": False, "layers": []})
+        else:
+            t["typography"].setdefault("apply", False)
+            t["typography"].setdefault("layers", [])
+
         # ── Champs legacy (compat prompt builder existant) ───────────────────
         primary = cp.get("primary", [])
         accent = cp.get("accent", [])
@@ -877,9 +1514,17 @@ Return ONLY a valid JSON array of exactly {total_count} trend objects ({profile.
         if self._global_trends is not None:
             return self._global_trends
 
+        # Orientation thématique pilotable via env (sans toucher au code)
+        if not extra_constraints:
+            extra_constraints = os.getenv("MONEYMAKER_FOCUS", "")
+
         profile = _coerce_profile(profile)
         today = date.today().isoformat()
-        prompt = self._build_trend_prompt(profile, today, extra_constraints)
+        # Redbubble uses a dedicated standalone-illustration prompt
+        if profile.key == "redbubble":
+            prompt = self._build_redbubble_prompt(profile, today, extra_constraints)
+        else:
+            prompt = self._build_trend_prompt(profile, today, extra_constraints)
 
         raw = self._call_gemini(prompt)
         if not raw:
@@ -944,7 +1589,54 @@ Return ONLY a valid JSON array of exactly {total_count} trend objects ({profile.
             return trends
 
         excluded = ", ".join(profile.excluded_generic) or "broad generic themes"
-        prompt = f"""You are a senior {profile.display_name} surface-design strategist reviewing a junior's niche proposals.
+
+        if profile.key == "redbubble":
+            prompt = f"""You are a senior Redbubble market analyst reviewing a junior's proposed concept list.
+
+Here is the JSON array of proposed concepts:
+{trends_json}
+
+Your mandate: apply the same rigorous 3-phase methodology used to generate these concepts.
+
+CRITIQUE PASS — perform ALL of the following:
+
+1. SATURATION RE-CHECK (mandatory for every concept):
+   Search Redbubble for each concept's "redbubble_search_query" value.
+   If the search returns >30,000 results AND the existing designs are high quality →
+   either DROP the concept or PIVOT it to a community-authentic sub-angle with <10,000 results.
+   Permanently excluded themes: {excluded}
+
+2. COMMUNITY AUTHENTICITY FILTER:
+   For each concept, verify the "ai_generation.positive_prompt" contains at least one detail that:
+   - Uses real community jargon, tool names, or insider terminology
+   - References a specific experience only this community has
+   - Would confuse an outsider but immediately resonate with a community member
+   → If missing: REWRITE the positive_prompt to add authentic community specificity.
+
+3. EVIDENCE INTEGRITY CHECK:
+   Verify "trending_score" is consistent with what "demand_evidence" actually reports.
+   - 80+: requires actual measured data (viral TikTok, Etsy bestseller, Reddit merch request)
+   - 60-79: requires 4+ of the 5 checks (A/B/C/D/E) documented in demand_evidence
+   - If trending_score is inflated relative to evidence → lower it and note why
+   If "competition_evidence" or "demand_evidence" is vague or empty → attempt to fill it with web research.
+
+4. STYLE TEMPLATE MATCH:
+   Verify each concept's "ai_generation.positive_prompt" matches its "style_template" number (1-6).
+   If mismatched → rewrite the prompt to correctly follow the assigned style template structure.
+
+5. SUB-NICHE SHARPENING:
+   For each concept's sub_niches array: verify each sub-niche has a distinct buyer or product angle.
+   Reject vague name variations. Ensure "differentiator" explains a real distinction.
+
+6. FINAL RANKING:
+   Re-sort the array by opportunity score (demand strength × competition weakness), best first.
+   Crossover-gap niches (crossover_gap: true) go last.
+
+Return ONLY a valid JSON array using the EXACT SAME object schema and fields as the input.
+Do not add or remove top-level fields. No prose, no markdown wrapper."""
+
+        else:
+            prompt = f"""You are a senior {profile.display_name} surface-design strategist reviewing a junior's niche proposals.
 
 Here is the JSON array of proposed niches:
 {trends_json}
