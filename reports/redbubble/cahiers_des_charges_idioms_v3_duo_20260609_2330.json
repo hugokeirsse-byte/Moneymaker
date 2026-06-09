@@ -1,0 +1,661 @@
+{
+  "generated_at": "2026-06-09T23:30:00+00:00",
+  "series": "idioms_v3_duo_precision",
+  "idioms": [
+    "It's raining cats and dogs",
+    "Da steppt der Bär"
+  ],
+  "description": "V3 PRECISION : 2 expressions x 27 styles = 54 briefs, 1 image chacun. Scene litterale identique par expression, decrite EN PREMIER. Contraintes anatomiques explicites dans le prompt POSITIF (exactly one/two animals, exactly four legs) car FLUX Dev ignore les negative prompts. Zero texte. tiling=false. Styles valides et reutilisables pour toutes les futures series.",
+  "platform": "redbubble",
+  "total_briefs": 54,
+  "briefs": [
+    {
+      "name": "Raining Cats And Dogs 01 — Risograph Print",
+      "_style_id": "risograph",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE orange tabby cat and EXACTLY ONE brown-and-white beagle dog are literally falling from one single grey storm cloud, in the middle of a rainstorm. Both animals are in mid-air freefall, bellies facing down, all four legs spread wide like skydivers, fur blown upward by the wind, mouths open in comic surprise, eyes wide. The cat has exactly four legs, two pointed ears and one tail. The dog has exactly four legs, two floppy ears and one tail. Exactly two animals in total, no other creatures. Round raindrops fall around them at the same speed. Illustrated in risograph print style: visible riso grain texture across the whole image, strictly limited 3-color palette of cobalt blue, warm coral orange and cream white, flat simplified shapes, slight intentional color misregistration, lo-fi zine aesthetic. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Raining Cats And Dogs 02 — Bold Flat Vector",
+      "_style_id": "flat_vector",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE orange tabby cat and EXACTLY ONE brown-and-white beagle dog are literally falling from one single grey storm cloud, in the middle of a rainstorm. Both animals are in mid-air freefall, bellies facing down, all four legs spread wide like skydivers, fur blown upward by the wind, mouths open in comic surprise, eyes wide. The cat has exactly four legs, two pointed ears and one tail. The dog has exactly four legs, two floppy ears and one tail. Exactly two animals in total, no other creatures. Round raindrops fall around them at the same speed. Illustrated in bold flat vector style: thick black outlines, solid vivid color fills with zero gradients, bright primary colors, clean geometric simplicity, white background, modern graphic design. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Raining Cats And Dogs 03 — Japanese Ukiyo-e",
+      "_style_id": "ukiyo_e",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE orange tabby cat and EXACTLY ONE brown-and-white beagle dog are literally falling from one single grey storm cloud, in the middle of a rainstorm. Both animals are in mid-air freefall, bellies facing down, all four legs spread wide like skydivers, fur blown upward by the wind, mouths open in comic surprise, eyes wide. The cat has exactly four legs, two pointed ears and one tail. The dog has exactly four legs, two floppy ears and one tail. Exactly two animals in total, no other creatures. Round raindrops fall around them at the same speed. Illustrated in Japanese ukiyo-e woodblock print style: flat color areas in indigo blue, vermillion red and cream, bold carved outlines, traditional Edo-period aesthetics, decorative stylized background, woodblock texture on aged paper. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Raining Cats And Dogs 04 — 80s Retro Neon",
+      "_style_id": "retro_neon_80s",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE orange tabby cat and EXACTLY ONE brown-and-white beagle dog are literally falling from one single grey storm cloud, in the middle of a rainstorm. Both animals are in mid-air freefall, bellies facing down, all four legs spread wide like skydivers, fur blown upward by the wind, mouths open in comic surprise, eyes wide. The cat has exactly four legs, two pointed ears and one tail. The dog has exactly four legs, two floppy ears and one tail. Exactly two animals in total, no other creatures. Round raindrops fall around them at the same speed. Illustrated in 1980s retro neon synthwave style: hot pink, electric blue and laser yellow against deep purple background, chrome-style bold outlines with neon glow, Miami Vice aesthetic. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Raining Cats And Dogs 05 — Cut Paper Collage",
+      "_style_id": "cut_paper_collage",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE orange tabby cat and EXACTLY ONE brown-and-white beagle dog are literally falling from one single grey storm cloud, in the middle of a rainstorm. Both animals are in mid-air freefall, bellies facing down, all four legs spread wide like skydivers, fur blown upward by the wind, mouths open in comic surprise, eyes wide. The cat has exactly four legs, two pointed ears and one tail. The dog has exactly four legs, two floppy ears and one tail. Exactly two animals in total, no other creatures. Round raindrops fall around them at the same speed. Illustrated in cut paper collage style: layered paper cut-out shapes with visible layers and slight drop shadows, mixed paper textures of newsprint, kraft brown and origami colored papers, handmade craft aesthetic, bright bold colors. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Raining Cats And Dogs 06 — Vintage Watercolor",
+      "_style_id": "vintage_watercolor",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE orange tabby cat and EXACTLY ONE brown-and-white beagle dog are literally falling from one single grey storm cloud, in the middle of a rainstorm. Both animals are in mid-air freefall, bellies facing down, all four legs spread wide like skydivers, fur blown upward by the wind, mouths open in comic surprise, eyes wide. The cat has exactly four legs, two pointed ears and one tail. The dog has exactly four legs, two floppy ears and one tail. Exactly two animals in total, no other creatures. Round raindrops fall around them at the same speed. Illustrated in vintage watercolor style: delicate watercolor washes in muted dusty blue, warm taupe, soft gold and sage green, fine ink pen linework over the washes, Victorian storybook aesthetic on aged parchment. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Raining Cats And Dogs 07 — Cartoon Network Flat",
+      "_style_id": "cartoon_network",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE orange tabby cat and EXACTLY ONE brown-and-white beagle dog are literally falling from one single grey storm cloud, in the middle of a rainstorm. Both animals are in mid-air freefall, bellies facing down, all four legs spread wide like skydivers, fur blown upward by the wind, mouths open in comic surprise, eyes wide. The cat has exactly four legs, two pointed ears and one tail. The dog has exactly four legs, two floppy ears and one tail. Exactly two animals in total, no other creatures. Round raindrops fall around them at the same speed. Illustrated in Adventure Time cartoon network style: thick bold black cartoon outlines, flat vivid color fills of sky blue, lime green and sunshine yellow, simple round pudgy characters with big expressive faces, 2D cel animation aesthetic, white background. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Raining Cats And Dogs 08 — Victorian Engraving",
+      "_style_id": "victorian_engraving",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE orange tabby cat and EXACTLY ONE brown-and-white beagle dog are literally falling from one single grey storm cloud, in the middle of a rainstorm. Both animals are in mid-air freefall, bellies facing down, all four legs spread wide like skydivers, fur blown upward by the wind, mouths open in comic surprise, eyes wide. The cat has exactly four legs, two pointed ears and one tail. The dog has exactly four legs, two floppy ears and one tail. Exactly two animals in total, no other creatures. Round raindrops fall around them at the same speed. Illustrated in Victorian scientific engraving style: fine crosshatching and stippling throughout, monochromatic sepia-brown on aged cream parchment, ornate engraved decorative border, 1860s natural history atlas aesthetic. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Raining Cats And Dogs 09 — Memphis 1980s Design",
+      "_style_id": "memphis_design",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE orange tabby cat and EXACTLY ONE brown-and-white beagle dog are literally falling from one single grey storm cloud, in the middle of a rainstorm. Both animals are in mid-air freefall, bellies facing down, all four legs spread wide like skydivers, fur blown upward by the wind, mouths open in comic surprise, eyes wide. The cat has exactly four legs, two pointed ears and one tail. The dog has exactly four legs, two floppy ears and one tail. Exactly two animals in total, no other creatures. Round raindrops fall around them at the same speed. Illustrated in Memphis postmodern 1980s design style: bold colorful geometric shapes, triangles, squiggles and polka dots scattered around, vibrant palette of tomato red, sunshine yellow, cobalt blue, black and seafoam green, flat playful composition. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Raining Cats And Dogs 10 — Studio Ghibli Painted",
+      "_style_id": "ghibli_painted",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE orange tabby cat and EXACTLY ONE brown-and-white beagle dog are literally falling from one single grey storm cloud, in the middle of a rainstorm. Both animals are in mid-air freefall, bellies facing down, all four legs spread wide like skydivers, fur blown upward by the wind, mouths open in comic surprise, eyes wide. The cat has exactly four legs, two pointed ears and one tail. The dog has exactly four legs, two floppy ears and one tail. Exactly two animals in total, no other creatures. Round raindrops fall around them at the same speed. Illustrated in Studio Ghibli hand-painted style: warm earthy palette of dusty periwinkle blue, warm ochre, sage green and soft coral, painterly soft background with warm golden light, big expressive curious eyes, dreamy storybook mood. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Raining Cats And Dogs 11 — Retro Pixel Art",
+      "_style_id": "pixel_art",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE orange tabby cat and EXACTLY ONE brown-and-white beagle dog are literally falling from one single grey storm cloud, in the middle of a rainstorm. Both animals are in mid-air freefall, bellies facing down, all four legs spread wide like skydivers, fur blown upward by the wind, mouths open in comic surprise, eyes wide. The cat has exactly four legs, two pointed ears and one tail. The dog has exactly four legs, two floppy ears and one tail. Exactly two animals in total, no other creatures. Round raindrops fall around them at the same speed. Illustrated in retro 16-bit pixel art style: chunky visible pixels, NES color palette limited to 8 colors, crisp hard pixel edges, retro video game sprite aesthetic on a simple dark background. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Raining Cats And Dogs 12 — Minimalist Line Art",
+      "_style_id": "minimalist_line",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE orange tabby cat and EXACTLY ONE brown-and-white beagle dog are literally falling from one single grey storm cloud, in the middle of a rainstorm. Both animals are in mid-air freefall, bellies facing down, all four legs spread wide like skydivers, fur blown upward by the wind, mouths open in comic surprise, eyes wide. The cat has exactly four legs, two pointed ears and one tail. The dog has exactly four legs, two floppy ears and one tail. Exactly two animals in total, no other creatures. Round raindrops fall around them at the same speed. Illustrated in minimalist continuous single-line style: one unbroken thin black ink line on pure white background, elegant zen aesthetic with generous negative space, no color fills, pure contour. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Raining Cats And Dogs 13 — Gothic Dark Whimsy",
+      "_style_id": "gothic_dark",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE orange tabby cat and EXACTLY ONE brown-and-white beagle dog are literally falling from one single grey storm cloud, in the middle of a rainstorm. Both animals are in mid-air freefall, bellies facing down, all four legs spread wide like skydivers, fur blown upward by the wind, mouths open in comic surprise, eyes wide. The cat has exactly four legs, two pointed ears and one tail. The dog has exactly four legs, two floppy ears and one tail. Exactly two animals in total, no other creatures. Round raindrops fall around them at the same speed. Illustrated in gothic dark whimsy style: stark black and white with one blood red accent, ornate Victorian gothic decorative frame, spooky-cute aesthetic with toothy mischievous grins, high contrast dramatic lighting. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Raining Cats And Dogs 14 — 1960s Psychedelic",
+      "_style_id": "psychedelic_60s",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE orange tabby cat and EXACTLY ONE brown-and-white beagle dog are literally falling from one single grey storm cloud, in the middle of a rainstorm. Both animals are in mid-air freefall, bellies facing down, all four legs spread wide like skydivers, fur blown upward by the wind, mouths open in comic surprise, eyes wide. The cat has exactly four legs, two pointed ears and one tail. The dog has exactly four legs, two floppy ears and one tail. Exactly two animals in total, no other creatures. Round raindrops fall around them at the same speed. Illustrated in 1960s psychedelic poster style: swirling kaleidoscopic background with concentric rainbow rings of turquoise, magenta, yellow, orange and lime green, groovy wavy outlines, Peter Max aesthetic. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Raining Cats And Dogs 15 — Kawaii Chibi",
+      "_style_id": "kawaii_chibi",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE orange tabby cat and EXACTLY ONE brown-and-white beagle dog are literally falling from one single grey storm cloud, in the middle of a rainstorm. Both animals are in mid-air freefall, bellies facing down, all four legs spread wide like skydivers, fur blown upward by the wind, mouths open in comic surprise, eyes wide. The cat has exactly four legs, two pointed ears and one tail. The dog has exactly four legs, two floppy ears and one tail. Exactly two animals in total, no other creatures. Round raindrops fall around them at the same speed. Illustrated in kawaii Japanese chibi style: extra chubby tiny bodies with oversized round heads, huge sparkling dot eyes, tiny blush cheeks, baby pastel palette of blush pink, lavender, baby blue and lemon yellow, glitter sparkle accents. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Raining Cats And Dogs 16 — Woodcut Linocut Print",
+      "_style_id": "woodcut_linocut",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE orange tabby cat and EXACTLY ONE brown-and-white beagle dog are literally falling from one single grey storm cloud, in the middle of a rainstorm. Both animals are in mid-air freefall, bellies facing down, all four legs spread wide like skydivers, fur blown upward by the wind, mouths open in comic surprise, eyes wide. The cat has exactly four legs, two pointed ears and one tail. The dog has exactly four legs, two floppy ears and one tail. Exactly two animals in total, no other creatures. Round raindrops fall around them at the same speed. Illustrated in woodcut linocut print style: bold raw carved texture marks and gouge lines throughout, high contrast two-tone palette of black and cobalt blue on cream, raw handmade craft print quality. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Raining Cats And Dogs 17 — Tattoo Flash Art",
+      "_style_id": "tattoo_flash",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE orange tabby cat and EXACTLY ONE brown-and-white beagle dog are literally falling from one single grey storm cloud, in the middle of a rainstorm. Both animals are in mid-air freefall, bellies facing down, all four legs spread wide like skydivers, fur blown upward by the wind, mouths open in comic surprise, eyes wide. The cat has exactly four legs, two pointed ears and one tail. The dog has exactly four legs, two floppy ears and one tail. Exactly two animals in total, no other creatures. Round raindrops fall around them at the same speed. Illustrated in traditional American tattoo flash style: bold thick black outlines, classic Sailor Jerry color fills of red, cobalt blue, forest green and yellow, small star accents, aged cream background, vintage tattoo parlor aesthetic. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Raining Cats And Dogs 18 — Art Nouveau",
+      "_style_id": "art_nouveau",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE orange tabby cat and EXACTLY ONE brown-and-white beagle dog are literally falling from one single grey storm cloud, in the middle of a rainstorm. Both animals are in mid-air freefall, bellies facing down, all four legs spread wide like skydivers, fur blown upward by the wind, mouths open in comic surprise, eyes wide. The cat has exactly four legs, two pointed ears and one tail. The dog has exactly four legs, two floppy ears and one tail. Exactly two animals in total, no other creatures. Round raindrops fall around them at the same speed. Illustrated in Art Nouveau style: Alphonse Mucha inspired flowing organic sinuous linework, muted jewel tones of jade green, burgundy, antique gold and dusty violet, ornamental circular frame with botanical border. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Raining Cats And Dogs 19 — Swiss Constructivist",
+      "_style_id": "swiss_constructivist",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE orange tabby cat and EXACTLY ONE brown-and-white beagle dog are literally falling from one single grey storm cloud, in the middle of a rainstorm. Both animals are in mid-air freefall, bellies facing down, all four legs spread wide like skydivers, fur blown upward by the wind, mouths open in comic surprise, eyes wide. The cat has exactly four legs, two pointed ears and one tail. The dog has exactly four legs, two floppy ears and one tail. Exactly two animals in total, no other creatures. Round raindrops fall around them at the same speed. Illustrated in Swiss International Typographic constructivist style: stark geometric composition, bold circles and grid lines, strictly two-color palette of pure black and one saturated red, zero ornament, Bauhaus aesthetic. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Raining Cats And Dogs 20 — Pop Art Ben-Day",
+      "_style_id": "pop_art",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE orange tabby cat and EXACTLY ONE brown-and-white beagle dog are literally falling from one single grey storm cloud, in the middle of a rainstorm. Both animals are in mid-air freefall, bellies facing down, all four legs spread wide like skydivers, fur blown upward by the wind, mouths open in comic surprise, eyes wide. The cat has exactly four legs, two pointed ears and one tail. The dog has exactly four legs, two floppy ears and one tail. Exactly two animals in total, no other creatures. Round raindrops fall around them at the same speed. Illustrated in Pop Art Roy Lichtenstein comic style: Ben-Day halftone dot pattern in the background, bold primary colors red, yellow and cobalt blue, thick black outlines, dramatic comic panel composition, no speech bubbles. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Raining Cats And Dogs 21 — Ligne Claire BD",
+      "_style_id": "ligne_claire",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE orange tabby cat and EXACTLY ONE brown-and-white beagle dog are literally falling from one single grey storm cloud, in the middle of a rainstorm. Both animals are in mid-air freefall, bellies facing down, all four legs spread wide like skydivers, fur blown upward by the wind, mouths open in comic surprise, eyes wide. The cat has exactly four legs, two pointed ears and one tail. The dog has exactly four legs, two floppy ears and one tail. Exactly two animals in total, no other creatures. Round raindrops fall around them at the same speed. Illustrated in Franco-Belgian Ligne Claire bande dessinee style: Herge Tintin aesthetic, perfectly even clean black outlines, flat color fills with no shading, clear readable composition, bright clean colors on white background. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Raining Cats And Dogs 22 — Stained Glass",
+      "_style_id": "stained_glass",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE orange tabby cat and EXACTLY ONE brown-and-white beagle dog are literally falling from one single grey storm cloud, in the middle of a rainstorm. Both animals are in mid-air freefall, bellies facing down, all four legs spread wide like skydivers, fur blown upward by the wind, mouths open in comic surprise, eyes wide. The cat has exactly four legs, two pointed ears and one tail. The dog has exactly four legs, two floppy ears and one tail. Exactly two animals in total, no other creatures. Round raindrops fall around them at the same speed. Illustrated in gothic cathedral stained glass style: bold black lead lines separating jewel-toned glass segments of ruby red, sapphire blue, emerald green and amber gold, glowing backlit effect. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Raining Cats And Dogs 23 — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE orange tabby cat and EXACTLY ONE brown-and-white beagle dog are literally falling from one single grey storm cloud, in the middle of a rainstorm. Both animals are in mid-air freefall, bellies facing down, all four legs spread wide like skydivers, fur blown upward by the wind, mouths open in comic surprise, eyes wide. The cat has exactly four legs, two pointed ears and one tail. The dog has exactly four legs, two floppy ears and one tail. Exactly two animals in total, no other creatures. Round raindrops fall around them at the same speed. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Raining Cats And Dogs 24 — Art Deco",
+      "_style_id": "art_deco",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE orange tabby cat and EXACTLY ONE brown-and-white beagle dog are literally falling from one single grey storm cloud, in the middle of a rainstorm. Both animals are in mid-air freefall, bellies facing down, all four legs spread wide like skydivers, fur blown upward by the wind, mouths open in comic surprise, eyes wide. The cat has exactly four legs, two pointed ears and one tail. The dog has exactly four legs, two floppy ears and one tail. Exactly two animals in total, no other creatures. Round raindrops fall around them at the same speed. Illustrated in 1920s Art Deco style: gold, black and ivory palette, symmetrical geometric composition with stepped chevron and sunburst motifs, streamlined elegant stylized forms, Gatsby era luxury poster aesthetic. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Raining Cats And Dogs 25 — Graffiti Street Art",
+      "_style_id": "graffiti_street_art",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE orange tabby cat and EXACTLY ONE brown-and-white beagle dog are literally falling from one single grey storm cloud, in the middle of a rainstorm. Both animals are in mid-air freefall, bellies facing down, all four legs spread wide like skydivers, fur blown upward by the wind, mouths open in comic surprise, eyes wide. The cat has exactly four legs, two pointed ears and one tail. The dog has exactly four legs, two floppy ears and one tail. Exactly two animals in total, no other creatures. Round raindrops fall around them at the same speed. Illustrated in street art graffiti style: aerosol spray paint texture, bold black outlines, vivid electric colors of magenta, electric blue, lime green and chrome silver, dripping paint accents, urban mural aesthetic. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Raining Cats And Dogs 26 — Medieval Tapestry",
+      "_style_id": "medieval_tapestry",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE orange tabby cat and EXACTLY ONE brown-and-white beagle dog are literally falling from one single grey storm cloud, in the middle of a rainstorm. Both animals are in mid-air freefall, bellies facing down, all four legs spread wide like skydivers, fur blown upward by the wind, mouths open in comic surprise, eyes wide. The cat has exactly four legs, two pointed ears and one tail. The dog has exactly four legs, two floppy ears and one tail. Exactly two animals in total, no other creatures. Round raindrops fall around them at the same speed. Illustrated in Bayeux Tapestry embroidered style: flat earth-tone colors on beige linen, muted red, forest green, faded blue and mustard yellow, naive flat figures with visible horizontal stitch texture, decorative medieval border. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Raining Cats And Dogs 27 — Abstract Art",
+      "_style_id": "abstract_art",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE orange tabby cat and EXACTLY ONE brown-and-white beagle dog are literally falling from one single grey storm cloud, in the middle of a rainstorm. Both animals are in mid-air freefall, bellies facing down, all four legs spread wide like skydivers, fur blown upward by the wind, mouths open in comic surprise, eyes wide. The cat has exactly four legs, two pointed ears and one tail. The dog has exactly four legs, two floppy ears and one tail. Exactly two animals in total, no other creatures. Round raindrops fall around them at the same speed. Illustrated in abstract expressionist style: bold energetic gestural brushstrokes suggesting the motion of the scene, dynamic composition, intense saturated cobalt blue, cadmium red, raw sienna and zinc white, Kandinsky energy. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Bear Tap Dance 01 — Risograph Print",
+      "_style_id": "risograph",
+      "_idiom": "Da steppt der Bär (German: it's going to be a great party)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE single happy brown bear is literally tap-dancing, alone on a small round wooden stage. The bear stands fully upright on its two hind legs, wearing shiny black tap shoes on both feet, one foot lifted mid tap-step with small motion lines beneath it, its two front paws spread wide open in joy, mouth open in a big happy grin. The bear has exactly four limbs: two arms and two legs, one head, two round ears, correct bear anatomy. Exactly one animal, no other creatures, no people. A few musical notes float in the air around it. Illustrated in risograph print style: visible riso grain texture across the whole image, strictly limited 3-color palette of cobalt blue, warm coral orange and cream white, flat simplified shapes, slight intentional color misregistration, lo-fi zine aesthetic. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Bear Tap Dance 02 — Bold Flat Vector",
+      "_style_id": "flat_vector",
+      "_idiom": "Da steppt der Bär (German: it's going to be a great party)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE single happy brown bear is literally tap-dancing, alone on a small round wooden stage. The bear stands fully upright on its two hind legs, wearing shiny black tap shoes on both feet, one foot lifted mid tap-step with small motion lines beneath it, its two front paws spread wide open in joy, mouth open in a big happy grin. The bear has exactly four limbs: two arms and two legs, one head, two round ears, correct bear anatomy. Exactly one animal, no other creatures, no people. A few musical notes float in the air around it. Illustrated in bold flat vector style: thick black outlines, solid vivid color fills with zero gradients, bright primary colors, clean geometric simplicity, white background, modern graphic design. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Bear Tap Dance 03 — Japanese Ukiyo-e",
+      "_style_id": "ukiyo_e",
+      "_idiom": "Da steppt der Bär (German: it's going to be a great party)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE single happy brown bear is literally tap-dancing, alone on a small round wooden stage. The bear stands fully upright on its two hind legs, wearing shiny black tap shoes on both feet, one foot lifted mid tap-step with small motion lines beneath it, its two front paws spread wide open in joy, mouth open in a big happy grin. The bear has exactly four limbs: two arms and two legs, one head, two round ears, correct bear anatomy. Exactly one animal, no other creatures, no people. A few musical notes float in the air around it. Illustrated in Japanese ukiyo-e woodblock print style: flat color areas in indigo blue, vermillion red and cream, bold carved outlines, traditional Edo-period aesthetics, decorative stylized background, woodblock texture on aged paper. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Bear Tap Dance 04 — 80s Retro Neon",
+      "_style_id": "retro_neon_80s",
+      "_idiom": "Da steppt der Bär (German: it's going to be a great party)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE single happy brown bear is literally tap-dancing, alone on a small round wooden stage. The bear stands fully upright on its two hind legs, wearing shiny black tap shoes on both feet, one foot lifted mid tap-step with small motion lines beneath it, its two front paws spread wide open in joy, mouth open in a big happy grin. The bear has exactly four limbs: two arms and two legs, one head, two round ears, correct bear anatomy. Exactly one animal, no other creatures, no people. A few musical notes float in the air around it. Illustrated in 1980s retro neon synthwave style: hot pink, electric blue and laser yellow against deep purple background, chrome-style bold outlines with neon glow, Miami Vice aesthetic. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Bear Tap Dance 05 — Cut Paper Collage",
+      "_style_id": "cut_paper_collage",
+      "_idiom": "Da steppt der Bär (German: it's going to be a great party)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE single happy brown bear is literally tap-dancing, alone on a small round wooden stage. The bear stands fully upright on its two hind legs, wearing shiny black tap shoes on both feet, one foot lifted mid tap-step with small motion lines beneath it, its two front paws spread wide open in joy, mouth open in a big happy grin. The bear has exactly four limbs: two arms and two legs, one head, two round ears, correct bear anatomy. Exactly one animal, no other creatures, no people. A few musical notes float in the air around it. Illustrated in cut paper collage style: layered paper cut-out shapes with visible layers and slight drop shadows, mixed paper textures of newsprint, kraft brown and origami colored papers, handmade craft aesthetic, bright bold colors. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Bear Tap Dance 06 — Vintage Watercolor",
+      "_style_id": "vintage_watercolor",
+      "_idiom": "Da steppt der Bär (German: it's going to be a great party)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE single happy brown bear is literally tap-dancing, alone on a small round wooden stage. The bear stands fully upright on its two hind legs, wearing shiny black tap shoes on both feet, one foot lifted mid tap-step with small motion lines beneath it, its two front paws spread wide open in joy, mouth open in a big happy grin. The bear has exactly four limbs: two arms and two legs, one head, two round ears, correct bear anatomy. Exactly one animal, no other creatures, no people. A few musical notes float in the air around it. Illustrated in vintage watercolor style: delicate watercolor washes in muted dusty blue, warm taupe, soft gold and sage green, fine ink pen linework over the washes, Victorian storybook aesthetic on aged parchment. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Bear Tap Dance 07 — Cartoon Network Flat",
+      "_style_id": "cartoon_network",
+      "_idiom": "Da steppt der Bär (German: it's going to be a great party)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE single happy brown bear is literally tap-dancing, alone on a small round wooden stage. The bear stands fully upright on its two hind legs, wearing shiny black tap shoes on both feet, one foot lifted mid tap-step with small motion lines beneath it, its two front paws spread wide open in joy, mouth open in a big happy grin. The bear has exactly four limbs: two arms and two legs, one head, two round ears, correct bear anatomy. Exactly one animal, no other creatures, no people. A few musical notes float in the air around it. Illustrated in Adventure Time cartoon network style: thick bold black cartoon outlines, flat vivid color fills of sky blue, lime green and sunshine yellow, simple round pudgy characters with big expressive faces, 2D cel animation aesthetic, white background. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Bear Tap Dance 08 — Victorian Engraving",
+      "_style_id": "victorian_engraving",
+      "_idiom": "Da steppt der Bär (German: it's going to be a great party)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE single happy brown bear is literally tap-dancing, alone on a small round wooden stage. The bear stands fully upright on its two hind legs, wearing shiny black tap shoes on both feet, one foot lifted mid tap-step with small motion lines beneath it, its two front paws spread wide open in joy, mouth open in a big happy grin. The bear has exactly four limbs: two arms and two legs, one head, two round ears, correct bear anatomy. Exactly one animal, no other creatures, no people. A few musical notes float in the air around it. Illustrated in Victorian scientific engraving style: fine crosshatching and stippling throughout, monochromatic sepia-brown on aged cream parchment, ornate engraved decorative border, 1860s natural history atlas aesthetic. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Bear Tap Dance 09 — Memphis 1980s Design",
+      "_style_id": "memphis_design",
+      "_idiom": "Da steppt der Bär (German: it's going to be a great party)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE single happy brown bear is literally tap-dancing, alone on a small round wooden stage. The bear stands fully upright on its two hind legs, wearing shiny black tap shoes on both feet, one foot lifted mid tap-step with small motion lines beneath it, its two front paws spread wide open in joy, mouth open in a big happy grin. The bear has exactly four limbs: two arms and two legs, one head, two round ears, correct bear anatomy. Exactly one animal, no other creatures, no people. A few musical notes float in the air around it. Illustrated in Memphis postmodern 1980s design style: bold colorful geometric shapes, triangles, squiggles and polka dots scattered around, vibrant palette of tomato red, sunshine yellow, cobalt blue, black and seafoam green, flat playful composition. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Bear Tap Dance 10 — Studio Ghibli Painted",
+      "_style_id": "ghibli_painted",
+      "_idiom": "Da steppt der Bär (German: it's going to be a great party)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE single happy brown bear is literally tap-dancing, alone on a small round wooden stage. The bear stands fully upright on its two hind legs, wearing shiny black tap shoes on both feet, one foot lifted mid tap-step with small motion lines beneath it, its two front paws spread wide open in joy, mouth open in a big happy grin. The bear has exactly four limbs: two arms and two legs, one head, two round ears, correct bear anatomy. Exactly one animal, no other creatures, no people. A few musical notes float in the air around it. Illustrated in Studio Ghibli hand-painted style: warm earthy palette of dusty periwinkle blue, warm ochre, sage green and soft coral, painterly soft background with warm golden light, big expressive curious eyes, dreamy storybook mood. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Bear Tap Dance 11 — Retro Pixel Art",
+      "_style_id": "pixel_art",
+      "_idiom": "Da steppt der Bär (German: it's going to be a great party)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE single happy brown bear is literally tap-dancing, alone on a small round wooden stage. The bear stands fully upright on its two hind legs, wearing shiny black tap shoes on both feet, one foot lifted mid tap-step with small motion lines beneath it, its two front paws spread wide open in joy, mouth open in a big happy grin. The bear has exactly four limbs: two arms and two legs, one head, two round ears, correct bear anatomy. Exactly one animal, no other creatures, no people. A few musical notes float in the air around it. Illustrated in retro 16-bit pixel art style: chunky visible pixels, NES color palette limited to 8 colors, crisp hard pixel edges, retro video game sprite aesthetic on a simple dark background. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Bear Tap Dance 12 — Minimalist Line Art",
+      "_style_id": "minimalist_line",
+      "_idiom": "Da steppt der Bär (German: it's going to be a great party)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE single happy brown bear is literally tap-dancing, alone on a small round wooden stage. The bear stands fully upright on its two hind legs, wearing shiny black tap shoes on both feet, one foot lifted mid tap-step with small motion lines beneath it, its two front paws spread wide open in joy, mouth open in a big happy grin. The bear has exactly four limbs: two arms and two legs, one head, two round ears, correct bear anatomy. Exactly one animal, no other creatures, no people. A few musical notes float in the air around it. Illustrated in minimalist continuous single-line style: one unbroken thin black ink line on pure white background, elegant zen aesthetic with generous negative space, no color fills, pure contour. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Bear Tap Dance 13 — Gothic Dark Whimsy",
+      "_style_id": "gothic_dark",
+      "_idiom": "Da steppt der Bär (German: it's going to be a great party)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE single happy brown bear is literally tap-dancing, alone on a small round wooden stage. The bear stands fully upright on its two hind legs, wearing shiny black tap shoes on both feet, one foot lifted mid tap-step with small motion lines beneath it, its two front paws spread wide open in joy, mouth open in a big happy grin. The bear has exactly four limbs: two arms and two legs, one head, two round ears, correct bear anatomy. Exactly one animal, no other creatures, no people. A few musical notes float in the air around it. Illustrated in gothic dark whimsy style: stark black and white with one blood red accent, ornate Victorian gothic decorative frame, spooky-cute aesthetic with toothy mischievous grins, high contrast dramatic lighting. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Bear Tap Dance 14 — 1960s Psychedelic",
+      "_style_id": "psychedelic_60s",
+      "_idiom": "Da steppt der Bär (German: it's going to be a great party)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE single happy brown bear is literally tap-dancing, alone on a small round wooden stage. The bear stands fully upright on its two hind legs, wearing shiny black tap shoes on both feet, one foot lifted mid tap-step with small motion lines beneath it, its two front paws spread wide open in joy, mouth open in a big happy grin. The bear has exactly four limbs: two arms and two legs, one head, two round ears, correct bear anatomy. Exactly one animal, no other creatures, no people. A few musical notes float in the air around it. Illustrated in 1960s psychedelic poster style: swirling kaleidoscopic background with concentric rainbow rings of turquoise, magenta, yellow, orange and lime green, groovy wavy outlines, Peter Max aesthetic. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Bear Tap Dance 15 — Kawaii Chibi",
+      "_style_id": "kawaii_chibi",
+      "_idiom": "Da steppt der Bär (German: it's going to be a great party)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE single happy brown bear is literally tap-dancing, alone on a small round wooden stage. The bear stands fully upright on its two hind legs, wearing shiny black tap shoes on both feet, one foot lifted mid tap-step with small motion lines beneath it, its two front paws spread wide open in joy, mouth open in a big happy grin. The bear has exactly four limbs: two arms and two legs, one head, two round ears, correct bear anatomy. Exactly one animal, no other creatures, no people. A few musical notes float in the air around it. Illustrated in kawaii Japanese chibi style: extra chubby tiny bodies with oversized round heads, huge sparkling dot eyes, tiny blush cheeks, baby pastel palette of blush pink, lavender, baby blue and lemon yellow, glitter sparkle accents. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Bear Tap Dance 16 — Woodcut Linocut Print",
+      "_style_id": "woodcut_linocut",
+      "_idiom": "Da steppt der Bär (German: it's going to be a great party)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE single happy brown bear is literally tap-dancing, alone on a small round wooden stage. The bear stands fully upright on its two hind legs, wearing shiny black tap shoes on both feet, one foot lifted mid tap-step with small motion lines beneath it, its two front paws spread wide open in joy, mouth open in a big happy grin. The bear has exactly four limbs: two arms and two legs, one head, two round ears, correct bear anatomy. Exactly one animal, no other creatures, no people. A few musical notes float in the air around it. Illustrated in woodcut linocut print style: bold raw carved texture marks and gouge lines throughout, high contrast two-tone palette of black and cobalt blue on cream, raw handmade craft print quality. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Bear Tap Dance 17 — Tattoo Flash Art",
+      "_style_id": "tattoo_flash",
+      "_idiom": "Da steppt der Bär (German: it's going to be a great party)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE single happy brown bear is literally tap-dancing, alone on a small round wooden stage. The bear stands fully upright on its two hind legs, wearing shiny black tap shoes on both feet, one foot lifted mid tap-step with small motion lines beneath it, its two front paws spread wide open in joy, mouth open in a big happy grin. The bear has exactly four limbs: two arms and two legs, one head, two round ears, correct bear anatomy. Exactly one animal, no other creatures, no people. A few musical notes float in the air around it. Illustrated in traditional American tattoo flash style: bold thick black outlines, classic Sailor Jerry color fills of red, cobalt blue, forest green and yellow, small star accents, aged cream background, vintage tattoo parlor aesthetic. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Bear Tap Dance 18 — Art Nouveau",
+      "_style_id": "art_nouveau",
+      "_idiom": "Da steppt der Bär (German: it's going to be a great party)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE single happy brown bear is literally tap-dancing, alone on a small round wooden stage. The bear stands fully upright on its two hind legs, wearing shiny black tap shoes on both feet, one foot lifted mid tap-step with small motion lines beneath it, its two front paws spread wide open in joy, mouth open in a big happy grin. The bear has exactly four limbs: two arms and two legs, one head, two round ears, correct bear anatomy. Exactly one animal, no other creatures, no people. A few musical notes float in the air around it. Illustrated in Art Nouveau style: Alphonse Mucha inspired flowing organic sinuous linework, muted jewel tones of jade green, burgundy, antique gold and dusty violet, ornamental circular frame with botanical border. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Bear Tap Dance 19 — Swiss Constructivist",
+      "_style_id": "swiss_constructivist",
+      "_idiom": "Da steppt der Bär (German: it's going to be a great party)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE single happy brown bear is literally tap-dancing, alone on a small round wooden stage. The bear stands fully upright on its two hind legs, wearing shiny black tap shoes on both feet, one foot lifted mid tap-step with small motion lines beneath it, its two front paws spread wide open in joy, mouth open in a big happy grin. The bear has exactly four limbs: two arms and two legs, one head, two round ears, correct bear anatomy. Exactly one animal, no other creatures, no people. A few musical notes float in the air around it. Illustrated in Swiss International Typographic constructivist style: stark geometric composition, bold circles and grid lines, strictly two-color palette of pure black and one saturated red, zero ornament, Bauhaus aesthetic. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Bear Tap Dance 20 — Pop Art Ben-Day",
+      "_style_id": "pop_art",
+      "_idiom": "Da steppt der Bär (German: it's going to be a great party)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE single happy brown bear is literally tap-dancing, alone on a small round wooden stage. The bear stands fully upright on its two hind legs, wearing shiny black tap shoes on both feet, one foot lifted mid tap-step with small motion lines beneath it, its two front paws spread wide open in joy, mouth open in a big happy grin. The bear has exactly four limbs: two arms and two legs, one head, two round ears, correct bear anatomy. Exactly one animal, no other creatures, no people. A few musical notes float in the air around it. Illustrated in Pop Art Roy Lichtenstein comic style: Ben-Day halftone dot pattern in the background, bold primary colors red, yellow and cobalt blue, thick black outlines, dramatic comic panel composition, no speech bubbles. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Bear Tap Dance 21 — Ligne Claire BD",
+      "_style_id": "ligne_claire",
+      "_idiom": "Da steppt der Bär (German: it's going to be a great party)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE single happy brown bear is literally tap-dancing, alone on a small round wooden stage. The bear stands fully upright on its two hind legs, wearing shiny black tap shoes on both feet, one foot lifted mid tap-step with small motion lines beneath it, its two front paws spread wide open in joy, mouth open in a big happy grin. The bear has exactly four limbs: two arms and two legs, one head, two round ears, correct bear anatomy. Exactly one animal, no other creatures, no people. A few musical notes float in the air around it. Illustrated in Franco-Belgian Ligne Claire bande dessinee style: Herge Tintin aesthetic, perfectly even clean black outlines, flat color fills with no shading, clear readable composition, bright clean colors on white background. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Bear Tap Dance 22 — Stained Glass",
+      "_style_id": "stained_glass",
+      "_idiom": "Da steppt der Bär (German: it's going to be a great party)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE single happy brown bear is literally tap-dancing, alone on a small round wooden stage. The bear stands fully upright on its two hind legs, wearing shiny black tap shoes on both feet, one foot lifted mid tap-step with small motion lines beneath it, its two front paws spread wide open in joy, mouth open in a big happy grin. The bear has exactly four limbs: two arms and two legs, one head, two round ears, correct bear anatomy. Exactly one animal, no other creatures, no people. A few musical notes float in the air around it. Illustrated in gothic cathedral stained glass style: bold black lead lines separating jewel-toned glass segments of ruby red, sapphire blue, emerald green and amber gold, glowing backlit effect. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Bear Tap Dance 23 — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_idiom": "Da steppt der Bär (German: it's going to be a great party)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE single happy brown bear is literally tap-dancing, alone on a small round wooden stage. The bear stands fully upright on its two hind legs, wearing shiny black tap shoes on both feet, one foot lifted mid tap-step with small motion lines beneath it, its two front paws spread wide open in joy, mouth open in a big happy grin. The bear has exactly four limbs: two arms and two legs, one head, two round ears, correct bear anatomy. Exactly one animal, no other creatures, no people. A few musical notes float in the air around it. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Bear Tap Dance 24 — Art Deco",
+      "_style_id": "art_deco",
+      "_idiom": "Da steppt der Bär (German: it's going to be a great party)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE single happy brown bear is literally tap-dancing, alone on a small round wooden stage. The bear stands fully upright on its two hind legs, wearing shiny black tap shoes on both feet, one foot lifted mid tap-step with small motion lines beneath it, its two front paws spread wide open in joy, mouth open in a big happy grin. The bear has exactly four limbs: two arms and two legs, one head, two round ears, correct bear anatomy. Exactly one animal, no other creatures, no people. A few musical notes float in the air around it. Illustrated in 1920s Art Deco style: gold, black and ivory palette, symmetrical geometric composition with stepped chevron and sunburst motifs, streamlined elegant stylized forms, Gatsby era luxury poster aesthetic. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Bear Tap Dance 25 — Graffiti Street Art",
+      "_style_id": "graffiti_street_art",
+      "_idiom": "Da steppt der Bär (German: it's going to be a great party)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE single happy brown bear is literally tap-dancing, alone on a small round wooden stage. The bear stands fully upright on its two hind legs, wearing shiny black tap shoes on both feet, one foot lifted mid tap-step with small motion lines beneath it, its two front paws spread wide open in joy, mouth open in a big happy grin. The bear has exactly four limbs: two arms and two legs, one head, two round ears, correct bear anatomy. Exactly one animal, no other creatures, no people. A few musical notes float in the air around it. Illustrated in street art graffiti style: aerosol spray paint texture, bold black outlines, vivid electric colors of magenta, electric blue, lime green and chrome silver, dripping paint accents, urban mural aesthetic. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Bear Tap Dance 26 — Medieval Tapestry",
+      "_style_id": "medieval_tapestry",
+      "_idiom": "Da steppt der Bär (German: it's going to be a great party)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE single happy brown bear is literally tap-dancing, alone on a small round wooden stage. The bear stands fully upright on its two hind legs, wearing shiny black tap shoes on both feet, one foot lifted mid tap-step with small motion lines beneath it, its two front paws spread wide open in joy, mouth open in a big happy grin. The bear has exactly four limbs: two arms and two legs, one head, two round ears, correct bear anatomy. Exactly one animal, no other creatures, no people. A few musical notes float in the air around it. Illustrated in Bayeux Tapestry embroidered style: flat earth-tone colors on beige linen, muted red, forest green, faded blue and mustard yellow, naive flat figures with visible horizontal stitch texture, decorative medieval border. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Bear Tap Dance 27 — Abstract Art",
+      "_style_id": "abstract_art",
+      "_idiom": "Da steppt der Bär (German: it's going to be a great party)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE single happy brown bear is literally tap-dancing, alone on a small round wooden stage. The bear stands fully upright on its two hind legs, wearing shiny black tap shoes on both feet, one foot lifted mid tap-step with small motion lines beneath it, its two front paws spread wide open in joy, mouth open in a big happy grin. The bear has exactly four limbs: two arms and two legs, one head, two round ears, correct bear anatomy. Exactly one animal, no other creatures, no people. A few musical notes float in the air around it. Illustrated in abstract expressionist style: bold energetic gestural brushstrokes suggesting the motion of the scene, dynamic composition, intense saturated cobalt blue, cadmium red, raw sienna and zinc white, Kandinsky energy. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    }
+  ]
+}

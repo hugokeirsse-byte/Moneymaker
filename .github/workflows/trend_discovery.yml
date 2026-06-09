@@ -175,12 +175,9 @@ jobs:
             if [ -z "$RB_REPORT" ]; then
               echo "ERREUR : aucun rapport Redbubble trouvé. Lancez redbubble-preview d'abord." && exit 1
             fi
-            # Dossier séparé si le CDC contient "idiom" → output/redbubble_idioms
-            if echo "$RB_REPORT" | grep -qi "idiom"; then
-              RB_OUTPUT="./output/redbubble_idioms"
-            else
-              RB_OUTPUT="./output/redbubble"
-            fi
+            # Chaque CDC a son PROPRE dossier de sortie → jamais de mélange entre séries
+            RB_BASENAME=$(basename "$RB_REPORT" .json | sed 's/^cahiers_des_charges_//')
+            RB_OUTPUT="./output/rb_${RB_BASENAME}"
             mkdir -p "$RB_OUTPUT"
             echo "Rapport : $RB_REPORT → sortie : $RB_OUTPUT"
             eval python -m trend_discovery.main generate-all --yes \
@@ -460,6 +457,7 @@ jobs:
             output/spoonflower/
             output/redbubble/
             output/redbubble_idioms/
+            output/rb_*/
             output/redbubble_fixed/
             output/redbubble_with_text/
             output/adobe_stock/
