@@ -117,7 +117,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Créer les répertoires nécessaires
-        run: mkdir -p reports data output/spoonflower output/redbubble output/redbubble_fixed output/redbubble_with_text output/adobe_stock output/etsy output/colorways output/thumbnails
+        run: mkdir -p reports data output/spoonflower output/redbubble output/redbubble_idioms output/redbubble_fixed output/redbubble_with_text output/adobe_stock output/etsy output/colorways output/thumbnails
 
       - name: Restaurer la base de données (cache)
         uses: actions/cache@v4
@@ -175,15 +175,22 @@ jobs:
             if [ -z "$RB_REPORT" ]; then
               echo "ERREUR : aucun rapport Redbubble trouvé. Lancez redbubble-preview d'abord." && exit 1
             fi
-            echo "Rapport : $RB_REPORT"
+            # Dossier séparé si le CDC contient "idiom" → output/redbubble_idioms
+            if echo "$RB_REPORT" | grep -qi "idiom"; then
+              RB_OUTPUT="./output/redbubble_idioms"
+            else
+              RB_OUTPUT="./output/redbubble"
+            fi
+            mkdir -p "$RB_OUTPUT"
+            echo "Rapport : $RB_REPORT → sortie : $RB_OUTPUT"
             eval python -m trend_discovery.main generate-all --yes \
               --report "$RB_REPORT" \
-              --output ./output/redbubble \
+              --output "$RB_OUTPUT" \
               $LIMIT_ARG
             echo "-- Auto thumbnails Redbubble --"
             python -m trend_discovery.main thumbnails \
-              --pipeline ./output/redbubble \
-              --output ./output/redbubble/thumbnails || true
+              --pipeline "$RB_OUTPUT" \
+              --output "$RB_OUTPUT/thumbnails" || true
           elif [ "$MODE" = "adobe-stock-preview" ]; then
             echo "=== MODE ADOBE-STOCK-PREVIEW : CDCs optimisés Adobe Stock (0 €) ==="
             FOCUS_ARG=""
@@ -452,6 +459,7 @@ jobs:
             reports/
             output/spoonflower/
             output/redbubble/
+            output/redbubble_idioms/
             output/redbubble_fixed/
             output/redbubble_with_text/
             output/adobe_stock/

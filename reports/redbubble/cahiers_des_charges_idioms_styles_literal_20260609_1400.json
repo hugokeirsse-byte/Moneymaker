@@ -1,0 +1,334 @@
+{
+  "generated_at": "2026-06-09T14:00:00+00:00",
+  "series": "idiom_literal_style_test",
+  "idiom": "It's raining cats and dogs",
+  "description": "27 illustration styles — expression prise AU PIED DE LA LETTRE. Un vrai chat et un vrai chien sont en chute libre depuis un nuage. Scène littérale décrite en premier, style ensuite. 1 image par style. tiling=false, sticker-ready, no text.",
+  "platform": "redbubble",
+  "total_briefs": 27,
+  "briefs": [
+    {
+      "name": "Idiom Literal 01 — Risograph Print",
+      "_style_id": "risograph",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "A chubby cartoon cat and a fluffy cartoon dog are literally in mid-freefall from a stormy cloud, plunging headfirst through the air with their legs splayed wide and their fur whipping upward from the wind rush. Their eyes are wide open in shock. Real round raindrops fall alongside them at the same speed. Illustrated in risograph print style: visible riso grain texture across the whole image, strictly limited 3-color palette of cobalt blue, warm coral orange, and cream white. Lo-fi zine aesthetic with slight intentional color misregistration. Flat simplified silhouettes. No text anywhere. Square sticker art.",
+        "negative_prompt": "photorealistic, smooth gradients, 3D render, text, letters, words, watermark, seamless tile",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Idiom Literal 02 — Bold Flat Vector",
+      "_style_id": "flat_vector",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "A cartoon cat and a cartoon dog are literally in mid-freefall from a dark storm cloud, bodies tumbling through open air with legs flailing outward and tails spinning. Their mouths are open in surprise. Real raindrops fall around them. Illustrated in bold flat vector graphic style: thick black outlines, solid vivid color fills with zero gradients, bright primary colors cobalt blue, tangerine orange, and teal. Clean geometric simplicity, white background. No text anywhere. Square sticker art.",
+        "negative_prompt": "gradients, shading, realistic, 3D render, text, watermark, seamless tile",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Idiom Literal 03 — Japanese Ukiyo-e",
+      "_style_id": "ukiyo_e",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "A cat and a dog are literally plummeting from a dramatic storm cloud, their bodies falling through the air with limbs outstretched and fur flying, real raindrops plunging alongside them. Illustrated in Japanese ukiyo-e woodblock print style: flat color areas in indigo blue, vermillion red, and cream on aged paper. Bold carved outline style. Decorative stylized cloud formations with Edo-period aesthetics. No text anywhere. Square sticker art.",
+        "negative_prompt": "photorealistic, smooth gradients, western style, text, 3D render, watermark, seamless tile",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Idiom Literal 04 — 80s Retro Neon",
+      "_style_id": "retro_neon_80s",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "A cartoon cat and a cartoon dog are literally falling from a storm cloud in freefall, their bodies tumbling through the night sky with legs splayed wide and fur blown upward by speed. Real glowing neon raindrops fall beside them. Illustrated in 1980s retro neon synthwave style: hot pink, electric blue, and laser yellow against deep purple background. Chrome-style bold outlines with neon glow. Miami Vice aesthetic. No text anywhere. Square sticker art.",
+        "negative_prompt": "pastel, soft watercolor, 3D CGI render, realistic, text, watermark, muted colors, seamless tile",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Idiom Literal 05 — Cut Paper Collage",
+      "_style_id": "cut_paper_collage",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "A cat and a dog are literally in mid-freefall from a torn-paper storm cloud, their cut-paper silhouette bodies tumbling through the air with legs outspread. Flat paper raindrop shapes fall around them. Illustrated in cut paper collage art style: layered paper cut-out shapes with visible paper layers and slight drop shadows. Mixed paper textures — newsprint, kraft brown, origami colored papers. Handmade craft aesthetic. No text anywhere. Square sticker art.",
+        "negative_prompt": "digital smooth, photorealistic, 3D CGI render, text, watermark, flat no texture, seamless tile",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Idiom Literal 06 — Vintage Watercolor",
+      "_style_id": "vintage_watercolor",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "A cat and a dog are literally falling from a rain cloud, their bodies mid-air with legs outstretched and ears blown upward by wind, real raindrops falling all around them at the same speed. Illustrated in vintage botanical watercolor style: delicate watercolor washes in muted dusty blue, warm taupe, and sage green. Fine ink pen linework over washes. Victorian natural history illustration aesthetic on aged parchment. No text anywhere. Square sticker art.",
+        "negative_prompt": "digital flat, vector, bold bright colors, 3D CGI, seamless tile, text, watermark, neon",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Idiom Literal 07 — Cartoon Network",
+      "_style_id": "cartoon_network",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "A cartoon cat and a cartoon dog are literally tumbling from a storm cloud in freefall, their round pudgy bodies spinning through the air with tiny legs kicking wildly and huge shocked eyes wide open. Real cartoon raindrops shaped like teardrops fall alongside them. Illustrated in Adventure Time cartoon network animated style: thick bold black cartoon outlines, flat vivid color fills, sky blue, lime green, sunshine yellow. White background. No text anywhere. Square sticker art.",
+        "negative_prompt": "realistic, gradients, 3D CGI, photorealistic, text, watermark, seamless tile",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Idiom Literal 08 — Victorian Engraving",
+      "_style_id": "victorian_engraving",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "A domestic cat and a dog are literally in freefall from a cumulus storm cloud, their bodies captured mid-plunge with limbs spread outward and fur rippling from the downward rush, real rain streaks falling beside them. Illustrated in Victorian scientific engraving style: fine crosshatching and stippling throughout. Monochromatic sepia-brown on aged cream parchment. Ornate engraved decorative border. 1860s natural history atlas aesthetic. No text anywhere. Square sticker art.",
+        "negative_prompt": "colorful, digital flat, modern, 3D CGI, text, watermark, bright colors, seamless tile",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Idiom Literal 09 — Memphis 1980s Design",
+      "_style_id": "memphis_design",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "A cat and a dog are literally falling headfirst from a geometric storm cloud, their flat graphic bodies mid-air with limbs flailing in all directions, surrounded by bold zigzag rain streaks. Illustrated in Memphis postmodern 1980s graphic design style: bold colorful geometric shapes, triangles, squiggles, polka dots. Vibrant palette of tomato red, sunshine yellow, cobalt blue, black, seafoam green. Ettore Sottsass aesthetic. No text anywhere. Square sticker art.",
+        "negative_prompt": "realistic, smooth gradients, muted colors, 3D CGI, text, watermark, organic curves, seamless tile",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Idiom Literal 10 — Studio Ghibli Painted",
+      "_style_id": "ghibli_painted",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "A fluffy cat and a fluffy dog are literally in gentle freefall from a soft grey-blue rain cloud, their bodies drifting slowly through the air with limbs relaxed outward and fur floating softly, golden light filtering through the clouds behind them. Real raindrops fall alongside. Illustrated in Studio Ghibli hand-painted style: warm earthy palette of dusty periwinkle blue, warm ochre, sage green, soft coral. Painterly soft backgrounds. Big curious eyes. No text anywhere. Square sticker art.",
+        "negative_prompt": "flat hard edges, bright neon, 3D CGI, sharp lines, text, watermark, dark, seamless tile",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Idiom Literal 11 — Retro Pixel Art",
+      "_style_id": "pixel_art",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "A pixelated cat and a pixelated dog are literally falling from a blocky storm cloud in freefall, their large pixel-art bodies tumbling through the sky with blocky limbs splayed out, chunky pixel raindrops falling alongside them. Illustrated in retro 16-bit pixel art style: NES color palette limited to 8 colors, chunky visible pixel scale, crisp hard pixel edges. Sky blue background. No text anywhere. Square sticker art.",
+        "negative_prompt": "anti-aliased, smooth gradients, photorealistic, 3D CGI, text, watermark, high resolution blur, seamless tile",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Idiom Literal 12 — Minimalist Line Art",
+      "_style_id": "minimalist_line",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "A cat and a dog are literally falling from a simple cloud drawn as a single continuous line, their contour-only bodies mid-freefall with legs extending outward and tails raised by wind. Real teardrop raindrops fall around them in clean line art. Illustrated in minimalist continuous single-line style: one unbroken line, monochromatic black ink on pure white background. Generous negative space. Thin precise even line weight. No text anywhere. Square sticker art.",
+        "negative_prompt": "color fills, gradients, filled shapes, 3D CGI, text, watermark, thick fills, seamless tile",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Idiom Literal 13 — Gothic Dark Whimsy",
+      "_style_id": "gothic_dark",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "A spooky cat and a spooky dog are literally plunging from a dark thundercloud in freefall, their bodies mid-air with capes flapping and eyes wide with glee, lightning bolts cracking beside them and heavy rain pouring all around. Illustrated in gothic dark whimsy style: stark black and white with blood red accent. Ornate Victorian gothic decorative frame. Toothy grinning faces. Spooky cute aesthetic. No text anywhere. Square sticker art.",
+        "negative_prompt": "pastel, soft cute, realistic 3D CGI, text, watermark, bright cheerful colors, seamless tile",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Idiom Literal 14 — 1960s Psychedelic",
+      "_style_id": "psychedelic_60s",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "A cat and a dog are literally tumbling in freefall from a swirling psychedelic storm cloud, their melting fluid bodies falling through concentric rainbow color rings with warping perspective, surrounded by swirling kaleidoscopic raindrops of every color. Illustrated in 1960s psychedelic poster art style: turquoise, magenta, yellow, orange, lime green. Groovy swirling organic forms. Peter Max aesthetic. Wavy outlines. No text anywhere. Square sticker art.",
+        "negative_prompt": "text, words, realistic 3D CGI, flat hard edges, muted colors, watermark, seamless tile",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Idiom Literal 15 — Kawaii Chibi",
+      "_style_id": "kawaii_chibi",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "A tiny extra-chubby chibi cat and a tiny extra-chubby chibi dog are literally falling from a fluffy pastel cloud, their oversized round heads and tiny legs floating downward with surprised O-shaped mouths wide open. Smiling happy raindrop characters fall around them. Illustrated in kawaii Japanese chibi style: baby soft palette blush pink, lavender, baby blue, lemon yellow. Huge dot eyes, tiny blush cheeks. Glitter sparkle accents. No text anywhere. Square sticker art.",
+        "negative_prompt": "realistic, dark, gothic, text, watermark, 3D CGI, scary, mature, seamless tile",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Idiom Literal 16 — Woodcut Linocut Print",
+      "_style_id": "woodcut_linocut",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "A cat and a dog are literally falling from a storm cloud in dramatic freefall, their bold silhouette bodies mid-air with limbs spread wide and fur textured with carved gouge marks, heavy rain streaks carved diagonally around them. Illustrated in woodcut linocut print style: high contrast two-tone black and cobalt blue on cream. Raw carved texture marks and gouge lines visible throughout. Bold graphic handmade craft print. No text anywhere. Square sticker art.",
+        "negative_prompt": "smooth digital, photorealistic, gradients, 3D CGI, text, watermark, many colors, seamless tile",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Idiom Literal 17 — Tattoo Flash Art",
+      "_style_id": "tattoo_flash",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "A cat and a dog are literally falling headfirst from a storm cloud through lightning bolts and heavy rain, their bodies mid-plunge with limbs outstretched, tiny hearts and stars scattered around them in freefall. Illustrated in traditional American sailor tattoo flash art style: bold thick black outlines, classic Sailor Jerry color fills red, cobalt blue, forest green, yellow. Aged cream background. Classic vintage tattoo parlor flash aesthetic. No text, no banners. Square sticker art.",
+        "negative_prompt": "text, banner with words, photorealistic, 3D CGI, gradient, watermark, seamless tile",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Idiom Literal 18 — Art Nouveau",
+      "_style_id": "art_nouveau",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "A cat and a dog are literally falling gracefully from an ornate decorative storm cloud adorned with flowing ivy vines and lily flower motifs, their elegant bodies mid-air with limbs outstretched, sinuous rain lines flowing around them in decorative curves. Illustrated in Art Nouveau style: Alphonse Mucha inspired. Flowing organic sinuous linework. Muted jewel tones jade green, burgundy, antique gold, dusty violet. Ornamental circular frame with botanical border. No text anywhere. Square sticker art.",
+        "negative_prompt": "modern flat, vector, realistic 3D CGI, text, watermark, bright neon, crude, seamless tile",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Idiom Literal 19 — Swiss Constructivist",
+      "_style_id": "swiss_constructivist",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "A cat silhouette and a dog silhouette are literally falling from a geometric storm cloud, their pure geometric body shapes mid-freefall in stark composition, vertical parallel lines as rain slashing downward beside them. Illustrated in Swiss International Typographic Style constructivist poster design: stark geometry, bold circles and grids. Strictly two-color palette pure black and saturated red. Zero ornament. Bauhaus Constructivist aesthetic. No text anywhere. Square sticker art.",
+        "negative_prompt": "ornate, decorative, realistic, text, gradients, many colors, 3D CGI, watermark, seamless tile",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Idiom Literal 20 — Pop Art Ben-Day",
+      "_style_id": "pop_art",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "A cartoon cat and a cartoon dog are literally falling dramatically from a storm cloud in freefall, their bodies mid-air with legs kicking and faces showing extreme wide-eyed shock, real raindrops falling around them. Illustrated in Pop Art Roy Lichtenstein comic book style: Ben-Day halftone dot pattern in sky, bold primary colors red, yellow, cobalt blue. Thick black outlines. Comic panel composition. No speech bubbles, no text. Square sticker art.",
+        "negative_prompt": "text, speech bubble words, photorealistic, gradients, 3D CGI, watermark, seamless tile",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Idiom Literal 21 — Ligne Claire BD",
+      "_style_id": "ligne_claire",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "A cartoon cat and a cartoon dog are literally falling from a storm cloud in freefall, their clean flat-colored bodies mid-air with limbs outstretched, speed lines radiating outward from them as they plummet, real round raindrops falling alongside. Illustrated in Franco-Belgian Ligne Claire bande dessinée style: Hergé Tintin aesthetic. Perfectly even clean black outlines, flat color fills with no shading, clear readable composition. Bright clean colors. White background. No text anywhere. Square sticker art.",
+        "negative_prompt": "gradients, shadows, realistic, 3D CGI, scratchy lines, text, watermark, sketchy, seamless tile",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Idiom Literal 22 — Stained Glass",
+      "_style_id": "stained_glass",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "A cat and a dog are literally falling from a storm cloud in freefall, their bodies mid-air with legs outstretched, surrounded by falling raindrops, all depicted as illuminated stained glass segments. Illustrated in Gothic cathedral stained glass style: bold black lead lines (cloisons) separating jewel-toned glass segments of ruby red, sapphire blue, emerald green, amber gold. Glowing light shining through from behind. Religious gothic window aesthetic. No text anywhere. Square sticker art.",
+        "negative_prompt": "realistic, flat no texture, 3D CGI, text, watermark, muted colors, photographic, seamless tile",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Idiom Literal 23 — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "A cat and a dog are literally in mid-freefall from a storm cloud, their bodies tumbling downward with legs spread wide, real raindrops falling around them, all depicted as an embroidered iron-on patch. Illustrated in embroidery patch style: visible satin stitch thread texture throughout, bright solid thread colors red, navy blue, yellow, white on black felt background. Thick decorative embroidered border around the circular patch shape. Craft fabric texture. No text anywhere. Square sticker art.",
+        "negative_prompt": "smooth digital, photorealistic, gradients, 3D CGI, text, watermark, no texture, seamless tile",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Idiom Literal 24 — Art Deco",
+      "_style_id": "art_deco",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "A sleek stylized cat and a sleek stylized dog are literally falling from a geometric Art Deco storm cloud in freefall, their streamlined elongated bodies mid-air with limbs extended in elegant poses, geometric chevron rain streaks radiating around them. Illustrated in 1920s Art Deco style: gold, black, and ivory palette. Symmetrical geometric composition, stepped chevron and sunburst motifs, streamlined elegant forms. Gatsby era luxury poster aesthetic. No text anywhere. Square sticker art.",
+        "negative_prompt": "crude, realistic, 3D CGI, text, watermark, organic messy curves, bright neon, seamless tile",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Idiom Literal 25 — Graffiti Street Art",
+      "_style_id": "graffiti_street_art",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "A graffiti-style cartoon cat and a graffiti-style cartoon dog are literally falling from a spray-painted storm cloud in freefall, their chunky characters mid-air with limbs flailing, bold dripping spray-paint raindrops falling around them. Illustrated in street art graffiti mural style: aerosol spray paint texture, bold black outlines with bubble-letter aesthetic, vivid electric colors magenta, electric blue, lime green, chrome silver. Urban Banksy-meets-Keith Haring aesthetic. No text anywhere. Square sticker art.",
+        "negative_prompt": "text, words, letters, tags, realistic 3D CGI, delicate, pastel, watermark, seamless tile",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Idiom Literal 26 — Medieval Tapestry",
+      "_style_id": "medieval_tapestry",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "A medieval-style cat and a medieval-style dog are literally falling from a stylized storm cloud in freefall, their flat heraldic bodies mid-air with limbs splayed in rigid medieval poses, real raindrops depicted as stylized medieval motifs around them. Illustrated in Bayeux Tapestry embroidered style: flat earth-tone colors on beige linen — muted red, forest green, faded blue, mustard yellow, cream. Naive flat figures with visible horizontal stitch lines texture. Decorative border along edges. No text. Square sticker art.",
+        "negative_prompt": "realistic, 3D CGI, bright modern colors, smooth gradients, text, watermark, seamless tile",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Idiom Literal 27 — Abstract Art",
+      "_style_id": "abstract_art",
+      "_idiom": "It's raining cats and dogs",
+      "ai_generation": {
+        "positive_prompt": "Abstract expressionist interpretation of a cat and a dog literally falling from a storm cloud: energetic gestural brushstrokes suggest the chaotic motion of two creatures in freefall — loose dynamic shapes implying cat ears and dog muzzle tumbling downward through vertical slashing rain lines. Illustrated in abstract expressionist style: Kandinsky-meets-Basquiat. Bold gestural marks, dynamic composition, intense saturated colors cobalt blue, cadmium red, raw sienna, zinc white on black. Energy of freefall and chaos. No text anywhere. Square sticker art.",
+        "negative_prompt": "photorealistic, literal detailed depiction, text, watermark, 3D CGI, seamless tile",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    }
+  ]
+}
