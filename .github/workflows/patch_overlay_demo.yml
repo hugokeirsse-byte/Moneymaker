@@ -1,4 +1,4 @@
-name: Patch — Overlay Text Demo
+name: Patch — Overlay Text Demo (1 image)
 
 on:
   workflow_dispatch:
@@ -8,9 +8,9 @@ permissions:
 
 jobs:
   overlay:
-    name: Apply embroidery text to existing patches
+    name: Test overlay text on ONE patch image
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 10
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -23,31 +23,25 @@ jobs:
           python-version: '3.11'
       - run: pip install pillow
 
-      - name: Apply overlay to all rb_* expression folders
+      - name: Apply overlay to ONE image only
         run: |
           mkdir -p output/redbubble_with_text
-          count=0
-          for subdir in output/rb_*/*/; do
-            [ -d "$subdir" ] || continue
-            expression=$(basename "$subdir")
-            [[ "$expression" == "thumbnails" ]] && continue
-            # Pick first PNG in the subfolder
-            img=$(find "$subdir" -maxdepth 1 -name "*.png" 2>/dev/null | sort | head -1)
-            [ -z "$img" ] && continue
-            # Derive display text from expression_id
-            text=$(echo "$expression" | tr '[:lower:]' '[:upper:]' | tr '_' ' ')
-            out="output/redbubble_with_text/${expression}___overlay.png"
-            if python scripts/overlay_patch_text.py "$img" "$text" "$out"; then
-              echo "  ✓ $expression → \"$text\""
-              count=$((count + 1))
-            else
-              echo "  ✗ $expression FAILED"
-            fi
-          done
-          echo "Done: $count overlays generated."
-          ls -lh output/redbubble_with_text/ | head -40
+          # Pick the very first PNG found in any rb_* expression subfolder
+          img=$(find output/rb_*/ -mindepth 2 -maxdepth 2 -name '*.png' \
+                  2>/dev/null | grep -v thumbnails | sort | head -1)
+          if [ -z "$img" ]; then
+            echo "ERROR: no patch PNG found in output/rb_*/" && exit 1
+          fi
+          expression=$(basename "$(dirname "$img")")
+          text=$(echo "$expression" | tr '[:lower:]' '[:upper:]' | tr '_' ' ')
+          out="output/redbubble_with_text/${expression}___overlay.png"
+          echo "Image  : $img"
+          echo "Text   : $text"
+          echo "Output : $out"
+          python scripts/overlay_patch_text.py "$img" "$text" "$out"
+          ls -lh "$out"
 
-      - name: Commit and push results
+      - name: Commit and push result
         run: |
           git config user.name  "Moneymaker Bot"
           git config user.email "bot@moneymaker.auto"
@@ -55,15 +49,15 @@ jobs:
           if git diff --staged --quiet; then
             echo "Nothing to commit."
           else
-            git commit -m "demo(overlay): embroidery text on existing patches"
+            git commit -m "demo(overlay): 1 image test with embroidery text"
             git pull --rebase --autostash origin HEAD
             git push origin HEAD
           fi
 
-      - name: Upload overlayed images as artifact
+      - name: Upload result as artifact
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: patch-overlay-demo-${{ github.run_number }}
+          name: overlay-demo-${{ github.run_number }}
           path: output/redbubble_with_text/
           retention-days: 30
