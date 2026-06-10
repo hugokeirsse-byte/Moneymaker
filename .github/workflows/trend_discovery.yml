@@ -59,6 +59,10 @@ on:
           - 'upscale-fix'          # Re-upscale IA Real-ESRGAN images existantes floues (~0.005€/img)
           - 'recover-artifact'     # Récupère les upscales d'un run interrompu (0 €, depuis artefact)
           - 'full'                 # Pipeline complet sans génération d'images
+      report_path:
+        description: 'Chemin exact vers le rapport CDC (redbubble-generate). Vide = dernier JSON alphabétiquement. Ex: reports/redbubble/cahiers_des_charges_zzz_zza_events_flood_20260610_1800.json'
+        required: false
+        default: ''
       recover_run_id:
         description: 'Run ID de l artefact à récupérer (mode recover-artifact)'
         required: false
@@ -178,7 +182,13 @@ jobs:
             LIMIT_ARG=""
             LIMIT_VAL="${{ github.event.inputs.limit || '0' }}"
             [ "$LIMIT_VAL" != "0" ] && LIMIT_ARG="--limit $LIMIT_VAL"
-            RB_REPORT=$(ls ./reports/redbubble/cahiers_des_charges_*.json 2>/dev/null | sort | tail -1)
+            # Sélection du rapport : explicite via report_path, sinon dernier alphabétiquement
+            if [ -n "${{ github.event.inputs.report_path }}" ]; then
+              RB_REPORT="${{ github.event.inputs.report_path }}"
+              echo "Rapport ciblé explicitement : $RB_REPORT"
+            else
+              RB_REPORT=$(ls ./reports/redbubble/cahiers_des_charges_*.json 2>/dev/null | sort | tail -1)
+            fi
             if [ -z "$RB_REPORT" ]; then
               echo "ERREUR : aucun rapport Redbubble trouvé. Lancez redbubble-preview d'abord." && exit 1
             fi
