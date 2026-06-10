@@ -1,0 +1,272 @@
+{
+  "generated_at": "2026-06-10T09:45:08Z",
+  "series": "idioms_adult_embroidery_only_v1",
+  "styles": [
+    "embroidery_patch"
+  ],
+  "description": "Batch 2 adult idioms — embroidery patch style only. 20 expressions x 1 style = 20 images.",
+  "platform": "redbubble",
+  "total_briefs": 20,
+  "briefs": [
+    {
+      "name": "shit_fan_v3 — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "shit_fan_v3",
+      "_idiom": "When the shit hits the fan (EN)",
+      "ai_generation": {
+        "positive_prompt": "The exact literal moment when shit hits a fan: EXACTLY ONE large electric fan in the dead center of the image, blades spinning at full speed, just struck by a flying glob of brown muck, and a spectacular radial starburst of cartoon brown splatter sprays outward in every direction to the edges of the image, with motion lines and flying droplets of all sizes frozen mid-flight. One fan, brown splatter everywhere. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "peter_haut_cul — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "peter_haut_cul",
+      "_idiom": "Péter plus haut que son cul (FR)",
+      "ai_generation": {
+        "positive_prompt": "The literal act of farting higher than one's own butt: EXACTLY ONE person bent slightly forward, and EXACTLY ONE green puffy fart cloud bursts out and rises with a curved upward trajectory to explode clearly HIGH ABOVE the person's head, much higher than their butt, up at the level of small white clouds in the sky. The person looks up astonished at their own fart so high above them. One person, one green cloud far above their head. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "balai_cul — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "balai_cul",
+      "_idiom": "Avoir un balai dans le cul (FR)",
+      "ai_generation": {
+        "positive_prompt": "The literal image of having a broom in the butt: EXACTLY ONE person with a REAL long wooden broom genuinely planted in their backside through their trousers, the broom standing vertically behind them with its bristles up in the air like a stiff tail, while the person walks on tiptoes with a grimacing uncomfortable face and clenched fists. One person, one real broom planted in the butt. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "poil_main — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "poil_main",
+      "_idiom": "Avoir un poil dans la main (FR)",
+      "ai_generation": {
+        "positive_prompt": "The literal image of having a hair in the hand: EXACTLY ONE person stares with crossed eyes at their own open palm held up in front of them, from the very center of which grows EXACTLY ONE long thick black curly hair, standing tall like a weed. One person, one single long hair growing out of the palm. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "cul_nouilles — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "cul_nouilles",
+      "_idiom": "Avoir le cul bordé de nouilles (FR)",
+      "ai_generation": {
+        "positive_prompt": "The literal image of a butt bordered with noodles: EXACTLY ONE person seen from behind looking back over their shoulder in surprise, their buttocks neatly bordered all around by a ring of long cooked golden spaghetti noodles arranged like a garland following the outline of their trousers. One person, noodles lining the contour of the butt. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "geld_scheissen — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "geld_scheissen",
+      "_idiom": "Ich kann doch kein Geld scheißen (DE)",
+      "ai_generation": {
+        "positive_prompt": "The literal image of shitting money: EXACTLY ONE man sits on a porcelain toilet with a strained red face, and a stream of shiny gold coins pours out from under him, overflowing the toilet bowl and piling up on the floor around it. One person, one toilet, gold coins pouring and piling. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "gueule_bois — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "gueule_bois",
+      "_idiom": "Avoir la gueule de bois (FR)",
+      "ai_generation": {
+        "positive_prompt": "The literal image of a face made of wood: EXACTLY ONE person whose entire head and face are carved from solid wood, with visible wood grain, knots and one small crack across the cheek, grimacing painfully while holding their wooden head with both hands. One person with one wooden head. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "feu_cul — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "feu_cul",
+      "_idiom": "Avoir le feu au cul (FR)",
+      "ai_generation": {
+        "positive_prompt": "The literal image of fire at the butt: EXACTLY ONE person sprints at full speed with panicked bulging eyes, while real bright cartoon flames blaze directly from the seat of their trousers, leaving a small trail of smoke behind. One person, real flames burning at their backside. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "cul_chaises — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "cul_chaises",
+      "_idiom": "Avoir le cul entre deux chaises (FR)",
+      "ai_generation": {
+        "positive_prompt": "The literal image of the butt between two chairs: EXACTLY ONE person caught mid-fall, sitting in the empty gap between EXACTLY TWO wooden chairs that are slightly too far apart, arms flailing, legs up, butt exactly in the middle of the void between the two seats, a split second before hitting the floor. One person, two chairs, butt in the gap. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "brass_monkey — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "brass_monkey",
+      "_idiom": "Freeze the balls off a brass monkey (EN)",
+      "ai_generation": {
+        "positive_prompt": "The literal image of freezing the balls off a brass monkey: EXACTLY ONE shiny brass monkey statue shivering violently on a pedestal in falling snow, teeth chattering, hugging itself, while EXACTLY TWO polished brass spheres that have fallen off lie in the snow at the base of the pedestal. One brass statue, two brass balls fallen in the snow. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "tete_dans_cul — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "tete_dans_cul",
+      "_idiom": "Avoir la tête dans le cul (FR)",
+      "ai_generation": {
+        "positive_prompt": "The literal image of having the head in the butt: EXACTLY ONE person in striped pajamas standing folded completely forward in an absurd impossible position, their head fully buried inside the seat of their own pajama pants, with dizzy spiral stars circling around. One person folded with the head literally in the butt. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "rat_mort — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "rat_mort",
+      "_idiom": "S'ennuyer comme un rat mort (FR)",
+      "ai_generation": {
+        "positive_prompt": "The literal image of being bored like a dead rat: EXACTLY ONE cartoon rat lies completely flat on its back on a bare floor, X crosses for eyes, tongue hanging out, while its small transparent ghost floats just above, yawning enormously with crossed arms out of pure boredom. One dead rat, one bored little ghost. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "casser_couilles — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "casser_couilles",
+      "_idiom": "Casser les couilles (FR)",
+      "ai_generation": {
+        "positive_prompt": "The literal image of breaking the balls: EXACTLY ONE giant silver nutcracker in the center of the image violently cracking EXACTLY TWO large walnuts at the same time, shell fragments exploding in all directions with dramatic motion lines, while EXACTLY ONE man in the background winces in sympathetic pain, knees together, hands covering his groin. Two walnuts, one nutcracker, one wincing man. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "battre_couilles — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "battre_couilles",
+      "_idiom": "S'en battre les couilles (FR)",
+      "ai_generation": {
+        "positive_prompt": "The literal image of beating the balls: EXACTLY ONE person with a completely indifferent blank face lazily beating EXACTLY TWO large walnuts with two wooden drumsticks like a drummer, one eyebrow raised, utterly unbothered. One person, two walnuts, two drumsticks. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "merde_yeux — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "merde_yeux",
+      "_idiom": "Avoir de la merde dans les yeux (FR)",
+      "ai_generation": {
+        "positive_prompt": "The literal image of having shit in the eyes: EXACTLY ONE person with brown cartoon muck smeared directly over both eyes, dripping down the cheeks, walking with both arms stretched out blindly in front of them, mouth open in confusion, bumping toward a wall. One person, brown muck smeared on both eyes. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "klugscheisser — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "klugscheisser",
+      "_idiom": "Klugscheißer (DE)",
+      "ai_generation": {
+        "positive_prompt": "The literal image of a smart-shitter: EXACTLY ONE smug brown cartoon poop swirl wearing a graduation cap and round scholar glasses, standing upright with one finger raised knowingly and eyes closed in self-importance, tiny sparkle on the glasses. One single scholarly cartoon poop. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "arschgeige — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "arschgeige",
+      "_idiom": "Arschgeige (DE)",
+      "ai_generation": {
+        "positive_prompt": "The literal image of an ass-violin: EXACTLY ONE classical violinist in an elegant tailcoat passionately playing EXACTLY ONE violin whose body is unmistakably shaped like a plump pair of round buttocks with strings running over it, bow in hand, eyes closed in concentration. One person, one buttocks-shaped violin. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "pet_casque — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "pet_casque",
+      "_idiom": "Avoir un pet au casque (FR)",
+      "ai_generation": {
+        "positive_prompt": "The literal image of a fart in the helmet: EXACTLY ONE medieval knight in full shining armor standing wobbly with dizzy crossed eyes visible through the open visor, while EXACTLY ONE green puffy fart cloud is trapped INSIDE the helmet, green wisps escaping through the visor slits and the joints. One knight, one green cloud inside the helmet. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "vers_nez — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "vers_nez",
+      "_idiom": "Tirer les vers du nez (FR)",
+      "ai_generation": {
+        "positive_prompt": "The literal image of pulling worms out of the nose: EXACTLY ONE person delicately pulling with tweezers EXACTLY ONE impossibly long pink earthworm out of the nostril of EXACTLY ONE seated surprised person, the worm stretching out of the nose like a long noodle. Two people, one long pink worm coming out of the nose. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "couilles_or — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "couilles_or",
+      "_idiom": "Avoir des couilles en or (FR)",
+      "ai_generation": {
+        "positive_prompt": "The literal image of having balls of gold: EXACTLY ONE immensely proud person in a fancy suit, chest puffed and chin high, presenting with both hands a red velvet cushion carrying EXACTLY TWO gleaming polished solid gold spheres radiating golden sparkles. One person, two gold spheres on one cushion. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    }
+  ]
+}
