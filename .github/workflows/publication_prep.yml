@@ -41,7 +41,11 @@ jobs:
                   "minimalist_line", "kawaii_chibi", "tattoo_flash",
                   "swiss_constructivist"}
           done = skipped = failed = 0
-          for png in sorted(glob.glob("output/rb_*/*/*.png")):
+          patterns = ["output/rb_*/*/*.png", "output/rb_*/*.png",
+                      "output/redbubble/*.png", "output/redbubble_idioms/*.png",
+                      "output/redbubble_fixed/*.png"]
+          all_pngs = sorted({p for pat in patterns for p in glob.glob(pat)})
+          for png in all_pngs:
               if "thumbnails" in png or png.endswith("_transparent.png"):
                   continue
               parts = os.path.basename(png).split("___")
@@ -85,4 +89,5 @@ jobs:
           path: |
             reports/listings/
             output/rb_*/**/*_transparent.png
+            output/redbubble*/**/*_transparent.png
           retention-days: 90

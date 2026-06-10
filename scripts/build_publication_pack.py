@@ -153,18 +153,36 @@ def build_description(scene: str, style_label: str, context: str) -> str:
     return " ".join(parts)[:1000]
 
 
+def collect_images():
+    """Tous les PNG produits, hors Spoonflower/uploads/thumbnails/transparents."""
+    patterns = [
+        "output/rb_*/*/*.png",        # séries récentes (sous-dossiers par expression)
+        "output/rb_*/*.png",          # séries récentes non rangées
+        "output/redbubble/*.png",     # anciens designs standalone
+        "output/redbubble_idioms/*.png",
+        "output/redbubble_fixed/*.png",
+    ]
+    seen = set()
+    for pat in patterns:
+        for png in sorted(glob.glob(pat)):
+            if ("thumbnails" in png or png.endswith("_transparent.png")
+                    or png in seen):
+                continue
+            seen.add(png)
+            yield png
+
+
 def main():
     idx = load_brief_index()
     rows = []
-    for png in sorted(glob.glob("output/rb_*/*/*.png")):
-        if "thumbnails" in png or png.endswith("_transparent.png"):
-            continue
-        folder = png.split(os.sep)[1]          # rb_xxx
+    for png in collect_images():
+        folder = png.split(os.sep)[1]          # rb_xxx / redbubble / ...
         base = os.path.basename(png)
         parts = base.split("___")
-        if len(parts) < 2:
-            continue
-        prefix, style = parts[0], parts[1]
+        if len(parts) >= 2:
+            prefix, style = parts[0], parts[1]
+        else:
+            prefix, style = Path(base).stem, "unknown"
         style_label, style_tags, can_transparent = STYLE_META.get(
             style, (style.replace("_", " ").title(), [], False))
         meta = idx.get((prefix, style)) or idx.get((_slug(prefix), style)) or {}
