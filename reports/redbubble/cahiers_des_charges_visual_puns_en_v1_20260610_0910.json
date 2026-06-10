@@ -1,9 +1,8 @@
 {
-  "generated_at": "2026-06-10T09:43:23Z",
+  "generated_at": "2026-06-10T09:50:16Z",
   "series": "visual_puns_en_v1",
   "styles": [
     "art_nouveau",
-    "cozy_coloring",
     "embroidery_patch",
     "gothic_dark",
     "graffiti_street_art",
@@ -17,9 +16,9 @@
     "ukiyo_e",
     "victorian_engraving"
   ],
-  "description": "Visual puns — English animal compound names taken literally. 23 expressions x 14 styles = 322 images.",
+  "description": "Visual puns EN v1 — 23 expressions x 13 styles = 299 images (no cartoon_network, no classic_manga, no cozy_coloring)",
   "platform": "redbubble",
-  "total_briefs": 322,
+  "total_briefs": 299,
   "briefs": [
     {
       "name": "butterfly — Art Nouveau",
@@ -28,19 +27,6 @@
       "_idiom": "Butter + Fly (EN)",
       "ai_generation": {
         "positive_prompt": "EXACTLY ONE rectangular golden-yellow stick of butter — standard grocery store pat, waxy and solid, flat rectangular shape — with a pair of large gorgeous butterfly wings growing from its top surface, hovering mid-air with wings fully spread and gracefully beating. The butter is unmistakably a butter block: slightly melting at the edges, soft golden-yellow. EXACTLY TWO wings with intricate vein-pattern detail. The joke is clear: this is BUTTER that can FLY. Illustrated in Art Nouveau style: Alphonse Mucha inspired flowing organic sinuous linework, muted jewel tones of jade green, burgundy, antique gold and dusty violet, ornamental circular frame with botanical border. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
-      "name": "butterfly — Cozy Coloring Book",
-      "_style_id": "cozy_coloring",
-      "_expression_id": "butterfly",
-      "_idiom": "Butter + Fly (EN)",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE rectangular golden-yellow stick of butter — standard grocery store pat, waxy and solid, flat rectangular shape — with a pair of large gorgeous butterfly wings growing from its top surface, hovering mid-air with wings fully spread and gracefully beating. The butter is unmistakably a butter block: slightly melting at the edges, soft golden-yellow. EXACTLY TWO wings with intricate vein-pattern detail. The joke is clear: this is BUTTER that can FLY. Illustrated in cozy coloring book style: thick smooth rounded black outlines, adorable chubby characters with simple dot eyes and tiny gentle smiles, soft cozy hygge atmosphere with cute decorative details, pure black and white line art on clean white background, no shading, no color fills, friendly wholesome coloring book page aesthetic. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
         "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
         "cfg_scale": 4.0,
         "tiling": false,
@@ -217,19 +203,6 @@
       }
     },
     {
-      "name": "jellyfish — Cozy Coloring Book",
-      "_style_id": "cozy_coloring",
-      "_expression_id": "jellyfish",
-      "_idiom": "Jelly + Fish (EN)",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE fish with normal fish anatomy — round body, dorsal fin, pectoral fins, tail fin, round eye — but its entire body is made of translucent wobbly fruit jelly, the kind from a jam jar: semi-transparent gelatinous flesh, visible fruit pieces and seeds embedded inside, jelly drops dripping from its fins and tail. The fish shape is recognizable but every part of its body is jelly, soft and jiggly. EXACTLY ONE fish shape, entirely jelly substance. Illustrated in cozy coloring book style: thick smooth rounded black outlines, adorable chubby characters with simple dot eyes and tiny gentle smiles, soft cozy hygge atmosphere with cute decorative details, pure black and white line art on clean white background, no shading, no color fills, friendly wholesome coloring book page aesthetic. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
       "name": "jellyfish — Embroidery Patch",
       "_style_id": "embroidery_patch",
       "_expression_id": "jellyfish",
@@ -392,19 +365,6 @@
       "_idiom": "Sword + Fish (EN)",
       "ai_generation": {
         "positive_prompt": "EXACTLY ONE ordinary round fish — scales, round body, side fins, tail fin, wide eye — gripping a gleaming full-length steel broadsword in one fin, raised in a classic fencing en-garde dueling stance, looking fierce and ready to fight. The sword has a clear crossguard hilt and polished blade. EXACTLY ONE fish, EXACTLY ONE proper hand-held sword (NOT a fish bill). The fish is clearly challenging someone to a duel. Illustrated in Art Nouveau style: Alphonse Mucha inspired flowing organic sinuous linework, muted jewel tones of jade green, burgundy, antique gold and dusty violet, ornamental circular frame with botanical border. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
-      "name": "swordfish — Cozy Coloring Book",
-      "_style_id": "cozy_coloring",
-      "_expression_id": "swordfish",
-      "_idiom": "Sword + Fish (EN)",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE ordinary round fish — scales, round body, side fins, tail fin, wide eye — gripping a gleaming full-length steel broadsword in one fin, raised in a classic fencing en-garde dueling stance, looking fierce and ready to fight. The sword has a clear crossguard hilt and polished blade. EXACTLY ONE fish, EXACTLY ONE proper hand-held sword (NOT a fish bill). The fish is clearly challenging someone to a duel. Illustrated in cozy coloring book style: thick smooth rounded black outlines, adorable chubby characters with simple dot eyes and tiny gentle smiles, soft cozy hygge atmosphere with cute decorative details, pure black and white line art on clean white background, no shading, no color fills, friendly wholesome coloring book page aesthetic. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
         "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
         "cfg_scale": 4.0,
         "tiling": false,
@@ -581,19 +541,6 @@
       }
     },
     {
-      "name": "firefly — Cozy Coloring Book",
-      "_style_id": "cozy_coloring",
-      "_expression_id": "firefly",
-      "_idiom": "Fire + Fly (EN)",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE common housefly — hairy thorax, compound eyes, proboscis, EXACTLY SIX legs, EXACTLY TWO wings — completely engulfed in bright orange and yellow fire from head to tail tip, dramatic flames licking upward, the fly continuing to buzz through the air mid-flight looking entirely unbothered by being on fire, with a serene expression. EXACTLY SIX legs, EXACTLY TWO wings beating through the fire. Illustrated in cozy coloring book style: thick smooth rounded black outlines, adorable chubby characters with simple dot eyes and tiny gentle smiles, soft cozy hygge atmosphere with cute decorative details, pure black and white line art on clean white background, no shading, no color fills, friendly wholesome coloring book page aesthetic. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
       "name": "firefly — Embroidery Patch",
       "_style_id": "embroidery_patch",
       "_expression_id": "firefly",
@@ -756,19 +703,6 @@
       "_idiom": "Dragon + Fly (EN)",
       "ai_generation": {
         "positive_prompt": "EXACTLY ONE small creature with the scaly body, long neck, and horned head of a dragon — tiny fangs, a small puff of red flame from its snout, green scales — but with EXACTLY SIX insect legs and EXACTLY FOUR transparent dragonfly wings, hovering in the air like an insect. It is unmistakably a dragon that is also a fly: dragon anatomy, insect wing count. EXACTLY SIX legs, EXACTLY FOUR wings, dragon head with horns. Illustrated in Art Nouveau style: Alphonse Mucha inspired flowing organic sinuous linework, muted jewel tones of jade green, burgundy, antique gold and dusty violet, ornamental circular frame with botanical border. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
-      "name": "dragonfly — Cozy Coloring Book",
-      "_style_id": "cozy_coloring",
-      "_expression_id": "dragonfly",
-      "_idiom": "Dragon + Fly (EN)",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE small creature with the scaly body, long neck, and horned head of a dragon — tiny fangs, a small puff of red flame from its snout, green scales — but with EXACTLY SIX insect legs and EXACTLY FOUR transparent dragonfly wings, hovering in the air like an insect. It is unmistakably a dragon that is also a fly: dragon anatomy, insect wing count. EXACTLY SIX legs, EXACTLY FOUR wings, dragon head with horns. Illustrated in cozy coloring book style: thick smooth rounded black outlines, adorable chubby characters with simple dot eyes and tiny gentle smiles, soft cozy hygge atmosphere with cute decorative details, pure black and white line art on clean white background, no shading, no color fills, friendly wholesome coloring book page aesthetic. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
         "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
         "cfg_scale": 4.0,
         "tiling": false,
@@ -945,19 +879,6 @@
       }
     },
     {
-      "name": "catfish — Cozy Coloring Book",
-      "_style_id": "cozy_coloring",
-      "_expression_id": "catfish",
-      "_idiom": "Cat + Fish (EN)",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE creature that is half domestic tabby cat, half fish: the top half is a fluffy tabby cat with pointed ears, long whiskers, fur, green cat eyes, and front paws; the bottom half, seamlessly joined at the waist, is a fish with iridescent scales, side fins, and a wide fan tail fin. The creature swims comfortably. EXACTLY ONE cat head with ears and whiskers, EXACTLY ONE fish tail. The seam is clean and clear. Illustrated in cozy coloring book style: thick smooth rounded black outlines, adorable chubby characters with simple dot eyes and tiny gentle smiles, soft cozy hygge atmosphere with cute decorative details, pure black and white line art on clean white background, no shading, no color fills, friendly wholesome coloring book page aesthetic. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
       "name": "catfish — Embroidery Patch",
       "_style_id": "embroidery_patch",
       "_expression_id": "catfish",
@@ -1120,19 +1041,6 @@
       "_idiom": "Horse + Fly (EN)",
       "ai_generation": {
         "positive_prompt": "EXACTLY ONE small horse — full horse anatomy: mane, four hooves, horse face, flowing tail — levitating in mid-air on a single pair of large buzzing housefly wings attached to its back, with two bulging faceted insect compound eyes on its horse head. The horse hooves dangle in the air. EXACTLY FOUR legs, EXACTLY TWO fly wings, EXACTLY TWO compound eyes on horse face. The horse looks puzzled to be flying. Illustrated in Art Nouveau style: Alphonse Mucha inspired flowing organic sinuous linework, muted jewel tones of jade green, burgundy, antique gold and dusty violet, ornamental circular frame with botanical border. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
-      "name": "horsefly — Cozy Coloring Book",
-      "_style_id": "cozy_coloring",
-      "_expression_id": "horsefly",
-      "_idiom": "Horse + Fly (EN)",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE small horse — full horse anatomy: mane, four hooves, horse face, flowing tail — levitating in mid-air on a single pair of large buzzing housefly wings attached to its back, with two bulging faceted insect compound eyes on its horse head. The horse hooves dangle in the air. EXACTLY FOUR legs, EXACTLY TWO fly wings, EXACTLY TWO compound eyes on horse face. The horse looks puzzled to be flying. Illustrated in cozy coloring book style: thick smooth rounded black outlines, adorable chubby characters with simple dot eyes and tiny gentle smiles, soft cozy hygge atmosphere with cute decorative details, pure black and white line art on clean white background, no shading, no color fills, friendly wholesome coloring book page aesthetic. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
         "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
         "cfg_scale": 4.0,
         "tiling": false,
@@ -1309,19 +1217,6 @@
       }
     },
     {
-      "name": "lionfish — Cozy Coloring Book",
-      "_style_id": "cozy_coloring",
-      "_expression_id": "lionfish",
-      "_idiom": "Lion + Fish (EN)",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE creature with the regal maned head of a male lion — full golden mane, lion eyes, lion nose, proud whiskers, open mouth showing lion teeth — on the scaly body of a fish complete with side fins, a dorsal fin, and a wide fish tail fin. The lion head connects at the neck to the fish body. EXACTLY ONE lion head with full mane, EXACTLY ONE fish body with scales and tail. It swims regally. Illustrated in cozy coloring book style: thick smooth rounded black outlines, adorable chubby characters with simple dot eyes and tiny gentle smiles, soft cozy hygge atmosphere with cute decorative details, pure black and white line art on clean white background, no shading, no color fills, friendly wholesome coloring book page aesthetic. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
       "name": "lionfish — Embroidery Patch",
       "_style_id": "embroidery_patch",
       "_expression_id": "lionfish",
@@ -1484,19 +1379,6 @@
       "_idiom": "Horseshoe + Crab (EN)",
       "ai_generation": {
         "positive_prompt": "EXACTLY ONE crab with EXACTLY TEN legs (two large front claws plus eight walking legs), every single foot fitted with a tiny gleaming U-shaped metal horseshoe nailed on neatly — the kind horses wear. The crab stands proudly, lifting one leg to show off its horseshoe footwear, all ten legs visibly shod. Each horseshoe is clearly U-shaped iron metal. EXACTLY TEN legs total, EXACTLY TEN horseshoes. Illustrated in Art Nouveau style: Alphonse Mucha inspired flowing organic sinuous linework, muted jewel tones of jade green, burgundy, antique gold and dusty violet, ornamental circular frame with botanical border. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
-      "name": "horseshoe_crab — Cozy Coloring Book",
-      "_style_id": "cozy_coloring",
-      "_expression_id": "horseshoe_crab",
-      "_idiom": "Horseshoe + Crab (EN)",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE crab with EXACTLY TEN legs (two large front claws plus eight walking legs), every single foot fitted with a tiny gleaming U-shaped metal horseshoe nailed on neatly — the kind horses wear. The crab stands proudly, lifting one leg to show off its horseshoe footwear, all ten legs visibly shod. Each horseshoe is clearly U-shaped iron metal. EXACTLY TEN legs total, EXACTLY TEN horseshoes. Illustrated in cozy coloring book style: thick smooth rounded black outlines, adorable chubby characters with simple dot eyes and tiny gentle smiles, soft cozy hygge atmosphere with cute decorative details, pure black and white line art on clean white background, no shading, no color fills, friendly wholesome coloring book page aesthetic. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
         "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
         "cfg_scale": 4.0,
         "tiling": false,
@@ -1673,19 +1555,6 @@
       }
     },
     {
-      "name": "flying_fish — Cozy Coloring Book",
-      "_style_id": "cozy_coloring",
-      "_expression_id": "flying_fish",
-      "_idiom": "Flying + Fish (EN)",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE fish — scales, fins, tail, wide surprised eye — soaring through a bright blue sky with white fluffy clouds, with a large pair of feathered bird wings spreading from its sides, wings fully extended in confident cruising flight, the fish clearly at home in the sky. No water visible. EXACTLY TWO large feathered wings, EXACTLY ONE fish body. The fish is genuinely airborne and loving it. Illustrated in cozy coloring book style: thick smooth rounded black outlines, adorable chubby characters with simple dot eyes and tiny gentle smiles, soft cozy hygge atmosphere with cute decorative details, pure black and white line art on clean white background, no shading, no color fills, friendly wholesome coloring book page aesthetic. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
       "name": "flying_fish — Embroidery Patch",
       "_style_id": "embroidery_patch",
       "_expression_id": "flying_fish",
@@ -1848,19 +1717,6 @@
       "_idiom": "Spider + Monkey (EN)",
       "ai_generation": {
         "positive_prompt": "EXACTLY ONE monkey — primate face with expressive eyes, fur, curly prehensile tail — with EXACTLY EIGHT long hairy spider legs extending from its body instead of normal limbs, hanging confidently upside-down at the center of a large intricate spider web. The monkey's face grins cheerfully. EXACTLY EIGHT legs, EXACTLY ONE monkey head with fur, visible spider web. The monkey is completely at ease. Illustrated in Art Nouveau style: Alphonse Mucha inspired flowing organic sinuous linework, muted jewel tones of jade green, burgundy, antique gold and dusty violet, ornamental circular frame with botanical border. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
-      "name": "spidermonkey — Cozy Coloring Book",
-      "_style_id": "cozy_coloring",
-      "_expression_id": "spidermonkey",
-      "_idiom": "Spider + Monkey (EN)",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE monkey — primate face with expressive eyes, fur, curly prehensile tail — with EXACTLY EIGHT long hairy spider legs extending from its body instead of normal limbs, hanging confidently upside-down at the center of a large intricate spider web. The monkey's face grins cheerfully. EXACTLY EIGHT legs, EXACTLY ONE monkey head with fur, visible spider web. The monkey is completely at ease. Illustrated in cozy coloring book style: thick smooth rounded black outlines, adorable chubby characters with simple dot eyes and tiny gentle smiles, soft cozy hygge atmosphere with cute decorative details, pure black and white line art on clean white background, no shading, no color fills, friendly wholesome coloring book page aesthetic. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
         "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
         "cfg_scale": 4.0,
         "tiling": false,
@@ -2037,19 +1893,6 @@
       }
     },
     {
-      "name": "hummingbird — Cozy Coloring Book",
-      "_style_id": "cozy_coloring",
-      "_expression_id": "hummingbird",
-      "_idiom": "Humming + Bird (EN)",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE small bird hovering in place on EXACTLY TWO rapidly beating blurred wings, beak wide open, with large musical notes (quarter notes and eighth notes) streaming visibly out of its open beak in a flowing curving ribbon of song, eyes half-closed in contentment, cheeks puffed with the effort of humming a tune. EXACTLY ONE bird, EXACTLY TWO wings, musical notes clearly floating from beak. Illustrated in cozy coloring book style: thick smooth rounded black outlines, adorable chubby characters with simple dot eyes and tiny gentle smiles, soft cozy hygge atmosphere with cute decorative details, pure black and white line art on clean white background, no shading, no color fills, friendly wholesome coloring book page aesthetic. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
       "name": "hummingbird — Embroidery Patch",
       "_style_id": "embroidery_patch",
       "_expression_id": "hummingbird",
@@ -2212,19 +2055,6 @@
       "_idiom": "Mocking + Bird (EN)",
       "ai_generation": {
         "positive_prompt": "EXACTLY ONE small bird perched on a branch, one wing extended forward pointing directly at the viewer with a classic 'got you' gesture, the other wing planted on its hip, head thrown back with beak wide open in an over-the-top derisive laugh, eyes crinkled shut with glee — the definitive pose of someone making fun of you. EXACTLY ONE bird, EXACTLY TWO wings, unmistakably laughing and mocking. Illustrated in Art Nouveau style: Alphonse Mucha inspired flowing organic sinuous linework, muted jewel tones of jade green, burgundy, antique gold and dusty violet, ornamental circular frame with botanical border. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
-      "name": "mockingbird — Cozy Coloring Book",
-      "_style_id": "cozy_coloring",
-      "_expression_id": "mockingbird",
-      "_idiom": "Mocking + Bird (EN)",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE small bird perched on a branch, one wing extended forward pointing directly at the viewer with a classic 'got you' gesture, the other wing planted on its hip, head thrown back with beak wide open in an over-the-top derisive laugh, eyes crinkled shut with glee — the definitive pose of someone making fun of you. EXACTLY ONE bird, EXACTLY TWO wings, unmistakably laughing and mocking. Illustrated in cozy coloring book style: thick smooth rounded black outlines, adorable chubby characters with simple dot eyes and tiny gentle smiles, soft cozy hygge atmosphere with cute decorative details, pure black and white line art on clean white background, no shading, no color fills, friendly wholesome coloring book page aesthetic. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
         "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
         "cfg_scale": 4.0,
         "tiling": false,
@@ -2401,19 +2231,6 @@
       }
     },
     {
-      "name": "bumblebee — Cozy Coloring Book",
-      "_style_id": "cozy_coloring",
-      "_expression_id": "bumblebee",
-      "_idiom": "Bumble + Bee (EN)",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE bee with a comically disproportionate, enormously round and bulbous abdomen — the rear end is a giant smooth sphere many times larger than the bee's tiny head and thorax, black and yellow stripes stretched wide across the magnificent bum. The bee's tiny wings strain under its weight, and the bee looks simultaneously proud and embarrassed. EXACTLY ONE bee, EXACTLY TWO wings, EXACTLY SIX legs, giant round rear end as the clear focal point. Illustrated in cozy coloring book style: thick smooth rounded black outlines, adorable chubby characters with simple dot eyes and tiny gentle smiles, soft cozy hygge atmosphere with cute decorative details, pure black and white line art on clean white background, no shading, no color fills, friendly wholesome coloring book page aesthetic. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
       "name": "bumblebee — Embroidery Patch",
       "_style_id": "embroidery_patch",
       "_expression_id": "bumblebee",
@@ -2576,19 +2393,6 @@
       "_idiom": "Lady + Bug (EN)",
       "ai_generation": {
         "positive_prompt": "EXACTLY ONE ladybug wearing tiny Victorian lady accessories: a frilly white bonnet tied under its chin, a pearl necklace, holding a miniature floral parasol in one of its six legs, with a prim refined expression. The ladybug's iconic red-and-black spotted shell is fully visible beneath the accessories. EXACTLY ONE ladybug, EXACTLY SIX legs, EXACTLY TWO antennae, EXACTLY SEVEN black spots on red shell. Illustrated in Art Nouveau style: Alphonse Mucha inspired flowing organic sinuous linework, muted jewel tones of jade green, burgundy, antique gold and dusty violet, ornamental circular frame with botanical border. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
-      "name": "ladybug — Cozy Coloring Book",
-      "_style_id": "cozy_coloring",
-      "_expression_id": "ladybug",
-      "_idiom": "Lady + Bug (EN)",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE ladybug wearing tiny Victorian lady accessories: a frilly white bonnet tied under its chin, a pearl necklace, holding a miniature floral parasol in one of its six legs, with a prim refined expression. The ladybug's iconic red-and-black spotted shell is fully visible beneath the accessories. EXACTLY ONE ladybug, EXACTLY SIX legs, EXACTLY TWO antennae, EXACTLY SEVEN black spots on red shell. Illustrated in cozy coloring book style: thick smooth rounded black outlines, adorable chubby characters with simple dot eyes and tiny gentle smiles, soft cozy hygge atmosphere with cute decorative details, pure black and white line art on clean white background, no shading, no color fills, friendly wholesome coloring book page aesthetic. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
         "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
         "cfg_scale": 4.0,
         "tiling": false,
@@ -2765,19 +2569,6 @@
       }
     },
     {
-      "name": "triggerfish — Cozy Coloring Book",
-      "_style_id": "cozy_coloring",
-      "_expression_id": "triggerfish",
-      "_idiom": "Trigger + Fish (EN)",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE fish gripping a revolver pistol in one fin, fin clearly curled around the grip, one fin-finger firmly on the trigger, holding the gun in a dramatic action-hero sideways pose, looking tough and determined with narrowed eyes. EXACTLY ONE fish, EXACTLY ONE revolver with visible cylinder and trigger. The fish means business and is ready to fire. Illustrated in cozy coloring book style: thick smooth rounded black outlines, adorable chubby characters with simple dot eyes and tiny gentle smiles, soft cozy hygge atmosphere with cute decorative details, pure black and white line art on clean white background, no shading, no color fills, friendly wholesome coloring book page aesthetic. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
       "name": "triggerfish — Embroidery Patch",
       "_style_id": "embroidery_patch",
       "_expression_id": "triggerfish",
@@ -2940,19 +2731,6 @@
       "_idiom": "Guitar + Fish (EN)",
       "ai_generation": {
         "positive_prompt": "EXACTLY ONE fish whose body IS simultaneously an acoustic guitar: the fish's round belly forms the guitar body with two f-holes carved into the sides, the tail spreads out as the guitar headstock with visible tuning pegs, and six guitar strings run the full length from head to tail. Scales, one eye, and side fins visible — but unmistakably also a guitar. EXACTLY ONE fish-guitar hybrid with SIX strings and tuning pegs. Illustrated in Art Nouveau style: Alphonse Mucha inspired flowing organic sinuous linework, muted jewel tones of jade green, burgundy, antique gold and dusty violet, ornamental circular frame with botanical border. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
-      "name": "guitarfish — Cozy Coloring Book",
-      "_style_id": "cozy_coloring",
-      "_expression_id": "guitarfish",
-      "_idiom": "Guitar + Fish (EN)",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE fish whose body IS simultaneously an acoustic guitar: the fish's round belly forms the guitar body with two f-holes carved into the sides, the tail spreads out as the guitar headstock with visible tuning pegs, and six guitar strings run the full length from head to tail. Scales, one eye, and side fins visible — but unmistakably also a guitar. EXACTLY ONE fish-guitar hybrid with SIX strings and tuning pegs. Illustrated in cozy coloring book style: thick smooth rounded black outlines, adorable chubby characters with simple dot eyes and tiny gentle smiles, soft cozy hygge atmosphere with cute decorative details, pure black and white line art on clean white background, no shading, no color fills, friendly wholesome coloring book page aesthetic. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
         "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
         "cfg_scale": 4.0,
         "tiling": false,
@@ -3129,19 +2907,6 @@
       }
     },
     {
-      "name": "trumpetfish — Cozy Coloring Book",
-      "_style_id": "cozy_coloring",
-      "_expression_id": "trumpetfish",
-      "_idiom": "Trumpet + Fish (EN)",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE fish with both fins gripping a gleaming brass trumpet, cheeks puffed out into two enormous round spheres with the effort of blowing, eyes squeezed shut in concentration, a stream of musical notes bursting triumphantly from the trumpet bell. EXACTLY ONE fish, EXACTLY ONE brass trumpet with three valves, cheeks maximally inflated. Illustrated in cozy coloring book style: thick smooth rounded black outlines, adorable chubby characters with simple dot eyes and tiny gentle smiles, soft cozy hygge atmosphere with cute decorative details, pure black and white line art on clean white background, no shading, no color fills, friendly wholesome coloring book page aesthetic. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
       "name": "trumpetfish — Embroidery Patch",
       "_style_id": "embroidery_patch",
       "_expression_id": "trumpetfish",
@@ -3304,19 +3069,6 @@
       "_idiom": "Box + Fish (EN)",
       "ai_generation": {
         "positive_prompt": "EXACTLY ONE fish peeking contentedly out of a standard brown corrugated cardboard moving box — head and two fins resting over the open top flap, tail fin just visible inside, looking completely settled and at home in its cardboard box. The box has overlapping flaps and familiar brown corrugated texture. EXACTLY ONE fish, EXACTLY ONE cardboard box. The fish has clearly moved in permanently. Illustrated in Art Nouveau style: Alphonse Mucha inspired flowing organic sinuous linework, muted jewel tones of jade green, burgundy, antique gold and dusty violet, ornamental circular frame with botanical border. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
-      "name": "boxfish — Cozy Coloring Book",
-      "_style_id": "cozy_coloring",
-      "_expression_id": "boxfish",
-      "_idiom": "Box + Fish (EN)",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE fish peeking contentedly out of a standard brown corrugated cardboard moving box — head and two fins resting over the open top flap, tail fin just visible inside, looking completely settled and at home in its cardboard box. The box has overlapping flaps and familiar brown corrugated texture. EXACTLY ONE fish, EXACTLY ONE cardboard box. The fish has clearly moved in permanently. Illustrated in cozy coloring book style: thick smooth rounded black outlines, adorable chubby characters with simple dot eyes and tiny gentle smiles, soft cozy hygge atmosphere with cute decorative details, pure black and white line art on clean white background, no shading, no color fills, friendly wholesome coloring book page aesthetic. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
         "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
         "cfg_scale": 4.0,
         "tiling": false,
@@ -3493,19 +3245,6 @@
       }
     },
     {
-      "name": "rattlesnake — Cozy Coloring Book",
-      "_style_id": "cozy_coloring",
-      "_expression_id": "rattlesnake",
-      "_idiom": "Rattle + Snake (EN)",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE snake coiled with its tail raised high in the air, and at the very tip of the tail is a brightly colored plastic baby rattle — a round ball toy, yellow with polka dots and a short handle, the kind for infants. The snake shakes it cheerfully. The baby rattle is unmistakably a baby toy. EXACTLY ONE snake, EXACTLY ONE baby toy rattle at tail tip. NOT a natural rattle segment. Illustrated in cozy coloring book style: thick smooth rounded black outlines, adorable chubby characters with simple dot eyes and tiny gentle smiles, soft cozy hygge atmosphere with cute decorative details, pure black and white line art on clean white background, no shading, no color fills, friendly wholesome coloring book page aesthetic. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
       "name": "rattlesnake — Embroidery Patch",
       "_style_id": "embroidery_patch",
       "_expression_id": "rattlesnake",
@@ -3668,19 +3407,6 @@
       "_idiom": "King + Fisher (EN)",
       "ai_generation": {
         "positive_prompt": "EXACTLY ONE king in full royal regalia — golden crown on head, ermine-trimmed purple robe — seated contentedly on a wooden dock at the water's edge, fishing rod held in one hand, line cast in the water, waiting for a bite with serene royal dignity. EXACTLY ONE crown on head, EXACTLY ONE fishing rod in hand. The king is clearly a king, clearly fishing, completely at ease. Illustrated in Art Nouveau style: Alphonse Mucha inspired flowing organic sinuous linework, muted jewel tones of jade green, burgundy, antique gold and dusty violet, ornamental circular frame with botanical border. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
-      "name": "kingfisher — Cozy Coloring Book",
-      "_style_id": "cozy_coloring",
-      "_expression_id": "kingfisher",
-      "_idiom": "King + Fisher (EN)",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE king in full royal regalia — golden crown on head, ermine-trimmed purple robe — seated contentedly on a wooden dock at the water's edge, fishing rod held in one hand, line cast in the water, waiting for a bite with serene royal dignity. EXACTLY ONE crown on head, EXACTLY ONE fishing rod in hand. The king is clearly a king, clearly fishing, completely at ease. Illustrated in cozy coloring book style: thick smooth rounded black outlines, adorable chubby characters with simple dot eyes and tiny gentle smiles, soft cozy hygge atmosphere with cute decorative details, pure black and white line art on clean white background, no shading, no color fills, friendly wholesome coloring book page aesthetic. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
         "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
         "cfg_scale": 4.0,
         "tiling": false,
@@ -3857,19 +3583,6 @@
       }
     },
     {
-      "name": "woodpecker — Cozy Coloring Book",
-      "_style_id": "cozy_coloring",
-      "_expression_id": "woodpecker",
-      "_idiom": "Wood + Pecker (EN)",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE bird wearing a tiny yellow construction hard hat, vigorously drilling its beak into a wooden plank with total professional focus, wood chips flying in all directions, a tool belt with miniature tools around its body. The bird treats carpentry with the utmost seriousness. EXACTLY ONE bird, EXACTLY ONE hard hat, EXACTLY TWO wings folded, wood chips frozen mid-air. Illustrated in cozy coloring book style: thick smooth rounded black outlines, adorable chubby characters with simple dot eyes and tiny gentle smiles, soft cozy hygge atmosphere with cute decorative details, pure black and white line art on clean white background, no shading, no color fills, friendly wholesome coloring book page aesthetic. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
       "name": "woodpecker — Embroidery Patch",
       "_style_id": "embroidery_patch",
       "_expression_id": "woodpecker",
@@ -4032,19 +3745,6 @@
       "_idiom": "Thunder + Bird (EN)",
       "ai_generation": {
         "positive_prompt": "EXACTLY ONE large majestic eagle with wings fully spread wide, dramatic forked lightning bolts crackling and shooting outward from both wingtips and talons, dark storm clouds swirling behind it, eyes blazing with electric energy, clearly the source and master of all thunder and lightning. EXACTLY ONE eagle, EXACTLY TWO wings fully extended, EXACTLY FOUR lightning bolts visible, storm clouds framing the scene. Illustrated in Art Nouveau style: Alphonse Mucha inspired flowing organic sinuous linework, muted jewel tones of jade green, burgundy, antique gold and dusty violet, ornamental circular frame with botanical border. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
-      "name": "thunderbird — Cozy Coloring Book",
-      "_style_id": "cozy_coloring",
-      "_expression_id": "thunderbird",
-      "_idiom": "Thunder + Bird (EN)",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE large majestic eagle with wings fully spread wide, dramatic forked lightning bolts crackling and shooting outward from both wingtips and talons, dark storm clouds swirling behind it, eyes blazing with electric energy, clearly the source and master of all thunder and lightning. EXACTLY ONE eagle, EXACTLY TWO wings fully extended, EXACTLY FOUR lightning bolts visible, storm clouds framing the scene. Illustrated in cozy coloring book style: thick smooth rounded black outlines, adorable chubby characters with simple dot eyes and tiny gentle smiles, soft cozy hygge atmosphere with cute decorative details, pure black and white line art on clean white background, no shading, no color fills, friendly wholesome coloring book page aesthetic. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
         "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
         "cfg_scale": 4.0,
         "tiling": false,
