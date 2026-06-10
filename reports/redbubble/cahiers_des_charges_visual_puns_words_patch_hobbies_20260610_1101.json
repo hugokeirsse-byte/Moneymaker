@@ -1,152 +1,20 @@
 {
   "generated_at": "2026-06-10T11:32:26Z",
   "series": "patch_hobbies_v1",
-  "styles": [
-    "embroidery_patch"
-  ],
+  "styles": ["embroidery_patch"],
   "description": "Hobbies patches — 10 illustrations embroidery patch, text via Canva",
   "platform": "redbubble",
   "total_briefs": 10,
   "briefs": [
-    {
-      "name": "runner — Embroidery Patch",
-      "_style_id": "embroidery_patch",
-      "_expression_id": "runner",
-      "_idiom": "RUNNER",
-      "_canva_text": "RUNNER",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE runner mid-sprint in full stride, EXACTLY TWO small golden lightning bolts shooting from their heels, wind lines streaming behind them, a tiny medal swinging forward at the finish line ribbon in the distance, determined grin. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
-      "name": "baker — Embroidery Patch",
-      "_style_id": "embroidery_patch",
-      "_expression_id": "baker",
-      "_idiom": "BAKER",
-      "_canva_text": "BAKER",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE flour-dusted baker with a chef hat, arms spread wide as EXACTLY FOUR freshly baked round loaves of bread hover around them rising majestically, an oven mitt on one hand, a rolling pin in the other, a cloud of flour puffed around them. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
-      "name": "yogi — Embroidery Patch",
-      "_style_id": "embroidery_patch",
-      "_expression_id": "yogi",
-      "_idiom": "YOGI",
-      "_canva_text": "YOGI",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE person in a perfect lotus meditation pose levitating slightly, eyes closed, a small glowing mandala beneath them, EXACTLY THREE tiny stars orbiting above their head, hands in mudra position, serene half-smile, no wobble. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
-      "name": "cyclist — Embroidery Patch",
-      "_style_id": "embroidery_patch",
-      "_expression_id": "cyclist",
-      "_idiom": "CYCLIST",
-      "_canva_text": "CYCLIST",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE person on a tiny bicycle pedaling up a steep mountain with enormous enthusiasm, wearing an oversized helmet, EXACTLY TWO sweat drops flying, a tiny flag planted at the summit ahead, the bicycle wheels spinning with motion lines. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
-      "name": "hiker — Embroidery Patch",
-      "_style_id": "embroidery_patch",
-      "_expression_id": "hiker",
-      "_idiom": "HIKER",
-      "_canva_text": "HIKER",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE tiny hiker standing triumphant at the very top of an enormous mountain, one fist raised in victory, EXACTLY ONE small flag planted beside them, a dramatic sweeping vista of smaller mountains below, oversized backpack, one tiny blister on their boot. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
-      "name": "photographer — Embroidery Patch",
-      "_style_id": "embroidery_patch",
-      "_expression_id": "photographer",
-      "_idiom": "PHOTOGRAPHER",
-      "_canva_text": "PHOTOGRAPHER",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE person almost completely hidden behind a massive camera with a very long lens, only their eager eyes and hands visible, EXACTLY ONE tiny subject — a butterfly — flying into the perfect frame, the camera's viewfinder glowing. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
-      "name": "crafter — Embroidery Patch",
-      "_style_id": "embroidery_patch",
-      "_expression_id": "crafter",
-      "_idiom": "CRAFTER",
-      "_canva_text": "CRAFTER",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE person buried waist-deep in a colorful avalanche of craft supplies — yarn balls, fabric scraps, ribbons, buttons — arms sticking out happily holding EXACTLY ONE perfect tiny finished creation, a glue gun sticking out of their hair. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
-      "name": "gardener — Embroidery Patch",
-      "_style_id": "embroidery_patch",
-      "_expression_id": "gardener",
-      "_idiom": "GARDENER",
-      "_canva_text": "GARDENER",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE gardener in muddy boots and oversized gloves kneeling before EXACTLY SIX tiny seedling pots arranged in a row, whispering to the smallest seedling which is just beginning to sprout one tiny leaf, watering can beside them. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
-      "name": "cottagecore — Embroidery Patch",
-      "_style_id": "embroidery_patch",
-      "_expression_id": "cottagecore",
-      "_idiom": "COTTAGECORE",
-      "_canva_text": "COTTAGECORE",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE person in a linen apron gathering wildflowers in a wicker basket in a meadow, EXACTLY THREE mushrooms growing at their feet, a ribbon in their braided hair, a farmhouse visible in the soft background, golden sunlight filtering through. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
-      "name": "crocheter — Embroidery Patch",
-      "_style_id": "embroidery_patch",
-      "_expression_id": "crocheter",
-      "_idiom": "CROCHETER",
-      "_canva_text": "CROCHETER",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE person wrapped completely in an enormous flowing rainbow blanket they are still crocheting, the blanket spiraling around them and trailing behind, EXACTLY ONE crochet hook in their raised hand still working, a ball of yarn at their feet. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    }
+    {"name": "runner — Embroidery Patch", "_style_id": "embroidery_patch", "_expression_id": "runner", "_idiom": "RUNNER", "_canva_text": "RUNNER", "ai_generation": {"positive_prompt": "EXACTLY ONE runner mid-sprint in full stride, EXACTLY TWO small golden lightning bolts shooting from their heels, wind lines streaming behind them, a tiny medal swinging forward at the finish line ribbon in the distance, determined grin. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.", "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic", "cfg_scale": 4.0, "tiling": false, "seed_image_url": null}},
+    {"name": "baker — Embroidery Patch", "_style_id": "embroidery_patch", "_expression_id": "baker", "_idiom": "BAKER", "_canva_text": "BAKER", "ai_generation": {"positive_prompt": "EXACTLY ONE flour-dusted baker with a chef hat, arms spread wide as EXACTLY FOUR freshly baked round loaves of bread hover around them rising majestically, an oven mitt on one hand, a rolling pin in the other, a cloud of flour puffed around them. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.", "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic", "cfg_scale": 4.0, "tiling": false, "seed_image_url": null}},
+    {"name": "yogi — Embroidery Patch", "_style_id": "embroidery_patch", "_expression_id": "yogi", "_idiom": "YOGI", "_canva_text": "YOGI", "ai_generation": {"positive_prompt": "EXACTLY ONE person in a perfect lotus meditation pose levitating slightly, eyes closed, a small glowing mandala beneath them, EXACTLY THREE tiny stars orbiting above their head, hands in mudra position, serene half-smile, no wobble. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.", "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic", "cfg_scale": 4.0, "tiling": false, "seed_image_url": null}},
+    {"name": "cyclist — Embroidery Patch", "_style_id": "embroidery_patch", "_expression_id": "cyclist", "_idiom": "CYCLIST", "_canva_text": "CYCLIST", "ai_generation": {"positive_prompt": "EXACTLY ONE person on a tiny bicycle pedaling up a steep mountain with enormous enthusiasm, wearing an oversized helmet, EXACTLY TWO sweat drops flying, a tiny flag planted at the summit ahead, the bicycle wheels spinning with motion lines. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.", "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic", "cfg_scale": 4.0, "tiling": false, "seed_image_url": null}},
+    {"name": "hiker — Embroidery Patch", "_style_id": "embroidery_patch", "_expression_id": "hiker", "_idiom": "HIKER", "_canva_text": "HIKER", "ai_generation": {"positive_prompt": "EXACTLY ONE tiny hiker standing triumphant at the very top of an enormous mountain, one fist raised in victory, EXACTLY ONE small flag planted beside them, a dramatic sweeping vista of smaller mountains below, oversized backpack, one tiny blister on their boot. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.", "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic", "cfg_scale": 4.0, "tiling": false, "seed_image_url": null}},
+    {"name": "photographer — Embroidery Patch", "_style_id": "embroidery_patch", "_expression_id": "photographer", "_idiom": "PHOTOGRAPHER", "_canva_text": "PHOTOGRAPHER", "ai_generation": {"positive_prompt": "EXACTLY ONE person almost completely hidden behind a massive camera with a very long lens, only their eager eyes and hands visible, EXACTLY ONE tiny subject — a butterfly — flying into the perfect frame, the camera's viewfinder glowing. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.", "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic", "cfg_scale": 4.0, "tiling": false, "seed_image_url": null}},
+    {"name": "crafter — Embroidery Patch", "_style_id": "embroidery_patch", "_expression_id": "crafter", "_idiom": "CRAFTER", "_canva_text": "CRAFTER", "ai_generation": {"positive_prompt": "EXACTLY ONE person buried waist-deep in a colorful avalanche of craft supplies — yarn balls, fabric scraps, ribbons, buttons — arms sticking out happily holding EXACTLY ONE perfect tiny finished creation, a glue gun sticking out of their hair. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.", "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic", "cfg_scale": 4.0, "tiling": false, "seed_image_url": null}},
+    {"name": "gardener — Embroidery Patch", "_style_id": "embroidery_patch", "_expression_id": "gardener", "_idiom": "GARDENER", "_canva_text": "GARDENER", "ai_generation": {"positive_prompt": "EXACTLY ONE gardener in muddy boots and oversized gloves kneeling before EXACTLY SIX tiny seedling pots arranged in a row, whispering to the smallest seedling which is just beginning to sprout one tiny leaf, watering can beside them. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.", "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic", "cfg_scale": 4.0, "tiling": false, "seed_image_url": null}},
+    {"name": "cottagecore — Embroidery Patch", "_style_id": "embroidery_patch", "_expression_id": "cottagecore", "_idiom": "COTTAGECORE", "_canva_text": "COTTAGECORE", "ai_generation": {"positive_prompt": "EXACTLY ONE person in a linen apron gathering wildflowers in a wicker basket in a meadow, EXACTLY THREE mushrooms growing at their feet, a ribbon in their braided hair, a farmhouse visible in the soft background, golden sunlight filtering through. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.", "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic", "cfg_scale": 4.0, "tiling": false, "seed_image_url": null}},
+    {"name": "crocheter — Embroidery Patch", "_style_id": "embroidery_patch", "_expression_id": "crocheter", "_idiom": "CROCHETER", "_canva_text": "CROCHETER", "ai_generation": {"positive_prompt": "EXACTLY ONE person wrapped completely in an enormous flowing rainbow blanket they are still crocheting, the blanket spiraling around them and trailing behind, EXACTLY ONE crochet hook in their raised hand still working, a ball of yarn at their feet. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.", "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic", "cfg_scale": 4.0, "tiling": false, "seed_image_url": null}}
   ]
 }
