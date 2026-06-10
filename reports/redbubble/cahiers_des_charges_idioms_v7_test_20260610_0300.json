@@ -1,0 +1,443 @@
+{
+  "generated_at": "2026-06-10T03:00:00+00:00",
+  "series": "idioms_v7_test_2x16",
+  "styles": [
+    "risograph",
+    "cartoon_network",
+    "classic_manga",
+    "cozy_coloring",
+    "art_nouveau",
+    "tattoo_flash",
+    "graffiti_street_art",
+    "embroidery_patch",
+    "minimalist_line",
+    "kawaii_chibi",
+    "gothic_dark",
+    "memphis_design",
+    "victorian_engraving",
+    "ukiyo_e",
+    "retro_neon_80s",
+    "pixel_art"
+  ],
+  "description": "V7 TEST avant le grand run : 1 expression stock (poule aux dents) + 1 expression adulte (shit hits the fan) x 16 styles = 32 briefs. Validation du rendu des 16 styles et du ton adulte cartoon avant de generer les 35 expressions completes.",
+  "platform": "redbubble",
+  "total_briefs": 32,
+  "briefs": [
+    {
+      "name": "hen_teeth — Risograph Print",
+      "_style_id": "risograph",
+      "_expression_id": "hen_teeth",
+      "_idiom": "Quand les poules auront des dents (FR)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE plump white hen stands proudly facing forward, grinning widely with a full set of large human teeth in its open beak, eyes sparkling with mischief. The hen has exactly two legs and two wings, one red comb on its head. Only this one hen, no other animals. Illustrated in risograph print style: visible riso grain texture across the whole image, strictly limited 3-color palette of cobalt blue, warm coral orange and cream white, flat simplified shapes, slight intentional color misregistration, lo-fi zine aesthetic. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "hen_teeth — Cartoon Network Flat",
+      "_style_id": "cartoon_network",
+      "_expression_id": "hen_teeth",
+      "_idiom": "Quand les poules auront des dents (FR)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE plump white hen stands proudly facing forward, grinning widely with a full set of large human teeth in its open beak, eyes sparkling with mischief. The hen has exactly two legs and two wings, one red comb on its head. Only this one hen, no other animals. Illustrated in Adventure Time cartoon network style: thick bold black cartoon outlines, flat vivid color fills of sky blue, lime green and sunshine yellow, simple round pudgy characters with big expressive faces, 2D cel animation aesthetic, white background. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "hen_teeth — Classic Manga",
+      "_style_id": "classic_manga",
+      "_expression_id": "hen_teeth",
+      "_idiom": "Quand les poules auront des dents (FR)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE plump white hen stands proudly facing forward, grinning widely with a full set of large human teeth in its open beak, eyes sparkling with mischief. The hen has exactly two legs and two wings, one red comb on its head. Only this one hen, no other animals. Illustrated in classic Japanese manga style: crisp black ink linework, screentone dot shading and hatching, expressive large eyes, dynamic speed lines in the background, dramatic comic expressions, black and white with high contrast, authentic 90s shonen manga page aesthetic. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "hen_teeth — Cozy Coloring Book",
+      "_style_id": "cozy_coloring",
+      "_expression_id": "hen_teeth",
+      "_idiom": "Quand les poules auront des dents (FR)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE plump white hen stands proudly facing forward, grinning widely with a full set of large human teeth in its open beak, eyes sparkling with mischief. The hen has exactly two legs and two wings, one red comb on its head. Only this one hen, no other animals. Illustrated in cozy coloring book style: thick smooth rounded black outlines, adorable chubby characters with simple dot eyes and tiny gentle smiles, soft cozy hygge atmosphere with cute decorative details, pure black and white line art on clean white background, no shading, no color fills, friendly wholesome coloring book page aesthetic. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "hen_teeth — Art Nouveau",
+      "_style_id": "art_nouveau",
+      "_expression_id": "hen_teeth",
+      "_idiom": "Quand les poules auront des dents (FR)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE plump white hen stands proudly facing forward, grinning widely with a full set of large human teeth in its open beak, eyes sparkling with mischief. The hen has exactly two legs and two wings, one red comb on its head. Only this one hen, no other animals. Illustrated in Art Nouveau style: Alphonse Mucha inspired flowing organic sinuous linework, muted jewel tones of jade green, burgundy, antique gold and dusty violet, ornamental circular frame with botanical border. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "hen_teeth — Tattoo Flash Art",
+      "_style_id": "tattoo_flash",
+      "_expression_id": "hen_teeth",
+      "_idiom": "Quand les poules auront des dents (FR)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE plump white hen stands proudly facing forward, grinning widely with a full set of large human teeth in its open beak, eyes sparkling with mischief. The hen has exactly two legs and two wings, one red comb on its head. Only this one hen, no other animals. Illustrated in traditional American tattoo flash style: bold thick black outlines, classic Sailor Jerry color fills of red, cobalt blue, forest green and yellow, small star accents, aged cream background, vintage tattoo parlor aesthetic. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "hen_teeth — Graffiti Street Art",
+      "_style_id": "graffiti_street_art",
+      "_expression_id": "hen_teeth",
+      "_idiom": "Quand les poules auront des dents (FR)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE plump white hen stands proudly facing forward, grinning widely with a full set of large human teeth in its open beak, eyes sparkling with mischief. The hen has exactly two legs and two wings, one red comb on its head. Only this one hen, no other animals. Illustrated in street art graffiti style: aerosol spray paint texture, bold black outlines, vivid electric colors of magenta, electric blue, lime green and chrome silver, dripping paint accents, urban mural aesthetic. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "hen_teeth — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "hen_teeth",
+      "_idiom": "Quand les poules auront des dents (FR)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE plump white hen stands proudly facing forward, grinning widely with a full set of large human teeth in its open beak, eyes sparkling with mischief. The hen has exactly two legs and two wings, one red comb on its head. Only this one hen, no other animals. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "hen_teeth — Minimalist Line Art",
+      "_style_id": "minimalist_line",
+      "_expression_id": "hen_teeth",
+      "_idiom": "Quand les poules auront des dents (FR)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE plump white hen stands proudly facing forward, grinning widely with a full set of large human teeth in its open beak, eyes sparkling with mischief. The hen has exactly two legs and two wings, one red comb on its head. Only this one hen, no other animals. Illustrated in minimalist continuous single-line style: one unbroken thin black ink line on pure white background, elegant zen aesthetic with generous negative space, no color fills, pure contour. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "hen_teeth — Kawaii Chibi",
+      "_style_id": "kawaii_chibi",
+      "_expression_id": "hen_teeth",
+      "_idiom": "Quand les poules auront des dents (FR)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE plump white hen stands proudly facing forward, grinning widely with a full set of large human teeth in its open beak, eyes sparkling with mischief. The hen has exactly two legs and two wings, one red comb on its head. Only this one hen, no other animals. Illustrated in kawaii Japanese chibi style: extra chubby tiny bodies with oversized round heads, huge sparkling dot eyes, tiny blush cheeks, baby pastel palette of blush pink, lavender, baby blue and lemon yellow, glitter sparkle accents. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "hen_teeth — Gothic Dark Whimsy",
+      "_style_id": "gothic_dark",
+      "_expression_id": "hen_teeth",
+      "_idiom": "Quand les poules auront des dents (FR)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE plump white hen stands proudly facing forward, grinning widely with a full set of large human teeth in its open beak, eyes sparkling with mischief. The hen has exactly two legs and two wings, one red comb on its head. Only this one hen, no other animals. Illustrated in gothic dark whimsy style: stark black and white with one blood red accent, ornate Victorian gothic decorative frame, spooky-cute aesthetic with toothy mischievous grins, high contrast dramatic lighting. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "hen_teeth — Memphis 1980s Design",
+      "_style_id": "memphis_design",
+      "_expression_id": "hen_teeth",
+      "_idiom": "Quand les poules auront des dents (FR)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE plump white hen stands proudly facing forward, grinning widely with a full set of large human teeth in its open beak, eyes sparkling with mischief. The hen has exactly two legs and two wings, one red comb on its head. Only this one hen, no other animals. Illustrated in Memphis postmodern 1980s design style: bold colorful geometric shapes, triangles, squiggles and polka dots scattered around, vibrant palette of tomato red, sunshine yellow, cobalt blue, black and seafoam green, flat playful composition. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "hen_teeth — Victorian Engraving",
+      "_style_id": "victorian_engraving",
+      "_expression_id": "hen_teeth",
+      "_idiom": "Quand les poules auront des dents (FR)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE plump white hen stands proudly facing forward, grinning widely with a full set of large human teeth in its open beak, eyes sparkling with mischief. The hen has exactly two legs and two wings, one red comb on its head. Only this one hen, no other animals. Illustrated in Victorian scientific engraving style: fine crosshatching and stippling throughout, monochromatic sepia-brown on aged cream parchment, ornate engraved decorative border, 1860s natural history atlas aesthetic. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "hen_teeth — Japanese Ukiyo-e",
+      "_style_id": "ukiyo_e",
+      "_expression_id": "hen_teeth",
+      "_idiom": "Quand les poules auront des dents (FR)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE plump white hen stands proudly facing forward, grinning widely with a full set of large human teeth in its open beak, eyes sparkling with mischief. The hen has exactly two legs and two wings, one red comb on its head. Only this one hen, no other animals. Illustrated in Japanese ukiyo-e woodblock print style: flat color areas in indigo blue, vermillion red and cream, bold carved outlines, traditional Edo-period aesthetics, decorative stylized background, woodblock texture on aged paper. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "hen_teeth — 80s Retro Neon",
+      "_style_id": "retro_neon_80s",
+      "_expression_id": "hen_teeth",
+      "_idiom": "Quand les poules auront des dents (FR)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE plump white hen stands proudly facing forward, grinning widely with a full set of large human teeth in its open beak, eyes sparkling with mischief. The hen has exactly two legs and two wings, one red comb on its head. Only this one hen, no other animals. Illustrated in 1980s retro neon synthwave style: hot pink, electric blue and laser yellow against deep purple background, chrome-style bold outlines with neon glow, Miami Vice aesthetic. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "hen_teeth — Retro Pixel Art",
+      "_style_id": "pixel_art",
+      "_expression_id": "hen_teeth",
+      "_idiom": "Quand les poules auront des dents (FR)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE plump white hen stands proudly facing forward, grinning widely with a full set of large human teeth in its open beak, eyes sparkling with mischief. The hen has exactly two legs and two wings, one red comb on its head. Only this one hen, no other animals. Illustrated in retro 16-bit pixel art style: chunky visible pixels, NES color palette limited to 8 colors, crisp hard pixel edges, retro video game sprite aesthetic on a simple dark background. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "shit_fan — Risograph Print",
+      "_style_id": "risograph",
+      "_expression_id": "shit_fan",
+      "_idiom": "When the shit hits the fan (EN)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE comical cartoon poop swirl with a worried face is flying through the air on a collision course toward EXACTLY ONE large electric desk fan spinning at full speed, while EXACTLY ONE panicked office worker dives for cover behind a desk, papers flying everywhere. One poop, one fan, one person. Illustrated in risograph print style: visible riso grain texture across the whole image, strictly limited 3-color palette of cobalt blue, warm coral orange and cream white, flat simplified shapes, slight intentional color misregistration, lo-fi zine aesthetic. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "shit_fan — Cartoon Network Flat",
+      "_style_id": "cartoon_network",
+      "_expression_id": "shit_fan",
+      "_idiom": "When the shit hits the fan (EN)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE comical cartoon poop swirl with a worried face is flying through the air on a collision course toward EXACTLY ONE large electric desk fan spinning at full speed, while EXACTLY ONE panicked office worker dives for cover behind a desk, papers flying everywhere. One poop, one fan, one person. Illustrated in Adventure Time cartoon network style: thick bold black cartoon outlines, flat vivid color fills of sky blue, lime green and sunshine yellow, simple round pudgy characters with big expressive faces, 2D cel animation aesthetic, white background. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "shit_fan — Classic Manga",
+      "_style_id": "classic_manga",
+      "_expression_id": "shit_fan",
+      "_idiom": "When the shit hits the fan (EN)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE comical cartoon poop swirl with a worried face is flying through the air on a collision course toward EXACTLY ONE large electric desk fan spinning at full speed, while EXACTLY ONE panicked office worker dives for cover behind a desk, papers flying everywhere. One poop, one fan, one person. Illustrated in classic Japanese manga style: crisp black ink linework, screentone dot shading and hatching, expressive large eyes, dynamic speed lines in the background, dramatic comic expressions, black and white with high contrast, authentic 90s shonen manga page aesthetic. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "shit_fan — Cozy Coloring Book",
+      "_style_id": "cozy_coloring",
+      "_expression_id": "shit_fan",
+      "_idiom": "When the shit hits the fan (EN)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE comical cartoon poop swirl with a worried face is flying through the air on a collision course toward EXACTLY ONE large electric desk fan spinning at full speed, while EXACTLY ONE panicked office worker dives for cover behind a desk, papers flying everywhere. One poop, one fan, one person. Illustrated in cozy coloring book style: thick smooth rounded black outlines, adorable chubby characters with simple dot eyes and tiny gentle smiles, soft cozy hygge atmosphere with cute decorative details, pure black and white line art on clean white background, no shading, no color fills, friendly wholesome coloring book page aesthetic. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "shit_fan — Art Nouveau",
+      "_style_id": "art_nouveau",
+      "_expression_id": "shit_fan",
+      "_idiom": "When the shit hits the fan (EN)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE comical cartoon poop swirl with a worried face is flying through the air on a collision course toward EXACTLY ONE large electric desk fan spinning at full speed, while EXACTLY ONE panicked office worker dives for cover behind a desk, papers flying everywhere. One poop, one fan, one person. Illustrated in Art Nouveau style: Alphonse Mucha inspired flowing organic sinuous linework, muted jewel tones of jade green, burgundy, antique gold and dusty violet, ornamental circular frame with botanical border. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "shit_fan — Tattoo Flash Art",
+      "_style_id": "tattoo_flash",
+      "_expression_id": "shit_fan",
+      "_idiom": "When the shit hits the fan (EN)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE comical cartoon poop swirl with a worried face is flying through the air on a collision course toward EXACTLY ONE large electric desk fan spinning at full speed, while EXACTLY ONE panicked office worker dives for cover behind a desk, papers flying everywhere. One poop, one fan, one person. Illustrated in traditional American tattoo flash style: bold thick black outlines, classic Sailor Jerry color fills of red, cobalt blue, forest green and yellow, small star accents, aged cream background, vintage tattoo parlor aesthetic. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "shit_fan — Graffiti Street Art",
+      "_style_id": "graffiti_street_art",
+      "_expression_id": "shit_fan",
+      "_idiom": "When the shit hits the fan (EN)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE comical cartoon poop swirl with a worried face is flying through the air on a collision course toward EXACTLY ONE large electric desk fan spinning at full speed, while EXACTLY ONE panicked office worker dives for cover behind a desk, papers flying everywhere. One poop, one fan, one person. Illustrated in street art graffiti style: aerosol spray paint texture, bold black outlines, vivid electric colors of magenta, electric blue, lime green and chrome silver, dripping paint accents, urban mural aesthetic. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "shit_fan — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "shit_fan",
+      "_idiom": "When the shit hits the fan (EN)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE comical cartoon poop swirl with a worried face is flying through the air on a collision course toward EXACTLY ONE large electric desk fan spinning at full speed, while EXACTLY ONE panicked office worker dives for cover behind a desk, papers flying everywhere. One poop, one fan, one person. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "shit_fan — Minimalist Line Art",
+      "_style_id": "minimalist_line",
+      "_expression_id": "shit_fan",
+      "_idiom": "When the shit hits the fan (EN)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE comical cartoon poop swirl with a worried face is flying through the air on a collision course toward EXACTLY ONE large electric desk fan spinning at full speed, while EXACTLY ONE panicked office worker dives for cover behind a desk, papers flying everywhere. One poop, one fan, one person. Illustrated in minimalist continuous single-line style: one unbroken thin black ink line on pure white background, elegant zen aesthetic with generous negative space, no color fills, pure contour. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "shit_fan — Kawaii Chibi",
+      "_style_id": "kawaii_chibi",
+      "_expression_id": "shit_fan",
+      "_idiom": "When the shit hits the fan (EN)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE comical cartoon poop swirl with a worried face is flying through the air on a collision course toward EXACTLY ONE large electric desk fan spinning at full speed, while EXACTLY ONE panicked office worker dives for cover behind a desk, papers flying everywhere. One poop, one fan, one person. Illustrated in kawaii Japanese chibi style: extra chubby tiny bodies with oversized round heads, huge sparkling dot eyes, tiny blush cheeks, baby pastel palette of blush pink, lavender, baby blue and lemon yellow, glitter sparkle accents. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "shit_fan — Gothic Dark Whimsy",
+      "_style_id": "gothic_dark",
+      "_expression_id": "shit_fan",
+      "_idiom": "When the shit hits the fan (EN)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE comical cartoon poop swirl with a worried face is flying through the air on a collision course toward EXACTLY ONE large electric desk fan spinning at full speed, while EXACTLY ONE panicked office worker dives for cover behind a desk, papers flying everywhere. One poop, one fan, one person. Illustrated in gothic dark whimsy style: stark black and white with one blood red accent, ornate Victorian gothic decorative frame, spooky-cute aesthetic with toothy mischievous grins, high contrast dramatic lighting. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "shit_fan — Memphis 1980s Design",
+      "_style_id": "memphis_design",
+      "_expression_id": "shit_fan",
+      "_idiom": "When the shit hits the fan (EN)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE comical cartoon poop swirl with a worried face is flying through the air on a collision course toward EXACTLY ONE large electric desk fan spinning at full speed, while EXACTLY ONE panicked office worker dives for cover behind a desk, papers flying everywhere. One poop, one fan, one person. Illustrated in Memphis postmodern 1980s design style: bold colorful geometric shapes, triangles, squiggles and polka dots scattered around, vibrant palette of tomato red, sunshine yellow, cobalt blue, black and seafoam green, flat playful composition. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "shit_fan — Victorian Engraving",
+      "_style_id": "victorian_engraving",
+      "_expression_id": "shit_fan",
+      "_idiom": "When the shit hits the fan (EN)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE comical cartoon poop swirl with a worried face is flying through the air on a collision course toward EXACTLY ONE large electric desk fan spinning at full speed, while EXACTLY ONE panicked office worker dives for cover behind a desk, papers flying everywhere. One poop, one fan, one person. Illustrated in Victorian scientific engraving style: fine crosshatching and stippling throughout, monochromatic sepia-brown on aged cream parchment, ornate engraved decorative border, 1860s natural history atlas aesthetic. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "shit_fan — Japanese Ukiyo-e",
+      "_style_id": "ukiyo_e",
+      "_expression_id": "shit_fan",
+      "_idiom": "When the shit hits the fan (EN)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE comical cartoon poop swirl with a worried face is flying through the air on a collision course toward EXACTLY ONE large electric desk fan spinning at full speed, while EXACTLY ONE panicked office worker dives for cover behind a desk, papers flying everywhere. One poop, one fan, one person. Illustrated in Japanese ukiyo-e woodblock print style: flat color areas in indigo blue, vermillion red and cream, bold carved outlines, traditional Edo-period aesthetics, decorative stylized background, woodblock texture on aged paper. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "shit_fan — 80s Retro Neon",
+      "_style_id": "retro_neon_80s",
+      "_expression_id": "shit_fan",
+      "_idiom": "When the shit hits the fan (EN)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE comical cartoon poop swirl with a worried face is flying through the air on a collision course toward EXACTLY ONE large electric desk fan spinning at full speed, while EXACTLY ONE panicked office worker dives for cover behind a desk, papers flying everywhere. One poop, one fan, one person. Illustrated in 1980s retro neon synthwave style: hot pink, electric blue and laser yellow against deep purple background, chrome-style bold outlines with neon glow, Miami Vice aesthetic. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "shit_fan — Retro Pixel Art",
+      "_style_id": "pixel_art",
+      "_expression_id": "shit_fan",
+      "_idiom": "When the shit hits the fan (EN)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE comical cartoon poop swirl with a worried face is flying through the air on a collision course toward EXACTLY ONE large electric desk fan spinning at full speed, while EXACTLY ONE panicked office worker dives for cover behind a desk, papers flying everywhere. One poop, one fan, one person. Illustrated in retro 16-bit pixel art style: chunky visible pixels, NES color palette limited to 8 colors, crisp hard pixel edges, retro video game sprite aesthetic on a simple dark background. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, nudity, explicit, realistic feces, gross realistic, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    }
+  ]
+}
