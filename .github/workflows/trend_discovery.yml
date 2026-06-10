@@ -184,6 +184,14 @@ jobs:
               --report "$RB_REPORT" \
               --output "$RB_OUTPUT" \
               $LIMIT_ARG
+            echo "-- Rangement en sous-dossiers par expression (préfixe avant ___) --"
+            for f in "$RB_OUTPUT"/*.png; do
+              [ -e "$f" ] || continue
+              base=$(basename "$f")
+              expr="${base%%___*}"
+              mkdir -p "$RB_OUTPUT/$expr"
+              mv "$f" "$RB_OUTPUT/$expr/"
+            done
             echo "-- Auto thumbnails Redbubble --"
             python -m trend_discovery.main thumbnails \
               --pipeline "$RB_OUTPUT" \
