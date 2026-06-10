@@ -1,180 +1,22 @@
 {
   "generated_at": "2026-06-10T11:32:26Z",
   "series": "patch_french_v1",
-  "styles": [
-    "embroidery_patch"
-  ],
+  "styles": ["embroidery_patch"],
   "description": "French mood patches — 12 illustrations embroidery patch, text via Canva",
   "platform": "redbubble",
   "total_briefs": 12,
   "briefs": [
-    {
-      "name": "cerveau_en_pls — Embroidery Patch",
-      "_style_id": "embroidery_patch",
-      "_expression_id": "cerveau_en_pls",
-      "_idiom": "CERVEAU EN PLS",
-      "_canva_text": "CERVEAU EN PLS",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE round pink brain character dramatically collapsed on the floor with one arm raised weakly toward the ceiling, eyes rolled back, EXACTLY TWO small white flags of surrender beside it, completely overwhelmed, a tiny wilted flower drooping next to it. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
-      "name": "pile_vide — Embroidery Patch",
-      "_style_id": "embroidery_patch",
-      "_expression_id": "pile_vide",
-      "_idiom": "PILE VIDE",
-      "_canva_text": "PILE VIDE",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE person sitting slumped on the floor with a giant phone battery strapped to their back showing empty — EXACTLY ZERO bars — a sad low-power icon floating above, charger cable unplugged and lying beyond reach, eyelids drooping. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
-      "name": "trop_dans_ma_tete — Embroidery Patch",
-      "_style_id": "embroidery_patch",
-      "_expression_id": "trop_dans_ma_tete",
-      "_idiom": "TROP DANS MA TÊTE",
-      "_canva_text": "TROP DANS MA TÊTE",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE person whose head has become a tiny traffic jam, with EXACTLY FIVE miniature thought-cars all honking and gridlocked inside their transparent skull, EXACTLY ONE tiny traffic light on red, stress steam rising. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
-      "name": "flemmard_de_competition — Embroidery Patch",
-      "_style_id": "embroidery_patch",
-      "_expression_id": "flemmard_de_competition",
-      "_idiom": "FLEMMARD DE COMPÉTITION",
-      "_canva_text": "FLEMMARD DE COMPÉTITION",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE person in pajamas standing on a winner's gold podium holding a trophy, still wearing a sleeping mask pushed up on their forehead, surrounded by confetti, looking deeply unimpressed and ready to go back to sleep immediately. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
-      "name": "reine_du_drama — Embroidery Patch",
-      "_style_id": "embroidery_patch",
-      "_expression_id": "reine_du_drama",
-      "_idiom": "REINE DU DRAMA",
-      "_canva_text": "REINE DU DRAMA",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE person wearing a dramatic black queen crown, draped over a fainting couch with one arm flung across their brow, EXACTLY TWO tiny courtiers fanning them with palm leaves, a single theatrical tear rolling down their cheek. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
-      "name": "sorciere_de_lhumeur — Embroidery Patch",
-      "_style_id": "embroidery_patch",
-      "_expression_id": "sorciere_de_lhumeur",
-      "_idiom": "SORCIÈRE DE L'HUMEUR",
-      "_canva_text": "SORCIÈRE DE L'HUMEUR",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE small witch stirring a large cauldron, pulling emotions out of it with a ladle — the cauldron bubbling with EXACTLY FOUR different colored emotion blobs rising as steam — the witch looking at the results with scientific curiosity. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
-      "name": "grognon_certifie — Embroidery Patch",
-      "_style_id": "embroidery_patch",
-      "_expression_id": "grognon_certifie",
-      "_idiom": "GROGNON CERTIFIÉ",
-      "_canva_text": "GROGNON CERTIFIÉ",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE very grumpy person holding a large official certificate and medal for being the most grumpy, their frown deeply set, eyebrows furrowed magnificently, a judge in robes beside them solemnly presenting the award, confetti that the person is ignoring. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
-      "name": "chaos_organise — Embroidery Patch",
-      "_style_id": "embroidery_patch",
-      "_expression_id": "chaos_organise",
-      "_idiom": "CHAOS ORGANISÉ",
-      "_canva_text": "CHAOS ORGANISÉ",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE person in a neat organized binder and color-coded folders, happily checking off a to-do list, but every item on the list is a different type of chaos — a flaming item, an explosion — all neatly scheduled and labeled. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
-      "name": "hypersensible — Embroidery Patch",
-      "_style_id": "embroidery_patch",
-      "_expression_id": "hypersensible",
-      "_idiom": "HYPERSENSIBLE",
-      "_canva_text": "HYPERSENSIBLE",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE person gently crying EXACTLY THREE tears at a beautiful sunset, holding a tiny duckling, with EXACTLY FIVE emotion bubbles floating around them — a heart, a star, a flower, a cloud, a raindrop — all glowing softly. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
-      "name": "toujours_en_retard — Embroidery Patch",
-      "_style_id": "embroidery_patch",
-      "_expression_id": "toujours_en_retard",
-      "_idiom": "TOUJOURS EN RETARD",
-      "_canva_text": "TOUJOURS EN RETARD",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE person sprinting at full speed, coat half-on and flapping, one shoe untied, toast in one hand, coffee spilling, keys jangling, bag open with papers flying out, alarm clock showing they are very late, determined hopeful expression. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
-      "name": "mode_sieste — Embroidery Patch",
-      "_style_id": "embroidery_patch",
-      "_expression_id": "mode_sieste",
-      "_idiom": "MODE SIESTE",
-      "_canva_text": "MODE SIESTE",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE person curled in a perfect circle like a cat on a large round cloud, fast asleep under a tiny moon, EXACTLY FIVE small Z letters drifting upward in a neat sequence, a tiny do-not-disturb sign hanging from the cloud's edge. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    },
-    {
-      "name": "fada — Embroidery Patch",
-      "_style_id": "embroidery_patch",
-      "_expression_id": "fada",
-      "_idiom": "FADA",
-      "_canva_text": "FADA",
-      "ai_generation": {
-        "positive_prompt": "EXACTLY ONE joyfully chaotic person with stars in their eyes spinning with arms wide open in a sunflower field, their pockets overflowing with random objects — a fork, a rubber duck, a sock — everything scattered around them, unbothered and gleeful. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
-        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
-        "cfg_scale": 4.0,
-        "tiling": false,
-        "seed_image_url": null
-      }
-    }
+    {"name": "cerveau_en_pls — Embroidery Patch", "_style_id": "embroidery_patch", "_expression_id": "cerveau_en_pls", "_idiom": "CERVEAU EN PLS", "_canva_text": "CERVEAU EN PLS", "ai_generation": {"positive_prompt": "EXACTLY ONE round pink brain character dramatically collapsed on the floor with one arm raised weakly toward the ceiling, eyes rolled back, EXACTLY TWO small white flags of surrender beside it, completely overwhelmed, a tiny wilted flower drooping next to it. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.", "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic", "cfg_scale": 4.0, "tiling": false, "seed_image_url": null}},
+    {"name": "pile_vide — Embroidery Patch", "_style_id": "embroidery_patch", "_expression_id": "pile_vide", "_idiom": "PILE VIDE", "_canva_text": "PILE VIDE", "ai_generation": {"positive_prompt": "EXACTLY ONE person sitting slumped on the floor with a giant phone battery strapped to their back showing empty — EXACTLY ZERO bars — a sad low-power icon floating above, charger cable unplugged and lying beyond reach, eyelids drooping. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.", "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic", "cfg_scale": 4.0, "tiling": false, "seed_image_url": null}},
+    {"name": "trop_dans_ma_tete — Embroidery Patch", "_style_id": "embroidery_patch", "_expression_id": "trop_dans_ma_tete", "_idiom": "TROP DANS MA TÊTE", "_canva_text": "TROP DANS MA TÊTE", "ai_generation": {"positive_prompt": "EXACTLY ONE person whose head has become a tiny traffic jam, with EXACTLY FIVE miniature thought-cars all honking and gridlocked inside their transparent skull, EXACTLY ONE tiny traffic light on red, stress steam rising. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.", "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic", "cfg_scale": 4.0, "tiling": false, "seed_image_url": null}},
+    {"name": "flemmard_de_competition — Embroidery Patch", "_style_id": "embroidery_patch", "_expression_id": "flemmard_de_competition", "_idiom": "FLEMMARD DE COMPÉTITION", "_canva_text": "FLEMMARD DE COMPÉTITION", "ai_generation": {"positive_prompt": "EXACTLY ONE person in pajamas standing on a winner's gold podium holding a trophy, still wearing a sleeping mask pushed up on their forehead, surrounded by confetti, looking deeply unimpressed and ready to go back to sleep immediately. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.", "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic", "cfg_scale": 4.0, "tiling": false, "seed_image_url": null}},
+    {"name": "reine_du_drama — Embroidery Patch", "_style_id": "embroidery_patch", "_expression_id": "reine_du_drama", "_idiom": "REINE DU DRAMA", "_canva_text": "REINE DU DRAMA", "ai_generation": {"positive_prompt": "EXACTLY ONE person wearing a dramatic black queen crown, draped over a fainting couch with one arm flung across their brow, EXACTLY TWO tiny courtiers fanning them with palm leaves, a single theatrical tear rolling down their cheek. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.", "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic", "cfg_scale": 4.0, "tiling": false, "seed_image_url": null}},
+    {"name": "grognon_certifie — Embroidery Patch", "_style_id": "embroidery_patch", "_expression_id": "grognon_certifie", "_idiom": "GROGNON CERTIFIÉ", "_canva_text": "GROGNON CERTIFIÉ", "ai_generation": {"positive_prompt": "EXACTLY ONE very grumpy person holding a large official certificate and medal for being the most grumpy, their frown deeply set, eyebrows furrowed magnificently, a judge in robes beside them solemnly presenting the award, confetti that the person is ignoring. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.", "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic", "cfg_scale": 4.0, "tiling": false, "seed_image_url": null}},
+    {"name": "chaos_organise — Embroidery Patch", "_style_id": "embroidery_patch", "_expression_id": "chaos_organise", "_idiom": "CHAOS ORGANISÉ", "_canva_text": "CHAOS ORGANISÉ", "ai_generation": {"positive_prompt": "EXACTLY ONE person in a neat organized binder and color-coded folders, happily checking off a to-do list, but every item on the list is a different type of chaos — a flaming item, an explosion — all neatly scheduled and labeled. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.", "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic", "cfg_scale": 4.0, "tiling": false, "seed_image_url": null}},
+    {"name": "hypersensible — Embroidery Patch", "_style_id": "embroidery_patch", "_expression_id": "hypersensible", "_idiom": "HYPERSENSIBLE", "_canva_text": "HYPERSENSIBLE", "ai_generation": {"positive_prompt": "EXACTLY ONE person gently crying EXACTLY THREE tears at a beautiful sunset, holding a tiny duckling, with EXACTLY FIVE emotion bubbles floating around them — a heart, a star, a flower, a cloud, a raindrop — all glowing softly. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.", "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic", "cfg_scale": 4.0, "tiling": false, "seed_image_url": null}},
+    {"name": "toujours_en_retard — Embroidery Patch", "_style_id": "embroidery_patch", "_expression_id": "toujours_en_retard", "_idiom": "TOUJOURS EN RETARD", "_canva_text": "TOUJOURS EN RETARD", "ai_generation": {"positive_prompt": "EXACTLY ONE person sprinting at full speed, coat half-on and flapping, one shoe untied, toast in one hand, coffee spilling, keys jangling, bag open with papers flying out, alarm clock showing they are very late, determined hopeful expression. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.", "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic", "cfg_scale": 4.0, "tiling": false, "seed_image_url": null}},
+    {"name": "mode_sieste — Embroidery Patch", "_style_id": "embroidery_patch", "_expression_id": "mode_sieste", "_idiom": "MODE SIESTE", "_canva_text": "MODE SIESTE", "ai_generation": {"positive_prompt": "EXACTLY ONE person curled in a perfect circle like a cat on a large round cloud, fast asleep under a tiny moon, EXACTLY FIVE small Z letters drifting upward in a neat sequence, a tiny do-not-disturb sign hanging from the cloud's edge. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.", "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic", "cfg_scale": 4.0, "tiling": false, "seed_image_url": null}},
+    {"name": "sorciere_de_lhumeur — Embroidery Patch", "_style_id": "embroidery_patch", "_expression_id": "sorciere_de_lhumeur", "_idiom": "SORCIÈRE DE L'HUMEUR", "_canva_text": "SORCIÈRE DE L'HUMEUR", "ai_generation": {"positive_prompt": "EXACTLY ONE small witch stirring a large cauldron, pulling emotions out of it with a ladle — the cauldron bubbling with EXACTLY FOUR different colored emotion blobs rising as steam — the witch looking at the results with scientific curiosity. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.", "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic", "cfg_scale": 4.0, "tiling": false, "seed_image_url": null}},
+    {"name": "fada — Embroidery Patch", "_style_id": "embroidery_patch", "_expression_id": "fada", "_idiom": "FADA", "_canva_text": "FADA", "ai_generation": {"positive_prompt": "EXACTLY ONE joyfully chaotic person with stars in their eyes spinning with arms wide open in a sunflower field, their pockets overflowing with random objects — a fork, a rubber duck, a sock — everything scattered around them, unbothered and gleeful. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.", "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic", "cfg_scale": 4.0, "tiling": false, "seed_image_url": null}}
   ]
 }
