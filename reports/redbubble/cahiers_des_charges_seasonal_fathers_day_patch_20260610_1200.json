@@ -1,0 +1,150 @@
+{
+  "generated_at": "2026-06-10T12:00:00Z",
+  "series": "seasonal_fathers_day_patch_v1",
+  "styles": ["embroidery_patch"],
+  "description": "Fête des Pères — 10 embroidery patches, illustration only, humorous & sellable. Text added via Python overlay.",
+  "platform": "redbubble",
+  "total_briefs": 10,
+  "briefs": [
+    {
+      "name": "dad_bod — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "dad_bod",
+      "_idiom": "DAD BOD",
+      "_canva_text": "DAD BOD",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE proud round-bellied cartoon dad standing triumphantly on a gold number-one winner's podium, both thumbs raised in the air, enormous confident grin, a large gold medal on his chest, belly proudly forward, EXACTLY THREE gold stars above him. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "grill_master — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "grill_master",
+      "_idiom": "GRILL MASTER",
+      "_canva_text": "GRILL MASTER",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE cartoon dad in a heroic warrior stance wielding EXACTLY TWO oversized spatulas like crossed swords raised above his head, wearing a checkered apron, EXACTLY THREE cartoon burgers orbiting around him like planets, dramatic flames rising behind him from a grill, fierce determined expression. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "nap_champion — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "nap_champion",
+      "_idiom": "NAP CHAMPION",
+      "_canva_text": "NAP CHAMPION",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE cartoon dad fast asleep and snoring on a couch that sits atop a gold winner's podium, a large gold trophy balanced upright on his belly, EXACTLY THREE Z-shaped snore bubbles floating upward above his open mouth, a gold medal hanging around his neck, a small crown tilted sideways on his head, completely at peace. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "fix_it_dad — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "fix_it_dad",
+      "_idiom": "FIX IT DAD",
+      "_canva_text": "FIX IT DAD",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE cartoon dad in a confident superhero pose holding a comically tiny hammer, wearing a tool belt loaded with tools, surrounded by EXACTLY FOUR broken household objects: a leaking pipe with water spurting, a lopsided floating shelf, a wobbly broken chair, and a sparking toaster, the dad looks supremely proud and oblivious to the chaos around him. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "cool_dad — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "cool_dad",
+      "_idiom": "COOL DAD",
+      "_canva_text": "COOL DAD",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE cartoon dad wearing oversized sunglasses doing exaggerated embarrassing dance moves, arms flailing out wide, one leg kicked to the side, the biggest goofiest grin imaginable, EXACTLY TWO small cartoon children visible behind him both covering their faces with both hands in absolute secondhand embarrassment, EXACTLY THREE musical notes floating in the air. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "dad_joke_king — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "dad_joke_king",
+      "_idiom": "DAD JOKE KING",
+      "_canva_text": "DAD JOKE KING",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE cartoon dad wearing a golden jester's crown, one finger pointed straight up in the air in triumph with a massive smug self-satisfied grin as if he just delivered the greatest punchline ever, EXACTLY ONE tiny cartoon person standing beside him doing a dramatic full facepalm with their entire face buried in their hand, both characters full body visible. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "worlds_best_dad — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "worlds_best_dad",
+      "_idiom": "WORLD'S BEST DAD",
+      "_canva_text": "WORLD'S BEST DAD",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE enormous gleaming golden trophy that fills most of the scene, a smiling cartoon dad face sculpted in relief on its wide body, EXACTLY FIVE golden stars orbiting in an arc around the trophy like a solar system, dramatic shining rays of light radiating outward in all directions, trophy on a small pedestal, bold heroic composition. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "bbq_hero — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "bbq_hero",
+      "_idiom": "BBQ HERO",
+      "_canva_text": "BBQ HERO",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE cartoon dad flying through the air in a classic superhero cape pose, a checkered apron billowing dramatically behind him as his cape, one arm forward holding a large pair of BBQ tongs like a weapon aimed forward, the other hand holding a perfectly golden gleaming cartoon hamburger like a trophy, a tiny backyard grill visible far below on the ground, determined heroic expression. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "super_papa — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "super_papa",
+      "_idiom": "SUPER PAPA",
+      "_canva_text": "SUPER PAPA",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE cartoon dad with EXACTLY SIX arms arranged radially like a wheel, each arm holding a different object and doing a different task simultaneously: one arm stirring a cooking pot, one arm cradling a baby, one arm reading an open book, one arm holding a screwdriver, one arm bouncing a soccer ball, one arm pointing at homework on paper, the dad's face perfectly calm and serene at the center of all the activity, superhero stance, confident smile. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "girl_dad — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "girl_dad",
+      "_idiom": "GIRL DAD",
+      "_canva_text": "GIRL DAD",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE large cartoon dad sitting cross-legged with a patient blissful smile and softly closed eyes, EXACTLY FOUR small hands belonging to unseen tiny children reaching in from the sides braiding and decorating his hair, EXACTLY THREE colorful ribbon bows clipped into his braided hair, EXACTLY TWO glittery star-shaped hair clips on each side, a small delicate flower crown balanced on top of his head, his entire expression radiating pure contentment and serenity. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    }
+  ]
+}
