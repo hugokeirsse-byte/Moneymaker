@@ -25,6 +25,10 @@ on:
         description: 'Profondeur arbre de niches (1-3)'
         required: false
         default: '2'
+      confirm_paid:
+        description: 'GARDE-FOU : taper "yes" pour autoriser la génération payante Runware. Sans ça, AUCUN appel API payant.'
+        required: false
+        default: 'no'
       mode:
         description: 'Mode de lancement'
         required: false
@@ -146,7 +150,8 @@ jobs:
           MONEYMAKER_FOCUS:     ${{ github.event.inputs.focus || '' }}
           MONEYMAKER_NICHE_COUNT: ${{ github.event.inputs.niche_count || '' }}
           # Runware : injecté si mode génération ou upscale-fix
-          RUNWARE_API_KEY:      ${{ (github.event.inputs.mode == 'generate' || github.event.inputs.mode == 'generate-best' || github.event.inputs.mode == 'generate-all' || github.event.inputs.mode == 'generate-elements' || github.event.inputs.mode == 'upscale-fix' || github.event.inputs.mode == 'redbubble-generate' || github.event.inputs.mode == 'adobe-stock-generate' || github.event.inputs.mode == 'etsy-generate') && secrets.RUNWARE_API_KEY || '' }}
+          # GARDE-FOU : clé injectée UNIQUEMENT si confirm_paid == 'yes' (en plus du mode génération)
+          RUNWARE_API_KEY:      ${{ (github.event.inputs.confirm_paid == 'yes') && (github.event.inputs.mode == 'generate' || github.event.inputs.mode == 'generate-best' || github.event.inputs.mode == 'generate-all' || github.event.inputs.mode == 'generate-elements' || github.event.inputs.mode == 'upscale-fix' || github.event.inputs.mode == 'redbubble-generate' || github.event.inputs.mode == 'adobe-stock-generate' || github.event.inputs.mode == 'etsy-generate') && secrets.RUNWARE_API_KEY || '' }}
           RUNWARE_MODEL:        ${{ secrets.RUNWARE_MODEL || 'runware:101@1' }}
           # Sources optionnelles
           REDDIT_CLIENT_ID:     ${{ secrets.REDDIT_CLIENT_ID }}
