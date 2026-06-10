@@ -35,32 +35,32 @@ on:
         default: 'preview'
         type: choice
         options:
-          - 'preview'              # Gemini trends + CdCs + manifest — Spoonflower (0 €)
-          - 'redbubble-preview'    # CDCs standalone Redbubble (t-shirt, sticker, mug) via Gemini (0 €)
-          - 'redbubble-generate'   # Génère les images standalone Redbubble (~0.006€ × nb CDCs)
-          - 'adobe-stock-preview'  # CDCs optimisés Adobe Stock via Gemini (0 €)
-          - 'adobe-stock-generate' # Génère images pour Adobe Stock (~0.006€ × nb CDCs)
-          - 'etsy-preview'         # CDCs digital download bundles Etsy via Gemini (0 €)
-          - 'etsy-generate'        # Génère images pour bundles Etsy (~0.006€ × nb CDCs)
-          - 'audit'                # Note /100 chaque image via Gemini Vision (0 €)
-          - 'archive'              # Archive un CdC accompli (input niche) + régénère un remplaçant (0 €)
-          - 'generate-all'         # 1 image de base par CdC (~0.006€ × nb CdCs)
-          - 'generate-best'        # Variantes du meilleur CdC auto-sélectionné (~0.05 €)
-          - 'generate-elements'    # 10 éléments isolés + assemblage Pillow (~0.06 €)
-          - 'generate'             # Images des CdCs approuvées (manifest requis)
-          - 'colorize'             # Variantes de couleurs sur images existantes (0 €, Pillow)
-          - 'bg-remove'            # Supprime fond blanc → PNG transparent Redbubble stickers (0 €)
-          - 'text-apply'           # Applique typographie CDC sur images Redbubble (PIL, 0 €)
-          - 'text-fix'             # Efface texte FLUX déformé + applique typo CDC propre (Gemini Vision + PIL, 0 €)
-          - 'assemble'             # Assemble illustrations individuelles → seamless tile Spoonflower (Pillow, 0 €)
-          - 'seamless-audit'       # Vérifie + corrige les tuiles non-seamless (mirror quad, 0 €)
-          - 'thumbnails'           # Génère vignettes 600×600 JPEG navigables (0 €, git-safe)
-          - 'listings'             # CSVs upload Spoonflower + Adobe Stock + Etsy + Redbubble (0 €)
-          - 'upscale-fix'          # Re-upscale IA Real-ESRGAN images existantes floues (~0.005€/img)
-          - 'recover-artifact'     # Récupère les upscales d'un run interrompu (0 €, depuis artefact)
-          - 'full'                 # Pipeline complet sans génération d'images
+          - 'preview'
+          - 'redbubble-preview'
+          - 'redbubble-generate'
+          - 'adobe-stock-preview'
+          - 'adobe-stock-generate'
+          - 'etsy-preview'
+          - 'etsy-generate'
+          - 'audit'
+          - 'archive'
+          - 'generate-all'
+          - 'generate-best'
+          - 'generate-elements'
+          - 'generate'
+          - 'colorize'
+          - 'bg-remove'
+          - 'text-apply'
+          - 'text-fix'
+          - 'assemble'
+          - 'seamless-audit'
+          - 'thumbnails'
+          - 'listings'
+          - 'upscale-fix'
+          - 'recover-artifact'
+          - 'full'
       report_path:
-        description: 'Chemin exact vers le rapport CDC (redbubble-generate). Vide = dernier JSON alphabétiquement. Ex: reports/redbubble/cahiers_des_charges_zzz_zza_events_flood_20260610_1800.json'
+        description: 'Chemin exact vers le rapport CDC (redbubble-generate). Vide = dernier JSON alphabétiquement.'
         required: false
         default: ''
       recover_run_id:
@@ -68,11 +68,11 @@ on:
         required: false
         default: ''
       focus:
-        description: 'Orientation thématique des CDC (mode preview). Ex: Art Deco animals + anthropomorphized portraits, no vintage'
+        description: 'Orientation thématique des CDC (mode preview).'
         required: false
         default: ''
       niche_count:
-        description: 'Override niche count (ex: 16 → 20 CDCs total avec 4 crossover). Vide = défaut profil (12).'
+        description: 'Override niche count. Vide = défaut profil (12).'
         required: false
         default: ''
       manifest_path:
@@ -92,11 +92,11 @@ on:
         required: false
         default: ''
       limit:
-        description: 'Nb max de variantes pour generate-best (1 = base uniquement, 0 = toutes). Ex: 1 pour calibrer.'
+        description: 'Nb max de variantes (1 = base uniquement, 0 = toutes).'
         required: false
         default: '0'
       palettes:
-        description: 'Palettes colorize séparées par virgule (vide = toutes les 8). Ex: dark_moody,pastel_soft,earth_tones'
+        description: 'Palettes colorize séparées par virgule (vide = toutes les 8).'
         required: false
         default: ''
 
@@ -113,9 +113,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          # fetch-depth 1 : le repo dépasse plusieurs Go d'images, le full
-          # history fait planter le checkout (early EOF)
+          # filter blob:none : ne télécharge PAS les blobs upfront.
+          # Le repo dépasse plusieurs Go d'images commitées — sans ce filtre
+          # le checkout échoue avec early EOF même en shallow clone.
           fetch-depth: 1
+          filter: blob:none
 
       - name: Python 3.11
         uses: actions/setup-python@v5
@@ -148,16 +150,11 @@ jobs:
 
       - name: Lancer le pipeline
         env:
-          # Tendances mondiales temps réel (GEMINI_API_KEY requis)
           GEMINI_API_KEY:       ${{ secrets.GEMINI_API_KEY }}
-          # Orientation thématique des CDC (mode preview)
           MONEYMAKER_FOCUS:     ${{ github.event.inputs.focus || '' }}
           MONEYMAKER_NICHE_COUNT: ${{ github.event.inputs.niche_count || '' }}
-          # Runware : injecté si mode génération ou upscale-fix
-          # GARDE-FOU : clé injectée UNIQUEMENT si confirm_paid == 'yes' (en plus du mode génération)
           RUNWARE_API_KEY:      ${{ (github.event.inputs.confirm_paid == 'yes') && (github.event.inputs.mode == 'generate' || github.event.inputs.mode == 'generate-best' || github.event.inputs.mode == 'generate-all' || github.event.inputs.mode == 'generate-elements' || github.event.inputs.mode == 'upscale-fix' || github.event.inputs.mode == 'redbubble-generate' || github.event.inputs.mode == 'adobe-stock-generate' || github.event.inputs.mode == 'etsy-generate') && secrets.RUNWARE_API_KEY || '' }}
           RUNWARE_MODEL:        ${{ secrets.RUNWARE_MODEL || 'runware:101@1' }}
-          # Sources optionnelles
           REDDIT_CLIENT_ID:     ${{ secrets.REDDIT_CLIENT_ID }}
           REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
           REDDIT_USER_AGENT:    ${{ secrets.REDDIT_USER_AGENT || 'Moneymaker/1.0' }}
@@ -170,36 +167,31 @@ jobs:
         run: |
           MODE="${{ github.event.inputs.mode || 'preview' }}"
           if [ "$MODE" = "preview" ]; then
-            echo "=== MODE PREVIEW : Gemini trends + CdCs + manifest — Spoonflower (0 €) ==="
+            echo "=== MODE PREVIEW ==="
             python -m trend_discovery.main preview
           elif [ "$MODE" = "redbubble-preview" ]; then
-            echo "=== MODE REDBUBBLE-PREVIEW : CDCs standalone Redbubble (0 €) ==="
+            echo "=== MODE REDBUBBLE-PREVIEW ==="
             FOCUS_ARG=""
             [ -n "${{ github.event.inputs.focus }}" ] && FOCUS_ARG="--focus '${{ github.event.inputs.focus }}'"
             eval python -m trend_discovery.main preview --market redbubble --output ./reports/redbubble $FOCUS_ARG
           elif [ "$MODE" = "redbubble-generate" ]; then
-            echo "=== MODE REDBUBBLE-GENERATE : images standalone Redbubble — 1 image par CDC ==="
+            echo "=== MODE REDBUBBLE-GENERATE ==="
             LIMIT_ARG=""
             LIMIT_VAL="${{ github.event.inputs.limit || '0' }}"
             [ "$LIMIT_VAL" != "0" ] && LIMIT_ARG="--limit $LIMIT_VAL"
-            # Sélection du rapport : explicite via report_path, sinon dernier alphabétiquement
             if [ -n "${{ github.event.inputs.report_path }}" ]; then
               RB_REPORT="${{ github.event.inputs.report_path }}"
-              echo "Rapport ciblé explicitement : $RB_REPORT"
+              echo "Rapport ciblé : $RB_REPORT"
             else
               RB_REPORT=$(ls ./reports/redbubble/cahiers_des_charges_*.json 2>/dev/null | sort | tail -1)
             fi
             if [ -z "$RB_REPORT" ]; then
-              echo "ERREUR : aucun rapport Redbubble trouvé. Lancez redbubble-preview d'abord." && exit 1
+              echo "ERREUR : aucun rapport Redbubble trouvé." && exit 1
             fi
-            # Chaque CDC a son PROPRE dossier de sortie → jamais de mélange entre séries
             RB_BASENAME=$(basename "$RB_REPORT" .json | sed 's/^cahiers_des_charges_//')
             RB_OUTPUT="./output/rb_${RB_BASENAME}"
             mkdir -p "$RB_OUTPUT"
             echo "Rapport : $RB_REPORT → sortie : $RB_OUTPUT"
-            # SAUVEGARDE INCRÉMENTALE : push des nouvelles images toutes les 3 min.
-            # Un run annulé/planté ne perd ainsi que ~3 min de génération payée
-            # (les artifacts post-annulation ne sont PAS fiables sur de gros volumes).
             git config user.name  "Moneymaker Bot"
             git config user.email "bot@moneymaker.auto"
             (
@@ -220,7 +212,7 @@ jobs:
               --output "$RB_OUTPUT" \
               $LIMIT_ARG
             kill $KEEPER_PID 2>/dev/null || true
-            echo "-- Rangement en sous-dossiers par expression (préfixe avant ___) --"
+            echo "-- Rangement en sous-dossiers --"
             for f in "$RB_OUTPUT"/*.png; do
               [ -e "$f" ] || continue
               base=$(basename "$f")
@@ -228,81 +220,48 @@ jobs:
               mkdir -p "$RB_OUTPUT/$expr"
               mv "$f" "$RB_OUTPUT/$expr/"
             done
-            echo "-- Auto thumbnails Redbubble --"
+            echo "-- Auto thumbnails --"
             python -m trend_discovery.main thumbnails \
               --pipeline "$RB_OUTPUT" \
               --output "$RB_OUTPUT/thumbnails" || true
           elif [ "$MODE" = "adobe-stock-preview" ]; then
-            echo "=== MODE ADOBE-STOCK-PREVIEW : CDCs optimisés Adobe Stock (0 €) ==="
             FOCUS_ARG=""
             [ -n "${{ github.event.inputs.focus }}" ] && FOCUS_ARG="--focus '${{ github.event.inputs.focus }}'"
             eval python -m trend_discovery.main preview --market adobe_stock --output ./reports/adobe_stock $FOCUS_ARG
           elif [ "$MODE" = "adobe-stock-generate" ]; then
-            echo "=== MODE ADOBE-STOCK-GENERATE : images pour Adobe Stock ==="
             LIMIT_ARG=""
             LIMIT_VAL="${{ github.event.inputs.limit || '0' }}"
             [ "$LIMIT_VAL" != "0" ] && LIMIT_ARG="--limit $LIMIT_VAL"
             AS_REPORT=$(ls -t ./reports/adobe_stock/cahiers_des_charges_*.json 2>/dev/null | head -1)
-            if [ -z "$AS_REPORT" ]; then
-              echo "ERREUR : aucun rapport Adobe Stock trouvé. Lancez adobe-stock-preview d'abord." && exit 1
-            fi
-            echo "Rapport : $AS_REPORT"
-            eval python -m trend_discovery.main generate-all --yes \
-              --report "$AS_REPORT" \
-              --output ./output/adobe_stock \
-              $LIMIT_ARG
-            echo "-- Auto thumbnails Adobe Stock --"
-            python -m trend_discovery.main thumbnails \
-              --pipeline ./output/adobe_stock \
-              --output ./output/adobe_stock/thumbnails || true
+            [ -z "$AS_REPORT" ] && echo "ERREUR : aucun rapport Adobe Stock." && exit 1
+            eval python -m trend_discovery.main generate-all --yes --report "$AS_REPORT" --output ./output/adobe_stock $LIMIT_ARG
+            python -m trend_discovery.main thumbnails --pipeline ./output/adobe_stock --output ./output/adobe_stock/thumbnails || true
           elif [ "$MODE" = "etsy-preview" ]; then
-            echo "=== MODE ETSY-PREVIEW : CDCs digital download bundles Etsy (0 €) ==="
             FOCUS_ARG=""
             [ -n "${{ github.event.inputs.focus }}" ] && FOCUS_ARG="--focus '${{ github.event.inputs.focus }}'"
             eval python -m trend_discovery.main preview --market etsy --output ./reports/etsy $FOCUS_ARG
           elif [ "$MODE" = "etsy-generate" ]; then
-            echo "=== MODE ETSY-GENERATE : images pour bundles Etsy ==="
             LIMIT_ARG=""
             LIMIT_VAL="${{ github.event.inputs.limit || '0' }}"
             [ "$LIMIT_VAL" != "0" ] && LIMIT_ARG="--limit $LIMIT_VAL"
             ET_REPORT=$(ls -t ./reports/etsy/cahiers_des_charges_*.json 2>/dev/null | head -1)
-            if [ -z "$ET_REPORT" ]; then
-              echo "ERREUR : aucun rapport Etsy trouvé. Lancez etsy-preview d'abord." && exit 1
-            fi
-            echo "Rapport : $ET_REPORT"
-            eval python -m trend_discovery.main generate-all --yes \
-              --report "$ET_REPORT" \
-              --output ./output/etsy \
-              $LIMIT_ARG
-            echo "-- Auto thumbnails Etsy --"
-            python -m trend_discovery.main thumbnails \
-              --pipeline ./output/etsy \
-              --output ./output/etsy/thumbnails || true
+            [ -z "$ET_REPORT" ] && echo "ERREUR : aucun rapport Etsy." && exit 1
+            eval python -m trend_discovery.main generate-all --yes --report "$ET_REPORT" --output ./output/etsy $LIMIT_ARG
+            python -m trend_discovery.main thumbnails --pipeline ./output/etsy --output ./output/etsy/thumbnails || true
           elif [ "$MODE" = "audit" ]; then
-            echo "=== MODE AUDIT : note Gemini Vision /100 par image ==="
             python -m trend_discovery.main audit
           elif [ "$MODE" = "archive" ]; then
-            echo "=== MODE ARCHIVE : archive CdC accompli + régénère un remplaçant ==="
-            if [ -z "${{ github.event.inputs.niche }}" ]; then
-              echo "ERREUR : l'input 'niche' est requis pour le mode archive." && exit 1
-            fi
+            [ -z "${{ github.event.inputs.niche }}" ] && echo "ERREUR : input niche requis." && exit 1
             eval python -m trend_discovery.main archive --niche "'${{ github.event.inputs.niche }}'"
           elif [ "$MODE" = "generate-all" ]; then
-            echo "=== MODE GENERATE-ALL : 1 image de base par CdC ==="
             NICHE_ARG=""
             LIMIT_ARG=""
             [ -n "${{ github.event.inputs.niche }}" ] && NICHE_ARG="--niche '${{ github.event.inputs.niche }}'"
             LIMIT_VAL="${{ github.event.inputs.limit || '0' }}"
             [ "$LIMIT_VAL" != "0" ] && LIMIT_ARG="--limit $LIMIT_VAL"
             eval python -m trend_discovery.main generate-all --yes $NICHE_ARG $LIMIT_ARG
-            echo "-- Auto thumbnails --"
-            python -m trend_discovery.main thumbnails \
-              --pipeline ./output/spoonflower \
-              --colorways ./output/colorways \
-              --uploads ./output/uploads/base \
-              --output ./output/thumbnails
+            python -m trend_discovery.main thumbnails --pipeline ./output/spoonflower --colorways ./output/colorways --uploads ./output/uploads/base --output ./output/thumbnails
           elif [ "$MODE" = "generate-best" ]; then
-            echo "=== MODE GENERATE-BEST : variantes du meilleur CdC auto-sélectionné ==="
             NICHE_ARG=""
             LIMIT_ARG=""
             [ -n "${{ github.event.inputs.niche }}" ] && NICHE_ARG="--niche '${{ github.event.inputs.niche }}'"
@@ -310,151 +269,53 @@ jobs:
             [ "$LIMIT_VAL" != "0" ] && LIMIT_ARG="--limit $LIMIT_VAL"
             eval python -m trend_discovery.main generate --best --yes $NICHE_ARG $LIMIT_ARG
           elif [ "$MODE" = "generate-elements" ]; then
-            echo "=== MODE GENERATE-ELEMENTS : 10 éléments + assemblage Pillow ==="
             NICHE_ARG=""
             [ -n "${{ github.event.inputs.niche }}" ] && NICHE_ARG="--niche '${{ github.event.inputs.niche }}'"
             eval python -m trend_discovery.main generate-elements --yes $NICHE_ARG
           elif [ "$MODE" = "colorize" ]; then
-            echo "=== MODE COLORIZE : variantes HSV (rotation teinte, Pillow, 0 coût) ==="
             PALETTE_ARG=""
             [ -n "${{ github.event.inputs.palettes }}" ] && PALETTE_ARG="--palettes '${{ github.event.inputs.palettes }}'"
-            echo "-- Colorize pipeline images (smart CDC palettes) --"
-            eval python -m trend_discovery.main colorize --yes --smart \
-              --input ./output/spoonflower \
-              --output ./output/colorways \
-              --reports ./reports \
-              $PALETTE_ARG
-            echo "-- Colorize Redbubble images (smart CDC palettes) --"
-            eval python -m trend_discovery.main colorize --yes --smart \
-              --input ./output/redbubble \
-              --output ./output/colorways \
-              --reports ./reports/redbubble \
-              $PALETTE_ARG || echo "(no redbubble images found, skipped)"
-            echo "-- Colorize user uploads --"
-            eval python -m trend_discovery.main colorize --yes \
-              --input ./output/uploads/base \
-              --output ./output/uploads/colorways \
-              $PALETTE_ARG || echo "(no uploads found, skipped)"
-            echo "-- Auto thumbnails (colorways + pipeline + uploads) --"
-            python -m trend_discovery.main thumbnails \
-              --pipeline ./output/spoonflower \
-              --colorways ./output/colorways \
-              --uploads ./output/uploads/base \
-              --output ./output/thumbnails
+            eval python -m trend_discovery.main colorize --yes --smart --input ./output/spoonflower --output ./output/colorways --reports ./reports $PALETTE_ARG
+            eval python -m trend_discovery.main colorize --yes --smart --input ./output/redbubble --output ./output/colorways --reports ./reports/redbubble $PALETTE_ARG || true
+            eval python -m trend_discovery.main colorize --yes --input ./output/uploads/base --output ./output/uploads/colorways $PALETTE_ARG || true
+            python -m trend_discovery.main thumbnails --pipeline ./output/spoonflower --colorways ./output/colorways --uploads ./output/uploads/base --output ./output/thumbnails
           elif [ "$MODE" = "bg-remove" ]; then
-            echo "=== MODE BG-REMOVE : suppression fond blanc → PNG transparent Redbubble (0 €) ==="
-            python -m trend_discovery.main bg-remove --yes \
-              --input ./output/redbubble \
-              --output ./output/redbubble
-            echo "-- Auto thumbnails après bg-remove --"
-            python -m trend_discovery.main thumbnails \
-              --pipeline ./output/redbubble \
-              --colorways ./output/colorways \
-              --uploads ./output/uploads/base \
-              --output ./output/thumbnails
+            python -m trend_discovery.main bg-remove --yes --input ./output/redbubble --output ./output/redbubble
+            python -m trend_discovery.main thumbnails --pipeline ./output/redbubble --colorways ./output/colorways --uploads ./output/uploads/base --output ./output/thumbnails
           elif [ "$MODE" = "seamless-audit" ]; then
-            echo "=== MODE SEAMLESS-AUDIT : vérification + correction mirror quad ==="
-            echo "-- Audit pipeline images (overwrite en place) --"
-            python -m trend_discovery.main seamless-audit --yes --overwrite \
-              --input ./output/spoonflower \
-              --output ./output/spoonflower
-            echo "-- Audit user uploads --"
-            python -m trend_discovery.main seamless-audit --yes --overwrite \
-              --input ./output/uploads/base \
-              --output ./output/uploads/base || echo "(no uploads found, skipped)"
+            python -m trend_discovery.main seamless-audit --yes --overwrite --input ./output/spoonflower --output ./output/spoonflower
+            python -m trend_discovery.main seamless-audit --yes --overwrite --input ./output/uploads/base --output ./output/uploads/base || true
           elif [ "$MODE" = "text-apply" ]; then
-            echo "=== MODE TEXT-APPLY : typographie CDC → images Redbubble (PIL, 0 €) ==="
             mkdir -p output/redbubble_with_text
-            python -m trend_discovery.main text-apply \
-              --images ./output/redbubble \
-              --reports ./reports/redbubble \
-              --output ./output/redbubble_with_text
+            python -m trend_discovery.main text-apply --images ./output/redbubble --reports ./reports/redbubble --output ./output/redbubble_with_text
           elif [ "$MODE" = "text-fix" ]; then
-            echo "=== MODE TEXT-FIX : érase texte FLUX + typo CDC propre (Gemini Vision + PIL, 0 €) ==="
             mkdir -p output/redbubble_fixed
-            python -m trend_discovery.main text-fix \
-              --images ./output/redbubble \
-              --reports ./reports/redbubble \
-              --output ./output/redbubble_fixed
-            echo "-- Auto thumbnails après text-fix --"
-            python -m trend_discovery.main thumbnails \
-              --pipeline ./output/redbubble_fixed \
-              --output ./output/thumbnails || true
+            python -m trend_discovery.main text-fix --images ./output/redbubble --reports ./reports/redbubble --output ./output/redbubble_fixed
+            python -m trend_discovery.main thumbnails --pipeline ./output/redbubble_fixed --output ./output/thumbnails || true
           elif [ "$MODE" = "assemble" ]; then
-            echo "=== MODE ASSEMBLE : illustrations → seamless tiles Spoonflower (Pillow, 0 €) ==="
             VARIANTS_VAL="${{ github.event.inputs.limit || '3' }}"
             [ "$VARIANTS_VAL" = "0" ] && VARIANTS_VAL="3"
             mkdir -p output/spoonflower
-            echo "-- Assemblage sur fond navy (cabinet de naturaliste) --"
-            python -m trend_discovery.main assemble --yes \
-              --input ./output/redbubble \
-              --output ./output/spoonflower \
-              --background navy \
-              --variants "$VARIANTS_VAL"
-            echo "-- Assemblage sur fond ivory (herbarium / parchemin) --"
-            python -m trend_discovery.main assemble --yes \
-              --input ./output/redbubble \
-              --output ./output/spoonflower \
-              --background ivory \
-              --variants "$VARIANTS_VAL"
-            echo "-- Auto thumbnails après assemblage --"
-            python -m trend_discovery.main thumbnails \
-              --pipeline ./output/spoonflower \
-              --output ./output/thumbnails || true
+            python -m trend_discovery.main assemble --yes --input ./output/redbubble --output ./output/spoonflower --background navy --variants "$VARIANTS_VAL"
+            python -m trend_discovery.main assemble --yes --input ./output/redbubble --output ./output/spoonflower --background ivory --variants "$VARIANTS_VAL"
+            python -m trend_discovery.main thumbnails --pipeline ./output/spoonflower --output ./output/thumbnails || true
           elif [ "$MODE" = "listings" ]; then
-            echo "=== MODE LISTINGS : CSVs upload Spoonflower + Adobe Stock + Etsy + Redbubble (0 €) ==="
             mkdir -p reports/listings
-            python -m trend_discovery.main listings \
-              --reports ./reports \
-              --spoonflower ./output/spoonflower \
-              --colorways ./output/colorways \
-              --uploads ./output/uploads/base \
-              --uploads-colorways ./output/uploads/colorways \
-              --redbubble ./output/redbubble \
-              --redbubble-reports ./reports/redbubble \
-              --output ./reports/listings
+            python -m trend_discovery.main listings --reports ./reports --spoonflower ./output/spoonflower --colorways ./output/colorways --uploads ./output/uploads/base --uploads-colorways ./output/uploads/colorways --redbubble ./output/redbubble --redbubble-reports ./reports/redbubble --output ./reports/listings
           elif [ "$MODE" = "thumbnails" ]; then
-            echo "=== MODE THUMBNAILS : vignettes JPEG navigables ==="
-            python -m trend_discovery.main thumbnails \
-              --pipeline ./output/spoonflower \
-              --colorways ./output/colorways \
-              --uploads ./output/uploads/base \
-              --output ./output/thumbnails
+            python -m trend_discovery.main thumbnails --pipeline ./output/spoonflower --colorways ./output/colorways --uploads ./output/uploads/base --output ./output/thumbnails
           elif [ "$MODE" = "upscale-fix" ]; then
-            echo "=== MODE UPSCALE-FIX : re-upscale IA Real-ESRGAN images existantes ==="
             rm -f reports/upscale_debug.log
             LIMIT_ARG=""
             LIMIT_VAL="${{ github.event.inputs.limit || '0' }}"
             [ "$LIMIT_VAL" != "0" ] && LIMIT_ARG="--limit $LIMIT_VAL"
-            echo "-- Re-upscale pipeline images (commit incrémental) --"
-            python -m trend_discovery.generators.upscale_existing \
-              --input ./output/spoonflower \
-              --commit-every 8 \
-              $LIMIT_ARG
-            echo "-- Re-upscale user uploads (commit incrémental) --"
-            python -m trend_discovery.generators.upscale_existing \
-              --input ./output/uploads/base \
-              --commit-every 8 \
-              $LIMIT_ARG || echo "(no uploads found, skipped)"
-            echo "-- Thumbnails post-upscale --"
-            python -m trend_discovery.main thumbnails \
-              --pipeline ./output/spoonflower \
-              --colorways ./output/colorways \
-              --uploads ./output/uploads/base \
-              --output ./output/thumbnails
+            python -m trend_discovery.generators.upscale_existing --input ./output/spoonflower --commit-every 8 $LIMIT_ARG
+            python -m trend_discovery.generators.upscale_existing --input ./output/uploads/base --commit-every 8 $LIMIT_ARG || true
+            python -m trend_discovery.main thumbnails --pipeline ./output/spoonflower --colorways ./output/colorways --uploads ./output/uploads/base --output ./output/thumbnails
           elif [ "$MODE" = "recover-artifact" ]; then
-            echo "=== MODE RECOVER-ARTIFACT : récupère les upscales d'un run interrompu (0 €) ==="
-            python -m trend_discovery.generators.recover_artifact \
-              --artifact-dir ./_recovered \
-              --subdirs output/spoonflower,output/redbubble,output/uploads/base
-            echo "-- Thumbnails post-récupération --"
-            python -m trend_discovery.main thumbnails \
-              --pipeline ./output/spoonflower \
-              --colorways ./output/colorways \
-              --uploads ./output/uploads/base \
-              --output ./output/thumbnails
+            python -m trend_discovery.generators.recover_artifact --artifact-dir ./_recovered --subdirs output/spoonflower,output/redbubble,output/uploads/base
+            python -m trend_discovery.main thumbnails --pipeline ./output/spoonflower --colorways ./output/colorways --uploads ./output/uploads/base --output ./output/thumbnails
           elif [ "$MODE" = "generate" ]; then
-            echo "=== MODE GENERATE : génération des images approuvées ==="
             python -m trend_discovery.main generate \
               --manifest "${{ inputs.manifest_path }}" \
               --approve "${{ inputs.approved_niches }}" \
@@ -466,7 +327,6 @@ jobs:
             [ -n "${{ github.event.inputs.categories }}" ] && ARGS="$ARGS --categories '${{ github.event.inputs.categories }}'"
             [ "${{ github.event.inputs.fast_mode }}" = "true" ] && ARGS="$ARGS --fast"
             [ -n "${{ github.event.inputs.depth }}" ] && ARGS="$ARGS --depth ${{ github.event.inputs.depth }}"
-            echo "=== MODE $MODE : pipeline complet ==="
             eval python -m trend_discovery.main $ARGS
           fi
 
@@ -485,26 +345,23 @@ jobs:
             done
             return 1
           }
-          # 1) Commits PAR SOUS-DOSSIER d'expression (gros runs : un push de 10+ GB échoue,
-          #    on pousse paquet par paquet ~500 MB)
           for d in output/rb_*/*/; do
             [ -d "$d" ] || continue
             git add "$d"
             if ! git diff --staged --quiet; then
               git commit -m "report(images): $(basename $(dirname $d))/$(basename $d) — ${DATE}"
-              push_with_retry || echo "ATTENTION: push échoué pour $d (images dans l'artefact)"
+              push_with_retry || echo "ATTENTION: push échoué pour $d"
             fi
           done
-          # 2) Le reste (rapports, thumbnails, autres dossiers)
           git add reports/ output/ data/approvals/ 2>/dev/null || git add reports/ output/
           if git diff --staged --quiet; then
-            echo "Aucun nouveau rapport à commiter."
+            echo "Aucun nouveau rapport."
           else
             git commit -m "report(pipeline): trends + images — ${DATE}"
-            push_with_retry || echo "ATTENTION: push final échoué (données dans l'artefact)"
+            push_with_retry || echo "ATTENTION: push final échoué"
           fi
 
-      - name: Upload rapports et images comme artefacts
+      - name: Upload artefacts
         uses: actions/upload-artifact@v4
         if: always()
         with:
