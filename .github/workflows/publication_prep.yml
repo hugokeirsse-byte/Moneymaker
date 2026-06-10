@@ -1,0 +1,88 @@
+name: Publication Prep — détourage + listings
+
+on:
+  workflow_dispatch:
+    inputs:
+      tolerance:
+        description: 'Tolérance détourage (défaut 28)'
+        required: false
+        default: '28'
+
+permissions:
+  contents: write
+
+jobs:
+  prep:
+    name: Détourage batch + pack publication
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pillow numpy scipy
+
+      - name: Détourage batch (styles à fond uni uniquement)
+        run: |
+          python - <<'EOF'
+          import glob, os, sys
+          sys.path.insert(0, ".")
+          from trend_discovery.generators.bg_remover import remove_white_background
+
+          tol = int("${{ github.event.inputs.tolerance || '28' }}")
+          # Styles dont le fond se détoure proprement (fond uni)
+          SAFE = {"embroidery_patch", "flat_vector", "cartoon_network",
+                  "minimalist_line", "kawaii_chibi", "tattoo_flash",
+                  "swiss_constructivist"}
+          done = skipped = failed = 0
+          for png in sorted(glob.glob("output/rb_*/*/*.png")):
+              if "thumbnails" in png or png.endswith("_transparent.png"):
+                  continue
+              parts = os.path.basename(png).split("___")
+              style = parts[1] if len(parts) > 2 else ""
+              if style not in SAFE:
+                  skipped += 1
+                  continue
+              out = png.replace(".png", "_transparent.png")
+              if os.path.exists(out):
+                  continue
+              try:
+                  remove_white_background(png, out, tolerance=tol)
+                  done += 1
+              except Exception as e:
+                  print(f"FAIL {png}: {e}")
+                  failed += 1
+          print(f"transparents: {done} | full-bleed gardés carrés: {skipped} | échecs: {failed}")
+          EOF
+
+      - name: Pack publication (titres + tags + descriptions)
+        run: python scripts/build_publication_pack.py
+
+      - name: Commit listings CSV
+        run: |
+          git config user.name  "Moneymaker Bot"
+          git config user.email "bot@moneymaker.auto"
+          git add reports/listings/
+          if git diff --staged --quiet; then
+            echo "Rien à commiter."
+          else
+            git commit -m "report(publication): pack listings + détourage"
+            git pull --rebase --autostash origin HEAD
+            git push origin HEAD
+          fi
+
+      - name: Artifact (transparents + CSV)
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: publication-pack-${{ github.run_number }}
+          path: |
+            reports/listings/
+            output/rb_*/**/*_transparent.png
+          retention-days: 90
