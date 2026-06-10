@@ -1,0 +1,88 @@
+name: BG Remove — Test échantillon (1 image par style)
+
+on:
+  workflow_dispatch:
+    inputs:
+      tolerance:
+        description: 'Tolérance couleur fond (défaut 28)'
+        required: false
+        default: '28'
+
+permissions:
+  contents: write
+
+jobs:
+  bgtest:
+    name: Détourage test sur échantillon varié
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pillow numpy scipy
+
+      - name: Détourage 1 image par style (max 14)
+        run: |
+          python - <<'EOF'
+          import glob, os, re, sys
+          sys.path.insert(0, ".")
+          from trend_discovery.generators.bg_remover import remove_white_background
+
+          tol = int("${{ github.event.inputs.tolerance || '28' }}")
+          out_dir = "output/bg_test"
+          os.makedirs(out_dir, exist_ok=True)
+
+          # Échantillon : 1 image par style distinct, tous dossiers rb_*
+          seen_styles, picked = set(), []
+          for png in sorted(glob.glob("output/rb_*/*/*.png")):
+              if "thumbnails" in png:
+                  continue
+              base = os.path.basename(png)
+              # style = 2e champ du nom expr___style___...
+              parts = base.split("___")
+              style = parts[1] if len(parts) > 2 else "unknown"
+              if style in seen_styles:
+                  continue
+              seen_styles.add(style)
+              picked.append((style, png))
+              if len(picked) >= 14:
+                  break
+
+          print(f"{len(picked)} images sélectionnées (styles: {sorted(seen_styles)})")
+          for style, png in picked:
+              out = os.path.join(out_dir, f"{style}___{os.path.basename(png)}".replace(".png", "_transparent.png"))
+              try:
+                  remove_white_background(png, out, tolerance=tol)
+                  print(f"  OK {style}: {os.path.basename(out)}")
+              except Exception as e:
+                  print(f"  FAIL {style}: {e}")
+          EOF
+          ls -lh output/bg_test/ | head -20
+
+      - name: Commit et push
+        run: |
+          git config user.name  "Moneymaker Bot"
+          git config user.email "bot@moneymaker.auto"
+          git add output/bg_test/
+          if git diff --staged --quiet; then
+            echo "Rien à commiter."
+          else
+            git commit -m "test(bg-remove): échantillon détourage 1 image par style"
+            git pull --rebase --autostash origin HEAD
+            git push origin HEAD
+          fi
+
+      - name: Artifact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bg-test-${{ github.run_number }}
+          path: output/bg_test/
+          retention-days: 30
