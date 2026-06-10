@@ -1,0 +1,124 @@
+{
+  "generated_at": "2026-06-10T11:32:26Z",
+  "series": "patch_pet_parents_v1",
+  "styles": [
+    "embroidery_patch"
+  ],
+  "description": "Pet parents patches — 8 illustrations embroidery patch, text via Canva",
+  "platform": "redbubble",
+  "total_briefs": 8,
+  "briefs": [
+    {
+      "name": "dog_mom — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "dog_mom",
+      "_idiom": "DOG MOM",
+      "_canva_text": "DOG MOM",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE person being enthusiastically licked on the face by EXACTLY ONE oversized dog, the person laughing with arms around the dog, the dog's tail a blur of wagging motion lines, EXACTLY ONE muddy paw print on the person's shirt, pure joy. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "cat_dad — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "cat_dad",
+      "_idiom": "CAT DAD",
+      "_canva_text": "CAT DAD",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE person sitting at a desk with EXACTLY ONE cat sitting directly on top of their laptop, blocking the screen completely, the cat looking smug, the person looking resigned but secretly delighted, cat fur floating everywhere. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "dog_dad — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "dog_dad",
+      "_idiom": "DOG DAD",
+      "_canva_text": "DOG DAD",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE person throwing a ball who is immediately dogpiled by EXACTLY THREE enthusiastic dogs of different sizes all leaping on them simultaneously, the person tumbling backwards laughing, ball still in mid-air. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "cat_mom — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "cat_mom",
+      "_idiom": "CAT MOM",
+      "_canva_text": "CAT MOM",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE person asleep on a bed with EXACTLY ONE cat sleeping on their face, EXACTLY ONE cat on their feet, and EXACTLY ONE cat draped across their back, all deeply asleep, the person twisted around the cats' preferred positions. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "frog_mom — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "frog_mom",
+      "_idiom": "FROG MOM",
+      "_canva_text": "FROG MOM",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE person cradling EXACTLY ONE tiny green frog on a velvet cushion with both hands like it is the most precious jewel, gazing at it with total adoration, the tiny frog blinking contentedly, EXACTLY THREE tiny hearts floating up. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "plant_mom — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "plant_mom",
+      "_idiom": "PLANT MOM",
+      "_canva_text": "PLANT MOM",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE person whispering lovingly to EXACTLY ONE potted plant, the plant visibly growing bigger in real time toward them, new leaves unfurling toward the whisper, a watering can in one hand, a tiny plant journal in the other. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "fish_parent — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "fish_parent",
+      "_idiom": "FISH PARENT",
+      "_canva_text": "FISH PARENT",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE person with their face pressed flat against an enormous round fish tank, breath fogging the glass, staring with absolute fascination at EXACTLY ONE very ordinary goldfish, the fish staring back with equal intensity. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "rabbit_mom — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "rabbit_mom",
+      "_idiom": "RABBIT MOM",
+      "_canva_text": "RABBIT MOM",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE person showing a framed baby photo of a bunny to a visibly embarrassed adult rabbit beside them, the rabbit covering its face with its ears, the person beaming proudly, EXACTLY THREE other framed bunny photos on a small wall behind them. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "generated_at": "2026-06-10T11:32:26Z",
+  "series": "patch_zodiac_v1",
+  "styles": [
+    "embroidery_patch"
+  ],
+  "description": "Zodiac patches — 12 signs embroidery patch, text via Canva",
+  "platform": "redbubble",
+  "total_briefs": 12,
+  "briefs": [
+    {
+      "name": "aries — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "aries",
+      "_idiom": "ARIES",
+      "_canva_text": "ARIES",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE confident ram in mid-charge, head lowered with impressive curved horns, EXACTLY TWO small fire sparks at its hooves, a determined blazing expression, forward momentum lines, a tiny golden star above the horns. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "taurus — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "taurus",
+      "_idiom": "TAURUS",
+      "_canva_text": "TAURUS",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE contented bull sitting peacefully in a lush flower meadow, garlands of flowers around its neck, eyes half closed in pleasure, EXACTLY ONE butterfly perched on its nose, chewing a single daisy, utterly serene. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "gemini — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "gemini",
+      "_idiom": "GEMINI",
+      "_canva_text": "GEMINI",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY TWO identical figures standing back to back, one laughing with arms wide open, the other frowning with arms crossed, connected at the back, a yin-yang swirl between them, EXACTLY ONE star above each head. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "cancer — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "cancer",
+      "_idiom": "CANCER",
+      "_canva_text": "CANCER",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE crab sitting snugly in a cozy armchair with its claws wrapped around a steaming mug, a tiny shell-shaped house behind it, a crescent moon glowing in a window, soft blanket draped over its carapace. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "leo — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "leo",
+      "_idiom": "LEO",
+      "_canva_text": "LEO",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE lion with an absurdly magnificent flowing mane, wearing a tiny golden crown tilted at a jaunty angle, one paw raised in greeting, seated regally on a small throne, EXACTLY THREE tiny sparkles around the crown, dramatic lighting from above. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "virgo — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "virgo",
+      "_idiom": "VIRGO",
+      "_canva_text": "VIRGO",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE meticulous person with a clipboard making perfect tick marks, surrounded by EXACTLY FIVE perfectly organized labeled boxes, everything aligned to invisible grids, one eyebrow raised checking for imperfection, a magnifying glass in hand. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "libra — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "libra",
+      "_idiom": "LIBRA",
+      "_canva_text": "LIBRA",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE elegant pair of golden scales perfectly balanced, one side holding a chaotic tangle of worry and clutter, the other side holding a single feather and a flower, both sides miraculously equal, a satisfied golden glow. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "scorpio — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "scorpio",
+      "_idiom": "SCORPIO",
+      "_canva_text": "SCORPIO",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE cool scorpion wearing tiny round sunglasses, tail curled stylishly, leaning against a rock with one claw crossed over the other in a casual pose, a mysterious purple aura, one eyebrow raised, utterly unbothered. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "sagittarius — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "sagittarius",
+      "_idiom": "SAGITTARIUS",
+      "_canva_text": "SAGITTARIUS",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE centaur archer in a heroic stance, bow drawn, EXACTLY ONE glowing arrow aimed straight at a distant golden star, the centaur's hair streaming behind, determined eyes locked on target, one hoof raised. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "capricorn — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "capricorn",
+      "_idiom": "CAPRICORN",
+      "_canva_text": "CAPRICORN",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE determined mountain goat in a tiny business suit and briefcase, steadily climbing a very steep mountain crag, EXACTLY ONE star at the summit, a motivational flag planted halfway up, methodical confident expression. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "aquarius — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "aquarius",
+      "_idiom": "AQUARIUS",
+      "_canva_text": "AQUARIUS",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE ethereal figure pouring water from a large jug, the water flowing out and transforming into sparkling stars and constellations as it falls, the figure's eyes glowing blue, cosmic swirls all around. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "pisces — Embroidery Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "pisces",
+      "_idiom": "PISCES",
+      "_canva_text": "PISCES",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY TWO fish swimming in opposite directions in a circular path, one gold one silver, orbiting a shared luminous pearl in the center, dreamy iridescent bubbles floating upward, soft watercolor-like pastel glow around them. Illustrated as an embroidered iron-on patch: visible satin stitch thread texture throughout, bright solid thread colors of red, navy blue, yellow and white on black felt, thick embroidered border around a circular patch shape. The full scene is entirely visible with a clear margin around it, nothing cropped by the edges. Absolutely no text anywhere, no letters, no words, no writing, no numbers, no signature. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, deformed anatomy, nudity, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    }
+  ]
+}
