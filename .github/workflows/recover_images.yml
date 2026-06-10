@@ -1,0 +1,80 @@
+name: Recover — images d'un run annulé
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: 'Run ID du run annulé dont récupérer l artifact'
+        required: true
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  recover:
+    name: Récupère + committe les images de l artifact
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Télécharger l artifact du run annulé
+        uses: actions/download-artifact@v4
+        with:
+          path: ./_rec
+          run-id: ${{ github.event.inputs.run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          merge-multiple: true
+
+      - name: Copier les nouvelles images dans output/
+        run: |
+          new=0
+          # Tous les PNG de l'artifact sous output/rb_*/ (plats ou en sous-dossier)
+          find ./_rec/output -type f -name '*.png' 2>/dev/null | while read -r src; do
+            rel="${src#./_rec/}"
+            if [ ! -f "$rel" ]; then
+              mkdir -p "$(dirname "$rel")"
+              cp "$src" "$rel"
+              echo "+ $rel"
+            fi
+          done
+          echo "--- rangement en sous-dossiers par expression ---"
+          for d in output/rb_*/; do
+            [ -d "$d" ] || continue
+            for f in "$d"*.png; do
+              [ -e "$f" ] || continue
+              base=$(basename "$f")
+              expr="${base%%___*}"
+              mkdir -p "$d$expr"
+              mv "$f" "$d$expr/"
+              echo "rangé: $d$expr/$base"
+            done
+          done
+
+      - name: Commit et push par sous-dossier
+        run: |
+          git config user.name  "Moneymaker Bot"
+          git config user.email "bot@moneymaker.auto"
+          DATE=$(date -u +"%Y-%m-%d %H:%M UTC")
+          push_with_retry() {
+            DELAY=2
+            for attempt in 1 2 3 4; do
+              git pull --rebase --autostash origin HEAD && git push origin HEAD && return 0
+              echo "Échec push ($attempt/4) — retry dans ${DELAY}s"
+              sleep $DELAY; DELAY=$((DELAY * 2))
+            done
+            return 1
+          }
+          for d in output/rb_*/*/; do
+            [ -d "$d" ] || continue
+            git add "$d"
+            if ! git diff --staged --quiet; then
+              git commit -m "recover(images): $(basename $(dirname $d))/$(basename $d) — ${DATE}"
+              push_with_retry || echo "ATTENTION: push échoué pour $d"
+            fi
+          done
+          echo "Récupération terminée."
