@@ -1,0 +1,463 @@
+{
+  "generated_at": "2026-06-10T00:30:00+00:00",
+  "series": "idioms_v4_winning_styles",
+  "styles": [
+    "risograph",
+    "cartoon_network"
+  ],
+  "description": "V4 : les 2 styles GAGNANTS (risograph + cartoon network, choisis par l'utilisateur sur le run v3) appliques a 15 expressions internationales WTF au pied de la lettre. 30 briefs texte pur + 4 briefs A/B img2img (image gagnante en seed, strength 0.8). Scene litterale en premier, anatomie verrouillee dans le positif, zero texte, tiling=false.",
+  "platform": "redbubble",
+  "total_briefs": 34,
+  "briefs": [
+    {
+      "name": "Expr 01 — Tomaten auf den Augen (DE) — Risograph Print",
+      "_style_id": "risograph",
+      "_expression_id": "tomatoes_eyes",
+      "_idiom": "Tomaten auf den Augen (DE)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE man is standing and walking forward with EXACTLY TWO ripe red tomatoes stuck over his eyes like goggles, arms stretched out blindly in front of him, about to bump into a lamppost beside him. He has a confused open mouth. One person only, two whole tomatoes covering both eyes. Illustrated in risograph print style: visible riso grain texture across the whole image, strictly limited 3-color palette of cobalt blue, warm coral orange and cream white, flat simplified shapes, slight intentional color misregistration, lo-fi zine aesthetic. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Expr 02 — Tomaten auf den Augen (DE) — Cartoon Network Flat",
+      "_style_id": "cartoon_network",
+      "_expression_id": "tomatoes_eyes",
+      "_idiom": "Tomaten auf den Augen (DE)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE man is standing and walking forward with EXACTLY TWO ripe red tomatoes stuck over his eyes like goggles, arms stretched out blindly in front of him, about to bump into a lamppost beside him. He has a confused open mouth. One person only, two whole tomatoes covering both eyes. Illustrated in Adventure Time cartoon network style: thick bold black cartoon outlines, flat vivid color fills of sky blue, lime green and sunshine yellow, simple round pudgy characters with big expressive faces, 2D cel animation aesthetic, white background. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Expr 03 — Avoir le cafard (FR) — Risograph Print",
+      "_style_id": "risograph",
+      "_expression_id": "cafard_pet",
+      "_idiom": "Avoir le cafard (FR)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE sad melancholic person sits slumped on a small chair, gently holding EXACTLY ONE big brown cockroach in their cupped hands like a beloved pet, looking at it with droopy sad eyes. A tiny rain cloud floats above the person's head. One person, one cockroach with six legs and two antennae. Illustrated in risograph print style: visible riso grain texture across the whole image, strictly limited 3-color palette of cobalt blue, warm coral orange and cream white, flat simplified shapes, slight intentional color misregistration, lo-fi zine aesthetic. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Expr 04 — Avoir le cafard (FR) — Cartoon Network Flat",
+      "_style_id": "cartoon_network",
+      "_expression_id": "cafard_pet",
+      "_idiom": "Avoir le cafard (FR)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE sad melancholic person sits slumped on a small chair, gently holding EXACTLY ONE big brown cockroach in their cupped hands like a beloved pet, looking at it with droopy sad eyes. A tiny rain cloud floats above the person's head. One person, one cockroach with six legs and two antennae. Illustrated in Adventure Time cartoon network style: thick bold black cartoon outlines, flat vivid color fills of sky blue, lime green and sunshine yellow, simple round pudgy characters with big expressive faces, 2D cel animation aesthetic, white background. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Expr 05 — Quand les poules auront des dents (FR) — Risograph Print",
+      "_style_id": "risograph",
+      "_expression_id": "hen_teeth",
+      "_idiom": "Quand les poules auront des dents (FR)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE plump white hen stands proudly facing forward, grinning widely with a full set of large human teeth in its open beak, eyes sparkling with mischief. The hen has exactly two legs and two wings, one red comb on its head. Only this one hen, no other animals. Illustrated in risograph print style: visible riso grain texture across the whole image, strictly limited 3-color palette of cobalt blue, warm coral orange and cream white, flat simplified shapes, slight intentional color misregistration, lo-fi zine aesthetic. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Expr 06 — Quand les poules auront des dents (FR) — Cartoon Network Flat",
+      "_style_id": "cartoon_network",
+      "_expression_id": "hen_teeth",
+      "_idiom": "Quand les poules auront des dents (FR)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE plump white hen stands proudly facing forward, grinning widely with a full set of large human teeth in its open beak, eyes sparkling with mischief. The hen has exactly two legs and two wings, one red comb on its head. Only this one hen, no other animals. Illustrated in Adventure Time cartoon network style: thick bold black cartoon outlines, flat vivid color fills of sky blue, lime green and sunshine yellow, simple round pudgy characters with big expressive faces, 2D cel animation aesthetic, white background. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Expr 07 — Glida in på en räkmacka (SE) — Risograph Print",
+      "_style_id": "risograph",
+      "_expression_id": "shrimp_sandwich",
+      "_idiom": "Glida in på en räkmacka (SE)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE relaxed happy man in sunglasses is surfing while standing on EXACTLY ONE giant open-faced shrimp sandwich, gliding on a wave, arms out for balance, hair blown back. The huge sandwich has visible pink shrimps, lettuce and a slice of bread as the surfboard. One person, one sandwich. Illustrated in risograph print style: visible riso grain texture across the whole image, strictly limited 3-color palette of cobalt blue, warm coral orange and cream white, flat simplified shapes, slight intentional color misregistration, lo-fi zine aesthetic. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Expr 08 — Glida in på en räkmacka (SE) — Cartoon Network Flat",
+      "_style_id": "cartoon_network",
+      "_expression_id": "shrimp_sandwich",
+      "_idiom": "Glida in på en räkmacka (SE)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE relaxed happy man in sunglasses is surfing while standing on EXACTLY ONE giant open-faced shrimp sandwich, gliding on a wave, arms out for balance, hair blown back. The huge sandwich has visible pink shrimps, lettuce and a slice of bread as the surfboard. One person, one sandwich. Illustrated in Adventure Time cartoon network style: thick bold black cartoon outlines, flat vivid color fills of sky blue, lime green and sunshine yellow, simple round pudgy characters with big expressive faces, 2D cel animation aesthetic, white background. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Expr 09 — Nu komt de aap uit de mouw (NL) — Risograph Print",
+      "_style_id": "risograph",
+      "_expression_id": "monkey_sleeve",
+      "_idiom": "Nu komt de aap uit de mouw (NL)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE small cheeky brown monkey is emerging head-first out of the sleeve of a large hanging shirt, its grinning face and two arms already out, surprising EXACTLY ONE shocked man who looks at his own sleeve. One monkey with one tail, one person. Illustrated in risograph print style: visible riso grain texture across the whole image, strictly limited 3-color palette of cobalt blue, warm coral orange and cream white, flat simplified shapes, slight intentional color misregistration, lo-fi zine aesthetic. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Expr 10 — Nu komt de aap uit de mouw (NL) — Cartoon Network Flat",
+      "_style_id": "cartoon_network",
+      "_expression_id": "monkey_sleeve",
+      "_idiom": "Nu komt de aap uit de mouw (NL)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE small cheeky brown monkey is emerging head-first out of the sleeve of a large hanging shirt, its grinning face and two arms already out, surprising EXACTLY ONE shocked man who looks at his own sleeve. One monkey with one tail, one person. Illustrated in Adventure Time cartoon network style: thick bold black cartoon outlines, flat vivid color fills of sky blue, lime green and sunshine yellow, simple round pudgy characters with big expressive faces, 2D cel animation aesthetic, white background. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Expr 11 — Ich verstehe nur Bahnhof (DE) — Risograph Print",
+      "_style_id": "risograph",
+      "_expression_id": "brain_station",
+      "_idiom": "Ich verstehe nur Bahnhof (DE)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE confused person stands scratching their head, while above them a big open thought bubble contains EXACTLY ONE tiny cute train station building with a little train and a platform, nothing else in the bubble. The person has puzzled raised eyebrows. One person, one tiny station in the thought bubble. Illustrated in risograph print style: visible riso grain texture across the whole image, strictly limited 3-color palette of cobalt blue, warm coral orange and cream white, flat simplified shapes, slight intentional color misregistration, lo-fi zine aesthetic. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Expr 12 — Ich verstehe nur Bahnhof (DE) — Cartoon Network Flat",
+      "_style_id": "cartoon_network",
+      "_expression_id": "brain_station",
+      "_idiom": "Ich verstehe nur Bahnhof (DE)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE confused person stands scratching their head, while above them a big open thought bubble contains EXACTLY ONE tiny cute train station building with a little train and a platform, nothing else in the bubble. The person has puzzled raised eyebrows. One person, one tiny station in the thought bubble. Illustrated in Adventure Time cartoon network style: thick bold black cartoon outlines, flat vivid color fills of sky blue, lime green and sunshine yellow, simple round pudgy characters with big expressive faces, 2D cel animation aesthetic, white background. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Expr 13 — Pedo de loro (AR) — Risograph Print",
+      "_style_id": "risograph",
+      "_expression_id": "parrot_fart",
+      "_idiom": "Pedo de loro (AR)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE embarrassed green parrot stands on a perch, glancing sideways with a guilty face, cheeks blushing, while EXACTLY ONE tiny puffy cloud appears right behind its tail feathers. The parrot has two wings, two legs and one curved beak. Only this one bird. Illustrated in risograph print style: visible riso grain texture across the whole image, strictly limited 3-color palette of cobalt blue, warm coral orange and cream white, flat simplified shapes, slight intentional color misregistration, lo-fi zine aesthetic. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Expr 14 — Pedo de loro (AR) — Cartoon Network Flat",
+      "_style_id": "cartoon_network",
+      "_expression_id": "parrot_fart",
+      "_idiom": "Pedo de loro (AR)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE embarrassed green parrot stands on a perch, glancing sideways with a guilty face, cheeks blushing, while EXACTLY ONE tiny puffy cloud appears right behind its tail feathers. The parrot has two wings, two legs and one curved beak. Only this one bird. Illustrated in Adventure Time cartoon network style: thick bold black cartoon outlines, flat vivid color fills of sky blue, lime green and sunshine yellow, simple round pudgy characters with big expressive faces, 2D cel animation aesthetic, white background. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Expr 15 — Not my circus, not my monkeys (PL) — Risograph Print",
+      "_style_id": "risograph",
+      "_expression_id": "circus_monkeys",
+      "_idiom": "Not my circus, not my monkeys (PL)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE calm relaxed person walks away in the foreground with closed eyes and a serene smile, hands in pockets, while behind them a small chaotic circus tent has EXACTLY THREE crazy monkeys juggling and swinging from the tent poles. One person walking away, three monkeys at the tent. Illustrated in risograph print style: visible riso grain texture across the whole image, strictly limited 3-color palette of cobalt blue, warm coral orange and cream white, flat simplified shapes, slight intentional color misregistration, lo-fi zine aesthetic. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Expr 16 — Not my circus, not my monkeys (PL) — Cartoon Network Flat",
+      "_style_id": "cartoon_network",
+      "_expression_id": "circus_monkeys",
+      "_idiom": "Not my circus, not my monkeys (PL)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE calm relaxed person walks away in the foreground with closed eyes and a serene smile, hands in pockets, while behind them a small chaotic circus tent has EXACTLY THREE crazy monkeys juggling and swinging from the tent poles. One person walking away, three monkeys at the tent. Illustrated in Adventure Time cartoon network style: thick bold black cartoon outlines, flat vivid color fills of sky blue, lime green and sunshine yellow, simple round pudgy characters with big expressive faces, 2D cel animation aesthetic, white background. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Expr 17 — Avaler des couleuvres (FR) — Risograph Print",
+      "_style_id": "risograph",
+      "_expression_id": "eating_snakes",
+      "_idiom": "Avaler des couleuvres (FR)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE unhappy person sits at a dinner table with a fork and knife, staring with resigned disgust at a dinner plate holding EXACTLY TWO coiled green garden snakes, one snake lifting its head and smiling smugly at the diner. One person, two snakes on the plate. Illustrated in risograph print style: visible riso grain texture across the whole image, strictly limited 3-color palette of cobalt blue, warm coral orange and cream white, flat simplified shapes, slight intentional color misregistration, lo-fi zine aesthetic. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Expr 18 — Avaler des couleuvres (FR) — Cartoon Network Flat",
+      "_style_id": "cartoon_network",
+      "_expression_id": "eating_snakes",
+      "_idiom": "Avaler des couleuvres (FR)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE unhappy person sits at a dinner table with a fork and knife, staring with resigned disgust at a dinner plate holding EXACTLY TWO coiled green garden snakes, one snake lifting its head and smiling smugly at the diner. One person, two snakes on the plate. Illustrated in Adventure Time cartoon network style: thick bold black cartoon outlines, flat vivid color fills of sky blue, lime green and sunshine yellow, simple round pudgy characters with big expressive faces, 2D cel animation aesthetic, white background. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Expr 19 — Det är ingen ko på isen (SE) — Risograph Print",
+      "_style_id": "risograph",
+      "_expression_id": "cow_ice",
+      "_idiom": "Det är ingen ko på isen (SE)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE serene black-and-white spotted cow is gracefully ice-skating on a frozen lake, wearing small ice skates on all four hooves, one front leg lifted elegantly mid-glide, leaving curved skate trails on the ice. The cow has exactly four legs, two horns, one tail. Only this one cow. Illustrated in risograph print style: visible riso grain texture across the whole image, strictly limited 3-color palette of cobalt blue, warm coral orange and cream white, flat simplified shapes, slight intentional color misregistration, lo-fi zine aesthetic. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Expr 20 — Det är ingen ko på isen (SE) — Cartoon Network Flat",
+      "_style_id": "cartoon_network",
+      "_expression_id": "cow_ice",
+      "_idiom": "Det är ingen ko på isen (SE)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE serene black-and-white spotted cow is gracefully ice-skating on a frozen lake, wearing small ice skates on all four hooves, one front leg lifted elegantly mid-glide, leaving curved skate trails on the ice. The cow has exactly four legs, two horns, one tail. Only this one cow. Illustrated in Adventure Time cartoon network style: thick bold black cartoon outlines, flat vivid color fills of sky blue, lime green and sunshine yellow, simple round pudgy characters with big expressive faces, 2D cel animation aesthetic, white background. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Expr 21 — Sauter du coq à l'âne (FR) — Risograph Print",
+      "_style_id": "risograph",
+      "_expression_id": "rooster_donkey",
+      "_idiom": "Sauter du coq à l'âne (FR)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE person is captured in mid-leap, jumping with stretched legs from the back of EXACTLY ONE rooster towards the back of EXACTLY ONE grey donkey standing nearby, arms spread for balance. The rooster has two legs, the donkey has four legs and two long ears. One person, one rooster, one donkey. Illustrated in risograph print style: visible riso grain texture across the whole image, strictly limited 3-color palette of cobalt blue, warm coral orange and cream white, flat simplified shapes, slight intentional color misregistration, lo-fi zine aesthetic. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Expr 22 — Sauter du coq à l'âne (FR) — Cartoon Network Flat",
+      "_style_id": "cartoon_network",
+      "_expression_id": "rooster_donkey",
+      "_idiom": "Sauter du coq à l'âne (FR)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE person is captured in mid-leap, jumping with stretched legs from the back of EXACTLY ONE rooster towards the back of EXACTLY ONE grey donkey standing nearby, arms spread for balance. The rooster has two legs, the donkey has four legs and two long ears. One person, one rooster, one donkey. Illustrated in Adventure Time cartoon network style: thick bold black cartoon outlines, flat vivid color fills of sky blue, lime green and sunshine yellow, simple round pudgy characters with big expressive faces, 2D cel animation aesthetic, white background. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Expr 23 — Sin pelos en la lengua (ES) — Risograph Print",
+      "_style_id": "risograph",
+      "_expression_id": "bald_tongue",
+      "_idiom": "Sin pelos en la lengua (ES)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE cheerful person sticks out EXACTLY ONE giant smooth shiny pink tongue, completely hairless and gleaming, while holding up a small razor in one hand with a proud smile, tiny sparkles on the polished tongue. One person, one big clean tongue. Illustrated in risograph print style: visible riso grain texture across the whole image, strictly limited 3-color palette of cobalt blue, warm coral orange and cream white, flat simplified shapes, slight intentional color misregistration, lo-fi zine aesthetic. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Expr 24 — Sin pelos en la lengua (ES) — Cartoon Network Flat",
+      "_style_id": "cartoon_network",
+      "_expression_id": "bald_tongue",
+      "_idiom": "Sin pelos en la lengua (ES)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE cheerful person sticks out EXACTLY ONE giant smooth shiny pink tongue, completely hairless and gleaming, while holding up a small razor in one hand with a proud smile, tiny sparkles on the polished tongue. One person, one big clean tongue. Illustrated in Adventure Time cartoon network style: thick bold black cartoon outlines, flat vivid color fills of sky blue, lime green and sunshine yellow, simple round pudgy characters with big expressive faces, 2D cel animation aesthetic, white background. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Expr 25 — Kick the bucket (EN) — Risograph Print",
+      "_style_id": "risograph",
+      "_expression_id": "kick_bucket",
+      "_idiom": "Kick the bucket (EN)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE happy cartoon skeleton in a jaunty pose is kicking EXACTLY ONE old metal bucket high into the air with one bony foot, arms raised in celebration, the bucket flying off with small motion lines and a few water drops. One skeleton, one bucket. Illustrated in risograph print style: visible riso grain texture across the whole image, strictly limited 3-color palette of cobalt blue, warm coral orange and cream white, flat simplified shapes, slight intentional color misregistration, lo-fi zine aesthetic. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Expr 26 — Kick the bucket (EN) — Cartoon Network Flat",
+      "_style_id": "cartoon_network",
+      "_expression_id": "kick_bucket",
+      "_idiom": "Kick the bucket (EN)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE happy cartoon skeleton in a jaunty pose is kicking EXACTLY ONE old metal bucket high into the air with one bony foot, arms raised in celebration, the bucket flying off with small motion lines and a few water drops. One skeleton, one bucket. Illustrated in Adventure Time cartoon network style: thick bold black cartoon outlines, flat vivid color fills of sky blue, lime green and sunshine yellow, simple round pudgy characters with big expressive faces, 2D cel animation aesthetic, white background. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Expr 27 — Poser un lapin (FR) — Risograph Print",
+      "_style_id": "risograph",
+      "_expression_id": "rabbit_table",
+      "_idiom": "Poser un lapin (FR)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE polite white rabbit sits alone at a small restaurant table set for two, holding EXACTLY ONE red rose, looking at an empty chair across the table with big sad hopeful eyes, a lit candle on the table. The rabbit has two long ears and two front paws on the table. One rabbit only. Illustrated in risograph print style: visible riso grain texture across the whole image, strictly limited 3-color palette of cobalt blue, warm coral orange and cream white, flat simplified shapes, slight intentional color misregistration, lo-fi zine aesthetic. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Expr 28 — Poser un lapin (FR) — Cartoon Network Flat",
+      "_style_id": "cartoon_network",
+      "_expression_id": "rabbit_table",
+      "_idiom": "Poser un lapin (FR)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE polite white rabbit sits alone at a small restaurant table set for two, holding EXACTLY ONE red rose, looking at an empty chair across the table with big sad hopeful eyes, a lit candle on the table. The rabbit has two long ears and two front paws on the table. One rabbit only. Illustrated in Adventure Time cartoon network style: thick bold black cartoon outlines, flat vivid color fills of sky blue, lime green and sunshine yellow, simple round pudgy characters with big expressive faces, 2D cel animation aesthetic, white background. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Expr 29 — Aji ga deru (JP) — Risograph Print",
+      "_style_id": "risograph",
+      "_expression_id": "aji_sweater",
+      "_idiom": "Aji ga deru (JP)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE cozy old knitted sweater hangs on a wooden hanger, radiating gentle steam swirls and tiny sparkles like a delicious simmering broth, with a small happy smiling face knitted into the chest of the sweater. One sweater only, warm and well-loved with charming patches. Illustrated in risograph print style: visible riso grain texture across the whole image, strictly limited 3-color palette of cobalt blue, warm coral orange and cream white, flat simplified shapes, slight intentional color misregistration, lo-fi zine aesthetic. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Expr 30 — Aji ga deru (JP) — Cartoon Network Flat",
+      "_style_id": "cartoon_network",
+      "_expression_id": "aji_sweater",
+      "_idiom": "Aji ga deru (JP)",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE cozy old knitted sweater hangs on a wooden hanger, radiating gentle steam swirls and tiny sparkles like a delicious simmering broth, with a small happy smiling face knitted into the chest of the sweater. One sweater only, warm and well-loved with charming patches. Illustrated in Adventure Time cartoon network style: thick bold black cartoon outlines, flat vivid color fills of sky blue, lime green and sunshine yellow, simple round pudgy characters with big expressive faces, 2D cel animation aesthetic, white background. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "Expr 31 AB-img2img — Quand les poules auront des dents (FR) — Risograph Print",
+      "_style_id": "risograph",
+      "_expression_id": "hen_teeth",
+      "_idiom": "Quand les poules auront des dents (FR)",
+      "_ab_test": "img2img_style_reference",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE plump white hen stands proudly facing forward, grinning widely with a full set of large human teeth in its open beak, eyes sparkling with mischief. The hen has exactly two legs and two wings, one red comb on its head. Only this one hen, no other animals. Illustrated in risograph print style: visible riso grain texture across the whole image, strictly limited 3-color palette of cobalt blue, warm coral orange and cream white, flat simplified shapes, slight intentional color misregistration, lo-fi zine aesthetic. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/Moneymaker/claude/trend-niche-discovery-MFQQj/output/redbubble_idioms/idiom_literal_01___risograph_print___base_20260609_2147.png",
+        "strength": 0.8
+      }
+    },
+    {
+      "name": "Expr 32 AB-img2img — Quand les poules auront des dents (FR) — Cartoon Network Flat",
+      "_style_id": "cartoon_network",
+      "_expression_id": "hen_teeth",
+      "_idiom": "Quand les poules auront des dents (FR)",
+      "_ab_test": "img2img_style_reference",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE plump white hen stands proudly facing forward, grinning widely with a full set of large human teeth in its open beak, eyes sparkling with mischief. The hen has exactly two legs and two wings, one red comb on its head. Only this one hen, no other animals. Illustrated in Adventure Time cartoon network style: thick bold black cartoon outlines, flat vivid color fills of sky blue, lime green and sunshine yellow, simple round pudgy characters with big expressive faces, 2D cel animation aesthetic, white background. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/Moneymaker/claude/trend-niche-discovery-MFQQj/output/redbubble_idioms/idiom_literal_07___cartoon_network___base_20260609_2151.png",
+        "strength": 0.8
+      }
+    },
+    {
+      "name": "Expr 33 AB-img2img — Det är ingen ko på isen (SE) — Risograph Print",
+      "_style_id": "risograph",
+      "_expression_id": "cow_ice",
+      "_idiom": "Det är ingen ko på isen (SE)",
+      "_ab_test": "img2img_style_reference",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE serene black-and-white spotted cow is gracefully ice-skating on a frozen lake, wearing small ice skates on all four hooves, one front leg lifted elegantly mid-glide, leaving curved skate trails on the ice. The cow has exactly four legs, two horns, one tail. Only this one cow. Illustrated in risograph print style: visible riso grain texture across the whole image, strictly limited 3-color palette of cobalt blue, warm coral orange and cream white, flat simplified shapes, slight intentional color misregistration, lo-fi zine aesthetic. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/Moneymaker/claude/trend-niche-discovery-MFQQj/output/redbubble_idioms/idiom_literal_01___risograph_print___base_20260609_2147.png",
+        "strength": 0.8
+      }
+    },
+    {
+      "name": "Expr 34 AB-img2img — Det är ingen ko på isen (SE) — Cartoon Network Flat",
+      "_style_id": "cartoon_network",
+      "_expression_id": "cow_ice",
+      "_idiom": "Det är ingen ko på isen (SE)",
+      "_ab_test": "img2img_style_reference",
+      "ai_generation": {
+        "positive_prompt": "EXACTLY ONE serene black-and-white spotted cow is gracefully ice-skating on a frozen lake, wearing small ice skates on all four hooves, one front leg lifted elegantly mid-glide, leaving curved skate trails on the ice. The cow has exactly four legs, two horns, one tail. Only this one cow. Illustrated in Adventure Time cartoon network style: thick bold black cartoon outlines, flat vivid color fills of sky blue, lime green and sunshine yellow, simple round pudgy characters with big expressive faces, 2D cel animation aesthetic, white background. Absolutely no text anywhere, no letters, no words, no writing, no numbers. Square sticker art, centered composition, clean background.",
+        "negative_prompt": "text, letters, words, watermark, extra limbs, five legs, deformed paws, extra animals, two heads, seamless tile, photorealistic",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/Moneymaker/claude/trend-niche-discovery-MFQQj/output/redbubble_idioms/idiom_literal_07___cartoon_network___base_20260609_2151.png",
+        "strength": 0.8
+      }
+    }
+  ]
+}
