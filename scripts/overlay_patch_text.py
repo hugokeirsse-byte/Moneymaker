@@ -1,20 +1,11 @@
 #!/usr/bin/env python3
 """
-overlay_patch_text.py — add styled text to an embroidery patch image.
-
-Usage:
-  python overlay_patch_text.py <image_path> <text> [output_path]
-
-The text is placed inside the existing black felt area, below the circular
-patch illustration. The image keeps its original square dimensions.
-
-Example:
-  python overlay_patch_text.py overthinker.png OVERTHINKER
-  python overlay_patch_text.py overthinker.png OVERTHINKER overthinker_final.png
+overlay_patch_text.py — embroidery-style text on patch image.
+Places outlined block letters (gold fill, navy stroke) in the lower
+black felt area of an existing embroidery patch image.
+Usage: python overlay_patch_text.py <image_path> <text> [output_path]
 """
-
-import sys
-import os
+import sys, os
 from PIL import Image, ImageDraw, ImageFont
 
 FONT_CANDIDATES = [
@@ -22,72 +13,71 @@ FONT_CANDIDATES = [
     "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
     "/usr/share/fonts/truetype/freefont/FreeSansBold.ttf",
     "/System/Library/Fonts/Helvetica.ttc",
-    "/System/Library/Fonts/Arial Bold.ttf",
     "C:/Windows/Fonts/arialbd.ttf",
 ]
 
+# Embroidery palette: gold thread, navy outline — matches patch colors
+COLOR_FILL      = (235, 185,  30, 255)  # gold thread
+COLOR_OUTLINE   = ( 12,  18,  60, 255)  # deep navy border
+COLOR_HIGHLIGHT = (255, 235, 120, 180)  # pale gold highlight (stitch texture)
+OUTLINE_RADIUS  = 3                     # px — mimics embroidery border thread weight
 
-def load_font(size: int) -> ImageFont.FreeTypeFont:
+
+def load_font(size):
     for path in FONT_CANDIDATES:
         if os.path.exists(path):
             return ImageFont.truetype(path, size)
     return ImageFont.load_default()
 
 
-def add_patch_text(image_path: str, text: str, output_path: str = None) -> str:
-    """
-    Place bold uppercase text inside the black felt border at the bottom of
-    the patch image. No extra canvas added — fits within existing space.
-    """
+def add_patch_text(image_path, text, output_path=None):
     img = Image.open(image_path).convert("RGBA")
     w, h = img.size
 
-    # The circular patch sits in roughly the top 78% of the image.
-    # We target the band from 79% to 95% for text placement.
-    text_y_start = int(h * 0.79)
-    text_area_height = int(h * 0.16)
+    # Lower black-felt area: ~79 – 95 % of image height
+    text_y_start    = int(h * 0.795)
+    text_area_height = int(h * 0.155)
+    font_size       = int(text_area_height * 0.56)
+    font            = load_font(font_size)
 
-    font_size = int(text_area_height * 0.60)
-    font = load_font(font_size)
+    overlay = Image.new("RGBA", img.size, (0, 0, 0, 0))
+    draw    = ImageDraw.Draw(overlay)
 
-    draw = ImageDraw.Draw(img)
-
-    # Measure and scale down if text is wider than 85% of the image
-    bbox = draw.textbbox((0, 0), text, font=font)
+    # Fit text to 78 % of image width
+    bbox   = draw.textbbox((0, 0), text, font=font, stroke_width=OUTLINE_RADIUS)
     text_w = bbox[2] - bbox[0]
-    if text_w > w * 0.85:
-        scale = (w * 0.85) / text_w
-        font_size = int(font_size * scale)
-        font = load_font(font_size)
-        bbox = draw.textbbox((0, 0), text, font=font)
-        text_w = bbox[2] - bbox[0]
-
+    max_w  = w * 0.78
+    if text_w > max_w:
+        font_size = int(font_size * max_w / text_w)
+        font      = load_font(font_size)
+        bbox      = draw.textbbox((0, 0), text, font=font, stroke_width=OUTLINE_RADIUS)
+        text_w    = bbox[2] - bbox[0]
     text_h = bbox[3] - bbox[1]
-    x = (w - text_w) // 2
-    y = text_y_start + (text_area_height - text_h) // 2
 
-    # Shadow (dark grey, 2px offset)
-    draw.text((x + 2, y + 2), text, font=font, fill=(30, 30, 30, 200))
-    # Main text: warm white — matches the white thread in the palette
-    draw.text((x, y), text, font=font, fill=(240, 235, 220, 255))
+    x = (w - text_w) // 2 - bbox[0]
+    y = text_y_start + (text_area_height - text_h) // 2 - bbox[1]
 
-    if output_path is None:
+    # Pass 1 — navy stroke + gold fill (embroidery outline)
+    draw.text(
+        (x, y), text, font=font,
+        fill=COLOR_FILL,
+        stroke_width=OUTLINE_RADIUS,
+        stroke_fill=COLOR_OUTLINE,
+    )
+    # Pass 2 — pale-gold highlight offset for 3D stitch texture
+    draw.text((x - 1, y - 1), text, font=font, fill=COLOR_HIGHLIGHT)
+
+    img = Image.alpha_composite(img, overlay)
+    if not output_path:
         base, ext = os.path.splitext(image_path)
         output_path = f"{base}_with_text{ext}"
-
-    result = img.convert("RGB")
-    result.save(output_path, quality=95)
-    print(f"Saved: {output_path}")
+    img.convert("RGB").save(output_path, quality=95)
     return output_path
 
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:
-        print(__doc__)
+        print("Usage: overlay_patch_text.py <image> <text> [output]")
         sys.exit(1)
-
-    img_path = sys.argv[1]
-    overlay_text = sys.argv[2]
-    out_path = sys.argv[3] if len(sys.argv) > 3 else None
-
-    add_patch_text(img_path, overlay_text, out_path)
+    out = add_patch_text(sys.argv[1], sys.argv[2], sys.argv[3] if len(sys.argv) > 3 else None)
+    print(f"→ {out}")

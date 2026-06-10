@@ -1,0 +1,69 @@
+name: Patch — Overlay Text Demo
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  overlay:
+    name: Apply embroidery text to existing patches
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Python 3.11 + Pillow
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pillow
+
+      - name: Apply overlay to all rb_* expression folders
+        run: |
+          mkdir -p output/redbubble_with_text
+          count=0
+          for subdir in output/rb_*/*/; do
+            [ -d "$subdir" ] || continue
+            expression=$(basename "$subdir")
+            [[ "$expression" == "thumbnails" ]] && continue
+            # Pick first PNG in the subfolder
+            img=$(find "$subdir" -maxdepth 1 -name "*.png" 2>/dev/null | sort | head -1)
+            [ -z "$img" ] && continue
+            # Derive display text from expression_id
+            text=$(echo "$expression" | tr '[:lower:]' '[:upper:]' | tr '_' ' ')
+            out="output/redbubble_with_text/${expression}___overlay.png"
+            if python scripts/overlay_patch_text.py "$img" "$text" "$out"; then
+              echo "  ✓ $expression → \"$text\""
+              count=$((count + 1))
+            else
+              echo "  ✗ $expression FAILED"
+            fi
+          done
+          echo "Done: $count overlays generated."
+          ls -lh output/redbubble_with_text/ | head -40
+
+      - name: Commit and push results
+        run: |
+          git config user.name  "Moneymaker Bot"
+          git config user.email "bot@moneymaker.auto"
+          git add output/redbubble_with_text/
+          if git diff --staged --quiet; then
+            echo "Nothing to commit."
+          else
+            git commit -m "demo(overlay): embroidery text on existing patches"
+            git pull --rebase --autostash origin HEAD
+            git push origin HEAD
+          fi
+
+      - name: Upload overlayed images as artifact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: patch-overlay-demo-${{ github.run_number }}
+          path: output/redbubble_with_text/
+          retention-days: 30
