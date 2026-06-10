@@ -187,10 +187,29 @@ jobs:
             RB_OUTPUT="./output/rb_${RB_BASENAME}"
             mkdir -p "$RB_OUTPUT"
             echo "Rapport : $RB_REPORT → sortie : $RB_OUTPUT"
+            # SAUVEGARDE INCRÉMENTALE : push des nouvelles images toutes les 3 min.
+            # Un run annulé/planté ne perd ainsi que ~3 min de génération payée
+            # (les artifacts post-annulation ne sont PAS fiables sur de gros volumes).
+            git config user.name  "Moneymaker Bot"
+            git config user.email "bot@moneymaker.auto"
+            (
+              while true; do
+                sleep 180
+                git add "$RB_OUTPUT" 2>/dev/null || true
+                if ! git diff --staged --quiet 2>/dev/null; then
+                  git commit -q -m "wip(images): sauvegarde incrémentale $(date -u +%H:%M)" || true
+                  git pull -q --rebase --autostash origin HEAD 2>/dev/null || true
+                  git push -q origin HEAD 2>/dev/null || true
+                fi
+              done
+            ) &
+            KEEPER_PID=$!
+            trap "kill $KEEPER_PID 2>/dev/null || true" EXIT
             eval python -m trend_discovery.main generate-all --yes \
               --report "$RB_REPORT" \
               --output "$RB_OUTPUT" \
               $LIMIT_ARG
+            kill $KEEPER_PID 2>/dev/null || true
             echo "-- Rangement en sous-dossiers par expression (préfixe avant ___) --"
             for f in "$RB_OUTPUT"/*.png; do
               [ -e "$f" ] || continue
