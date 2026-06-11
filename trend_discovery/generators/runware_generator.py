@@ -132,7 +132,7 @@ class RunwareGenerator:
             "outputType": ["URL"],
             "outputFormat": "PNG",
             "checkNSFW": False,
-            "includeCost": False,
+            "includeCost": True,
             "tiling": tiling,
         }
         # FLUX Dev 2 ignores negative prompts — only include if non-empty (for SDXL compat)
@@ -157,7 +157,7 @@ class RunwareGenerator:
             logger.error("[runware] génération échouée — imageURL absent: %s", result)
             return None
 
-        logger.info("[runware] image générée: %s", image_url)
+        logger.info("[runware] image générée: %s (cost=%s)", image_url, result.get("cost"))
         return image_url
 
     def upscale(
