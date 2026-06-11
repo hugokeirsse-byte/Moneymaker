@@ -1,93 +1,74 @@
-name: Publication Prep — détourage + listings
+name: Publication Prep — détourage circulaire transparent
 
 on:
   workflow_dispatch:
     inputs:
-      tolerance:
-        description: 'Tolérance détourage (défaut 28)'
-        required: false
-        default: '28'
+      src_dir:
+        description: 'Dossier source (ex: produits/worldcup2026_flag_patches)'
+        required: true
+      dst_dir:
+        description: 'Dossier destination (ex: produits/worldcup2026_flag_patches_transparent)'
+        required: true
 
 permissions:
   contents: write
 
 jobs:
-  prep:
-    name: Détourage batch + pack publication
+  cutout:
+    name: Détourage circulaire (fond transparent, sans perte)
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 30
     steps:
-      - name: Checkout
+      - name: Checkout (sparse)
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
+          sparse-checkout: |
+            scripts
+            produits
+          sparse-checkout-cone-mode: true
 
-      - name: Python 3.11
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: pip install pillow numpy scipy requests
 
-      - name: Détourage batch (styles à fond uni uniquement)
+      - name: Dépendances
+        run: pip install -q numpy Pillow
+
+      - name: Détourage par lot (0 €)
         run: |
-          python - <<'EOF'
-          import glob, os, sys
-          sys.path.insert(0, ".")
-          from trend_discovery.generators.bg_remover import remove_white_background
+          python scripts/cutout_circle.py --batch \
+            "${{ github.event.inputs.src_dir }}" \
+            "${{ github.event.inputs.dst_dir }}"
 
-          tol = int("${{ github.event.inputs.tolerance || '28' }}")
-          # Styles dont le fond se détoure proprement (fond uni)
-          SAFE = {"embroidery_patch", "flat_vector", "cartoon_network",
-                  "minimalist_line", "kawaii_chibi", "tattoo_flash",
-                  "swiss_constructivist"}
-          done = skipped = failed = 0
-          patterns = ["output/rb_*/*/*.png", "output/rb_*/*.png",
-                      "output/redbubble/*.png", "output/redbubble_idioms/*.png",
-                      "output/redbubble_fixed/*.png"]
-          all_pngs = sorted({p for pat in patterns for p in glob.glob(pat)})
-          for png in all_pngs:
-              if "thumbnails" in png or png.endswith("_transparent.png"):
-                  continue
-              parts = os.path.basename(png).split("___")
-              style = parts[1] if len(parts) > 2 else ""
-              if style not in SAFE:
-                  skipped += 1
-                  continue
-              out = png.replace(".png", "_transparent.png")
-              if os.path.exists(out):
-                  continue
-              try:
-                  remove_white_background(png, out, tolerance=tol)
-                  done += 1
-              except Exception as e:
-                  print(f"FAIL {png}: {e}")
-                  failed += 1
-          print(f"transparents: {done} | full-bleed gardés carrés: {skipped} | échecs: {failed}")
-          EOF
-
-      - name: Pack publication (titres + tags + descriptions)
-        run: python scripts/build_publication_pack.py
-
-      - name: Commit listings CSV
+      - name: Commit et push
         run: |
           git config user.name  "Moneymaker Bot"
           git config user.email "bot@moneymaker.auto"
-          git add reports/listings/
+          git rebase --abort 2>/dev/null || true
+          git merge --abort 2>/dev/null || true
+          BR=$(git rev-parse --abbrev-ref HEAD)
+          git add "${{ github.event.inputs.dst_dir }}"
           if git diff --staged --quiet; then
-            echo "Rien à commiter."
-          else
-            git commit -m "report(publication): pack listings + détourage"
-            git pull --rebase --autostash origin HEAD
-            git push origin HEAD
+            echo "Rien à committer."
+            exit 0
           fi
+          git commit -m "produits: détourage transparent ${{ github.event.inputs.dst_dir }} — $(date -u +'%Y-%m-%d %H:%M UTC')"
+          DELAY=2
+          for attempt in 1 2 3 4; do
+            if git pull --rebase --autostash origin "$BR" && git push origin "$BR"; then
+              exit 0
+            fi
+            git rebase --abort 2>/dev/null || true
+            echo "Échec push ($attempt/4) — retry dans ${DELAY}s"
+            sleep $DELAY; DELAY=$((DELAY * 2))
+          done
+          echo "::error::push impossible après 4 tentatives"
+          exit 1
 
-      - name: Artifact (transparents + CSV)
+      - name: Artefact de secours
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: publication-pack-${{ github.run_number }}
-          path: |
-            reports/listings/
-            output/rb_*/**/*_transparent.png
-            output/redbubble*/**/*_transparent.png
-          retention-days: 90
+          name: cutout-${{ github.run_number }}
+          path: ${{ github.event.inputs.dst_dir }}
