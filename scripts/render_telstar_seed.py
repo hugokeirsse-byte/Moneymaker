@@ -221,16 +221,21 @@ def flag_spain(td, x0, y0, x1, y1):
     td.rectangle([x0, y0, x1, y0 + h / 4], fill=red)
     td.rectangle([x0, y0 + h / 4, x1, y1 - h / 4], fill=gold)
     td.rectangle([x0, y1 - h / 4, x1, y1], fill=red)
-    # écu simplifié décalé vers la gauche (côté mât)
+    # écu décalé côté mât — GROS et simple pour rester identique d'un
+    # pentagone à l'autre au rendu (quartiers rouge/or francs, contour épais)
     ex, ey = x0 + (x1 - x0) * 0.30, (y0 + y1) / 2
-    s = h * 0.14
-    td.polygon([(ex - s, ey - s), (ex + s, ey - s), (ex + s, ey + s * 0.5),
-                (ex, ey + s * 1.1), (ex - s, ey + s * 0.5)],
-               fill=(230, 230, 220), outline=(120, 60, 20))
-    td.rectangle([ex - s * 0.6, ey - s * 0.6, ex, ey], fill=red)
-    td.rectangle([ex, ey - s * 0.6, ex + s * 0.6, ey], fill=(244, 180, 38))
-    td.rectangle([ex - s * 0.6, ey, ex, ey + s * 0.5], fill=(244, 180, 38))
-    td.rectangle([ex, ey, ex + s * 0.6, ey + s * 0.5], fill=red)
+    s = h * 0.19
+    dark = (90, 45, 15)
+    shield = [(ex - s, ey - s), (ex + s, ey - s), (ex + s, ey + s * 0.45),
+              (ex, ey + s * 1.05), (ex - s, ey + s * 0.45)]
+    td.polygon(shield, fill=(255, 255, 255), outline=dark)
+    lw = max(3, int(s * 0.14))
+    td.line(shield + [shield[0]], fill=dark, width=lw, joint="curve")
+    m = s * 0.16
+    td.rectangle([ex - s + m, ey - s + m, ex - m / 2, ey - m / 2], fill=red)
+    td.rectangle([ex + m / 2, ey - s + m, ex + s - m, ey - m / 2], fill=(244, 180, 38))
+    td.rectangle([ex - s + m, ey + m / 2, ex - m / 2, ey + s * 0.45 - m / 2], fill=(244, 180, 38))
+    td.rectangle([ex + m / 2, ey + m / 2, ex + s - m, ey + s * 0.45 - m / 2], fill=red)
 
 
 def flag_netherlands(td, x0, y0, x1, y1):
