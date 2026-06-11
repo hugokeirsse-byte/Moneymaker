@@ -1,0 +1,35 @@
+{
+  "generated_at": "2026-06-11T07:27:39Z",
+  "series": "worldcup2026_hexagon_england_fix",
+  "styles": [
+    "embroidery_patch"
+  ],
+  "description": "Fix: regénération du seul ballon England (upscale 4096 jamais produit au run 106). require_ai_upscale actif.",
+  "platform": "redbubble",
+  "total_briefs": 1,
+  "generation": {
+    "model": "runware:400@1",
+    "width": 2048,
+    "height": 2048,
+    "steps": 30,
+    "upscale_factor": 2,
+    "target_px": 4000,
+    "require_ai_upscale": true
+  },
+  "briefs": [
+    {
+      "name": "england — Flag Hexagon Ball Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "england_flag_ball",
+      "_idiom": "ENGLAND",
+      "_canva_text": "ENGLAND",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch depicting EXACTLY ONE classic hand-stitched soccer ball filling the center of the patch, where EVERY hexagonal panel that would normally be black is instead embroidered with the England flag pattern — a bold red St George's cross on a pure white ground — the same miniature flag repeated identically in each hexagonal panel, while the remaining panels stay cream white satin stitch like a traditional football. Bold black chain-stitch outlines between all panels of the ball. Thick twisted navy blue and red rope border around the circular patch edge. Embroidered iron-on patch on dark felt, hand-sewn look with visible satin stitch thread texture throughout each panel. Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. Centered composition, full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, flat design without texture, cropped edges, extra balls",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    }
+  ]
+}
