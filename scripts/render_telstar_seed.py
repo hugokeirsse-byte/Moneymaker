@@ -267,10 +267,11 @@ def flag_portugal(td, x0, y0, x1, y1):
 
 
 def flag_japan(td, x0, y0, x1, y1):
-    """Disque rouge cramoisi centré sur fond blanc pur (diamètre 3/5 hauteur)."""
+    """Disque rouge compact centré, large marge blanche tout autour
+    (réduit volontairement : FLUX tend à gonfler les disques)."""
     td.rectangle([x0, y0, x1, y1], fill=(255, 255, 255))
     cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
-    r = (y1 - y0) * 0.30
+    r = (y1 - y0) * 0.23
     td.ellipse([cx - r, cy - r, cx + r, cy + r], fill=(188, 0, 45))
 
 
