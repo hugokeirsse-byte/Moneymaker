@@ -71,7 +71,7 @@ def cutout_felt(in_path: str, out_path: str, feather: int = 3) -> None:
     du design qui débordent (capes, objets…) contrairement au masque cercle.
     Gère les ombres portées : un pixel est « feutre » s'il est proche du RAYON
     de couleur du feutre (feutre assombri/éclairci compris). Pixels intacts."""
-    from collections import deque
+    
     img = Image.open(in_path).convert("RGB")
     arr = np.array(img)
     h, w = arr.shape[:2]
@@ -91,25 +91,14 @@ def cutout_felt(in_path: str, out_path: str, feather: int = 3) -> None:
     residual = np.abs(p - t[..., None] * felt[None, None, :]).sum(axis=2)
     feltlike = residual <= tol
 
-    # flood-fill multi-départ depuis tous les pixels feutre du bord
-    bg = np.zeros((h, w), dtype=bool)
-    dq = deque()
-    for x in range(w):
-        for y in (0, h - 1):
-            if feltlike[y, x] and not bg[y, x]:
-                bg[y, x] = True
-                dq.append((y, x))
-    for y in range(h):
-        for x in (0, w - 1):
-            if feltlike[y, x] and not bg[y, x]:
-                bg[y, x] = True
-                dq.append((y, x))
-    while dq:
-        y, x = dq.popleft()
-        for ny, nx in ((y - 1, x), (y + 1, x), (y, x - 1), (y, x + 1)):
-            if 0 <= ny < h and 0 <= nx < w and feltlike[ny, nx] and not bg[ny, nx]:
-                bg[ny, nx] = True
-                dq.append((ny, nx))
+    # fond = composantes connexes « feutre » touchant le bord (vectorisé : ms
+    # au lieu de minutes — le BFS Python pur dépassait le timeout CI)
+    from scipy.ndimage import label as cc_label
+    labels, _ = cc_label(feltlike)
+    border_labels = np.unique(np.concatenate([
+        labels[0, :], labels[-1, :], labels[:, 0], labels[:, -1]]))
+    border_labels = border_labels[border_labels != 0]
+    bg = np.isin(labels, border_labels)
 
     # adoucissement du bord : érosion progressive sur `feather` px
     alpha = np.where(bg, 0, 255).astype(float)
