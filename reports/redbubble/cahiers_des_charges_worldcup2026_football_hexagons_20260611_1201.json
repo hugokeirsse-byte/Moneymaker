@@ -1,0 +1,66 @@
+{
+  "generated_at": "2026-06-11T12:01:00Z",
+  "series": "worldcup2026_football_hexagons_v1",
+  "styles": ["embroidery_patch"],
+  "description": "World Cup 2026 — Soccer ball with national flag hexagon panels, embroidery patch style, 4 variations",
+  "platform": "redbubble",
+  "total_briefs": 4,
+  "briefs": [
+    {
+      "name": "football-flag-ball — World Unity Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "football_flag_ball",
+      "_idiom": "WORLD CUP 2026",
+      "_canva_text": "WORLD CUP 2026",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch depicting a classic soccer ball where every hexagonal panel is filled with a different miniature national flag pattern stitched in authentic thread colors — one panel with bold red and white stripes, one with royal blue white and red tricolor, one with green and golden yellow diamond, one with pure white and red rising sun circle, one with blue and white stripes and golden sun, one with deep red and white Nordic cross — all contained within clean black chain-stitch hexagon outlines. The ball floats in the center of the patch surrounded by a subtle golden glow halo. Thick twisted gold and black rope border around the circular patch edge. Embroidered iron-on patch on dark felt, visible satin stitch thread texture throughout each panel, spectacular world-unity composition, centered, full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, flat design without texture, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "football-flag-ball-closeup — Panel Detail Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "football_flag_ball_closeup",
+      "_idiom": "WORLD CUP 2026 CLOSEUP",
+      "_canva_text": "WORLD CUP 2026",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch showing a dramatic close-up of a soccer ball surface where EXACTLY SIX large hexagonal panels fill the patch — each hexagon stitched with a different national flag pattern in authentic colors: one deep crimson with a green interlaced star (Morocco), one pure white with a bold red circle (Japan), one vivid green yellow diamond with a blue sphere (Brazil), one red and gold with a heraldic crest (Spain), one pale blue and white stripes with a radiant golden sun face (Argentina), one deep green with flowing golden calligraphy (Saudi Arabia) — each flag pattern in dense satin stitch within its hexagon shape. Bold black chain-stitch outlines between each hexagonal panel. Thick black and gold rope border around the circular edge. Embroidered iron-on patch on dark felt, world cup texture detail, authentic embroidery texture throughout, centered, full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, flat design without texture, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "football-flag-ball-exploded — Burst Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "football_flag_ball_exploded",
+      "_idiom": "WORLD CUP 2026 BURST",
+      "_canva_text": "WORLD CUP 2026",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch showing a soccer ball exploding open in a spectacular burst, its hexagonal panels flying outward like flower petals from the center. Each floating panel contains a different national flag embroidered in its authentic thread colors — red and white stripes, blue and white with golden sun, green and gold diamond, red circle on white, black red and gold bands, red with white Nordic cross. At the very center, one traditional black pentagon remains. Dynamic lines of stitched energy radiate outward from the burst. Thick gold chain-stitch border around the circular patch edge. Embroidered iron-on patch on dark felt, explosive dynamic composition, vivid satin stitch throughout each panel, centered, full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, flat design without texture, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "football-flag-ball-euro — European Nations Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "football_flag_ball_euro",
+      "_idiom": "EUROPE WORLD CUP 2026",
+      "_canva_text": "EUROPE 2026",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch depicting a soccer ball where each hexagonal panel contains a different European national flag in embroidery stitch — one panel with bold blue white red French tricolor, one with red cross on white (England), one with crimson red and white Swiss cross, one with black red gold German bands, one with red and gold Spanish stripes, one with red cherry field and white Nordic cross (Denmark) — all within black chain-stitch hexagon outlines. A subtle starry glow around the ball suggests European football glory. Thick navy blue and gold twisted rope border around the circular patch edge. Embroidered iron-on patch on dark felt, visible satin stitch thread texture throughout each panel, European football pride, centered, full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, flat design without texture, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    }
+  ]
+}
