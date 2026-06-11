@@ -9,6 +9,14 @@ on:
       dst_dir:
         description: 'Dossier destination (ex: produits/worldcup2026_flag_patches_transparent)'
         required: true
+      src_ref:
+        description: 'Commit/ref source si le dossier n est plus dans HEAD (ex: 7622922...)'
+        required: false
+        default: ''
+      mode:
+        description: 'circle (patch rond) ou felt (forme libre sur feutre)'
+        required: false
+        default: 'circle'
 
 permissions:
   contents: write
@@ -33,13 +41,22 @@ jobs:
           python-version: '3.11'
 
       - name: Dépendances
-        run: pip install -q numpy Pillow
+        run: pip install -q numpy Pillow scipy
+
+      - name: Restaurer la source depuis l'historique (si src_ref)
+        if: ${{ github.event.inputs.src_ref != '' }}
+        run: |
+          git fetch --depth=1 origin "${{ github.event.inputs.src_ref }}"
+          git checkout FETCH_HEAD -- "${{ github.event.inputs.src_dir }}"
+          git reset -q -- "${{ github.event.inputs.src_dir }}"
+          echo "$(find "${{ github.event.inputs.src_dir }}" -name '*.png' | wc -l) PNG restaurés"
 
       - name: Détourage par lot (0 €)
         run: |
           python scripts/cutout_circle.py --batch \
             "${{ github.event.inputs.src_dir }}" \
-            "${{ github.event.inputs.dst_dir }}"
+            "${{ github.event.inputs.dst_dir }}" \
+            --mode "${{ github.event.inputs.mode }}"
 
       - name: Commit et push
         run: |

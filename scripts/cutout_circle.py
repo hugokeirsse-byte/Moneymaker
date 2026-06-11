@@ -65,17 +65,81 @@ def cutout(in_path: str, out_path: str, pad: int = 6, feather: int = 3) -> None:
     print(f"+ {os.path.basename(out_path)} : rayon {radius:.0f}px / {w}px, fond transparent")
 
 
+def cutout_felt(in_path: str, out_path: str, feather: int = 3) -> None:
+    """Détourage forme libre : tout ce qui a la couleur du feutre (échantillonnée
+    sur les bords) ET touche le bord devient transparent. Pour les patchs non
+    circulaires sur fond feutre uni. Pixels du patch intacts."""
+    from collections import deque
+    img = Image.open(in_path).convert("RGB")
+    arr = np.array(img)
+    h, w = arr.shape[:2]
+    k = max(8, int(min(h, w) * 0.04))
+    corners = np.concatenate([
+        arr[:k, :k].reshape(-1, 3), arr[:k, -k:].reshape(-1, 3),
+        arr[-k:, :k].reshape(-1, 3), arr[-k:, -k:].reshape(-1, 3),
+    ]).astype(float)
+    felt = corners.mean(axis=0)
+    tol = max(34.0, corners.std(axis=0).mean() * 4) * 3
+    feltlike = np.abs(arr.astype(float) - felt).sum(axis=2) <= tol
+
+    # flood-fill multi-départ depuis tous les pixels feutre du bord
+    bg = np.zeros((h, w), dtype=bool)
+    dq = deque()
+    for x in range(w):
+        for y in (0, h - 1):
+            if feltlike[y, x] and not bg[y, x]:
+                bg[y, x] = True
+                dq.append((y, x))
+    for y in range(h):
+        for x in (0, w - 1):
+            if feltlike[y, x] and not bg[y, x]:
+                bg[y, x] = True
+                dq.append((y, x))
+    while dq:
+        y, x = dq.popleft()
+        for ny, nx in ((y - 1, x), (y + 1, x), (y, x - 1), (y, x + 1)):
+            if 0 <= ny < h and 0 <= nx < w and feltlike[ny, nx] and not bg[ny, nx]:
+                bg[ny, nx] = True
+                dq.append((ny, nx))
+
+    # adoucissement du bord : érosion progressive sur `feather` px
+    alpha = np.where(bg, 0, 255).astype(float)
+    try:
+        from scipy.ndimage import distance_transform_edt
+        dist_in = distance_transform_edt(~bg)
+        alpha = np.clip(dist_in / feather, 0.0, 1.0) * 255
+    except ImportError:
+        pass
+    rgba = np.dstack([arr, alpha.astype(np.uint8)])
+    Image.fromarray(rgba, "RGBA").save(out_path, format="PNG", dpi=(300, 300), optimize=False)
+    pct = 100 * bg.mean()
+    print(f"+ {os.path.basename(out_path)} : fond feutre {pct:.0f}% transparent (forme libre)")
+
+
 def main() -> int:
     if sys.argv[1] == "--batch":
         src, dst = sys.argv[2], sys.argv[3]
+        mode = sys.argv[5] if len(sys.argv) > 5 and sys.argv[4] == "--mode" else "circle"
         os.makedirs(dst, exist_ok=True)
-        n = 0
-        for f in sorted(os.listdir(src)):
-            if f.lower().endswith(".png"):
-                cutout(os.path.join(src, f), os.path.join(dst, f))
-                n += 1
-        print(f"{n} images détourées → {dst}")
-        return 0
+        ok, ko = 0, []
+        for root, dirs, files in os.walk(src):
+            dirs[:] = [d for d in dirs if d != "thumbnails"]
+            for f in sorted(files):
+                if not f.lower().endswith(".png"):
+                    continue
+                out = os.path.join(dst, f)
+                try:
+                    if mode == "felt":
+                        cutout_felt(os.path.join(root, f), out)
+                    else:
+                        cutout(os.path.join(root, f), out)
+                    ok += 1
+                except Exception as exc:  # noqa: BLE001
+                    ko.append((f, str(exc)))
+        print(f"{ok} images détourées → {dst}")
+        for f, e in ko:
+            print(f"  ❌ {f}: {e}")
+        return 0 if not ko else 1
     pad = int(sys.argv[4]) if len(sys.argv) > 4 and sys.argv[3] == "--pad" else 6
     cutout(sys.argv[1], sys.argv[2], pad=pad)
     return 0
