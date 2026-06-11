@@ -230,6 +230,7 @@ class RunwareGenerator:
         width: int = GENERATION_SIZE,
         height: int = GENERATION_SIZE,
         steps: int = 28,
+        require_upscale: bool = False,
     ) -> Tuple[Optional[bytes], Optional[str]]:
         """
         Génère une image (1024×1024) puis l'upscale via Runware AI (Real-ESRGAN × 4 → 4096×4096).
@@ -267,6 +268,12 @@ class RunwareGenerator:
                 if image_bytes:
                     logger.info("[runware] ✅ image 4096×4096 via upscale IA × %d", upscale_factor)
                     return image_bytes, base_url
+
+            # require_upscale : pas de fallback basse résolution — l'image est
+            # rejetée pour être régénérée (sinon le packager l'étirerait en LANCZOS).
+            if require_upscale:
+                logger.error("[runware] upscale IA échoué et require_upscale=True — image rejetée")
+                continue
 
             # Fallback : si l'upscale échoue, retourne quand même le 1024×1024
             logger.warning("[runware] upscale IA échoué — fallback sur 1024×1024 (qualité réduite)")

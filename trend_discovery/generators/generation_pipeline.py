@@ -60,6 +60,7 @@ class GenerationPipeline:
         gen_height: Optional[int] = None,
         steps: Optional[int] = None,
         min_px: Optional[int] = None,
+        require_ai_upscale: bool = False,
     ):
         from trend_discovery.generators.prompt_builder import PromptBuilder
         from trend_discovery.generators.runware_generator import RunwareGenerator
@@ -81,6 +82,8 @@ class GenerationPipeline:
             self._gen_overrides["height"] = int(gen_height)
         if steps:
             self._gen_overrides["steps"] = int(steps)
+        if require_ai_upscale:
+            self._gen_overrides["require_upscale"] = True
 
     def _get_niche_keywords(self, opp) -> List[str]:
         """Extrait les mots-clés d'un OpportunityScore pour le prompt."""

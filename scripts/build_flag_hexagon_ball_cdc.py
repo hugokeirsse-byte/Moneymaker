@@ -124,6 +124,7 @@ doc = {
         "steps": 30,
         "upscale_factor": 2,
         "target_px": 4000,
+        "require_ai_upscale": True,
     },
     "briefs": briefs,
 }

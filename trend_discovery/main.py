@@ -1032,6 +1032,7 @@ def generate_all_base(
             gen_height=gen_cfg.get("height"),
             steps=gen_cfg.get("steps"),
             min_px=gen_cfg.get("target_px"),
+            require_ai_upscale=bool(gen_cfg.get("require_ai_upscale", False)),
         )
         auditor = QualityAuditor()
     except Exception as exc:
