@@ -1,0 +1,91 @@
+{
+  "generated_at": "2026-06-11T20:37:29Z",
+  "series": "worldcup2026_ball_final_lot4",
+  "styles": [
+    "embroidery_patch"
+  ],
+  "description": "Ballons Telstar finals — colombia, uruguay, croatia, switzerland, belgium (prompt durci, seeds exacts épinglés).",
+  "platform": "redbubble",
+  "total_briefs": 5,
+  "generation": {
+    "model": "runware:400@1",
+    "width": 2048,
+    "height": 2048,
+    "steps": 40,
+    "upscale_factor": 2,
+    "target_px": 4000,
+    "require_ai_upscale": true
+  },
+  "briefs": [
+    {
+      "name": "colombia — Telstar Flag Ball final",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "colombia_telstar_lot4",
+      "_idiom": "COLOMBIA",
+      "_canva_text": "COLOMBIA",
+      "ai_generation": {
+        "positive_prompt": "Transform this exact image into a photographic macro shot of a circular embroidered iron-on patch on dark charcoal felt. The source image is the exact blueprint: do not move, resize, merge, add or omit ANY panel, and do not change the number of stripes, stars, leaves, crosses or emblem elements of any flag. Only the material rendering changes: flat colors become dense embroidered thread. The ball is a classic 32-panel Telstar soccer ball; every pentagon panel carries the flag of Colombia — a wide golden yellow upper half over blue and red horizontal bands; every hexagon panel stays plain cream-white satin stitch with no pattern whatsoever. The flag design is strictly identical in every pentagon and fills the same fraction of its panel — pentagons near the silhouette are smaller because of the spherical perspective, so their flags are proportionally smaller but otherwise identical, exactly as in the source image. Render all panel seams as clean black chain-stitch embroidery following the curvature of the sphere, give the ball gentle three-dimensional spherical shading, and turn the colored rings into a thick twisted gold and red rope border around the circular patch edge. Dense embroidery texture everywhere: individual thread strands clearly visible, raised satin-stitch relief catching soft studio light, subtle textile sheen. The whole circular patch fully visible with a clear margin of dark felt all around. No text, no letters, no numbers, no logos, no watermark.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "reference_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/Moneymaker/5953179ca4c9c9832aba4267c4320566d1c10358/data/seeds/colombia_telstar_seed.png"
+      }
+    },
+    {
+      "name": "uruguay — Telstar Flag Ball final",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "uruguay_telstar_lot4",
+      "_idiom": "URUGUAY",
+      "_canva_text": "URUGUAY",
+      "ai_generation": {
+        "positive_prompt": "Transform this exact image into a photographic macro shot of a circular embroidered iron-on patch on dark charcoal felt. The source image is the exact blueprint: do not move, resize, merge, add or omit ANY panel, and do not change the number of stripes, stars, leaves, crosses or emblem elements of any flag. Only the material rendering changes: flat colors become dense embroidered thread. The ball is a classic 32-panel Telstar soccer ball; every pentagon panel carries the flag of Uruguay — nine white and blue horizontal stripes with the golden Sun of May in the white upper-left canton; every hexagon panel stays plain cream-white satin stitch with no pattern whatsoever. The flag design is strictly identical in every pentagon and fills the same fraction of its panel — pentagons near the silhouette are smaller because of the spherical perspective, so their flags are proportionally smaller but otherwise identical, exactly as in the source image. Render all panel seams as clean black chain-stitch embroidery following the curvature of the sphere, give the ball gentle three-dimensional spherical shading, and turn the colored rings into a thick twisted blue and gold rope border around the circular patch edge. Dense embroidery texture everywhere: individual thread strands clearly visible, raised satin-stitch relief catching soft studio light, subtle textile sheen. The whole circular patch fully visible with a clear margin of dark felt all around. No text, no letters, no numbers, no logos, no watermark.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "reference_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/Moneymaker/5953179ca4c9c9832aba4267c4320566d1c10358/data/seeds/uruguay_telstar_seed.png"
+      }
+    },
+    {
+      "name": "croatia — Telstar Flag Ball final",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "croatia_telstar_lot4",
+      "_idiom": "CROATIA",
+      "_canva_text": "CROATIA",
+      "ai_generation": {
+        "positive_prompt": "Transform this exact image into a photographic macro shot of a circular embroidered iron-on patch on dark charcoal felt. The source image is the exact blueprint: do not move, resize, merge, add or omit ANY panel, and do not change the number of stripes, stars, leaves, crosses or emblem elements of any flag. Only the material rendering changes: flat colors become dense embroidered thread. The ball is a classic 32-panel Telstar soccer ball; every pentagon panel carries the flag of Croatia — horizontal red, white and blue bands with the red-and-white checkerboard shield at the center, the checkerboard EXACTLY identical in every pentagon; every hexagon panel stays plain cream-white satin stitch with no pattern whatsoever. The flag design is strictly identical in every pentagon and fills the same fraction of its panel — pentagons near the silhouette are smaller because of the spherical perspective, so their flags are proportionally smaller but otherwise identical, exactly as in the source image. Render all panel seams as clean black chain-stitch embroidery following the curvature of the sphere, give the ball gentle three-dimensional spherical shading, and turn the colored rings into a thick twisted red and white rope border around the circular patch edge. Dense embroidery texture everywhere: individual thread strands clearly visible, raised satin-stitch relief catching soft studio light, subtle textile sheen. The whole circular patch fully visible with a clear margin of dark felt all around. No text, no letters, no numbers, no logos, no watermark.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "reference_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/Moneymaker/5953179ca4c9c9832aba4267c4320566d1c10358/data/seeds/croatia_telstar_seed.png"
+      }
+    },
+    {
+      "name": "switzerland — Telstar Flag Ball final",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "switzerland_telstar_lot4",
+      "_idiom": "SWITZERLAND",
+      "_canva_text": "SWITZERLAND",
+      "ai_generation": {
+        "positive_prompt": "Transform this exact image into a photographic macro shot of a circular embroidered iron-on patch on dark charcoal felt. The source image is the exact blueprint: do not move, resize, merge, add or omit ANY panel, and do not change the number of stripes, stars, leaves, crosses or emblem elements of any flag. Only the material rendering changes: flat colors become dense embroidered thread. The ball is a classic 32-panel Telstar soccer ball; every pentagon panel carries the flag of Switzerland — a bold white cross centered on a red ground; every hexagon panel stays plain cream-white satin stitch with no pattern whatsoever. The flag design is strictly identical in every pentagon and fills the same fraction of its panel — pentagons near the silhouette are smaller because of the spherical perspective, so their flags are proportionally smaller but otherwise identical, exactly as in the source image. Render all panel seams as clean black chain-stitch embroidery following the curvature of the sphere, give the ball gentle three-dimensional spherical shading, and turn the colored rings into a thick twisted red and white rope border around the circular patch edge. Dense embroidery texture everywhere: individual thread strands clearly visible, raised satin-stitch relief catching soft studio light, subtle textile sheen. The whole circular patch fully visible with a clear margin of dark felt all around. No text, no letters, no numbers, no logos, no watermark.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "reference_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/Moneymaker/5953179ca4c9c9832aba4267c4320566d1c10358/data/seeds/switzerland_telstar_seed.png"
+      }
+    },
+    {
+      "name": "belgium — Telstar Flag Ball final",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "belgium_telstar_lot4",
+      "_idiom": "BELGIUM",
+      "_canva_text": "BELGIUM",
+      "ai_generation": {
+        "positive_prompt": "Transform this exact image into a photographic macro shot of a circular embroidered iron-on patch on dark charcoal felt. The source image is the exact blueprint: do not move, resize, merge, add or omit ANY panel, and do not change the number of stripes, stars, leaves, crosses or emblem elements of any flag. Only the material rendering changes: flat colors become dense embroidered thread. The ball is a classic 32-panel Telstar soccer ball; every pentagon panel carries the flag of Belgium — vertical black, yellow and red bands; every hexagon panel stays plain cream-white satin stitch with no pattern whatsoever. The flag design is strictly identical in every pentagon and fills the same fraction of its panel — pentagons near the silhouette are smaller because of the spherical perspective, so their flags are proportionally smaller but otherwise identical, exactly as in the source image. Render all panel seams as clean black chain-stitch embroidery following the curvature of the sphere, give the ball gentle three-dimensional spherical shading, and turn the colored rings into a thick twisted gold and black rope border around the circular patch edge. Dense embroidery texture everywhere: individual thread strands clearly visible, raised satin-stitch relief catching soft studio light, subtle textile sheen. The whole circular patch fully visible with a clear margin of dark felt all around. No text, no letters, no numbers, no logos, no watermark.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "reference_image_url": "https://raw.githubusercontent.com/hugokeirsse-byte/Moneymaker/5953179ca4c9c9832aba4267c4320566d1c10358/data/seeds/belgium_telstar_seed.png"
+      }
+    }
+  ]
+}
