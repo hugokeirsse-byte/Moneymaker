@@ -92,55 +92,99 @@ def flag_germany(td, x0, y0, x1, y1):
 
 
 def _maple_leaf(td, cx, cy, s, color):
-    """Feuille d'érable stylisée (silhouette symétrique à 11 pointes)."""
-    half = [(0.00, -1.00), (0.10, -0.62), (0.32, -0.78), (0.26, -0.42),
-            (0.58, -0.52), (0.48, -0.22), (0.92, -0.26), (0.66, 0.06),
-            (0.84, 0.30), (0.40, 0.26), (0.46, 0.62), (0.12, 0.40),
-            (0.06, 0.42)]
-    pts = half + [(0.04, 1.00), (-0.04, 1.00)] + [(-x, y) for x, y in reversed(half)]
+    """Feuille d'érable du drapeau canadien — silhouette fidèle à 11 pointes,
+    lobes pointus et échancrures profondes (demi-contour miroité + tige)."""
+    half = [(0.000, -1.000),                       # pointe sommitale
+            (0.060, -0.760), (0.260, -0.860),      # échancrure + lobe haut-droit
+            (0.190, -0.560), (0.450, -0.700),      # échancrure + lobe droit sup.
+            (0.360, -0.350), (0.755, -0.500),      # échancrure + grand lobe droit
+            (0.620, -0.180), (1.000, -0.220),      # échancrure + pointe latérale
+            (0.860,  0.080), (0.980,  0.180),      # creux + pointe basse latérale
+            (0.520,  0.260), (0.560,  0.460),      # échancrure + lobe bas-droit
+            (0.200,  0.320)]                       # vers la tige
+    stem = [(0.050, 0.360), (0.045, 0.980), (-0.045, 0.980), (-0.050, 0.360)]
+    pts = half + stem + [(-x, y) for x, y in reversed(half)]
     td.polygon([(cx + x * s, cy + y * s) for x, y in pts], fill=color)
 
 
 def flag_canada(td, x0, y0, x1, y1):
-    """Bandes rouge / blanc / rouge (1:2:1) + feuille d'érable rouge au centre."""
+    """Bandes rouge / blanc / rouge (1:2:1), feuille d'érable centrée occupant
+    ~3/4 de la hauteur du carré blanc (proportions du drapeau officiel)."""
     red, white = (216, 30, 5), (255, 255, 255)
     w = x1 - x0
     td.rectangle([x0, y0, x0 + w / 4, y1], fill=red)
     td.rectangle([x0 + w / 4, y0, x1 - w / 4, y1], fill=white)
     td.rectangle([x1 - w / 4, y0, x1, y1], fill=red)
-    _maple_leaf(td, (x0 + x1) / 2, (y0 + y1) / 2, (y1 - y0) * 0.30, red)
+    _maple_leaf(td, (x0 + x1) / 2, (y0 + y1) / 2, (y1 - y0) * 0.38, red)
 
 
 def flag_mexico(td, x0, y0, x1, y1):
-    """Bandes verticales vert / blanc / rouge + emblème aigle simplifié au centre."""
+    """Bandes verticales vert / blanc / rouge + aigle de profil sur cactus,
+    serpent au bec, couronne de laurier — silhouette fidèle simplifiée."""
     green, white, red = (0, 104, 71), (255, 255, 255), (206, 17, 38)
     w = (x1 - x0) / 3
     for k, col in enumerate([green, white, red]):
         td.rectangle([x0 + k * w, y0, x0 + (k + 1) * w, y1], fill=col)
-    # aigle stylisé brun-doré perché, ailes ouvertes (silhouette simple)
     cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
-    s = (y1 - y0) * 0.16
-    brown = (107, 68, 35)
-    td.polygon([(cx - s, cy), (cx - s * 0.3, cy - s * 0.7), (cx, cy - s * 0.4),
-                (cx + s * 0.3, cy - s * 0.7), (cx + s, cy), (cx + s * 0.4, cy + s * 0.3),
-                (cx, cy + s * 0.7), (cx - s * 0.4, cy + s * 0.3)], fill=brown)
-    td.arc([cx - s, cy + s * 0.4, cx + s, cy + s * 1.1], 200, 340,
-           fill=(0, 104, 71), width=max(2, int(s * 0.18)))
+    s = (y1 - y0) * 0.20
+    brown, dark = (121, 78, 40), (74, 46, 22)
+    # corps de l'aigle de profil (tourné vers la gauche), aile relevée
+    body = [(cx - 0.55 * s, cy - 0.05 * s), (cx - 0.42 * s, cy - 0.42 * s),  # poitrail→tête
+            (cx - 0.62 * s, cy - 0.52 * s), (cx - 0.46 * s, cy - 0.56 * s),  # bec
+            (cx - 0.25 * s, cy - 0.62 * s),                                   # crâne
+            (cx + 0.10 * s, cy - 0.50 * s), (cx + 0.65 * s, cy - 0.80 * s),  # départ aile
+            (cx + 0.95 * s, cy - 0.45 * s), (cx + 0.70 * s, cy - 0.30 * s),  # plumes
+            (cx + 0.85 * s, cy - 0.05 * s), (cx + 0.55 * s, cy + 0.05 * s),  # bas d'aile
+            (cx + 0.70 * s, cy + 0.35 * s), (cx + 0.30 * s, cy + 0.30 * s),  # queue
+            (cx + 0.05 * s, cy + 0.55 * s), (cx - 0.20 * s, cy + 0.45 * s)]  # serres
+    td.polygon(body, fill=brown)
+    # serpent ondulé tenu au bec
+    td.line([(cx - 0.60 * s, cy - 0.50 * s), (cx - 0.85 * s, cy - 0.30 * s),
+             (cx - 0.62 * s, cy - 0.15 * s), (cx - 0.88 * s, cy + 0.02 * s)],
+            fill=dark, width=max(2, int(s * 0.10)), joint="curve")
+    # cactus sous les serres
+    td.rectangle([cx - 0.10 * s, cy + 0.50 * s, cx + 0.12 * s, cy + 0.95 * s], fill=green)
+    td.ellipse([cx - 0.30 * s, cy + 0.55 * s, cx - 0.06 * s, cy + 0.80 * s], fill=green)
+    td.ellipse([cx + 0.08 * s, cy + 0.52 * s, cx + 0.32 * s, cy + 0.77 * s], fill=green)
+    # couronne de laurier de part et d'autre
+    td.arc([cx - 1.05 * s, cy - 0.10 * s, cx - 0.30 * s, cy + 1.05 * s], 290, 110,
+           fill=green, width=max(2, int(s * 0.12)))
+    td.arc([cx + 0.30 * s, cy - 0.10 * s, cx + 1.05 * s, cy + 1.05 * s], 70, 250,
+           fill=green, width=max(2, int(s * 0.12)))
 
 
 def flag_brazil(td, x0, y0, x1, y1):
-    """Champ vert, losange or, cercle bleu avec bande blanche (sans texte)."""
+    """Proportions officielles : losange or à 1/12 des bords (presque pleine
+    largeur), globe bleu de diamètre ~0.5×hauteur, bande blanche incurvée."""
     green, gold, blue, white = (0, 151, 57), (254, 221, 0), (0, 39, 118), (255, 255, 255)
     td.rectangle([x0, y0, x1, y1], fill=green)
     cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
-    w, h = (x1 - x0) * 0.42, (y1 - y0) * 0.42
+    fw, fh = x1 - x0, y1 - y0
+    # losange : marge officielle de 1/12 de la largeur sur chaque bord
+    w, h = fw * (0.5 - 1 / 12), fh * (0.5 - 1 / 12)
     td.polygon([(cx, cy - h), (cx + w, cy), (cx, cy + h), (cx - w, cy)], fill=gold)
-    r = min(w, h) * 0.62
+    # globe : diamètre = 0.5 × hauteur du drapeau
+    r = fh * 0.25
     td.ellipse([cx - r, cy - r, cx + r, cy + r], fill=blue)
-    td.arc([cx - r * 1.05, cy - r * 0.55, cx + r * 1.05, cy + r * 1.45], 200, 320,
-           fill=white, width=max(2, int(r * 0.18)))
-    for dx, dy in [(-0.4, 0.35), (0.1, 0.5), (0.45, 0.2), (-0.1, -0.05), (0.25, 0.65)]:
-        _star(td, cx + dx * r, cy + dy * r, r * 0.07, white)
+    # bande blanche incurvée, découpée au globe (jamais hors du cercle)
+    band_w = max(3, int(r * 0.20))
+    im = td._image
+    overlay = Image.new("RGB", im.size, (0, 0, 0))
+    od = ImageDraw.Draw(overlay)
+    od.arc([cx - 2.6 * r, cy - 0.62 * r, cx + 1.04 * r, cy + 3.2 * r], 285, 357,
+           fill=white, width=band_w)
+    mask = Image.new("L", im.size, 0)
+    md = ImageDraw.Draw(mask)
+    md.ellipse([cx - r, cy - r, cx + r, cy + r], fill=255)
+    band_mask = overlay.convert("L").point(lambda v: 255 if v > 10 else 0)
+    from PIL import ImageChops
+    final_mask = ImageChops.multiply(mask, band_mask)
+    im.paste(white, (0, 0), final_mask)
+    # étoiles : une au-dessus de la bande, le reste en dessous (esprit du vrai)
+    _star(td, cx - 0.05 * r, cy - 0.55 * r, r * 0.085, white)
+    for dx, dy in [(-0.55, 0.30), (-0.20, 0.52), (0.18, 0.38), (0.50, 0.55),
+                   (-0.35, 0.75), (0.05, 0.80)]:
+        _star(td, cx + dx * r, cy + dy * r, r * 0.075, white)
 
 
 FLAGS["england"] = (flag_england, FLAGS["england"][1])
