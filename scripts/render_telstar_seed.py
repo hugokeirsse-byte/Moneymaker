@@ -65,7 +65,89 @@ FLAGS = {
     # pays: (peintre, (couleur anneau extérieur, couleur anneau intérieur))
     "france": (flag_france, ((212, 175, 55), (16, 24, 64))),       # or + navy
     "usa": (flag_usa, ((60, 59, 110), (178, 34, 52))),             # navy + rouge
+    "england": (None, ((200, 16, 46), (255, 255, 255))),           # rouge + blanc
+    "mexico": (None, ((0, 104, 71), (206, 17, 38))),               # vert + rouge
+    "canada": (None, ((216, 30, 5), (255, 255, 255))),             # rouge + blanc
+    "germany": (None, ((0, 0, 0), (255, 206, 0))),                 # noir + or
+    "brazil": (None, ((0, 151, 57), (254, 221, 0))),               # vert + or
 }
+
+
+def flag_england(td, x0, y0, x1, y1):
+    """Croix de St George : croix rouge (largeur 1/5 de la hauteur) sur blanc."""
+    red, white = (200, 16, 46), (255, 255, 255)
+    td.rectangle([x0, y0, x1, y1], fill=white)
+    h = y1 - y0
+    bar = h / 5
+    cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
+    td.rectangle([x0, cy - bar / 2, x1, cy + bar / 2], fill=red)
+    td.rectangle([cx - bar / 2, y0, cx + bar / 2, y1], fill=red)
+
+
+def flag_germany(td, x0, y0, x1, y1):
+    """Trois bandes horizontales noir / rouge / or."""
+    h = (y1 - y0) / 3
+    for k, col in enumerate([(0, 0, 0), (221, 0, 0), (255, 206, 0)]):
+        td.rectangle([x0, y0 + k * h, x1, y0 + (k + 1) * h], fill=col)
+
+
+def _maple_leaf(td, cx, cy, s, color):
+    """Feuille d'érable stylisée (silhouette symétrique à 11 pointes)."""
+    half = [(0.00, -1.00), (0.10, -0.62), (0.32, -0.78), (0.26, -0.42),
+            (0.58, -0.52), (0.48, -0.22), (0.92, -0.26), (0.66, 0.06),
+            (0.84, 0.30), (0.40, 0.26), (0.46, 0.62), (0.12, 0.40),
+            (0.06, 0.42)]
+    pts = half + [(0.04, 1.00), (-0.04, 1.00)] + [(-x, y) for x, y in reversed(half)]
+    td.polygon([(cx + x * s, cy + y * s) for x, y in pts], fill=color)
+
+
+def flag_canada(td, x0, y0, x1, y1):
+    """Bandes rouge / blanc / rouge (1:2:1) + feuille d'érable rouge au centre."""
+    red, white = (216, 30, 5), (255, 255, 255)
+    w = x1 - x0
+    td.rectangle([x0, y0, x0 + w / 4, y1], fill=red)
+    td.rectangle([x0 + w / 4, y0, x1 - w / 4, y1], fill=white)
+    td.rectangle([x1 - w / 4, y0, x1, y1], fill=red)
+    _maple_leaf(td, (x0 + x1) / 2, (y0 + y1) / 2, (y1 - y0) * 0.30, red)
+
+
+def flag_mexico(td, x0, y0, x1, y1):
+    """Bandes verticales vert / blanc / rouge + emblème aigle simplifié au centre."""
+    green, white, red = (0, 104, 71), (255, 255, 255), (206, 17, 38)
+    w = (x1 - x0) / 3
+    for k, col in enumerate([green, white, red]):
+        td.rectangle([x0 + k * w, y0, x0 + (k + 1) * w, y1], fill=col)
+    # aigle stylisé brun-doré perché, ailes ouvertes (silhouette simple)
+    cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
+    s = (y1 - y0) * 0.16
+    brown = (107, 68, 35)
+    td.polygon([(cx - s, cy), (cx - s * 0.3, cy - s * 0.7), (cx, cy - s * 0.4),
+                (cx + s * 0.3, cy - s * 0.7), (cx + s, cy), (cx + s * 0.4, cy + s * 0.3),
+                (cx, cy + s * 0.7), (cx - s * 0.4, cy + s * 0.3)], fill=brown)
+    td.arc([cx - s, cy + s * 0.4, cx + s, cy + s * 1.1], 200, 340,
+           fill=(0, 104, 71), width=max(2, int(s * 0.18)))
+
+
+def flag_brazil(td, x0, y0, x1, y1):
+    """Champ vert, losange or, cercle bleu avec bande blanche (sans texte)."""
+    green, gold, blue, white = (0, 151, 57), (254, 221, 0), (0, 39, 118), (255, 255, 255)
+    td.rectangle([x0, y0, x1, y1], fill=green)
+    cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
+    w, h = (x1 - x0) * 0.42, (y1 - y0) * 0.42
+    td.polygon([(cx, cy - h), (cx + w, cy), (cx, cy + h), (cx - w, cy)], fill=gold)
+    r = min(w, h) * 0.62
+    td.ellipse([cx - r, cy - r, cx + r, cy + r], fill=blue)
+    td.arc([cx - r * 1.05, cy - r * 0.55, cx + r * 1.05, cy + r * 1.45], 200, 320,
+           fill=white, width=max(2, int(r * 0.18)))
+    for dx, dy in [(-0.4, 0.35), (0.1, 0.5), (0.45, 0.2), (-0.1, -0.05), (0.25, 0.65)]:
+        _star(td, cx + dx * r, cy + dy * r, r * 0.07, white)
+
+
+FLAGS["england"] = (flag_england, FLAGS["england"][1])
+FLAGS["mexico"] = (flag_mexico, FLAGS["mexico"][1])
+FLAGS["canada"] = (flag_canada, FLAGS["canada"][1])
+FLAGS["germany"] = (flag_germany, FLAGS["germany"][1])
+FLAGS["brazil"] = (flag_brazil, FLAGS["brazil"][1])
 
 
 # ───────────────────────── géométrie icosaèdre tronqué ─────────────────────────
