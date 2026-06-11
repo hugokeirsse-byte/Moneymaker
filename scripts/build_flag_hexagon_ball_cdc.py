@@ -4,14 +4,17 @@ build_flag_hexagon_ball_cdc.py — CDC "ballon hexagones-drapeau", 1 patch par p
 
 Patch rond style broderie cousue main : un ballon de foot classique dont les
 hexagones noirs sont remplacés par le drapeau du pays, répété dans chaque
-hexagone. 34 nations (mêmes participants que le CDC flag_patches v1).
+hexagone. 48 nations qualifiées (liste corrigée du 11/06 — voir
+build_flag_patch_cdc.py pour la provenance).
 Texte pays ajouté ensuite via scripts/overlay_patch_text.py (_canva_text).
+Génération : FLUX.2 Dev (runware:400@1) 2048×2048 + upscale ×2 → 4096px.
 """
 import json
 from datetime import datetime, timezone
 
 # (label Canva, description du drapeau à l'échelle hexagone, couleurs du liseré)
 COUNTRIES = {
+    # ——— Europe (16) ———
     "france": ("FRANCE", "vertical bands of deep royal blue, crisp white and vivid red", "gold and deep navy"),
     "england": ("ENGLAND", "a bold red St George's cross on a pure white ground", "navy blue and red"),
     "spain": ("SPAIN", "horizontal bands of rich crimson red, golden yellow and crimson red", "red and gold"),
@@ -21,31 +24,49 @@ COUNTRIES = {
     "belgium": ("BELGIUM", "vertical bands of jet black, bright golden yellow and bold red", "gold and black"),
     "switzerland": ("SWITZERLAND", "a bold white cross on a vivid crimson red ground", "red and white"),
     "croatia": ("CROATIA", "horizontal bands of red, white and dark blue with a tiny red and white checkerboard accent", "red and white"),
-    "denmark": ("DENMARK", "a white Nordic cross on a deep cherry red ground", "red and white"),
     "austria": ("AUSTRIA", "horizontal bands of rich red, pure white and rich red", "red and white"),
-    "serbia": ("SERBIA", "horizontal bands of deep royal blue, vivid red and white", "red and navy"),
-    "turkey": ("TURKEY", "a white crescent moon and five-pointed star on a glowing crimson red ground", "red and white"),
-    "ukraine": ("UKRAINE", "a horizontal split of vivid cerulean blue over warm golden yellow", "blue and gold"),
+    "turkey": ("TURKIYE", "a white crescent moon and five-pointed star on a glowing crimson red ground", "red and white"),
+    "norway": ("NORWAY", "a deep blue Nordic cross outlined in white on a scarlet red ground", "red and navy"),
+    "scotland": ("SCOTLAND", "a bold white diagonal saltire cross on a royal azure blue ground", "navy and white"),
+    "sweden": ("SWEDEN", "a golden yellow Nordic cross on a bright royal blue ground", "blue and gold"),
+    "czechia": ("CZECHIA", "white over red horizontal halves with a deep royal blue triangle at the left", "red and blue"),
+    "bosnia": ("BOSNIA", "a golden yellow triangle and a diagonal row of small white stars on a royal blue ground", "blue and gold"),
+    # ——— Amérique du Sud (6) ———
     "argentina": ("ARGENTINA", "horizontal bands of light sky blue, white and light sky blue with a tiny golden sun", "sky blue and gold"),
     "brazil": ("BRAZIL", "a golden yellow diamond on a vivid forest green ground with a tiny royal blue sphere", "green and gold"),
     "uruguay": ("URUGUAY", "alternating white and cerulean blue stripes with a tiny golden sun", "blue and gold"),
     "colombia": ("COLOMBIA", "a wide golden yellow band over narrow deep blue and bold red bands", "gold and red"),
     "ecuador": ("ECUADOR", "horizontal bands of bright golden yellow, vivid royal blue and bold red", "gold and blue"),
+    "paraguay": ("PARAGUAY", "horizontal bands of bold red, pure white and royal blue with a tiny golden star emblem", "red and blue"),
+    # ——— Amérique du Nord & Caraïbes (6) ———
     "usa": ("USA", "red and white stripes with a deep navy blue canton dotted with tiny white stars", "red and navy"),
     "canada": ("CANADA", "a red maple leaf on a white center between two red side bands", "red and white"),
     "mexico": ("MEXICO", "vertical bands of rich forest green, bright white and bold red with a tiny golden eagle emblem", "green and red"),
     "panama": ("PANAMA", "four quadrants of white and cerulean blue with tiny blue and red five-pointed stars", "red and blue"),
-    "honduras": ("HONDURAS", "horizontal bands of cerulean blue, pure white and cerulean blue with tiny blue stars", "blue and white"),
+    "haiti": ("HAITI", "royal blue over bold red horizontal halves with a tiny white center panel", "blue and red"),
+    "curacao": ("CURACAO", "a deep ultramarine blue ground with a golden yellow stripe and two white stars", "blue and gold"),
+    # ——— Asie & Océanie (10) ———
     "japan": ("JAPAN", "a single bold crimson red circle centered on a pure white ground", "red and white"),
     "south_korea": ("SOUTH KOREA", "a red and blue taeguk yin-yang circle with short black trigram bars on a white ground", "navy and red"),
     "australia": ("AUSTRALIA", "a deep azure blue ground with a tiny Union Jack corner and small white stars of the Southern Cross", "navy and gold"),
     "iran": ("IRAN", "horizontal bands of deep forest green, pure white and deep red", "green and red"),
     "saudi_arabia": ("SAUDI ARABIA", "a deep emerald green ground with a tiny white horizontal sword beneath ornamental white scrollwork", "green and white"),
+    "qatar": ("QATAR", "a deep maroon ground with a white serrated band of nine sharp points along one side", "maroon and white"),
+    "iraq": ("IRAQ", "horizontal bands of bold red, pure white and jet black with a small ornamental green emblem", "red and green"),
+    "jordan": ("JORDAN", "horizontal bands of black, white and green with a red triangle bearing a tiny white star", "red and white"),
+    "uzbekistan": ("UZBEKISTAN", "horizontal bands of sky blue, white and green separated by thin red lines with a tiny white crescent and stars", "sky blue and green"),
+    "new_zealand": ("NEW ZEALAND", "a deep royal azure blue ground with a tiny Union Jack corner and small red stars of the Southern Cross", "navy and white"),
+    # ——— Afrique (10) ———
     "morocco": ("MOROCCO", "a green interlaced five-pointed star on a deep crimson red ground", "red and green"),
     "senegal": ("SENEGAL", "vertical bands of forest green, golden yellow and bold red with a tiny green star", "green and gold"),
-    "nigeria": ("NIGERIA", "vertical bands of deep forest green, pure white and deep forest green", "green and white"),
     "ivory_coast": ("IVORY COAST", "vertical bands of warm tangerine orange, pure white and lush forest green", "orange and green"),
-    "new_zealand": ("NEW ZEALAND", "a deep royal azure blue ground with a tiny Union Jack corner and small red stars of the Southern Cross", "navy and white"),
+    "algeria": ("ALGERIA", "a vertical split of emerald green and white with a red crescent and star at the center", "green and red"),
+    "tunisia": ("TUNISIA", "a bold red ground with a white circle containing a red crescent and star", "red and white"),
+    "egypt": ("EGYPT", "horizontal bands of red, white and black with a small golden eagle emblem at the center", "gold and black"),
+    "ghana": ("GHANA", "horizontal bands of red, golden yellow and green with a black five-pointed star at the center", "gold and green"),
+    "south_africa": ("SOUTH AFRICA", "a green horizontal Y shape edged in white and gold separating red, blue and black sections", "green and gold"),
+    "cape_verde": ("CAPE VERDE", "a deep blue ground crossed by white and red stripes with a ring of small golden stars", "blue and gold"),
+    "congo_dr": ("DR CONGO", "a sky blue ground with a diagonal red stripe edged in yellow and a golden star in the corner", "sky blue and red"),
 }
 
 PROMPT_TEMPLATE = (
@@ -56,9 +77,11 @@ PROMPT_TEMPLATE = (
     "panels stay cream white satin stitch like a traditional football. Bold black "
     "chain-stitch outlines between all panels of the ball. Thick twisted {border} rope "
     "border around the circular patch edge. Embroidered iron-on patch on dark felt, "
-    "hand-sewn look with visible satin stitch thread texture throughout each panel, "
-    "centered composition, full circular design entirely visible with clear margin, "
-    "no text no letters no words."
+    "hand-sewn look with visible satin stitch thread texture throughout each panel. "
+    "Ultra-detailed macro embroidery rendering: individual thread strands clearly "
+    "visible, raised stitch relief catching soft studio light, subtle textile sheen, "
+    "crisp clean edges. Centered composition, full circular design entirely visible "
+    "with clear margin, no text no letters no words."
 )
 
 NEG = "text, letters, words, watermark, photorealistic, flat design without texture, cropped edges, extra balls"
@@ -88,15 +111,24 @@ doc = {
     "description": (
         "World Cup 2026 — soccer ball embroidery patch per nation: the black hexagons "
         "of a classic football replaced by that single country's flag, repeated in every "
-        "hexagon. 34 nations, one circular patch each. Country name added via text overlay. "
+        "hexagon. 48 qualified nations, one circular patch each. Country name added via "
+        "text overlay. FLUX.2 Dev 2048px + AI upscale x2. "
         "Supersedes worldcup2026_football_hexagons v1 (mixed-flag variants, cancelled)."
     ),
     "platform": "redbubble",
     "total_briefs": len(briefs),
+    "generation": {
+        "model": "runware:400@1",
+        "width": 2048,
+        "height": 2048,
+        "steps": 30,
+        "upscale_factor": 2,
+        "target_px": 4000,
+    },
     "briefs": briefs,
 }
 
-out = f"reports/redbubble/cahiers_des_charges_worldcup2026_flag_hexagon_balls_{now.strftime('%Y%m%d_%H%M')}.json"
+out = f"reports/redbubble/cahiers_des_charges_worldcup2026_flag_hexagon_balls_v2_{now.strftime('%Y%m%d_%H%M')}.json"
 with open(out, "w", encoding="utf-8") as fh:
     json.dump(doc, fh, indent=2, ensure_ascii=False)
-print(f"{out} : {len(briefs)} briefs (1 ballon hexagones-drapeau par pays)")
+print(f"{out} : {len(briefs)} briefs (1 ballon hexagones-drapeau par pays qualifié)")

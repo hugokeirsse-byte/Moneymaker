@@ -55,6 +55,11 @@ class GenerationPipeline:
         output_dir: str = "./output/spoonflower",
         upscale_factor: int = 4,
         tiling: bool = True,
+        model: Optional[str] = None,
+        gen_width: Optional[int] = None,
+        gen_height: Optional[int] = None,
+        steps: Optional[int] = None,
+        min_px: Optional[int] = None,
     ):
         from trend_discovery.generators.prompt_builder import PromptBuilder
         from trend_discovery.generators.runware_generator import RunwareGenerator
@@ -62,10 +67,20 @@ class GenerationPipeline:
 
         self._builder = PromptBuilder()
         self._runware = RunwareGenerator()
-        self._packager = SpoonflowerPackager(output_dir=output_dir)
+        self._packager = SpoonflowerPackager(output_dir=output_dir, min_px=min_px)
         self._upscale_factor = upscale_factor
         self._output_dir = output_dir
         self._tiling = tiling
+        # Overrides optionnels (CdC "generation" block) — non passés si None
+        self._gen_overrides: Dict = {}
+        if model:
+            self._gen_overrides["model"] = model
+        if gen_width:
+            self._gen_overrides["width"] = int(gen_width)
+        if gen_height:
+            self._gen_overrides["height"] = int(gen_height)
+        if steps:
+            self._gen_overrides["steps"] = int(steps)
 
     def _get_niche_keywords(self, opp) -> List[str]:
         """Extrait les mots-clés d'un OpportunityScore pour le prompt."""
@@ -369,6 +384,7 @@ class GenerationPipeline:
                 seed_image_url=seed_image_url,
                 strength=strength,
                 tiling=tiling,
+                **self._gen_overrides,
             )
 
             if not image_bytes:

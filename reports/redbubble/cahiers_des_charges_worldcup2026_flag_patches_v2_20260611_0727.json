@@ -1,0 +1,692 @@
+{
+  "generated_at": "2026-06-11T07:27:39Z",
+  "series": "worldcup2026_flag_patches_v2",
+  "styles": [
+    "embroidery_patch"
+  ],
+  "description": "World Cup 2026 — 48 qualified-nation flag embroidery patches (corrected list: removes 5 non-qualified nations from v1, adds the 19 missing qualifiers). One circular patch per nation, country name via text overlay. FLUX.2 Dev 2048px + AI upscale x2.",
+  "platform": "redbubble",
+  "total_briefs": 48,
+  "generation": {
+    "model": "runware:400@1",
+    "width": 2048,
+    "height": 2048,
+    "steps": 30,
+    "upscale_factor": 2,
+    "target_px": 4000
+  },
+  "briefs": [
+    {
+      "name": "france — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "france",
+      "_idiom": "FRANCE",
+      "_canva_text": "FRANCE",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the French Tricolore flag: three bold vertical bands of deep royal blue on the left, crisp white in the center, vivid red on the right, each band filled with dense parallel satin-stitch thread texture. A tiny golden Fleur-de-lis silhouette sits at the center cross-point catching light. Thick intertwined rope border of gold and deep navy chain stitch frames the circular edge. Embroidered iron-on patch on dark felt, visible thread grain and textile sheen throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "england — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "england",
+      "_idiom": "ENGLAND",
+      "_canva_text": "ENGLAND",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the St George's Cross: bold thick red cross bars extending precisely to the circle edge on a pure white satin-stitch ground. Red bars rendered in raised satin stitch with clearly visible thread ridges, a tiny golden crown motif embroidered at the exact center where the bars cross. Heavy navy blue twisted rope border around the circular patch edge. Embroidered iron-on patch on dark felt, visible thread texture throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "spain — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "spain",
+      "_idiom": "SPAIN",
+      "_canva_text": "SPAIN",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Spanish flag: two bold horizontal bands of rich crimson red at top and bottom flanking a wide golden yellow ochre center band, each filled with dense diagonal satin stitch thread texture. A tiny heraldic crest embroidered in gold and silver thread at the center yellow band, featuring a miniature crowned shield with castle and lion motifs. Thick red and gold twisted rope border framing the circular shape. Embroidered iron-on patch on dark felt, visible thread grain throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "germany — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "germany",
+      "_idiom": "GERMANY",
+      "_canva_text": "GERMANY",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the German Bundesflagge: three crisp horizontal bands of jet black at top, bold red in the center, and warm golden yellow at the bottom, each rendered in dense parallel satin stitch thread texture with clean precise seam lines between bands. A tiny golden eagle silhouette embroidered at the center in metallic gold thread. Thick black chain-stitch border with golden accent stitching frames the circular edge. Embroidered iron-on patch on dark felt, strong graphic contrast, visible thread texture throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "portugal — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "portugal",
+      "_idiom": "PORTUGAL",
+      "_canva_text": "PORTUGAL",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Portuguese flag: vertical split with deep forest green on the left third and rich crimson red on the right two-thirds, each in dense satin stitch. At the vertical seam, a small embroidered armillary sphere and five blue shield emblems rendered in metallic gold and blue thread, the traditional Portuguese coat of arms. Thick twisted rope border in deep green and gold frames the circular edge. Embroidered iron-on patch on dark felt, royal heraldic feel, visible thread texture throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "netherlands — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "netherlands",
+      "_idiom": "NETHERLANDS",
+      "_canva_text": "NETHERLANDS",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Dutch tricolor: bold horizontal bands of vivid red at top, white in the center, and deep cobalt blue at the bottom, each in dense satin stitch with visible thread ridges. A tiny golden rampant lion silhouette embroidered at the center of the white band. Thick vibrant orange chain-stitch border with blue accent stitches frames the circular edge, honoring Dutch royal colors. Embroidered iron-on patch on dark felt, clean graphic composition, visible thread grain throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "belgium — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "belgium",
+      "_idiom": "BELGIUM",
+      "_canva_text": "BELGIUM",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Belgian tricolor: three vertical bands of jet black on the left, bright golden yellow in the center, and bold red on the right, each in dense upright satin stitch thread texture. A tiny black lion rampant with red claws embroidered in metallic thread centered on the yellow band. Thick black and gold twisted rope border frames the circular edge. Embroidered iron-on patch on dark felt, heraldic and bold, visible thread texture throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "switzerland — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "switzerland",
+      "_idiom": "SWITZERLAND",
+      "_canva_text": "SWITZERLAND",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Swiss flag: vivid crimson red square field filled with dense horizontal satin stitch, a bold upright white cross in the exact center rendered in raised couching stitch with clearly visible white thread ridges, the cross arms precisely proportioned and symmetric. Thick white and red braided rope border around the circular edge. Embroidered iron-on patch on dark felt, clean iconic design, excellent red-white contrast, visible thread grain throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "croatia — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "croatia",
+      "_idiom": "CROATIA",
+      "_canva_text": "CROATIA",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Croatian flag: three horizontal bands of red at top, white in the center, and dark blue at the bottom in dense satin stitch. At the center, a miniature red and white checkerboard shield (sahovnica) embroidered with a tiny five-part historical crown of Croatian coats of arms in gold thread. Rich red and white zigzag chain-stitch border frames the circular edge. Embroidered iron-on patch on dark felt, vibrant heraldic checkerboard, visible thread grain throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "austria — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "austria",
+      "_idiom": "AUSTRIA",
+      "_canva_text": "AUSTRIA",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Austrian flag: three perfectly even horizontal bands of rich red at top, pure white in the center, and bold red at the bottom, each band in dense parallel satin stitch creating a striking minimalist triband. Clean horizontal stitch ridges visible across all three bands. Thick red and white twisted cord border frames the circular edge. Embroidered iron-on patch on dark felt, elegant in its powerful simplicity, visible thread grain throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "turkey — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "turkey",
+      "_idiom": "TURKEY",
+      "_canva_text": "TURKEY",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Turkish flag: glowing crimson red field filled with dense diagonal satin stitch. A white crescent moon opening to the right and a small five-pointed white star beside it, both rendered in raised couching stitch with pearlescent white thread sheen, the crescent casting a subtle glow on the rich red field. Thick gold and red twisted rope border around the circular patch edge. Embroidered iron-on patch on dark felt, elegant Islamic crescent motif, visible thread grain throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "argentina — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "argentina",
+      "_idiom": "ARGENTINA",
+      "_canva_text": "ARGENTINA",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Argentine flag: three horizontal bands of light sky blue at top, white in the center, and light sky blue at the bottom in smooth pale blue satin stitch. At the center of the white band, a radiant Sol de Mayo — a golden sun face with alternating straight and wavy rays embroidered in metallic gold thread with a tiny expressive face at its center — glowing warmly against the white. Thick light blue and white braided rope border. Embroidered iron-on patch on dark felt, glowing golden sun centerpiece, visible thread grain throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "brazil — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "brazil",
+      "_idiom": "BRAZIL",
+      "_canva_text": "BRAZIL",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Brazilian flag: vivid forest green rectangular field in dense satin stitch with a large golden yellow diamond centered on it in contrasting diagonal satin stitch. Inside the yellow diamond, a deep blue circle with a white equatorial band across it. In the blue circle, five small white star constellations embroidered in metallic thread against the blue. Thick bright green and golden yellow zigzag border around the circular edge. Embroidered iron-on patch on dark felt, vibrant tropical colors, visible thread grain throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "uruguay — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "uruguay",
+      "_idiom": "URUGUAY",
+      "_canva_text": "URUGUAY",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Uruguayan flag: alternating white and cerulean blue horizontal stripes in dense satin stitch. In the upper left canton, a white square containing a golden Sol de Mayo — a radiant sun face with sixteen alternating straight and wavy rays — embroidered in warm gold thread with a tiny expressive face at center. Thick blue and white twisted rope border. Embroidered iron-on patch on dark felt, classic striped composition with radiant sun, visible thread texture throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "colombia — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "colombia",
+      "_idiom": "COLOMBIA",
+      "_canva_text": "COLOMBIA",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Colombian flag: a wide golden yellow band at top (taking up half the flag height) in warm satin stitch, a narrow deep blue band in the center, and a bold red band at the bottom, each in dense parallel satin stitch. The wide yellow band dominates visually and brightly. A tiny golden condor silhouette embroidered in metallic thread at the center of the yellow band. Thick yellow and red braided cord border frames the circular edge. Embroidered iron-on patch on dark felt, warm Andean colors, visible thread grain throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "ecuador — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "ecuador",
+      "_idiom": "ECUADOR",
+      "_canva_text": "ECUADOR",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Ecuadorian flag: horizontal bands of bright golden yellow at top, vivid royal blue in the center, and bold red at the bottom in dense satin stitch. At center, a small embroidered coat of arms featuring a golden condor with spread wings perched majestically over a shield containing a miniature snow-capped Chimborazo volcano, embroidered in gold, blue and green thread. Thick yellow and blue rope border frames the circular edge. Embroidered iron-on patch on dark felt, Andean heraldic pride, visible thread texture throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "usa — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "usa",
+      "_idiom": "USA",
+      "_canva_text": "USA",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the American Stars and Stripes: thirteen alternating red and white horizontal stripes in clean satin stitch radiating with patriotic energy, with a deep navy blue rectangular canton in the upper left containing rows of tiny five-pointed white stars in metallic thread arranged in a neat grid. Thick navy blue and red braided cord border frames the circular edge. Embroidered iron-on patch on dark felt, patriotic stars-and-stripes graphic, visible thread grain throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "canada — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "canada",
+      "_idiom": "CANADA",
+      "_canva_text": "CANADA",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Canadian flag: bold red vertical bands on left and right flanking a pure white center panel in clean flat satin stitch. In the white center, a bold red eleven-pointed maple leaf rendered in raised satin stitch, each lobe clearly defined and slightly puffed, glowing vividly against the white. Thick red and white twisted rope border around the circular edge. Embroidered iron-on patch on dark felt, iconic maple leaf centerpiece, crisp and bold, visible thread grain throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "mexico — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "mexico",
+      "_idiom": "MEXICO",
+      "_canva_text": "MEXICO",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Mexican flag: three vertical bands of rich forest green on the left, bright white in the center, and bold red on the right in dense satin stitch. In the white center band, a small National Coat of Arms — a golden eagle perched heroically on a prickly pear cactus devouring a serpent — embroidered in gold, brown and green thread with fine proud detail. Thick green and red chain-stitch border frames the circular edge. Embroidered iron-on patch on dark felt, proud Aztec eagle emblem, visible thread texture throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "panama — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "panama",
+      "_idiom": "PANAMA",
+      "_canva_text": "PANAMA",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Panamanian flag: divided into four clean quadrants by a bold cross — white top-left quadrant containing a blue five-pointed star in raised satin stitch, blue top-right quadrant in solid satin stitch, white bottom-left quadrant, red bottom-right quadrant containing a red five-pointed star. Each quadrant rendered in clean flat satin stitch. Thick red and blue rope border frames the circular edge. Embroidered iron-on patch on dark felt, clean geometric quadrant composition with dual-star motif, visible thread grain throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "japan — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "japan",
+      "_idiom": "JAPAN",
+      "_canva_text": "JAPAN",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Japanese Hinomaru: pure white field in smooth flat satin stitch, a single perfect bold crimson red circle centered precisely on the white field, rendered in dense raised satin stitch with rich crimson thread sheen, the disc luminous and crisp. The stark simplicity is powerful and meditative. Thick red and white twisted rope border around the circular edge. Embroidered iron-on patch on dark felt, iconic minimal design, perfect circle symmetry, visible thread grain throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "south_korea — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "south_korea",
+      "_idiom": "SOUTH KOREA",
+      "_canva_text": "SOUTH KOREA",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the South Korean Taegukgi: bright white field in smooth flat satin stitch. At center, a bold Taeguk circle — red yang (upper half) and deep blue yin (lower half) interlocking teardrops forming a perfect circle — rendered in vivid raised satin stitch. At each of the four diagonal corners, one black trigram of three parallel horizontal bars embroidered in precise chain stitch. Thick white, red and blue rope border. Embroidered iron-on patch on dark felt, harmonious yin-yang symbol, ancient Korean philosophy, visible thread texture throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "australia — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "australia",
+      "_idiom": "AUSTRALIA",
+      "_canva_text": "AUSTRALIA",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Australian flag: deep azure blue field in smooth satin stitch. In the upper left, a miniature Union Jack — red and white diagonal and upright crosses on blue — embroidered in fine satin stitch. In the right half, the Southern Cross constellation with four bright red seven-pointed stars outlined in white in metallic thread glowing against the blue field. Below the Union Jack, a large seven-pointed Commonwealth Star in white metallic thread. Thick blue and gold rope border. Embroidered iron-on patch on dark felt, Southern Hemisphere sky, visible thread grain throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "iran — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "iran",
+      "_idiom": "IRAN",
+      "_canva_text": "IRAN",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Iranian flag: bold horizontal bands of deep forest green at top, pure white in the center, and deep red at the bottom in dense satin stitch. A delicate repeating floral motif border in white thread runs along both the green-white and white-red seam edges. At the center of the white band, the Iranian emblem — a stylized tulip-sword-crescent symbol — embroidered in rich red thread with fine gold highlights. Thick green and red rope border. Embroidered iron-on patch on dark felt, Persian elegance, visible thread texture throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "saudi_arabia — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "saudi_arabia",
+      "_idiom": "SAUDI ARABIA",
+      "_canva_text": "SAUDI ARABIA",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Saudi Arabian flag: rich deep emerald green field in dense horizontal satin stitch. Across the upper center, flowing Arabic Shahada calligraphy rendered as elegant gold couching stitches sweeping beautifully across the width in shining metallic gold thread. Below the calligraphy, a golden sword pointing left with a slightly curved blade in metallic gold thread. Thick dark emerald green and gold braided rope border. Embroidered iron-on patch on dark felt, majestic gold calligraphy on deep green, visible thread grain throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "morocco — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "morocco",
+      "_idiom": "MOROCCO",
+      "_canva_text": "MOROCCO",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Moroccan flag: vivid deep crimson red field in dense diagonal satin stitch. At center, a bold five-pointed interlaced star (pentagram, Seal of Solomon) in rich forest green thread, the star lines precisely woven over and under each other in raised couching stitch creating a beautiful geometric knot. The green star glows luminously against the deep red. Thick crimson and deep green rope border around the circular edge. Embroidered iron-on patch on dark felt, striking geometric star on red, visible thread texture throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "senegal — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "senegal",
+      "_idiom": "SENEGAL",
+      "_canva_text": "SENEGAL",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Senegalese flag: three vertical bands of forest green on the left, bright golden yellow in the center, and bold red on the right in dense upright satin stitch. In the center of the yellow band, a single green five-pointed star embroidered in raised satin stitch, clean and centered. Thick green and yellow braided cord border frames the circular edge. Embroidered iron-on patch on dark felt, clean tricolor with centered star, West African vibrancy, visible thread grain throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "ivory_coast — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "ivory_coast",
+      "_idiom": "IVORY COAST",
+      "_canva_text": "IVORY COAST",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Ivorian flag (Cote d'Ivoire): three vertical bands of warm tangerine orange on the left, pure white in the center, and lush forest green on the right in dense upright satin stitch. The vibrant orange band is distinctive and warm, creating vivid contrast with the cool green. Thick orange and green braided cord border frames the circular edge. Embroidered iron-on patch on dark felt, warm West African tricolor, vivid color contrast between warm orange and cool green, visible thread texture throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "new_zealand — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "new_zealand",
+      "_idiom": "NEW ZEALAND",
+      "_canva_text": "NEW ZEALAND",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the New Zealand flag: deep royal azure blue field in smooth satin stitch. In the upper left, a miniature Union Jack — red and white diagonal and upright crosses on blue — embroidered in fine satin stitch. In the right half, the Southern Cross constellation with EXACTLY FOUR red five-pointed stars each outlined in white metallic thread, glowing against the deep blue. Thick blue and red braided cord border. Embroidered iron-on patch on dark felt, Antipodean Southern Cross sky, visible thread grain throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "norway — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "norway",
+      "_idiom": "NORWAY",
+      "_canva_text": "NORWAY",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Norwegian flag: vivid scarlet red field in dense horizontal satin stitch, crossed by a deep indigo blue Nordic cross outlined in crisp white couching stitch, cross bars offset toward the left in classic Scandinavian style, each color zone showing clean raised thread ridges. Thick red and navy twisted rope border around the circular patch edge. Embroidered iron-on patch on dark felt, visible thread texture throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "scotland — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "scotland",
+      "_idiom": "SCOTLAND",
+      "_canva_text": "SCOTLAND",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Scottish Saltire: deep royal azure blue field in smooth satin stitch, crossed corner to corner by a bold white diagonal saltire cross in raised satin stitch with clearly visible thread ridges, a tiny embroidered silver thistle accent at the center crossing point. Thick navy and white twisted rope border around the circular patch edge. Embroidered iron-on patch on dark felt, visible thread texture throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "sweden — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "sweden",
+      "_idiom": "SWEDEN",
+      "_canva_text": "SWEDEN",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Swedish flag: bright royal blue field in dense horizontal satin stitch crossed by a warm golden yellow Nordic cross offset toward the left, the golden bars in raised satin stitch with rich metallic sheen, a tiny golden crown accent at the cross intersection. Thick blue and gold twisted rope border around the circular patch edge. Embroidered iron-on patch on dark felt, visible thread texture throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "czechia — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "czechia",
+      "_idiom": "CZECHIA",
+      "_canva_text": "CZECHIA",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Czech flag: horizontal halves of pure white above bold red in clean parallel satin stitch, a deep royal blue triangle extending from the left edge to the center in dense diagonal satin stitch, a tiny silver double-tailed lion silhouette accent embroidered in the blue triangle. Thick red and blue twisted rope border around the circular patch edge. Embroidered iron-on patch on dark felt, visible thread texture throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "bosnia — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "bosnia",
+      "_idiom": "BOSNIA",
+      "_canva_text": "BOSNIA",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Bosnian flag: deep royal blue field in smooth satin stitch, a large golden yellow right triangle in dense diagonal satin stitch, a diagonal row of small white five-pointed stars in raised stitch running along the triangle's long edge. Thick blue and gold twisted rope border around the circular patch edge. Embroidered iron-on patch on dark felt, visible thread texture throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "algeria — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "algeria",
+      "_idiom": "ALGERIA",
+      "_canva_text": "ALGERIA",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Algerian flag: vertical halves of emerald green and pure white in dense upright satin stitch, a vivid red crescent moon embracing a red five-pointed star at the exact center in raised satin stitch with crisp edges. Thick green and red twisted rope border around the circular patch edge. Embroidered iron-on patch on dark felt, visible thread texture throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "tunisia — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "tunisia",
+      "_idiom": "TUNISIA",
+      "_canva_text": "TUNISIA",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Tunisian flag: glowing scarlet red field in dense diagonal satin stitch, a pure white circle at the center in smooth flat stitch containing a red crescent moon embracing a red five-pointed star in raised satin stitch. Thick red and white twisted rope border around the circular patch edge. Embroidered iron-on patch on dark felt, visible thread texture throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "egypt — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "egypt",
+      "_idiom": "EGYPT",
+      "_canva_text": "EGYPT",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Egyptian flag: three horizontal bands of bold red, pure white and jet black in dense parallel satin stitch, a small golden eagle emblem embroidered in fine metallic gold thread at the center of the white band. Thick gold and black twisted rope border around the circular patch edge. Embroidered iron-on patch on dark felt, visible thread texture throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "ghana — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "ghana",
+      "_idiom": "GHANA",
+      "_canva_text": "GHANA",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Ghanaian flag: three horizontal bands of bold red, warm golden yellow and forest green in dense parallel satin stitch, a jet black five-pointed star in raised satin stitch centered on the golden band. Thick gold and green twisted rope border around the circular patch edge. Embroidered iron-on patch on dark felt, visible thread texture throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "south_africa — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "south_africa",
+      "_idiom": "SOUTH AFRICA",
+      "_canva_text": "SOUTH AFRICA",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the South African flag: a bold green horizontal Y shape edged in crisp white running from the left edge, a black triangle at the left edged in golden yellow, a band of vivid red above and royal blue below, each zone in dense satin stitch with clean seam lines between colors. Thick green and gold twisted rope border around the circular patch edge. Embroidered iron-on patch on dark felt, visible thread texture throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "cape_verde — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "cape_verde",
+      "_idiom": "CAPE VERDE",
+      "_canva_text": "CAPE VERDE",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Cape Verdean flag: deep ocean blue field in smooth horizontal satin stitch, crossed below center by a band of white-red-white horizontal stripes, a circle of ten small golden five-pointed stars in raised stitch overlapping the stripes. Thick blue and gold twisted rope border around the circular patch edge. Embroidered iron-on patch on dark felt, visible thread texture throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "congo_dr — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "congo_dr",
+      "_idiom": "DR CONGO",
+      "_canva_text": "DR CONGO",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the DR Congo flag: bright sky blue field in smooth satin stitch, a bold diagonal red stripe edged in golden yellow running corner to corner, a large golden five-pointed star in raised satin stitch in the upper left corner. Thick sky blue and red twisted rope border around the circular patch edge. Embroidered iron-on patch on dark felt, visible thread texture throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "qatar — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "qatar",
+      "_idiom": "QATAR",
+      "_canva_text": "QATAR",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Qatari flag: deep maroon field in dense horizontal satin stitch joined to a pure white band by a serrated zigzag edge of nine sharp points rendered in crisp raised stitch. Thick maroon and white twisted rope border around the circular patch edge. Embroidered iron-on patch on dark felt, visible thread texture throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "iraq — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "iraq",
+      "_idiom": "IRAQ",
+      "_canva_text": "IRAQ",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Iraqi flag: three horizontal bands of bold red, pure white and jet black in dense parallel satin stitch, a small ornamental emerald green emblem embroidered at the center of the white band. Thick red and green twisted rope border around the circular patch edge. Embroidered iron-on patch on dark felt, visible thread texture throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "jordan — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "jordan",
+      "_idiom": "JORDAN",
+      "_canva_text": "JORDAN",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Jordanian flag: three horizontal bands of jet black, pure white and forest green in dense satin stitch, a vivid red triangle extending from the left edge containing a tiny white seven-pointed star in raised stitch. Thick red and white twisted rope border around the circular patch edge. Embroidered iron-on patch on dark felt, visible thread texture throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "uzbekistan — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "uzbekistan",
+      "_idiom": "UZBEKISTAN",
+      "_canva_text": "UZBEKISTAN",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Uzbek flag: three horizontal bands of bright sky blue, pure white and emerald green separated by thin red seam lines in fine stitch, a tiny white crescent moon and a cluster of small white stars embroidered in the upper left of the blue band. Thick sky blue and green twisted rope border around the circular patch edge. Embroidered iron-on patch on dark felt, visible thread texture throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "paraguay — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "paraguay",
+      "_idiom": "PARAGUAY",
+      "_canva_text": "PARAGUAY",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Paraguayan flag: three horizontal bands of bold red, pure white and royal blue in dense parallel satin stitch, a small circular golden star emblem ringed by a tiny green wreath embroidered at the center of the white band. Thick red and blue twisted rope border around the circular patch edge. Embroidered iron-on patch on dark felt, visible thread texture throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "haiti — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "haiti",
+      "_idiom": "HAITI",
+      "_canva_text": "HAITI",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Haitian flag: horizontal halves of royal blue above bold red in dense satin stitch, a small white square panel at the center bearing a tiny embroidered royal palm tree flanked by tiny green flags. Thick blue and red twisted rope border around the circular patch edge. Embroidered iron-on patch on dark felt, visible thread texture throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "curacao — Flag Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "curacao",
+      "_idiom": "CURACAO",
+      "_canva_text": "CURACAO",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch featuring the Curacao flag: deep ultramarine blue field in smooth satin stitch, a horizontal golden yellow stripe across the lower third, two white five-pointed stars of different sizes in raised stitch in the upper left. Thick blue and gold twisted rope border around the circular patch edge. Embroidered iron-on patch on dark felt, visible thread texture throughout, Ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. full circular design entirely visible with clear margin, no text no letters no words.",
+        "negative_prompt": "text, letters, words, watermark, photorealistic, extra stitches outside patch, cropped edges",
+        "cfg_scale": 4.0,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    }
+  ]
+}

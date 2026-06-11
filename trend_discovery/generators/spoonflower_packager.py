@@ -34,7 +34,10 @@ class SpoonflowerPackager:
     Requiert Pillow : pip install Pillow
     """
 
-    def __init__(self, output_dir: str = "./output/spoonflower"):
+    def __init__(self, output_dir: str = "./output/spoonflower", min_px: "int | None" = None):
+        # min_px : taille minimale cible (côté). None = SPOONFLOWER_MIN_SIZE (4500).
+        # Permet p.ex. 4000 px pour Redbubble afin d'éviter un resize LANCZOS inutile.
+        self._min_size = (int(min_px), int(min_px)) if min_px else SPOONFLOWER_MIN_SIZE
         self._output_dir = output_dir
         os.makedirs(output_dir, exist_ok=True)
 
@@ -88,7 +91,7 @@ class SpoonflowerPackager:
 
             # Upscale si trop petite (dernier recours : Pillow Lanczos)
             w, h = img.size
-            min_w, min_h = SPOONFLOWER_MIN_SIZE
+            min_w, min_h = self._min_size
             if ensure_min_size and (w < min_w or h < min_h):
                 scale = max(min_w / w, min_h / h)
                 new_w = int(w * scale)

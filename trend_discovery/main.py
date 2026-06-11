@@ -1018,7 +1018,21 @@ def generate_all_base(
         # tiling=False for standalone illustration platforms (not seamless repeat)
         _standalone_platforms = ("redbubble",)
         tiling = not any(p in output_dir.lower() for p in _standalone_platforms)
-        pipeline = GenerationPipeline(output_dir=output_dir, upscale_factor=4, tiling=tiling)
+        # Bloc "generation" optionnel à la racine du rapport : permet à un CdC
+        # d'imposer modèle/résolution/upscale (ex. FLUX.2 Dev 2048px + ×2 → 4096).
+        gen_cfg = data.get("generation", {}) or {}
+        if gen_cfg:
+            logger.info("[generate-all] overrides generation du CdC : %s", gen_cfg)
+        pipeline = GenerationPipeline(
+            output_dir=output_dir,
+            upscale_factor=int(gen_cfg.get("upscale_factor", 4)),
+            tiling=tiling,
+            model=gen_cfg.get("model"),
+            gen_width=gen_cfg.get("width"),
+            gen_height=gen_cfg.get("height"),
+            steps=gen_cfg.get("steps"),
+            min_px=gen_cfg.get("target_px"),
+        )
         auditor = QualityAuditor()
     except Exception as exc:
         logger.error("[generate-all] GenerationPipeline indisponible : %s", exc)
