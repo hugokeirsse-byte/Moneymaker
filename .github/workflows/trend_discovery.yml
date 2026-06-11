@@ -194,14 +194,18 @@ jobs:
             echo "Rapport : $RB_REPORT → sortie : $RB_OUTPUT"
             git config user.name  "Moneymaker Bot"
             git config user.email "bot@moneymaker.auto"
+            BRANCH=$(git rev-parse --abbrev-ref HEAD)
             (
               while true; do
                 sleep 180
                 git add "$RB_OUTPUT" 2>/dev/null || true
                 if ! git diff --staged --quiet 2>/dev/null; then
                   git commit -q -m "wip(images): sauvegarde incrémentale $(date -u +%H:%M)" || true
-                  git pull -q --rebase --autostash origin HEAD 2>/dev/null || true
-                  git push -q origin HEAD 2>/dev/null || true
+                  # PAS de pull/rebase ici : un rebase touche l'arbre de travail
+                  # pendant que le pipeline écrit dedans (cause de la perte du
+                  # 11/06 : dossier de sortie retiré en plein run). Push best-effort,
+                  # le push final (étape suivante) rattrape les rejets non-FF.
+                  git push -q origin "$BRANCH" 2>/dev/null || true
                 fi
               done
             ) &
@@ -334,11 +338,18 @@ jobs:
         run: |
           git config user.name  "Moneymaker Bot"
           git config user.email "bot@moneymaker.auto"
+          # purge tout état de merge/rebase laissé par une étape précédente
+          git rebase --abort 2>/dev/null || true
+          git merge --abort 2>/dev/null || true
+          BRANCH=$(git rev-parse --abbrev-ref HEAD)
           DATE=$(date -u +"%Y-%m-%d %H:%M UTC")
           push_with_retry() {
             DELAY=2
             for attempt in 1 2 3 4; do
-              git pull --rebase --autostash origin HEAD && git push origin HEAD && return 0
+              if git pull --rebase --autostash origin "$BRANCH" && git push origin "$BRANCH"; then
+                return 0
+              fi
+              git rebase --abort 2>/dev/null || true
               echo "Échec push (attempt $attempt/4) — retry dans ${DELAY}s"
               sleep $DELAY
               DELAY=$((DELAY * 2))

@@ -1,0 +1,81 @@
+name: Recover — images depuis URLs Runware
+
+on:
+  workflow_dispatch:
+    inputs:
+      mapping_path:
+        description: 'JSON {"nom": "url"} (relatif à la racine du repo)'
+        required: true
+      dest_dir:
+        description: 'Dossier de destination (ex: produits/worldcup2026_flag_patches)'
+        required: true
+      min_px:
+        description: 'Résolution minimale acceptée (côté le plus petit)'
+        required: false
+        default: '4000'
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    name: Télécharge + committe les images finales
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout (sparse — pas les Go d'images)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          sparse-checkout: |
+            scripts
+            data
+            produits
+          sparse-checkout-cone-mode: true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Dépendances
+        run: pip install -q requests Pillow
+
+      - name: Téléchargement des images (0 € — déjà générées)
+        run: |
+          python scripts/fetch_runware_outputs.py \
+            --mapping "${{ github.event.inputs.mapping_path }}" \
+            --dest "${{ github.event.inputs.dest_dir }}" \
+            --min-px "${{ github.event.inputs.min_px }}"
+
+      - name: Commit et push
+        run: |
+          git config user.name  "Moneymaker Bot"
+          git config user.email "bot@moneymaker.auto"
+          # jamais d'état de merge/rebase résiduel
+          git rebase --abort 2>/dev/null || true
+          git merge --abort 2>/dev/null || true
+          BR=$(git rev-parse --abbrev-ref HEAD)
+          git add "${{ github.event.inputs.dest_dir }}"
+          if git diff --staged --quiet; then
+            echo "Rien à committer."
+            exit 0
+          fi
+          git commit -m "recover(images): ${{ github.event.inputs.dest_dir }} depuis URLs Runware — $(date -u +'%Y-%m-%d %H:%M UTC')"
+          DELAY=2
+          for attempt in 1 2 3 4; do
+            if git pull --rebase --autostash origin "$BR" && git push origin "$BR"; then
+              exit 0
+            fi
+            git rebase --abort 2>/dev/null || true
+            echo "Échec push ($attempt/4) — retry dans ${DELAY}s"
+            sleep $DELAY; DELAY=$((DELAY * 2))
+          done
+          echo "::error::push impossible après 4 tentatives"
+          exit 1
+
+      - name: Upload artefact de secours
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: recover-urls-${{ github.run_number }}
+          path: ${{ github.event.inputs.dest_dir }}
