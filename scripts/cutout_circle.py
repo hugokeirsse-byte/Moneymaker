@@ -67,8 +67,10 @@ def cutout(in_path: str, out_path: str, pad: int = 6, feather: int = 3) -> None:
 
 def cutout_felt(in_path: str, out_path: str, feather: int = 3) -> None:
     """Détourage forme libre : tout ce qui a la couleur du feutre (échantillonnée
-    sur les bords) ET touche le bord devient transparent. Pour les patchs non
-    circulaires sur fond feutre uni. Pixels du patch intacts."""
+    sur les bords) ET touche le bord devient transparent. Préserve les éléments
+    du design qui débordent (capes, objets…) contrairement au masque cercle.
+    Gère les ombres portées : un pixel est « feutre » s'il est proche du RAYON
+    de couleur du feutre (feutre assombri/éclairci compris). Pixels intacts."""
     from collections import deque
     img = Image.open(in_path).convert("RGB")
     arr = np.array(img)
@@ -79,8 +81,15 @@ def cutout_felt(in_path: str, out_path: str, feather: int = 3) -> None:
         arr[-k:, :k].reshape(-1, 3), arr[-k:, -k:].reshape(-1, 3),
     ]).astype(float)
     felt = corners.mean(axis=0)
-    tol = max(34.0, corners.std(axis=0).mean() * 4) * 3
-    feltlike = np.abs(arr.astype(float) - felt).sum(axis=2) <= tol
+    tol = max(30.0, corners.std(axis=0).mean() * 4) * 3
+
+    # projection de chaque pixel sur le rayon de couleur du feutre :
+    # p ≈ t·felt avec t ∈ [0.35, 1.45] couvre feutre + ombres + fibres claires
+    p = arr.astype(float)
+    f2 = float(felt.dot(felt))
+    t = np.clip((p @ felt) / f2, 0.35, 1.45)
+    residual = np.abs(p - t[..., None] * felt[None, None, :]).sum(axis=2)
+    feltlike = residual <= tol
 
     # flood-fill multi-départ depuis tous les pixels feutre du bord
     bg = np.zeros((h, w), dtype=bool)
