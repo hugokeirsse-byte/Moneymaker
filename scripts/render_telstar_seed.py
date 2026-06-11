@@ -85,8 +85,17 @@ def render(country: str, out_path: str, size: int = 2048):
     # oriente un pentagone exactement face caméra
     pent = next(f for f in faces if len(f) == 5)
     R = rotation_to_z(V[pent].mean(axis=0))
-    # légère rotation pour poser le pentagone central à plat (pointe en haut)
     V = V @ R.T
+    # redresse le pentagone central : axe de symétrie vertical, pointe en haut
+    center = V[pent].mean(axis=0)
+    a0 = np.arctan2(V[pent[0]][1] - center[1], V[pent[0]][0] - center[0])
+    step = 2 * np.pi / 5
+    delta = (np.pi / 2 - a0) % step
+    if delta > step / 2:
+        delta -= step
+    c, s = np.cos(delta), np.sin(delta)
+    Rz = np.array([[c, -s, 0], [s, c, 0], [0, 0, 1]])
+    V = V @ Rz.T
 
     img = Image.new("RGB", (size, size), FELT)
     d = ImageDraw.Draw(img)
