@@ -194,6 +194,88 @@ FLAGS["germany"] = (flag_germany, FLAGS["germany"][1])
 FLAGS["brazil"] = (flag_brazil, FLAGS["brazil"][1])
 
 
+def flag_argentina(td, x0, y0, x1, y1):
+    """Bandes horizontales ciel/blanc/ciel + Soleil de Mai doré au centre
+    (disque rayonnant à 16 rayons triangulaires)."""
+    sky, white, gold = (108, 172, 228), (255, 255, 255), (244, 180, 38)
+    h = (y1 - y0) / 3
+    for k, col in enumerate([sky, white, sky]):
+        td.rectangle([x0, y0 + k * h, x1, y0 + (k + 1) * h], fill=col)
+    cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
+    r = (y1 - y0) * 0.115
+    for k in range(16):
+        a = k * math.pi / 8
+        td.polygon([(cx + r * 0.9 * math.cos(a - 0.10), cy + r * 0.9 * math.sin(a - 0.10)),
+                    (cx + r * 1.9 * math.cos(a), cy + r * 1.9 * math.sin(a)),
+                    (cx + r * 0.9 * math.cos(a + 0.10), cy + r * 0.9 * math.sin(a + 0.10))],
+                   fill=gold)
+    td.ellipse([cx - r, cy - r, cx + r, cy + r], fill=gold)
+    td.ellipse([cx - r * 0.55, cy - r * 0.55, cx + r * 0.55, cy + r * 0.55],
+               outline=(180, 120, 20), width=max(2, int(r * 0.16)))
+
+
+def flag_spain(td, x0, y0, x1, y1):
+    """Bandes rouge/or/rouge (1:2:1), petites armoiries simplifiées côté mât."""
+    red, gold = (170, 21, 27), (241, 191, 0)
+    h = y1 - y0
+    td.rectangle([x0, y0, x1, y0 + h / 4], fill=red)
+    td.rectangle([x0, y0 + h / 4, x1, y1 - h / 4], fill=gold)
+    td.rectangle([x0, y1 - h / 4, x1, y1], fill=red)
+    # écu simplifié décalé vers la gauche (côté mât)
+    ex, ey = x0 + (x1 - x0) * 0.30, (y0 + y1) / 2
+    s = h * 0.14
+    td.polygon([(ex - s, ey - s), (ex + s, ey - s), (ex + s, ey + s * 0.5),
+                (ex, ey + s * 1.1), (ex - s, ey + s * 0.5)],
+               fill=(230, 230, 220), outline=(120, 60, 20))
+    td.rectangle([ex - s * 0.6, ey - s * 0.6, ex, ey], fill=red)
+    td.rectangle([ex, ey - s * 0.6, ex + s * 0.6, ey], fill=(244, 180, 38))
+    td.rectangle([ex - s * 0.6, ey, ex, ey + s * 0.5], fill=(244, 180, 38))
+    td.rectangle([ex, ey, ex + s * 0.6, ey + s * 0.5], fill=red)
+
+
+def flag_netherlands(td, x0, y0, x1, y1):
+    """Bandes horizontales rouge / blanc / bleu cobalt."""
+    h = (y1 - y0) / 3
+    for k, col in enumerate([(174, 28, 40), (255, 255, 255), (33, 70, 139)]):
+        td.rectangle([x0, y0 + k * h, x1, y0 + (k + 1) * h], fill=col)
+
+
+def flag_portugal(td, x0, y0, x1, y1):
+    """Vert (2/5) / rouge (3/5) verticaux, sphère armillaire dorée portant
+    l'écu blanc à bordure rouge, centrée sur la frontière des couleurs."""
+    green, red, gold = (0, 102, 0), (218, 41, 28), (255, 204, 41)
+    w = x1 - x0
+    split = x0 + w * 0.4
+    td.rectangle([x0, y0, split, y1], fill=green)
+    td.rectangle([split, y0, x1, y1], fill=red)
+    cy = (y0 + y1) / 2
+    r = (y1 - y0) * 0.17
+    ring_w = max(2, int(r * 0.22))
+    td.ellipse([split - r, cy - r, split + r, cy + r], outline=gold, width=ring_w)
+    td.line([(split - r * 0.7, cy - r * 0.7), (split + r * 0.7, cy + r * 0.7)],
+            fill=gold, width=max(2, int(ring_w * 0.7)))
+    s = r * 0.62
+    td.polygon([(split - s * 0.7, cy - s), (split + s * 0.7, cy - s),
+                (split + s * 0.7, cy + s * 0.4), (split, cy + s),
+                (split - s * 0.7, cy + s * 0.4)],
+               fill=(255, 255, 255), outline=(218, 41, 28))
+
+
+def flag_japan(td, x0, y0, x1, y1):
+    """Disque rouge cramoisi centré sur fond blanc pur (diamètre 3/5 hauteur)."""
+    td.rectangle([x0, y0, x1, y1], fill=(255, 255, 255))
+    cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
+    r = (y1 - y0) * 0.30
+    td.ellipse([cx - r, cy - r, cx + r, cy + r], fill=(188, 0, 45))
+
+
+FLAGS["argentina"] = (flag_argentina, ((108, 172, 228), (244, 180, 38)))   # ciel + or
+FLAGS["spain"] = (flag_spain, ((170, 21, 27), (241, 191, 0)))              # rouge + or
+FLAGS["netherlands"] = (flag_netherlands, ((232, 119, 34), (33, 70, 139))) # orange + navy
+FLAGS["portugal"] = (flag_portugal, ((0, 102, 0), (218, 41, 28)))          # vert + rouge
+FLAGS["japan"] = (flag_japan, ((188, 0, 45), (255, 255, 255)))             # rouge + blanc
+
+
 # ───────────────────────── géométrie icosaèdre tronqué ─────────────────────────
 
 def truncated_icosahedron():
