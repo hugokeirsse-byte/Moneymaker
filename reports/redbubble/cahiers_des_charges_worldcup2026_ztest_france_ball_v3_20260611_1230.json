@@ -1,0 +1,35 @@
+{
+  "generated_at": "2026-06-11T12:30:00Z",
+  "series": "worldcup2026_ball_v3_france_test",
+  "styles": [
+    "embroidery_patch"
+  ],
+  "description": "TEST 1 image — ballon Telstar geometrie stricte (12 pentagones drapeau France / 20 hexagones blancs), perspective spherique. Si valide, applique aux 47 autres pays.",
+  "platform": "redbubble",
+  "total_briefs": 1,
+  "generation": {
+    "model": "runware:400@1",
+    "width": 2048,
+    "height": 2048,
+    "steps": 40,
+    "upscale_factor": 2,
+    "target_px": 4000,
+    "require_ai_upscale": true
+  },
+  "briefs": [
+    {
+      "name": "france — Telstar Flag Ball v3",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "france_telstar_v3",
+      "_idiom": "FRANCE",
+      "_canva_text": "FRANCE",
+      "ai_generation": {
+        "positive_prompt": "A circular embroidered iron-on patch on dark charcoal felt, photographed perfectly straight-on. Inside the patch sits EXACTLY ONE classic 32-panel soccer ball rendered entirely in dense embroidery, filling most of the circle. The ball follows the authentic Telstar truncated-icosahedron layout: EXACTLY ONE perfect five-sided pentagon panel at the very center of the ball, surrounded by a closed ring of six-sided hexagon panels; additional pentagon panels appear at regular spacing toward the edges of the ball, always separated from each other by hexagons, never touching another pentagon. Panels near the silhouette of the ball are foreshortened and curved, so the ball reads as a round three-dimensional sphere with believable spherical perspective. EVERY pentagon panel — and ONLY the pentagon panels — is embroidered with the French flag: three crisp vertical satin-stitch bands, royal blue on the left, pure white in the middle, vivid red on the right, the identical tricolor repeated in every pentagon at the same orientation. ALL hexagon panels are plain cream-white satin stitch with absolutely no pattern, exactly like a traditional football. Every panel is separated by a clean black chain-stitch seam following the curvature of the sphere. The ball is centered on the plain dark felt background and framed by a thick twisted gold and navy rope border around the circular edge of the patch. Macro embroidery rendering: individual thread strands clearly visible, raised satin-stitch relief catching soft studio light, subtle textile sheen, crisp clean edges. The whole circular patch is fully visible with a clear margin of felt all around. The design contains no text, no letters, no numbers, no logos, no watermark, and nothing else besides the ball, the felt and the rope border.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    }
+  ]
+}
