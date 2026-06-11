@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
 """
-render_telstar_seed.py — dessine un ballon Telstar mathématiquement exact
-(icosaèdre tronqué : 12 pentagones + 20 hexagones) en projection orthographique,
-pentagones remplis du drapeau du pays, hexagones crème, sur feutre sombre avec
-anneau doré. Sert d'image de départ (img2img) pour FLUX.2 : la géométrie est
-garantie par le code, le modèle n'ajoute que le rendu broderie.
+render_telstar_seed.py — ballon Telstar mathématiquement exact (icosaèdre
+tronqué : 12 pentagones + 20 hexagones), pentagones remplis du drapeau EXACT
+du pays, hexagones crème, anneau aux couleurs du pays sur feutre sombre.
+Sert d'image de référence (FLUX.2 referenceImages) : géométrie et drapeaux
+garantis par le code, le modèle n'ajoute que le rendu broderie.
 
 Usage: python scripts/render_telstar_seed.py <country_id> <out.png> [--size 2048]
-Les couleurs de drapeau par pays sont définies dans FLAGS (bandes verticales
-ou motifs simples). Extensible pays par pays.
 """
 import sys
+import math
 import itertools
 import numpy as np
 from PIL import Image, ImageDraw
@@ -18,21 +17,60 @@ from scipy.spatial import ConvexHull
 
 PHI = (1 + 5 ** 0.5) / 2
 
-# drapeaux simplifiés : liste de bandes verticales (gauche→droite) par défaut
-FLAGS = {
-    "france": {"bands": [(0, 85, 164), (255, 255, 255), (239, 65, 53)]},
-    # à étendre pays par pays une fois le gabarit France validé
-}
-
 FELT = (38, 36, 40)
 CREAM = (244, 240, 228)
 SEAM = (18, 18, 24)
-GOLD = (212, 175, 55)
-NAVY = (16, 24, 64)
 
+
+# ───────────────────────── peintres de drapeaux EXACTS ─────────────────────────
+# Chaque peintre remplit le rectangle (x0,y0,x1,y1) avec la vraie structure du
+# drapeau ; le masque pentagone fait le découpage ensuite.
+
+def _star(td, cx, cy, r, color, points=5, rot=-math.pi / 2):
+    pts = []
+    for k in range(points * 2):
+        rad = r if k % 2 == 0 else r * 0.4
+        a = rot + k * math.pi / points
+        pts.append((cx + rad * math.cos(a), cy + rad * math.sin(a)))
+    td.polygon(pts, fill=color)
+
+
+def flag_france(td, x0, y0, x1, y1):
+    w = (x1 - x0) / 3
+    for k, col in enumerate([(0, 85, 164), (255, 255, 255), (239, 65, 53)]):
+        td.rectangle([x0 + k * w, y0, x0 + (k + 1) * w, y1], fill=col)
+
+
+def flag_usa(td, x0, y0, x1, y1):
+    red, white, navy = (178, 34, 52), (255, 255, 255), (60, 59, 110)
+    h = y1 - y0
+    stripe = h / 13
+    for i in range(13):
+        td.rectangle([x0, y0 + i * stripe, x1, y0 + (i + 1) * stripe],
+                     fill=red if i % 2 == 0 else white)
+    cw = (x1 - x0) * 0.45
+    ch = 7 * stripe
+    td.rectangle([x0, y0, x0 + cw, y0 + ch], fill=navy)
+    # 9 rangées alternées 6/5 — layout réel des 50 étoiles
+    rstar = min(cw / 14, ch / 20)
+    for row in range(9):
+        n = 6 if row % 2 == 0 else 5
+        cy = y0 + ch * (row + 1) / 10
+        for col in range(n):
+            cx = x0 + cw * (col + 1) / (n + 1) + (0 if row % 2 == 0 else cw * 0.0)
+            _star(td, cx, cy, rstar, white)
+
+
+FLAGS = {
+    # pays: (peintre, (couleur anneau extérieur, couleur anneau intérieur))
+    "france": (flag_france, ((212, 175, 55), (16, 24, 64))),       # or + navy
+    "usa": (flag_usa, ((60, 59, 110), (178, 34, 52))),             # navy + rouge
+}
+
+
+# ───────────────────────── géométrie icosaèdre tronqué ─────────────────────────
 
 def truncated_icosahedron():
-    """Sommets + faces (listes d'indices) d'un icosaèdre tronqué unitaire."""
     base = [(0, 1, 3 * PHI), (1, 2 + PHI, 2 * PHI), (PHI, 2, 2 * PHI + 1)]
     verts = set()
     for x, y, z in base:
@@ -44,7 +82,6 @@ def truncated_icosahedron():
     V /= np.linalg.norm(V, axis=1).max()
 
     hull = ConvexHull(V)
-    # regroupe les triangles coplanaires en faces (pentagones/hexagones)
     groups = {}
     for simplex, eq in zip(hull.simplices, hull.equations):
         key = tuple(np.round(eq, 5))
@@ -54,7 +91,6 @@ def truncated_icosahedron():
         idx = list(idx)
         normal = np.array(key[:3])
         center = V[idx].mean(axis=0)
-        # ordonne les sommets autour du centre de la face
         ref = V[idx[0]] - center
         ref -= normal * ref.dot(normal)
         ref /= np.linalg.norm(ref)
@@ -65,7 +101,6 @@ def truncated_icosahedron():
 
 
 def rotation_to_z(v):
-    """Matrice qui amène le vecteur v sur +z."""
     v = v / np.linalg.norm(v)
     z = np.array([0.0, 0.0, 1.0])
     axis = np.cross(v, z)
@@ -79,14 +114,13 @@ def rotation_to_z(v):
 
 
 def render(country: str, out_path: str, size: int = 2048):
-    flag = FLAGS[country]
+    painter, (ring_outer, ring_inner) = FLAGS[country]
     V, faces = truncated_icosahedron()
 
-    # oriente un pentagone exactement face caméra
+    # pentagone face caméra, puis redressé (pointe en haut, axe vertical)
     pent = next(f for f in faces if len(f) == 5)
     R = rotation_to_z(V[pent].mean(axis=0))
     V = V @ R.T
-    # redresse le pentagone central : axe de symétrie vertical, pointe en haut
     center = V[pent].mean(axis=0)
     a0 = np.arctan2(V[pent[0]][1] - center[1], V[pent[0]][0] - center[0])
     step = 2 * np.pi / 5
@@ -94,8 +128,7 @@ def render(country: str, out_path: str, size: int = 2048):
     if delta > step / 2:
         delta -= step
     c, s = np.cos(delta), np.sin(delta)
-    Rz = np.array([[c, -s, 0], [s, c, 0], [0, 0, 1]])
-    V = V @ Rz.T
+    V = V @ np.array([[c, -s, 0], [s, c, 0], [0, 0, 1]]).T
 
     img = Image.new("RGB", (size, size), FELT)
     d = ImageDraw.Draw(img)
@@ -104,18 +137,16 @@ def render(country: str, out_path: str, size: int = 2048):
     ball_r = size * 0.355
     seam_w = max(3, size // 170)
 
-    # anneau doré (le liseré cordelette sera détaillé par FLUX)
     ring_r = size * 0.46
     d.ellipse([cx - ring_r, cy - ring_r, cx + ring_r, cy + ring_r],
-              outline=GOLD, width=int(size * 0.022))
+              outline=ring_outer, width=int(size * 0.022))
     inner = ring_r - size * 0.018
     d.ellipse([cx - inner, cy - inner, cx + inner, cy + inner],
-              outline=NAVY, width=max(2, size // 400))
+              outline=ring_inner, width=max(2, size // 400))
 
     def proj(p):
         return (cx + p[0] * ball_r, cy - p[1] * ball_r)
 
-    # disque de fond du ballon (zones de silhouette entre les panneaux du bord)
     d.ellipse([cx - ball_r, cy - ball_r, cx + ball_r, cy + ball_r], fill=SEAM)
 
     front = [f for f in faces if V[f].mean(axis=0)[2] > -0.05]
@@ -126,21 +157,13 @@ def render(country: str, out_path: str, size: int = 2048):
         if len(f) == 6:
             d.polygon(pts, fill=CREAM, outline=SEAM)
         else:
-            # pentagone → drapeau en bandes verticales, clip au polygone
             xs = [p[0] for p in pts]
             ys = [p[1] for p in pts]
-            x0, x1 = min(xs), max(xs)
-            y0, y1 = min(ys), max(ys)
             mask = Image.new("L", (size, size), 0)
             ImageDraw.Draw(mask).polygon(pts, fill=255)
             tile = Image.new("RGB", (size, size), CREAM)
-            td = ImageDraw.Draw(tile)
-            bands = flag["bands"]
-            bw = (x1 - x0) / len(bands)
-            for k, col in enumerate(bands):
-                td.rectangle([x0 + k * bw, y0, x0 + (k + 1) * bw, y1], fill=col)
+            painter(ImageDraw.Draw(tile), min(xs), min(ys), max(xs), max(ys))
             img.paste(tile, (0, 0), mask)
-        # coutures épaisses par-dessus
         d.line(pts + [pts[0]], fill=SEAM, width=seam_w, joint="curve")
 
     img.save(out_path, format="PNG", dpi=(300, 300))
