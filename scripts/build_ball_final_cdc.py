@@ -49,6 +49,11 @@ COUNTRY_META = {
     "netherlands": ("NETHERLANDS", "the flag of the Netherlands — horizontal red, white and cobalt blue bands", "orange and navy"),
     "portugal": ("PORTUGAL", "the flag of Portugal — vertical green and red fields with the small armillary sphere emblem at their boundary", "green and red"),
     "japan": ("JAPAN", "the flag of Japan — a single crimson red disc centered on a pure white ground", "red and white"),
+    "colombia": ("COLOMBIA", "the flag of Colombia — a wide golden yellow upper half over blue and red horizontal bands", "gold and red"),
+    "uruguay": ("URUGUAY", "the flag of Uruguay — nine white and blue horizontal stripes with the golden Sun of May in the white upper-left canton", "blue and gold"),
+    "croatia": ("CROATIA", "the flag of Croatia — horizontal red, white and blue bands with the red-and-white checkerboard shield at the center, the checkerboard EXACTLY identical in every pentagon", "red and white"),
+    "switzerland": ("SWITZERLAND", "the flag of Switzerland — a bold white cross centered on a red ground", "red and white"),
+    "belgium": ("BELGIUM", "the flag of Belgium — vertical black, yellow and red bands", "gold and black"),
     # … compléter pays par pays au fil des lots (peintre exact requis dans
     # render_telstar_seed.py avant tout lancement)
 }

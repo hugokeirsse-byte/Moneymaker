@@ -282,6 +282,85 @@ FLAGS["portugal"] = (flag_portugal, ((0, 102, 0), (218, 41, 28)))          # ver
 FLAGS["japan"] = (flag_japan, ((188, 0, 45), (255, 255, 255)))             # rouge + blanc
 
 
+def flag_colombia(td, x0, y0, x1, y1):
+    """Jaune (moitié haute), bleu (quart), rouge (quart) — proportions officielles."""
+    h = y1 - y0
+    td.rectangle([x0, y0, x1, y0 + h * 0.5], fill=(252, 209, 22))
+    td.rectangle([x0, y0 + h * 0.5, x1, y0 + h * 0.75], fill=(0, 56, 147))
+    td.rectangle([x0, y0 + h * 0.75, x1, y1], fill=(206, 17, 38))
+
+
+def flag_uruguay(td, x0, y0, x1, y1):
+    """Neuf bandes blanc/bleu, canton blanc avec Soleil de Mai doré."""
+    white, blue, gold = (255, 255, 255), (0, 56, 168), (252, 209, 22)
+    h = (y1 - y0) / 9
+    for i in range(9):
+        td.rectangle([x0, y0 + i * h, x1, y0 + (i + 1) * h],
+                     fill=white if i % 2 == 0 else blue)
+    cw = (x1 - x0) * 0.42
+    ch = h * 5
+    td.rectangle([x0, y0, x0 + cw, y0 + ch], fill=white)
+    scx, scy = x0 + cw / 2, y0 + ch / 2
+    r = ch * 0.20
+    for k in range(16):
+        a = k * math.pi / 8
+        td.polygon([(scx + r * 0.9 * math.cos(a - 0.10), scy + r * 0.9 * math.sin(a - 0.10)),
+                    (scx + r * 1.8 * math.cos(a), scy + r * 1.8 * math.sin(a)),
+                    (scx + r * 0.9 * math.cos(a + 0.10), scy + r * 0.9 * math.sin(a + 0.10))],
+                   fill=gold)
+    td.ellipse([scx - r, scy - r, scx + r, scy + r], fill=gold)
+    td.ellipse([scx - r * 0.55, scy - r * 0.55, scx + r * 0.55, scy + r * 0.55],
+               outline=(180, 120, 20), width=max(2, int(r * 0.18)))
+
+
+def flag_croatia(td, x0, y0, x1, y1):
+    """Rouge/blanc/bleu horizontaux + écu damier rouge-blanc 5x5 au centre."""
+    red, white, blue = (255, 0, 0), (255, 255, 255), (23, 23, 150)
+    h = (y1 - y0) / 3
+    for k, col in enumerate([red, white, blue]):
+        td.rectangle([x0, y0 + k * h, x1, y0 + (k + 1) * h], fill=col)
+    cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
+    s = (y1 - y0) * 0.17
+    dark = (90, 30, 30)
+    shield = [(cx - s, cy - s), (cx + s, cy - s), (cx + s, cy + s * 0.45),
+              (cx, cy + s * 1.05), (cx - s, cy + s * 0.45)]
+    td.polygon(shield, fill=white, outline=dark)
+    cell = 2 * s / 5
+    for r_ in range(5):
+        for c_ in range(5):
+            if (r_ + c_) % 2 == 0:
+                td.rectangle([cx - s + c_ * cell, cy - s + r_ * cell,
+                              cx - s + (c_ + 1) * cell, cy - s + (r_ + 1) * cell],
+                             fill=red)
+    td.line(shield + [shield[0]], fill=dark, width=max(3, int(s * 0.12)), joint="curve")
+
+
+def flag_switzerland(td, x0, y0, x1, y1):
+    """Champ rouge, croix blanche épaisse centrée (bras 1/5 de la hauteur)."""
+    red, white = (218, 41, 28), (255, 255, 255)
+    td.rectangle([x0, y0, x1, y1], fill=red)
+    cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
+    h = y1 - y0
+    bar = h / 5
+    arm = h * 0.32
+    td.rectangle([cx - arm, cy - bar / 2, cx + arm, cy + bar / 2], fill=white)
+    td.rectangle([cx - bar / 2, cy - arm, cx + bar / 2, cy + arm], fill=white)
+
+
+def flag_belgium(td, x0, y0, x1, y1):
+    """Bandes verticales noir / jaune / rouge."""
+    w = (x1 - x0) / 3
+    for k, col in enumerate([(0, 0, 0), (253, 218, 36), (239, 51, 64)]):
+        td.rectangle([x0 + k * w, y0, x0 + (k + 1) * w, y1], fill=col)
+
+
+FLAGS["colombia"] = (flag_colombia, ((252, 209, 22), (206, 17, 38)))
+FLAGS["uruguay"] = (flag_uruguay, ((0, 56, 168), (252, 209, 22)))
+FLAGS["croatia"] = (flag_croatia, ((255, 0, 0), (255, 255, 255)))
+FLAGS["switzerland"] = (flag_switzerland, ((218, 41, 28), (255, 255, 255)))
+FLAGS["belgium"] = (flag_belgium, ((253, 218, 36), (20, 20, 20)))
+
+
 # ───────────────────────── géométrie icosaèdre tronqué ─────────────────────────
 
 def truncated_icosahedron():
