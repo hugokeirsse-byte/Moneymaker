@@ -325,6 +325,11 @@ class GenerationPipeline:
         )
         if seed_image_url:
             logger.info("[gen_pipeline] seedImage: %s…", seed_image_url[:80])
+        # FLUX.2 / Kontext : édition guidée par image(s) de référence
+        ref_url = ai_gen.get("reference_image_url")
+        reference_images = [ref_url] if ref_url else None
+        if reference_images:
+            logger.info("[gen_pipeline] referenceImages: %s…", ref_url[:80])
 
         # CFG du CdC (FLUX.1 Dev : 4.0 par défaut). Honoré pour toutes les variantes.
         cfg_scale = float(ai_gen.get("cfg_scale", 4.0))
@@ -349,6 +354,7 @@ class GenerationPipeline:
                 cfg_scale=cfg_scale,
                 strength=strength,
                 tiling=tiling,
+                reference_images=reference_images,
             )
             results.append(result)
             logger.info("[gen_pipeline] %s", result)
@@ -372,6 +378,7 @@ class GenerationPipeline:
         cfg_scale: float = 4.0,
         strength: float = 0.6,
         tiling: bool = True,
+        reference_images: Optional[List[str]] = None,
     ) -> GenerationResult:
         """
         Génère une image, l'audite, retente une seule fois si nécessaire.
@@ -387,6 +394,7 @@ class GenerationPipeline:
                 seed_image_url=seed_image_url,
                 strength=strength,
                 tiling=tiling,
+                reference_images=reference_images,
                 **self._gen_overrides,
             )
 

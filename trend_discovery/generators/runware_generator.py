@@ -110,6 +110,7 @@ class RunwareGenerator:
         tiling: bool = True,
         seed_image_url: Optional[str] = None,
         strength: float = 0.25,
+        reference_images: Optional[list] = None,
     ) -> Optional[str]:
         """
         Génère une image et retourne son URL.
@@ -140,7 +141,11 @@ class RunwareGenerator:
             task["negativePrompt"] = negative_prompt
         if seed != -1:
             task["seed"] = seed
-        if seed_image_url:
+        if reference_images:
+            # Édition guidée FLUX.2 / Kontext : l'image de référence impose la
+            # composition, le prompt décrit la transformation (pas de strength).
+            task["referenceImages"] = list(reference_images)
+        elif seed_image_url:
             task["seedImage"] = seed_image_url
             task["strength"] = strength
         tasks = [task]
@@ -231,6 +236,7 @@ class RunwareGenerator:
         height: int = GENERATION_SIZE,
         steps: int = 28,
         require_upscale: bool = False,
+        reference_images: Optional[list] = None,
     ) -> Tuple[Optional[bytes], Optional[str]]:
         """
         Génère une image (1024×1024) puis l'upscale via Runware AI (Real-ESRGAN × 4 → 4096×4096).
@@ -253,6 +259,7 @@ class RunwareGenerator:
                 cfg_scale=cfg_scale,
                 seed_image_url=seed_image_url,
                 strength=strength,
+                reference_images=reference_images,
                 tiling=tiling,
                 width=width,
                 height=height,
