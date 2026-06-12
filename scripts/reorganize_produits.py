@@ -81,14 +81,22 @@ BRANCH = os.environ.get("GITHUB_REF_NAME") or subprocess.run(
     ["git", "rev-parse", "--abbrev-ref", "HEAD"], capture_output=True, text=True).stdout.strip()
 API = f"https://api.github.com/repos/{REPO}"
 
-def call(method, url, payload=None):
-    req = urllib.request.Request(url, method=method,
-        data=json.dumps(payload).encode() if payload is not None else None,
-        headers={"Authorization": f"Bearer {TOKEN}",
-                 "Accept": "application/vnd.github+json",
-                 "Content-Type": "application/json"})
-    with urllib.request.urlopen(req, timeout=120) as r:
-        return json.load(r)
+def call(method, url, payload=None, retries=4):
+    for k in range(retries):
+        req = urllib.request.Request(url, method=method,
+            data=json.dumps(payload).encode() if payload is not None else None,
+            headers={"Authorization": f"Bearer {TOKEN}",
+                     "Accept": "application/vnd.github+json",
+                     "Content-Type": "application/json"})
+        try:
+            with urllib.request.urlopen(req, timeout=180) as r:
+                return json.load(r)
+        except urllib.error.HTTPError as exc:
+            if exc.code in (502, 503, 504) and k < retries - 1:
+                print(f"{exc.code} sur {url}, retry {k+1}…")
+                time.sleep(3 * (k + 1))
+                continue
+            raise
 
 entries = ([{"path": new, "mode": "100644", "type": "blob", "sha": sha}
             for new, (sha, _) in seen.items()]
