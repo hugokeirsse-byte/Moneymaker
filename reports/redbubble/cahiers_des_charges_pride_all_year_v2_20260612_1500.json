@@ -1,0 +1,105 @@
+{
+  "generated_at": "2026-06-12T15:00:00Z",
+  "series": "pride_all_year_v2",
+  "styles": [
+    "embroidery_patch"
+  ],
+  "description": "Regen des 6 slogans all-year fautifs (EXACTLY incruste) — gabarit texte v2.",
+  "platform": "redbubble",
+  "total_briefs": 6,
+  "generation": {
+    "model": "runware:400@1",
+    "width": 2048,
+    "height": 2048,
+    "steps": 40,
+    "upscale_factor": 2,
+    "target_px": 4000,
+    "require_ai_upscale": true
+  },
+  "briefs": [
+    {
+      "name": "proud_all_year_v2 — Pride All Year Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "proud_all_year_v2",
+      "_idiom": "PROUD ALL YEAR",
+      "_canva_text": "PROUD ALL YEAR",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch on dark charcoal felt. The patch features the slogan \"PROUD ALL YEAR\" in bold embroidered block letters, stitched in clean white satin thread with a dark outline. The slogan is spelled correctly, every word written a single time, large and perfectly legible. Together with the lettering: a bold rainbow arc stretching over the lettering, a small embroidered sun and snowflake at each end of the arc showing the passing seasons. Rainbow elements use the classic six-stripe rainbow palette in dense satin stitch. Thick twisted rainbow rope border around the circular patch edge. Embroidered iron-on patch, hand-sewn look, ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen. Centered composition, full circular design entirely visible with a clear margin of dark felt all around. The patch contains no other words besides the slogan, no watermark, no logos.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "pride_365_v2 — Pride All Year Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "pride_365_v2",
+      "_idiom": "PRIDE 365",
+      "_canva_text": "PRIDE 365",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch on dark charcoal felt. The patch features the slogan \"PRIDE 365\" in bold embroidered block letters, stitched in clean white satin thread with a dark outline. The slogan is spelled correctly, every word written a single time, large and perfectly legible. Together with the lettering: a circular ring of rainbow stripes like a calendar wheel surrounding the lettering. Rainbow elements use the classic six-stripe rainbow palette in dense satin stitch. Thick twisted rainbow rope border around the circular patch edge. Embroidered iron-on patch, hand-sewn look, ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen. Centered composition, full circular design entirely visible with a clear margin of dark felt all around. The patch contains no other words besides the slogan, no watermark, no logos.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "pride_never_ends_v2 — Pride All Year Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "pride_never_ends_v2",
+      "_idiom": "PRIDE NEVER ENDS",
+      "_canva_text": "PRIDE NEVER ENDS",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch on dark charcoal felt. The patch features the slogan \"PRIDE NEVER ENDS\" in bold embroidered block letters, stitched in clean white satin thread with a dark outline. The slogan is spelled correctly, every word written a single time, large and perfectly legible. Together with the lettering: an infinity symbol embroidered in rainbow gradient thread beneath the lettering. Rainbow elements use the classic six-stripe rainbow palette in dense satin stitch. Thick twisted rainbow rope border around the circular patch edge. Embroidered iron-on patch, hand-sewn look, ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen. Centered composition, full circular design entirely visible with a clear margin of dark felt all around. The patch contains no other words besides the slogan, no watermark, no logos.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "love_all_year_long_v2 — Pride All Year Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "love_all_year_long_v2",
+      "_idiom": "LOVE ALL YEAR LONG",
+      "_canva_text": "LOVE ALL YEAR LONG",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch on dark charcoal felt. The patch features the slogan \"LOVE ALL YEAR LONG\" in bold embroidered block letters, stitched in clean white satin thread with a dark outline. The slogan is spelled correctly, every word written a single time, large and perfectly legible. Together with the lettering: a chain of small rainbow hearts circling the lettering like the months of a year. Rainbow elements use the classic six-stripe rainbow palette in dense satin stitch. Thick twisted rainbow rope border around the circular patch edge. Embroidered iron-on patch, hand-sewn look, ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen. Centered composition, full circular design entirely visible with a clear margin of dark felt all around. The patch contains no other words besides the slogan, no watermark, no logos.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "pride_is_not_a_season_v2 — Pride All Year Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "pride_is_not_a_season_v2",
+      "_idiom": "PRIDE IS NOT A SEASON",
+      "_canva_text": "PRIDE IS NOT A SEASON",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch on dark charcoal felt. The patch features the slogan \"PRIDE IS NOT A SEASON\" in bold embroidered block letters, stitched in clean white satin thread with a dark outline. The slogan is spelled correctly, every word written a single time, large and perfectly legible. Together with the lettering: a tree whose four quarters show spring blossoms, summer leaves, autumn colors and winter snow, with a rainbow trunk. Rainbow elements use the classic six-stripe rainbow palette in dense satin stitch. Thick twisted rainbow rope border around the circular patch edge. Embroidered iron-on patch, hand-sewn look, ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen. Centered composition, full circular design entirely visible with a clear margin of dark felt all around. The patch contains no other words besides the slogan, no watermark, no logos.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "twelve_months_of_pride_v2 — Pride All Year Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "twelve_months_of_pride_v2",
+      "_idiom": "12 MONTHS OF PRIDE",
+      "_canva_text": "12 MONTHS OF PRIDE",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch on dark charcoal felt. The patch features the slogan \"12 MONTHS OF PRIDE\" in bold embroidered block letters, stitched in clean white satin thread with a dark outline. The slogan is spelled correctly, every word written a single time, large and perfectly legible. Together with the lettering: twelve small rainbow stars arranged in a circle around the lettering like a clock face. Rainbow elements use the classic six-stripe rainbow palette in dense satin stitch. Thick twisted rainbow rope border around the circular patch edge. Embroidered iron-on patch, hand-sewn look, ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen. Centered composition, full circular design entirely visible with a clear margin of dark felt all around. The patch contains no other words besides the slogan, no watermark, no logos.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    }
+  ]
+}
