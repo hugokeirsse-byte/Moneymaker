@@ -28,7 +28,12 @@ jobs:
         run: |
           git config user.name  "Moneymaker Bot"
           git config user.email "bot@moneymaker.auto"
-          git commit -m "produits: réorganisation en dossiers classés par thème"
+          # commit par plomberie : git commit déclencherait la détection de
+          # renommages et téléchargerait les ~700 blobs déplacés (14 Go)
+          TREE=$(git write-tree)
+          NEW=$(git commit-tree "$TREE" -p HEAD -m "produits: réorganisation en dossiers classés par thème")
+          git update-ref "refs/heads/$(git rev-parse --abbrev-ref HEAD)" "$NEW"
+          git reset -q --soft "$NEW"
           BR=$(git rev-parse --abbrev-ref HEAD)
           DELAY=2
           for attempt in 1 2 3 4; do
