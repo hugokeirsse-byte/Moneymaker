@@ -159,11 +159,22 @@ def cutout_ai(in_path: str, out_path: str, feather: int = 2) -> None:
     img.load()
     mask = remove(img, session=_AI_SESSION, only_mask=True, post_process_mask=True)
     mask = mask.resize(img.size, Image.LANCZOS)
-    m = np.array(mask)
+    m = np.array(mask).astype(float)
     kept = (m > 128).mean() * 100
     if kept < 8 or kept > 97:
         raise RuntimeError(f"sujet {kept:.0f}% — extraction IA non exploitable")
-    rgba = np.dstack([np.array(img), m])
+    # bords nets : seuillage en bande étroite, miettes supprimées, érosion 2px
+    from scipy.ndimage import label as cc_label, distance_transform_edt
+    keep = m > 120
+    labels, n = cc_label(keep)
+    if n > 1:
+        sizes = np.bincount(labels.ravel())
+        tiny = sizes < keep.size * 0.0002
+        tiny[0] = False
+        keep[tiny[labels]] = False
+    dist_in = distance_transform_edt(keep)
+    alpha = np.clip((dist_in - 2.0) / 3.0, 0.0, 1.0) * 255
+    rgba = np.dstack([np.array(img), alpha.astype(np.uint8)])
     Image.fromarray(rgba, "RGBA").save(out_path, format="PNG", dpi=(300, 300), optimize=False)
     print(f"+ {os.path.basename(out_path)} : sujet {kept:.0f}% conservé (IA)")
 
