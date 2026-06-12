@@ -33,7 +33,9 @@ jobs:
           fetch-depth: 1
           sparse-checkout: |
             scripts
-            produits
+            data
+            ${{ github.event.inputs.src_dir }}
+            ${{ github.event.inputs.dst_dir }}
           sparse-checkout-cone-mode: true
 
       - uses: actions/setup-python@v5
