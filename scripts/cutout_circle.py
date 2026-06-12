@@ -114,6 +114,23 @@ def cutout_felt(in_path: str, out_path: str, feather: int = 3) -> None:
     print(f"+ {os.path.basename(out_path)} : fond feutre {pct:.0f}% transparent (forme libre)")
 
 
+def shrink_to_limit(in_path: str, out_path: str, limit_mb: float = 19.0) -> None:
+    """Variante plateforme à taille plafonnée (TeePublic < 20 Mo) : PNG optimisé,
+    puis réduction LANCZOS progressive jusqu'à passer sous la limite. Le mode
+    couleur (RGB/RGBA) et le DPI sont préservés ; l'original n'est pas modifié."""
+    img = Image.open(in_path)
+    limit = limit_mb * 1024 * 1024
+    for side in (img.size[0], 3500, 3000, 2600, 2200):
+        im = img if side >= img.size[0] else img.resize(
+            (side, int(img.size[1] * side / img.size[0])), Image.LANCZOS)
+        im.save(out_path, format="PNG", dpi=(300, 300), optimize=True)
+        size = os.path.getsize(out_path)
+        if size <= limit:
+            print(f"+ {os.path.basename(out_path)} : {im.size[0]}px, {size/1e6:.1f} Mo")
+            return
+    raise RuntimeError(f"{in_path}: impossible de passer sous {limit_mb} Mo")
+
+
 def main() -> int:
     if sys.argv[1] == "--batch":
         src, dst = sys.argv[2], sys.argv[3]
@@ -129,6 +146,8 @@ def main() -> int:
                 try:
                     if mode == "felt":
                         cutout_felt(os.path.join(root, f), out)
+                    elif mode == "shrink":
+                        shrink_to_limit(os.path.join(root, f), out)
                     else:
                         cutout(os.path.join(root, f), out)
                     ok += 1
