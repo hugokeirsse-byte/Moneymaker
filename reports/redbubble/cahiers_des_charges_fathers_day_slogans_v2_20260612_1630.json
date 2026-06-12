@@ -1,0 +1,63 @@
+{
+  "generated_at": "2026-06-12T16:30:00Z",
+  "series": "fathers_day_slogans_v2",
+  "styles": [
+    "embroidery_patch"
+  ],
+  "description": "Regen 3 slogans fautifs (mots doubles/faute) — disposition ligne par ligne explicite.",
+  "platform": "redbubble",
+  "total_briefs": 3,
+  "generation": {
+    "model": "runware:400@1",
+    "width": 2048,
+    "height": 2048,
+    "steps": 40,
+    "upscale_factor": 2,
+    "target_px": 4000,
+    "require_ai_upscale": true
+  },
+  "briefs": [
+    {
+      "name": "best_dad_ever_v2 — Fete des Peres Slogan Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "best_dad_ever_v2",
+      "_idiom": "BEST DAD EVER",
+      "_canva_text": "BEST DAD EVER",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch on warm dark felt. The patch features the slogan \"BEST DAD EVER\" in bold embroidered block letters, stitched in clean white satin thread with a dark outline: three words on three stacked lines — BEST on the first line, DAD on the second line, EVER on the third line, each word once — with a gleaming golden trophy cup and two laurel branches. The slogan is spelled correctly, every word written a single time, large and perfectly legible. Color palette of rich navy, warm red, golden yellow and cream thread in dense satin stitch. Thick twisted navy and gold rope border around the circular patch edge. Embroidered iron-on patch, hand-sewn look, ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen. Centered composition, full circular design entirely visible with a clear margin of dark felt all around. The patch contains no other words besides the slogan, no watermark, no logos.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "dad_mode_on_v2 — Fete des Peres Slogan Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "dad_mode_on_v2",
+      "_idiom": "DAD MODE ON",
+      "_canva_text": "DAD MODE ON",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch on warm dark felt. The patch features the slogan \"DAD MODE ON\" in bold embroidered block letters, stitched in clean white satin thread with a dark outline: three words on three stacked lines — DAD, then MODE spelled M-O-D-E, then ON — with a chunky power toggle switch flipped on, glowing green indicator stitch. The slogan is spelled correctly, every word written a single time, large and perfectly legible. Color palette of rich navy, warm red, golden yellow and cream thread in dense satin stitch. Thick twisted navy and gold rope border around the circular patch edge. Embroidered iron-on patch, hand-sewn look, ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen. Centered composition, full circular design entirely visible with a clear margin of dark felt all around. The patch contains no other words besides the slogan, no watermark, no logos.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "promoted_to_dad_v2 — Fete des Peres Slogan Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "promoted_to_dad_v2",
+      "_idiom": "PROMOTED TO DAD",
+      "_canva_text": "PROMOTED TO DAD",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch on warm dark felt. The patch features the slogan \"PROMOTED TO DAD\" in bold embroidered block letters, stitched in clean white satin thread with a dark outline: three words on three stacked lines — PROMOTED, then TO appearing a single time, then DAD — with a sheriff-style star badge and a tiny baby pacifier at its center. The slogan is spelled correctly, every word written a single time, large and perfectly legible. Color palette of rich navy, warm red, golden yellow and cream thread in dense satin stitch. Thick twisted navy and gold rope border around the circular patch edge. Embroidered iron-on patch, hand-sewn look, ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen. Centered composition, full circular design entirely visible with a clear margin of dark felt all around. The patch contains no other words besides the slogan, no watermark, no logos.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    }
+  ]
+}
