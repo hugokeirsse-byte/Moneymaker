@@ -1,0 +1,35 @@
+{
+  "generated_at": "2026-06-12T16:00:00Z",
+  "series": "pride_human_first_v3",
+  "styles": [
+    "embroidery_patch"
+  ],
+  "description": "Fix espacement ALL HEARTS BEAT THE SAME.",
+  "platform": "redbubble",
+  "total_briefs": 1,
+  "generation": {
+    "model": "runware:400@1",
+    "width": 2048,
+    "height": 2048,
+    "steps": 40,
+    "upscale_factor": 2,
+    "target_px": 4000,
+    "require_ai_upscale": true
+  },
+  "briefs": [
+    {
+      "name": "all_hearts_beat_the_same_v3 — Pride Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "all_hearts_beat_the_same_v3",
+      "_idiom": "ALL HEARTS BEAT THE SAME",
+      "_canva_text": "ALL HEARTS BEAT THE SAME",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch on dark charcoal felt. The patch features a slogan in bold embroidered block letters on two lines: the first line reads \"ALL HEARTS\" and the second line reads \"BEAT THE SAME\" — four separate words on that line, with a clear visible space between each word, spelled correctly, every word written a single time, large and perfectly legible, stitched in clean white satin thread with a dark outline. Together with the lettering: a single continuous heartbeat pulse line crossing the patch, the line transitioning through the six rainbow colors. Thick twisted rainbow rope border around the circular patch edge. Embroidered iron-on patch, hand-sewn look, ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen. Centered composition, full circular design entirely visible with a clear margin of dark felt all around. The patch contains no other words besides the slogan, no watermark, no logos.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    }
+  ]
+}
