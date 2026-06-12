@@ -1,0 +1,91 @@
+{
+  "generated_at": "2026-06-12T14:30:00Z",
+  "series": "pride_human_first_v2",
+  "styles": [
+    "embroidery_patch"
+  ],
+  "description": "Regen des 5 slogans fautifs — gabarit texte corrige (plus de EXACTLY adjacent, anti-doublon).",
+  "platform": "redbubble",
+  "total_briefs": 5,
+  "generation": {
+    "model": "runware:400@1",
+    "width": 2048,
+    "height": 2048,
+    "steps": 40,
+    "upscale_factor": 2,
+    "target_px": 4000,
+    "require_ai_upscale": true
+  },
+  "briefs": [
+    {
+      "name": "human_first_v2 — Pride Human First Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "human_first_v2",
+      "_idiom": "HUMAN FIRST",
+      "_canva_text": "HUMAN FIRST",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch on dark charcoal felt. The patch features the slogan \"HUMAN FIRST\" in bold embroidered block letters, stitched in clean white satin thread with a dark outline. The slogan is spelled correctly, every word written a single time, large and perfectly legible. Together with the lettering: a single human silhouette filled with a subtle rainbow gradient, identical to a plain silhouette beside it, an equals sign stitched between them. Rainbow elements use the classic six-stripe rainbow palette in dense satin stitch. Thick twisted rainbow rope border around the circular patch edge. Embroidered iron-on patch, hand-sewn look, ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen. Centered composition, full circular design entirely visible with a clear margin of dark felt all around. The patch contains no other words besides the slogan, no watermark, no logos.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "pride_but_human_first_v2 — Pride Human First Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "pride_but_human_first_v2",
+      "_idiom": "PRIDE BUT HUMAN FIRST",
+      "_canva_text": "PRIDE BUT HUMAN FIRST",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch on dark charcoal felt. The patch features the slogan \"PRIDE BUT HUMAN FIRST\" in bold embroidered block letters, stitched in clean white satin thread with a dark outline. The slogan is spelled correctly, every word written a single time, large and perfectly legible. Together with the lettering: a small rainbow flag tucked into the chest pocket of a simple embroidered shirt outline, over a large stitched heart. Rainbow elements use the classic six-stripe rainbow palette in dense satin stitch. Thick twisted rainbow rope border around the circular patch edge. Embroidered iron-on patch, hand-sewn look, ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen. Centered composition, full circular design entirely visible with a clear margin of dark felt all around. The patch contains no other words besides the slogan, no watermark, no logos.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "all_hearts_beat_the_same_v2 — Pride Human First Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "all_hearts_beat_the_same_v2",
+      "_idiom": "ALL HEARTS BEAT THE SAME",
+      "_canva_text": "ALL HEARTS BEAT THE SAME",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch on dark charcoal felt. The patch features the slogan \"ALL HEARTS BEAT THE SAME\" in bold embroidered block letters, stitched in clean white satin thread with a dark outline. The slogan is spelled correctly, every word written a single time, large and perfectly legible. Together with the lettering: a single continuous heartbeat pulse line crossing the patch, the line transitioning through the six rainbow colors. Rainbow elements use the classic six-stripe rainbow palette in dense satin stitch. Thick twisted rainbow rope border around the circular patch edge. Embroidered iron-on patch, hand-sewn look, ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen. Centered composition, full circular design entirely visible with a clear margin of dark felt all around. The patch contains no other words besides the slogan, no watermark, no logos.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "no_difference_just_love_v2 — Pride Human First Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "no_difference_just_love_v2",
+      "_idiom": "NO DIFFERENCE JUST LOVE",
+      "_canva_text": "NO DIFFERENCE JUST LOVE",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch on dark charcoal felt. The patch features the slogan \"NO DIFFERENCE JUST LOVE\" in bold embroidered block letters, stitched in clean white satin thread with a dark outline. The slogan is spelled correctly, every word written a single time, large and perfectly legible. Together with the lettering: a bold equals sign whose two bars are embroidered in rainbow stripes, small hearts at each corner. Rainbow elements use the classic six-stripe rainbow palette in dense satin stitch. Thick twisted rainbow rope border around the circular patch edge. Embroidered iron-on patch, hand-sewn look, ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen. Centered composition, full circular design entirely visible with a clear margin of dark felt all around. The patch contains no other words besides the slogan, no watermark, no logos.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "love_is_love_v2 — Pride Human First Patch",
+      "_style_id": "embroidery_patch",
+      "_expression_id": "love_is_love_v2",
+      "_idiom": "LOVE IS LOVE",
+      "_canva_text": "LOVE IS LOVE",
+      "ai_generation": {
+        "positive_prompt": "Circular embroidery patch on dark charcoal felt. The patch features the slogan \"LOVE IS LOVE\" in bold embroidered block letters, stitched in clean white satin thread with a dark outline. The slogan is spelled correctly, every word written a single time, large and perfectly legible. Together with the lettering: two interlocked embroidered hearts of the same shape and size, one rainbow and one golden, no hierarchy between them. Rainbow elements use the classic six-stripe rainbow palette in dense satin stitch. Thick twisted rainbow rope border around the circular patch edge. Embroidered iron-on patch, hand-sewn look, ultra-detailed macro embroidery rendering: individual thread strands clearly visible, raised stitch relief catching soft studio light, subtle textile sheen. Centered composition, full circular design entirely visible with a clear margin of dark felt all around. The patch contains no other words besides the slogan, no watermark, no logos.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    }
+  ]
+}
