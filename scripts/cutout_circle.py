@@ -35,12 +35,18 @@ def detect_radius(arr: np.ndarray) -> float:
     dist = np.sqrt((yy - cy) ** 2 + (xx - cx) ** 2)
     not_felt = (np.abs(arr.astype(float) - felt).sum(axis=2) > tol * 3)
 
-    # balayage radial : dernier rayon où l'anneau contient encore du non-feutre
+    # balayage radial : dernier rayon où l'anneau contient encore du non-feutre.
+    # Seuil bas (8 %) + continuité sur 3 anneaux : les liserés sombres à
+    # pointillés dorés (Allemagne, Belgique…) n'ont que ~20 % de pixels clairs.
     rmax = min(h, w) / 2
     radius = 0.0
-    for r in np.arange(rmax - 2, min(h, w) * 0.2, -4):
+    radii = np.arange(rmax - 2, min(h, w) * 0.2, -4)
+    fracs = []
+    for r in radii:
         ring = (dist >= r - 4) & (dist < r)
-        if not_felt[ring].mean() > 0.35:
+        fracs.append(not_felt[ring].mean())
+    for i, r in enumerate(radii[:-3]):
+        if fracs[i] > 0.08 and fracs[i + 1] > 0.05 and fracs[i + 2] > 0.05:
             radius = float(r)
             break
     if not radius:
