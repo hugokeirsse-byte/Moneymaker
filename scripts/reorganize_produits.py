@@ -92,10 +92,12 @@ def call(method, url, payload=None, retries=4):
             with urllib.request.urlopen(req, timeout=180) as r:
                 return json.load(r)
         except urllib.error.HTTPError as exc:
+            body = exc.read().decode(errors="replace")[:600]
             if exc.code in (502, 503, 504) and k < retries - 1:
                 print(f"{exc.code} sur {url}, retry {k+1}…")
                 time.sleep(3 * (k + 1))
                 continue
+            print(f"HTTP {exc.code} sur {url} : {body}")
             raise
 
 entries = ([{"path": new, "mode": "100644", "type": "blob", "sha": sha}
