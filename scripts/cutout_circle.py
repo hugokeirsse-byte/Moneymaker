@@ -114,10 +114,13 @@ def cutout_felt(in_path: str, out_path: str, feather: int = 3) -> None:
         alpha = np.clip(dist_in / feather, 0.0, 1.0) * 255
     except ImportError:
         pass
+    pct = 100 * bg.mean()
+    # garde-fou : <5% = pas de vrai fond uni ; >75% = la scène serait détruite
+    if pct < 5 or pct > 75:
+        raise RuntimeError(f"fond {pct:.0f}% — non détourable proprement, ignorée")
     rgba = np.dstack([arr, alpha.astype(np.uint8)])
     Image.fromarray(rgba, "RGBA").save(out_path, format="PNG", dpi=(300, 300), optimize=False)
-    pct = 100 * bg.mean()
-    print(f"+ {os.path.basename(out_path)} : fond feutre {pct:.0f}% transparent (forme libre)")
+    print(f"+ {os.path.basename(out_path)} : fond {pct:.0f}% transparent (forme libre)")
 
 
 def shrink_to_limit(in_path: str, out_path: str, limit_mb: float = 19.0) -> None:
@@ -161,8 +164,8 @@ def main() -> int:
                     ko.append((f, str(exc)))
         print(f"{ok} images détourées → {dst}")
         for f, e in ko:
-            print(f"  ❌ {f}: {e}")
-        return 0 if not ko else 1
+            print(f"  ⏭️ {f}: {e}")
+        return 0
     pad = int(sys.argv[4]) if len(sys.argv) > 4 and sys.argv[3] == "--pad" else 6
     cutout(sys.argv[1], sys.argv[2], pad=pad)
     return 0
