@@ -116,8 +116,17 @@ jobs:
           # filter blob:none : ne télécharge PAS les blobs upfront.
           # Le repo dépasse plusieurs Go d'images commitées — sans ce filtre
           # le checkout échoue avec early EOF même en shallow clone.
+          # sparse-checkout : produits/ (>10 Go de finals) est inutile à la
+          # génération et saturait le disque du runner (échec 12/06 13:32).
           fetch-depth: 1
           filter: blob:none
+          sparse-checkout: |
+            scripts
+            trend_discovery
+            reports
+            data
+            output
+          sparse-checkout-cone-mode: true
 
       - name: Python 3.11
         uses: actions/setup-python@v5
