@@ -60,20 +60,57 @@ for src in ["produits/teepublic/events_flood", "produits/teepublic/events_june_s
         if t:
             moves.append((sha, p, f"produits/teepublic/{t}/" + p.split("/")[-1]))
 
-# doublons fixes : drapeaux/ballons "_sur_feutre" mappés deux fois (transparent
-# remap a déjà pris les non-transparents ?) — dédoublonnage par chemin cible
+
 seen = {}
 for sha, old, new in moves:
     seen.setdefault(new, (sha, old))
 obsolete = [p for _, p in ls("produits/worldcup2026_flag_hexagon_balls") if "_v2" not in p]
 old_paths = sorted({old for _, old, _ in moves} | set(obsolete))
-
 print(f"{len(old_paths)} retraits, {len(seen)} ajouts")
-with open("/tmp/rm.nul", "w") as fh:
-    fh.write("\0".join(old_paths))
-subprocess.run(["git", "rm", "-q", "--cached", "--sparse",
-                "--pathspec-from-file=/tmp/rm.nul", "--pathspec-file-nul"], check=True)
-info = "".join(f"100644 {sha}\t{new}\0" for new, (sha, _) in seen.items())
-subprocess.run(["git", "update-index", "--add", "-z", "--index-info"],
-               input=info, text=True, check=True)
-print("index réorganisé — prêt à committer")
+
+# ── commit via l'API GitHub (zéro pack local : un clone partiel re-télécharge
+#    des Go d'objets au push ; l'API référence les blobs existants côté serveur)
+import json
+import os
+import time
+import urllib.request
+
+TOKEN = os.environ["GITHUB_TOKEN"]
+REPO = os.environ.get("GITHUB_REPOSITORY", "hugokeirsse-byte/Moneymaker")
+BRANCH = os.environ.get("GITHUB_REF_NAME") or subprocess.run(
+    ["git", "rev-parse", "--abbrev-ref", "HEAD"], capture_output=True, text=True).stdout.strip()
+API = f"https://api.github.com/repos/{REPO}"
+
+def call(method, url, payload=None):
+    req = urllib.request.Request(url, method=method,
+        data=json.dumps(payload).encode() if payload is not None else None,
+        headers={"Authorization": f"Bearer {TOKEN}",
+                 "Accept": "application/vnd.github+json",
+                 "Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=120) as r:
+        return json.load(r)
+
+entries = ([{"path": new, "mode": "100644", "type": "blob", "sha": sha}
+            for new, (sha, _) in seen.items()]
+           + [{"path": old, "mode": "100644", "type": "blob", "sha": None}
+              for old in old_paths])
+
+for attempt in range(4):
+    head_ref = call("GET", f"{API}/git/ref/heads/{BRANCH}")
+    head_sha = head_ref["object"]["sha"]
+    head_commit = call("GET", f"{API}/git/commits/{head_sha}")
+    tree = call("POST", f"{API}/git/trees",
+                {"base_tree": head_commit["tree"]["sha"], "tree": entries})
+    commit = call("POST", f"{API}/git/commits",
+                  {"message": "produits: réorganisation en dossiers classés par thème",
+                   "tree": tree["sha"], "parents": [head_sha]})
+    try:
+        call("PATCH", f"{API}/git/refs/heads/{BRANCH}",
+             {"sha": commit["sha"], "force": False})
+        print(f"commit API publié : {commit['sha'][:9]}")
+        break
+    except Exception as exc:  # noqa: BLE001 — la branche a avancé, on recommence
+        print(f"ref avancée ({exc}), nouvelle tentative…")
+        time.sleep(2 ** (attempt + 1))
+else:
+    raise SystemExit("impossible de publier après 4 tentatives")

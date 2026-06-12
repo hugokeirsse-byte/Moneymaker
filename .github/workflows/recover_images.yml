@@ -21,30 +21,7 @@ jobs:
             scripts
           sparse-checkout-cone-mode: true
 
-      - name: Réorganisation (index git, aucun fichier image téléchargé)
+      - name: Réorganisation + commit via API GitHub
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 scripts/reorganize_produits.py
-
-      - name: Commit et push
-        run: |
-          git config user.name  "Moneymaker Bot"
-          git config user.email "bot@moneymaker.auto"
-          # commit par plomberie : git commit déclencherait la détection de
-          # renommages et téléchargerait les ~700 blobs déplacés (14 Go)
-          BR=$(git rev-parse --abbrev-ref HEAD)
-          DELAY=2
-          for attempt in 1 2 3 4; do
-            TREE=$(git write-tree)
-            NEW=$(git commit-tree "$TREE" -p "$(git rev-parse HEAD)" -m "produits: réorganisation en dossiers classés par thème")
-            git update-ref "refs/heads/$BR" "$NEW"
-            git reset -q --soft "$NEW"
-            if git push origin "$BR"; then
-              exit 0
-            fi
-            # branche distante avancée : pas de rebase (diff de 700 images =
-            # 14 Go de blobs) — on recale sur le distant et on RECALCULE.
-            git fetch origin "$BR"
-            git reset -q --hard "origin/$BR"
-            python3 scripts/reorganize_produits.py
-            sleep $DELAY; DELAY=$((DELAY * 2))
-          done
-          exit 1
