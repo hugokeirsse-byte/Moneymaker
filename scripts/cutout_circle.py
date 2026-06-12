@@ -145,6 +145,38 @@ def shrink_to_limit(in_path: str, out_path: str, limit_mb: float = 19.0) -> None
     raise RuntimeError(f"{in_path}: impossible de passer sous {limit_mb} Mo")
 
 
+_AI_SESSION = None
+
+def cutout_ai(in_path: str, out_path: str, feather: int = 2) -> None:
+    """Détourage IA (rembg/ISNet) : le modèle calcule uniquement le MASQUE sur
+    une copie réduite ; le masque est appliqué à l'image ORIGINALE pleine
+    résolution — pixels RGB strictement inchangés, PNG sans perte."""
+    global _AI_SESSION
+    from rembg import remove, new_session
+    if _AI_SESSION is None:
+        _AI_SESSION = new_session("isnet-general-use")
+    img = Image.open(in_path).convert("RGB")
+    img.load()
+    mask = remove(img, session=_AI_SESSION, only_mask=True, post_process_mask=True)
+    mask = mask.resize(img.size, Image.LANCZOS)
+    m = np.array(mask)
+    kept = (m > 128).mean() * 100
+    if kept < 8 or kept > 97:
+        raise RuntimeError(f"sujet {kept:.0f}% — extraction IA non exploitable")
+    rgba = np.dstack([np.array(img), m])
+    Image.fromarray(rgba, "RGBA").save(out_path, format="PNG", dpi=(300, 300), optimize=False)
+    print(f"+ {os.path.basename(out_path)} : sujet {kept:.0f}% conservé (IA)")
+
+
+def cutout_auto(in_path: str, out_path: str) -> None:
+    """Sticker d'abord (fond uni retiré, contour sticker préservé) ;
+    si l'image est pleine page, extraction IA du sujet."""
+    try:
+        cutout_felt(in_path, out_path)
+    except RuntimeError:
+        cutout_ai(in_path, out_path)
+
+
 def main() -> int:
     if sys.argv[1] == "--batch":
         src, dst = sys.argv[2], sys.argv[3]
@@ -160,6 +192,10 @@ def main() -> int:
                 try:
                     if mode == "felt":
                         cutout_felt(os.path.join(root, f), out)
+                    elif mode == "auto":
+                        cutout_auto(os.path.join(root, f), out)
+                    elif mode == "ai":
+                        cutout_ai(os.path.join(root, f), out)
                     elif mode == "shrink":
                         shrink_to_limit(os.path.join(root, f), out)
                     else:

@@ -43,7 +43,7 @@ jobs:
           python-version: '3.11'
 
       - name: Dépendances
-        run: pip install -q numpy Pillow scipy
+        run: pip install -q numpy Pillow scipy rembg onnxruntime
 
       - name: Restaurer la source depuis l'historique (si src_ref)
         if: ${{ github.event.inputs.src_ref != '' }}
