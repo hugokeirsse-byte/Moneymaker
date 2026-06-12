@@ -129,10 +129,15 @@ def shrink_to_limit(in_path: str, out_path: str, limit_mb: float = 19.0) -> None
     couleur (RGB/RGBA) et le DPI sont préservés ; l'original n'est pas modifié."""
     img = Image.open(in_path)
     limit = limit_mb * 1024 * 1024
-    for side in (img.size[0], 3500, 3000, 2600, 2200):
+    # >12 MP en RGBA ne passe jamais sous 19 Mo : inutile de tenter la taille
+    # native (l'encodage PNG 20 MP + optimize prenait ~2 min/image et faisait
+    # sauter le timeout CI). On part directement de 3500 px, sans optimize.
+    candidates = [s for s in (img.size[0], 3500, 3000, 2600, 2200)
+                  if s * s <= 12_000_000 or s != img.size[0]]
+    for side in candidates:
         im = img if side >= img.size[0] else img.resize(
             (side, int(img.size[1] * side / img.size[0])), Image.LANCZOS)
-        im.save(out_path, format="PNG", dpi=(300, 300), optimize=True)
+        im.save(out_path, format="PNG", dpi=(300, 300), optimize=False)
         size = os.path.getsize(out_path)
         if size <= limit:
             print(f"+ {os.path.basename(out_path)} : {im.size[0]}px, {size/1e6:.1f} Mo")
