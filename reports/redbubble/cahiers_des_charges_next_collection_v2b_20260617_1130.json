@@ -1,0 +1,192 @@
+{
+  "generated_at": "2026-06-17T11:08:38Z",
+  "series": "next_collection_v2b",
+  "styles": [
+    "funny_tarot",
+    "ukiyo_synthwave",
+    "animal_hobby",
+    "dark_academia"
+  ],
+  "description": "12 designs originaux (3 par sujet) — relance apres bug --limit (ronin deja livre).",
+  "platform": "redbubble",
+  "total_briefs": 12,
+  "generation": {
+    "model": "runware:400@1",
+    "width": 2048,
+    "height": 2048,
+    "steps": 40,
+    "upscale_factor": 2,
+    "target_px": 4000,
+    "require_ai_upscale": true
+  },
+  "briefs": [
+    {
+      "name": "tarot_procrastinator — Next Collection v2",
+      "_style_id": "funny_tarot",
+      "_expression_id": "tarot_procrastinator",
+      "_idiom": "THE PROCRASTINATOR",
+      "_canva_text": "THE PROCRASTINATOR",
+      "ai_generation": {
+        "positive_prompt": "A vintage tarot card in a tall rectangular frame with ornate art-nouveau borders and corner filigree. The scene shows a cozy character lounging in a chair scrolling a phone while a teetering pile of unfinished papers, ringing alarm clocks and a ticking hourglass surround them. A Roman numeral \"XII\" at the top, a decorative banner across the bottom reads \"THE PROCRASTINATOR\". Muted vintage palette of dusty mauve, cream and faded gold, clean flat-vector shapes with fine linework and soft grain. Centered composition, isolated on a plain cream background, print-on-demand design. All lettering is crisp, evenly spaced and correctly spelled.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "tarot_night_owl — Next Collection v2",
+      "_style_id": "funny_tarot",
+      "_expression_id": "tarot_night_owl",
+      "_idiom": "THE NIGHT OWL",
+      "_canva_text": "THE NIGHT OWL",
+      "ai_generation": {
+        "positive_prompt": "A vintage tarot card with ornate gilded borders and corner stars. The illustration depicts a wide-awake owl perched on a crescent moon at midnight, holding a tiny steaming coffee cup, surrounded by stars and constellations. A Roman numeral \"XVIII\" at the top, a banner at the bottom reads \"THE NIGHT OWL\". Muted vintage palette of midnight blue, indigo and aged gold, detailed flat illustration with fine ink lines and subtle paper grain. Centered, isolated on a plain cream background, print-on-demand. All lettering is crisp and correctly spelled.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "tarot_plant_parent — Next Collection v2",
+      "_style_id": "funny_tarot",
+      "_expression_id": "tarot_plant_parent",
+      "_idiom": "THE PLANT PARENT",
+      "_canva_text": "THE PLANT PARENT",
+      "ai_generation": {
+        "positive_prompt": "A vintage tarot card titled like a high arcana, ornate borders with leafy filigree. At the center a happy character cradles a potted monstera, surrounded by lush houseplants, a watering can and hanging vines. A Roman numeral \"III\" at the top, a banner at the bottom reads \"THE PLANT PARENT\". Muted vintage palette of sage green, terracotta, cream and faded gold, flat-vector botanical style with fine linework. Centered, isolated on a plain cream background, print-on-demand. All lettering is crisp and correctly spelled.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "ukiyo_neon_koi — Next Collection v2",
+      "_style_id": "ukiyo_synthwave",
+      "_expression_id": "ukiyo_neon_koi",
+      "_idiom": "NEON KOI",
+      "_canva_text": "NEON KOI",
+      "ai_generation": {
+        "positive_prompt": "A Japanese Ukiyo-e woodblock print illustration of two koi carp swimming in a swirling whirlpool, fins and scales glowing in synthwave neon, gradients of magenta, cyan and violet, glowing outlines, traditional carved wave and water motifs, subtle halftone gradient. Flat 2D printable illustration, centered and entirely visible, isolated on a solid plain black background, high detail.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "ukiyo_cyber_geisha — Next Collection v2",
+      "_style_id": "ukiyo_synthwave",
+      "_expression_id": "ukiyo_cyber_geisha",
+      "_idiom": "CYBER GEISHA",
+      "_canva_text": "CYBER GEISHA",
+      "ai_generation": {
+        "positive_prompt": "A Japanese Ukiyo-e woodblock print illustration of an elegant geisha holding a glowing neon paper parasol, kimono patterned with luminous circuitry, cherry blossom petals drifting, retrowave palette of hot pink, cyan and violet, glowing neon outlines, halftone gradient backdrop. Flat 2D printable illustration, centered and entirely visible, isolated on a solid plain black background, high detail.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "ukiyo_kitsune_torii — Next Collection v2",
+      "_style_id": "ukiyo_synthwave",
+      "_expression_id": "ukiyo_kitsune_torii",
+      "_idiom": "KITSUNE TORII",
+      "_canva_text": "KITSUNE TORII",
+      "ai_generation": {
+        "positive_prompt": "A Japanese Ukiyo-e woodblock print illustration of a nine-tailed fox kitsune sitting before a glowing neon torii gate at night, stylised clouds and a full moon, synthwave palette of magenta, cyan and deep indigo, glowing neon outlines, traditional carved linework, halftone gradient. Flat 2D printable illustration, centered and entirely visible, isolated on a solid plain black background, high detail.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "axolotl_gamer — Next Collection v2",
+      "_style_id": "animal_hobby",
+      "_expression_id": "axolotl_gamer",
+      "_idiom": "GG",
+      "_canva_text": "GG",
+      "ai_generation": {
+        "positive_prompt": "A cute humorous illustration of a smiling pink axolotl wearing tiny headphones and gripping a game controller with both little hands, floating bubbles around, a small bold banner reads \"GG\". Vibrant saturated colors, thick clean outlines, slight cell-shading, sticker design with clear edges, isolated on a plain white background. The lettering is crisp, bold and correctly spelled.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "raccoon_coffee — Next Collection v2",
+      "_style_id": "animal_hobby",
+      "_expression_id": "raccoon_coffee",
+      "_idiom": "BUT FIRST COFFEE",
+      "_canva_text": "BUT FIRST COFFEE",
+      "ai_generation": {
+        "positive_prompt": "A cute humorous illustration of a wide-eyed raccoon clutching a big takeaway coffee cup with both paws, messy fur, jittery excited expression, a bold rounded banner reads \"BUT FIRST COFFEE\". Vibrant saturated colors, thick clean outlines, slight cell-shading, sticker design with clear edges, isolated on a plain white background. The lettering is crisp, bold and correctly spelled.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "sloth_yoga — Next Collection v2",
+      "_style_id": "animal_hobby",
+      "_expression_id": "sloth_yoga",
+      "_idiom": "NAMASLOW",
+      "_canva_text": "NAMASLOW",
+      "ai_generation": {
+        "positive_prompt": "A cute humorous illustration of a relaxed sloth doing a calm yoga pose while hanging lazily from a branch, eyes half closed, serene smile, a small banner reads \"NAMASLOW\". Soft pastel palette of mint, peach and cream, thick clean outlines, slight cell-shading, sticker design with clear edges, isolated on a plain white background. The lettering is crisp, bold and correctly spelled.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "darkacad_raven_quill — Next Collection v2",
+      "_style_id": "dark_academia",
+      "_expression_id": "darkacad_raven_quill",
+      "_idiom": "RAVEN AND QUILL",
+      "_canva_text": "RAVEN AND QUILL",
+      "ai_generation": {
+        "positive_prompt": "A dark academia emblem of a glossy black raven perched on a stack of antique leather books, holding a feather quill, an inkwell, a melting candle and dried botanicals nearby, soft candlelight glow. Moody vintage palette of charcoal, deep teal, oxblood and aged gold, detailed engraving-meets-flat-illustration style with fine linework. Centered symmetrical composition, isolated on a plain dark background, print-on-demand.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "darkacad_apothecary — Next Collection v2",
+      "_style_id": "dark_academia",
+      "_expression_id": "darkacad_apothecary",
+      "_idiom": "APOTHECARY",
+      "_canva_text": "APOTHECARY",
+      "ai_generation": {
+        "positive_prompt": "A dark academia still life of antique apothecary glass bottles labelled with mysterious symbols, dried herbs, a mortar and pestle, a moth and a candle on aged wood, warm candlelight. Moody vintage palette of amber, deep green, sepia and tarnished gold, detailed engraving style with fine linework and subtle grain. Centered composition, isolated on a plain parchment background, print-on-demand.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "darkacad_celestial_moon — Next Collection v2",
+      "_style_id": "dark_academia",
+      "_expression_id": "darkacad_celestial_moon",
+      "_idiom": "CELESTIAL MOON PHASES",
+      "_canva_text": "CELESTIAL MOON PHASES",
+      "ai_generation": {
+        "positive_prompt": "A dark academia celestial emblem of a row of moon phases arching over an open antique book that emits a soft glow, surrounded by pressed wildflowers, tiny stars and a constellation, soft candlelight. Moody vintage palette of midnight blue, cream, dusty rose and aged gold, detailed engraving-meets-flat-illustration style with fine linework. Symmetrical centered composition, isolated on a plain dark background, print-on-demand.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    }
+  ]
+}
