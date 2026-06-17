@@ -1,4 +1,4 @@
-name: Maintenance — réorganisation produits
+name: Maintenance — nettoyage produits
 
 on:
   workflow_dispatch: {}
@@ -7,10 +7,10 @@ permissions:
   contents: write
 
 jobs:
-  reorg:
-    name: Réorganise produits/ en dossiers thématiques
+  cleanup:
+    name: Nettoyage produits/ (pride strays)
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 15
     steps:
       - name: Checkout (sparse minimal)
         uses: actions/checkout@v4
@@ -21,7 +21,8 @@ jobs:
             scripts
           sparse-checkout-cone-mode: true
 
-      - name: Réorganisation + commit via API GitHub
+      - name: Retrait des slogans dupliqués à la racine de pride/
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python3 scripts/reorganize_produits.py
+          BRANCH: ${{ github.ref_name }}
+        run: python3 scripts/cleanup_pride_strays.py
