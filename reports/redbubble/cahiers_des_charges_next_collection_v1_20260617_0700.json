@@ -1,0 +1,192 @@
+{
+  "generated_at": "2026-06-17T07:00:29Z",
+  "series": "next_collection_v1",
+  "styles": [
+    "funny_tarot",
+    "ukiyo_synthwave",
+    "animal_hobby",
+    "dark_academia"
+  ],
+  "description": "Prochaine collection — 4 niches x 3 prompts (tarot humoristique, ukiyo-e x synthwave, animaux de niche x hobbies, dark academia). FLUX.2 Dev, upscale reel 4000.",
+  "platform": "redbubble",
+  "total_briefs": 12,
+  "generation": {
+    "model": "runware:400@1",
+    "width": 2048,
+    "height": 2048,
+    "steps": 40,
+    "upscale_factor": 2,
+    "target_px": 4000,
+    "require_ai_upscale": true
+  },
+  "briefs": [
+    {
+      "name": "tarot_introvert — Next Collection",
+      "_style_id": "funny_tarot",
+      "_expression_id": "tarot_introvert",
+      "_idiom": "THE INTROVERT",
+      "_canva_text": "THE INTROVERT",
+      "ai_generation": {
+        "positive_prompt": "A vintage tarot card in a tall rectangular frame with ornate art-nouveau borders and corner filigree. The scene shows a cute round ghost wrapped in a cozy knitted blanket, sitting in an armchair reading an open book by candlelight, surrounded by small mystic symbols, crescent moons and tiny stars. A Roman numeral \"IX\" sits at the top, a decorative banner across the bottom reads \"THE INTROVERT\". Muted vintage palette of dusty teal, cream and faded gold, clean flat-vector shapes with fine linework and soft grain. Centered composition, isolated on a plain cream background, print-on-demand design. All lettering is crisp, evenly spaced and correctly spelled.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "tarot_overthinker — Next Collection",
+      "_style_id": "funny_tarot",
+      "_expression_id": "tarot_overthinker",
+      "_idiom": "THE OVERTHINKER",
+      "_canva_text": "THE OVERTHINKER",
+      "ai_generation": {
+        "positive_prompt": "A vintage tarot card with ornate gilded borders and corner stars. The illustration depicts a small worried character sitting cross-legged, head wide open at the top releasing a swirling tangle of thread, clock gears and floating question marks into a starry night. A Roman numeral \"0\" at the top, a banner at the bottom reads \"THE OVERTHINKER\". Muted vintage palette of midnight blue, rust and aged gold, detailed flat illustration with fine ink lines and subtle paper grain. Centered, isolated on a plain cream background, print-on-demand. All lettering is crisp and correctly spelled.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "tarot_caffeine — Next Collection",
+      "_style_id": "funny_tarot",
+      "_expression_id": "tarot_caffeine",
+      "_idiom": "THE CAFFEINE",
+      "_canva_text": "THE CAFFEINE",
+      "ai_generation": {
+        "positive_prompt": "A vintage tarot card titled like a sun arcana, ornate borders with radiating rays. At the center a large steaming coffee cup glows like a rising sun, its rays alternating with little coffee beans, a crescent moon and stars around it. A Roman numeral \"XIX\" at the top, a banner at the bottom reads \"THE CAFFEINE\". Muted vintage palette of warm terracotta, cream and faded gold, flat-vector mystic style with fine linework. Centered, isolated on a plain cream background, print-on-demand. All lettering is crisp and correctly spelled.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "ukiyo_ronin_bubbletea — Next Collection",
+      "_style_id": "ukiyo_synthwave",
+      "_expression_id": "ukiyo_ronin_bubbletea",
+      "_idiom": "RONIN BUBBLE TEA",
+      "_canva_text": "RONIN BUBBLE TEA",
+      "ai_generation": {
+        "positive_prompt": "A Japanese Ukiyo-e woodblock print illustration of a calm ronin samurai sitting and sipping a glowing neon bubble tea, the tapioca pearls lit like little orbs. Traditional carved linework and wave patterns combined with a retrowave palette of vibrant magenta, cyan and electric purple, glowing neon outlines, subtle halftone gradient sky. Bold composition, t-shirt design, isolated on a flat black background.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "ukiyo_great_wave_neon — Next Collection",
+      "_style_id": "ukiyo_synthwave",
+      "_expression_id": "ukiyo_great_wave_neon",
+      "_idiom": "GREAT WAVE NEON",
+      "_canva_text": "GREAT WAVE NEON",
+      "ai_generation": {
+        "positive_prompt": "A reinterpretation of the Great Wave of Kanagawa in Ukiyo-e woodblock style, the curling wave and foam fingers rendered in glowing synthwave neon, gradients of magenta, cyan and deep indigo, with a retro sunset and a grid horizon behind Mount Fuji. Carved traditional linework fused with vaporwave aesthetics, luminous outlines, fine spray of foam. Bold poster composition, t-shirt design, isolated on a flat black background.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "ukiyo_cyber_maneki_neko — Next Collection",
+      "_style_id": "ukiyo_synthwave",
+      "_expression_id": "ukiyo_cyber_maneki_neko",
+      "_idiom": "CYBER MANEKI NEKO",
+      "_canva_text": "CYBER MANEKI NEKO",
+      "ai_generation": {
+        "positive_prompt": "A Japanese Ukiyo-e woodblock print illustration of a lucky beckoning cat maneki-neko reimagined as a cyberpunk neon idol, one paw raised, glowing circuit patterns on its fur, sitting among traditional wave and cloud motifs. Retrowave palette of hot pink, cyan and violet with luminous neon outlines and a halftone gradient backdrop. Bold centered composition, sticker and t-shirt design, isolated on a flat black background.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "opossum_critical_panic — Next Collection",
+      "_style_id": "animal_hobby",
+      "_expression_id": "opossum_critical_panic",
+      "_idiom": "CRITICAL PANIC",
+      "_canva_text": "CRITICAL PANIC",
+      "ai_generation": {
+        "positive_prompt": "A cute humorous illustration of a screaming opossum with wide eyes clutching a giant glowing twenty-sided dice, pink tail curled, tabletop role-playing vibe. A bold retro comic banner reads \"CRITICAL PANIC\". Vibrant saturated colors, thick clean outlines, slight cell-shading, sticker design with clear edges, isolated on a plain white background. The lettering is crisp, bold and correctly spelled.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "capybara_crochet — Next Collection",
+      "_style_id": "animal_hobby",
+      "_expression_id": "capybara_crochet",
+      "_idiom": "CAPYBARA CROCHET",
+      "_canva_text": "CAPYBARA CROCHET",
+      "ai_generation": {
+        "positive_prompt": "A cute humorous illustration of a relaxed capybara peacefully crocheting a tiny scarf with a ball of yarn and knitting hooks, a small bird resting on its head, half-closed sleepy eyes. Soft cottagecore palette of sage green, cream and warm beige, gentle flat-vector style with rounded shapes and fine outlines. Sticker design with clear edges, isolated on a plain white background.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "cottagecore_frog — Next Collection",
+      "_style_id": "animal_hobby",
+      "_expression_id": "cottagecore_frog",
+      "_idiom": "STAY COZY",
+      "_canva_text": "STAY COZY",
+      "ai_generation": {
+        "positive_prompt": "A cute humorous illustration of a chubby green frog wearing a tiny straw hat, sitting on a mushroom and sipping tea from an acorn cup, surrounded by little toadstools and wildflowers. Soft cottagecore palette of mossy green, cream and dusty pink, cozy flat-vector style with rounded shapes and fine outlines. A small hand-lettered banner reads \"STAY COZY\". Sticker design with clear edges, isolated on a plain white background. The lettering is crisp and correctly spelled.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "darkacad_read_ignore — Next Collection",
+      "_style_id": "dark_academia",
+      "_expression_id": "darkacad_read_ignore",
+      "_idiom": "READ BOOKS IGNORE PEOPLE",
+      "_canva_text": "READ BOOKS IGNORE PEOPLE",
+      "ai_generation": {
+        "positive_prompt": "A dark academia emblem of a tall stack of antique leather books with a melting candle, a perched moth, a human skull and a sprig of dried flowers, soft candlelight glow. An elegant serif banner beneath reads \"READ BOOKS IGNORE PEOPLE\". Moody vintage palette of deep forest green, oxblood, charcoal and aged gold, detailed engraving-meets-flat-illustration style with fine linework. Centered composition, isolated on a plain parchment background, print-on-demand. All lettering is crisp, elegant and correctly spelled.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "darkacad_moth_book — Next Collection",
+      "_style_id": "dark_academia",
+      "_expression_id": "darkacad_moth_book",
+      "_idiom": "MOTH AND OPEN BOOK",
+      "_canva_text": "MOTH AND OPEN BOOK",
+      "ai_generation": {
+        "positive_prompt": "A dark academia emblem of an open antique book emitting a faint magical glow, a large ornate moth with patterned wings hovering above it, a crescent moon, dried botanicals and small stars around. Moody vintage palette of midnight blue, sepia, charcoal and tarnished gold, detailed engraving style with fine linework and subtle grain. Symmetrical centered composition, isolated on a plain dark background, print-on-demand.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    },
+    {
+      "name": "darkacad_bookish_stilllife — Next Collection",
+      "_style_id": "dark_academia",
+      "_expression_id": "darkacad_bookish_stilllife",
+      "_idiom": "BOOKISH STILL LIFE",
+      "_canva_text": "BOOKISH STILL LIFE",
+      "ai_generation": {
+        "positive_prompt": "A dark academia still life of a steaming teacup resting on a small stack of worn antique books, a fountain pen, a moth and a few autumn leaves, warm candlelight. Moody vintage palette of burgundy, deep green, cream and aged gold, detailed flat-illustration-meets-engraving style with fine linework. Centered composition, isolated on a plain parchment background, print-on-demand.",
+        "negative_prompt": "",
+        "cfg_scale": 4.5,
+        "tiling": false,
+        "seed_image_url": null
+      }
+    }
+  ]
+}
