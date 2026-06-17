@@ -227,6 +227,20 @@ def main() -> int:
                         cutout_ai(os.path.join(root, f), out)
                     elif mode == "disc":
                         cutout_disc(os.path.join(root, f), out)
+                    elif mode == "fixdisc":
+                        # ne repasse en disque QUE les détourages défaillants
+                        # (trou au centre / sur-rognés) ; les bons sont laissés
+                        # tels quels. dst == src => correction en place.
+                        import shutil
+                        from detect_bad_cutouts import is_bad
+                        src_file = os.path.join(root, f)
+                        bad, _ = is_bad(src_file)
+                        if bad:
+                            cutout_disc(src_file, out)
+                        elif os.path.abspath(src_file) != os.path.abspath(out):
+                            shutil.copy2(src_file, out)
+                        else:
+                            print(f"= {f} : détourage correct, conservé")
                     elif mode == "shrink":
                         shrink_to_limit(os.path.join(root, f), out)
                     else:
