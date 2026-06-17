@@ -7,8 +7,9 @@ Stratégie scaling : chaque série a un SOCLE de mots-clés communs (mutualisati
 SEO, upload en masse) + 3-6 tags spécifiques par image. Aucune marque déposée
 (ni FIFA, ni « Coupe du Monde », ni noms de clubs) dans les tags.
 
-Usage : python scripts/build_listings_fr.py   (lit l'arborescence produits/ du
-commit HEAD via git ls-tree, écrit produits/<theme>/listings_fr.csv)
+Usage : python scripts/build_listings_fr.py [ref]   (lit l'arborescence
+produits/ du commit `ref` (défaut HEAD) via git ls-tree, écrit
+produits/<theme>/listings_fr.csv)
 """
 import csv
 import os
@@ -92,7 +93,7 @@ DESIGN_FR = {
     "dragonboat": ("Bateaux-dragons", ["bateau-dragon", "tradition"]),
     "fete_musique": ("Fête de la musique", ["musique", "concert", "été"]),
     "midsommar": ("Midsommar", ["solstice", "été", "scandinave"]),
-    "fathers_day": ("Fête des pères", ["papa", "complicité"]),
+    "fathers_day": ("Complicité père et enfant", ["papa", "complicité"]),
 }
 
 SERIES = {
@@ -134,6 +135,24 @@ SERIES = {
         "{design} – Pride (style {style})",
         "Design « {design} » en style {style}, fond transparent. Célébrez le mois "
         "des fiertés en couleurs : stickers, t-shirts, totes, mugs.",
+    ),
+    "pride/slogans": (
+        ["pride", "lgbt", "arc-en-ciel", "fierté", "slogan", "patch brodé",
+         "écusson", "broderie", "love is love", "égalité", "rainbow",
+         "mois des fiertés", "fierté toute l'année", "inclusif", "diversité"],
+        "Écusson brodé {design} – Pride toute l'année",
+        "Patch brodé du slogan « {design} », broderie cousue main avec liseré "
+        "cordelette, fond transparent. La fierté ne se limite pas à juin : "
+        "stickers, t-shirts, vestes, totes, mugs.",
+    ),
+    "fete_des_peres/slogans": (
+        ["fête des pères", "papa", "cadeau papa", "patch brodé", "écusson",
+         "slogan", "humour", "broderie", "badge", "cadeau fête des pères",
+         "meilleur papa", "daddy", "père"],
+        "Écusson brodé {design} – Fête des Pères",
+        "Patch brodé du slogan « {design} », broderie cousue main, fond "
+        "transparent. Le cadeau drôle et tendre pour la fête des pères : "
+        "t-shirt, mug, sticker, casquette.",
     ),
     "juneteenth": (
         ["juneteenth", "liberté", "émancipation", "histoire afro-américaine",
@@ -183,10 +202,15 @@ def labels_from_cdcs():
     return labels
 
 
-def list_tree(folder: str):
-    out = subprocess.run(["git", "ls-tree", "-r", "--name-only", "HEAD", f"produits/{folder}/"],
-                         capture_output=True, text=True).stdout.split()
-    return [p for p in out if p.lower().endswith(".png")]
+def list_tree(folder: str, ref: str = "HEAD"):
+    """Fichiers PNG directement dans produits/<folder>/ (pas les sous-dossiers,
+    chaque série a sa propre entrée ; les _sur_feutre ne sont pas des produits)."""
+    out = subprocess.run(["git", "ls-tree", "-r", "--name-only", "-z", ref,
+                          f"produits/{folder}/"],
+                         capture_output=True, text=True).stdout.split("\0")
+    prefix = f"produits/{folder}/"
+    return [p for p in out if p.lower().endswith(".png")
+            and os.path.dirname(p) + "/" == prefix]
 
 
 def parse_name(fname: str):
@@ -199,17 +223,20 @@ def parse_name(fname: str):
 
 
 def main() -> int:
+    ref = sys.argv[1] if len(sys.argv) > 1 else "HEAD"
     cdc_labels = labels_from_cdcs()
     total = 0
     for folder, (common, t_title, t_desc) in SERIES.items():
-        files = list_tree(folder)
+        files = list_tree(folder, ref)
         if not files:
             print(f"(vide) {folder}")
             continue
         rows = []
         for path in sorted(files):
             design_id, style_id = parse_name(path)
-            style_fr = STYLE_FR.get(style_id or "", style_id or "")
+            # les variantes portent un suffixe d'ambiance : cartoon_network__marrant_
+            style_base = (style_id or "").split("__")[0]
+            style_fr = STYLE_FR.get(style_base, style_base.replace("_", " "))
             if design_id in COUNTRY_FR:
                 pays, extra = COUNTRY_FR[design_id]
                 title = t_title.format(pays=pays)
@@ -219,6 +246,8 @@ def main() -> int:
                 d_fr, extra = DESIGN_FR.get(design_id, (None, []))
                 if d_fr is None:
                     d_fr = cdc_labels.get(design_id, design_id.replace("_", " ").title())
+                if folder.endswith("/slogans"):
+                    d_fr = d_fr.upper()  # les slogans sont brodés en capitales
                 title = t_title.format(design=d_fr, style=style_fr)
                 desc = t_desc.format(design=d_fr, style=style_fr)
                 spec = [d_fr.lower()] + extra + ([style_fr] if style_fr else [])
