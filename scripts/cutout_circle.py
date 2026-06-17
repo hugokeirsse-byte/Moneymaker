@@ -179,6 +179,24 @@ def cutout_ai(in_path: str, out_path: str, feather: int = 2) -> None:
     print(f"+ {os.path.basename(out_path)} : sujet {kept:.0f}% conservé (IA)")
 
 
+def cutout_disc(in_path: str, out_path: str, frac: float = 0.94, feather: int = 4) -> None:
+    """Découpe l'illustration en DISQUE centré (plus grand cercle inscrit × frac),
+    fond transparent tout autour. Pour les illustrations pleines dont le sujet
+    occupe tout le cadre et que l'extraction IA détruirait au centre : ici on ne
+    touche AUCUN pixel intérieur, on ne fait qu'arrondir le cadre. Idéal pour un
+    insert rond sur maillot/mug. Bord adouci sur `feather` px (anti-crénelage)."""
+    img = Image.open(in_path).convert("RGB")
+    arr = np.array(img)
+    h, w = arr.shape[:2]
+    radius = min(h, w) / 2 * frac
+    yy, xx = np.ogrid[:h, :w]
+    dist = np.sqrt((yy - h / 2) ** 2 + (xx - w / 2) ** 2)
+    alpha = np.clip((radius - dist) / feather, 0.0, 1.0) * 255
+    rgba = np.dstack([arr, alpha.astype(np.uint8)])
+    Image.fromarray(rgba, "RGBA").save(out_path, format="PNG", dpi=(300, 300), optimize=False)
+    print(f"+ {os.path.basename(out_path)} : disque r={radius:.0f}px / {w}px, fond transparent")
+
+
 def cutout_auto(in_path: str, out_path: str) -> None:
     """Sticker d'abord (fond uni retiré, contour sticker préservé) ;
     si l'image est pleine page, extraction IA du sujet."""
@@ -207,6 +225,8 @@ def main() -> int:
                         cutout_auto(os.path.join(root, f), out)
                     elif mode == "ai":
                         cutout_ai(os.path.join(root, f), out)
+                    elif mode == "disc":
+                        cutout_disc(os.path.join(root, f), out)
                     elif mode == "shrink":
                         shrink_to_limit(os.path.join(root, f), out)
                     else:
