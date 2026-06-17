@@ -4,17 +4,18 @@ on:
   workflow_dispatch:
     inputs:
       src_dir:
-        description: 'Dossier source (ex: produits/worldcup2026_flag_patches)'
+        description: 'Dossier source (ex: produits/coupe_du_monde/drapeaux)'
         required: true
       dst_dir:
-        description: 'Dossier destination (ex: produits/worldcup2026_flag_patches_transparent)'
-        required: true
+        description: 'Dossier destination (vide si mode=detect)'
+        required: false
+        default: ''
       src_ref:
         description: 'Commit/ref source si le dossier n est plus dans HEAD (ex: 7622922...)'
         required: false
         default: ''
       mode:
-        description: 'circle (patch rond) ou felt (forme libre sur feutre)'
+        description: 'circle | felt | ai | disc | shrink | detect'
         required: false
         default: 'circle'
 
@@ -53,7 +54,13 @@ jobs:
           git reset -q -- "${{ github.event.inputs.src_dir }}"
           echo "$(find "${{ github.event.inputs.src_dir }}" -name '*.png' | wc -l) PNG restaurés"
 
+      - name: Détection des détourages au centre mangé (mode=detect, lecture seule)
+        if: ${{ github.event.inputs.mode == 'detect' }}
+        run: |
+          python scripts/detect_bad_cutouts.py "${{ github.event.inputs.src_dir }}"
+
       - name: Détourage par lot (0 €)
+        if: ${{ github.event.inputs.mode != 'detect' }}
         run: |
           python scripts/cutout_circle.py --batch \
             "${{ github.event.inputs.src_dir }}" \
@@ -61,6 +68,7 @@ jobs:
             --mode "${{ github.event.inputs.mode }}"
 
       - name: Commit et push
+        if: ${{ github.event.inputs.mode != 'detect' }}
         run: |
           git config user.name  "Moneymaker Bot"
           git config user.email "bot@moneymaker.auto"
@@ -87,7 +95,7 @@ jobs:
 
       - name: Artefact de secours
         uses: actions/upload-artifact@v4
-        if: always()
+        if: ${{ always() && github.event.inputs.mode != 'detect' && github.event.inputs.dst_dir != '' }}
         with:
           name: cutout-${{ github.run_number }}
           path: ${{ github.event.inputs.dst_dir }}
