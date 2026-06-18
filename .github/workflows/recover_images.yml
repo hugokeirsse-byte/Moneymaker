@@ -76,7 +76,7 @@ jobs:
           git config user.email "bot@moneymaker.auto"
           git rebase --abort 2>/dev/null || true
           BR=$(git rev-parse --abbrev-ref HEAD)
-          git add -A produits/typographies reports/contact reports/listings 2>/dev/null || true
+          git add -A produits/typographies reports 2>/dev/null || true
           if git diff --staged --quiet; then echo "Rien a committer."; exit 0; fi
           git commit -m "typo/listings: ${{ github.event.inputs.task }} — $(date -u +'%Y-%m-%d %H:%M UTC')"
           DELAY=2
@@ -87,11 +87,10 @@ jobs:
           done
           echo "::error::push impossible"; exit 1
 
-      - name: Artefact (contact sheet + listings)
+      - name: Artefact (contact sheet + listings + rapports)
         uses: actions/upload-artifact@v4
         if: always()
         with:
           name: util-${{ github.run_number }}
           path: |
-            reports/contact
-            reports/listings
+            reports
