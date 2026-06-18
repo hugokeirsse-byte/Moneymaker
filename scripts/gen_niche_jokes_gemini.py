@@ -1,36 +1,38 @@
 #!/usr/bin/env python3
 """
-gen_niche_jokes_gemini.py — recherche de niches + blagues + mots-clés par Gemini,
-AVEC recherche web (grounding tendances), classées par potentiel commercial.
+gen_niche_jokes_gemini.py — niches + blagues (Gemini, web grounding) PUIS classement
+sur de VRAIES données de recherche (DataForSEO : volume mensuel réel + compétition).
 
-Comme la détection de tendances du début du projet, mais ciblée « blagues de niche
-typographiques » pour POD. Gemini :
-  - garde les niches de départ et en propose 10 de plus, sous-exploitées mais
-    régulièrement recherchées (tendances actuelles) ;
-  - pour chaque niche, 8-12 blagues in-group (FR/EN) que seuls les initiés captent ;
-  - pour chacune : mots-clés ciblés, score 0-100, palier S/A/B/C, justification.
+Pipeline 2 étages :
+  1) Gemini (recherche web activée) propose des niches sous-exploitées tendances et,
+     pour chacune, des blagues IN-GROUP, INNOVANTES et PERCUTANTES (jamais de
+     clichés sur-utilisés), avec des mots-clés candidats ciblés ;
+  2) DataForSEO renvoie le VRAI volume de recherche mensuel + la compétition de tous
+     ces mots-clés ; on classe chaque blague sur ces données réelles (demande forte,
+     compétition faible), pas sur un score inventé.
 
-CONTRAINTE STRICTE passée au modèle : aucune marque déposée (pas de Pokémon,
-Digimon, noms de jeux/persos protégés, marques, célébrités) — fandoms libres
-uniquement.
-
-Sortie : reports/niche_jokes_ranked_<date>.json + .md (classement lisible).
+Aucune marque déposée (fandoms libres uniquement).
+Sortie : reports/niche_jokes_ranked_<date>.json + .md (classé par volume RÉEL).
 """
+import base64
 import datetime
 import json
 import os
 import re
 import sys
+import urllib.request
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
+DFS_LOGIN = os.environ.get("DATAFORSEO_LOGIN", "")
+DFS_PASSWORD = os.environ.get("DATAFORSEO_PASSWORD", "")
 _client = None
 _models = None
 
 SEED_NICHES = [
-    "chess (en passant memes, mates, sacrifices)",
+    "chess (en passant memes, theory, sacrifices)",
     "savage insults proving someone's stupidity",
     "developers / coding / sysadmin",
-    "generic tabletop RPG (NO 'D&D' trademark, use generic terms like nat 20)",
+    "generic tabletop RPG (NO 'D&D' trademark; use nat 20, crit fail...)",
 ]
 
 
@@ -56,7 +58,7 @@ def models():
     except Exception as e:  # noqa: BLE001
         print(f"[gemini] list: {e}", file=sys.stderr)
 
-    def score(m):
+    def sc(m):
         s = 0.0
         v = re.search(r"(\d+\.\d+)", m)
         if v:
@@ -66,7 +68,7 @@ def models():
         if "latest" in m:
             s += 1.5
         return s
-    r = sorted(set(found), key=score, reverse=True)
+    r = sorted(set(found), key=sc, reverse=True)
     for fb in ("gemini-2.5-flash", "gemini-flash-latest", "gemini-2.0-flash"):
         if fb not in r:
             r.append(fb)
@@ -80,12 +82,9 @@ def ask(prompt):
     for model in models()[:4]:
         for grounding in (True, False):
             try:
-                if grounding:
-                    cfg = types.GenerateContentConfig(
-                        tools=[types.Tool(google_search=types.GoogleSearch())],
-                        temperature=0.8)
-                else:
-                    cfg = types.GenerateContentConfig(temperature=0.8)
+                cfg = types.GenerateContentConfig(
+                    tools=[types.Tool(google_search=types.GoogleSearch())] if grounding else None,
+                    temperature=0.85)
                 r = c.models.generate_content(model=model, contents=prompt, config=cfg)
                 if r.text:
                     print(f"[gemini] OK {model}{'+search' if grounding else ''}")
@@ -112,35 +111,63 @@ def extract_json(text):
     return None
 
 
-PROMPT = """You are a print-on-demand market researcher (Redbubble, TeePublic, \
-Amazon Merch, Etsy). Use up-to-date web knowledge of current 2026 trends.
+def dfs_volumes(keywords):
+    """Vrais volumes mensuels + compétition via DataForSEO. {} si indispo."""
+    if not (DFS_LOGIN and DFS_PASSWORD) or not keywords:
+        return {}
+    auth = base64.b64encode(f"{DFS_LOGIN}:{DFS_PASSWORD}".encode()).decode()
+    url = "https://api.dataforseo.com/v3/keywords_data/google_ads/search_volume/live"
+    out = {}
+    uniq = sorted({k.lower().strip() for k in keywords if k.strip()})
+    for i in range(0, len(uniq), 700):
+        chunk = uniq[i:i + 700]
+        payload = [{"keywords": chunk, "location_code": 2840, "language_code": "en"}]
+        req = urllib.request.Request(url, data=json.dumps(payload).encode(), method="POST",
+                                     headers={"Authorization": f"Basic {auth}",
+                                              "Content-Type": "application/json"})
+        try:
+            d = json.load(urllib.request.urlopen(req, timeout=120))
+            for task in d.get("tasks", []):
+                for it in (task.get("result") or []):
+                    kw = (it.get("keyword") or "").lower().strip()
+                    if kw:
+                        out[kw] = {
+                            "vol": it.get("search_volume") or 0,
+                            "comp": (it.get("competition_index") or 0) / 100.0,
+                        }
+            print(f"[dataforseo] {len(out)} mots-clés réels récupérés")
+        except Exception as e:  # noqa: BLE001
+            print(f"[dataforseo] erreur: {str(e)[:160]}", file=sys.stderr)
+    return out
 
-Goal: build a ranked catalogue of NICHE typographic joke t-shirt designs for \
-under-served sub-niches that are nevertheless regularly searched.
 
-Niches to include (keep these):
+PROMPT = """You are a print-on-demand trend researcher (Redbubble, TeePublic, \
+Amazon Merch, Etsy). Use real, up-to-date web knowledge (2026).
+
+Build niche TYPOGRAPHIC joke t-shirt ideas for under-served sub-niches that are \
+nevertheless regularly searched.
+
+Keep these niches:
 %s
+Then ADD 12 more under-served-but-searched, currently trending niches (specific \
+hobbies, jobs, micro-cultures, NON-trademarked fandoms).
 
-Then ADD 10 more under-served but regularly-searched niches that are trending \
-now (e.g. specific hobbies, professions, fandoms that are NOT trademarked, \
-internet micro-cultures). Avoid saturated niches.
+QUALITY BAR — this is critical:
+- Jokes must be ORIGINAL, INNOVATIVE and PUNCHY. NO tired clichés \
+("it works on my machine", "but first coffee", "live laugh love", "I'm silently \
+correcting your grammar"). Surprise the reader; be specific and clever; an \
+outsider should NOT fully get it.
+- 8 to 12 jokes per niche.
 
-HARD RULES:
-- Absolutely NO trademarks: no Pokémon, Digimon, brand names, game/character \
-names that are protected, no celebrities, no movie/song quotes. Free/public \
-culture only (chess theory, generic RPG terms, programming, math, idioms...).
-- Jokes must be true in-group jokes: only people in the niche fully get them.
+HARD RULES: absolutely NO trademarks (no Pokémon, Digimon, brands, protected \
+game/character names, celebrities, song/movie quotes). Free/public culture only.
 
-For EACH niche, give 8-12 jokes. For EACH joke return:
-- text: the exact phrase to print (keep it short, punchy)
-- lang: "en" or "fr"
-- keywords: 6-10 targeted POD search keywords (lowercase, under-served)
-- score: integer 0-100 = estimated commercial success potential
-- tier: "S" | "A" | "B" | "C"
-- why: one short sentence justification (demand vs competition)
+For each joke give: text (short, punchy), lang ("en"/"fr"), and keywords = 5-8 \
+REAL POD search phrases a buyer would type (lowercase, specific, the kind that \
+have actual search volume).
 
-Return ONLY valid JSON of the form:
-{"niches":[{"niche":"...","jokes":[{"text":"...","lang":"en","keywords":["..."],"score":87,"tier":"A","why":"..."}]}]}
+Return ONLY JSON:
+{"niches":[{"niche":"...","jokes":[{"text":"...","lang":"en","keywords":["..."],"why":"..."}]}]}
 """ % "\n".join(f"- {n}" for n in SEED_NICHES)
 
 
@@ -148,34 +175,53 @@ def main():
     if not GEMINI_API_KEY:
         print("ERREUR: GEMINI_API_KEY manquant", file=sys.stderr)
         return 1
-    raw = ask(PROMPT)
-    data = extract_json(raw)
+    data = extract_json(ask(PROMPT))
     if not data or "niches" not in data:
         print("ERREUR: réponse Gemini non exploitable", file=sys.stderr)
-        print(raw[:500], file=sys.stderr)
         return 1
 
-    ts = datetime.datetime.utcnow().strftime("%Y%m%d_%H%M")
-    os.makedirs("reports", exist_ok=True)
-    jpath = f"reports/niche_jokes_ranked_{ts}.json"
-    json.dump(data, open(jpath, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
-
-    allj = []
+    jokes = []
     for n in data["niches"]:
         for j in n.get("jokes", []):
             j["niche"] = n.get("niche", "")
-            allj.append(j)
-    allj.sort(key=lambda j: j.get("score", 0), reverse=True)
-    md = [f"# Blagues de niche classées par potentiel ({len(allj)} idées, {len(data['niches'])} niches)\n"]
-    md.append("| Score | Tier | Niche | Phrase | Mots-clés |")
-    md.append("|---|---|---|---|---|")
-    for j in allj:
-        kw = ", ".join(j.get("keywords", [])[:6])
-        txt = str(j.get("text", "")).replace("|", "/")
-        md.append(f"| {j.get('score','')} | {j.get('tier','')} | {j.get('niche','')[:24]} | {txt} | {kw} |")
-    mpath = f"reports/niche_jokes_ranked_{ts}.md"
-    open(mpath, "w", encoding="utf-8").write("\n".join(md))
-    print(f"{jpath}\n{mpath}\n{len(allj)} blagues sur {len(data['niches'])} niches")
+            jokes.append(j)
+
+    # vraies données de recherche
+    allkw = [k for j in jokes for k in (j.get("keywords") or [])]
+    vols = dfs_volumes(allkw)
+    real = bool(vols)
+
+    for j in jokes:
+        best_kw, best_vol, best_comp = "", 0, 0.0
+        for k in (j.get("keywords") or []):
+            rec = vols.get(k.lower().strip())
+            if rec and rec["vol"] >= best_vol:
+                best_kw, best_vol, best_comp = k, rec["vol"], rec["comp"]
+        j["real_keyword"] = best_kw
+        j["real_volume"] = best_vol            # recherches/mois RÉELLES
+        j["real_competition"] = round(best_comp, 2)
+        # score = demande réelle pondérée par faible compétition
+        j["data_score"] = round(best_vol * (1 - 0.45 * best_comp))
+
+    jokes.sort(key=lambda j: (j.get("data_score", 0), j.get("real_volume", 0)), reverse=True)
+
+    ts = datetime.datetime.utcnow().strftime("%Y%m%d_%H%M")
+    os.makedirs("reports", exist_ok=True)
+    out = {"generated_at": ts, "real_data": real, "source": "DataForSEO (US, en)" if real else "estimations",
+           "total_jokes": len(jokes), "niches": data["niches"], "ranked": jokes}
+    json.dump(out, open(f"reports/niche_jokes_ranked_{ts}.json", "w", encoding="utf-8"),
+              ensure_ascii=False, indent=2)
+
+    head = "VRAIES données DataForSEO (volume mensuel US)" if real else "⚠️ pas de données réelles (DataForSEO indispo) — à brancher"
+    md = [f"# Blagues de niche classées par DEMANDE RÉELLE — {head}",
+          f"{len(jokes)} blagues · {len(data['niches'])} niches\n",
+          "| Vol/mois | Compét. | Niche | Phrase | Mot-clé gagnant |",
+          "|---|---|---|---|---|"]
+    for j in jokes:
+        md.append(f"| {j['real_volume']} | {j['real_competition']:.2f} | "
+                  f"{j['niche'][:22]} | {str(j.get('text','')).replace('|','/')} | {j['real_keyword']} |")
+    open(f"reports/niche_jokes_ranked_{ts}.md", "w", encoding="utf-8").write("\n".join(md))
+    print(f"reports/niche_jokes_ranked_{ts}.md — {len(jokes)} blagues, données réelles={real}")
     return 0
 
 
