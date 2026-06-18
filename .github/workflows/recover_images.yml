@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       task:
-        description: 'make_collection | gen_listings_corpus | gen_listings_produits | gen_niche_jokes | gen_wordcloud | gen_mosaic | cleanup_pride'
+        description: 'make_collection | gen_listings_corpus | gen_listings_produits | gen_niche_jokes | gen_wordcloud | gen_mosaic | gen_hidden | cleanup_pride'
         required: true
         default: 'make_collection'
       limit:
@@ -32,7 +32,7 @@ on:
         required: false
         default: 'rainbow'
       mosaic_symbol:
-        description: 'gen_mosaic : grande forme — peace|anarchy|heart|recycle|female|male|infinity|star|finger'
+        description: 'gen_mosaic : grande forme — peace|anarchy|heart|recycle|female|male|infinity|star|finger|lightning|smiley'
         required: false
         default: 'heart'
       mosaic_tiles:
@@ -47,6 +47,18 @@ on:
         description: 'gen_mosaic : mot écrit dessous, en petits symboles (ex. LOVE)'
         required: false
         default: ''
+      hidden_text:
+        description: 'gen_hidden : phrase visible (ex. FRIENDSHIP)'
+        required: false
+        default: ''
+      hidden_word:
+        description: 'gen_hidden : message caché surligné (ex. ENDS)'
+        required: false
+        default: ''
+      hidden_color:
+        description: 'gen_hidden : couleur d''accent (hex, ex. #e63946)'
+        required: false
+        default: '#e63946'
 
 permissions:
   contents: write
@@ -69,6 +81,7 @@ jobs:
             produits/typographies
             produits/word_shapes
             produits/symbol_mosaics
+            produits/hidden
           sparse-checkout-cone-mode: true
 
       - uses: actions/setup-python@v5
@@ -94,11 +107,14 @@ jobs:
           MOSAIC_TILES: ${{ github.event.inputs.mosaic_tiles }}
           MOSAIC_COLORS: ${{ github.event.inputs.mosaic_colors }}
           MOSAIC_LABEL: ${{ github.event.inputs.mosaic_label }}
+          HIDDEN_TEXT: ${{ github.event.inputs.hidden_text }}
+          HIDDEN_WORD: ${{ github.event.inputs.hidden_word }}
+          HIDDEN_COLOR: ${{ github.event.inputs.hidden_color }}
         run: |
           set -e
           TASK="${{ github.event.inputs.task }}"
           LIM="${{ github.event.inputs.limit || '0' }}"
-          mkdir -p reports/contact reports/listings assets/fonts produits/word_shapes produits/symbol_mosaics
+          mkdir -p reports/contact reports/listings assets/fonts produits/word_shapes produits/symbol_mosaics produits/hidden
           if [ "$TASK" = "make_collection" ]; then
             curl -sL "https://raw.githubusercontent.com/google/fonts/main/ofl/kaushanscript/KaushanScript-Regular.ttf" -o assets/fonts/Kaushan_Script.ttf
             python3 -c "import json; d=json.load(open('data/typo_collection.json')); [i.update({'font':'Kaushan Script'}) for i in d['items']]; json.dump(d, open('data/_typo_run.json','w'), ensure_ascii=False)"
@@ -129,6 +145,11 @@ jobs:
             [ -n "$MOSAIC_TILES" ] && MARGS+=(--tiles "$MOSAIC_TILES")
             [ -n "$MOSAIC_LABEL" ] && MARGS+=(--label "$MOSAIC_LABEL")
             python scripts/gen_symbol_mosaic.py "${MARGS[@]}"
+          elif [ "$TASK" = "gen_hidden" ]; then
+            curl -sL "https://raw.githubusercontent.com/google/fonts/main/ofl/anton/Anton-Regular.ttf" -o assets/fonts/Anton.ttf
+            python scripts/gen_hidden_message.py --text "$HIDDEN_TEXT" --hidden "$HIDDEN_WORD" \
+              --color "${HIDDEN_COLOR:-#e63946}" --font-path assets/fonts/Anton.ttf \
+              --out produits/hidden --sheet reports/contact/hidden.png
           elif [ "$TASK" = "cleanup_pride" ]; then
             python scripts/cleanup_pride_strays.py
           else
@@ -142,7 +163,7 @@ jobs:
           git config user.email "bot@moneymaker.auto"
           git rebase --abort 2>/dev/null || true
           BR=$(git rev-parse --abbrev-ref HEAD)
-          git add -A produits/typographies produits/word_shapes produits/symbol_mosaics reports 2>/dev/null || true
+          git add -A produits/typographies produits/word_shapes produits/symbol_mosaics produits/hidden reports 2>/dev/null || true
           if git diff --staged --quiet; then echo "Rien a committer."; exit 0; fi
           git commit -m "typo/listings: ${{ github.event.inputs.task }} — $(date -u +'%Y-%m-%d %H:%M UTC')"
           DELAY=2

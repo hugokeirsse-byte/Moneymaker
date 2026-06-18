@@ -16,7 +16,8 @@ Principe (amoncellement, pas une grille !) :
 Le mot du bas (ex. « LOVE » sous le cœur) est lui aussi rempli des mêmes petits
 symboles.
 
-Symboles : peace, anarchy, heart, recycle, female, male, infinity, star, finger.
+Symboles : peace, anarchy, heart, recycle, female, male, infinity, star,
+finger, lightning, smiley.
 
 La GRANDE forme (--symbol) et le petit symbole répété (--tiles) sont découplés :
 on peut faire un doigt d'honneur fait de cœurs, un cœur (LOVE) fait de doigts...
@@ -140,29 +141,57 @@ def draw_star(d, box, color, w):
 
 
 def draw_finger(d, box, color, w):
-    """Doigt d'honneur (geste), silhouette pleine : poing + majeur dressé."""
+    """Doigt d'honneur (geste), silhouette pleine : poing + majeur dressé,
+    pouce qui croise devant, les 3 autres doigts repliés en bosses de phalange."""
     x0, y0, x1, y1 = box
     bw, bh = (x1 - x0), (y1 - y0)
 
     def rr(ax, ay, bx, by, rad):
         d.rounded_rectangle([x0 + ax * bw, y0 + ay * bh, x0 + bx * bw, y0 + by * bh],
-                            radius=rad * bw, fill=color)
+                            radius=rad * min(bw, bh), fill=color)
 
-    rr(0.26, 0.44, 0.82, 0.97, 0.12)      # poing (paume)
-    rr(0.45, 0.05, 0.63, 0.58, 0.09)      # majeur dressé (le plus haut)
-    rr(0.29, 0.36, 0.44, 0.52, 0.07)      # index replié
-    rr(0.63, 0.36, 0.78, 0.52, 0.07)      # annulaire replié
-    rr(0.71, 0.42, 0.85, 0.58, 0.06)      # auriculaire replié
-    rr(0.17, 0.54, 0.31, 0.72, 0.07)      # pouce
+    # majeur bien dressé, épais, tip arrondi (le trait dominant)
+    rr(0.43, 0.04, 0.61, 0.52, 0.10)
+    # poing (dos de la main), bloc arrondi
+    rr(0.25, 0.46, 0.79, 0.96, 0.14)
+    # phalanges repliées : petites bosses sur le haut du poing, bien plus basses
+    rr(0.27, 0.40, 0.42, 0.54, 0.07)   # index
+    rr(0.62, 0.40, 0.77, 0.54, 0.07)   # annulaire
+    rr(0.70, 0.46, 0.83, 0.58, 0.06)   # auriculaire
+    # pouce : croise devant le poing, en travers
+    rr(0.22, 0.60, 0.58, 0.74, 0.07)
+
+
+def draw_lightning(d, box, color, w):
+    x0, y0, x1, y1 = box
+    bw, bh = (x1 - x0), (y1 - y0)
+    pts = [(0.62, 0.02), (0.26, 0.55), (0.46, 0.55), (0.34, 0.98),
+           (0.78, 0.40), (0.55, 0.40), (0.70, 0.02)]
+    d.polygon([(x0 + ax * bw, y0 + ay * bh) for ax, ay in pts], fill=color)
+
+
+def draw_smiley(d, box, color, w):
+    x0, y0, x1, y1 = box
+    cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
+    r = (x1 - x0) / 2 - w
+    d.ellipse([cx - r, cy - r, cx + r, cy + r], outline=color, width=w)
+    er = max(w, r * 0.10)
+    for sx in (-0.34, 0.34):
+        ex = cx + sx * r
+        ey = cy - r * 0.28
+        d.ellipse([ex - er, ey - er, ex + er, ey + er], fill=color)
+    d.arc([cx - r * 0.55, cy - r * 0.30, cx + r * 0.55, cy + r * 0.55],
+          start=20, end=160, fill=color, width=w)
 
 
 SYMBOLS = {
     "peace": draw_peace, "anarchy": draw_anarchy, "heart": draw_heart,
     "recycle": draw_recycle, "female": draw_venus, "male": draw_mars,
     "infinity": draw_infinity, "star": draw_star, "finger": draw_finger,
+    "lightning": draw_lightning, "smiley": draw_smiley,
 }
 # fraction du trait quand on dessine la SILHOUETTE pleine (carte de couverture)
-SOLID = {"heart", "star", "finger"}
+SOLID = {"heart", "star", "finger", "lightning"}
 
 
 # ----------------------------------------------------------- couleurs
