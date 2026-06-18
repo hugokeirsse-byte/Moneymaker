@@ -12,7 +12,7 @@ est important — et on peut piloter cette taille par le VRAI volume de recherch
 
 Masques acceptés :
   - intégrés (aucune dépendance externe) : heart, star, hexagon, circle,
-    diamond, arrow_up ;
+    diamond, arrow_up, australia ;
   - n'importe quel PNG silhouette via --mask chemin.png (les zones NON blanches
     sont remplies de mots ; idéal avec une icône CC0 d'openclipart / SVG Repo).
 
@@ -23,8 +23,8 @@ Exemples (depuis la racine du repo) :
     python scripts/gen_wordcloud.py --words "nat 20,crit fail,loot,respawn" \
         --mask heart --colors rainbow --font-path assets/fonts/Kaushan_Script.ttf \
         --out produits/word_shapes --name rpg_coeur
-    python scripts/gen_wordcloud.py --from-report reports/niche_jokes_ranked_X.json \
-        --niche chess --mask star --colors ocean --out produits/word_shapes
+    python scripts/gen_wordcloud.py --freq-file data/australia_slang.json \
+        --mask australia --colors sunset --out produits/word_shapes
 """
 import argparse
 import colorsys
@@ -83,8 +83,28 @@ def builtin_mask(name, size=1600):
     if n in ("arrow_up", "arrow"):
         return _poly_mask(size, [(0.5, 0.04), (0.95, 0.5), (0.7, 0.5),
                                  (0.7, 0.96), (0.3, 0.96), (0.3, 0.5), (0.05, 0.5)])
+    if n == "australia":
+        # Silhouette simplifiée de l'Australie (sens horaire depuis le NW Cape)
+        raw = [
+            (0.08, 0.31), (0.13, 0.20), (0.18, 0.13), (0.26, 0.09),
+            (0.36, 0.08), (0.44, 0.10), (0.47, 0.09),
+            (0.53, 0.11), (0.57, 0.08),
+            (0.57, 0.17), (0.56, 0.27), (0.60, 0.32), (0.65, 0.27), (0.68, 0.18),
+            (0.72, 0.10), (0.75, 0.07), (0.77, 0.12),
+            (0.80, 0.20), (0.84, 0.31), (0.91, 0.43), (0.92, 0.50),
+            (0.89, 0.57), (0.87, 0.63), (0.85, 0.68),
+            (0.78, 0.66), (0.66, 0.65),
+            (0.62, 0.60), (0.58, 0.65), (0.56, 0.68), (0.52, 0.65),
+            (0.50, 0.68), (0.46, 0.72),
+            (0.36, 0.74), (0.24, 0.72),
+            (0.14, 0.66),
+            (0.06, 0.55), (0.05, 0.44),
+        ]
+        # Étirer y pour remplir le carré (Australie est plus large que haute)
+        pts = [(x, y * 1.20) for x, y in raw]
+        return _poly_mask(size, pts)
     raise SystemExit(f"masque intégré inconnu : {name} "
-                     "(heart, star, hexagon, circle, diamond, arrow_up)")
+                     "(heart, star, hexagon, circle, diamond, arrow_up, australia)")
 
 
 def load_mask(spec):
@@ -171,6 +191,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--words", default="", help="liste séparée par des virgules")
     ap.add_argument("--from-report", default="", help="reports/niche_jokes_ranked_*.json")
+    ap.add_argument("--freq-file", default="", help="JSON {mot: poids} (ex. data/australia_slang.json)")
     ap.add_argument("--niche", default="", help="filtre de niche (sous-chaîne)")
     ap.add_argument("--mask", default="heart")
     ap.add_argument("--colors", default="rainbow")
@@ -180,7 +201,10 @@ def main():
     ap.add_argument("--sheet", default="")
     args = ap.parse_args()
 
-    if args.from_report:
+    if args.freq_file:
+        raw = json.load(open(args.freq_file, encoding="utf-8"))
+        freq = {str(k): float(v) for k, v in raw.items() if str(k).strip()}
+    elif args.from_report:
         freq = words_from_report(args.from_report, args.niche)
     else:
         freq = {w.strip(): 1.0 for w in args.words.split(",") if w.strip()}
