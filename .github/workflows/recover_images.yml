@@ -51,6 +51,7 @@ jobs:
           LIM="${{ github.event.inputs.limit || '0' }}"
           mkdir -p reports/contact reports/listings
           if [ "$TASK" = "make_collection" ]; then
+            find produits/typographies -name '*.png' -delete 2>/dev/null || true
             python scripts/make_collection.py --data data/typo_collection.json \
               --out produits/typographies \
               --sheet reports/contact/typo_collection.png --limit "$LIM"
@@ -71,7 +72,7 @@ jobs:
           git config user.email "bot@moneymaker.auto"
           git rebase --abort 2>/dev/null || true
           BR=$(git rev-parse --abbrev-ref HEAD)
-          git add produits/typographies reports/contact reports/listings 2>/dev/null || true
+          git add -A produits/typographies reports/contact reports/listings 2>/dev/null || true
           if git diff --staged --quiet; then echo "Rien a committer."; exit 0; fi
           git commit -m "typo/listings: ${{ github.event.inputs.task }} — $(date -u +'%Y-%m-%d %H:%M UTC')"
           DELAY=2
