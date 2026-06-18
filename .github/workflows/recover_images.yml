@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       task:
-        description: 'make_collection | gen_listings_corpus | gen_listings_produits | gen_niche_jokes | gen_wordcloud | cleanup_pride'
+        description: 'make_collection | gen_listings_corpus | gen_listings_produits | gen_niche_jokes | gen_wordcloud | gen_mosaic | cleanup_pride'
         required: true
         default: 'make_collection'
       limit:
@@ -31,6 +31,14 @@ on:
         description: 'gen_wordcloud : rainbow | black | sunset | ocean | forest | candy'
         required: false
         default: 'rainbow'
+      mosaic_symbol:
+        description: 'gen_mosaic : peace | anarchy | heart | recycle | female | male'
+        required: false
+        default: 'peace'
+      mosaic_colors:
+        description: 'gen_mosaic : rainbow | black | sunset | ocean | forest | candy'
+        required: false
+        default: 'rainbow'
 
 permissions:
   contents: write
@@ -52,6 +60,7 @@ jobs:
             reports
             produits/typographies
             produits/word_shapes
+            produits/symbol_mosaics
           sparse-checkout-cone-mode: true
 
       - uses: actions/setup-python@v5
@@ -73,11 +82,13 @@ jobs:
           WC_NICHE: ${{ github.event.inputs.wc_niche }}
           WC_MASK: ${{ github.event.inputs.wc_mask }}
           WC_COLORS: ${{ github.event.inputs.wc_colors }}
+          MOSAIC_SYMBOL: ${{ github.event.inputs.mosaic_symbol }}
+          MOSAIC_COLORS: ${{ github.event.inputs.mosaic_colors }}
         run: |
           set -e
           TASK="${{ github.event.inputs.task }}"
           LIM="${{ github.event.inputs.limit || '0' }}"
-          mkdir -p reports/contact reports/listings assets/fonts produits/word_shapes
+          mkdir -p reports/contact reports/listings assets/fonts produits/word_shapes produits/symbol_mosaics
           if [ "$TASK" = "make_collection" ]; then
             curl -sL "https://raw.githubusercontent.com/google/fonts/main/ofl/kaushanscript/KaushanScript-Regular.ttf" -o assets/fonts/Kaushan_Script.ttf
             python3 -c "import json; d=json.load(open('data/typo_collection.json')); [i.update({'font':'Kaushan Script'}) for i in d['items']]; json.dump(d, open('data/_typo_run.json','w'), ensure_ascii=False)"
@@ -100,6 +111,11 @@ jobs:
             [ -n "$WC_REPORT" ] && ARGS+=(--from-report "$WC_REPORT")
             [ -n "$WC_NICHE" ]  && ARGS+=(--niche "$WC_NICHE")
             python scripts/gen_wordcloud.py "${ARGS[@]}"
+          elif [ "$TASK" = "gen_mosaic" ]; then
+            python scripts/gen_symbol_mosaic.py \
+              --symbol "${MOSAIC_SYMBOL:-peace}" --colors "${MOSAIC_COLORS:-rainbow}" \
+              --out produits/symbol_mosaics \
+              --sheet reports/contact/mosaic_${MOSAIC_SYMBOL:-peace}.png
           elif [ "$TASK" = "cleanup_pride" ]; then
             python scripts/cleanup_pride_strays.py
           else
@@ -113,7 +129,7 @@ jobs:
           git config user.email "bot@moneymaker.auto"
           git rebase --abort 2>/dev/null || true
           BR=$(git rev-parse --abbrev-ref HEAD)
-          git add -A produits/typographies produits/word_shapes reports 2>/dev/null || true
+          git add -A produits/typographies produits/word_shapes produits/symbol_mosaics reports 2>/dev/null || true
           if git diff --staged --quiet; then echo "Rien a committer."; exit 0; fi
           git commit -m "typo/listings: ${{ github.event.inputs.task }} — $(date -u +'%Y-%m-%d %H:%M UTC')"
           DELAY=2
