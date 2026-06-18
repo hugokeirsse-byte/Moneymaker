@@ -16,14 +16,17 @@ Principe (amoncellement, pas une grille !) :
 Le mot du bas (ex. « LOVE » sous le cœur) est lui aussi rempli des mêmes petits
 symboles.
 
-Symboles : peace, anarchy, heart, recycle, female, male, infinity, star.
+Symboles : peace, anarchy, heart, recycle, female, male, infinity, star, finger.
+
+La GRANDE forme (--symbol) et le petit symbole répété (--tiles) sont découplés :
+on peut faire un doigt d'honneur fait de cœurs, un cœur (LOVE) fait de doigts...
 
 Exemples :
     python scripts/gen_symbol_mosaic.py --symbol heart --label LOVE \
         --colors candy --font-path assets/fonts/Anton.ttf \
         --out produits/symbol_mosaics --sheet /tmp/heart.png
-    python scripts/gen_symbol_mosaic.py --symbol peace --label PEACE \
-        --colors tropical --out produits/symbol_mosaics
+    python scripts/gen_symbol_mosaic.py --symbol finger --tiles heart \
+        --colors rose --out produits/symbol_mosaics
 """
 import argparse
 import colorsys
@@ -136,13 +139,30 @@ def draw_star(d, box, color, w):
     d.polygon(pts, fill=color)
 
 
+def draw_finger(d, box, color, w):
+    """Doigt d'honneur (geste), silhouette pleine : poing + majeur dressé."""
+    x0, y0, x1, y1 = box
+    bw, bh = (x1 - x0), (y1 - y0)
+
+    def rr(ax, ay, bx, by, rad):
+        d.rounded_rectangle([x0 + ax * bw, y0 + ay * bh, x0 + bx * bw, y0 + by * bh],
+                            radius=rad * bw, fill=color)
+
+    rr(0.26, 0.44, 0.82, 0.97, 0.12)      # poing (paume)
+    rr(0.45, 0.05, 0.63, 0.58, 0.09)      # majeur dressé (le plus haut)
+    rr(0.29, 0.36, 0.44, 0.52, 0.07)      # index replié
+    rr(0.63, 0.36, 0.78, 0.52, 0.07)      # annulaire replié
+    rr(0.71, 0.42, 0.85, 0.58, 0.06)      # auriculaire replié
+    rr(0.17, 0.54, 0.31, 0.72, 0.07)      # pouce
+
+
 SYMBOLS = {
     "peace": draw_peace, "anarchy": draw_anarchy, "heart": draw_heart,
     "recycle": draw_recycle, "female": draw_venus, "male": draw_mars,
-    "infinity": draw_infinity, "star": draw_star,
+    "infinity": draw_infinity, "star": draw_star, "finger": draw_finger,
 }
 # fraction du trait quand on dessine la SILHOUETTE pleine (carte de couverture)
-SOLID = {"heart", "star"}
+SOLID = {"heart", "star", "finger"}
 
 
 # ----------------------------------------------------------- couleurs
@@ -274,7 +294,10 @@ def make_tile(symbol, size, color):
 
 # ----------------------------------------------------------- composition
 def build(symbol, W=1700, H=2000, colors="candy", label="",
-          font_path="", base=34, seed=7):
+          font_path="", base=34, seed=7, tiles=None):
+    # tiles = petit symbole répété ; symbol = grande forme. Découplés => on peut
+    # faire un doigt d'honneur fait de cœurs, un cœur fait de doigts, etc.
+    tiles = tiles or symbol
     cov, geo = coverage_map(symbol, W, H, label, font_path, base)
     shade = shade_map(W, H, geo)
     rng = random.Random(seed)
@@ -296,7 +319,7 @@ def build(symbol, W=1700, H=2000, colors="candy", label="",
             s = float(shade[y, x])
             size = int(base * rng.uniform(0.9, 1.4) * (1.0 + 0.12 * (1 - s)))
             stamps.append((size, x, y, stamp_color(palette, s, rng),
-                           rng.uniform(-16, 16)))
+                           rng.uniform(-12, 12)))
 
     # 2) couche organique par-dessus : gros ET petits, pour l'amoncellement
     for _ in range(int(len(stamps) * 0.6)):
@@ -306,14 +329,14 @@ def build(symbol, W=1700, H=2000, colors="candy", label="",
         s = float(shade[y, x])
         size = int(base * rng.uniform(0.45, 1.95))
         stamps.append((size, x, y, stamp_color(palette, s, rng),
-                       rng.uniform(-16, 16)))
+                       rng.uniform(-12, 12)))
 
     # du plus gros au plus petit => les petits se posent par-dessus (pile)
     stamps.sort(key=lambda a: -a[0])
     for size, x, y, color, ang in stamps:
         if size < 8:
             continue
-        t = make_tile(symbol, size, color)
+        t = make_tile(tiles, size, color)
         if abs(ang) > 1:
             t = t.rotate(ang, expand=True, resample=Image.BICUBIC)
         out.alpha_composite(t, (x - t.width // 2, y - t.height // 2))
@@ -322,7 +345,11 @@ def build(symbol, W=1700, H=2000, colors="candy", label="",
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--symbol", default="heart", choices=list(SYMBOLS))
+    ap.add_argument("--symbol", default="heart", choices=list(SYMBOLS),
+                    help="la GRANDE forme")
+    ap.add_argument("--tiles", default="", choices=[""] + list(SYMBOLS),
+                    help="le petit symbole répété (défaut = identique à --symbol). "
+                         "Ex: --symbol finger --tiles heart")
     ap.add_argument("--label", default="", help="mot écrit dessous, en petits symboles")
     ap.add_argument("--colors", default="candy",
                     help="candy|tropical|sunset|ocean|forest|pride|rose|grape|sky|mint")
@@ -334,13 +361,15 @@ def main():
     args = ap.parse_args()
 
     img, n = build(args.symbol, colors=args.colors, label=args.label,
-                   font_path=args.font_path, base=args.base)
+                   font_path=args.font_path, base=args.base,
+                   tiles=(args.tiles or None))
+    tl = f"_of_{args.tiles}" if args.tiles and args.tiles != args.symbol else ""
     lab = f"_{args.label.lower()}" if args.label else ""
-    name = args.name or f"{args.symbol}{lab}_{args.colors}_mosaic"
+    name = args.name or f"{args.symbol}{tl}{lab}_{args.colors}_mosaic"
     os.makedirs(args.out, exist_ok=True)
     out_path = os.path.join(args.out, f"{name}.png")
     img.save(out_path, dpi=(300, 300))
-    print(f"{out_path}  ({img.width}x{img.height}, {n} petits {args.symbol})")
+    print(f"{out_path}  ({img.width}x{img.height}, {n} petits {args.tiles or args.symbol})")
 
     if args.sheet:
         os.makedirs(os.path.dirname(args.sheet) or ".", exist_ok=True)

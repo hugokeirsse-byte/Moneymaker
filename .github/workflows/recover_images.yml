@@ -32,9 +32,13 @@ on:
         required: false
         default: 'rainbow'
       mosaic_symbol:
-        description: 'gen_mosaic : peace | anarchy | heart | recycle | female | male | infinity | star'
+        description: 'gen_mosaic : grande forme — peace|anarchy|heart|recycle|female|male|infinity|star|finger'
         required: false
         default: 'heart'
+      mosaic_tiles:
+        description: 'gen_mosaic : petit symbole répété (vide = identique). Ex: symbol=finger, tiles=heart'
+        required: false
+        default: ''
       mosaic_colors:
         description: 'gen_mosaic : candy | tropical | sunset | ocean | forest | pride | rose | grape | sky | mint'
         required: false
@@ -87,6 +91,7 @@ jobs:
           WC_MASK: ${{ github.event.inputs.wc_mask }}
           WC_COLORS: ${{ github.event.inputs.wc_colors }}
           MOSAIC_SYMBOL: ${{ github.event.inputs.mosaic_symbol }}
+          MOSAIC_TILES: ${{ github.event.inputs.mosaic_tiles }}
           MOSAIC_COLORS: ${{ github.event.inputs.mosaic_colors }}
           MOSAIC_LABEL: ${{ github.event.inputs.mosaic_label }}
         run: |
@@ -121,6 +126,7 @@ jobs:
             MARGS=(--symbol "${MOSAIC_SYMBOL:-heart}" --colors "${MOSAIC_COLORS:-candy}" \
                    --font-path assets/fonts/Anton.ttf --out produits/symbol_mosaics \
                    --sheet reports/contact/mosaic_${MOSAIC_SYMBOL:-heart}.png)
+            [ -n "$MOSAIC_TILES" ] && MARGS+=(--tiles "$MOSAIC_TILES")
             [ -n "$MOSAIC_LABEL" ] && MARGS+=(--label "$MOSAIC_LABEL")
             python scripts/gen_symbol_mosaic.py "${MARGS[@]}"
           elif [ "$TASK" = "cleanup_pride" ]; then
