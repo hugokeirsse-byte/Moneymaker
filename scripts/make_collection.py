@@ -274,8 +274,8 @@ def render(item, variant):
             for i, ch in enumerate(text):
                 xpos = x + f.getlength(text[:i])
                 if ch.strip():
-                    hue = 0.92 - 0.92 * (idx / max(total - 1, 1))
-                    r, g, b = colorsys.hsv_to_rgb(hue, 0.85, 0.95)
+                    hue = 0.83 * (idx / max(total - 1, 1))  # rouge -> violet (ROYGBIV)
+                    r, g, b = colorsys.hsv_to_rgb(hue, 0.88, 0.97)
                     fd.text((xpos, yy - off), ch, font=f,
                             fill=(int(r * 255), int(g * 255), int(b * 255), 255))
                     idx += 1
@@ -332,6 +332,7 @@ def main():
     items = json.load(open(args.data, encoding="utf-8"))["items"]
     if args.limit:
         items = items[:args.limit]
+    items.append({"id": "colorless", "text": "COLORLESS", "font": "Archivo Black", "part": "phare"})
     variants = args.variants.split(",")
 
     made = []
