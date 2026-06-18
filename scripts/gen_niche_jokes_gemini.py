@@ -20,6 +20,7 @@ import json
 import os
 import re
 import sys
+import urllib.parse
 import urllib.request
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
@@ -141,6 +142,71 @@ def dfs_volumes(keywords):
     return out
 
 
+# --- APIs gratuites, sans clé : rimes (Datamuse) + phonétique (Free Dictionary)
+def _get_json(url, timeout=12):
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "Moneymaker/1.0"})
+        return json.load(urllib.request.urlopen(req, timeout=timeout))
+    except Exception as e:  # noqa: BLE001
+        print(f"[api] {url[:60]}…: {str(e)[:80]}", file=sys.stderr)
+        return None
+
+
+def datamuse_rhymes(word, n=6):
+    """Rimes réelles (gratuit, sans clé). Sert à écrire des variantes qui riment."""
+    word = (word or "").strip().split()[-1] if word else ""
+    if not word:
+        return []
+    data = _get_json(f"https://api.datamuse.com/words?rel_rhy={urllib.parse.quote(word)}&max={n}")
+    return [d["word"] for d in (data or []) if d.get("word")]
+
+
+def dict_phonetic(word):
+    """Phonétique + définition RÉELLES (gratuit, sans clé). Alimente le format dictionary."""
+    word = (word or "").strip().split()[0] if word else ""
+    if not word or not word.isalpha():
+        return ("", "")
+    data = _get_json(f"https://api.dictionaryapi.dev/api/v2/entries/en/{urllib.parse.quote(word)}")
+    if not isinstance(data, list) or not data:
+        return ("", "")
+    entry = data[0]
+    phon = entry.get("phonetic") or ""
+    if not phon:
+        for p in entry.get("phonetics", []):
+            if p.get("text"):
+                phon = p["text"]
+                break
+    definition = ""
+    for m in entry.get("meanings", []):
+        for d in m.get("definitions", []):
+            if d.get("definition"):
+                definition = d["definition"]
+                break
+        if definition:
+            break
+    return (phon, definition)
+
+
+def enrich(jokes, top=60):
+    """Ajoute rimes (toutes les blagues du haut) et phonétique réelle (format
+    dictionary). Tolérant aux pannes : si une API échoue, on continue."""
+    seen_rhy, seen_phon = {}, {}
+    for j in jokes[:top]:
+        kw = j.get("real_keyword") or j.get("text", "")
+        last = (kw.strip().split() or [""])[-1].lower()
+        if last and last not in seen_rhy:
+            seen_rhy[last] = datamuse_rhymes(last)
+        j["rhymes"] = seen_rhy.get(last, [])
+        if j.get("format") == "dictionary":
+            head = (j.get("text", "").strip().split() or [""])[0].lower()
+            if head and head not in seen_phon:
+                seen_phon[head] = dict_phonetic(head)
+            phon, defi = seen_phon.get(head, ("", ""))
+            j["phonetic"] = phon
+            j["real_definition"] = defi
+    print(f"[enrich] {len(seen_rhy)} jeux de rimes, {len(seen_phon)} phonétiques")
+
+
 PROMPT = """You are a print-on-demand trend researcher (Redbubble, TeePublic, \
 Amazon Merch, Etsy). Use real, up-to-date web knowledge (2026).
 
@@ -238,6 +304,9 @@ def main():
 
     jokes.sort(key=lambda j: (j.get("data_score", 0), j.get("real_volume", 0)), reverse=True)
 
+    # rimes (Datamuse) + phonétique réelle (Free Dictionary) — gratuit, sans clé
+    enrich(jokes)
+
     ts = datetime.datetime.utcnow().strftime("%Y%m%d_%H%M")
     os.makedirs("reports", exist_ok=True)
     out = {"generated_at": ts, "real_data": real,
@@ -251,12 +320,13 @@ def main():
             else "⚠️ pas de données réelles (DataForSEO indispo) — à brancher")
     md = [f"# Blagues de niche classées par DEMANDE RÉELLE — {head}",
           f"{len(jokes)} blagues · {len(data['niches'])} niches + {len(data.get('combos', []))} combos\n",
-          "| Vol/mois | Compét. | Niche | Format | Phrase | Mot-clé gagnant |",
-          "|---|---|---|---|---|---|"]
+          "| Vol/mois | Compét. | Niche | Format | Phrase | Mot-clé gagnant | Rimes (Datamuse) |",
+          "|---|---|---|---|---|---|---|"]
     for j in jokes:
+        rhy = ", ".join((j.get("rhymes") or [])[:4])
         md.append(f"| {j['real_volume']} | {j['real_competition']:.2f} | "
                   f"{j['niche'][:28]} | {j.get('format', 'plain')} | "
-                  f"{str(j.get('text', '')).replace('|', '/')} | {j['real_keyword']} |")
+                  f"{str(j.get('text', '')).replace('|', '/')} | {j['real_keyword']} | {rhy} |")
     open(f"reports/niche_jokes_ranked_{ts}.md", "w", encoding="utf-8").write("\n".join(md))
     print(f"reports/niche_jokes_ranked_{ts}.md — {len(jokes)} blagues, données réelles={real}")
     return 0

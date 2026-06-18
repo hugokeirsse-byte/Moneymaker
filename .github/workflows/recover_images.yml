@@ -4,13 +4,33 @@ on:
   workflow_dispatch:
     inputs:
       task:
-        description: 'make_collection | gen_listings_corpus | gen_listings_produits | gen_niche_jokes | cleanup_pride'
+        description: 'make_collection | gen_listings_corpus | gen_listings_produits | gen_niche_jokes | gen_wordcloud | cleanup_pride'
         required: true
         default: 'make_collection'
       limit:
         description: 'make_collection : nb max (0 = tous)'
         required: false
         default: '0'
+      wc_words:
+        description: 'gen_wordcloud : mots séparés par des virgules (sinon utiliser wc_report)'
+        required: false
+        default: ''
+      wc_report:
+        description: 'gen_wordcloud : chemin reports/niche_jokes_ranked_*.json'
+        required: false
+        default: ''
+      wc_niche:
+        description: 'gen_wordcloud : filtre de niche (avec wc_report)'
+        required: false
+        default: ''
+      wc_mask:
+        description: 'gen_wordcloud : heart | star | hexagon | circle | diamond | arrow_up'
+        required: false
+        default: 'heart'
+      wc_colors:
+        description: 'gen_wordcloud : rainbow | black | sunset | ocean | forest | candy'
+        required: false
+        default: 'rainbow'
 
 permissions:
   contents: write
@@ -31,6 +51,7 @@ jobs:
             assets
             reports
             produits/typographies
+            produits/word_shapes
           sparse-checkout-cone-mode: true
 
       - uses: actions/setup-python@v5
@@ -38,7 +59,7 @@ jobs:
           python-version: '3.11'
 
       - name: Dépendances
-        run: pip install -q Pillow numpy google-genai requests
+        run: pip install -q Pillow numpy google-genai requests wordcloud
 
       - name: Exécuter la tâche
         env:
@@ -47,11 +68,16 @@ jobs:
           BRANCH: ${{ github.ref_name }}
           DATAFORSEO_LOGIN: ${{ secrets.DATAFORSEO_LOGIN }}
           DATAFORSEO_PASSWORD: ${{ secrets.DATAFORSEO_PASSWORD }}
+          WC_WORDS: ${{ github.event.inputs.wc_words }}
+          WC_REPORT: ${{ github.event.inputs.wc_report }}
+          WC_NICHE: ${{ github.event.inputs.wc_niche }}
+          WC_MASK: ${{ github.event.inputs.wc_mask }}
+          WC_COLORS: ${{ github.event.inputs.wc_colors }}
         run: |
           set -e
           TASK="${{ github.event.inputs.task }}"
           LIM="${{ github.event.inputs.limit || '0' }}"
-          mkdir -p reports/contact reports/listings assets/fonts
+          mkdir -p reports/contact reports/listings assets/fonts produits/word_shapes
           if [ "$TASK" = "make_collection" ]; then
             curl -sL "https://raw.githubusercontent.com/google/fonts/main/ofl/kaushanscript/KaushanScript-Regular.ttf" -o assets/fonts/Kaushan_Script.ttf
             python3 -c "import json; d=json.load(open('data/typo_collection.json')); [i.update({'font':'Kaushan Script'}) for i in d['items']]; json.dump(d, open('data/_typo_run.json','w'), ensure_ascii=False)"
@@ -65,6 +91,15 @@ jobs:
             python scripts/gen_listings_gemini.py --produits
           elif [ "$TASK" = "gen_niche_jokes" ]; then
             python scripts/gen_niche_jokes_gemini.py
+          elif [ "$TASK" = "gen_wordcloud" ]; then
+            curl -sL "https://raw.githubusercontent.com/google/fonts/main/ofl/kaushanscript/KaushanScript-Regular.ttf" -o assets/fonts/Kaushan_Script.ttf
+            ARGS=(--mask "${WC_MASK:-heart}" --colors "${WC_COLORS:-rainbow}" \
+                  --font-path assets/fonts/Kaushan_Script.ttf \
+                  --out produits/word_shapes --sheet reports/contact/word_shape.png)
+            [ -n "$WC_WORDS" ]  && ARGS+=(--words "$WC_WORDS")
+            [ -n "$WC_REPORT" ] && ARGS+=(--from-report "$WC_REPORT")
+            [ -n "$WC_NICHE" ]  && ARGS+=(--niche "$WC_NICHE")
+            python scripts/gen_wordcloud.py "${ARGS[@]}"
           elif [ "$TASK" = "cleanup_pride" ]; then
             python scripts/cleanup_pride_strays.py
           else
@@ -78,7 +113,7 @@ jobs:
           git config user.email "bot@moneymaker.auto"
           git rebase --abort 2>/dev/null || true
           BR=$(git rev-parse --abbrev-ref HEAD)
-          git add -A produits/typographies reports 2>/dev/null || true
+          git add -A produits/typographies produits/word_shapes reports 2>/dev/null || true
           if git diff --staged --quiet; then echo "Rien a committer."; exit 0; fi
           git commit -m "typo/listings: ${{ github.event.inputs.task }} — $(date -u +'%Y-%m-%d %H:%M UTC')"
           DELAY=2
