@@ -23,7 +23,7 @@ Exemples :
         --colors candy --font-path assets/fonts/Anton.ttf \
         --out produits/symbol_mosaics --sheet /tmp/heart.png
     python scripts/gen_symbol_mosaic.py --symbol peace --label PEACE \
-        --colors rainbow --out produits/symbol_mosaics
+        --colors tropical --out produits/symbol_mosaics
 """
 import argparse
 import colorsys
@@ -146,32 +146,45 @@ SOLID = {"heart", "star"}
 
 
 # ----------------------------------------------------------- couleurs
+# Chaque palette = ~5 couleurs qui se MARIENT, piochées au hasard et mêlées
+# PARTOUT (pas de dégradé positionnel). C'est le mélange local de plusieurs
+# couleurs distinctes qui rend le design propre (et non « brouillon »).
+# Deux familles : multi-teintes harmonieuses, et camaïeux (une teinte, du clair
+# au foncé).
 PALETTES = {
-    "sunset": [(255, 94, 58), (255, 149, 5), (255, 191, 0), (214, 40, 100)],
-    "ocean":  [(0, 119, 182), (0, 180, 216), (72, 202, 228), (2, 62, 138)],
-    "forest": [(45, 106, 79), (82, 183, 136), (27, 67, 50), (149, 213, 178)],
-    "candy":  [(247, 37, 133), (228, 0, 124), (114, 9, 183), (76, 201, 240)],
-    "pride":  [(228, 3, 3), (255, 140, 0), (255, 237, 0), (0, 128, 38),
-               (0, 77, 255), (117, 7, 135)],
+    # --- multi-couleurs qui se marient ---
+    "candy":    [(247, 37, 133), (228, 0, 124), (157, 2, 180),
+                 (114, 9, 183), (76, 201, 240)],
+    "tropical": [(255, 99, 146), (255, 159, 67), (255, 214, 76),
+                 (46, 196, 182), (91, 134, 229)],
+    "sunset":   [(255, 221, 89), (255, 158, 44), (255, 94, 58),
+                 (232, 49, 86), (176, 35, 90)],
+    "ocean":    [(173, 232, 244), (72, 202, 228), (0, 180, 216),
+                 (0, 119, 182), (2, 62, 138)],
+    "forest":   [(183, 228, 179), (116, 198, 157), (64, 145, 108),
+                 (45, 106, 79), (27, 67, 50)],
+    "pride":    [(228, 3, 3), (255, 140, 0), (255, 237, 0),
+                 (0, 128, 38), (0, 77, 255), (117, 7, 135)],
+    # --- camaïeux (du clair au foncé d'une même teinte) ---
+    "rose":     [(255, 209, 220), (255, 143, 177), (255, 77, 148),
+                 (214, 40, 118), (155, 28, 82)],
+    "grape":    [(224, 170, 255), (199, 125, 255), (157, 78, 221),
+                 (123, 44, 191), (90, 24, 154)],
+    "sky":      [(202, 240, 248), (144, 224, 239), (72, 202, 228),
+                 (0, 150, 199), (3, 4, 94)],
+    "mint":     [(208, 244, 222), (149, 213, 178), (82, 183, 136),
+                 (45, 134, 89), (20, 83, 60)],
 }
+DEFAULT_PALETTE = "candy"
 
 
-def stamp_color(mode, frac, shade, rng):
-    """Couleur d'un petit symbole. `shade` (0=ombre, 1=lumière) module la
-    LUMINOSITÉ => l'objet prend du volume (côté clair / côté sombre)."""
-    if mode == "black":
-        g = int(14 + shade * 78) + rng.randint(-9, 9)
-        return (max(0, min(110, g)),) * 3 + (255,)
-    if mode in PALETTES:
-        base = rng.choice(PALETTES[mode])
-        f = max(0.30, 0.42 + 0.62 * shade + rng.uniform(-0.07, 0.07))
-        return (min(255, int(base[0] * f)), min(255, int(base[1] * f)),
-                min(255, int(base[2] * f)), 255)
-    # rainbow : teinte par position horizontale + bruit, valeur ~ lumière
-    hue = (0.83 * frac + rng.uniform(-0.04, 0.04)) % 1.0
-    val = max(0.40, min(1.0, 0.52 + 0.48 * shade + rng.uniform(-0.05, 0.05)))
-    r, g, b = colorsys.hsv_to_rgb(hue, 0.9, val)
-    return (int(r * 255), int(g * 255), int(b * 255), 255)
+def stamp_color(palette, shade, rng):
+    """Pioche une couleur de la palette (mélange local de plusieurs teintes) ;
+    `shade` (0=ombre, 1=lumière) module la luminosité => volume."""
+    base = rng.choice(palette)
+    f = max(0.34, 0.60 + 0.46 * shade + rng.uniform(-0.06, 0.06))
+    return (min(255, int(base[0] * f)), min(255, int(base[1] * f)),
+            min(255, int(base[2] * f)), 255)
 
 
 # ----------------------------------------------------------- carte de couverture
@@ -260,13 +273,14 @@ def make_tile(symbol, size, color):
 
 
 # ----------------------------------------------------------- composition
-def build(symbol, W=1700, H=2000, colors="rainbow", label="",
+def build(symbol, W=1700, H=2000, colors="candy", label="",
           font_path="", base=34, seed=7):
     cov, geo = coverage_map(symbol, W, H, label, font_path, base)
     shade = shade_map(W, H, geo)
     rng = random.Random(seed)
     out = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     inside = 0.42
+    palette = PALETTES.get(colors, PALETTES[DEFAULT_PALETTE])
 
     stamps = []   # (size, x, y, color, angle)
 
@@ -281,7 +295,7 @@ def build(symbol, W=1700, H=2000, colors="rainbow", label="",
                 continue
             s = float(shade[y, x])
             size = int(base * rng.uniform(0.9, 1.4) * (1.0 + 0.12 * (1 - s)))
-            stamps.append((size, x, y, stamp_color(colors, x / W, s, rng),
+            stamps.append((size, x, y, stamp_color(palette, s, rng),
                            rng.uniform(-16, 16)))
 
     # 2) couche organique par-dessus : gros ET petits, pour l'amoncellement
@@ -291,7 +305,7 @@ def build(symbol, W=1700, H=2000, colors="rainbow", label="",
             continue
         s = float(shade[y, x])
         size = int(base * rng.uniform(0.45, 1.95))
-        stamps.append((size, x, y, stamp_color(colors, x / W, s, rng),
+        stamps.append((size, x, y, stamp_color(palette, s, rng),
                        rng.uniform(-16, 16)))
 
     # du plus gros au plus petit => les petits se posent par-dessus (pile)
@@ -310,7 +324,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--symbol", default="heart", choices=list(SYMBOLS))
     ap.add_argument("--label", default="", help="mot écrit dessous, en petits symboles")
-    ap.add_argument("--colors", default="rainbow")
+    ap.add_argument("--colors", default="candy",
+                    help="candy|tropical|sunset|ocean|forest|pride|rose|grape|sky|mint")
     ap.add_argument("--base", type=int, default=34, help="taille moyenne des symboles (px)")
     ap.add_argument("--font-path", default="")
     ap.add_argument("--out", default="produits/symbol_mosaics")

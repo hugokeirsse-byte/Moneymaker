@@ -36,9 +36,9 @@ on:
         required: false
         default: 'heart'
       mosaic_colors:
-        description: 'gen_mosaic : rainbow | black | sunset | ocean | forest | candy | pride'
+        description: 'gen_mosaic : candy | tropical | sunset | ocean | forest | pride | rose | grape | sky | mint'
         required: false
-        default: 'rainbow'
+        default: 'candy'
       mosaic_label:
         description: 'gen_mosaic : mot écrit dessous, en petits symboles (ex. LOVE)'
         required: false
@@ -118,7 +118,7 @@ jobs:
             python scripts/gen_wordcloud.py "${ARGS[@]}"
           elif [ "$TASK" = "gen_mosaic" ]; then
             curl -sL "https://raw.githubusercontent.com/google/fonts/main/ofl/anton/Anton-Regular.ttf" -o assets/fonts/Anton.ttf
-            MARGS=(--symbol "${MOSAIC_SYMBOL:-heart}" --colors "${MOSAIC_COLORS:-rainbow}" \
+            MARGS=(--symbol "${MOSAIC_SYMBOL:-heart}" --colors "${MOSAIC_COLORS:-candy}" \
                    --font-path assets/fonts/Anton.ttf --out produits/symbol_mosaics \
                    --sheet reports/contact/mosaic_${MOSAIC_SYMBOL:-heart}.png)
             [ -n "$MOSAIC_LABEL" ] && MARGS+=(--label "$MOSAIC_LABEL")
