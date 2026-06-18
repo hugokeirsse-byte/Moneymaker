@@ -1,18 +1,22 @@
 #!/usr/bin/env python3
 """
-make_collection.py — production des 100 designs « phrase + illustration domaine
-public » (0 € de génération IA). Pour chaque entrée de data/typo_collection.json :
-  - police demandée téléchargée depuis Google Fonts (OFL/Apache) ou substitut libre ;
-  - illustration du domaine public récupérée en HAUTE RÉSOLUTION via l'API Wikimedia
-    Commons (min 2000 px sur le grand côté, sinon design typographique seul —
-    jamais d'image basse qualité) ;
-  - composition affiche : illustration en haut, phrase dans sa police en bas.
-Repli garanti : si pas d'image exploitable, design typo transparent (encre sombre
-+ variante blanche).
+make_collection.py — production des 100 designs à phrases, ÉCRITURES DÉTOURÉES SUR
+FOND TRANSPARENT (0 € de génération IA).
 
-Usage (racine du repo, runner avec Internet) :
+Par défaut : pour chaque entrée de data/typo_collection.json, on rend le texte dans
+la police demandée (téléchargée depuis Google Fonts, ou substitut libre), sur fond
+100 % transparent, en deux variantes : encre sombre (t-shirts clairs) et encre
+blanche (t-shirts foncés).
+
+Mots « intraduisibles » (p1) et « faux intraduisibles » (p4) : mise en page
+DICTIONNAIRE — le mot en grand, un filet fin, puis la définition en dessous.
+
+Option --posters : compose aussi une affiche papier avec une illustration du
+domaine public en haute résolution (Wikimedia Commons, ≥2000 px) quand elle existe.
+
+Usage (racine du repo) :
     python scripts/make_collection.py --data data/typo_collection.json --out produits/typographies
-    python scripts/make_collection.py --data ... --sheet /tmp/collection.png
+    python scripts/make_collection.py --data ... --sheet /tmp/sheet.png [--posters]
 """
 import argparse
 import io
@@ -30,18 +34,17 @@ GF = "https://raw.githubusercontent.com/google/fonts/main/"
 UA = "Moneymaker/1.0 (POD public-domain art; hugo.keirsse@gmail.com)"
 API = "https://commons.wikimedia.org/w/api.php"
 PAPER = (250, 247, 237)
-INK = (32, 28, 24)
+INK = (28, 26, 24)
 INK_LIGHT = (247, 247, 245)
 ACCENT = (150, 42, 38)
-MIN_IMG = 2000  # px grand côté : en-dessous on n'utilise pas l'image
+MIN_IMG = 2000
 
-# police demandée -> chemin GF (ou substitut libre équivalent)
 FONT_MAP = {
     "Playfair Display": "ofl/playfairdisplay/PlayfairDisplay[wght].ttf",
-    "Playfair Display Italic": "ofl/playfairdisplay/PlayfairDisplay-Italic[wght].ttf",
     "Cormorant Garamond": "ofl/cormorantgaramond/CormorantGaramond-Bold.ttf",
     "Lora": "ofl/lora/Lora[wght].ttf",
     "EB Garamond": "ofl/ebgaramond/EBGaramond[wght].ttf",
+    "EB Garamond Italic": "ofl/ebgaramond/EBGaramond-Italic[wght].ttf",
     "Cinzel": "ofl/cinzel/Cinzel[wght].ttf",
     "Cinzel Decorative": "ofl/cinzeldecorative/CinzelDecorative-Bold.ttf",
     "Oswald": "ofl/oswald/Oswald[wght].ttf",
@@ -110,16 +113,43 @@ FONT_MAP = {
     "Karla": "ofl/karla/Karla[wght].ttf",
     "Quattrocento": "ofl/quattrocento/Quattrocento-Bold.ttf",
     "Bellota Text": "ofl/bellotatext/BellotaText-Bold.ttf",
-    "Cooper Black": "ofl/lilitaone/LilitaOne-Regular.ttf",  # substitut libre
+    "Cooper Black": "ofl/lilitaone/LilitaOne-Regular.ttf",
     "DotGothic16": "ofl/dotgothic16/DotGothic16-Regular.ttf",
 }
-# substitut générique si une police manque (par familles)
 FALLBACK = "ofl/archivoblack/ArchivoBlack-Regular.ttf"
+
+# définitions « dictionnaire » pour les mots intraduisibles (p1) et faux (p4)
+DEFS = {
+    "tsundoku": "(n.) the art of buying books and letting them pile up, gloriously unread.",
+    "sobremesa": "(n.) the lazy, lingering conversation long after the meal is over.",
+    "iktsuarpok": "(n.) the restless urge to keep checking if someone is coming.",
+    "waldeinsamkeit": "(n.) the serene, solitary feeling of being alone in the woods.",
+    "meraki": "(n.) to do something with soul, creativity and a little bit of love.",
+    "utepils": "(n.) a cold beer savoured outside on the first warm day of the year.",
+    "d_paysement": "(n.) le doux vertige de se sentir loin de chez soi.",
+    "gezellig": "(adj.) a cozy, warm togetherness that simply feels like home.",
+    "kummerspeck": "(n.) literally 'grief bacon' — the weight gained from comfort eating.",
+    "jayus": "(n.) a joke so bad, told so badly, that you can't help but laugh.",
+    "doom_strolling": "(v.) to walk slowly while mentally rehearsing every worst-case scenario.",
+    "pre_tired": "(adj.) already exhausted by a day that hasn't even started yet.",
+    "chronofatigue": "(n.) la fatigue ressentie rien qu'en regardant l'heure.",
+    "socio_phobia": "(n.) the quiet dread of the plans you already agreed to.",
+    "micro_panic": "(n.) a three-second internal scream, invisible from the outside.",
+    "retro_regret": "(n.) the on-demand cringe of a memory from years ago.",
+    "optimistic_nihilism": "(n.) nothing really matters, so you might as well enjoy the snacks.",
+    "decaf_energy": "(n.) the vibe of trying very hard while feeling absolutely nothing.",
+    "intro_venting": "(v.) to complain loudly and at length inside your own head.",
+    "aura_loss": "(n.) the sudden drop in coolness right after one clumsy move.",
+    "pr_fatigu": "(adj.) déjà épuisé à la seule idée de la journée qui commence.",
+    "cringe_back": "(n.) a flashback so awkward it makes you physically wince.",
+    "micro_sieste_mentale": "(n.) s'absenter trois secondes, les yeux grands ouverts.",
+    "nihilisme_joyeux": "(n.) rien n'a de sens — autant en rire de bon coeur.",
+    "r_lerie_pr_ventive": "(n.) l'art de raler contre un truc avant meme qu'il arrive.",
+}
 _cache = {}
 
 
 def ensure_font(name):
-    """Télécharge (si besoin) la police demandée ou un substitut, renvoie le chemin."""
     if name in _cache:
         return _cache[name]
     os.makedirs(FONT_DIR, exist_ok=True)
@@ -130,8 +160,7 @@ def ensure_font(name):
             try:
                 url = GF + urllib.parse.quote(cand)
                 req = urllib.request.Request(url, headers={"User-Agent": UA})
-                data = urllib.request.urlopen(req, timeout=40).read()
-                open(local, "wb").write(data)
+                open(local, "wb").write(urllib.request.urlopen(req, timeout=40).read())
                 break
             except Exception as e:  # noqa: BLE001
                 print(f"[font] {name} <- {cand}: {e}", file=sys.stderr)
@@ -140,11 +169,9 @@ def ensure_font(name):
 
 
 def load(name, size):
-    p = ensure_font(name)
-    if not p:
-        p = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+    p = ensure_font(name) or "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
     f = ImageFont.truetype(p, size)
-    try:  # police variable : viser un gras lisible
+    try:
         f.set_variation_by_axes([700])
     except Exception:  # noqa: BLE001
         pass
@@ -157,9 +184,8 @@ def tw(font, s):
 
 
 def wrap(text, font, max_w):
-    words = text.split()
     lines, cur = [], ""
-    for w in words:
+    for w in text.split():
         t = (cur + " " + w).strip()
         if tw(font, t)[0] <= max_w or not cur:
             cur = t
@@ -170,7 +196,7 @@ def wrap(text, font, max_w):
     return lines
 
 
-def fit(name, text, max_w, max_lines=4, hi=520, lo=44):
+def fit(name, text, max_w, max_lines=4, hi=520, lo=40):
     while lo < hi:
         mid = (lo + hi + 1) // 2
         f = load(name, mid)
@@ -182,7 +208,71 @@ def fit(name, text, max_w, max_lines=4, hi=520, lo=44):
     return lo
 
 
-# --- récupération image PD haute résolution -----------------------------------
+def _finish(img, side):
+    img = img.crop(img.getbbox())
+    pad = int(side * 0.06)
+    out = Image.new("RGBA", (img.width + 2 * pad, img.height + 2 * pad), (0, 0, 0, 0))
+    out.alpha_composite(img, (pad, pad))
+    if max(out.size) and max(out.size) != side:
+        r = side / max(out.size)
+        out = out.resize((round(out.width * r), round(out.height * r)), Image.LANCZOS)
+    return out
+
+
+def render_typo(item, ink, side=4500):
+    """Texte centré sur fond transparent. Si une définition existe (intraduisibles),
+    mise en page dictionnaire : mot en grand + filet + définition."""
+    margin = int(side * 0.09)
+    maxw = side - 2 * margin
+    definition = DEFS.get(item["id"])
+
+    if definition:
+        # mot en très grand
+        wsize = fit(item["font"], item["text"], maxw, max_lines=2, hi=900)
+        wf = load(item["font"], wsize)
+        wlines = wrap(item["text"], wf, maxw)
+        # définition en serif italique, lisible
+        dsize = max(int(wsize * 0.16), 70)
+        dfont = load("EB Garamond Italic", dsize)
+        dlines = wrap(definition, dfont, int(maxw * 0.92))
+        gap = int(wsize * 0.10)
+        dgap = int(dsize * 0.30)
+        wdims = [(l, *tw(wf, l)) for l in wlines]
+        ddims = [(l, *tw(dfont, l)) for l in dlines]
+        rule_y_gap = int(wsize * 0.22)
+        H = (sum(d[2] for d in wdims) + gap * (len(wdims) - 1)
+             + rule_y_gap * 2 + sum(d[2] for d in ddims) + dgap * (len(ddims) - 1)
+             + 2 * margin)
+        img = Image.new("RGBA", (side, H), (0, 0, 0, 0))
+        dr = ImageDraw.Draw(img)
+        y = margin
+        for (l, w, h, off) in wdims:
+            dr.text(((side - w) // 2, y - off), l, font=wf, fill=ink)
+            y += h + gap
+        y += rule_y_gap
+        dr.line([(side * 0.33, y), (side * 0.67, y)], fill=ink, width=max(3, side // 900))
+        y += rule_y_gap
+        for (l, w, h, off) in ddims:
+            dr.text(((side - w) // 2, y - off), l, font=dfont, fill=ink)
+            y += h + dgap
+        return _finish(img, side)
+
+    # phrase normale, transparente
+    size = fit(item["font"], item["text"], maxw, max_lines=5)
+    f = load(item["font"], size)
+    gap = int(size * 0.18)
+    dims = [(l, *tw(f, l)) for l in wrap(item["text"], f, maxw)]
+    H = sum(d[2] for d in dims) + gap * (len(dims) - 1) + 2 * margin
+    img = Image.new("RGBA", (side, H), (0, 0, 0, 0))
+    dr = ImageDraw.Draw(img)
+    y = margin
+    for (l, w, h, off) in dims:
+        dr.text(((side - w) // 2, y - off), l, font=f, fill=ink)
+        y += h + gap
+    return _finish(img, side)
+
+
+# --- affiche optionnelle avec image PD (option --posters) ----------------------
 def _api(params):
     url = API + "?" + urllib.parse.urlencode(params)
     req = urllib.request.Request(url, headers={"User-Agent": UA})
@@ -197,12 +287,10 @@ def resolve_hi(search, want=3800):
         if not title.lower().endswith((".jpg", ".jpeg", ".png", ".tif", ".tiff")):
             continue
         info = _api({"action": "query", "format": "json", "titles": title,
-                     "prop": "imageinfo", "iiprop": "url|size",
-                     "iiurlwidth": want})
+                     "prop": "imageinfo", "iiprop": "url|size", "iiurlwidth": want})
         ii = next(iter(info["query"]["pages"].values()))["imageinfo"][0]
-        full_w = ii.get("width", 0)
-        if full_w < MIN_IMG:
-            continue  # source trop petite -> on refuse (qualité supérieure exigée)
+        if ii.get("width", 0) < MIN_IMG:
+            continue
         return ii.get("thumburl") or ii["url"], title
     return None, None
 
@@ -212,105 +300,64 @@ def fetch(url):
     return Image.open(io.BytesIO(urllib.request.urlopen(req, timeout=120).read())).convert("RGB")
 
 
-# --- compositions --------------------------------------------------------------
-def poster(item, plate, W=4500, H=5400):
-    card = Image.new("RGB", (W, H), PAPER)
-    d = ImageDraw.Draw(card)
-    p = plate.copy()
-    p.thumbnail((int(W * 0.84), int(H * 0.55)), Image.LANCZOS)
-    card.paste(p, ((W - p.width) // 2, int(H * 0.06)))
-    y = int(H * 0.06) + p.height + int(H * 0.03)
-    d.line([(W * 0.22, y), (W * 0.78, y)], fill=ACCENT, width=6)
-    y += int(H * 0.03)
-    maxw = int(W * 0.86)
-    size = fit(item["font"], item["text"], maxw, max_lines=4)
-    f = load(item["font"], size)
-    for ln in wrap(item["text"], f, maxw):
-        w, h, off = tw(f, ln)
-        d.text(((W - w) // 2, y - off), ln, font=f, fill=INK)
-        y += h + int(size * 0.16)
-    return card
-
-
-def typo(item, ink, side=4500):
-    margin = int(side * 0.09)
-    maxw = side - 2 * margin
-    size = fit(item["font"], item["text"], maxw, max_lines=5)
-    f = load(item["font"], size)
-    lines = wrap(item["text"], f, maxw)
-    gap = int(size * 0.18)
-    dims = [(l, *tw(f, l)) for l in lines]
-    th = sum(d[2] for d in dims) + gap * (len(dims) - 1)
-    img = Image.new("RGBA", (side, th + 2 * margin), (0, 0, 0, 0))
-    dr = ImageDraw.Draw(img)
-    y = margin
-    for (l, w, h, off) in dims:
-        dr.text(((side - w) // 2, y - off), l, font=f, fill=ink)
-        y += h + gap
-    img = img.crop(img.getbbox())
-    pad = int(side * 0.06)
-    out = Image.new("RGBA", (img.width + 2 * pad, img.height + 2 * pad), (0, 0, 0, 0))
-    out.alpha_composite(img, (pad, pad))
-    if max(out.size) != side and max(out.size) > 0:
-        r = side / max(out.size)
-        out = out.resize((round(out.width * r), round(out.height * r)), Image.LANCZOS)
-    return out
-
-
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--data", default="data/typo_collection.json")
     ap.add_argument("--out", default="")
     ap.add_argument("--sheet", default="")
     ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument("--posters", action="store_true",
+                    help="compose aussi une affiche papier avec image PD HD si dispo")
     args = ap.parse_args()
     items = json.load(open(args.data, encoding="utf-8"))["items"]
     if args.limit:
         items = items[:args.limit]
 
     made = []
-    n_img = n_typo = 0
     for it in items:
-        plate = None
-        if it.get("commons"):
+        sub = os.path.join(args.out, it["part"]) if args.out else None
+        if sub:
+            os.makedirs(sub, exist_ok=True)
+        # écritures détourées, fond transparent : sombre + blanc
+        for var, ink in (("dark", INK), ("light", INK_LIGHT)):
+            img = render_typo(it, ink)
+            if sub:
+                img.save(os.path.join(sub, f"{it['id']}__{var}.png"), dpi=(300, 300))
+            if var == "dark":
+                made.append((it["id"], img))
+        # affiche illustrée optionnelle
+        if args.posters and it.get("commons"):
             try:
                 url, title = resolve_hi(it["commons"])
                 if url:
                     plate = fetch(url)
-                    print(f"{it['id']}: image {plate.size} <- {title}")
+                    card = Image.new("RGB", (4500, 5400), PAPER)
+                    p = plate.copy(); p.thumbnail((int(4500 * 0.84), int(5400 * 0.5)), Image.LANCZOS)
+                    card.paste(p, ((4500 - p.width) // 2, int(5400 * 0.07)))
+                    y = int(5400 * 0.07) + p.height + int(5400 * 0.04)
+                    over = render_typo(it, INK, side=int(4500 * 0.86)).convert("RGBA")
+                    over.thumbnail((int(4500 * 0.86), int(5400 * 0.34)))
+                    card.paste(over, ((4500 - over.width) // 2, y), over)
+                    if sub:
+                        card.save(os.path.join(sub, f"{it['id']}__affiche.png"), dpi=(300, 300))
+                    print(f"{it['id']}: affiche {plate.size} <- {title}")
             except Exception as e:  # noqa: BLE001
-                print(f"  {it['id']} image KO: {str(e)[:120]}", file=sys.stderr)
-        sub = os.path.join(args.out, it["part"]) if args.out else None
-        if sub:
-            os.makedirs(sub, exist_ok=True)
-        if plate is not None:
-            card = poster(it, plate)
-            made.append((it["id"], card.convert("RGBA")))
-            n_img += 1
-            if sub:
-                card.save(os.path.join(sub, f"{it['id']}__affiche.png"), dpi=(300, 300))
-        else:
-            for var, ink in (("dark", INK), ("light", INK_LIGHT)):
-                t = typo(it, ink)
-                if sub:
-                    t.save(os.path.join(sub, f"{it['id']}__{var}.png"), dpi=(300, 300))
-                if var == "dark":
-                    made.append((it["id"], t))
-            n_typo += 1
+                print(f"  {it['id']} affiche KO: {str(e)[:120]}", file=sys.stderr)
 
     if args.sheet and made:
         cols = 5
         rows = (len(made) + cols - 1) // cols
         cell = 320
-        sheet = Image.new("RGB", (cols * cell, rows * cell), (235, 234, 230))
+        sheet = Image.new("RGB", (cols * cell, rows * cell), (236, 235, 231))
         for i, (sid, im) in enumerate(made):
             t = im.convert("RGBA"); t.thumbnail((cell - 16, cell - 16))
-            bg = Image.new("RGB", t.size, (245, 245, 245)); bg.paste(t.convert("RGB"), mask=t.split()[-1])
+            bg = Image.new("RGB", t.size, (246, 246, 246)); bg.paste(t.convert("RGB"), mask=t.split()[-1])
             r, c = divmod(i, cols)
-            sheet.paste(bg, (c * cell + 8 + (cell - 16 - bg.width) // 2, r * cell + 8))
+            sheet.paste(bg, (c * cell + 8 + (cell - 16 - bg.width) // 2,
+                             r * cell + 8 + (cell - 16 - bg.height) // 2))
         sheet.save(args.sheet, quality=88)
         print("planche:", args.sheet)
-    print(f"OK : {n_img} affiches (image PD HD) + {n_typo} typo seules = {len(items)}")
+    print(f"OK : {len(items)} designs (écritures transparentes, {len(DEFS)} avec définition)")
 
 
 if __name__ == "__main__":
