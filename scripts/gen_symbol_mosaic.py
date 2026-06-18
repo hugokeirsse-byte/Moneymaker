@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 """
 gen_symbol_mosaic.py — mosaïque TONALE : un grand symbole (et un mot dessous)
-rendus par une nuée de petits symboles, dont la DENSITÉ crée les ombres et le
-volume. Aucune IA, aucun coût : tout est dessiné avec Pillow.
+rendus par une nuée de petits symboles qui se chevauchent, avec un effet de
+VOLUME. Aucune IA, aucun coût : tout est dessiné avec Pillow.
 
-Principe (pas une grille !) :
-  1) on construit une carte de tons (silhouette pleine du symbole + mot dessous,
-     floutée) : sombre = dense, clair = clairsemé ;
-  2) on sème des milliers de petits symboles à des positions ALÉATOIRES, plus
-     gros et plus serrés là où le ton est sombre, plus petits et espacés vers
-     les bords qui s'estompent ;
-  3) couleurs variées (teinte/valeur qui bougent d'un symbole à l'autre), les
-     zones denses s'assombrissent => ombres ; les bords s'éclaircissent.
+Principe (amoncellement, pas une grille !) :
+  1) silhouette pleine du symbole (+ mot dessous) = zone à remplir ;
+  2) on EMPILE des milliers de petits symboles qui se CHEVAUCHENT : une couche
+     de couverture (jitterée, pas < taille => aucun trou de fond) puis une
+     couche organique de gros ET petits par-dessus. Aucun espace blanc hormis
+     l'intérieur des symboles eux-mêmes ;
+  3) un ombrage volumétrique (dôme éclairé en haut-gauche) module la luminosité
+     des symboles => l'objet prend du VOLUME (côté clair / côté ombre).
 
 Le mot du bas (ex. « LOVE » sous le cœur) est lui aussi rempli des mêmes petits
 symboles.
@@ -141,7 +141,7 @@ SYMBOLS = {
     "recycle": draw_recycle, "female": draw_venus, "male": draw_mars,
     "infinity": draw_infinity, "star": draw_star,
 }
-# fraction du trait quand on dessine la SILHOUETTE pleine (carte de tons)
+# fraction du trait quand on dessine la SILHOUETTE pleine (carte de couverture)
 SOLID = {"heart", "star"}
 
 
@@ -156,25 +156,25 @@ PALETTES = {
 }
 
 
-def stamp_color(mode, frac, tone, rng):
-    """Couleur d'un petit symbole. Plus le ton est sombre (dense), plus la
-    valeur baisse => les amas forment des ombres. Teinte/valeur jitterées."""
+def stamp_color(mode, frac, shade, rng):
+    """Couleur d'un petit symbole. `shade` (0=ombre, 1=lumière) module la
+    LUMINOSITÉ => l'objet prend du volume (côté clair / côté sombre)."""
     if mode == "black":
-        g = int(18 + (1 - tone) * 90) + rng.randint(-10, 10)
-        g = max(0, min(70, g))
-        return (g, g, g, 255)
+        g = int(14 + shade * 78) + rng.randint(-9, 9)
+        return (max(0, min(110, g)),) * 3 + (255,)
     if mode in PALETTES:
         base = rng.choice(PALETTES[mode])
-        f = 0.6 + 0.4 * tone + rng.uniform(-0.08, 0.08)
-        return (int(base[0] * f), int(base[1] * f), int(base[2] * f), 255)
-    # rainbow : teinte par position horizontale + bruit, valeur ~ ton
+        f = max(0.30, 0.42 + 0.62 * shade + rng.uniform(-0.07, 0.07))
+        return (min(255, int(base[0] * f)), min(255, int(base[1] * f)),
+                min(255, int(base[2] * f)), 255)
+    # rainbow : teinte par position horizontale + bruit, valeur ~ lumière
     hue = (0.83 * frac + rng.uniform(-0.04, 0.04)) % 1.0
-    val = max(0.45, min(1.0, 0.97 - 0.4 * tone + rng.uniform(-0.05, 0.05)))
+    val = max(0.40, min(1.0, 0.52 + 0.48 * shade + rng.uniform(-0.05, 0.05)))
     r, g, b = colorsys.hsv_to_rgb(hue, 0.9, val)
     return (int(r * 255), int(g * 255), int(b * 255), 255)
 
 
-# ----------------------------------------------------------- carte de tons
+# ----------------------------------------------------------- carte de couverture
 def _load_font(font_path, size):
     for p in (font_path, "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"):
         if p and os.path.isfile(p):
@@ -185,8 +185,9 @@ def _load_font(font_path, size):
     return ImageFont.load_default()
 
 
-def tone_map(symbol, W, H, label, font_path, base):
-    """Silhouette pleine (symbole en haut + mot en bas), floutée -> tons."""
+def coverage_map(symbol, W, H, label, font_path, base):
+    """Silhouette pleine (symbole + mot), bord légèrement adouci. ~1 dedans.
+    Renvoie (couverture, géométrie du symbole) pour calculer l'ombrage."""
     sil = Image.new("L", (W, H), 0)
     d = ImageDraw.Draw(sil)
     label = (label or "").strip()
@@ -197,10 +198,11 @@ def tone_map(symbol, W, H, label, font_path, base):
     w = max(2, round(side * (0.30 if symbol in SOLID else 0.085)))
     SYMBOLS[symbol]((d), (bx, by, bx + side, by + side), 255, w)
 
+    label_y0 = H
     if label:
-        # lettres posées une à une avec interlettrage (sinon le flou les soude)
+        # lettres posées une à une avec interlettrage (sinon ça se soude)
         fsize = int(H * 0.21)
-        track = 0.22  # espace entre lettres, en fraction de fsize
+        track = 0.30  # espace entre lettres (plus large => V/E bien distincts)
         chars = list(label.upper())
 
         def layout(fs):
@@ -220,12 +222,31 @@ def tone_map(symbol, W, H, label, font_path, base):
 
         x = (W - total) / 2
         baseline = int(H * 0.80)
+        label_y0 = baseline - int(fsize * 0.1)
         for ch, l, t, cw in widths:
             d.text((x - l, baseline - t), ch, fill=255, font=font)
             x += cw + gap
 
-    tone = sil.filter(ImageFilter.GaussianBlur(base * 0.42))
-    return np.asarray(tone, dtype=np.float32) / 255.0
+    cov = sil.filter(ImageFilter.GaussianBlur(base * 0.22))
+    cov = np.asarray(cov, dtype=np.float32) / 255.0
+    geo = (bx + side / 2.0, by + side / 2.0, side / 2.0 * 1.04, label_y0)
+    return cov, geo
+
+
+def shade_map(W, H, geo):
+    """Ombrage volumétrique : dôme éclairé en haut-gauche pour le symbole,
+    léger dégradé pour la zone du mot. 0 = ombre, 1 = pleine lumière."""
+    cx, cy, R, label_y0 = geo
+    ys, xs = np.mgrid[0:H, 0:W].astype(np.float32)
+    nx = (xs - cx) / R
+    ny = (ys - cy) / R
+    nz = np.sqrt(np.clip(1.0 - nx * nx - ny * ny, 0.0, 1.0))
+    lx, ly, lz = -0.45, -0.55, 0.70
+    lam = np.clip(nx * lx + ny * ly + nz * lz, 0.0, 1.0)
+    shade = 0.18 + 0.82 * lam
+    grad = 0.80 - 0.30 * (xs / W)          # mot : éclairé à gauche
+    shade = np.where(ys >= label_y0, grad, shade)
+    return shade.astype(np.float32)
 
 
 # ----------------------------------------------------------- tuiles
@@ -241,43 +262,48 @@ def make_tile(symbol, size, color):
 # ----------------------------------------------------------- composition
 def build(symbol, W=1700, H=2000, colors="rainbow", label="",
           font_path="", base=34, seed=7):
-    tone = tone_map(symbol, W, H, label, font_path, base)
+    cov, geo = coverage_map(symbol, W, H, label, font_path, base)
+    shade = shade_map(W, H, geo)
     rng = random.Random(seed)
     out = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    inside = 0.42
 
-    cell = max(6, base // 2)
-    occ = {}
+    stamps = []   # (size, x, y, color, angle)
 
-    def too_close(x, y, size):
-        cx, cy = x // cell, y // cell
-        for ax in range(cx - 2, cx + 3):
-            for ay in range(cy - 2, cy + 3):
-                for (ox, oy, os_) in occ.get((ax, ay), ()):
-                    if (ox - x) ** 2 + (oy - y) ** 2 < ((size + os_) * 0.30) ** 2:
-                        return True
-        return False
+    # 1) couche de couverture : grille fine JITTERÉE (pas < taille => recouvre
+    #    tout, aucun trou de fond), mais désordonnée donc pas « grille ».
+    step = max(6, int(base * 0.46))
+    for gy in range(0, H + step, step):
+        for gx in range(0, W + step, step):
+            x = gx + rng.randint(-step, step)
+            y = gy + rng.randint(-step, step)
+            if not (0 <= x < W and 0 <= y < H) or cov[y, x] < inside:
+                continue
+            s = float(shade[y, x])
+            size = int(base * rng.uniform(0.9, 1.4) * (1.0 + 0.12 * (1 - s)))
+            stamps.append((size, x, y, stamp_color(colors, x / W, s, rng),
+                           rng.uniform(-16, 16)))
 
-    attempts = int(W * H / (base * base) * 9)
-    placed = 0
-    for _ in range(attempts):
-        x = rng.randrange(W)
-        y = rng.randrange(H)
-        tv = float(tone[y, x])
-        if tv < 0.05 or rng.random() > tv ** 0.75:
+    # 2) couche organique par-dessus : gros ET petits, pour l'amoncellement
+    for _ in range(int(len(stamps) * 0.6)):
+        x, y = rng.randrange(W), rng.randrange(H)
+        if cov[y, x] < inside:
             continue
-        size = int(base * (0.42 + 1.05 * tv) * rng.uniform(0.82, 1.18))
-        if size < 9:
+        s = float(shade[y, x])
+        size = int(base * rng.uniform(0.45, 1.95))
+        stamps.append((size, x, y, stamp_color(colors, x / W, s, rng),
+                       rng.uniform(-16, 16)))
+
+    # du plus gros au plus petit => les petits se posent par-dessus (pile)
+    stamps.sort(key=lambda a: -a[0])
+    for size, x, y, color, ang in stamps:
+        if size < 8:
             continue
-        if too_close(x, y, size):
-            continue
-        color = stamp_color(colors, x / W, tv, rng)
         t = make_tile(symbol, size, color)
-        if rng.random() < 0.85:
-            t = t.rotate(rng.uniform(-14, 14), expand=True, resample=Image.BICUBIC)
+        if abs(ang) > 1:
+            t = t.rotate(ang, expand=True, resample=Image.BICUBIC)
         out.alpha_composite(t, (x - t.width // 2, y - t.height // 2))
-        occ.setdefault((x // cell, y // cell), []).append((x, y, size))
-        placed += 1
-    return out, placed
+    return out, len(stamps)
 
 
 def main():
