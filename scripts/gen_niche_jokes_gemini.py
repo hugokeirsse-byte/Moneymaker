@@ -29,10 +29,10 @@ _client = None
 _models = None
 
 SEED_NICHES = [
-    "chess (en passant memes, theory, sacrifices)",
+    "chess (en passant memes, theory, sacrifices, clock slap)",
     "savage insults proving someone's stupidity",
     "developers / coding / sysadmin",
-    "generic tabletop RPG (NO 'D&D' trademark; use nat 20, crit fail...)",
+    "generic tabletop RPG (NO 'D&D' trademark; use nat 20, crit fail, loot, boss fight)",
 ]
 
 
@@ -152,22 +152,51 @@ Keep these niches:
 Then ADD 12 more under-served-but-searched, currently trending niches (specific \
 hobbies, jobs, micro-cultures, NON-trademarked fandoms).
 
+For EACH niche, first research (web): what do people in this community ADORE, and \
+what do they keep COMPLAINING is missing / not made for them? \
+Summarize as "loves" and "pains" (one short line each). \
+Let those pains and loves inspire the most resonant jokes.
+
 QUALITY BAR — this is critical:
 - Jokes must be ORIGINAL, INNOVATIVE and PUNCHY. NO tired clichés \
 ("it works on my machine", "but first coffee", "live laugh love", "I'm silently \
 correcting your grammar"). Surprise the reader; be specific and clever; an \
 outsider should NOT fully get it.
+- Rhymes and wordplay are welcome — e.g. in French: "calvitie précoce, zizi \
+féroce"; in English: puns on technical jargon, rule names, move names.
+- TRADEMARK-EVOCATIVE BUT FREE words are encouraged: words everyone associates \
+with a franchise but nobody can own (e.g. "shiny", "critical hit", "nat 20", \
+"speedrun", "respawn", "buff", "nerf", "loot", "boss fight", "aggro", \
+"proc", "AoE", "on tilt", "en passant"). Mark evocative=true for these.
 - 8 to 12 jokes per niche.
 
 HARD RULES: absolutely NO trademarks (no Pokémon, Digimon, brands, protected \
 game/character names, celebrities, song/movie quotes). Free/public culture only.
 
-For each joke give: text (short, punchy), lang ("en"/"fr"), and keywords = 5-8 \
-REAL POD search phrases a buyer would type (lowercase, specific, the kind that \
-have actual search volume).
+For each joke also pick the best TYPOGRAPHIC FORMAT from: \
+"dictionary" (word + phonetic + origin + rule + definition) | \
+"filename" (text as a system filename, e.g. reality.exe has stopped) | \
+"error" (Error 404 style message) | \
+"strikethrough" (crossed-out word replaced by truth) | \
+"censored" (key word blacked out, obvious from context) | \
+"repetition" (word repeated with growing weight/caps) | \
+"arch_rainbow" (text arched like a rainbow) | \
+"word_shape" (letters arranged to form a silhouette) | \
+"plain" (clean bold phrase, nothing fancy)
+
+For each joke give: text (short, punchy), lang ("en"/"fr"), format (one of above), \
+evocative (true/false), and keywords = 5-8 REAL POD search phrases a buyer would \
+type (lowercase, specific, the kind that have actual search volume).
+
+Also propose 8 cross-niche COMBOS (e.g. chess x coding, cat lady x goth, \
+tabletop RPG x nursing). Each combo: two niches, 3-5 jokes that only make sense \
+if you belong to BOTH.
 
 Return ONLY JSON:
-{"niches":[{"niche":"...","jokes":[{"text":"...","lang":"en","keywords":["..."],"why":"..."}]}]}
+{"niches":[{"niche":"...","loves":"...","pains":"...","jokes":[{"text":"...",\
+"lang":"en","format":"plain","evocative":false,"keywords":["..."],"why":"..."}]}],\
+"combos":[{"niches":["niche1","niche2"],"jokes":[{"text":"...","lang":"en",\
+"format":"plain","evocative":false,"keywords":["..."],"why":"..."}]}]}
 """ % "\n".join(f"- {n}" for n in SEED_NICHES)
 
 
@@ -185,6 +214,11 @@ def main():
         for j in n.get("jokes", []):
             j["niche"] = n.get("niche", "")
             jokes.append(j)
+    for c in data.get("combos", []):
+        label = "COMBO: " + " x ".join(c.get("niches", []))
+        for j in c.get("jokes", []):
+            j["niche"] = label
+            jokes.append(j)
 
     # vraies données de recherche
     allkw = [k for j in jokes for k in (j.get("keywords") or [])]
@@ -198,28 +232,31 @@ def main():
             if rec and rec["vol"] >= best_vol:
                 best_kw, best_vol, best_comp = k, rec["vol"], rec["comp"]
         j["real_keyword"] = best_kw
-        j["real_volume"] = best_vol            # recherches/mois RÉELLES
+        j["real_volume"] = best_vol
         j["real_competition"] = round(best_comp, 2)
-        # score = demande réelle pondérée par faible compétition
         j["data_score"] = round(best_vol * (1 - 0.45 * best_comp))
 
     jokes.sort(key=lambda j: (j.get("data_score", 0), j.get("real_volume", 0)), reverse=True)
 
     ts = datetime.datetime.utcnow().strftime("%Y%m%d_%H%M")
     os.makedirs("reports", exist_ok=True)
-    out = {"generated_at": ts, "real_data": real, "source": "DataForSEO (US, en)" if real else "estimations",
-           "total_jokes": len(jokes), "niches": data["niches"], "ranked": jokes}
+    out = {"generated_at": ts, "real_data": real,
+           "source": "DataForSEO (US, en)" if real else "estimations",
+           "total_jokes": len(jokes), "niches": data["niches"],
+           "combos": data.get("combos", []), "ranked": jokes}
     json.dump(out, open(f"reports/niche_jokes_ranked_{ts}.json", "w", encoding="utf-8"),
               ensure_ascii=False, indent=2)
 
-    head = "VRAIES données DataForSEO (volume mensuel US)" if real else "⚠️ pas de données réelles (DataForSEO indispo) — à brancher"
+    head = ("VRAIES données DataForSEO (volume mensuel US)" if real
+            else "⚠️ pas de données réelles (DataForSEO indispo) — à brancher")
     md = [f"# Blagues de niche classées par DEMANDE RÉELLE — {head}",
-          f"{len(jokes)} blagues · {len(data['niches'])} niches\n",
-          "| Vol/mois | Compét. | Niche | Phrase | Mot-clé gagnant |",
-          "|---|---|---|---|---|"]
+          f"{len(jokes)} blagues · {len(data['niches'])} niches + {len(data.get('combos', []))} combos\n",
+          "| Vol/mois | Compét. | Niche | Format | Phrase | Mot-clé gagnant |",
+          "|---|---|---|---|---|---|"]
     for j in jokes:
         md.append(f"| {j['real_volume']} | {j['real_competition']:.2f} | "
-                  f"{j['niche'][:22]} | {str(j.get('text','')).replace('|','/')} | {j['real_keyword']} |")
+                  f"{j['niche'][:28]} | {j.get('format', 'plain')} | "
+                  f"{str(j.get('text', '')).replace('|', '/')} | {j['real_keyword']} |")
     open(f"reports/niche_jokes_ranked_{ts}.md", "w", encoding="utf-8").write("\n".join(md))
     print(f"reports/niche_jokes_ranked_{ts}.md — {len(jokes)} blagues, données réelles={real}")
     return 0
