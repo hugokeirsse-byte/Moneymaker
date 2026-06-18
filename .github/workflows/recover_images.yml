@@ -32,13 +32,17 @@ on:
         required: false
         default: 'rainbow'
       mosaic_symbol:
-        description: 'gen_mosaic : peace | anarchy | heart | recycle | female | male'
+        description: 'gen_mosaic : peace | anarchy | heart | recycle | female | male | infinity | star'
         required: false
-        default: 'peace'
+        default: 'heart'
       mosaic_colors:
-        description: 'gen_mosaic : rainbow | black | sunset | ocean | forest | candy'
+        description: 'gen_mosaic : rainbow | black | sunset | ocean | forest | candy | pride'
         required: false
         default: 'rainbow'
+      mosaic_label:
+        description: 'gen_mosaic : mot écrit dessous, en petits symboles (ex. LOVE)'
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -84,6 +88,7 @@ jobs:
           WC_COLORS: ${{ github.event.inputs.wc_colors }}
           MOSAIC_SYMBOL: ${{ github.event.inputs.mosaic_symbol }}
           MOSAIC_COLORS: ${{ github.event.inputs.mosaic_colors }}
+          MOSAIC_LABEL: ${{ github.event.inputs.mosaic_label }}
         run: |
           set -e
           TASK="${{ github.event.inputs.task }}"
@@ -112,10 +117,12 @@ jobs:
             [ -n "$WC_NICHE" ]  && ARGS+=(--niche "$WC_NICHE")
             python scripts/gen_wordcloud.py "${ARGS[@]}"
           elif [ "$TASK" = "gen_mosaic" ]; then
-            python scripts/gen_symbol_mosaic.py \
-              --symbol "${MOSAIC_SYMBOL:-peace}" --colors "${MOSAIC_COLORS:-rainbow}" \
-              --out produits/symbol_mosaics \
-              --sheet reports/contact/mosaic_${MOSAIC_SYMBOL:-peace}.png
+            curl -sL "https://raw.githubusercontent.com/google/fonts/main/ofl/anton/Anton-Regular.ttf" -o assets/fonts/Anton.ttf
+            MARGS=(--symbol "${MOSAIC_SYMBOL:-heart}" --colors "${MOSAIC_COLORS:-rainbow}" \
+                   --font-path assets/fonts/Anton.ttf --out produits/symbol_mosaics \
+                   --sheet reports/contact/mosaic_${MOSAIC_SYMBOL:-heart}.png)
+            [ -n "$MOSAIC_LABEL" ] && MARGS+=(--label "$MOSAIC_LABEL")
+            python scripts/gen_symbol_mosaic.py "${MARGS[@]}"
           elif [ "$TASK" = "cleanup_pride" ]; then
             python scripts/cleanup_pride_strays.py
           else
