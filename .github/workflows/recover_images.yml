@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       task:
-        description: 'make_collection | gen_listings_corpus | gen_listings_produits | cleanup_pride'
+        description: 'make_collection | gen_listings_corpus | gen_listings_produits | gen_niche_jokes | cleanup_pride'
         required: true
         default: 'make_collection'
       limit:
@@ -49,16 +49,20 @@ jobs:
           set -e
           TASK="${{ github.event.inputs.task }}"
           LIM="${{ github.event.inputs.limit || '0' }}"
-          mkdir -p reports/contact reports/listings
+          mkdir -p reports/contact reports/listings assets/fonts
           if [ "$TASK" = "make_collection" ]; then
+            curl -sL "https://raw.githubusercontent.com/google/fonts/main/ofl/kaushanscript/KaushanScript-Regular.ttf" -o assets/fonts/Kaushan_Script.ttf
+            python3 -c "import json; d=json.load(open('data/typo_collection.json')); [i.update({'font':'Kaushan Script'}) for i in d['items']]; json.dump(d, open('data/_typo_run.json','w'), ensure_ascii=False)"
             find produits/typographies -name '*.png' -delete 2>/dev/null || true
-            python scripts/make_collection.py --data data/typo_collection.json \
+            python scripts/make_collection.py --data data/_typo_run.json \
               --out produits/typographies \
               --sheet reports/contact/typo_collection.png --limit "$LIM"
           elif [ "$TASK" = "gen_listings_corpus" ]; then
             python scripts/gen_listings_gemini.py --corpus data/typo_collection.json
           elif [ "$TASK" = "gen_listings_produits" ]; then
             python scripts/gen_listings_gemini.py --produits
+          elif [ "$TASK" = "gen_niche_jokes" ]; then
+            python scripts/gen_niche_jokes_gemini.py
           elif [ "$TASK" = "cleanup_pride" ]; then
             python scripts/cleanup_pride_strays.py
           else
