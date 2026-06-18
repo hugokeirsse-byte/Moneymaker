@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       task:
-        description: 'make_collection | gen_listings_corpus | gen_listings_produits | gen_niche_jokes | gen_wordcloud | gen_mosaic | gen_hidden | cleanup_pride'
+        description: 'make_collection | gen_listings_corpus | gen_listings_produits | gen_niche_jokes | gen_wordcloud | gen_country_wc | gen_mosaic | gen_hidden | gen_stacked_rainbow | gen_decomposition | cleanup_pride'
         required: true
         default: 'make_collection'
       limit:
@@ -24,7 +24,7 @@ on:
         required: false
         default: ''
       wc_mask:
-        description: 'gen_wordcloud : heart | star | hexagon | circle | diamond | arrow_up'
+        description: 'gen_wordcloud : heart | star | hexagon | circle | diamond | arrow_up | australia'
         required: false
         default: 'heart'
       wc_colors:
@@ -59,6 +59,30 @@ on:
         description: 'gen_hidden : couleur d''accent (hex, ex. #e63946)'
         required: false
         default: '#e63946'
+      stack_text:
+        description: 'gen_stacked_rainbow : mot/phrase (ex. COLORLESS)'
+        required: false
+        default: 'COLORLESS'
+      stack_layers:
+        description: 'gen_stacked_rainbow : nombre de répétitions (défaut 7)'
+        required: false
+        default: '7'
+      stack_overlap:
+        description: 'gen_stacked_rainbow : chevauchement 0.0→1.0 (défaut 0.18)'
+        required: false
+        default: '0.18'
+      stack_colors:
+        description: 'gen_stacked_rainbow : rainbow ou couleur hex'
+        required: false
+        default: 'rainbow'
+      decomp_text:
+        description: 'gen_decomposition : mot à décomposer (ex. DEPRESSION)'
+        required: false
+        default: 'DEPRESSION'
+      decomp_color:
+        description: 'gen_decomposition : couleur du texte (hex, défaut noir)'
+        required: false
+        default: '#0f0f0f'
 
 permissions:
   contents: write
@@ -110,6 +134,12 @@ jobs:
           HIDDEN_TEXT: ${{ github.event.inputs.hidden_text }}
           HIDDEN_WORD: ${{ github.event.inputs.hidden_word }}
           HIDDEN_COLOR: ${{ github.event.inputs.hidden_color }}
+          STACK_TEXT: ${{ github.event.inputs.stack_text }}
+          STACK_LAYERS: ${{ github.event.inputs.stack_layers }}
+          STACK_OVERLAP: ${{ github.event.inputs.stack_overlap }}
+          STACK_COLORS: ${{ github.event.inputs.stack_colors }}
+          DECOMP_TEXT: ${{ github.event.inputs.decomp_text }}
+          DECOMP_COLOR: ${{ github.event.inputs.decomp_color }}
         run: |
           set -e
           TASK="${{ github.event.inputs.task }}"
@@ -150,6 +180,34 @@ jobs:
             python scripts/gen_hidden_message.py --text "$HIDDEN_TEXT" --hidden "$HIDDEN_WORD" \
               --color "${HIDDEN_COLOR:-#e63946}" --font-path assets/fonts/Anton.ttf \
               --out produits/hidden --sheet reports/contact/hidden.png
+          elif [ "$TASK" = "gen_country_wc" ]; then
+            curl -sL "https://raw.githubusercontent.com/google/fonts/main/ofl/kaushanscript/KaushanScript-Regular.ttf" -o assets/fonts/Kaushan_Script.ttf
+            python scripts/gen_wordcloud.py \
+              --freq-file data/australia_slang.json \
+              --mask australia \
+              --colors sunset \
+              --font-path assets/fonts/Kaushan_Script.ttf \
+              --out produits/word_shapes \
+              --name australia_slang_sunset \
+              --sheet reports/contact/australia_wc.png
+          elif [ "$TASK" = "gen_stacked_rainbow" ]; then
+            curl -sL "https://raw.githubusercontent.com/google/fonts/main/ofl/anton/Anton-Regular.ttf" -o assets/fonts/Anton.ttf
+            python scripts/gen_stacked_rainbow.py \
+              --text "${STACK_TEXT:-COLORLESS}" \
+              --layers "${STACK_LAYERS:-7}" \
+              --overlap "${STACK_OVERLAP:-0.18}" \
+              --colors "${STACK_COLORS:-rainbow}" \
+              --font-path assets/fonts/Anton.ttf \
+              --out produits/hidden \
+              --sheet reports/contact/stacked_rainbow.png
+          elif [ "$TASK" = "gen_decomposition" ]; then
+            curl -sL "https://raw.githubusercontent.com/google/fonts/main/ofl/anton/Anton-Regular.ttf" -o assets/fonts/Anton.ttf
+            python scripts/gen_decomposition.py \
+              --text "${DECOMP_TEXT:-DEPRESSION}" \
+              --color "${DECOMP_COLOR:-#0f0f0f}" \
+              --font-path assets/fonts/Anton.ttf \
+              --out produits/hidden \
+              --sheet reports/contact/decomposition.png
           elif [ "$TASK" = "cleanup_pride" ]; then
             python scripts/cleanup_pride_strays.py
           else
