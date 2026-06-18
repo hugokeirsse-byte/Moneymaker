@@ -12,7 +12,7 @@ est important — et on peut piloter cette taille par le VRAI volume de recherch
 
 Masques acceptés :
   - intégrés (aucune dépendance externe) : heart, star, hexagon, circle,
-    diamond, arrow_up, australia ;
+    diamond, arrow_up ;
   - n'importe quel PNG silhouette via --mask chemin.png (les zones NON blanches
     sont remplies de mots ; idéal avec une icône CC0 d'openclipart / SVG Repo).
 
@@ -23,8 +23,8 @@ Exemples (depuis la racine du repo) :
     python scripts/gen_wordcloud.py --words "nat 20,crit fail,loot,respawn" \
         --mask heart --colors rainbow --font-path assets/fonts/Kaushan_Script.ttf \
         --out produits/word_shapes --name rpg_coeur
-    python scripts/gen_wordcloud.py --freq-file data/australia_slang.json \
-        --mask australia --colors sunset --out produits/word_shapes
+    python scripts/gen_wordcloud.py --from-report reports/niche_jokes_ranked_X.json \
+        --niche chess --mask star --colors ocean --out produits/word_shapes
 """
 import argparse
 import colorsys
@@ -84,7 +84,7 @@ def builtin_mask(name, size=1600):
         return _poly_mask(size, [(0.5, 0.04), (0.95, 0.5), (0.7, 0.5),
                                  (0.7, 0.96), (0.3, 0.96), (0.3, 0.5), (0.05, 0.5)])
     if n == "australia":
-        # Silhouette simplifiée de l'Australie (sens horaire depuis le NW Cape)
+        # Silhouette simplifiée de l'Australie (horaire depuis le NW Cape)
         raw = [
             (0.08, 0.31), (0.13, 0.20), (0.18, 0.13), (0.26, 0.09),
             (0.36, 0.08), (0.44, 0.10), (0.47, 0.09),
