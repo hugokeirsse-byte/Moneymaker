@@ -1,0 +1,351 @@
+{
+  "niches": [
+    {
+      "niche": "Chess (En Passant/Theory)",
+      "jokes": [
+        {
+          "text": "Holy Hell.",
+          "lang": "en",
+          "keywords": [
+            "chess meme",
+            "en passant",
+            "chess jokes",
+            "grandmaster",
+            "chess strategy",
+            "chess player gift",
+            "board game humor"
+          ],
+          "score": 92,
+          "tier": "S",
+          "why": "The ultimate inside joke for the r/anarchychess community with massive viral potential."
+        },
+        {
+          "text": "I sacrifice... the King.",
+          "lang": "en",
+          "keywords": [
+            "chess sacrifice",
+            "chess tactics",
+            "chess humor",
+            "blunder",
+            "chess player",
+            "chess club",
+            "board game shirt"
+          ],
+          "score": 85,
+          "tier": "A",
+          "why": "Plays on the common trope of bad players over-sacrificing pieces."
+        }
+      ]
+    },
+    {
+      "niche": "Savage Insults (Intellectual)",
+      "jokes": [
+        {
+          "text": "I’d agree with you, but then we’d both be wrong.",
+          "lang": "en",
+          "keywords": [
+            "sarcastic shirt",
+            "witty insult",
+            "savage humor",
+            "funny quote",
+            "argument humor",
+            "snarky tee",
+            "intellectual insult"
+          ],
+          "score": 88,
+          "tier": "A",
+          "why": "High social media shareability for those who enjoy intellectual snark."
+        },
+        {
+          "text": "Your village called. They want their idiot back.",
+          "lang": "en",
+          "keywords": [
+            "savage humor",
+            "roast shirt",
+            "funny insult",
+            "offensive humor",
+            "sarcastic quote",
+            "witty comeback"
+          ],
+          "score": 82,
+          "tier": "B",
+          "why": "Classic insult that resonates with younger demographics on TikTok/Reels."
+        }
+      ]
+    },
+    {
+      "niche": "Developers/SysAdmin",
+      "jokes": [
+        {
+          "text": "Works on my machine.",
+          "lang": "en",
+          "keywords": [
+            "software developer",
+            "coding humor",
+            "sysadmin life",
+            "devops meme",
+            "programmer gift",
+            "debugging",
+            "code life"
+          ],
+          "score": 95,
+          "tier": "S",
+          "why": "The universal truth of software development; low competition for clean typography."
+        },
+        {
+          "text": "It's not a bug, it's a feature.",
+          "lang": "en",
+          "keywords": [
+            "coding humor",
+            "bug fix",
+            "web developer",
+            "programming jokes",
+            "tech humor",
+            "dev life",
+            "coder tee"
+          ],
+          "score": 89,
+          "tier": "A",
+          "why": "Classic industry trope that remains relevant every year."
+        }
+      ]
+    },
+    {
+      "niche": "Tabletop RPG (Generic)",
+      "jokes": [
+        {
+          "text": "I rolled a natural 1.",
+          "lang": "en",
+          "keywords": [
+            "tabletop rpg",
+            "critical fail",
+            "nat 20",
+            "dice game",
+            "rpg humor",
+            "tabletop gamer",
+            "fantasy roleplay"
+          ],
+          "score": 91,
+          "tier": "S",
+          "why": "Every TTRPG player experiences this pain; highly relatable evergreen content."
+        },
+        {
+          "text": "My character is a loot goblin.",
+          "lang": "en",
+          "keywords": [
+            "rpg loot",
+            "tabletop gaming",
+            "fantasy gamer",
+            "dungeon master",
+            "rpg humor",
+            "dice rolling"
+          ],
+          "score": 84,
+          "tier": "B",
+          "why": "Targets the specific 'hoarder' player archetype common in every group."
+        }
+      ]
+    },
+    {
+      "niche": "Home Barista/Coffee Snobs",
+      "jokes": [
+        {
+          "text": "My hobby is expensive hot bean water.",
+          "lang": "en",
+          "keywords": [
+            "coffee snob",
+            "home barista",
+            "espresso lover",
+            "coffee humor",
+            "caffeine addict",
+            "specialty coffee"
+          ],
+          "score": 86,
+          "tier": "A",
+          "why": "Coffee subculture is massive and self-deprecating humor is trending."
+        }
+      ]
+    },
+    {
+      "niche": "Data Science/Analysts",
+      "jokes": [
+        {
+          "text": "Correlation does not imply causation.",
+          "lang": "en",
+          "keywords": [
+            "data science",
+            "statistics humor",
+            "data analyst",
+            "math geek",
+            "big data",
+            "statistical analysis"
+          ],
+          "score": 83,
+          "tier": "B",
+          "why": "A staple joke in the academic and professional data community."
+        }
+      ]
+    },
+    {
+      "niche": "Mechanical Keyboard Enthusiasts",
+      "jokes": [
+        {
+          "text": "Thock is my love language.",
+          "lang": "en",
+          "keywords": [
+            "mechanical keyboard",
+            "custom keyboard",
+            "keebs",
+            "pc enthusiast",
+            "keyboard modding",
+            "thock"
+          ],
+          "score": 89,
+          "tier": "A",
+          "why": "A very passionate, growing niche with very little specific apparel."
+        }
+      ]
+    },
+    {
+      "niche": "Urban Gardening/Plant Parenting",
+      "jokes": [
+        {
+          "text": "I'm a succulent serial killer.",
+          "lang": "en",
+          "keywords": [
+            "plant parent",
+            "urban jungle",
+            "succulent lover",
+            "houseplant humor",
+            "gardening meme",
+            "plant killer"
+          ],
+          "score": 87,
+          "tier": "A",
+          "why": "Self-deprecating humor about killing plants is a huge trend on social media."
+        }
+      ]
+    },
+    {
+      "niche": "Pickleball Players",
+      "jokes": [
+        {
+          "text": "Dink responsibly.",
+          "lang": "en",
+          "keywords": [
+            "pickleball humor",
+            "pickleball player",
+            "dinking",
+            "paddle sports",
+            "court sport",
+            "pickleball life"
+          ],
+          "score": 94,
+          "tier": "S",
+          "why": "The fastest growing hobby in the US with almost zero clever typographic merch."
+        }
+      ]
+    },
+    {
+      "niche": "Archivists/Librarians",
+      "jokes": [
+        {
+          "text": "Shhh... I'm filing.",
+          "lang": "en",
+          "keywords": [
+            "librarian humor",
+            "archivist life",
+            "library science",
+            "book lover",
+            "cataloging",
+            "library humor"
+          ],
+          "score": 79,
+          "tier": "C",
+          "why": "A steady, niche audience that loves professional inside jokes."
+        }
+      ]
+    },
+    {
+      "niche": "Linguistics/Grammar",
+      "jokes": [
+        {
+          "text": "Let's eat, grandma! vs. Let's eat grandma!",
+          "lang": "en",
+          "keywords": [
+            "grammar humor",
+            "linguistics nerd",
+            "punctuation matters",
+            "grammar police",
+            "english teacher",
+            "writing humor"
+          ],
+          "score": 81,
+          "tier": "B",
+          "why": "Classic linguistic joke that teachers and editors love."
+        }
+      ]
+    },
+    {
+      "niche": "Astronomy/Stargazing",
+      "jokes": [
+        {
+          "text": "I need more space.",
+          "lang": "en",
+          "keywords": [
+            "astronomy humor",
+            "stargazing",
+            "space nerd",
+            "telescope life",
+            "astrophysics",
+            "night sky"
+          ],
+          "score": 85,
+          "tier": "B",
+          "why": "Simple pun that appeals to both general space fans and amateur astronomers."
+        }
+      ]
+    },
+    {
+      "niche": "French Artisan/Boulangerie (FR)",
+      "jokes": [
+        {
+          "text": "La baguette, c'est la vie.",
+          "lang": "fr",
+          "keywords": [
+            "boulangerie",
+            "pain au chocolat",
+            "humour français",
+            "boulanger",
+            "vie quotidienne",
+            "culture française"
+          ],
+          "score": 88,
+          "tier": "A",
+          "why": "Strong national identity humor that sells well in Francophone markets."
+        }
+      ]
+    },
+    {
+      "niche": "Cycling/Roadies",
+      "jokes": [
+        {
+          "text": "My legs are my engine.",
+          "lang": "en",
+          "keywords": [
+            "road cycling",
+            "cyclist humor",
+            "bike life",
+            "cycling gear",
+            "strava",
+            "roadie",
+            "velo"
+          ],
+          "score": 82,
+          "tier": "B",
+          "why": "Focuses on the physical exertion aspect which resonates with weekend warriors."
+        }
+      ]
+    }
+  ]
+}
