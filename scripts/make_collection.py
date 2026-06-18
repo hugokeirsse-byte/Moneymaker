@@ -3,15 +3,14 @@
 make_collection.py — 100 designs à phrases, ÉCRITURES STYLISÉES SUR FOND TRANSPARENT.
 
 Trois variantes par design, fond 100 % transparent :
-  - __outline : intérieur blanc, contour noir (s'adapte à toute couleur de support) ;
-  - __rainbow : lettres en dégradé arc-en-ciel avec contour noir ;
+  - __outline : intérieur blanc, contour noir (principal — s'adapte à toute couleur) ;
+  - __rainbow : UNE COULEUR PAR LETTRE (séquence arc-en-ciel) + contour noir
+    (pour la version maillot « colorless ») ;
   - __black   : aplat noir (supports clairs).
 
 Mots « intraduisibles » (p1) et « faux intraduisibles » (p4) : mise en page
-DICTIONNAIRE — le mot en grand, l'ORIGINE (langue · nature) en petites capitales,
-un filet, puis la DÉFINITION en anglais (serif italique).
-
-Option --posters : ajoute une affiche papier avec illustration du domaine public HD.
+DICTIONNAIRE — le mot en grand, l'ORIGINE (langue · nature), un filet, puis la
+DÉFINITION en anglais (serif italique).
 
 Usage :
     python scripts/make_collection.py --data data/typo_collection.json --out produits/typographies
@@ -116,7 +115,6 @@ FONT_MAP = {
 }
 FALLBACK = "ofl/archivoblack/ArchivoBlack-Regular.ttf"
 
-# definition (EN) + origine (langue · nature)
 DEFS = {
     "tsundoku": ("Japanese · noun", "the art of buying books and letting them pile up, gloriously unread."),
     "sobremesa": ("Spanish · noun", "the lazy, lingering conversation long after the meal is over."),
@@ -206,18 +204,6 @@ def fit(name, text, max_w, max_lines=4, hi=820, lo=40):
     return lo
 
 
-def rainbow(w, h):
-    grad = Image.new("RGBA", (max(w, 1), max(h, 1)))
-    px = grad.load()
-    for x in range(grad.width):
-        hue = 0.92 - 0.92 * (x / max(grad.width - 1, 1))  # rouge -> violet
-        r, g, b = colorsys.hsv_to_rgb(hue, 0.82, 0.95)
-        col = (int(r * 255), int(g * 255), int(b * 255), 255)
-        for y in range(grad.height):
-            px[x, y] = col
-    return grad
-
-
 def build_rows(item):
     side = 4500
     margin = int(side * 0.09)
@@ -261,34 +247,40 @@ def render(item, variant):
     H = y + margin
 
     outline = Image.new("RGBA", (side, H), (0, 0, 0, 0))
-    mask = Image.new("RGBA", (side, H), (0, 0, 0, 0))
+    fill = Image.new("RGBA", (side, H), (0, 0, 0, 0))
     od = ImageDraw.Draw(outline)
-    md = ImageDraw.Draw(mask)
+    fd = ImageDraw.Draw(fill)
+
+    # total des lettres (hors espaces) pour étaler l'arc-en-ciel lettre par lettre
+    total = sum(len([c for c in t if c.strip()])
+                for (t, f, k, yy, s, w, o) in laid if k != "rule")
+    idx = 0
 
     for (text, f, kind, yy, size, w, off) in laid:
         sw = max(2, round(size * (0.06 if kind in ("word", "phrase") else 0.05)))
         if kind == "rule":
             x0, x1 = side * 0.36, side * 0.64
             od.line([(x0, yy), (x1, yy)], fill=BLACK, width=size + 2 * sw)
-            md.line([(x0, yy), (x1, yy)], fill=WHITE, width=size)
+            fd.line([(x0, yy), (x1, yy)], fill=WHITE, width=size)
             continue
         x = (side - w) // 2
         if variant == "black":
             od.text((x, yy - off), text, font=f, fill=BLACK)
-        else:
-            od.text((x, yy - off), text, font=f, fill=BLACK, stroke_width=sw, stroke_fill=BLACK)
-            md.text((x, yy - off), text, font=f, fill=WHITE)
+            continue
+        od.text((x, yy - off), text, font=f, fill=BLACK, stroke_width=sw, stroke_fill=BLACK)
+        if variant == "outline":
+            fd.text((x, yy - off), text, font=f, fill=WHITE)
+        else:  # rainbow : une couleur par lettre
+            for i, ch in enumerate(text):
+                xpos = x + f.getlength(text[:i])
+                if ch.strip():
+                    hue = 0.92 - 0.92 * (idx / max(total - 1, 1))
+                    r, g, b = colorsys.hsv_to_rgb(hue, 0.85, 0.95)
+                    fd.text((xpos, yy - off), ch, font=f,
+                            fill=(int(r * 255), int(g * 255), int(b * 255), 255))
+                    idx += 1
 
-    if variant == "black":
-        result = outline
-    else:
-        if variant == "rainbow":
-            fill_img = rainbow(side, H)
-        else:
-            fill_img = Image.new("RGBA", (side, H), WHITE)
-        fill_img.putalpha(mask.split()[-1])
-        result = Image.alpha_composite(outline, fill_img)
-
+    result = outline if variant == "black" else Image.alpha_composite(outline, fill)
     bbox = result.getbbox()
     if not bbox:
         return result
@@ -353,20 +345,6 @@ def main():
                 img.save(os.path.join(sub, f"{it['id']}__{v}.png"), dpi=(300, 300))
             if v == variants[0]:
                 made.append((it["id"], img))
-        if args.posters and it.get("commons"):
-            try:
-                url, title = resolve_hi(it["commons"])
-                if url:
-                    plate = fetch(url)
-                    card = Image.new("RGB", (4500, 5400), PAPER)
-                    p = plate.copy(); p.thumbnail((3780, 2700), Image.LANCZOS)
-                    card.paste(p, ((4500 - p.width) // 2, 380))
-                    over = render(it, "black"); over.thumbnail((3870, 1800))
-                    card.paste(over, ((4500 - over.width) // 2, 420 + p.height + 200), over)
-                    if sub:
-                        card.save(os.path.join(sub, f"{it['id']}__affiche.png"), dpi=(300, 300))
-            except Exception as e:  # noqa: BLE001
-                print(f"  {it['id']} affiche KO: {str(e)[:120]}", file=sys.stderr)
 
     if args.sheet and made:
         cols = 5
