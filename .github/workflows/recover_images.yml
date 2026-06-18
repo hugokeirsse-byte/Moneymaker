@@ -1,28 +1,92 @@
-name: Maintenance — nettoyage produits
+name: Utilitaires Python (0€ génération)
 
 on:
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      task:
+        description: 'make_collection | gen_listings_corpus | gen_listings_produits | cleanup_pride'
+        required: true
+        default: 'make_collection'
+      limit:
+        description: 'make_collection : nb max (0 = tous)'
+        required: false
+        default: '0'
 
 permissions:
   contents: write
 
 jobs:
-  cleanup:
-    name: Nettoyage produits/ (pride strays)
+  util:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 150
     steps:
-      - name: Checkout (sparse minimal)
+      - name: Checkout (sparse)
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
           filter: blob:none
           sparse-checkout: |
             scripts
+            data
+            assets
+            reports
+            produits/typographies
           sparse-checkout-cone-mode: true
 
-      - name: Retrait des slogans dupliqués à la racine de pride/
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Dépendances
+        run: pip install -q Pillow numpy google-genai requests
+
+      - name: Exécuter la tâche
         env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: ${{ github.ref_name }}
-        run: python3 scripts/cleanup_pride_strays.py
+        run: |
+          set -e
+          TASK="${{ github.event.inputs.task }}"
+          LIM="${{ github.event.inputs.limit || '0' }}"
+          mkdir -p reports/contact reports/listings
+          if [ "$TASK" = "make_collection" ]; then
+            python scripts/make_collection.py --data data/typo_collection.json \
+              --out produits/typographies \
+              --sheet reports/contact/typo_collection.png --limit "$LIM"
+          elif [ "$TASK" = "gen_listings_corpus" ]; then
+            python scripts/gen_listings_gemini.py --corpus data/typo_collection.json
+          elif [ "$TASK" = "gen_listings_produits" ]; then
+            python scripts/gen_listings_gemini.py --produits
+          elif [ "$TASK" = "cleanup_pride" ]; then
+            python scripts/cleanup_pride_strays.py
+          else
+            echo "tache inconnue : $TASK"; exit 1
+          fi
+
+      - name: Commit et push
+        if: ${{ github.event.inputs.task != 'cleanup_pride' }}
+        run: |
+          git config user.name  "Moneymaker Bot"
+          git config user.email "bot@moneymaker.auto"
+          git rebase --abort 2>/dev/null || true
+          BR=$(git rev-parse --abbrev-ref HEAD)
+          git add produits/typographies reports/contact reports/listings 2>/dev/null || true
+          if git diff --staged --quiet; then echo "Rien a committer."; exit 0; fi
+          git commit -m "typo/listings: ${{ github.event.inputs.task }} — $(date -u +'%Y-%m-%d %H:%M UTC')"
+          DELAY=2
+          for a in 1 2 3 4 5; do
+            if git pull --rebase --autostash origin "$BR" && git push origin "$BR"; then exit 0; fi
+            git rebase --abort 2>/dev/null || true
+            sleep $DELAY; DELAY=$((DELAY*2))
+          done
+          echo "::error::push impossible"; exit 1
+
+      - name: Artefact (contact sheet + listings)
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: util-${{ github.run_number }}
+          path: |
+            reports/contact
+            reports/listings
