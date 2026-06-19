@@ -34,7 +34,7 @@ import os
 import sys
 
 import numpy as np
-from PIL import Image, ImageColor, ImageDraw
+from PIL import Image, ImageChops, ImageColor, ImageDraw
 
 WHITE = 255  # wordcloud remplit là où le masque n'est PAS blanc
 
@@ -240,18 +240,18 @@ def make_color_func(mode, words):
 # type "hbands" : bandes horizontales (couleur selon position Y)
 # type "palette": drapeau complexe -> couleurs cyclées (non positionnel)
 FLAGS = {
-    # bande « blanche » des drapeaux -> gris clair (205) pour rester visible
-    # sous un liseré blanc de sticker
-    "ireland":     {"type": "vbands", "colors": [(22, 155, 98), (205, 205, 205), (255, 136, 62)]},
-    "italy":       {"type": "vbands", "colors": [(0, 140, 69), (205, 205, 205), (205, 33, 42)]},
-    "france":      {"type": "vbands", "colors": [(0, 85, 164), (205, 205, 205), (239, 65, 53)]},
-    "mexico":      {"type": "vbands", "colors": [(0, 104, 71), (205, 205, 205), (206, 17, 38)]},
-    "canada":      {"type": "vbands", "colors": [(213, 43, 30), (205, 205, 205), (213, 43, 30)]},
+    # bande « blanche » = blanc pur : sur le fond blanc du pays, ces mots se
+    # fondent et forment naturellement la bande blanche du drapeau
+    "ireland":     {"type": "vbands", "colors": [(22, 155, 98), (220, 220, 220), (255, 136, 62)]},
+    "italy":       {"type": "vbands", "colors": [(0, 140, 69), (220, 220, 220), (205, 33, 42)]},
+    "france":      {"type": "vbands", "colors": [(0, 85, 164), (220, 220, 220), (239, 65, 53)]},
+    "mexico":      {"type": "vbands", "colors": [(0, 104, 71), (220, 220, 220), (206, 17, 38)]},
+    "canada":      {"type": "vbands", "colors": [(213, 43, 30), (220, 220, 220), (213, 43, 30)]},
     "germany":     {"type": "hbands", "colors": [(30, 30, 30), (221, 0, 0), (255, 206, 0)]},
-    "usa":         {"type": "palette", "colors": [(178, 34, 52), (205, 205, 205), (60, 59, 110)]},
-    "new_zealand": {"type": "palette", "colors": [(0, 36, 125), (204, 20, 43), (205, 205, 205)]},
+    "usa":         {"type": "palette", "colors": [(178, 34, 52), (60, 59, 110), (178, 34, 52)]},
+    "new_zealand": {"type": "palette", "colors": [(0, 36, 125), (204, 20, 43), (0, 36, 125)]},
     "jamaica":     {"type": "palette", "colors": [(0, 155, 58), (254, 209, 0), (30, 30, 30)]},
-    "australia":   {"type": "palette", "colors": [(0, 36, 125), (204, 20, 43), (205, 205, 205)]},
+    "australia":   {"type": "palette", "colors": [(0, 36, 125), (204, 20, 43), (0, 36, 125)]},
 }
 
 
@@ -305,7 +305,8 @@ def words_from_report(path, niche_substr):
     return freq
 
 
-def make_cloud(freq, mask, font_path, color_func):
+def make_cloud(freq, mask, font_path, color_func, prefer_horizontal=0.92,
+               dense=False):
     from wordcloud import WordCloud
     words = list(freq.keys())
     wc = WordCloud(
@@ -313,14 +314,34 @@ def make_cloud(freq, mask, font_path, color_func):
         mask=mask,
         mode="RGBA",
         background_color=None,     # fond transparent
-        max_words=len(words) + 5,
-        relative_scaling=0.5,
-        prefer_horizontal=0.92,
-        margin=2,
+        max_words=400 if dense else len(words) + 5,
+        relative_scaling=0.35 if dense else 0.5,
+        prefer_horizontal=prefer_horizontal,  # <1 = mélange horizontal/vertical
+        repeat=dense,              # répète les mots pour remplir densément la forme
+        min_font_size=6,
+        margin=1 if dense else 2,
         color_func=color_func,
     )
     wc.generate_from_frequencies(freq)
     return wc.to_image()  # RGBA
+
+
+def silhouette_alpha(mask):
+    """Alpha L : 255 dans le pays (mask sombre), 0 autour."""
+    return Image.fromarray(np.where(mask < 128, 255, 0).astype(np.uint8), "L")
+
+
+def country_border_inner(polys, sil, size, width, color):
+    """Bordure de délimitation tracée le long des frontières, rognée à
+    l'intérieur de la silhouette (rien ne dépasse)."""
+    layer = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+    d = ImageDraw.Draw(layer)
+    for r in polys:
+        ring = [(int(x), int(y)) for x, y in r]
+        d.line(ring + [ring[0]], fill=color, width=width, joint="curve")
+    a = ImageChops.multiply(layer.split()[3], sil)
+    layer.putalpha(a)
+    return layer
 
 
 # ---------------------------------------------------------------- main
@@ -343,6 +364,12 @@ def main():
                     help="liseré sticker autour des mots (0 = aucun)")
     ap.add_argument("--outline-color", default="#ffffff", help="couleur du liseré des mots")
     ap.add_argument("--contour-color", default="#ffffff", help="couleur du contour du pays")
+    ap.add_argument("--fill", default="", help="couleur de remplissage du pays (ex. #ffffff)")
+    ap.add_argument("--border", type=int, default=0,
+                    help="épaisseur de la bordure de délimitation des frontières")
+    ap.add_argument("--border-color", default="#1e1e1e", help="couleur de la bordure")
+    ap.add_argument("--prefer-horizontal", type=float, default=0.92,
+                    help="proportion de mots horizontaux (1=tous, 0.55=mélange h/v)")
     args = ap.parse_args()
 
     if args.freq_file:
@@ -382,12 +409,36 @@ def main():
     else:
         color_func = make_color_func(args.colors, list(freq.keys()))
 
-    img = make_cloud(freq, mask, font, color_func)
+    img = make_cloud(freq, mask, font, color_func,
+                     prefer_horizontal=args.prefer_horizontal,
+                     dense=(polys is not None))
+
+    # remplissage du pays (fond blanc) DERRIÈRE les mots
+    if args.fill and polys is not None:
+        sil = silhouette_alpha(mask)
+        base = Image.new("RGBA", img.size, ImageColor.getrgb(args.fill) + (255,))
+        base.putalpha(sil)
+        img = Image.alpha_composite(base, img)
 
     if args.word_outline > 0:
         img = add_word_outline(img, width=args.word_outline,
                                color=ImageColor.getrgb(args.outline_color))
-    if args.contour > 0 and polys:
+
+    # rien qui dépasse : on rogne tout à la silhouette du pays
+    if polys is not None:
+        sil = silhouette_alpha(mask)
+        r, g, b, a = img.split()
+        img = Image.merge("RGBA", (r, g, b, ImageChops.multiply(a, sil)))
+
+    # bordure de délimitation des frontières (rognée à l'intérieur)
+    if args.border > 0 and polys is not None:
+        sil = silhouette_alpha(mask)
+        border = country_border_inner(polys, sil, csize, args.border,
+                                      ImageColor.getrgb(args.border_color) + (255,))
+        img = Image.alpha_composite(img, border)
+
+    # ancien contour blanc (sticker) — conservé si demandé explicitement
+    if args.contour > 0 and polys is not None:
         contour = country_contour(polys, csize, width=args.contour,
                                   color=ImageColor.getrgb(args.contour_color) + (255,))
         img = Image.alpha_composite(contour, img)
@@ -400,8 +451,10 @@ def main():
 
     if args.sheet:
         os.makedirs(os.path.dirname(args.sheet) or ".", exist_ok=True)
-        # fond gris moyen si sticker/contour (voir blanc ET noir), clair sinon
-        tone = (128, 130, 134) if (args.contour > 0 or args.colors in ("flag", "bw")) else (235, 235, 235)
+        # fond coloré si pays (voir le blanc rempli + le détourage), clair sinon
+        is_country = (args.contour > 0 or args.border > 0 or bool(args.fill)
+                      or args.colors in ("flag", "bw"))
+        tone = (90, 120, 150) if is_country else (235, 235, 235)
         bg = Image.new("RGB", img.size, tone)
         bg.paste(img, (0, 0), img)
         bg.save(args.sheet, quality=90)

@@ -205,23 +205,22 @@ jobs:
             curl -sL "https://raw.githubusercontent.com/google/fonts/main/ofl/kaushanscript/KaushanScript-Regular.ttf" -o assets/fonts/Kaushan_Script.ttf
             SLUG="${COUNTRY_SLUG:-ireland}"
             KAU=assets/fonts/Kaushan_Script.ttf
-            # 4 variantes : mots du pays (coloré drapeau + n&b) et gros mots (coloré + n&b)
+            # 4 variantes : pays rempli blanc, frontières délimitées, transparent
+            # autour, mots h+v, couleurs réparties drapeau (+ version n&b)
+            STYLE=(--fill "#ffffff" --border 8 --prefer-horizontal 0.6 --font-path $KAU \
+                   --out produits/word_shapes)
             python scripts/gen_wordcloud.py --freq-file "${COUNTRY_SLANG:-data/slang_ireland.json}" \
-              --mask "country:${SLUG}" --colors flag --contour 20 --word-outline 4 \
-              --font-path $KAU --out produits/word_shapes --name "${SLUG}_slang_color" \
+              --mask "country:${SLUG}" --colors flag "${STYLE[@]}" --name "${SLUG}_slang_color" \
               --sheet reports/contact/${SLUG}_slang_color.png
             python scripts/gen_wordcloud.py --freq-file "${COUNTRY_SLANG:-data/slang_ireland.json}" \
-              --mask "country:${SLUG}" --colors bw --contour 20 --word-outline 4 \
-              --font-path $KAU --out produits/word_shapes --name "${SLUG}_slang_bw" \
+              --mask "country:${SLUG}" --colors bw "${STYLE[@]}" --name "${SLUG}_slang_bw" \
               --sheet reports/contact/${SLUG}_slang_bw.png
             if [ -n "$COUNTRY_SWEAR" ] && [ -f "$COUNTRY_SWEAR" ]; then
               python scripts/gen_wordcloud.py --freq-file "$COUNTRY_SWEAR" \
-                --mask "country:${SLUG}" --colors flag --contour 20 --word-outline 4 \
-                --font-path $KAU --out produits/word_shapes --name "${SLUG}_grosmots_color" \
+                --mask "country:${SLUG}" --colors flag "${STYLE[@]}" --name "${SLUG}_grosmots_color" \
                 --sheet reports/contact/${SLUG}_grosmots_color.png
               python scripts/gen_wordcloud.py --freq-file "$COUNTRY_SWEAR" \
-                --mask "country:${SLUG}" --colors bw --contour 20 --word-outline 4 \
-                --font-path $KAU --out produits/word_shapes --name "${SLUG}_grosmots_bw" \
+                --mask "country:${SLUG}" --colors bw "${STYLE[@]}" --name "${SLUG}_grosmots_bw" \
                 --sheet reports/contact/${SLUG}_grosmots_bw.png
             fi
           elif [ "$TASK" = "gen_stacked_rainbow" ]; then
