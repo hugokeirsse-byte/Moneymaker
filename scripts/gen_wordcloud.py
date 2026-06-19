@@ -170,29 +170,9 @@ def builtin_mask(name, size=1600):
                      "fish, mushroom, guitar, paw, bicycle)")
 
 
-def country_data(name, size=2000, margin=0.06, keep_frac=0.07):
-    """Silhouette RÉELLE d'un pays via GeoJSON haute résolution (georgique/world-geojson).
-
-    name : slug du pays en minuscules (ireland, usa, new_zealand, italy, jamaica,
-    france, germany, mexico, canada...). Projette lon/lat (equirectangulaire,
-    corrigée par cos(lat)) et garde les polygones principaux (>= keep_frac de
-    l'aire max) pour écarter les îlots lointains.
-
-    Retourne (mask_np, polys) — polys = polygones projetés en coords image (pour
-    tracer un contour).
-    """
-    import urllib.request
-    slug = name.strip().lower().replace(" ", "_")
-    url = ("https://raw.githubusercontent.com/georgique/world-geojson/"
-           f"develop/countries/{slug}.json")
-    req = urllib.request.Request(url, headers={"User-Agent": "Moneymaker/1.0"})
-    data = json.load(urllib.request.urlopen(req, timeout=40))
-    geom = data["features"][0]["geometry"]
-    if geom["type"] == "Polygon":
-        rings = [geom["coordinates"][0]]
-    else:  # MultiPolygon
-        rings = [poly[0] for poly in geom["coordinates"]]
-
+def _rings_to_mask_polys(rings, size, margin, keep_frac):
+    """Projette des anneaux lon/lat -> (mask_np, polys image). Equirectangulaire
+    corrigée par cos(lat moyen), nord en haut, garde les anneaux >= keep_frac."""
     def ring_area(r):
         a = 0.0
         for i in range(len(r)):
@@ -208,10 +188,10 @@ def country_data(name, size=2000, margin=0.06, keep_frac=0.07):
     pts_all = [pt for r in keep for pt in r]
     lats = [p[1] for p in pts_all]
     lat0 = math.radians(sum(lats) / len(lats))
-    kx = math.cos(lat0)  # compression horizontale réaliste
+    kx = math.cos(lat0)
 
     xs = [p[0] * kx for p in pts_all]
-    ys = [-p[1] for p in pts_all]  # nord en haut
+    ys = [-p[1] for p in pts_all]
     minx, maxx = min(xs), max(xs)
     miny, maxy = min(ys), max(ys)
     span = max(maxx - minx, maxy - miny) or 1.0
@@ -230,6 +210,58 @@ def country_data(name, size=2000, margin=0.06, keep_frac=0.07):
     for r in polys:
         d.polygon(r, fill=0)
     return np.array(img), polys
+
+
+def country_data(name, size=2000, margin=0.06, keep_frac=0.07):
+    """Silhouette RÉELLE d'un pays via GeoJSON haute résolution (georgique/world-geojson).
+
+    name : slug du pays en minuscules (ireland, usa, new_zealand, italy, jamaica,
+    france, germany, mexico, canada...). Retourne (mask_np, polys).
+    """
+    import urllib.request
+    slug = name.strip().lower().replace(" ", "_")
+    url = ("https://raw.githubusercontent.com/georgique/world-geojson/"
+           f"develop/countries/{slug}.json")
+    req = urllib.request.Request(url, headers={"User-Agent": "Moneymaker/1.0"})
+    data = json.load(urllib.request.urlopen(req, timeout=40))
+    geom = data["features"][0]["geometry"]
+    if geom["type"] == "Polygon":
+        rings = [geom["coordinates"][0]]
+    else:  # MultiPolygon
+        rings = [poly[0] for poly in geom["coordinates"]]
+    return _rings_to_mask_polys(rings, size, margin, keep_frac)
+
+
+_US_STATES_CACHE = {}
+
+
+def us_state_data(name, size=2000, margin=0.07, keep_frac=0.07):
+    """Silhouette RÉELLE d'un État américain (GeoJSON combiné PublicaMundi).
+
+    name : nom de l'État (texas, california, new_york, florida...). Retourne
+    (mask_np, polys), même convention que country_data.
+    """
+    import urllib.request
+    if "fc" not in _US_STATES_CACHE:
+        url = ("https://raw.githubusercontent.com/PublicaMundi/MappingAPI/"
+               "master/data/geojson/us-states.json")
+        req = urllib.request.Request(url, headers={"User-Agent": "Moneymaker/1.0"})
+        _US_STATES_CACHE["fc"] = json.load(urllib.request.urlopen(req, timeout=40))
+    want = name.strip().lower().replace("_", " ")
+    feat = None
+    for f in _US_STATES_CACHE["fc"]["features"]:
+        if f.get("properties", {}).get("name", "").strip().lower() == want:
+            feat = f
+            break
+    if feat is None:
+        raise SystemExit(f"État US inconnu : {name}")
+    geom = feat["geometry"]
+    if geom["type"] == "Polygon":
+        rings = [geom["coordinates"][0]]
+    else:
+        rings = [poly[0] for poly in geom["coordinates"]]
+    return _rings_to_mask_polys(rings, size, margin, keep_frac)
+
 
 
 def country_mask(name, size=2000, **kw):
@@ -497,8 +529,15 @@ def render_country(freq, slug, mask, polys, sil, font, colors, size,
             words_img = Image.alpha_composite(ol, fillcol)
         else:
             words_img = fillcol
-    else:  # bw : noir plein, pas de contour (le plus propre)
-        fillcol = Image.new("RGBA", (size, size), (22, 22, 22, 255))
+    else:  # bw (noir) ou couleur unie (#hex) : le plus propre
+        if colors == "bw":
+            wordcol = (22, 22, 22, 255)
+        else:
+            try:
+                wordcol = ImageColor.getrgb(colors) + (255,)
+            except ValueError:
+                wordcol = (22, 22, 22, 255)
+        fillcol = Image.new("RGBA", (size, size), wordcol)
         fillcol.putalpha(alpha)
         words_img = fillcol
 
@@ -569,11 +608,16 @@ def main():
         print(f"[police] introuvable : {font} — police par défaut", file=sys.stderr)
         font = None
 
-    if args.mask.lower().startswith("country:"):
-        # --- pays : rendu unifié (disposition unique, drapeau net, contour noir)
+    is_country = args.mask.lower().startswith("country:")
+    is_state = args.mask.lower().startswith("usstate:")
+    if is_country or is_state:
+        # --- pays / État US : rendu unifié (patch blanc + bordure, ultra propre)
         slug = args.mask.split(":", 1)[1].strip().lower().replace(" ", "_")
         csize = args.size
-        mask, polys = country_data(slug, size=csize)
+        if is_state:
+            mask, polys = us_state_data(slug, size=csize)
+        else:
+            mask, polys = country_data(slug, size=csize)
         sil = silhouette_alpha(mask)
         img = render_country(
             freq, slug, mask, polys, sil, font, args.colors, csize,
