@@ -119,12 +119,14 @@ def builtin_mask(name, size=1600):
     if n in ("mushroom", "champignon"):
         img = Image.new("L", (size, size), WHITE)
         d = ImageDraw.Draw(img)
-        # chapeau : demi-ellipse large en haut
-        d.ellipse([size * 0.10, size * 0.08, size * 0.90, size * 0.68], fill=0)
-        # pied : rectangle centré en bas
-        d.rectangle([size * 0.37, size * 0.52, size * 0.63, size * 0.90], fill=0)
-        # découpe du bas du chapeau (aplatit le dessous de l'ellipse)
-        d.rectangle([0, size * 0.52, size, size * 0.68], fill=WHITE)
+        S = size
+        # chapeau : ellipse large, puis on aplatit le dessous au niveau du rebord
+        d.ellipse([S * 0.05, S * 0.06, S * 0.95, S * 0.66], fill=0)
+        d.rectangle([0, S * 0.46, S, S], fill=WHITE)   # coupe nette sous le rebord
+        # pied : trapèze centré qui remonte SOUS le chapeau (jonction franche)
+        stem = [(S * 0.39, S * 0.44), (S * 0.61, S * 0.44),
+                (S * 0.58, S * 0.92), (S * 0.42, S * 0.92)]
+        d.polygon(stem, fill=0)
         return np.array(img)
     if n in ("guitar", "guitare"):
         img = Image.new("L", (size, size), WHITE)
@@ -413,10 +415,36 @@ def dilate_alpha(alpha, width):
     return a
 
 
+def _readable_on_white(col, light=(196, 198, 205)):
+    """Sur fond blanc, une bande blanche rendrait les mots invisibles (on a
+    retiré le contour noir). On remplace donc le blanc pur par un gris clair
+    ton-sur-ton : mots lisibles, patch propre, zéro liseré lourd."""
+    r, g, b = int(col[0]), int(col[1]), int(col[2])
+    if min(r, g, b) >= 235:        # quasi-blanc
+        return light
+    return (r, g, b)
+
+
+def shape_outline(mask, width, color):
+    """Trace le contour de la silhouette d'un masque (anneau le long du bord).
+    Rend la forme lisible même quand aucun mot ne touche le bord."""
+    from PIL import ImageFilter
+    sil = Image.fromarray(np.where(mask < 128, 255, 0).astype(np.uint8), "L")
+    dil, ero = sil, sil
+    for _ in range(max(1, int(width))):
+        dil = dil.filter(ImageFilter.MaxFilter(3))
+        ero = ero.filter(ImageFilter.MinFilter(3))
+    ring = ImageChops.subtract(dil, ero)
+    rgb = color[:3] if len(color) >= 3 else (28, 28, 28)
+    layer = Image.new("RGBA", sil.size, rgb + (0,))
+    layer.putalpha(ring)
+    return layer
+
+
 def band_fill(size, bbox, flag):
     """Image RGB de bandes drapeau NET (par pixel) sur l'étendue du pays.
     vbands = bandes verticales (gauche->droite), hbands = horizontales."""
-    cols = np.array([tuple(c) for c in flag["colors"]], np.uint8)
+    cols = np.array([_readable_on_white(c) for c in flag["colors"]], np.uint8)
     n = len(cols)
     minx, miny, maxx, maxy = bbox
     arr = np.zeros((size, size, 3), np.uint8)
@@ -494,6 +522,10 @@ def main():
     ap.add_argument("--colors", default="rainbow",
                     help="rainbow | black | sunset/ocean/forest/candy | flag")
     ap.add_argument("--font-path", default="")
+    ap.add_argument("--shape-contour", type=int, default=0,
+                    help="contour de la silhouette (masque non-pays), 0 = aucun")
+    ap.add_argument("--shape-contour-color", default="#1a1a1a",
+                    help="couleur du contour de la silhouette")
     ap.add_argument("--out", default="produits/word_shapes")
     ap.add_argument("--name", default="")
     ap.add_argument("--sheet", default="")
@@ -552,6 +584,13 @@ def main():
             color_func = make_color_func(args.colors, list(freq.keys()))
         img = make_cloud(freq, mask, font, color_func,
                          prefer_horizontal=args.prefer_horizontal)
+        # contour de la silhouette : rend la forme nette même sans mots au bord
+        if args.shape_contour > 0:
+            ring = shape_outline(mask, args.shape_contour,
+                                 ImageColor.getrgb(args.shape_contour_color))
+            if ring.size != img.size:
+                ring = ring.resize(img.size, Image.LANCZOS)
+            img = Image.alpha_composite(img, ring)
 
     name = args.name or f"{(args.niche or 'mots').replace(' ', '_')}_{args.mask}_{args.colors}"
     os.makedirs(args.out, exist_ok=True)

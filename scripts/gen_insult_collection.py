@@ -14,29 +14,17 @@ Usage :
 import argparse
 import json
 import os
+import sys
 
-from PIL import Image, ImageDraw, ImageFont
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from typo_fonts import load_font  # noqa: E402
+
+from PIL import Image, ImageDraw  # noqa: E402
 
 DATA_PATH = "data/insults_multilang.json"
 
-FONT_DISPLAY = [
-    "assets/fonts/Anton-Regular.ttf",
-    "/usr/share/fonts/truetype/anton/Anton-Regular.ttf",
-    "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
-    "/usr/share/fonts/truetype/freefont/FreeSansBold.ttf",
-    "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
-]
-FONT_LABEL = [
-    "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf",
-    "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
-]
-
-
-def best(candidates):
-    for p in candidates:
-        if os.path.exists(p):
-            return p
-    return candidates[-1]
+WORD_FONT = "fatserif"   # belle typo grasse pour le mot
+LABEL_FONT = "fjalla"    # libellé pays propre
 
 
 def measure(font, text):
@@ -50,12 +38,10 @@ def hex_to_rgba(h, alpha=255):
     return (r, g, b, alpha)
 
 
-def fit_size(text, fp, max_w, hi=1000, lo=20):
+def fit_size(text, key, max_w, hi=1200, lo=20):
     while lo < hi:
         mid = (lo + hi + 1) // 2
-        f = ImageFont.truetype(fp, mid)
-        w, _, _ = measure(f, text)
-        if w <= max_w:
+        if measure(load_font(key, mid), text)[0] <= max_w:
             lo = mid
         else:
             hi = mid - 1
@@ -67,18 +53,16 @@ def render_poster(entry, side=4500):
     margin = int(side * 0.08)
     max_w = side - 2 * margin
 
-    fp_d = best(FONT_DISPLAY)
-    fp_l = best(FONT_LABEL)
     color = hex_to_rgba(entry["color"])
 
     word = entry["word"].upper()
-    sz = fit_size(word, fp_d, max_w)
-    f_word = ImageFont.truetype(fp_d, sz)
+    sz = fit_size(word, WORD_FONT, max_w)
+    f_word = load_font(WORD_FONT, sz)
     ww, wh, woff = measure(f_word, word)
 
     label = f"{entry['country']}  ·  \"{entry['meaning']}\""
     label_sz = max(30, sz // 8)
-    f_label = ImageFont.truetype(fp_l, label_sz)
+    f_label = load_font(LABEL_FONT, label_sz)
     lw, lh, loff = measure(f_label, label)
 
     gap = int(sz * 0.18)
@@ -113,8 +97,6 @@ def render_grid(entries, cols=5, cell=900):
     """Planche de toutes les insultes, fond blanc."""
     rows = (len(entries) + cols - 1) // cols
     sheet = Image.new("RGB", (cols * cell, rows * cell), (250, 250, 250))
-    fp_d = best(FONT_DISPLAY)
-    fp_l = best(FONT_LABEL)
 
     for i, entry in enumerate(entries):
         word = entry["word"].upper()
@@ -122,11 +104,11 @@ def render_grid(entries, cols=5, cell=900):
         pad = int(cell * 0.08)
         max_w = cell - 2 * pad
 
-        sz = fit_size(word, fp_d, max_w)
-        f_w = ImageFont.truetype(fp_d, sz)
+        sz = fit_size(word, WORD_FONT, max_w)
+        f_w = load_font(WORD_FONT, sz)
         ww, wh, woff = measure(f_w, word)
 
-        f_l = ImageFont.truetype(fp_l, max(14, sz // 5))
+        f_l = load_font(LABEL_FONT, max(14, sz // 5))
         label = entry["country"]
         lw, lh, loff = measure(f_l, label)
 
