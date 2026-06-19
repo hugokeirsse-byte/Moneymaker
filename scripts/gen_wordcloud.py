@@ -34,7 +34,7 @@ import os
 import sys
 
 import numpy as np
-from PIL import Image, ImageDraw
+from PIL import Image, ImageColor, ImageDraw
 
 WHITE = 255  # wordcloud remplit là où le masque n'est PAS blanc
 
@@ -107,13 +107,16 @@ def builtin_mask(name, size=1600):
                      "(heart, star, hexagon, circle, diamond, arrow_up, australia)")
 
 
-def country_mask(name, size=2000, margin=0.06, keep_frac=0.07):
+def country_data(name, size=2000, margin=0.06, keep_frac=0.07):
     """Silhouette RÉELLE d'un pays via GeoJSON haute résolution (georgique/world-geojson).
 
     name : slug du pays en minuscules (ireland, usa, new_zealand, italy, jamaica,
     france, germany, mexico, canada...). Projette lon/lat (equirectangulaire,
     corrigée par cos(lat)) et garde les polygones principaux (>= keep_frac de
     l'aire max) pour écarter les îlots lointains.
+
+    Retourne (mask_np, polys) — polys = polygones projetés en coords image (pour
+    tracer un contour).
     """
     import urllib.request
     slug = name.strip().lower().replace(" ", "_")
@@ -158,11 +161,30 @@ def country_mask(name, size=2000, margin=0.06, keep_frac=0.07):
         y = (-lat - miny) / span * inner + offy
         return (x, y)
 
+    polys = [[proj(lon, lat) for lon, lat in r] for r in keep]
     img = Image.new("L", (size, size), WHITE)
     d = ImageDraw.Draw(img)
-    for r in keep:
-        d.polygon([proj(lon, lat) for lon, lat in r], fill=0)
-    return np.array(img)
+    for r in polys:
+        d.polygon(r, fill=0)
+    return np.array(img), polys
+
+
+def country_mask(name, size=2000, **kw):
+    return country_data(name, size=size, **kw)[0]
+
+
+def country_contour(polys, size, width=12, color=(255, 255, 255, 255)):
+    """Trace le contour blanc du pays (fond transparent) pour bien le détourer."""
+    img = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    for r in polys:
+        ring = [(int(x), int(y)) for x, y in r]
+        d.line(ring + [ring[0]], fill=color, width=width, joint="curve")
+        # arrondir les sommets (joint="curve" ne couvre pas les bouts)
+        rad = width // 2
+        for x, y in ring:
+            d.ellipse([x - rad, y - rad, x + rad, y + rad], fill=color)
+    return img
 
 
 def load_mask(spec):
@@ -213,6 +235,61 @@ def make_color_func(mode, words):
     return cf
 
 
+# ------------------------------------------------------------- drapeaux
+# type "vbands" : bandes verticales (couleur selon position X)
+# type "hbands" : bandes horizontales (couleur selon position Y)
+# type "palette": drapeau complexe -> couleurs cyclées (non positionnel)
+FLAGS = {
+    # bande « blanche » des drapeaux -> gris clair (205) pour rester visible
+    # sous un liseré blanc de sticker
+    "ireland":     {"type": "vbands", "colors": [(22, 155, 98), (205, 205, 205), (255, 136, 62)]},
+    "italy":       {"type": "vbands", "colors": [(0, 140, 69), (205, 205, 205), (205, 33, 42)]},
+    "france":      {"type": "vbands", "colors": [(0, 85, 164), (205, 205, 205), (239, 65, 53)]},
+    "mexico":      {"type": "vbands", "colors": [(0, 104, 71), (205, 205, 205), (206, 17, 38)]},
+    "canada":      {"type": "vbands", "colors": [(213, 43, 30), (205, 205, 205), (213, 43, 30)]},
+    "germany":     {"type": "hbands", "colors": [(30, 30, 30), (221, 0, 0), (255, 206, 0)]},
+    "usa":         {"type": "palette", "colors": [(178, 34, 52), (205, 205, 205), (60, 59, 110)]},
+    "new_zealand": {"type": "palette", "colors": [(0, 36, 125), (204, 20, 43), (205, 205, 205)]},
+    "jamaica":     {"type": "palette", "colors": [(0, 155, 58), (254, 209, 0), (30, 30, 30)]},
+    "australia":   {"type": "palette", "colors": [(0, 36, 125), (204, 20, 43), (205, 205, 205)]},
+}
+
+
+def make_flag_color_func(slug, width, height):
+    """Colore les mots selon les couleurs du drapeau (positionnel si bandes)."""
+    spec = FLAGS.get(slug)
+    if not spec:
+        return None
+    cols, typ, n = spec["colors"], spec["type"], len(spec["colors"])
+    if typ == "palette":
+        state = {"i": 0}
+
+        def cf(*a, **k):
+            c = cols[state["i"] % n]
+            state["i"] += 1
+            return c
+        return cf
+
+    def cf(word, font_size=0, position=(0, 0), orientation=None, **k):
+        y, x = position[0], position[1]   # wordcloud : position = (ligne, colonne)
+        frac = (x / max(width, 1)) if typ == "vbands" else (y / max(height, 1))
+        return cols[min(n - 1, max(0, int(frac * n)))]
+    return cf
+
+
+def add_word_outline(img, width=3, color=(255, 255, 255)):
+    """Ajoute un liseré (sticker) autour de TOUS les mots. Blanc par défaut =
+    look autocollant ; chaque mot ressort sur n'importe quel fond."""
+    from PIL import ImageFilter
+    alpha = img.split()[3]
+    dil = alpha
+    for _ in range(max(1, width)):
+        dil = dil.filter(ImageFilter.MaxFilter(3))
+    base = Image.new("RGBA", img.size, color + (0,))
+    base.putalpha(dil)
+    return Image.alpha_composite(base, img)
+
+
 # ---------------------------------------------------------------- données
 def words_from_report(path, niche_substr):
     d = json.load(open(path, encoding="utf-8"))
@@ -228,7 +305,7 @@ def words_from_report(path, niche_substr):
     return freq
 
 
-def make_cloud(freq, mask, font_path, color_mode, scale=1600):
+def make_cloud(freq, mask, font_path, color_func):
     from wordcloud import WordCloud
     words = list(freq.keys())
     wc = WordCloud(
@@ -240,7 +317,7 @@ def make_cloud(freq, mask, font_path, color_mode, scale=1600):
         relative_scaling=0.5,
         prefer_horizontal=0.92,
         margin=2,
-        color_func=make_color_func(color_mode, words),
+        color_func=color_func,
     )
     wc.generate_from_frequencies(freq)
     return wc.to_image()  # RGBA
@@ -254,11 +331,18 @@ def main():
     ap.add_argument("--freq-file", default="", help="JSON {mot: poids} (ex. data/australia_slang.json)")
     ap.add_argument("--niche", default="", help="filtre de niche (sous-chaîne)")
     ap.add_argument("--mask", default="heart")
-    ap.add_argument("--colors", default="rainbow")
+    ap.add_argument("--colors", default="rainbow",
+                    help="rainbow | black | sunset/ocean/forest/candy | flag")
     ap.add_argument("--font-path", default="")
     ap.add_argument("--out", default="produits/word_shapes")
     ap.add_argument("--name", default="")
     ap.add_argument("--sheet", default="")
+    ap.add_argument("--contour", type=int, default=0,
+                    help="épaisseur du contour blanc du pays (0 = aucun)")
+    ap.add_argument("--word-outline", type=int, default=0,
+                    help="liseré sticker autour des mots (0 = aucun)")
+    ap.add_argument("--outline-color", default="#ffffff", help="couleur du liseré des mots")
+    ap.add_argument("--contour-color", default="#ffffff", help="couleur du contour du pays")
     args = ap.parse_args()
 
     if args.freq_file:
@@ -277,8 +361,36 @@ def main():
         print(f"[police] introuvable : {font} — police par défaut", file=sys.stderr)
         font = None
 
-    mask = load_mask(args.mask)
-    img = make_cloud(freq, mask, font, args.colors)
+    # masque + polygones (pays = silhouette réelle + contour possible)
+    polys, csize, slug = None, 2000, ""
+    if args.mask.lower().startswith("country:"):
+        slug = args.mask.split(":", 1)[1].strip().lower().replace(" ", "_")
+        mask, polys = country_data(slug, size=csize)
+    else:
+        mask = load_mask(args.mask)
+    h, w = mask.shape[:2]
+
+    # couleurs : flag (drapeau positionnel) | bw (noir & blanc) | palette/rainbow
+    if args.colors == "flag":
+        color_func = make_flag_color_func(slug, w, h)
+        if color_func is None:
+            print(f"[drapeau] inconnu pour '{slug}' — rainbow", file=sys.stderr)
+            color_func = make_color_func("rainbow", list(freq.keys()))
+    elif args.colors == "bw":
+        def color_func(*a, **k):
+            return (28, 28, 28)
+    else:
+        color_func = make_color_func(args.colors, list(freq.keys()))
+
+    img = make_cloud(freq, mask, font, color_func)
+
+    if args.word_outline > 0:
+        img = add_word_outline(img, width=args.word_outline,
+                               color=ImageColor.getrgb(args.outline_color))
+    if args.contour > 0 and polys:
+        contour = country_contour(polys, csize, width=args.contour,
+                                  color=ImageColor.getrgb(args.contour_color) + (255,))
+        img = Image.alpha_composite(contour, img)
 
     name = args.name or f"{(args.niche or 'mots').replace(' ', '_')}_{args.mask}_{args.colors}"
     os.makedirs(args.out, exist_ok=True)
@@ -288,7 +400,9 @@ def main():
 
     if args.sheet:
         os.makedirs(os.path.dirname(args.sheet) or ".", exist_ok=True)
-        bg = Image.new("RGB", img.size, (235, 235, 235))
+        # fond gris moyen si sticker/contour (voir blanc ET noir), clair sinon
+        tone = (128, 130, 134) if (args.contour > 0 or args.colors in ("flag", "bw")) else (235, 235, 235)
+        bg = Image.new("RGB", img.size, tone)
         bg.paste(img, (0, 0), img)
         bg.save(args.sheet, quality=90)
         print("aperçu:", args.sheet)
