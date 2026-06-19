@@ -2,8 +2,12 @@
 """
 gen_trendy.py — mots « à la mode » & cynisme doux (zeitgeist EN).
 
-Le vocabulaire qui tourne : overrated/underrated, overthinking, delulu, unhinged,
-« lowering the bar ». Typo moderne épurée (grotesk géométrique) + un accent.
+Écriture : Pacifico (script rond) en casse Titre, mot accentué en rouge.
+overrated/underrated/wonderrated (avec rature), overthinking, delulu, unhinged…
+
+Deux variantes par design :
+  __dark  : encre sombre (maillots clairs)
+  __light : encre blanche (maillots foncés)
 Fond transparent, 4500 px.
 
 Usage :
@@ -19,30 +23,33 @@ from typo_fonts import load_font  # noqa: E402
 
 from PIL import Image, ImageDraw, ImageFont  # noqa: E402
 
-INK = (28, 28, 32, 255)
-SOFT = (122, 124, 130, 255)
-ACCENT = (190, 60, 48, 255)
-BLUE = (32, 90, 170, 255)
+FONT = "script"  # Pacifico
 
-# id, lignes, police, {index_ligne: couleur}, strike(index ligne ou None)
+PALETTES = {
+    "dark":  {"ink": (30, 30, 34, 255), "soft": (122, 124, 130, 255),
+              "accent": (190, 60, 48, 255), "blue": (32, 90, 170, 255)},
+    "light": {"ink": (244, 244, 246, 255), "soft": (180, 182, 188, 255),
+              "accent": (232, 96, 84, 255), "blue": (96, 150, 224, 255)},
+}
+
+# id, lignes, {index: "accent"|"soft"|"blue"}, strike(index ou None)
 PHRASES = [
-    ("overrated", ["OVERRATED"], "block", {0: ACCENT}, 0),
-    ("underrated", ["UNDERRATED"], "block", {0: BLUE}, None),
-    ("rated_trio", ["OVERRATED", "UNDERRATED", "WONDERRATED"], "geo",
-     {2: ACCENT}, None),
-    ("everything_overrated", ["EVERYTHING", "IS OVERRATED"], "block", {1: ACCENT}, None),
-    ("let_me_overthink", ["LET ME", "OVERTHINK", "THIS"], "geo", {1: ACCENT}, None),
-    ("professional_overthinker", ["PROFESSIONAL", "OVERTHINKER"], "block", {1: ACCENT}, None),
-    ("overthinking_since_birth", ["OVERTHINKING", "SINCE BIRTH"], "geo", {1: SOFT}, None),
-    ("delulu", ["DELULU"], "block", {0: ACCENT}, None),
-    ("delulu_solulu", ["DELULU IS", "THE SOLULU"], "geo", {1: ACCENT}, None),
-    ("unhinged_but_polite", ["UNHINGED", "BUT POLITE"], "block", {1: SOFT}, None),
-    ("chronically_unimpressed", ["CHRONICALLY", "UNIMPRESSED"], "geo", {1: ACCENT}, None),
-    ("mildly_disappointed", ["MILDLY", "DISAPPOINTED"], "block", {1: SOFT}, None),
-    ("lowering_the_bar", ["LOWERING THE BAR", "SUCCESSFULLY"], "geo", {1: ACCENT}, None),
-    ("emotionally_overrated", ["EMOTIONALLY", "OVERRATED"], "block", {1: ACCENT}, None),
-    ("iconic_allegedly", ["ICONIC", "(ALLEGEDLY)"], "geo", {1: SOFT}, None),
-    ("bare_minimum", ["GIVING", "BARE MINIMUM", "ICONICALLY"], "geo", {1: ACCENT}, None),
+    ("overrated", ["Overrated"], {0: "accent"}, 0),
+    ("underrated", ["Underrated"], {0: "blue"}, None),
+    ("rated_trio", ["Overrated", "Underrated", "Wonderrated"], {2: "accent"}, None),
+    ("everything_overrated", ["Everything", "Is Overrated"], {1: "accent"}, None),
+    ("let_me_overthink", ["Let Me", "Overthink", "This"], {1: "accent"}, None),
+    ("professional_overthinker", ["Professional", "Overthinker"], {1: "accent"}, None),
+    ("overthinking_since_birth", ["Overthinking", "Since Birth"], {1: "soft"}, None),
+    ("delulu", ["Delulu"], {0: "accent"}, None),
+    ("delulu_solulu", ["Delulu Is", "the Solulu"], {1: "accent"}, None),
+    ("unhinged_but_polite", ["Unhinged", "but Polite"], {1: "soft"}, None),
+    ("chronically_unimpressed", ["Chronically", "Unimpressed"], {1: "accent"}, None),
+    ("mildly_disappointed", ["Mildly", "Disappointed"], {1: "soft"}, None),
+    ("lowering_the_bar", ["Lowering the Bar", "Successfully"], {1: "accent"}, None),
+    ("emotionally_overrated", ["Emotionally", "Overrated"], {1: "accent"}, None),
+    ("iconic_allegedly", ["Iconic", "(Allegedly)"], {1: "soft"}, None),
+    ("bare_minimum", ["Giving", "Bare Minimum", "Iconically"], {1: "accent"}, None),
 ]
 
 
@@ -51,10 +58,10 @@ def measure(font, text):
     return box[2] - box[0], box[3] - box[1], box[1]
 
 
-def fit_size(lines, key, max_w, hi=760, lo=20):
+def fit_size(lines, max_w, hi=760, lo=20):
     while lo < hi:
         mid = (lo + hi + 1) // 2
-        f = load_font(key, mid)
+        f = load_font(FONT, mid)
         if max(measure(f, t)[0] for t in lines) <= max_w:
             lo = mid
         else:
@@ -62,12 +69,12 @@ def fit_size(lines, key, max_w, hi=760, lo=20):
     return lo
 
 
-def render(lines, key, accents, strike, side=4500, margin_ratio=0.12):
+def render(lines, accents, strike, pal, side=4500, margin_ratio=0.12):
     margin = int(side * margin_ratio)
     max_w = side - 2 * margin
-    sz = fit_size(lines, key, max_w)
-    f = load_font(key, sz)
-    gap = int(sz * 0.20)
+    sz = fit_size(lines, max_w)
+    f = load_font(FONT, sz)
+    gap = int(sz * 0.14)
 
     dims = [measure(f, t) for t in lines]
     total_h = sum(dd[1] for dd in dims) + gap * (len(lines) - 1)
@@ -76,12 +83,12 @@ def render(lines, key, accents, strike, side=4500, margin_ratio=0.12):
 
     y = margin
     for i, (t, (w, h, off)) in enumerate(zip(lines, dims)):
-        col = accents.get(i, INK)
+        col = pal[accents[i]] if i in accents else pal["ink"]
         x = (side - w) // 2
         dr.text((x, y - off), t, font=f, fill=col)
         if strike == i:
-            ly = y + h // 2
-            dr.line([(x, ly), (x + w, ly)], fill=col, width=max(6, sz // 26))
+            ly = y + int(h * 0.52)
+            dr.line([(x, ly), (x + w, ly)], fill=col, width=max(6, sz // 24))
         y += h + gap
 
     bbox = img.getbbox()
@@ -102,6 +109,7 @@ def main():
     ap.add_argument("--out", default="produits/trendy")
     ap.add_argument("--sheet", default="")
     ap.add_argument("--only", default="")
+    ap.add_argument("--variant", default="both", choices=["both", "dark", "light"])
     args = ap.parse_args()
 
     sel = set(args.only.split(",")) if args.only else None
@@ -114,11 +122,11 @@ def main():
         sheet = Image.new("RGB", (cols * cell, rows * cell), (244, 244, 246))
         dd = ImageDraw.Draw(sheet)
         try:
-            lab = load_font("geo", 17)
+            lab = load_font("fjalla", 17)
         except Exception:
             lab = ImageFont.load_default()
-        for i, (pid, lines, key, acc, strike) in enumerate(items):
-            im = render(lines, key, acc, strike, side=1400)
+        for i, (pid, lines, acc, strike) in enumerate(items):
+            im = render(lines, acc, strike, PALETTES["dark"], side=1400)
             im.thumbnail((cell - 40, cell - 54))
             bg = Image.new("RGB", im.size, (255, 255, 255))
             bg.paste(im.convert("RGB"), mask=im.split()[-1])
@@ -131,15 +139,15 @@ def main():
         print(f"planche: {args.sheet} ({len(items)})")
         return
 
+    variants = ["dark", "light"] if args.variant == "both" else [args.variant]
     os.makedirs(args.out, exist_ok=True)
     n = 0
-    for pid, lines, key, acc, strike in items:
-        im = render(lines, key, acc, strike)
-        path = os.path.join(args.out, f"{pid}.png")
-        im.save(path, dpi=(300, 300))
-        print(f"  {path}")
-        n += 1
-    print(f"\n{n} fichiers → {args.out}")
+    for pid, lines, acc, strike in items:
+        for v in variants:
+            im = render(lines, acc, strike, PALETTES[v])
+            im.save(os.path.join(args.out, f"{pid}__{v}.png"), dpi=(300, 300))
+            n += 1
+    print(f"{n} fichiers ({len(items)} phrases × {len(variants)} variantes) → {args.out}")
 
 
 if __name__ == "__main__":
