@@ -99,6 +99,14 @@ on:
         description: 'gen_country_wc : fichier gros mots (ex. data/swear_ireland.json)'
         required: false
         default: 'data/swear_ireland.json'
+      country_funny:
+        description: 'gen_country_wc : fichier mots désuets/marrants (ex. data/funny_ireland.json)'
+        required: false
+        default: 'data/funny_ireland.json'
+      country_insults:
+        description: 'gen_country_wc : fichier insultes marrantes/moyenâgeuses (ex. data/insults_ireland.json)'
+        required: false
+        default: 'data/insults_ireland.json'
 
 permissions:
   contents: write
@@ -161,6 +169,8 @@ jobs:
           COUNTRY_SLUG: ${{ github.event.inputs.country_slug }}
           COUNTRY_SLANG: ${{ github.event.inputs.country_slang }}
           COUNTRY_SWEAR: ${{ github.event.inputs.country_swear }}
+          COUNTRY_FUNNY: ${{ github.event.inputs.country_funny }}
+          COUNTRY_INSULTS: ${{ github.event.inputs.country_insults }}
         run: |
           set -e
           TASK="${{ github.event.inputs.task }}"
@@ -205,24 +215,23 @@ jobs:
             curl -sL "https://raw.githubusercontent.com/google/fonts/main/ofl/kaushanscript/KaushanScript-Regular.ttf" -o assets/fonts/Kaushan_Script.ttf
             SLUG="${COUNTRY_SLUG:-ireland}"
             KAU=assets/fonts/Kaushan_Script.ttf
-            # 4 variantes : pays rempli blanc, frontières délimitées, transparent
-            # autour, mots h+v, couleurs réparties drapeau (+ version n&b)
-            STYLE=(--fill "#ffffff" --border 8 --prefer-horizontal 0.6 --font-path $KAU \
-                   --out produits/word_shapes)
-            python scripts/gen_wordcloud.py --freq-file "${COUNTRY_SLANG:-data/slang_ireland.json}" \
-              --mask "country:${SLUG}" --colors flag "${STYLE[@]}" --name "${SLUG}_slang_color" \
-              --sheet reports/contact/${SLUG}_slang_color.png
-            python scripts/gen_wordcloud.py --freq-file "${COUNTRY_SLANG:-data/slang_ireland.json}" \
-              --mask "country:${SLUG}" --colors bw "${STYLE[@]}" --name "${SLUG}_slang_bw" \
-              --sheet reports/contact/${SLUG}_slang_bw.png
-            if [ -n "$COUNTRY_SWEAR" ] && [ -f "$COUNTRY_SWEAR" ]; then
-              python scripts/gen_wordcloud.py --freq-file "$COUNTRY_SWEAR" \
-                --mask "country:${SLUG}" --colors flag "${STYLE[@]}" --name "${SLUG}_grosmots_color" \
-                --sheet reports/contact/${SLUG}_grosmots_color.png
-              python scripts/gen_wordcloud.py --freq-file "$COUNTRY_SWEAR" \
-                --mask "country:${SLUG}" --colors bw "${STYLE[@]}" --name "${SLUG}_grosmots_bw" \
-                --sheet reports/contact/${SLUG}_grosmots_bw.png
-            fi
+            # Pour chaque catégorie : pays rempli blanc, frontières délimitées,
+            # transparent autour, mots h+v, drapeau NET (mots coupés) + contour
+            # noir en couleur ; couleur et n&b partagent la MÊME disposition.
+            STYLE=(--prefer-horizontal 0.6 --font-path $KAU --out produits/word_shapes)
+            gen () {  # $1=fichier mots  $2=suffixe
+              [ -n "$1" ] && [ -f "$1" ] || return 0
+              python scripts/gen_wordcloud.py --freq-file "$1" --mask "country:${SLUG}" \
+                --colors flag "${STYLE[@]}" --name "${SLUG}_$2_color" \
+                --sheet reports/contact/${SLUG}_$2_color.png
+              python scripts/gen_wordcloud.py --freq-file "$1" --mask "country:${SLUG}" \
+                --colors bw "${STYLE[@]}" --name "${SLUG}_$2_bw" \
+                --sheet reports/contact/${SLUG}_$2_bw.png
+            }
+            gen "${COUNTRY_SLANG:-data/slang_ireland.json}" slang
+            gen "$COUNTRY_SWEAR" grosmots
+            gen "$COUNTRY_FUNNY" desuets
+            gen "$COUNTRY_INSULTS" insultes
           elif [ "$TASK" = "gen_stacked_rainbow" ]; then
             curl -sL "https://raw.githubusercontent.com/google/fonts/main/ofl/anton/Anton-Regular.ttf" -o assets/fonts/Anton.ttf
             python scripts/gen_stacked_rainbow.py \

@@ -242,11 +242,12 @@ def make_color_func(mode, words):
 FLAGS = {
     # bande « blanche » = blanc pur : sur le fond blanc du pays, ces mots se
     # fondent et forment naturellement la bande blanche du drapeau
-    "ireland":     {"type": "vbands", "colors": [(22, 155, 98), (220, 220, 220), (255, 136, 62)]},
-    "italy":       {"type": "vbands", "colors": [(0, 140, 69), (220, 220, 220), (205, 33, 42)]},
-    "france":      {"type": "vbands", "colors": [(0, 85, 164), (220, 220, 220), (239, 65, 53)]},
-    "mexico":      {"type": "vbands", "colors": [(0, 104, 71), (220, 220, 220), (206, 17, 38)]},
-    "canada":      {"type": "vbands", "colors": [(213, 43, 30), (220, 220, 220), (213, 43, 30)]},
+    # bande blanche = blanc pur ; le contour noir des mots la rend visible
+    "ireland":     {"type": "vbands", "colors": [(19, 134, 86), (255, 255, 255), (255, 136, 62)]},
+    "italy":       {"type": "vbands", "colors": [(0, 140, 69), (255, 255, 255), (205, 33, 42)]},
+    "france":      {"type": "vbands", "colors": [(0, 85, 164), (255, 255, 255), (239, 65, 53)]},
+    "mexico":      {"type": "vbands", "colors": [(0, 104, 71), (255, 255, 255), (206, 17, 38)]},
+    "canada":      {"type": "vbands", "colors": [(213, 43, 30), (255, 255, 255), (213, 43, 30)]},
     "germany":     {"type": "hbands", "colors": [(30, 30, 30), (221, 0, 0), (255, 206, 0)]},
     "usa":         {"type": "palette", "colors": [(178, 34, 52), (60, 59, 110), (178, 34, 52)]},
     "new_zealand": {"type": "palette", "colors": [(0, 36, 125), (204, 20, 43), (0, 36, 125)]},
@@ -306,7 +307,7 @@ def words_from_report(path, niche_substr):
 
 
 def make_cloud(freq, mask, font_path, color_func, prefer_horizontal=0.92,
-               dense=False):
+               dense=False, random_state=None, min_font_size=6):
     from wordcloud import WordCloud
     words = list(freq.keys())
     wc = WordCloud(
@@ -314,12 +315,13 @@ def make_cloud(freq, mask, font_path, color_func, prefer_horizontal=0.92,
         mask=mask,
         mode="RGBA",
         background_color=None,     # fond transparent
-        max_words=400 if dense else len(words) + 5,
+        max_words=600 if dense else len(words) + 5,
         relative_scaling=0.35 if dense else 0.5,
         prefer_horizontal=prefer_horizontal,  # <1 = mélange horizontal/vertical
         repeat=dense,              # répète les mots pour remplir densément la forme
-        min_font_size=6,
+        min_font_size=min_font_size,
         margin=1 if dense else 2,
+        random_state=random_state,  # graine fixe => disposition identique (couleur == n&b)
         color_func=color_func,
     )
     wc.generate_from_frequencies(freq)
@@ -342,6 +344,82 @@ def country_border_inner(polys, sil, size, width, color):
     a = ImageChops.multiply(layer.split()[3], sil)
     layer.putalpha(a)
     return layer
+
+
+def dilate_alpha(alpha, width):
+    """Épaissit un masque alpha de `width` pixels (pour le contour des mots)."""
+    from PIL import ImageFilter
+    a = alpha
+    for _ in range(max(1, int(width))):
+        a = a.filter(ImageFilter.MaxFilter(3))
+    return a
+
+
+def band_fill(size, bbox, flag):
+    """Image RGB de bandes drapeau NET (par pixel) sur l'étendue du pays.
+    vbands = bandes verticales (gauche->droite), hbands = horizontales."""
+    cols = np.array([tuple(c) for c in flag["colors"]], np.uint8)
+    n = len(cols)
+    minx, miny, maxx, maxy = bbox
+    arr = np.zeros((size, size, 3), np.uint8)
+    if flag["type"] == "hbands":
+        frac = (np.arange(size) - miny) / max(maxy - miny, 1)
+        idx = np.clip((frac * n).astype(int), 0, n - 1)
+        arr[:] = cols[idx][:, None, :]      # une couleur par ligne
+    else:
+        frac = (np.arange(size) - minx) / max(maxx - minx, 1)
+        idx = np.clip((frac * n).astype(int), 0, n - 1)
+        arr[:] = cols[idx][None, :, :]      # une couleur par colonne
+    return arr
+
+
+def render_country(freq, slug, mask, polys, sil, font, colors, size,
+                   prefer_horizontal=0.6, border=10, border_color=(20, 20, 20),
+                   fill="#ffffff", outline=0, seed=42):
+    """Rendu pays unifié : disposition générée UNE fois (graine fixe) puis
+    coloriée. colors='flag' (bandes nettes + contour noir) ou 'bw' (noir).
+    Couleur et n&b partagent donc exactement la même disposition."""
+    # 1) disposition unique : mots blancs, graine fixe -> alpha commun
+    mfs = max(8, size // 110)
+    white_img = make_cloud(freq, mask, font, lambda *a, **k: "white",
+                           prefer_horizontal=prefer_horizontal, dense=True,
+                           random_state=seed, min_font_size=mfs)
+    alpha = white_img.split()[3]
+
+    # 2) couche de remplissage des mots
+    if colors == "flag" and slug in FLAGS:
+        sa = np.array(sil)
+        ys, xs = np.where(sa > 128)
+        bbox = (int(xs.min()), int(ys.min()), int(xs.max()), int(ys.max()))
+        bands = band_fill(size, bbox, FLAGS[slug])
+        fillcol = Image.fromarray(
+            np.dstack([bands, np.full((size, size), 255, np.uint8)]), "RGBA")
+        fillcol.putalpha(alpha)
+        # contour NOIR autour des mots (intérieur en couleur)
+        ow = outline or max(3, size // 700)
+        oa = dilate_alpha(alpha, ow)
+        ol = Image.new("RGBA", (size, size), (0, 0, 0, 255))
+        ol.putalpha(oa)
+        words_img = Image.alpha_composite(ol, fillcol)
+    else:  # bw : noir plein, pas de contour (le plus propre)
+        fillcol = Image.new("RGBA", (size, size), (22, 22, 22, 255))
+        fillcol.putalpha(alpha)
+        words_img = fillcol
+
+    # 3) fond blanc rempli sur le pays
+    base = Image.new("RGBA", (size, size), ImageColor.getrgb(fill) + (255,))
+    base.putalpha(sil)
+    img = Image.alpha_composite(base, words_img)
+
+    # 4) rien qui dépasse : rognage strict à la silhouette
+    r, g, b, a = img.split()
+    img = Image.merge("RGBA", (r, g, b, ImageChops.multiply(a, sil)))
+
+    # 5) bordure de délimitation des frontières
+    if border > 0:
+        bl = country_border_inner(polys, sil, size, border, border_color + (255,))
+        img = Image.alpha_composite(img, bl)
+    return img
 
 
 # ---------------------------------------------------------------- main
@@ -367,9 +445,12 @@ def main():
     ap.add_argument("--fill", default="", help="couleur de remplissage du pays (ex. #ffffff)")
     ap.add_argument("--border", type=int, default=0,
                     help="épaisseur de la bordure de délimitation des frontières")
-    ap.add_argument("--border-color", default="#1e1e1e", help="couleur de la bordure")
+    ap.add_argument("--border-color", default="#141414", help="couleur de la bordure")
     ap.add_argument("--prefer-horizontal", type=float, default=0.92,
                     help="proportion de mots horizontaux (1=tous, 0.55=mélange h/v)")
+    ap.add_argument("--size", type=int, default=3600,
+                    help="résolution px du pays (impression t-shirt = 3600+)")
+    ap.add_argument("--seed", type=int, default=42, help="graine (couleur == n&b)")
     args = ap.parse_args()
 
     if args.freq_file:
@@ -388,60 +469,28 @@ def main():
         print(f"[police] introuvable : {font} — police par défaut", file=sys.stderr)
         font = None
 
-    # masque + polygones (pays = silhouette réelle + contour possible)
-    polys, csize, slug = None, 2000, ""
     if args.mask.lower().startswith("country:"):
+        # --- pays : rendu unifié (disposition unique, drapeau net, contour noir)
         slug = args.mask.split(":", 1)[1].strip().lower().replace(" ", "_")
+        csize = args.size
         mask, polys = country_data(slug, size=csize)
+        sil = silhouette_alpha(mask)
+        img = render_country(
+            freq, slug, mask, polys, sil, font, args.colors, csize,
+            prefer_horizontal=args.prefer_horizontal,
+            border=args.border or max(8, csize // 360),
+            border_color=ImageColor.getrgb(args.border_color),
+            fill=args.fill or "#ffffff", outline=args.word_outline, seed=args.seed)
     else:
+        # --- masque non-pays : nuage classique
         mask = load_mask(args.mask)
-    h, w = mask.shape[:2]
-
-    # couleurs : flag (drapeau positionnel) | bw (noir & blanc) | palette/rainbow
-    if args.colors == "flag":
-        color_func = make_flag_color_func(slug, w, h)
-        if color_func is None:
-            print(f"[drapeau] inconnu pour '{slug}' — rainbow", file=sys.stderr)
-            color_func = make_color_func("rainbow", list(freq.keys()))
-    elif args.colors == "bw":
-        def color_func(*a, **k):
-            return (28, 28, 28)
-    else:
-        color_func = make_color_func(args.colors, list(freq.keys()))
-
-    img = make_cloud(freq, mask, font, color_func,
-                     prefer_horizontal=args.prefer_horizontal,
-                     dense=(polys is not None))
-
-    # remplissage du pays (fond blanc) DERRIÈRE les mots
-    if args.fill and polys is not None:
-        sil = silhouette_alpha(mask)
-        base = Image.new("RGBA", img.size, ImageColor.getrgb(args.fill) + (255,))
-        base.putalpha(sil)
-        img = Image.alpha_composite(base, img)
-
-    if args.word_outline > 0:
-        img = add_word_outline(img, width=args.word_outline,
-                               color=ImageColor.getrgb(args.outline_color))
-
-    # rien qui dépasse : on rogne tout à la silhouette du pays
-    if polys is not None:
-        sil = silhouette_alpha(mask)
-        r, g, b, a = img.split()
-        img = Image.merge("RGBA", (r, g, b, ImageChops.multiply(a, sil)))
-
-    # bordure de délimitation des frontières (rognée à l'intérieur)
-    if args.border > 0 and polys is not None:
-        sil = silhouette_alpha(mask)
-        border = country_border_inner(polys, sil, csize, args.border,
-                                      ImageColor.getrgb(args.border_color) + (255,))
-        img = Image.alpha_composite(img, border)
-
-    # ancien contour blanc (sticker) — conservé si demandé explicitement
-    if args.contour > 0 and polys is not None:
-        contour = country_contour(polys, csize, width=args.contour,
-                                  color=ImageColor.getrgb(args.contour_color) + (255,))
-        img = Image.alpha_composite(contour, img)
+        if args.colors == "bw":
+            def color_func(*a, **k):
+                return (28, 28, 28)
+        else:
+            color_func = make_color_func(args.colors, list(freq.keys()))
+        img = make_cloud(freq, mask, font, color_func,
+                         prefer_horizontal=args.prefer_horizontal)
 
     name = args.name or f"{(args.niche or 'mots').replace(' ', '_')}_{args.mask}_{args.colors}"
     os.makedirs(args.out, exist_ok=True)
