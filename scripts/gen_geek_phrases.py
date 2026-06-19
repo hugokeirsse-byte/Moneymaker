@@ -16,6 +16,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from typo_fonts import load_font  # noqa: E402
+from typo_variants import VARIANTS, adapt  # noqa: E402
 
 from PIL import Image, ImageDraw, ImageFont  # noqa: E402
 
@@ -71,7 +72,10 @@ def fit_size(text, key, max_w, hi=900, lo=20):
     return lo
 
 
-def render(ph, side=4500, margin_ratio=0.09):
+def render(ph, variant="dark", side=4500, margin_ratio=0.09):
+    ink = adapt(INK, variant)
+    gray = adapt(GRAY, variant)
+    accent = adapt(ph["accent"], variant)
     margin = int(side * margin_ratio)
     max_w = side - 2 * margin
 
@@ -102,17 +106,17 @@ def render(ph, side=4500, margin_ratio=0.09):
     d = ImageDraw.Draw(img)
 
     y = margin
-    d.text(((side - sw) // 2, y - soff), ph["small"], font=f_small, fill=GRAY)
+    d.text(((side - sw) // 2, y - soff), ph["small"], font=f_small, fill=gray)
     y += sh + gap1
     # grand : mot en encre + curseur bloc plein coloré (rectangle dessiné)
     bbw = measure(f_big, big)[0]
     x0 = (side - (bbw + cur_gap + cur_w)) // 2
-    d.text((x0, y - boff), big, font=f_big, fill=INK)
+    d.text((x0, y - boff), big, font=f_big, fill=ink)
     cx = x0 + bbw + cur_gap
-    d.rectangle([cx, y, cx + cur_w, y + bh], fill=ph["accent"])
+    d.rectangle([cx, y, cx + cur_w, y + bh], fill=accent)
     y += bh + (gap2 if foot else 0)
     if foot:
-        d.text(((side - fw) // 2, y - foff), foot, font=f_foot, fill=ph["accent"])
+        d.text(((side - fw) // 2, y - foff), foot, font=f_foot, fill=accent)
 
     bbox = img.getbbox()
     if bbox is None:
@@ -133,6 +137,7 @@ def main():
     ap.add_argument("--sheet", default="")
     ap.add_argument("--only", default="")
     ap.add_argument("--lang", default="")
+    ap.add_argument("--variant", default="both", choices=["both", "dark", "light"])
     args = ap.parse_args()
 
     sel = set(args.only.split(",")) if args.only else None
@@ -164,15 +169,16 @@ def main():
         print(f"planche: {args.sheet} ({len(items)})")
         return
 
+    variants = list(VARIANTS) if args.variant == "both" else [args.variant]
     os.makedirs(args.out, exist_ok=True)
     n = 0
     for ph in items:
-        im = render(ph)
-        path = os.path.join(args.out, f"{ph['id']}__{ph['lang']}.png")
-        im.save(path, dpi=(300, 300))
-        print(f"  {path}  ({im.width}×{im.height})")
-        n += 1
-    print(f"\n{n} fichiers → {args.out}")
+        for v in variants:
+            im = render(ph, variant=v)
+            im.save(os.path.join(args.out, f"{ph['id']}__{ph['lang']}__{v}.png"),
+                    dpi=(300, 300))
+            n += 1
+    print(f"{n} fichiers ({len(items)} × {len(variants)} variantes) → {args.out}")
 
 
 if __name__ == "__main__":

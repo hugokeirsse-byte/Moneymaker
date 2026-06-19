@@ -18,6 +18,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from typo_fonts import load_font  # noqa: E402
+from typo_variants import VARIANTS, adapt  # noqa: E402
 
 from PIL import Image, ImageDraw, ImageFont  # noqa: E402
 
@@ -96,17 +97,18 @@ def fit_size(text, key, max_w, hi=1000, lo=20):
     return lo
 
 
-def render(verb, lang_id, lang, tone, side=4500, margin_ratio=0.09):
+def render(verb, lang_id, lang, tone, variant="dark", side=4500, margin_ratio=0.09):
     margin = int(side * margin_ratio)
     max_w = side - 2 * margin
     big_font_key, big_color, label_fr, label_en = lang
     big = label_fr if lang_id == "fr" else label_en
+    big_color = adapt(big_color, variant)
 
     big_sz = fit_size(big, big_font_key, max_w)
     f_big = load_font(big_font_key, big_sz)
 
     verb_key = "script" if tone == "tender" else "hand"
-    verb_color = PLUM if tone == "tender" else GRAY
+    verb_color = adapt(PLUM if tone == "tender" else GRAY, variant)
     verb_sz = max(40, int(big_sz * 0.42))
     while verb_sz > 30 and measure(load_font(verb_key, verb_sz), verb)[0] > max_w:
         verb_sz -= 6
@@ -143,6 +145,7 @@ def main():
     ap.add_argument("--sheet", default="")
     ap.add_argument("--only", default="")
     ap.add_argument("--lang", default="", help="fr | en")
+    ap.add_argument("--variant", default="both", choices=["both", "dark", "light"])
     args = ap.parse_args()
 
     sel = set(args.only.split(",")) if args.only else None
@@ -161,7 +164,7 @@ def main():
         except Exception:
             lab = ImageFont.load_default()
         for i, (cid, lc, verb, lid, tone) in enumerate(items):
-            im = render(verb, lid, LANG[lid], tone, side=1400)
+            im = render(verb, lc, LANG[lid], tone, side=1400)
             im.thumbnail((cell - 30, cell - 54))
             bg = Image.new("RGB", im.size, (255, 255, 255))
             bg.paste(im.convert("RGB"), mask=im.split()[-1])
@@ -174,15 +177,15 @@ def main():
         print(f"planche: {args.sheet} ({len(items)})")
         return
 
+    variants = list(VARIANTS) if args.variant == "both" else [args.variant]
     os.makedirs(args.out, exist_ok=True)
     n = 0
     for cid, lc, verb, lid, tone in items:
-        im = render(verb, lid, LANG[lid], tone)
-        path = os.path.join(args.out, f"{cid}.png")
-        im.save(path, dpi=(300, 300))
-        print(f"  {path}")
-        n += 1
-    print(f"\n{n} fichiers → {args.out}")
+        for v in variants:
+            im = render(verb, lc, LANG[lid], tone, variant=v)
+            im.save(os.path.join(args.out, f"{cid}__{v}.png"), dpi=(300, 300))
+            n += 1
+    print(f"{n} fichiers ({len(items)} × {len(variants)} variantes) → {args.out}")
 
 
 if __name__ == "__main__":

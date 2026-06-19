@@ -16,10 +16,11 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from typo_fonts import load_font  # noqa: E402
+from typo_variants import INK_DARK, VARIANTS, adapt  # noqa: E402
 
 from PIL import Image, ImageDraw, ImageFont  # noqa: E402
 
-INK = (26, 26, 30, 255)
+INK = INK_DARK
 ACCENTS = [
     (190, 46, 38, 255), (32, 90, 168, 255), (40, 120, 70, 255),
     (170, 90, 20, 255), (110, 40, 120, 255), (24, 24, 28, 255),
@@ -68,7 +69,9 @@ def fit_size(lines, key, max_w, hi=1100, lo=20):
     return lo
 
 
-def render(l1, l2, key, accent, side=4500, margin_ratio=0.10):
+def render(l1, l2, key, accent, variant="dark", side=4500, margin_ratio=0.10):
+    ink = adapt(INK, variant)
+    accent = adapt(accent, variant)
     margin = int(side * margin_ratio)
     max_w = side - 2 * margin
     sz = fit_size([l1, l2], key, max_w)
@@ -82,7 +85,7 @@ def render(l1, l2, key, accent, side=4500, margin_ratio=0.10):
     dr = ImageDraw.Draw(img)
 
     y = margin
-    dr.text(((side - d1[0]) // 2, y - d1[2]), l1, font=f, fill=INK)
+    dr.text(((side - d1[0]) // 2, y - d1[2]), l1, font=f, fill=ink)
     y += d1[1] + gap
     dr.text(((side - d2[0]) // 2, y - d2[2]), l2, font=f, fill=accent)
 
@@ -104,6 +107,7 @@ def main():
     ap.add_argument("--out", default="produits/lunaire")
     ap.add_argument("--sheet", default="")
     ap.add_argument("--only", default="")
+    ap.add_argument("--variant", default="both", choices=["both", "dark", "light"])
     args = ap.parse_args()
 
     sel = set(args.only.split(",")) if args.only else None
@@ -133,15 +137,15 @@ def main():
         print(f"planche: {args.sheet} ({len(items)})")
         return
 
+    variants = list(VARIANTS) if args.variant == "both" else [args.variant]
     os.makedirs(args.out, exist_ok=True)
     n = 0
     for i, (pid, l1, l2, key) in enumerate(items):
-        im = render(l1, l2, key, ACCENTS[i % len(ACCENTS)])
-        path = os.path.join(args.out, f"{pid}.png")
-        im.save(path, dpi=(300, 300))
-        print(f"  {path}")
-        n += 1
-    print(f"\n{n} fichiers → {args.out}")
+        for v in variants:
+            im = render(l1, l2, key, ACCENTS[i % len(ACCENTS)], variant=v)
+            im.save(os.path.join(args.out, f"{pid}__{v}.png"), dpi=(300, 300))
+            n += 1
+    print(f"{n} fichiers ({len(items)} × {len(variants)} variantes) → {args.out}")
 
 
 if __name__ == "__main__":

@@ -19,6 +19,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from typo_fonts import load_font  # noqa: E402
+from typo_variants import VARIANTS, adapt  # noqa: E402
 
 from PIL import Image, ImageDraw, ImageFont  # noqa: E402
 
@@ -147,7 +148,7 @@ PHRASES = [
 ]
 
 
-def render_phrase(ph, side=4500, margin_ratio=0.08):
+def render_phrase(ph, variant="dark", side=4500, margin_ratio=0.08):
     margin = int(side * margin_ratio)
     max_w = side - 2 * margin
     lines = ph["lines"]
@@ -163,7 +164,7 @@ def render_phrase(ph, side=4500, margin_ratio=0.08):
             sz -= 6
         f = load_font(key, sz)
         w, h, off = measure(f, txt)
-        rendered.append((txt, f, color, w, h, off))
+        rendered.append((txt, f, adapt(color, variant), w, h, off))
 
     gap = int(ref_size * 0.14)
     total_h = sum(r[4] for r in rendered) + gap * (len(rendered) - 1)
@@ -194,6 +195,7 @@ def main():
     ap.add_argument("--sheet", default="")
     ap.add_argument("--only", default="")
     ap.add_argument("--lang", default="")
+    ap.add_argument("--variant", default="both", choices=["both", "dark", "light"])
     args = ap.parse_args()
 
     sel = set(args.only.split(",")) if args.only else None
@@ -225,15 +227,16 @@ def main():
         print(f"planche: {args.sheet} ({len(items)} phrases)")
         return
 
+    variants = list(VARIANTS) if args.variant == "both" else [args.variant]
     os.makedirs(args.out, exist_ok=True)
     n = 0
     for ph in items:
-        im = render_phrase(ph)
-        out_path = os.path.join(args.out, f"{ph['id']}__{ph['lang']}.png")
-        im.save(out_path, dpi=(300, 300))
-        print(f"  {out_path}  ({im.width}×{im.height})")
-        n += 1
-    print(f"\n{n} fichiers → {args.out}")
+        for v in variants:
+            im = render_phrase(ph, variant=v)
+            im.save(os.path.join(args.out, f"{ph['id']}__{ph['lang']}__{v}.png"),
+                    dpi=(300, 300))
+            n += 1
+    print(f"{n} fichiers ({len(items)} × {len(variants)} variantes) → {args.out}")
 
 
 if __name__ == "__main__":
