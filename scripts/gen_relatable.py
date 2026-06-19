@@ -53,6 +53,22 @@ PHRASES = [
     ("not_now_not_ever", ["Not Now.", "Also Not Later."], {1: "soft"}),
     ("powered_by_caffeine_anxiety", ["Powered by", "Caffeine & Anxiety"], {1: "accent"}),
     ("im_not_arguing", ["I'm Not Arguing", "Just Explaining", "Why I'm Right"], {2: "accent"}),
+    ("fluent_in_sarcasm", ["Fluent", "in Sarcasm"], {1: "accent"}),
+    ("allergic_to_mornings", ["Allergic", "to Mornings"], {1: "accent"}),
+    ("currently_buffering", ["Currently", "Buffering"], {1: "soft"}),
+    ("anti_social_butterfly", ["Anti-Social", "Butterfly"], {1: "accent"}),
+    ("running_on_fumes", ["Running on", "Fumes & Denial"], {1: "accent"}),
+    ("permanently_exhausted", ["Permanently", "Exhausted"], {1: "soft"}),
+    ("selectively_social", ["Selectively", "Social"], {1: "accent"}),
+    ("allergic_to_plans", ["Allergic", "to Plans"], {1: "accent"}),
+    ("here_for_the_snacks", ["Here for", "the Snacks"], {1: "accent"}),
+    ("mentally_on_a_beach", ["Mentally", "on a Beach"], {1: "soft"}),
+    ("functioning_on_vibes", ["Functioning", "on Vibes"], {1: "accent"}),
+    ("professional_procrastinator", ["Professional", "Procrastinator"], {1: "accent"}),
+    ("pretending_to_adult", ["Pretending", "to Adult"], {1: "soft"}),
+    ("emotionally_booked", ["Emotionally", "Booked"], {1: "accent"}),
+    ("powered_by_spite", ["Powered", "by Spite"], {1: "accent"}),
+    ("barely_functional", ["Highly Caffeinated", "Barely Functional"], {1: "accent"}),
 ]
 
 

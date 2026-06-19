@@ -50,6 +50,18 @@ PHRASES = [
     ("emotionally_overrated", ["Emotionally", "Overrated"], {1: "accent"}, None),
     ("iconic_allegedly", ["Iconic", "(Allegedly)"], {1: "soft"}, None),
     ("bare_minimum", ["Giving", "Bare Minimum", "Iconically"], {1: "accent"}, None),
+    ("touch_grass", ["Touch Grass", "(Maybe)"], {1: "soft"}, None),
+    ("main_character", ["Main Character", "Energy"], {1: "accent"}, None),
+    ("lowkey_feral", ["Lowkey", "Feral"], {1: "accent"}, None),
+    ("its_giving_tired", ["It's Giving", "Tired"], {1: "accent"}, None),
+    ("quietly_judging", ["Quietly", "Judging You"], {1: "accent"}, None),
+    ("chronically_online", ["Chronically", "Online"], {1: "accent"}, None),
+    ("romanticizing_nothing", ["Romanticizing", "Nothing"], {1: "soft"}, None),
+    ("living_unbothered", ["Living", "Unbothered"], {1: "accent"}, None),
+    ("peaked_internally", ["Peaked", "Internally"], {1: "soft"}, None),
+    ("aggressively_average", ["Aggressively", "Average"], {1: "accent"}, None),
+    ("allegedly_an_adult", ["Allegedly", "an Adult"], {1: "soft"}, None),
+    ("soft_but_sarcastic", ["Soft but Make", "It Sarcastic"], {1: "accent"}, None),
 ]
 
 
