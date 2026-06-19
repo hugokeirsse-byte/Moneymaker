@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       task:
-        description: 'make_collection | gen_listings_corpus | gen_listings_produits | gen_niche_jokes | gen_wordcloud | gen_country_wc | gen_mosaic | gen_hidden | gen_stacked_rainbow | gen_decomposition | cleanup_pride'
+        description: 'make_collection | gen_listings_corpus | gen_listings_produits | gen_niche_jokes | gen_wordcloud | gen_country_wc | gen_mosaic | gen_hidden | gen_stacked_rainbow | gen_distort | cleanup_pride'
         required: true
         default: 'make_collection'
       limit:
@@ -75,14 +75,30 @@ on:
         description: 'gen_stacked_rainbow : rainbow ou couleur hex'
         required: false
         default: 'rainbow'
-      decomp_text:
-        description: 'gen_decomposition : mot à décomposer (ex. DEPRESSION)'
+      distort_text:
+        description: 'gen_distort : mot qui se DÉFORME (ex. DEPRESSION)'
         required: false
         default: 'DEPRESSION'
-      decomp_color:
-        description: 'gen_decomposition : couleur du texte (hex, défaut noir)'
+      distort_lines:
+        description: 'gen_distort : nombre de lignes empilées (défaut 8)'
+        required: false
+        default: '8'
+      distort_color:
+        description: 'gen_distort : couleur du texte (hex, défaut noir)'
         required: false
         default: '#0f0f0f'
+      country_slug:
+        description: 'gen_country_wc : pays (ireland | new_zealand | usa | italy | jamaica | mexico | france | germany | canada)'
+        required: false
+        default: 'ireland'
+      country_slang:
+        description: 'gen_country_wc : fichier de mots (ex. data/slang_ireland.json)'
+        required: false
+        default: 'data/slang_ireland.json'
+      country_colors:
+        description: 'gen_country_wc : rainbow | black | sunset | ocean | forest | candy'
+        required: false
+        default: 'forest'
 
 permissions:
   contents: write
@@ -106,6 +122,7 @@ jobs:
             produits/word_shapes
             produits/symbol_mosaics
             produits/hidden
+            produits/effets_typo
           sparse-checkout-cone-mode: true
 
       - uses: actions/setup-python@v5
@@ -138,13 +155,17 @@ jobs:
           STACK_LAYERS: ${{ github.event.inputs.stack_layers }}
           STACK_OVERLAP: ${{ github.event.inputs.stack_overlap }}
           STACK_COLORS: ${{ github.event.inputs.stack_colors }}
-          DECOMP_TEXT: ${{ github.event.inputs.decomp_text }}
-          DECOMP_COLOR: ${{ github.event.inputs.decomp_color }}
+          DISTORT_TEXT: ${{ github.event.inputs.distort_text }}
+          DISTORT_LINES: ${{ github.event.inputs.distort_lines }}
+          DISTORT_COLOR: ${{ github.event.inputs.distort_color }}
+          COUNTRY_SLUG: ${{ github.event.inputs.country_slug }}
+          COUNTRY_SLANG: ${{ github.event.inputs.country_slang }}
+          COUNTRY_COLORS: ${{ github.event.inputs.country_colors }}
         run: |
           set -e
           TASK="${{ github.event.inputs.task }}"
           LIM="${{ github.event.inputs.limit || '0' }}"
-          mkdir -p reports/contact reports/listings assets/fonts produits/word_shapes produits/symbol_mosaics produits/hidden
+          mkdir -p reports/contact reports/listings assets/fonts produits/word_shapes produits/symbol_mosaics produits/hidden produits/effets_typo
           if [ "$TASK" = "make_collection" ]; then
             curl -sL "https://raw.githubusercontent.com/google/fonts/main/ofl/kaushanscript/KaushanScript-Regular.ttf" -o assets/fonts/Kaushan_Script.ttf
             python3 -c "import json; d=json.load(open('data/typo_collection.json')); [i.update({'font':'Kaushan Script'}) for i in d['items']]; json.dump(d, open('data/_typo_run.json','w'), ensure_ascii=False)"
@@ -182,14 +203,15 @@ jobs:
               --out produits/hidden --sheet reports/contact/hidden.png
           elif [ "$TASK" = "gen_country_wc" ]; then
             curl -sL "https://raw.githubusercontent.com/google/fonts/main/ofl/kaushanscript/KaushanScript-Regular.ttf" -o assets/fonts/Kaushan_Script.ttf
+            SLUG="${COUNTRY_SLUG:-ireland}"
             python scripts/gen_wordcloud.py \
-              --freq-file data/australia_slang.json \
-              --mask australia \
-              --colors sunset \
+              --freq-file "${COUNTRY_SLANG:-data/slang_ireland.json}" \
+              --mask "country:${SLUG}" \
+              --colors "${COUNTRY_COLORS:-forest}" \
               --font-path assets/fonts/Kaushan_Script.ttf \
               --out produits/word_shapes \
-              --name australia_slang_sunset \
-              --sheet reports/contact/australia_wc.png
+              --name "${SLUG}_slang_${COUNTRY_COLORS:-forest}" \
+              --sheet reports/contact/country_${SLUG}_wc.png
           elif [ "$TASK" = "gen_stacked_rainbow" ]; then
             curl -sL "https://raw.githubusercontent.com/google/fonts/main/ofl/anton/Anton-Regular.ttf" -o assets/fonts/Anton.ttf
             python scripts/gen_stacked_rainbow.py \
@@ -198,16 +220,17 @@ jobs:
               --overlap "${STACK_OVERLAP:-0.18}" \
               --colors "${STACK_COLORS:-rainbow}" \
               --font-path assets/fonts/Anton.ttf \
-              --out produits/hidden \
+              --out produits/effets_typo \
               --sheet reports/contact/stacked_rainbow.png
-          elif [ "$TASK" = "gen_decomposition" ]; then
+          elif [ "$TASK" = "gen_distort" ]; then
             curl -sL "https://raw.githubusercontent.com/google/fonts/main/ofl/anton/Anton-Regular.ttf" -o assets/fonts/Anton.ttf
-            python scripts/gen_decomposition.py \
-              --text "${DECOMP_TEXT:-DEPRESSION}" \
-              --color "${DECOMP_COLOR:-#0f0f0f}" \
+            python scripts/gen_distort.py \
+              --text "${DISTORT_TEXT:-DEPRESSION}" \
+              --lines "${DISTORT_LINES:-8}" \
+              --color "${DISTORT_COLOR:-#0f0f0f}" \
               --font-path assets/fonts/Anton.ttf \
-              --out produits/hidden \
-              --sheet reports/contact/decomposition.png
+              --out produits/effets_typo \
+              --sheet reports/contact/distort.png
           elif [ "$TASK" = "cleanup_pride" ]; then
             python scripts/cleanup_pride_strays.py
           else
@@ -221,7 +244,7 @@ jobs:
           git config user.email "bot@moneymaker.auto"
           git rebase --abort 2>/dev/null || true
           BR=$(git rev-parse --abbrev-ref HEAD)
-          git add -A produits/typographies produits/word_shapes produits/symbol_mosaics produits/hidden reports 2>/dev/null || true
+          git add -A produits/typographies produits/word_shapes produits/symbol_mosaics produits/hidden produits/effets_typo reports 2>/dev/null || true
           if git diff --staged --quiet; then echo "Rien a committer."; exit 0; fi
           git commit -m "typo/listings: ${{ github.event.inputs.task }} — $(date -u +'%Y-%m-%d %H:%M UTC')"
           DELAY=2

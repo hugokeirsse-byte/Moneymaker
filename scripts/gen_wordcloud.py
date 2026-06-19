@@ -107,7 +107,67 @@ def builtin_mask(name, size=1600):
                      "(heart, star, hexagon, circle, diamond, arrow_up, australia)")
 
 
+def country_mask(name, size=2000, margin=0.06, keep_frac=0.07):
+    """Silhouette RÉELLE d'un pays via GeoJSON haute résolution (georgique/world-geojson).
+
+    name : slug du pays en minuscules (ireland, usa, new_zealand, italy, jamaica,
+    france, germany, mexico, canada...). Projette lon/lat (equirectangulaire,
+    corrigée par cos(lat)) et garde les polygones principaux (>= keep_frac de
+    l'aire max) pour écarter les îlots lointains.
+    """
+    import urllib.request
+    slug = name.strip().lower().replace(" ", "_")
+    url = ("https://raw.githubusercontent.com/georgique/world-geojson/"
+           f"develop/countries/{slug}.json")
+    req = urllib.request.Request(url, headers={"User-Agent": "Moneymaker/1.0"})
+    data = json.load(urllib.request.urlopen(req, timeout=40))
+    geom = data["features"][0]["geometry"]
+    if geom["type"] == "Polygon":
+        rings = [geom["coordinates"][0]]
+    else:  # MultiPolygon
+        rings = [poly[0] for poly in geom["coordinates"]]
+
+    def ring_area(r):
+        a = 0.0
+        for i in range(len(r)):
+            x1, y1 = r[i]
+            x2, y2 = r[(i + 1) % len(r)]
+            a += x1 * y2 - x2 * y1
+        return abs(a) / 2.0
+
+    areas = [ring_area(r) for r in rings]
+    amax = max(areas) if areas else 0
+    keep = [r for r, a in zip(rings, areas) if a >= keep_frac * amax]
+
+    pts_all = [pt for r in keep for pt in r]
+    lats = [p[1] for p in pts_all]
+    lat0 = math.radians(sum(lats) / len(lats))
+    kx = math.cos(lat0)  # compression horizontale réaliste
+
+    xs = [p[0] * kx for p in pts_all]
+    ys = [-p[1] for p in pts_all]  # nord en haut
+    minx, maxx = min(xs), max(xs)
+    miny, maxy = min(ys), max(ys)
+    span = max(maxx - minx, maxy - miny) or 1.0
+    inner = size * (1 - 2 * margin)
+    offx = (size - inner * (maxx - minx) / span) / 2
+    offy = (size - inner * (maxy - miny) / span) / 2
+
+    def proj(lon, lat):
+        x = (lon * kx - minx) / span * inner + offx
+        y = (-lat - miny) / span * inner + offy
+        return (x, y)
+
+    img = Image.new("L", (size, size), WHITE)
+    d = ImageDraw.Draw(img)
+    for r in keep:
+        d.polygon([proj(lon, lat) for lon, lat in r], fill=0)
+    return np.array(img)
+
+
 def load_mask(spec):
+    if spec.lower().startswith("country:"):
+        return country_mask(spec.split(":", 1)[1])
     if os.path.isfile(spec):
         im = Image.open(spec).convert("L")
         side = max(im.size)
