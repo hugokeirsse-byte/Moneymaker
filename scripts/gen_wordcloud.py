@@ -254,8 +254,15 @@ def load_mask(spec, size=1600):
     if spec.lower().startswith("country:"):
         return country_mask(spec.split(":", 1)[1], size=size)
     if os.path.isfile(spec):
-        im = Image.open(spec).convert("L")
-        im = im.resize((size, size), Image.LANCZOS)
+        im = Image.open(spec)
+        has_alpha = im.mode in ("RGBA", "LA") or (
+            im.mode == "P" and "transparency" in im.info)
+        if has_alpha:
+            # silhouette = zone opaque (idéal pour les PNG emoji/icônes détourés)
+            alpha = im.convert("RGBA").split()[3].resize((size, size), Image.LANCZOS)
+            arr = np.array(alpha)
+            return np.where(arr > 40, 0, WHITE).astype(np.uint8)
+        im = im.convert("L").resize((size, size), Image.LANCZOS)
         arr = np.array(im)
         return np.where(arr < 128, 0, WHITE).astype(np.uint8)
     return builtin_mask(spec, size=size)
