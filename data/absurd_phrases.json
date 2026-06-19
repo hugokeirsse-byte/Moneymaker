@@ -1,0 +1,27 @@
+{
+  "note": "Phrases absurdes, simples et marrantes — designs typographiques (pas word-cloud). À rendre en gros lettrage.",
+  "phrases": [
+    {"text": "DU SAUCISSON ET LA PAIX", "lang": "fr"},
+    {"text": "INSULTE-MOI EN ALLEMAND", "lang": "fr"},
+    {"text": "INSULTE-MOI EN BERBÈRE", "lang": "fr"},
+    {"text": "PLUS DE FROMAGE MOINS DE PROBLÈMES", "lang": "fr"},
+    {"text": "DU PÂTÉ ET DE L'ESPOIR", "lang": "fr"},
+    {"text": "CÂLINE-MOI EN ITALIEN", "lang": "fr"},
+    {"text": "MOINS DE LUNDI PLUS DE RACLETTE", "lang": "fr"},
+    {"text": "PARLE-MOI EN KLINGON", "lang": "fr"},
+    {"text": "DU VIN ET DU SILENCE", "lang": "fr"},
+    {"text": "CHUCHOTE-MOI DU GRUYÈRE", "lang": "fr"},
+    {"text": "DU JAMBON ET DE LA TENDRESSE", "lang": "fr"},
+    {"text": "MENACE-MOI EN PORTUGAIS", "lang": "fr"},
+    {"text": "INSULT ME IN GERMAN", "lang": "en"},
+    {"text": "INSULT ME IN BERBER", "lang": "en"},
+    {"text": "SAUSAGE AND PEACE", "lang": "en"},
+    {"text": "MORE CHEESE LESS PROBLEMS", "lang": "en"},
+    {"text": "WHISPER TO ME IN KLINGON", "lang": "en"},
+    {"text": "BREAD AND REVENGE", "lang": "en"},
+    {"text": "LESS MONDAY MORE RACLETTE", "lang": "en"},
+    {"text": "THREATEN ME IN PORTUGUESE", "lang": "en"},
+    {"text": "HAM AND TENDERNESS", "lang": "en"},
+    {"text": "COMPLIMENT ME IN FINNISH", "lang": "en"}
+  ]
+}
