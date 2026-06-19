@@ -10,3 +10,5 @@ data/approvals/
 output/colorways/
 output/uploads/colorways/
 output/upscaled/
+# polices téléchargées au runtime (CI), pas besoin de les versionner
+assets/fonts/
