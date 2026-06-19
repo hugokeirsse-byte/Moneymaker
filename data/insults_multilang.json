@@ -1,0 +1,29 @@
+{
+  "entries": [
+    {"word": "AMADÁN",       "meaning": "fool",              "lang": "ga", "country": "Ireland",     "color": "#1a7a3c"},
+    {"word": "FAQUIN",       "meaning": "knave",             "lang": "fr", "country": "France",      "color": "#0055a4"},
+    {"word": "DUMMKOPF",     "meaning": "blockhead",         "lang": "de", "country": "Germany",     "color": "#c0292a"},
+    {"word": "COGLIONE",     "meaning": "idiot",             "lang": "it", "country": "Italy",       "color": "#009246"},
+    {"word": "GILIPOLLA",    "meaning": "dimwit",            "lang": "es", "country": "Spain",       "color": "#c60b1e"},
+    {"word": "PALERMA",      "meaning": "rascal",            "lang": "pt", "country": "Portugal",    "color": "#006600"},
+    {"word": "EIKEL",        "meaning": "jerk",              "lang": "nl", "country": "Netherlands", "color": "#ae1c28"},
+    {"word": "IDIOT",        "meaning": "idiot",             "lang": "sv", "country": "Sweden",      "color": "#006AA7"},
+    {"word": "TOSK",         "meaning": "fool",              "lang": "no", "country": "Norway",      "color": "#ef2b2d"},
+    {"word": "NARR",         "meaning": "fool",              "lang": "da", "country": "Denmark",     "color": "#c8102e"},
+    {"word": "TYPERYS",      "meaning": "idiot",             "lang": "fi", "country": "Finland",     "color": "#003580"},
+    {"word": "IDIOTA",       "meaning": "idiot",             "lang": "pl", "country": "Poland",      "color": "#c8102e"},
+    {"word": "HLUPÁK",       "meaning": "blockhead",         "lang": "sk", "country": "Slovakia",    "color": "#0b4ea2"},
+    {"word": "BLÁZEN",       "meaning": "fool",              "lang": "cs", "country": "Czechia",     "color": "#d7141a"},
+    {"word": "BUDALA",       "meaning": "idiot",             "lang": "tr", "country": "Turkey",      "color": "#e30a17"},
+    {"word": "MALAKAS",      "meaning": "idiot",             "lang": "el", "country": "Greece",      "color": "#0d5eaf"},
+    {"word": "CRETIN",       "meaning": "cretin",            "lang": "ro", "country": "Romania",     "color": "#002B7F"},
+    {"word": "EEJIT",        "meaning": "idiot",             "lang": "en", "country": "UK",          "color": "#012169"},
+    {"word": "MUPPET",       "meaning": "fool",              "lang": "en", "country": "Australia",   "color": "#00008B"},
+    {"word": "NUMPTY",       "meaning": "idiot",             "lang": "en", "country": "Scotland",    "color": "#005EB8"},
+    {"word": "DINGBAT",      "meaning": "fool",              "lang": "en", "country": "USA",         "color": "#B22234"},
+    {"word": "NINCOMPOOP",   "meaning": "fool",              "lang": "en", "country": "Canada",      "color": "#ff0000"},
+    {"word": "BOLUDO",       "meaning": "idiot",             "lang": "es", "country": "Argentina",   "color": "#74ACDF"},
+    {"word": "BABACA",       "meaning": "moron",             "lang": "pt", "country": "Brazil",      "color": "#009c3b"},
+    {"word": "PENDEJO",      "meaning": "idiot",             "lang": "es", "country": "Mexico",      "color": "#006847"}
+  ]
+}

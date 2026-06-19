@@ -100,11 +100,72 @@ def builtin_mask(name, size=1600):
             (0.14, 0.66),
             (0.06, 0.55), (0.05, 0.44),
         ]
-        # Étirer y pour remplir le carré (Australie est plus large que haute)
         pts = [(x, y * 1.20) for x, y in raw]
         return _poly_mask(size, pts)
+    if n in ("fish", "poisson"):
+        # Corps de poisson pointant vers la droite
+        img = Image.new("L", (size, size), WHITE)
+        d = ImageDraw.Draw(img)
+        pts_body = []
+        for t in np.linspace(0, 2 * math.pi, 360):
+            x = 0.72 * math.cos(t)
+            y = 0.28 * math.sin(t) * (1 - 0.35 * abs(math.cos(t)))
+            pts_body.append((0.47 + x * 0.47, 0.5 + y * 0.78))
+        d.polygon([(px * size, py * size) for px, py in pts_body], fill=0)
+        # queue en V à gauche
+        tail = [(0.06, 0.28), (0.19, 0.5), (0.06, 0.72)]
+        d.polygon([(px * size, py * size) for px, py in tail], fill=0)
+        return np.array(img)
+    if n in ("mushroom", "champignon"):
+        img = Image.new("L", (size, size), WHITE)
+        d = ImageDraw.Draw(img)
+        # chapeau : demi-ellipse large en haut
+        d.ellipse([size * 0.10, size * 0.08, size * 0.90, size * 0.68], fill=0)
+        # pied : rectangle centré en bas
+        d.rectangle([size * 0.37, size * 0.52, size * 0.63, size * 0.90], fill=0)
+        # découpe du bas du chapeau (aplatit le dessous de l'ellipse)
+        d.rectangle([0, size * 0.52, size, size * 0.68], fill=WHITE)
+        return np.array(img)
+    if n in ("guitar", "guitare"):
+        img = Image.new("L", (size, size), WHITE)
+        d = ImageDraw.Draw(img)
+        # caisse du bas (grand corps)
+        d.ellipse([size * 0.15, size * 0.48, size * 0.85, size * 0.94], fill=0)
+        # caisse du haut (petit corps)
+        d.ellipse([size * 0.22, size * 0.24, size * 0.78, size * 0.62], fill=0)
+        # manche
+        d.rectangle([size * 0.43, size * 0.06, size * 0.57, size * 0.38], fill=0)
+        return np.array(img)
+    if n in ("paw", "patte"):
+        img = Image.new("L", (size, size), WHITE)
+        d = ImageDraw.Draw(img)
+        # paume principale
+        d.ellipse([size * 0.18, size * 0.35, size * 0.82, size * 0.92], fill=0)
+        # 4 coussinets (orteils)
+        positions = [(0.15, 0.10), (0.38, 0.05), (0.62, 0.05), (0.85, 0.10)]
+        for cx, cy in positions:
+            r = 0.10
+            d.ellipse([size * (cx - r), size * (cy), size * (cx + r), size * (cy + 0.22)], fill=0)
+        return np.array(img)
+    if n in ("bicycle", "velo", "vélo"):
+        img = Image.new("L", (size, size), WHITE)
+        d = ImageDraw.Draw(img)
+        r = int(size * 0.20)
+        # roue gauche
+        d.ellipse([size * 0.05, size * 0.38, size * 0.45, size * 0.92], fill=0)
+        d.ellipse([size * 0.12, size * 0.46, size * 0.38, size * 0.84], fill=WHITE)
+        # roue droite
+        d.ellipse([size * 0.55, size * 0.38, size * 0.95, size * 0.92], fill=0)
+        d.ellipse([size * 0.62, size * 0.46, size * 0.88, size * 0.84], fill=WHITE)
+        # cadre (triangle)
+        frame = [(0.25, 0.65), (0.50, 0.25), (0.75, 0.65)]
+        d.polygon([(px * size, py * size) for px, py in frame], fill=0)
+        # selle
+        d.rectangle([size * 0.43, size * 0.22, size * 0.60, size * 0.30], fill=0)
+        return np.array(img)
     raise SystemExit(f"masque intégré inconnu : {name} "
-                     "(heart, star, hexagon, circle, diamond, arrow_up, australia)")
+                     "(heart, star, hexagon, circle, diamond, arrow_up, australia, "
+                     "fish, mushroom, guitar, paw, bicycle)")
 
 
 def country_data(name, size=2000, margin=0.06, keep_frac=0.07):
@@ -187,18 +248,15 @@ def country_contour(polys, size, width=12, color=(255, 255, 255, 255)):
     return img
 
 
-def load_mask(spec):
+def load_mask(spec, size=1600):
     if spec.lower().startswith("country:"):
-        return country_mask(spec.split(":", 1)[1])
+        return country_mask(spec.split(":", 1)[1], size=size)
     if os.path.isfile(spec):
         im = Image.open(spec).convert("L")
-        side = max(im.size)
-        canvas = Image.new("L", (side, side), WHITE)
-        canvas.paste(im, ((side - im.width) // 2, (side - im.height) // 2))
-        arr = np.array(canvas)
-        # binarise : sombre = forme à remplir
+        im = im.resize((size, size), Image.LANCZOS)
+        arr = np.array(im)
         return np.where(arr < 128, 0, WHITE).astype(np.uint8)
-    return builtin_mask(spec)
+    return builtin_mask(spec, size=size)
 
 
 # ---------------------------------------------------------------- couleurs
@@ -395,12 +453,15 @@ def render_country(freq, slug, mask, polys, sil, font, colors, size,
         fillcol = Image.fromarray(
             np.dstack([bands, np.full((size, size), 255, np.uint8)]), "RGBA")
         fillcol.putalpha(alpha)
-        # contour NOIR autour des mots (intérieur en couleur)
-        ow = outline or max(3, size // 700)
-        oa = dilate_alpha(alpha, ow)
-        ol = Image.new("RGBA", (size, size), (0, 0, 0, 255))
-        ol.putalpha(oa)
-        words_img = Image.alpha_composite(ol, fillcol)
+        # contour optionnel autour des mots (outline>0 seulement)
+        if outline and outline > 0:
+            ow = outline
+            oa = dilate_alpha(alpha, ow)
+            ol = Image.new("RGBA", (size, size), (0, 0, 0, 255))
+            ol.putalpha(oa)
+            words_img = Image.alpha_composite(ol, fillcol)
+        else:
+            words_img = fillcol
     else:  # bw : noir plein, pas de contour (le plus propre)
         fillcol = Image.new("RGBA", (size, size), (22, 22, 22, 255))
         fillcol.putalpha(alpha)
@@ -483,7 +544,7 @@ def main():
             fill=args.fill or "#ffffff", outline=args.word_outline, seed=args.seed)
     else:
         # --- masque non-pays : nuage classique
-        mask = load_mask(args.mask)
+        mask = load_mask(args.mask, size=args.size)
         if args.colors == "bw":
             def color_func(*a, **k):
                 return (28, 28, 28)
