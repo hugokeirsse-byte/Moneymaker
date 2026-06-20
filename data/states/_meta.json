@@ -118,5 +118,375 @@
       "#A6192E"
     ],
     "word_count": 28
+  },
+  "alabama": {
+    "name": "Alabama",
+    "nickname": "The Yellowhammer State",
+    "description": "Sud profond : football, gospel et hospitalité.",
+    "colors": [
+      "#A6192E",
+      "#11294D"
+    ],
+    "word_count": 20
+  },
+  "alaska": {
+    "name": "Alaska",
+    "nickname": "The Last Frontier",
+    "description": "Nature sauvage : glaciers, ours et aurores boréales.",
+    "colors": [
+      "#11294D",
+      "#0072CE"
+    ],
+    "word_count": 20
+  },
+  "arkansas": {
+    "name": "Arkansas",
+    "nickname": "The Natural State",
+    "description": "Montagnes Ozark, rivières et diamants.",
+    "colors": [
+      "#A6192E",
+      "#1B5E3A"
+    ],
+    "word_count": 20
+  },
+  "connecticut": {
+    "name": "Connecticut",
+    "nickname": "The Constitution State",
+    "description": "Nouvelle-Angleterre : côte, histoire et automne.",
+    "colors": [
+      "#0A1F44",
+      "#A6192E"
+    ],
+    "word_count": 20
+  },
+  "delaware": {
+    "name": "Delaware",
+    "nickname": "The First State",
+    "description": "Petit mais premier : plages et histoire coloniale.",
+    "colors": [
+      "#00529B",
+      "#FFCB05"
+    ],
+    "word_count": 20
+  },
+  "idaho": {
+    "name": "Idaho",
+    "nickname": "The Gem State",
+    "description": "Pommes de terre, montagnes et rivières sauvages.",
+    "colors": [
+      "#1B5E3A",
+      "#A6192E"
+    ],
+    "word_count": 20
+  },
+  "illinois": {
+    "name": "Illinois",
+    "nickname": "The Prairie State",
+    "description": "Chicago, gratte-ciel, blues et deep dish.",
+    "colors": [
+      "#0072CE",
+      "#A6192E"
+    ],
+    "word_count": 20
+  },
+  "indiana": {
+    "name": "Indiana",
+    "nickname": "The Hoosier State",
+    "description": "Course automobile, basket et campagne.",
+    "colors": [
+      "#11294D",
+      "#FFCB05"
+    ],
+    "word_count": 20
+  },
+  "iowa": {
+    "name": "Iowa",
+    "nickname": "The Hawkeye State",
+    "description": "Champs de maïs à perte de vue, esprit du Midwest.",
+    "colors": [
+      "#A6192E",
+      "#FFCB05"
+    ],
+    "word_count": 20
+  },
+  "kansas": {
+    "name": "Kansas",
+    "nickname": "The Sunflower State",
+    "description": "Grandes plaines, tournesols et tornades.",
+    "colors": [
+      "#0072CE",
+      "#FFCB05"
+    ],
+    "word_count": 20
+  },
+  "kentucky": {
+    "name": "Kentucky",
+    "nickname": "The Bluegrass State",
+    "description": "Bourbon, chevaux pur-sang et bluegrass.",
+    "colors": [
+      "#11294D",
+      "#A6192E"
+    ],
+    "word_count": 20
+  },
+  "maine": {
+    "name": "Maine",
+    "nickname": "The Pine Tree State",
+    "description": "Côte rocheuse, homard et phares.",
+    "colors": [
+      "#1B5E3A",
+      "#A6192E"
+    ],
+    "word_count": 20
+  },
+  "maryland": {
+    "name": "Maryland",
+    "nickname": "The Old Line State",
+    "description": "Crabe bleu, Chesapeake et marins.",
+    "colors": [
+      "#A6192E",
+      "#FFCB05"
+    ],
+    "word_count": 20
+  },
+  "minnesota": {
+    "name": "Minnesota",
+    "nickname": "The North Star State",
+    "description": "10 000 lacs, hivers rudes et gentillesse.",
+    "colors": [
+      "#11294D",
+      "#A6192E"
+    ],
+    "word_count": 20
+  },
+  "mississippi": {
+    "name": "Mississippi",
+    "nickname": "The Magnolia State",
+    "description": "Berceau du blues, magnolias et delta.",
+    "colors": [
+      "#A6192E",
+      "#11294D"
+    ],
+    "word_count": 20
+  },
+  "missouri": {
+    "name": "Missouri",
+    "nickname": "The Show-Me State",
+    "description": "La Gateway Arch, BBQ et confluents.",
+    "colors": [
+      "#A6192E",
+      "#11294D"
+    ],
+    "word_count": 20
+  },
+  "montana": {
+    "name": "Montana",
+    "nickname": "The Treasure State",
+    "description": "Big Sky : montagnes, bisons et grands espaces.",
+    "colors": [
+      "#11294D",
+      "#1B5E3A"
+    ],
+    "word_count": 20
+  },
+  "nebraska": {
+    "name": "Nebraska",
+    "nickname": "The Cornhusker State",
+    "description": "Maïs, plaines et football universitaire.",
+    "colors": [
+      "#A6192E",
+      "#FFCB05"
+    ],
+    "word_count": 20
+  },
+  "nevada": {
+    "name": "Nevada",
+    "nickname": "The Silver State",
+    "description": "Néons de Vegas et déserts immenses.",
+    "colors": [
+      "#11294D",
+      "#C0C0C0"
+    ],
+    "word_count": 20
+  },
+  "new_hampshire": {
+    "name": "New Hampshire",
+    "nickname": "The Granite State",
+    "description": "Montagnes blanches, érable et indépendance.",
+    "colors": [
+      "#0A1F44",
+      "#A6192E"
+    ],
+    "word_count": 20
+  },
+  "new_jersey": {
+    "name": "New Jersey",
+    "nickname": "The Garden State",
+    "description": "Bord de mer, diners et attitude.",
+    "colors": [
+      "#FFCB05",
+      "#11294D"
+    ],
+    "word_count": 20
+  },
+  "new_mexico": {
+    "name": "New Mexico",
+    "nickname": "The Land of Enchantment",
+    "description": "Désert rouge, piment et art pueblo.",
+    "colors": [
+      "#C84E00",
+      "#C9A227"
+    ],
+    "word_count": 20
+  },
+  "north_carolina": {
+    "name": "North Carolina",
+    "nickname": "The Tar Heel State",
+    "description": "BBQ, montagnes Blue Ridge et côte.",
+    "colors": [
+      "#0072CE",
+      "#A6192E"
+    ],
+    "word_count": 20
+  },
+  "north_dakota": {
+    "name": "North Dakota",
+    "nickname": "The Peace Garden State",
+    "description": "Badlands, prairies et bisons.",
+    "colors": [
+      "#11294D",
+      "#1B5E3A"
+    ],
+    "word_count": 20
+  },
+  "ohio": {
+    "name": "Ohio",
+    "nickname": "The Buckeye State",
+    "description": "Rock and roll, buckeyes et cœur du Midwest.",
+    "colors": [
+      "#A6192E",
+      "#11294D"
+    ],
+    "word_count": 20
+  },
+  "oklahoma": {
+    "name": "Oklahoma",
+    "nickname": "The Sooner State",
+    "description": "Prairie, pétrole et esprit pionnier.",
+    "colors": [
+      "#A6192E",
+      "#1B5E3A"
+    ],
+    "word_count": 20
+  },
+  "oregon": {
+    "name": "Oregon",
+    "nickname": "The Beaver State",
+    "description": "Forêts, côte sauvage et café.",
+    "colors": [
+      "#1B5E3A",
+      "#0072CE"
+    ],
+    "word_count": 20
+  },
+  "pennsylvania": {
+    "name": "Pennsylvania",
+    "nickname": "The Keystone State",
+    "description": "Cloche de la Liberté, cheesesteak et Amish.",
+    "colors": [
+      "#11294D",
+      "#FFCB05"
+    ],
+    "word_count": 20
+  },
+  "rhode_island": {
+    "name": "Rhode Island",
+    "nickname": "The Ocean State",
+    "description": "Le plus petit État : océan, voile et calamars.",
+    "colors": [
+      "#0072CE",
+      "#FFCB05"
+    ],
+    "word_count": 20
+  },
+  "south_carolina": {
+    "name": "South Carolina",
+    "nickname": "The Palmetto State",
+    "description": "Côte basse, palmiers et hospitalité.",
+    "colors": [
+      "#11294D",
+      "#A6192E"
+    ],
+    "word_count": 20
+  },
+  "south_dakota": {
+    "name": "South Dakota",
+    "nickname": "The Mount Rushmore State",
+    "description": "Rushmore, Badlands et bisons.",
+    "colors": [
+      "#11294D",
+      "#A6192E"
+    ],
+    "word_count": 20
+  },
+  "utah": {
+    "name": "Utah",
+    "nickname": "The Beehive State",
+    "description": "Canyons rouges, arches et neige poudreuse.",
+    "colors": [
+      "#11294D",
+      "#A6192E"
+    ],
+    "word_count": 20
+  },
+  "vermont": {
+    "name": "Vermont",
+    "nickname": "The Green Mountain State",
+    "description": "Sirop d'érable, vaches et automne.",
+    "colors": [
+      "#1B5E3A",
+      "#A6192E"
+    ],
+    "word_count": 20
+  },
+  "virginia": {
+    "name": "Virginia",
+    "nickname": "The Old Dominion",
+    "description": "Histoire coloniale, Blue Ridge et jambon.",
+    "colors": [
+      "#11294D",
+      "#A6192E"
+    ],
+    "word_count": 20
+  },
+  "west_virginia": {
+    "name": "West Virginia",
+    "nickname": "The Mountain State",
+    "description": "Appalaches sauvages, charbon et bluegrass.",
+    "colors": [
+      "#11294D",
+      "#FFCB05"
+    ],
+    "word_count": 20
+  },
+  "wisconsin": {
+    "name": "Wisconsin",
+    "nickname": "The Badger State",
+    "description": "Fromage, lacs et bière.",
+    "colors": [
+      "#11294D",
+      "#A6192E"
+    ],
+    "word_count": 20
+  },
+  "wyoming": {
+    "name": "Wyoming",
+    "nickname": "The Equality State",
+    "description": "Yellowstone, cowboys et grands espaces.",
+    "colors": [
+      "#A6192E",
+      "#11294D"
+    ],
+    "word_count": 20
   }
 }
