@@ -1,0 +1,122 @@
+{
+  "texas": {
+    "name": "Texas",
+    "nickname": "The Lone Star State",
+    "description": "Fierté texane : ranch, BBQ et esprit pionnier. Tout est plus grand au Texas.",
+    "colors": [
+      "#002868",
+      "#BF0A30"
+    ],
+    "word_count": 30
+  },
+  "california": {
+    "name": "California",
+    "nickname": "The Golden State",
+    "description": "Soleil, surf et rêve hollywoodien, des séquoias à la Silicon Valley.",
+    "colors": [
+      "#F5A800",
+      "#046A38"
+    ],
+    "word_count": 30
+  },
+  "florida": {
+    "name": "Florida",
+    "nickname": "The Sunshine State",
+    "description": "Plages, alligators et oranges sous une chaleur tropicale permanente.",
+    "colors": [
+      "#FF7A00",
+      "#00A6A6"
+    ],
+    "word_count": 29
+  },
+  "new_york": {
+    "name": "New York",
+    "nickname": "The Empire State",
+    "description": "L'énergie de New York City, des bagels au sommet des gratte-ciel.",
+    "colors": [
+      "#1A3A6B",
+      "#FF6A00"
+    ],
+    "word_count": 28
+  },
+  "arizona": {
+    "name": "Arizona",
+    "nickname": "The Grand Canyon State",
+    "description": "Déserts ocre, cactus saguaro et couchers de soleil sur le Grand Canyon.",
+    "colors": [
+      "#C84E00",
+      "#1AA7A0"
+    ],
+    "word_count": 30
+  },
+  "colorado": {
+    "name": "Colorado",
+    "nickname": "The Centennial State",
+    "description": "Les Rocheuses, le ski et l'air pur d'altitude (Mile High).",
+    "colors": [
+      "#1B5E3A",
+      "#C9A227"
+    ],
+    "word_count": 28
+  },
+  "tennessee": {
+    "name": "Tennessee",
+    "nickname": "The Volunteer State",
+    "description": "Berceau de la musique : Nashville, Memphis, blues et country.",
+    "colors": [
+      "#B0202E",
+      "#11294D"
+    ],
+    "word_count": 28
+  },
+  "louisiana": {
+    "name": "Louisiana",
+    "nickname": "The Pelican State",
+    "description": "La Nouvelle-Orléans, le jazz, la cuisine cajun et l'esprit Mardi Gras.",
+    "colors": [
+      "#5B2A86",
+      "#C9A227"
+    ],
+    "word_count": 28
+  },
+  "georgia": {
+    "name": "Georgia",
+    "nickname": "The Peach State",
+    "description": "Hospitalité du Sud, pêches, thé glacé et grandes vérandas.",
+    "colors": [
+      "#E8985E",
+      "#BA0C2F"
+    ],
+    "word_count": 28
+  },
+  "michigan": {
+    "name": "Michigan",
+    "nickname": "The Great Lakes State",
+    "description": "Les Grands Lacs, Detroit la Motor City, cerises et grand Nord.",
+    "colors": [
+      "#00529B",
+      "#FFCB05"
+    ],
+    "word_count": 28
+  },
+  "washington": {
+    "name": "Washington",
+    "nickname": "The Evergreen State",
+    "description": "Forêts pluvieuses, café, Mount Rainier et esprit Pacifique.",
+    "colors": [
+      "#154734",
+      "#2E6F95"
+    ],
+    "word_count": 28
+  },
+  "massachusetts": {
+    "name": "Massachusetts",
+    "nickname": "The Bay State",
+    "description": "Berceau de la Révolution : Boston, Cape Cod, homard et chaudrée.",
+    "colors": [
+      "#0A1F44",
+      "#A6192E"
+    ],
+    "word_count": 28
+  }
+}
