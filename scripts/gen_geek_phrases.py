@@ -54,6 +54,33 @@ PHRASES = [
     {"id": "talk_to_me_in_binary", "lang": "en",
      "small": "> talk_to_me", "big": "IN_BINARY", "accent": TERM,
      "footer": "01001100 01001111 01010110 01000101"},
+
+    # ---- DE (allemand) ----
+    {"id": "beleidige_mich_klingonisch", "lang": "de",
+     "small": "> beleidige_mich", "big": "AUF_KLINGONISCH", "accent": TERM},
+    {"id": "fluester_mir_elbisch", "lang": "de",
+     "small": "> fluester_mir", "big": "AUF_ELBISCH", "accent": CYAN},
+    {"id": "rede_mit_mir_binaer", "lang": "de",
+     "small": "> rede_mit_mir", "big": "AUF_BINÄR", "accent": TERM,
+     "footer": "01001100 01001001 01000101 01000010 01000101"},
+
+    # ---- ES (espagnol) ----
+    {"id": "insultame_en_klingon", "lang": "es",
+     "small": "> insultame", "big": "EN_KLINGON", "accent": TERM},
+    {"id": "susurrame_en_elfico", "lang": "es",
+     "small": "> susurrame", "big": "EN_ELFICO", "accent": CYAN},
+    {"id": "hablame_en_binario", "lang": "es",
+     "small": "> hablame", "big": "EN_BINARIO", "accent": TERM,
+     "footer": "01000001 01001101 01001111 01010010"},
+
+    # ---- IT (italien) ----
+    {"id": "insultami_in_klingon", "lang": "it",
+     "small": "> insultami", "big": "IN_KLINGON", "accent": TERM},
+    {"id": "sussurrami_in_elfico", "lang": "it",
+     "small": "> sussurrami", "big": "IN_ELFICO", "accent": CYAN},
+    {"id": "parlami_in_binario", "lang": "it",
+     "small": "> parlami", "big": "IN_BINARIO", "accent": TERM,
+     "footer": "01000001 01001101 01001111 01010010 01000101"},
 ]
 
 
