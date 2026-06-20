@@ -314,6 +314,12 @@ def make_color_func(mode, words):
         def cf(*a, **k):
             return (20, 20, 20)
         return cf
+    if mode.startswith("#"):          # couleur unie
+        rgb = ImageColor.getrgb(mode)
+
+        def cf(*a, **k):
+            return rgb
+        return cf
     if mode in PALETTES:
         pal = PALETTES[mode]
         state = {"i": 0}
