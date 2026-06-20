@@ -145,6 +145,42 @@ PHRASES = [
     {"id": "compliment_me_in_finnish", "lang": "en", "lines": [
         ("compliment me", "hand", GRAY, 0.46),
         ("IN FINNISH", "block", COLD, 1.0)]},
+
+    # --- localisé US/UK ---
+    {"id": "bacon_and_hope", "lang": "en", "lines": [
+        ("BACON", "impact", WARM, 1.0),
+        ("and hope", "elegant", GRAY, 0.50)]},
+    {"id": "more_coffee_less_monday", "lang": "en", "lines": [
+        ("more", "hand", GRAY, 0.40),
+        ("COFFEE", "fatserif", (90, 60, 40, 255), 1.0),
+        ("less monday", "block", COLD, 0.40)]},
+    {"id": "donuts_and_destiny", "lang": "en", "lines": [
+        ("DONUTS", "impact", PLUM, 1.0),
+        ("and destiny", "script", GRAY, 0.42)]},
+    {"id": "tea_and_spite_uk", "lang": "en", "lines": [
+        ("TEA", "fatserif", (110, 70, 40, 255), 1.0),
+        ("and spite", "elegant", GRAY, 0.55)]},
+    {"id": "beans_on_toast_tolerance_uk", "lang": "en", "lines": [
+        ("BEANS ON TOAST", "block", GOLD, 0.78),
+        ("and tolerance", "script", GRAY, 0.40)]},
+
+    # --- localisé DE (allemand) ---
+    {"id": "mehr_bier_weniger_probleme", "lang": "de", "lines": [
+        ("mehr", "hand", GRAY, 0.40),
+        ("BIER", "impact", GOLD, 1.0),
+        ("weniger probleme", "block", DARK, 0.42)]},
+    {"id": "wurst_und_frieden", "lang": "de", "lines": [
+        ("WURST", "impact", WARM, 1.0),
+        ("und frieden", "elegant", GRAY, 0.48)]},
+    {"id": "brot_und_rache", "lang": "de", "lines": [
+        ("BROT", "fatserif", GOLD, 1.0),
+        ("und rache", "block", DARK, 0.46)]},
+    {"id": "kaese_und_hoffnung", "lang": "de", "lines": [
+        ("KÄSE", "impact", GOLD, 1.0),
+        ("und hoffnung", "elegant", GRAY, 0.48)]},
+    {"id": "beleidige_mich_bayerisch", "lang": "de", "lines": [
+        ("beleidige mich", "hand", GRAY, 0.45),
+        ("AUF BAYERISCH", "block", COLD, 1.0)]},
 ]
 
 
