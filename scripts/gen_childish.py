@@ -22,7 +22,7 @@ from typo_variants import VARIANTS, adapt  # noqa: E402
 from PIL import Image, ImageDraw  # noqa: E402
 
 INK = (32, 30, 30, 255)
-DROP = (70, 150, 210, 255)   # goutte bleue
+DROP = (190, 46, 38, 255)   # goutte rouge
 
 # id, lignes, drops(bool)
 DESIGNS = [
@@ -40,7 +40,7 @@ def measure(font, text):
     return box[2] - box[0], box[3] - box[1], box[1]
 
 
-def fit_size(lines, key, max_w, hi=520, lo=20):
+def fit_size(lines, key, max_w, hi=760, lo=20):
     while lo < hi:
         mid = (lo + hi + 1) // 2
         f = load_font(key, mid)
@@ -67,8 +67,8 @@ def render(lines, drops, variant, side=4500):
     drop_col = adapt(DROP, variant)
     margin = int(side * 0.10)
     max_w = side - 2 * margin
-    sz = fit_size(lines, "marker", max_w)
-    f = load_font("marker", sz)
+    sz = fit_size(lines, "script", max_w)
+    f = load_font("script", sz)
     gap = int(sz * 0.10)
 
     dims = [measure(f, t) for t in lines]

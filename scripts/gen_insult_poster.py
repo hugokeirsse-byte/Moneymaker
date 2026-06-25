@@ -20,12 +20,9 @@ from typo_variants import VARIANTS, adapt  # noqa: E402
 
 from PIL import Image, ImageDraw  # noqa: E402
 
-# rotation de styles « belle typo » pour un mot seul
-STYLE_CYCLE = ["fatserif", "elegant", "impact", "retro", "block", "tall"]
-COLOR_CYCLE = [
-    (24, 24, 28), (176, 48, 20), (24, 64, 150),
-    (170, 120, 0), (38, 110, 52), (120, 30, 110),
-]
+# Pacifico pour tous, alternance noir / rouge
+STYLE_CYCLE = ["script"]
+COLOR_CYCLE = [(24, 24, 28), (190, 46, 38)]
 
 
 def measure(font, text):

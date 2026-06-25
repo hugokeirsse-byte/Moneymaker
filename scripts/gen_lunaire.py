@@ -21,35 +21,32 @@ from typo_variants import INK_DARK, VARIANTS, adapt  # noqa: E402
 from PIL import Image, ImageDraw, ImageFont  # noqa: E402
 
 INK = INK_DARK
-ACCENTS = [
-    (190, 46, 38, 255), (32, 90, 168, 255), (40, 120, 70, 255),
-    (170, 90, 20, 255), (110, 40, 120, 255), (24, 24, 28, 255),
-]
+RED = (190, 46, 38, 255)
 
-# (id, ligne1, ligne2, police, rime?) — déadpan, deux mots, gros
+# (id, ligne1, ligne2) — déadpan, deux mots, gros
 PHRASES = [
-    ("facteur_dompteur", "FACTEUR", "DOMPTEUR", "impact"),
-    ("plombier_lunaire", "PLOMBIER", "LUNAIRE", "block"),
-    ("notaire_sauvage", "NOTAIRE", "SAUVAGE", "tall"),
-    ("boulanger_nucleaire", "BOULANGER", "NUCLÉAIRE", "impact"),
-    ("comptable_feroce", "COMPTABLE", "FÉROCE", "block"),
-    ("docteur_flatteur", "DOCTEUR", "FLATTEUR", "fjalla"),
-    ("huissier_de_combat", "HUISSIER", "DE COMBAT", "impact"),
-    ("pasteur_amateur", "PASTEUR", "AMATEUR", "tall"),
-    ("charcutier_quantique", "CHARCUTIER", "QUANTIQUE", "block"),
-    ("dentiste_viking", "DENTISTE", "VIKING", "impact"),
-    ("pigeon_tactique", "PIGEON", "TACTIQUE", "fjalla"),
-    ("retraite_balistique", "RETRAITÉ", "BALISTIQUE", "block"),
-    ("plongeur_vengeur", "PLONGEUR", "VENGEUR", "impact"),
-    ("fromager_mercenaire", "FROMAGER", "MERCENAIRE", "tall"),
-    ("depute_aquatique", "DÉPUTÉ", "AQUATIQUE", "block"),
-    ("tracteur_emotionnel", "TRACTEUR", "ÉMOTIONNEL", "fjalla"),
-    ("eveque_bionique", "ÉVÊQUE", "BIONIQUE", "impact"),
-    ("gendarme_melancolique", "GENDARME", "MÉLANCOLIQUE", "block"),
-    ("facteur_intersideral", "FACTEUR", "INTERSIDÉRAL", "tall"),
-    ("chanteur_menteur", "CHANTEUR", "MENTEUR", "impact"),
-    ("boxeur_reveur", "BOXEUR", "RÊVEUR", "fjalla"),
-    ("avocat_maritime", "AVOCAT", "MARITIME", "block"),
+    ("facteur_dompteur", "FACTEUR", "DOMPTEUR"),
+    ("plombier_lunaire", "PLOMBIER", "LUNAIRE"),
+    ("notaire_sauvage", "NOTAIRE", "SAUVAGE"),
+    ("boulanger_nucleaire", "BOULANGER", "NUCLÉAIRE"),
+    ("comptable_feroce", "COMPTABLE", "FÉROCE"),
+    ("docteur_flatteur", "DOCTEUR", "FLATTEUR"),
+    ("huissier_de_combat", "HUISSIER", "DE COMBAT"),
+    ("pasteur_amateur", "PASTEUR", "AMATEUR"),
+    ("charcutier_quantique", "CHARCUTIER", "QUANTIQUE"),
+    ("dentiste_viking", "DENTISTE", "VIKING"),
+    ("pigeon_tactique", "PIGEON", "TACTIQUE"),
+    ("retraite_balistique", "RETRAITÉ", "BALISTIQUE"),
+    ("plongeur_vengeur", "PLONGEUR", "VENGEUR"),
+    ("fromager_mercenaire", "FROMAGER", "MERCENAIRE"),
+    ("depute_aquatique", "DÉPUTÉ", "AQUATIQUE"),
+    ("tracteur_emotionnel", "TRACTEUR", "ÉMOTIONNEL"),
+    ("eveque_bionique", "ÉVÊQUE", "BIONIQUE"),
+    ("gendarme_melancolique", "GENDARME", "MÉLANCOLIQUE"),
+    ("facteur_intersideral", "FACTEUR", "INTERSIDÉRAL"),
+    ("chanteur_menteur", "CHANTEUR", "MENTEUR"),
+    ("boxeur_reveur", "BOXEUR", "RÊVEUR"),
+    ("avocat_maritime", "AVOCAT", "MARITIME"),
 ]
 
 
@@ -58,10 +55,10 @@ def measure(font, text):
     return box[2] - box[0], box[3] - box[1], box[1]
 
 
-def fit_size(lines, key, max_w, hi=1100, lo=20):
+def fit_size(lines, max_w, hi=1100, lo=20):
     while lo < hi:
         mid = (lo + hi + 1) // 2
-        f = load_font(key, mid)
+        f = load_font("script", mid)
         if max(measure(f, t)[0] for t in lines) <= max_w:
             lo = mid
         else:
@@ -69,13 +66,13 @@ def fit_size(lines, key, max_w, hi=1100, lo=20):
     return lo
 
 
-def render(l1, l2, key, accent, variant="dark", side=4500, margin_ratio=0.10):
+def render(l1, l2, variant="dark", side=4500, margin_ratio=0.10):
     ink = adapt(INK, variant)
-    accent = adapt(accent, variant)
+    accent = adapt(RED, variant)
     margin = int(side * margin_ratio)
     max_w = side - 2 * margin
-    sz = fit_size([l1, l2], key, max_w)
-    f = load_font(key, sz)
+    sz = fit_size([l1, l2], max_w)
+    f = load_font("script", sz)
     gap = int(sz * 0.06)
 
     d1 = measure(f, l1)
@@ -123,8 +120,8 @@ def main():
             lab = load_font("fjalla", 18)
         except Exception:
             lab = ImageFont.load_default()
-        for i, (pid, l1, l2, key) in enumerate(items):
-            im = render(l1, l2, key, ACCENTS[i % len(ACCENTS)], side=1400)
+        for i, (pid, l1, l2) in enumerate(items):
+            im = render(l1, l2, side=1400)
             im.thumbnail((cell - 30, cell - 56))
             bg = Image.new("RGB", im.size, (255, 255, 255))
             bg.paste(im.convert("RGB"), mask=im.split()[-1])
@@ -140,9 +137,9 @@ def main():
     variants = list(VARIANTS) if args.variant == "both" else [args.variant]
     os.makedirs(args.out, exist_ok=True)
     n = 0
-    for i, (pid, l1, l2, key) in enumerate(items):
+    for i, (pid, l1, l2) in enumerate(items):
         for v in variants:
-            im = render(l1, l2, key, ACCENTS[i % len(ACCENTS)], variant=v)
+            im = render(l1, l2, variant=v)
             im.save(os.path.join(args.out, f"{pid}__{v}.png"), dpi=(300, 300))
             n += 1
     print(f"{n} fichiers ({len(items)} × {len(variants)} variantes) → {args.out}")

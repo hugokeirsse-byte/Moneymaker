@@ -101,17 +101,17 @@ def render(q, variant, side=4500):
     med = medallion(slug, author, diam, ink)
     img.alpha_composite(med, ((side - diam) // 2, int(side * 0.10)))
 
-    # citation : Playfair italic, multi-lignes, gros guillemets
+    # citation : Pacifico, multi-lignes, guillemets
     qf_size = int(side * 0.085)
-    quote_txt = f"“{quote}”"
+    quote_txt = chr(0x201c) + quote + chr(0x201d)
     # wrap pour tenir dans max_w
     for size in range(qf_size, 40, -6):
-        f = load_font("elegant", size)
+        f = load_font("script", size)
         avg = measure(f, "n")[0] or 1
         wrapped = textwrap.wrap(quote_txt, width=max(8, int(max_w / avg)))
         if wrapped and max(measure(f, ln)[0] for ln in wrapped) <= max_w and len(wrapped) <= 4:
             break
-    f = load_font("elegant", size)
+    f = load_font("script", size)
     line_h = int(size * 1.18)
     y = int(side * 0.50)
     for ln in wrapped:
@@ -124,12 +124,12 @@ def render(q, variant, side=4500):
     rule_w = int(side * 0.16)
     d.line([(side // 2 - rule_w, y), (side // 2 + rule_w, y)], fill=ink, width=max(4, side // 700))
     y += int(side * 0.035)
-    af = load_font("cond", int(side * 0.045))
-    attr = "— " + author.upper()
+    af = load_font("script", int(side * 0.045))
+    attr = "— " + author
     aw, ah, aoff = measure(af, attr)
     d.text(((side - aw) // 2, y - aoff), attr, font=af, fill=ink)
     y += int(ah * 1.5)
-    df = load_font("cond", int(side * 0.026))
+    df = load_font("script", int(side * 0.026))
     dw, dh, doff = measure(df, dates)
     d.text(((side - dw) // 2, y - doff), dates, font=df, fill=adapt((120, 118, 116, 255), variant))
 

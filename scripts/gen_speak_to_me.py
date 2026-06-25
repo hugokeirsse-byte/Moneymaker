@@ -23,30 +23,22 @@ from typo_variants import VARIANTS, adapt  # noqa: E402
 from PIL import Image, ImageDraw, ImageFont  # noqa: E402
 
 GRAY = (120, 120, 126, 255)
-PLUM = (120, 30, 110, 255)
-WARM = (200, 70, 28, 255)
-COLD = (32, 78, 168, 255)
-GREEN = (38, 122, 58, 255)
 RED = (190, 46, 38, 255)
-ORANGE = (210, 110, 18, 255)
-BLUE = (30, 90, 170, 255)
-GOLD = (185, 140, 10, 255)
-REDDARK = (150, 28, 42, 255)
 
-# langue -> (police, couleur, label FR, label EN)
+# langue -> (police, couleur, label FR, label EN) — tous Pacifico + rouge
 LANG = {
-    "german":     ("block",    COLD,    "EN ALLEMAND",    "IN GERMAN"),
-    "portuguese": ("elegant",  GREEN,   "EN PORTUGAIS",   "IN PORTUGUESE"),
-    "italian":    ("elegant",  WARM,    "EN ITALIEN",     "IN ITALIAN"),
-    "spanish":    ("fatserif", REDDARK, "EN ESPAGNOL",    "IN SPANISH"),
-    "russian":    ("impact",   RED,     "EN RUSSE",       "IN RUSSIAN"),
-    "dutch":      ("block",    ORANGE,  "EN NÉERLANDAIS", "IN DUTCH"),
-    "greek":      ("elegant",  BLUE,    "EN GREC",        "IN GREEK"),
-    "polish":     ("block",    REDDARK, "EN POLONAIS",    "IN POLISH"),
-    "finnish":    ("cond",     COLD,    "EN FINNOIS",     "IN FINNISH"),
-    "berber":     ("fatserif", WARM,    "EN BERBÈRE",     "IN BERBER"),
-    "quebecois":  ("comic",    BLUE,    "EN QUÉBÉCOIS",   "IN QUEBECOIS"),
-    "hungarian":  ("block",    GREEN,   "EN HONGROIS",    "IN HUNGARIAN"),
+    "german":     ("script", RED, "En Allemand",    "In German"),
+    "portuguese": ("script", RED, "En Portugais",   "In Portuguese"),
+    "italian":    ("script", RED, "En Italien",     "In Italian"),
+    "spanish":    ("script", RED, "En Espagnol",    "In Spanish"),
+    "russian":    ("script", RED, "En Russe",       "In Russian"),
+    "dutch":      ("script", RED, "En Néerlandais", "In Dutch"),
+    "greek":      ("script", RED, "En Grec",        "In Greek"),
+    "polish":     ("script", RED, "En Polonais",    "In Polish"),
+    "finnish":    ("script", RED, "En Finnois",     "In Finnish"),
+    "berber":     ("script", RED, "En Berbère",     "In Berber"),
+    "quebecois":  ("script", RED, "En Québécois",   "In Quebecois"),
+    "hungarian":  ("script", RED, "En Hongrois",    "In Hungarian"),
 }
 
 # (id, langue(fr/en), verbe, langue_id, ton)  ton: harsh | tender
@@ -107,8 +99,8 @@ def render(verb, lang_id, lang, tone, variant="dark", side=4500, margin_ratio=0.
     big_sz = fit_size(big, big_font_key, max_w)
     f_big = load_font(big_font_key, big_sz)
 
-    verb_key = "script" if tone == "tender" else "hand"
-    verb_color = adapt(PLUM if tone == "tender" else GRAY, variant)
+    verb_key = "script"
+    verb_color = adapt(GRAY, variant)
     verb_sz = max(40, int(big_sz * 0.42))
     while verb_sz > 30 and measure(load_font(verb_key, verb_sz), verb)[0] > max_w:
         verb_sz -= 6

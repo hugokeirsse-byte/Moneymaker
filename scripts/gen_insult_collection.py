@@ -24,8 +24,8 @@ from PIL import Image, ImageDraw  # noqa: E402
 
 DATA_PATH = "data/insults_multilang.json"
 
-WORD_FONT = "fatserif"   # belle typo grasse pour le mot
-LABEL_FONT = "fjalla"    # libellé pays propre
+WORD_FONT = "script"    # Pacifico
+LABEL_FONT = "script"   # Pacifico pour le libellé aussi
 
 
 def measure(font, text):
@@ -54,7 +54,7 @@ def render_poster(entry, side=4500, variant="dark"):
     margin = int(side * 0.08)
     max_w = side - 2 * margin
 
-    color = adapt(hex_to_rgba(entry["color"]), variant)
+    color = adapt((190, 46, 38, 255), variant)    # rouge
     label_col = adapt((100, 100, 100, 255), variant)
 
     word = entry["word"].upper()
@@ -101,7 +101,7 @@ def render_grid(entries, cols=5, cell=900):
 
     for i, entry in enumerate(entries):
         word = entry["word"].upper()
-        color = hex_to_rgba(entry["color"])[:3]
+        color = (190, 46, 38)   # rouge
         pad = int(cell * 0.08)
         max_w = cell - 2 * pad
 

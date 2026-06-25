@@ -40,147 +40,149 @@ def fit_font_size(text, key, max_w, hi=1000, lo=20):
     return lo
 
 
-# --- palette --------------------------------------------------------------
+# --- palette — noir et rouge uniquement ----------------------------------
 DARK = (24, 24, 28, 255)
-WARM = (200, 70, 28, 255)     # charcuterie / chaud
-COLD = (32, 78, 168, 255)     # « langue rigide »
-GOLD = (196, 150, 8, 255)     # fromage
+RED  = (190, 46, 38, 255)
 GRAY = (120, 120, 124, 255)
-GREEN = (38, 122, 58, 255)
-PLUM = (120, 30, 110, 255)
+# anciens alias → remappés vers le duo noir/rouge
+WARM = RED
+COLD = DARK
+GOLD = RED
+GREEN = RED
+PLUM = RED
 
 # Chaque phrase : lignes (texte, font_key, couleur, scale).
 # scale = taille relative à la ligne de référence (scale 1.0).
 PHRASES = [
     # ---------------------------------------------------------------- FR
     {"id": "du_saucisson_et_la_paix", "lang": "fr", "lines": [
-        ("DU SAUCISSON", "impact", WARM, 1.0),
-        ("et la paix", "elegant", DARK, 0.55)]},
+        ("DU SAUCISSON", "script", WARM, 1.0),
+        ("et la paix", "script", DARK, 0.55)]},
 
     {"id": "insulte_moi_en_allemand", "lang": "fr", "lines": [
-        ("insulte-moi", "hand", GRAY, 0.55),
-        ("EN ALLEMAND", "block", COLD, 1.0)]},
+        ("insulte-moi", "script", GRAY, 0.55),
+        ("EN ALLEMAND", "script", COLD, 1.0)]},
 
     {"id": "insulte_moi_en_berbere", "lang": "fr", "lines": [
-        ("insulte-moi", "hand", GRAY, 0.55),
-        ("EN BERBÈRE", "fatserif", WARM, 1.0)]},
+        ("insulte-moi", "script", GRAY, 0.55),
+        ("EN BERBÈRE", "script", WARM, 1.0)]},
 
     {"id": "plus_de_fromage_moins_de_problemes", "lang": "fr", "lines": [
-        ("plus de", "hand", GRAY, 0.42),
-        ("FROMAGE", "retro", GOLD, 1.0),
-        ("moins de problèmes", "block", DARK, 0.34)]},
+        ("plus de", "script", GRAY, 0.42),
+        ("FROMAGE", "script", GOLD, 1.0),
+        ("moins de problèmes", "script", DARK, 0.34)]},
 
     {"id": "du_pate_et_de_lespoir", "lang": "fr", "lines": [
-        ("DU PÂTÉ", "fatserif", WARM, 1.0),
-        ("et de l'espoir", "elegant", GRAY, 0.50)]},
+        ("DU PÂTÉ", "script", WARM, 1.0),
+        ("et de l'espoir", "script", GRAY, 0.50)]},
 
     {"id": "caline_moi_en_italien", "lang": "fr", "lines": [
-        ("câline-moi", "retro", PLUM, 0.62),
-        ("EN ITALIEN", "elegant", DARK, 1.0)]},
+        ("câline-moi", "script", PLUM, 0.62),
+        ("EN ITALIEN", "script", DARK, 1.0)]},
 
     {"id": "moins_de_lundi_plus_de_raclette", "lang": "fr", "lines": [
-        ("MOINS DE LUNDI", "block", COLD, 0.52),
-        ("plus de", "hand", GRAY, 0.40),
+        ("MOINS DE LUNDI", "script", COLD, 0.52),
+        ("plus de", "script", GRAY, 0.40),
         ("raclette", "script", GOLD, 1.0)]},
 
     {"id": "parle_moi_en_klingon", "lang": "fr", "lines": [
-        ("parle-moi", "hand", GRAY, 0.50),
-        ("EN KLINGON", "comic", COLD, 1.0)]},
+        ("parle-moi", "script", GRAY, 0.50),
+        ("EN KLINGON", "script", COLD, 1.0)]},
 
     {"id": "du_vin_et_du_silence", "lang": "fr", "lines": [
-        ("DU VIN", "fatserif", WARM, 1.0),
-        ("et du silence", "elegant", GRAY, 0.46)]},
+        ("DU VIN", "script", WARM, 1.0),
+        ("et du silence", "script", GRAY, 0.46)]},
 
     {"id": "chuchote_moi_du_gruyere", "lang": "fr", "lines": [
-        ("chuchote-moi", "hand", GRAY, 0.48),
-        ("DU GRUYÈRE", "impact", GOLD, 1.0)]},
+        ("chuchote-moi", "script", GRAY, 0.48),
+        ("DU GRUYÈRE", "script", GOLD, 1.0)]},
 
     {"id": "du_jambon_et_de_la_tendresse", "lang": "fr", "lines": [
-        ("DU JAMBON", "impact", WARM, 1.0),
+        ("DU JAMBON", "script", WARM, 1.0),
         ("et de la tendresse", "script", PLUM, 0.40)]},
 
     {"id": "menace_moi_en_portugais", "lang": "fr", "lines": [
-        ("MENACE-MOI", "block", DARK, 0.66),
-        ("EN PORTUGAIS", "comic", GREEN, 1.0)]},
+        ("MENACE-MOI", "script", DARK, 0.66),
+        ("EN PORTUGAIS", "script", GREEN, 1.0)]},
 
     # ---------------------------------------------------------------- EN
     {"id": "insult_me_in_german", "lang": "en", "lines": [
-        ("insult me", "hand", GRAY, 0.55),
-        ("IN GERMAN", "block", COLD, 1.0)]},
+        ("insult me", "script", GRAY, 0.55),
+        ("IN GERMAN", "script", COLD, 1.0)]},
 
     {"id": "insult_me_in_berber", "lang": "en", "lines": [
-        ("insult me", "hand", GRAY, 0.55),
-        ("IN BERBER", "fatserif", WARM, 1.0)]},
+        ("insult me", "script", GRAY, 0.55),
+        ("IN BERBER", "script", WARM, 1.0)]},
 
     {"id": "sausage_and_peace", "lang": "en", "lines": [
-        ("SAUSAGE", "impact", WARM, 1.0),
-        ("and peace", "elegant", DARK, 0.55)]},
+        ("SAUSAGE", "script", WARM, 1.0),
+        ("and peace", "script", DARK, 0.55)]},
 
     {"id": "more_cheese_less_problems", "lang": "en", "lines": [
-        ("more", "hand", GRAY, 0.42),
-        ("CHEESE", "retro", GOLD, 1.0),
-        ("less problems", "block", DARK, 0.34)]},
+        ("more", "script", GRAY, 0.42),
+        ("CHEESE", "script", GOLD, 1.0),
+        ("less problems", "script", DARK, 0.34)]},
 
     {"id": "whisper_to_me_in_klingon", "lang": "en", "lines": [
-        ("whisper to me", "hand", GRAY, 0.46),
-        ("IN KLINGON", "comic", COLD, 1.0)]},
+        ("whisper to me", "script", GRAY, 0.46),
+        ("IN KLINGON", "script", COLD, 1.0)]},
 
     {"id": "bread_and_revenge", "lang": "en", "lines": [
-        ("BREAD", "fatserif", GOLD, 1.0),
-        ("and revenge", "block", DARK, 0.50)]},
+        ("BREAD", "script", GOLD, 1.0),
+        ("and revenge", "script", DARK, 0.50)]},
 
     {"id": "less_monday_more_raclette", "lang": "en", "lines": [
-        ("LESS MONDAY", "block", COLD, 0.52),
-        ("more", "hand", GRAY, 0.40),
+        ("LESS MONDAY", "script", COLD, 0.52),
+        ("more", "script", GRAY, 0.40),
         ("raclette", "script", GOLD, 1.0)]},
 
     {"id": "threaten_me_in_portuguese", "lang": "en", "lines": [
-        ("THREATEN ME", "block", DARK, 0.62),
-        ("IN PORTUGUESE", "comic", GREEN, 1.0)]},
+        ("THREATEN ME", "script", DARK, 0.62),
+        ("IN PORTUGUESE", "script", GREEN, 1.0)]},
 
     {"id": "ham_and_tenderness", "lang": "en", "lines": [
-        ("HAM", "impact", WARM, 1.0),
+        ("HAM", "script", WARM, 1.0),
         ("and tenderness", "script", PLUM, 0.42)]},
 
     {"id": "compliment_me_in_finnish", "lang": "en", "lines": [
-        ("compliment me", "hand", GRAY, 0.46),
-        ("IN FINNISH", "block", COLD, 1.0)]},
+        ("compliment me", "script", GRAY, 0.46),
+        ("IN FINNISH", "script", COLD, 1.0)]},
 
     # --- localisé US/UK ---
     {"id": "bacon_and_hope", "lang": "en", "lines": [
-        ("BACON", "impact", WARM, 1.0),
-        ("and hope", "elegant", GRAY, 0.50)]},
+        ("BACON", "script", WARM, 1.0),
+        ("and hope", "script", GRAY, 0.50)]},
     {"id": "more_coffee_less_monday", "lang": "en", "lines": [
-        ("more", "hand", GRAY, 0.40),
-        ("COFFEE", "fatserif", (90, 60, 40, 255), 1.0),
-        ("less monday", "block", COLD, 0.40)]},
+        ("more", "script", GRAY, 0.40),
+        ("COFFEE", "script", (90, 60, 40, 255), 1.0),
+        ("less monday", "script", COLD, 0.40)]},
     {"id": "donuts_and_destiny", "lang": "en", "lines": [
-        ("DONUTS", "impact", PLUM, 1.0),
+        ("DONUTS", "script", PLUM, 1.0),
         ("and destiny", "script", GRAY, 0.42)]},
     {"id": "tea_and_spite_uk", "lang": "en", "lines": [
-        ("TEA", "fatserif", (110, 70, 40, 255), 1.0),
-        ("and spite", "elegant", GRAY, 0.55)]},
+        ("TEA", "script", (110, 70, 40, 255), 1.0),
+        ("and spite", "script", GRAY, 0.55)]},
     {"id": "beans_on_toast_tolerance_uk", "lang": "en", "lines": [
-        ("BEANS ON TOAST", "block", GOLD, 0.78),
+        ("BEANS ON TOAST", "script", GOLD, 0.78),
         ("and tolerance", "script", GRAY, 0.40)]},
 
     # --- localisé DE (allemand) ---
     {"id": "mehr_bier_weniger_probleme", "lang": "de", "lines": [
-        ("mehr", "hand", GRAY, 0.40),
-        ("BIER", "impact", GOLD, 1.0),
-        ("weniger probleme", "block", DARK, 0.42)]},
+        ("mehr", "script", GRAY, 0.40),
+        ("BIER", "script", GOLD, 1.0),
+        ("weniger probleme", "script", DARK, 0.42)]},
     {"id": "wurst_und_frieden", "lang": "de", "lines": [
-        ("WURST", "impact", WARM, 1.0),
-        ("und frieden", "elegant", GRAY, 0.48)]},
+        ("WURST", "script", WARM, 1.0),
+        ("und frieden", "script", GRAY, 0.48)]},
     {"id": "brot_und_rache", "lang": "de", "lines": [
-        ("BROT", "fatserif", GOLD, 1.0),
-        ("und rache", "block", DARK, 0.46)]},
+        ("BROT", "script", GOLD, 1.0),
+        ("und rache", "script", DARK, 0.46)]},
     {"id": "kaese_und_hoffnung", "lang": "de", "lines": [
-        ("KÄSE", "impact", GOLD, 1.0),
-        ("und hoffnung", "elegant", GRAY, 0.48)]},
+        ("KÄSE", "script", GOLD, 1.0),
+        ("und hoffnung", "script", GRAY, 0.48)]},
     {"id": "beleidige_mich_bayerisch", "lang": "de", "lines": [
-        ("beleidige mich", "hand", GRAY, 0.45),
-        ("AUF BAYERISCH", "block", COLD, 1.0)]},
+        ("beleidige mich", "script", GRAY, 0.45),
+        ("AUF BAYERISCH", "script", COLD, 1.0)]},
 ]
 
 

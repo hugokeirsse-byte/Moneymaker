@@ -22,10 +22,11 @@ from PIL import Image, ImageDraw, ImageFont  # noqa: E402
 
 INK = (28, 30, 34, 255)
 GRAY = (130, 132, 138, 255)
-TERM = (40, 170, 95, 255)     # vert terminal
-CYAN = (40, 150, 200, 255)
-AMBER = (210, 150, 30, 255)
-MAGENTA = (170, 50, 130, 255)
+RED = (190, 46, 38, 255)
+TERM = RED
+CYAN = RED
+AMBER = RED
+MAGENTA = RED
 
 # prompt : ligne grise « > verbe_moi », puis grande ligne « EN_LANGUE▮ »
 PHRASES = [
@@ -108,15 +109,15 @@ def render(ph, variant="dark", side=4500, margin_ratio=0.09):
 
     big = ph["big"]
     # curseur = bloc plein dessiné (largeur ~0.55 d'un glyphe), pas un caractère
-    big_sz = fit_size(big + "MM", "code", max_w)
-    f_big = load_font("code", big_sz)
+    big_sz = fit_size(big + "WW", "script", max_w)
+    f_big = load_font("script", big_sz)
 
     small_sz = max(28, int(big_sz * 0.30))
-    f_small = load_font("mono", small_sz)
+    f_small = load_font("script", small_sz)
 
     foot = ph.get("footer")
     foot_sz = max(24, int(big_sz * 0.16)) if foot else 0
-    f_foot = load_font("mono", foot_sz) if foot else None
+    f_foot = load_font("script", foot_sz) if foot else None
 
     sw, sh, soff = measure(f_small, ph["small"])
     bw, bh, boff = measure(f_big, big)

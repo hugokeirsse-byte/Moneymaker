@@ -31,14 +31,14 @@ from typo_fonts import load_font as _roster_font  # noqa: E402
 
 from PIL import Image, ImageDraw, ImageFont
 
-# styles historiques -> clés du roster typo_fonts (vraies polices, fini DejaVu)
+# styles -> tous Pacifico, cohérence avec le reste du catalogue
 STYLE_MAP = {
-    "display": "impact",       # Anton, punchy
-    "serif": "elegant",        # Playfair, chic
-    "serif_italic": "fatserif",  # Abril Fatface, display serif
-    "sans": "block",           # Archivo Black
-    "sans_light": "geo",       # Poppins, sous-titres propres
-    "mono": "mono",            # Space Mono
+    "display": "script",
+    "serif": "script",
+    "serif_italic": "script",
+    "sans": "script",
+    "sans_light": "script",
+    "mono": "script",
 }
 
 # --- polices : on prend la 1re existante de chaque liste de candidats ----------
@@ -86,7 +86,7 @@ def load(style, size):
 
 INK_DARK = (26, 26, 28)
 INK_LIGHT = (245, 245, 245)
-HEART_RED = (214, 40, 57)
+HEART_RED = (190, 46, 38)
 
 # --- catalogue de phrases ------------------------------------------------------
 # champs : id, lines (liste), sub (sous-titre/définition), style, accent (couleur

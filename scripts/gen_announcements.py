@@ -26,9 +26,9 @@ FONT = "script"  # Pacifico
 
 PALETTES = {
     "dark":  {"ink": (30, 30, 34, 255), "soft": (120, 122, 128, 255),
-              "accent": (210, 90, 110, 255), "bar": (120, 180, 200, 255)},
+              "accent": (190, 46, 38, 255), "bar": (190, 46, 38, 255)},
     "light": {"ink": (244, 244, 246, 255), "soft": (180, 182, 188, 255),
-              "accent": (236, 120, 140, 255), "bar": (150, 205, 225, 255)},
+              "accent": (220, 80, 70, 255), "bar": (220, 80, 70, 255)},
 }
 
 # id, lang, lignes, {idx:"accent"|"soft"}, progress(None | (label, fraction))

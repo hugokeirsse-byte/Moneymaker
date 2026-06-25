@@ -82,11 +82,11 @@ def render(shape, label, variant, side=4500):
     lo, hi = 40, 900
     while lo < hi:
         mid = (lo + hi + 1) // 2
-        if measure(load_font("block", mid), label)[0] <= max_w:
+        if measure(load_font("script", mid), label)[0] <= max_w:
             lo = mid
         else:
             hi = mid - 1
-    f = load_font("block", lo)
+    f = load_font("script", lo)
     lw, lh, loff = measure(f, label)
     d.text(((side - lw) // 2, int(side * 0.74) - loff), label, font=f, fill=ink)
 
