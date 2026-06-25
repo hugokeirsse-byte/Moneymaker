@@ -18,6 +18,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from typo_fonts import load_font  # noqa: E402
+from typo_variants import VARIANTS, adapt  # noqa: E402
 
 from PIL import Image, ImageDraw  # noqa: E402
 
@@ -48,12 +49,13 @@ def fit_size(text, key, max_w, hi=1200, lo=20):
     return lo
 
 
-def render_poster(entry, side=4500):
+def render_poster(entry, side=4500, variant="dark"):
     """Un mot, gros, centré. Pays + signification en petit en dessous."""
     margin = int(side * 0.08)
     max_w = side - 2 * margin
 
-    color = hex_to_rgba(entry["color"])
+    color = adapt(hex_to_rgba(entry["color"]), variant)
+    label_col = adapt((100, 100, 100, 255), variant)
 
     word = entry["word"].upper()
     sz = fit_size(word, WORD_FONT, max_w)
@@ -75,8 +77,7 @@ def render_poster(entry, side=4500):
     y = margin
     d.text(((side - ww) // 2, y - woff), word, font=f_word, fill=color)
     y += wh + gap
-    d.text(((side - lw) // 2, y - loff), label, font=f_label,
-           fill=(100, 100, 100, 255))
+    d.text(((side - lw) // 2, y - loff), label, font=f_label, fill=label_col)
 
     # crop + padding uniforme
     bbox = img.getbbox()
@@ -135,6 +136,7 @@ def main():
     ap.add_argument("--out", default="produits/insults_multilang")
     ap.add_argument("--country", default="", help="filtre sur un pays")
     ap.add_argument("--data", default=DATA_PATH)
+    ap.add_argument("--variant", default="both", choices=["both", "dark", "light"])
     args = ap.parse_args()
 
     data = json.load(open(args.data, encoding="utf-8"))
@@ -152,16 +154,16 @@ def main():
         print(f"grille: {path}  ({sheet.width}×{sheet.height})")
         return
 
-    # mode poster : un fichier par insulte
+    # mode poster : un fichier par insulte × variante maillot
+    variants = list(VARIANTS) if args.variant == "both" else [args.variant]
     for entry in entries:
-        im = render_poster(entry)
         slug = (entry["country"].lower().replace(" ", "_") + "_"
                 + entry["word"].lower().replace(" ", "_").replace("'", ""))
-        path = os.path.join(args.out, f"{slug}_poster.png")
-        im.save(path, dpi=(300, 300))
-        print(f"  {path}  ({im.width}×{im.height})")
+        for v in variants:
+            im = render_poster(entry, variant=v)
+            im.save(os.path.join(args.out, f"{slug}_poster__{v}.png"), dpi=(300, 300))
 
-    print(f"\n{len(entries)} posters → {args.out}")
+    print(f"{len(entries)} × {len(variants)} variantes → {args.out}")
 
 
 if __name__ == "__main__":

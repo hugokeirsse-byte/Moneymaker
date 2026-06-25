@@ -16,6 +16,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from typo_fonts import load_font  # noqa: E402
+from typo_variants import VARIANTS, adapt  # noqa: E402
 
 from PIL import Image, ImageDraw  # noqa: E402
 
@@ -73,9 +74,11 @@ def main():
     ap.add_argument("--out", default="produits/insult_posters")
     ap.add_argument("--batch", default="")
     ap.add_argument("--top", type=int, default=6)
+    ap.add_argument("--variant", default="both", choices=["both", "dark", "light"])
     args = ap.parse_args()
 
     os.makedirs(args.out, exist_ok=True)
+    variants = list(VARIANTS) if args.variant == "both" else [args.variant]
 
     if args.batch:
         data = json.load(open(args.batch, encoding="utf-8"))
@@ -83,20 +86,20 @@ def main():
         for i, (word, _) in enumerate(words):
             key = STYLE_CYCLE[i % len(STYLE_CYCLE)]
             color = COLOR_CYCLE[i % len(COLOR_CYCLE)]
-            im = render_word(word.upper(), key=key, color=color)
-            path = os.path.join(args.out, f"{slugify(word)}_poster.png")
-            im.save(path, dpi=(300, 300))
-            print(f"  {path}  [{key}]")
-        print(f"\n{len(words)} posters → {args.out}")
+            for v in variants:
+                im = render_word(word.upper(), key=key, color=adapt(color + (255,), v))
+                im.save(os.path.join(args.out, f"{slugify(word)}_poster__{v}.png"),
+                        dpi=(300, 300))
+        print(f"{len(words)} posters × {len(variants)} variantes → {args.out}")
         return
 
     if not args.word:
         ap.error("--word ou --batch requis")
-    color = hex_to_rgb(args.color) if args.color else (24, 24, 28)
-    im = render_word(args.word.upper(), key=args.font, color=color)
-    path = os.path.join(args.out, f"{slugify(args.word)}_poster.png")
-    im.save(path, dpi=(300, 300))
-    print(path)
+    base = hex_to_rgb(args.color) if args.color else (24, 24, 28)
+    for v in variants:
+        im = render_word(args.word.upper(), key=args.font, color=adapt(base + (255,), v))
+        im.save(os.path.join(args.out, f"{slugify(args.word)}_poster__{v}.png"), dpi=(300, 300))
+    print(f"{slugify(args.word)} × {len(variants)} → {args.out}")
 
 
 if __name__ == "__main__":

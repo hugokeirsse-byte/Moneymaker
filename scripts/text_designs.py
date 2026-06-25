@@ -24,8 +24,22 @@ Usage :
 import argparse
 import math
 import os
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from typo_fonts import load_font as _roster_font  # noqa: E402
 
 from PIL import Image, ImageDraw, ImageFont
+
+# styles historiques -> clés du roster typo_fonts (vraies polices, fini DejaVu)
+STYLE_MAP = {
+    "display": "impact",       # Anton, punchy
+    "serif": "elegant",        # Playfair, chic
+    "serif_italic": "fatserif",  # Abril Fatface, display serif
+    "sans": "block",           # Archivo Black
+    "sans_light": "geo",       # Poppins, sous-titres propres
+    "mono": "mono",            # Space Mono
+}
 
 # --- polices : on prend la 1re existante de chaque liste de candidats ----------
 FONT_CANDIDATES = {
@@ -67,7 +81,7 @@ def font_path(style):
 
 
 def load(style, size):
-    return ImageFont.truetype(font_path(style), size)
+    return _roster_font(STYLE_MAP.get(style, "block"), size)
 
 
 INK_DARK = (26, 26, 28)
