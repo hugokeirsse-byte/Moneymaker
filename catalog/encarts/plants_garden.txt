@@ -1,5 +1,5 @@
 ════════════════════════════════════════════════════════════════
-  CATÉGORIE : Plants & Garden   (22 designs)
+  CATÉGORIE : Plants & Garden   (24 designs)
   Pour chaque design : uploade l'IMAGE, puis copie-colle TITRE / TAGS / DESCRIPTION.
 ════════════════════════════════════════════════════════════════
 
@@ -55,7 +55,20 @@ DESCRIPTION :
 « My Plants Have Better Takes Than You » en typographie minimaliste et percutante. Un design pour les accros aux plantes. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #plants_garden #typographie
 
 
-───── #5 ─────  (niches · en)
+───── #5 ─────  (niche_pride · en)
+IMAGE(S) : np_plant_killer_en__dark.png, np_plant_killer_en__light.png
+
+TITRE :
+Succulent Serial Killer - Plants & Garden Design
+
+TAGS :
+plant lover, plant mom, gardening, botanical, succulent, serial, killer, plants & garden, funny shirt, typography, minimalist, aesthetic, gift idea, trendy design, statement tee, for men, for women
+
+DESCRIPTION :
+« Succulent Serial Killer » en typographie minimaliste et percutante. Un design pour les accros aux plantes. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #plants_garden #typographie
+
+
+───── #6 ─────  (niches · en)
 IMAGE(S) : aoh_nature_en__dark.png, aoh_nature_en__light.png
 
 TITRE :
@@ -68,7 +81,7 @@ DESCRIPTION :
 « Trees Don't Ghost You I'm Just Saying » en typographie minimaliste et percutante. Un design pour les accros aux plantes. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #plants_garden #typographie
 
 
-───── #6 ─────  (niches · fr)
+───── #7 ─────  (niches · fr)
 IMAGE(S) : aoh_nature_fr__dark.png, aoh_nature_fr__light.png
 
 TITRE :
@@ -81,7 +94,7 @@ DESCRIPTION :
 « La forêt ne me juge pas Les gens oui » en typographie minimaliste et percutante. Un design pour les accros aux plantes. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #plants_garden #typographie
 
 
-───── #7 ─────  (niches · en)
+───── #8 ─────  (niches · en)
 IMAGE(S) : aoh_plants_en__dark.png, aoh_plants_en__light.png
 
 TITRE :
@@ -94,7 +107,7 @@ DESCRIPTION :
 « My Plants Listen People Interrupt » en typographie minimaliste et percutante. Un design pour les accros aux plantes. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #plants_garden #typographie
 
 
-───── #8 ─────  (niches · fr)
+───── #9 ─────  (niches · fr)
 IMAGE(S) : aoh_plants_fr__dark.png, aoh_plants_fr__light.png
 
 TITRE :
@@ -107,7 +120,7 @@ DESCRIPTION :
 « Mes plantes m'écoutent Les gens m'oublient » en typographie minimaliste et percutante. Un design pour les accros aux plantes. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #plants_garden #typographie
 
 
-───── #9 ─────  (niches · fr)
+───── #10 ─────  (niches · fr)
 IMAGE(S) : aoh_wifi_fr__dark.png, aoh_wifi_fr__light.png
 
 TITRE :
@@ -120,7 +133,7 @@ DESCRIPTION :
 « Mes plantes n'ont pas besoin de WiFi pour pousser » en typographie minimaliste et percutante. Un design pour les accros aux plantes. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #plants_garden #typographie
 
 
-───── #10 ─────  (niches · en)
+───── #11 ─────  (niches · en)
 IMAGE(S) : plants_crazy_lady_en__dark.png, plants_crazy_lady_en__light.png
 
 TITRE :
@@ -133,7 +146,7 @@ DESCRIPTION :
 « Crazy Plant Lady » en typographie minimaliste et percutante. Un design pour les accros aux plantes. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #plants_garden #typographie
 
 
-───── #11 ─────  (niches · en)
+───── #12 ─────  (niches · en)
 IMAGE(S) : plants_rooting_for_you_en__dark.png, plants_rooting_for_you_en__light.png
 
 TITRE :
@@ -146,7 +159,7 @@ DESCRIPTION :
 « I'm Rooting for You » en typographie minimaliste et percutante. Un design pour les accros aux plantes. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #plants_garden #typographie
 
 
-───── #12 ─────  (niches · en)
+───── #13 ─────  (niches · en)
 IMAGE(S) : plants_too_many_en__dark.png, plants_too_many_en__light.png
 
 TITRE :
@@ -159,7 +172,7 @@ DESCRIPTION :
 « Too Many Plants? Said No One Ever » en typographie minimaliste et percutante. Un design pour les accros aux plantes. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #plants_garden #typographie
 
 
-───── #13 ─────  (niches · en)
+───── #14 ─────  (niches · en)
 IMAGE(S) : succ_crazy_plant_lady_en__dark.png, succ_crazy_plant_lady_en__light.png
 
 TITRE :
@@ -172,7 +185,7 @@ DESCRIPTION :
 « Crazy Succulent Lady » en typographie minimaliste et percutante. Un design pour les accros aux plantes. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #plants_garden #typographie
 
 
-───── #14 ─────  (niches · en)
+───── #15 ─────  (niches · en)
 IMAGE(S) : succ_looking_sharp_en__dark.png, succ_looking_sharp_en__light.png
 
 TITRE :
@@ -185,7 +198,7 @@ DESCRIPTION :
 « Looking Sharp » en typographie minimaliste et percutante. Un design pour les accros aux plantes. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #plants_garden #typographie
 
 
-───── #15 ─────  (niches · en)
+───── #16 ─────  (niches · en)
 IMAGE(S) : succ_no_water_en__dark.png, succ_no_water_en__light.png
 
 TITRE :
@@ -198,7 +211,7 @@ DESCRIPTION :
 « I Forget to Water Myself Too » en typographie minimaliste et percutante. Un design pour les accros aux plantes. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #plants_garden #typographie
 
 
-───── #16 ─────  (niches · en)
+───── #17 ─────  (niches · en)
 IMAGE(S) : succ_prick_en__dark.png, succ_prick_en__light.png
 
 TITRE :
@@ -211,7 +224,7 @@ DESCRIPTION :
 « A Little Prickly » en typographie minimaliste et percutante. Un design pour les accros aux plantes. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #plants_garden #typographie
 
 
-───── #17 ─────  (proverbes · en)
+───── #18 ─────  (proverbes · en)
 IMAGE(S) : pv_money_plants_en__dark.png, pv_money_plants_en__light.png
 
 TITRE :
@@ -224,7 +237,7 @@ DESCRIPTION :
 « Money Can't Buy Happiness, But It Buys Plants » en typographie minimaliste et percutante. Un design pour les accros aux plantes. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #plants_garden #typographie
 
 
-───── #18 ─────  (revendications · fr)
+───── #19 ─────  (revendications · fr)
 IMAGE(S) : rev_plantes_gauche_fr__dark.png, rev_plantes_gauche_fr__light.png
 
 TITRE :
@@ -237,7 +250,7 @@ DESCRIPTION :
 « Mes Plantes Votent À Gauche » en typographie minimaliste et percutante. Un design pour les accros aux plantes. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #plants_garden #typographie
 
 
-───── #19 ─────  (stoner · fr)
+───── #20 ─────  (stoner · fr)
 IMAGE(S) : st_arrose_fr__dark.png, st_arrose_fr__light.png
 
 TITRE :
@@ -250,7 +263,7 @@ DESCRIPTION :
 « J'Arrose Mes Plantes Et Elles Me Le Rendent Bien » en typographie minimaliste et percutante. Un design pour les accros aux plantes. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #plants_garden #typographie
 
 
-───── #20 ─────  (stoner · en)
+───── #21 ─────  (stoner · en)
 IMAGE(S) : st_gardening_en__dark.png, st_gardening_en__light.png
 
 TITRE :
@@ -263,7 +276,7 @@ DESCRIPTION :
 « I Love Gardening One Plant In Particular » en typographie minimaliste et percutante. Un design pour les accros aux plantes. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #plants_garden #typographie
 
 
-───── #21 ─────  (stoner · fr)
+───── #22 ─────  (stoner · fr)
 IMAGE(S) : st_jardinage_fr__dark.png, st_jardinage_fr__light.png
 
 TITRE :
@@ -276,7 +289,7 @@ DESCRIPTION :
 « J'Aime Le Jardinage Surtout Une Certaine Herbe » en typographie minimaliste et percutante. Un design pour les accros aux plantes. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #plants_garden #typographie
 
 
-───── #22 ─────  (stoner · fr)
+───── #23 ─────  (stoner · fr)
 IMAGE(S) : st_plante_verte_fr__dark.png, st_plante_verte_fr__light.png
 
 TITRE :
@@ -287,4 +300,17 @@ plant lover, plant mom, gardening, botanical, succulent, amateur, plantes, verte
 
 DESCRIPTION :
 « Amateur De Plantes Vertes (Une En Particulier) » en typographie minimaliste et percutante. Un design pour les accros aux plantes. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #plants_garden #typographie
+
+
+───── #24 ─────  (subniches · en)
+IMAGE(S) : sn_kill_plants_en__dark.png, sn_kill_plants_en__light.png
+
+TITRE :
+I Kill Plants (Affectionately) - Plants & Garden Design
+
+TAGS :
+plant lover, plant mom, gardening, botanical, succulent, kill, plants, affectionately, plants & garden, funny shirt, typography, minimalist, aesthetic, gift idea, trendy design, statement tee, for men, for women
+
+DESCRIPTION :
+« I Kill Plants (Affectionately) » en typographie minimaliste et percutante. Un design pour les accros aux plantes. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #plants_garden #typographie
 

@@ -1,5 +1,5 @@
 ════════════════════════════════════════════════════════════════
-  CATÉGORIE : Cats   (40 designs)
+  CATÉGORIE : Cats   (41 designs)
   Pour chaque design : uploade l'IMAGE, puis copie-colle TITRE / TAGS / DESCRIPTION.
 ════════════════════════════════════════════════════════════════
 
@@ -484,7 +484,20 @@ DESCRIPTION :
 « Pas De Patriarcat, Même Pour Mon Chat » en typographie minimaliste et percutante. Un design pour les fous et folles de chats. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #cats #typographie
 
 
-───── #38 ─────  (trending · en)
+───── #38 ─────  (subniches · en)
+IMAGE(S) : sn_cat_more_en__dark.png, sn_cat_more_en__light.png
+
+TITRE :
+I Like My Cat More Than You - Cats Design
+
+TAGS :
+cat lover, cat mom, cat dad, cat lady, crazy cat, kitten, more, than, cats, funny shirt, typography, minimalist, aesthetic, gift idea, trendy design, statement tee, for men, for women
+
+DESCRIPTION :
+« I Like My Cat More Than You » en typographie minimaliste et percutante. Un design pour les fous et folles de chats. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #cats #typographie
+
+
+───── #39 ─────  (trending · en)
 IMAGE(S) : tr_cat_hair_en__dark.png, tr_cat_hair_en__light.png
 
 TITRE :
@@ -497,7 +510,7 @@ DESCRIPTION :
 « Cat Hair Don't Care » en typographie minimaliste et percutante. Un design pour les fous et folles de chats. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #cats #typographie
 
 
-───── #39 ─────  (trending · fr)
+───── #40 ─────  (trending · fr)
 IMAGE(S) : tr_chat_lover_fr__dark.png, tr_chat_lover_fr__light.png
 
 TITRE :
@@ -510,7 +523,7 @@ DESCRIPTION :
 « Chat Addict » en typographie minimaliste et percutante. Un design pour les fous et folles de chats. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #cats #typographie
 
 
-───── #40 ─────  (word_shapes · —)
+───── #41 ─────  (word_shapes · —)
 IMAGE(S) : niche_cat_shape.png
 
 TITRE :

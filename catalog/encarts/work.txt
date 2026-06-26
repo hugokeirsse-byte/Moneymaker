@@ -1,5 +1,5 @@
 ════════════════════════════════════════════════════════════════
-  CATÉGORIE : Work & Office Humor   (23 designs)
+  CATÉGORIE : Work & Office Humor   (24 designs)
   Pour chaque design : uploade l'IMAGE, puis copie-colle TITRE / TAGS / DESCRIPTION.
 ════════════════════════════════════════════════════════════════
 
@@ -211,7 +211,20 @@ DESCRIPTION :
 « Currently Buffering » en typographie minimaliste et percutante. Un design pour les salarié·es fatigué·es. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #work #typographie
 
 
-───── #17 ─────  (trending · fr)
+───── #17 ─────  (subniches · en)
+IMAGE(S) : sn_built_different_en__dark.png, sn_built_different_en__light.png
+
+TITRE :
+Built Different (Literally) - Work & Office Humor Design
+
+TAGS :
+office humor, work shirt, coworker gift, monday, sarcastic work, built, different, literally, work & office humor, funny shirt, typography, minimalist, aesthetic, gift idea, trendy design, statement tee, for men, for women
+
+DESCRIPTION :
+« Built Different (Literally) » en typographie minimaliste et percutante. Un design pour les salarié·es fatigué·es. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #work #typographie
+
+
+───── #18 ─────  (trending · fr)
 IMAGE(S) : tr_allergique_lundi_fr__dark.png, tr_allergique_lundi_fr__light.png
 
 TITRE :
@@ -224,7 +237,7 @@ DESCRIPTION :
 « Allergique Au Lundi » en typographie minimaliste et percutante. Un design pour les salarié·es fatigué·es. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #work #typographie
 
 
-───── #18 ─────  (trending · en)
+───── #19 ─────  (trending · en)
 IMAGE(S) : tr_boss_energy_en__dark.png, tr_boss_energy_en__light.png
 
 TITRE :
@@ -237,7 +250,7 @@ DESCRIPTION :
 « Boss Energy » en typographie minimaliste et percutante. Un design pour les salarié·es fatigué·es. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #work #typographie
 
 
-───── #19 ─────  (trending · fr)
+───── #20 ─────  (trending · fr)
 IMAGE(S) : tr_lundi_non_fr__dark.png, tr_lundi_non_fr__light.png
 
 TITRE :
@@ -250,7 +263,7 @@ DESCRIPTION :
 « Lundi, On Se Connaît Pas » en typographie minimaliste et percutante. Un design pour les salarié·es fatigué·es. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #work #typographie
 
 
-───── #20 ─────  (trending · en)
+───── #21 ─────  (trending · en)
 IMAGE(S) : tr_out_of_office_en__dark.png, tr_out_of_office_en__light.png
 
 TITRE :
@@ -263,7 +276,7 @@ DESCRIPTION :
 « Out Of Office Forever » en typographie minimaliste et percutante. Un design pour les salarié·es fatigué·es. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #work #typographie
 
 
-───── #21 ─────  (trending · fr)
+───── #22 ─────  (trending · fr)
 IMAGE(S) : tr_trop_mignonne_fr__dark.png, tr_trop_mignonne_fr__light.png
 
 TITRE :
@@ -276,7 +289,7 @@ DESCRIPTION :
 « Trop Mignonne Pour Lundi » en typographie minimaliste et percutante. Un design pour les salarié·es fatigué·es. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #work #typographie
 
 
-───── #22 ─────  (warning · fr)
+───── #23 ─────  (warning · fr)
 IMAGE(S) : wa_lundi_fr__dark.png, wa_lundi_fr__light.png
 
 TITRE :
@@ -289,7 +302,7 @@ DESCRIPTION :
 « Le Lundi Tue (Le Moral) » en typographie minimaliste et percutante. Un design pour les salarié·es fatigué·es. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #work #typographie
 
 
-───── #23 ─────  (warning · en)
+───── #24 ─────  (warning · en)
 IMAGE(S) : wa_meeting_en__dark.png, wa_meeting_en__light.png
 
 TITRE :

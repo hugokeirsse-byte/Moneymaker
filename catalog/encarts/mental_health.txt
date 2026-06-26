@@ -1,5 +1,5 @@
 ════════════════════════════════════════════════════════════════
-  CATÉGORIE : Mental Health & Neurodivergent   (82 designs)
+  CATÉGORIE : Mental Health & Neurodivergent   (85 designs)
   Pour chaque design : uploade l'IMAGE, puis copie-colle TITRE / TAGS / DESCRIPTION.
 ════════════════════════════════════════════════════════════════
 
@@ -952,7 +952,46 @@ DESCRIPTION :
 « La Santé Mentale, C'Est Pas Du Luxe » en typographie minimaliste et percutante. Un design pour les neuroatypiques. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #mental_health #typographie
 
 
-───── #74 ─────  (trending · en)
+───── #74 ─────  (subniches · en)
+IMAGE(S) : sn_overstimulated_en__dark.png, sn_overstimulated_en__light.png
+
+TITRE :
+Overstimulated & Underpaid - Mental Health & Neurodivergent Design
+
+TAGS :
+mental health, neurodivergent, adhd, autism, anxiety, introvert, self care, overstimulated, underpaid, mental health & neurodivergent, funny shirt, typography, minimalist, aesthetic, gift idea, trendy design, statement tee, for men, for women
+
+DESCRIPTION :
+« Overstimulated & Underpaid » en typographie minimaliste et percutante. Un design pour les neuroatypiques. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #mental_health #typographie
+
+
+───── #75 ─────  (subniches · fr)
+IMAGE(S) : sn_surstimule_fr__dark.png, sn_surstimule_fr__light.png
+
+TITRE :
+Surstimulé Et Sous-Payé - Mental Health & Neurodivergent (French) Design
+
+TAGS :
+mental health, neurodivergent, adhd, autism, anxiety, introvert, self care, surstimulé, sous, payé, mental health & neurodivergent, funny shirt, typography, minimalist, aesthetic, gift idea, trendy design, statement tee, for men, for women
+
+DESCRIPTION :
+« Surstimulé Et Sous-Payé » en typographie minimaliste et percutante. Un design pour les neuroatypiques. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #mental_health #typographie
+
+
+───── #76 ─────  (subniches · en)
+IMAGE(S) : sn_world_ending_en__dark.png, sn_world_ending_en__light.png
+
+TITRE :
+The World's Ending & I'm Still Anxious About Emails - Mental Health & Neurodivergent Design
+
+TAGS :
+mental health, neurodivergent, adhd, autism, anxiety, introvert, self care, world's, ending, still, anxious, about, mental health & neurodivergent, funny shirt, typography, minimalist, aesthetic, gift idea, trendy design, statement tee, for men, for women
+
+DESCRIPTION :
+« The World's Ending & I'm Still Anxious About Emails » en typographie minimaliste et percutante. Un design pour les neuroatypiques. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #mental_health #typographie
+
+
+───── #77 ─────  (trending · en)
 IMAGE(S) : tr_coffee_anxiety_en__dark.png, tr_coffee_anxiety_en__light.png
 
 TITRE :
@@ -965,7 +1004,7 @@ DESCRIPTION :
 « Powered By Coffee & Anxiety » en typographie minimaliste et percutante. Un design pour les neuroatypiques. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #mental_health #typographie
 
 
-───── #75 ─────  (trending · en)
+───── #78 ─────  (trending · en)
 IMAGE(S) : tr_introvert_energy_en__dark.png, tr_introvert_energy_en__light.png
 
 TITRE :
@@ -978,7 +1017,7 @@ DESCRIPTION :
 « Introvert Energy » en typographie minimaliste et percutante. Un design pour les neuroatypiques. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #mental_health #typographie
 
 
-───── #76 ─────  (trending · fr)
+───── #79 ─────  (trending · fr)
 IMAGE(S) : tr_introverti_de_party_fr__dark.png, tr_introverti_de_party_fr__light.png
 
 TITRE :
@@ -991,7 +1030,7 @@ DESCRIPTION :
 « L'Âme De La Fête (À La Maison) » en typographie minimaliste et percutante. Un design pour les neuroatypiques. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #mental_health #typographie
 
 
-───── #77 ─────  (trending · fr)
+───── #80 ─────  (trending · fr)
 IMAGE(S) : tr_introvertie_fr__dark.png, tr_introvertie_fr__light.png
 
 TITRE :
@@ -1004,7 +1043,7 @@ DESCRIPTION :
 « Introvertie En Action » en typographie minimaliste et percutante. Un design pour les neuroatypiques. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #mental_health #typographie
 
 
-───── #78 ─────  (trending · en)
+───── #81 ─────  (trending · en)
 IMAGE(S) : tr_overstimulated_mom_en__dark.png, tr_overstimulated_mom_en__light.png
 
 TITRE :
@@ -1017,7 +1056,7 @@ DESCRIPTION :
 « Overstimulated Mom » en typographie minimaliste et percutante. Un design pour les neuroatypiques. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #mental_health #typographie
 
 
-───── #79 ─────  (trending · en)
+───── #82 ─────  (trending · en)
 IMAGE(S) : tr_pro_overthinker_en__dark.png, tr_pro_overthinker_en__light.png
 
 TITRE :
@@ -1030,7 +1069,7 @@ DESCRIPTION :
 « Professional Overthinker » en typographie minimaliste et percutante. Un design pour les neuroatypiques. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #mental_health #typographie
 
 
-───── #80 ─────  (trendy · —)
+───── #83 ─────  (trendy · —)
 IMAGE(S) : let_me_overthink__dark.png, let_me_overthink__light.png
 
 TITRE :
@@ -1043,7 +1082,7 @@ DESCRIPTION :
 « Let Me Overthink » en typographie minimaliste et percutante. Un design pour les neuroatypiques. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #mental_health #typographie
 
 
-───── #81 ─────  (trendy · —)
+───── #84 ─────  (trendy · —)
 IMAGE(S) : overthinking_since_birth__dark.png, overthinking_since_birth__light.png
 
 TITRE :
@@ -1056,7 +1095,7 @@ DESCRIPTION :
 « Overthinking Since Birth » en typographie minimaliste et percutante. Un design pour les neuroatypiques. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #mental_health #typographie
 
 
-───── #82 ─────  (trendy · —)
+───── #85 ─────  (trendy · —)
 IMAGE(S) : professional_overthinker__dark.png, professional_overthinker__light.png
 
 TITRE :

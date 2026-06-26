@@ -1,5 +1,5 @@
 ════════════════════════════════════════════════════════════════
-  CATÉGORIE : Climate & Ecology   (74 designs)
+  CATÉGORIE : Climate & Ecology   (75 designs)
   Pour chaque design : uploade l'IMAGE, puis copie-colle TITRE / TAGS / DESCRIPTION.
 ════════════════════════════════════════════════════════════════
 
@@ -861,7 +861,20 @@ DESCRIPTION :
 « Plant Mom For A Greener Planet » en typographie minimaliste et percutante. Un design pour les militant·es écolo. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #climate #typographie
 
 
-───── #67 ─────  (warning · fr)
+───── #67 ─────  (subniches · en)
+IMAGE(S) : sn_root_asteroid_en__dark.png, sn_root_asteroid_en__light.png
+
+TITRE :
+I Root For The Asteroid - Climate & Ecology Design
+
+TAGS :
+climate change, save the planet, ecology, environment, climate activist, eco friendly, root, asteroid, climate & ecology, funny shirt, typography, minimalist, aesthetic, gift idea, trendy design, statement tee, for men, for women
+
+DESCRIPTION :
+« I Root For The Asteroid » en typographie minimaliste et percutante. Un design pour les militant·es écolo. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #climate #typographie
+
+
+───── #68 ─────  (warning · fr)
 IMAGE(S) : wa_abeilles_fr__dark.png, wa_abeilles_fr__light.png
 
 TITRE :
@@ -874,7 +887,7 @@ DESCRIPTION :
 « Wa Abeilles » en typographie minimaliste et percutante. Un design pour les militant·es écolo. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #climate #typographie
 
 
-───── #68 ─────  (warning · en)
+───── #69 ─────  (warning · en)
 IMAGE(S) : wa_bees_en__dark.png, wa_bees_en__light.png
 
 TITRE :
@@ -887,7 +900,7 @@ DESCRIPTION :
 « Wa Bees » en typographie minimaliste et percutante. Un design pour les militant·es écolo. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #climate #typographie
 
 
-───── #69 ─────  (warning · en)
+───── #70 ─────  (warning · en)
 IMAGE(S) : wa_climate_en__dark.png, wa_climate_en__light.png
 
 TITRE :
@@ -900,7 +913,7 @@ DESCRIPTION :
 « Climate Inaction Kills » en typographie minimaliste et percutante. Un design pour les militant·es écolo. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #climate #typographie
 
 
-───── #70 ─────  (warning · en)
+───── #71 ─────  (warning · en)
 IMAGE(S) : wa_deforestation_en__dark.png, wa_deforestation_en__light.png
 
 TITRE :
@@ -913,7 +926,7 @@ DESCRIPTION :
 « Deforestation Kills » en typographie minimaliste et percutante. Un design pour les militant·es écolo. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #climate #typographie
 
 
-───── #71 ─────  (warning · fr)
+───── #72 ─────  (warning · fr)
 IMAGE(S) : wa_deforestation_fr__dark.png, wa_deforestation_fr__light.png
 
 TITRE :
@@ -926,7 +939,7 @@ DESCRIPTION :
 « La Déforestation Tue » en typographie minimaliste et percutante. Un design pour les militant·es écolo. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #climate #typographie
 
 
-───── #72 ─────  (warning · fr)
+───── #73 ─────  (warning · fr)
 IMAGE(S) : wa_inaction_fr__dark.png, wa_inaction_fr__light.png
 
 TITRE :
@@ -939,7 +952,7 @@ DESCRIPTION :
 « L'Inaction Climatique Tue » en typographie minimaliste et percutante. Un design pour les militant·es écolo. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #climate #typographie
 
 
-───── #73 ─────  (warning · en)
+───── #74 ─────  (warning · en)
 IMAGE(S) : wa_overfishing_en__dark.png, wa_overfishing_en__light.png
 
 TITRE :
@@ -952,7 +965,7 @@ DESCRIPTION :
 « Overfishing Kills (The Oceans) » en typographie minimaliste et percutante. Un design pour les militant·es écolo. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #climate #typographie
 
 
-───── #74 ─────  (warning · fr)
+───── #75 ─────  (warning · fr)
 IMAGE(S) : wa_peche_fr__dark.png, wa_peche_fr__light.png
 
 TITRE :

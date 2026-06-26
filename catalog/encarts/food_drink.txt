@@ -1,5 +1,5 @@
 ════════════════════════════════════════════════════════════════
-  CATÉGORIE : Food & Drink   (80 designs)
+  CATÉGORIE : Food & Drink   (82 designs)
   Pour chaque design : uploade l'IMAGE, puis copie-colle TITRE / TAGS / DESCRIPTION.
 ════════════════════════════════════════════════════════════════
 
@@ -81,7 +81,20 @@ DESCRIPTION :
 « Matcha Addict » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #7 ─────  (niches · en)
+───── #7 ─────  (niche_pride · en)
+IMAGE(S) : np_teacher_caffeine_en__dark.png, np_teacher_caffeine_en__light.png
+
+TITRE :
+Teacher. Powered By Caffeine And Chaos. - Food & Drink Design
+
+TAGS :
+foodie gift, coffee lover, food humor, caffeine, brunch, teacher, powered, chaos, food & drink, funny shirt, typography, minimalist, aesthetic, gift idea, trendy design, statement tee, for men, for women
+
+DESCRIPTION :
+« Teacher. Powered By Caffeine And Chaos. » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
+
+
+───── #8 ─────  (niches · en)
 IMAGE(S) : bc_agility_en__dark.png, bc_agility_en__light.png
 
 TITRE :
@@ -94,7 +107,7 @@ DESCRIPTION :
 « My Dog Has Agility Titles I Have Snacks » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #8 ─────  (niches · en)
+───── #9 ─────  (niches · en)
 IMAGE(S) : coffee_blood_type_en__dark.png, coffee_blood_type_en__light.png
 
 TITRE :
@@ -107,7 +120,7 @@ DESCRIPTION :
 « My Blood Type Is Espresso » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #9 ─────  (niches · en)
+───── #10 ─────  (niches · en)
 IMAGE(S) : coffee_but_first_en__dark.png, coffee_but_first_en__light.png
 
 TITRE :
@@ -120,7 +133,7 @@ DESCRIPTION :
 « But First Coffee » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #10 ─────  (niches · en)
+───── #11 ─────  (niches · en)
 IMAGE(S) : coffee_espresso_yourself_en__dark.png, coffee_espresso_yourself_en__light.png
 
 TITRE :
@@ -133,7 +146,7 @@ DESCRIPTION :
 « Espresso Yourself » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #11 ─────  (niches · en)
+───── #12 ─────  (niches · en)
 IMAGE(S) : coffee_powered_beans_en__dark.png, coffee_powered_beans_en__light.png
 
 TITRE :
@@ -146,7 +159,7 @@ DESCRIPTION :
 « Powered by Beans » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #12 ─────  (niches · en)
+───── #13 ─────  (niches · en)
 IMAGE(S) : cp_ice_bath_en__dark.png, cp_ice_bath_en__light.png
 
 TITRE :
@@ -159,7 +172,7 @@ DESCRIPTION :
 « Ice Bath Every Morning Then Coffee. Then Humans. » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #13 ─────  (niches · en)
+───── #14 ─────  (niches · en)
 IMAGE(S) : golf_bogey_life_en__dark.png, golf_bogey_life_en__light.png
 
 TITRE :
@@ -172,7 +185,7 @@ DESCRIPTION :
 « Bogey Golfer Champion Attitude » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #14 ─────  (niches · en)
+───── #15 ─────  (niches · en)
 IMAGE(S) : horse_hay_wine_en__dark.png, horse_hay_wine_en__light.png
 
 TITRE :
@@ -185,7 +198,7 @@ DESCRIPTION :
 « Hay Is for Horses I Want Wine » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #15 ─────  (niches · en)
+───── #16 ─────  (niches · en)
 IMAGE(S) : lift_squat_snacks_en__dark.png, lift_squat_snacks_en__light.png
 
 TITRE :
@@ -198,7 +211,7 @@ DESCRIPTION :
 « Will Squat for Snacks » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #16 ─────  (niches · en)
+───── #17 ─────  (niches · en)
 IMAGE(S) : mal_igp_en__dark.png, mal_igp_en__light.png
 
 TITRE :
@@ -211,7 +224,7 @@ DESCRIPTION :
 « IGP Trial This Weekend Send Coffee » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #17 ─────  (niches · en)
+───── #18 ─────  (niches · en)
 IMAGE(S) : matcha_but_first_en__dark.png, matcha_but_first_en__light.png
 
 TITRE :
@@ -224,7 +237,7 @@ DESCRIPTION :
 « But First Matcha » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #18 ─────  (niches · en)
+───── #19 ─────  (niches · en)
 IMAGE(S) : matcha_made_heaven_en__dark.png, matcha_made_heaven_en__light.png
 
 TITRE :
@@ -237,7 +250,7 @@ DESCRIPTION :
 « Matcha Made in Heaven » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #19 ─────  (niches · en)
+───── #20 ─────  (niches · en)
 IMAGE(S) : matcha_spill_tea_en__dark.png, matcha_spill_tea_en__light.png
 
 TITRE :
@@ -250,7 +263,7 @@ DESCRIPTION :
 « Spill the Tea Not the Matcha » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #20 ─────  (niches · en)
+───── #21 ─────  (niches · en)
 IMAGE(S) : matcha_terrific_en__dark.png, matcha_terrific_en__light.png
 
 TITRE :
@@ -263,7 +276,7 @@ DESCRIPTION :
 « Tea-rrific & Caffeinated » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #21 ─────  (niches · en)
+───── #22 ─────  (niches · en)
 IMAGE(S) : mf_chanterelle_en__dark.png, mf_chanterelle_en__light.png
 
 TITRE :
@@ -276,7 +289,7 @@ DESCRIPTION :
 « Found a Chanterelle Told No One » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #22 ─────  (niches · en)
+───── #23 ─────  (niches · en)
 IMAGE(S) : mf_galerina_en__dark.png, mf_galerina_en__light.png
 
 TITRE :
@@ -289,7 +302,7 @@ DESCRIPTION :
 « Galerina Looks Like Honey Fungus Learn the Difference » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #23 ─────  (niches · en)
+───── #24 ─────  (niches · en)
 IMAGE(S) : mf_inoculation_en__dark.png, mf_inoculation_en__light.png
 
 TITRE :
@@ -302,7 +315,7 @@ DESCRIPTION :
 « I Inoculate Logs on the Weekend » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #24 ─────  (niches · en)
+───── #25 ─────  (niches · en)
 IMAGE(S) : mf_spore_print_en__dark.png, mf_spore_print_en__light.png
 
 TITRE :
@@ -315,7 +328,7 @@ DESCRIPTION :
 « When in Doubt Take a Spore Print » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #25 ─────  (niches · en)
+───── #26 ─────  (niches · en)
 IMAGE(S) : mf_spot_en__dark.png, mf_spot_en__light.png
 
 TITRE :
@@ -328,7 +341,7 @@ DESCRIPTION :
 « I Never Reveal My Spot » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #26 ─────  (niches · en)
+───── #27 ─────  (niches · en)
 IMAGE(S) : pickle_cardio_en__dark.png, pickle_cardio_en__light.png
 
 TITRE :
@@ -341,7 +354,7 @@ DESCRIPTION :
 « Pickleball Is My Cardio » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #27 ─────  (niches · en)
+───── #28 ─────  (niches · en)
 IMAGE(S) : pickle_dink_responsibly_en__dark.png, pickle_dink_responsibly_en__light.png
 
 TITRE :
@@ -354,7 +367,7 @@ DESCRIPTION :
 « Dink Responsibly » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #28 ─────  (niches · en)
+───── #29 ─────  (niches · en)
 IMAGE(S) : pickle_repeat_en__dark.png, pickle_repeat_en__light.png
 
 TITRE :
@@ -367,7 +380,7 @@ DESCRIPTION :
 « Eat. Sleep. Dink. Repeat. » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #29 ─────  (niches · en)
+───── #30 ─────  (niches · en)
 IMAGE(S) : pickle_sorry_cant_en__dark.png, pickle_sorry_cant_en__light.png
 
 TITRE :
@@ -380,7 +393,7 @@ DESCRIPTION :
 « Sorry I Can't I Have Pickleball » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #30 ─────  (niches · fr)
+───── #31 ─────  (niches · fr)
 IMAGE(S) : pun_cafe_confiance_fr__dark.png, pun_cafe_confiance_fr__light.png
 
 TITRE :
@@ -393,7 +406,7 @@ DESCRIPTION :
 « Caféine le seul C que je valide » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #31 ─────  (niches · en)
+───── #32 ─────  (niches · en)
 IMAGE(S) : pun_espresso_en__dark.png, pun_espresso_en__light.png
 
 TITRE :
@@ -406,7 +419,7 @@ DESCRIPTION :
 « I've Bean Thinking About Coffee » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #32 ─────  (niches · en)
+───── #33 ─────  (niches · en)
 IMAGE(S) : pun_wine_time_en__dark.png, pun_wine_time_en__light.png
 
 TITRE :
@@ -419,7 +432,7 @@ DESCRIPTION :
 « Wine Time Is Fine Time » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #33 ─────  (niches · en)
+───── #34 ─────  (niches · en)
 IMAGE(S) : retro_insert_coffee_en__dark.png, retro_insert_coffee_en__light.png
 
 TITRE :
@@ -432,7 +445,7 @@ DESCRIPTION :
 « Game Over? Insert Coffee » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #34 ─────  (niches · en)
+───── #35 ─────  (niches · en)
 IMAGE(S) : sd_75_hydration_en__dark.png, sd_75_hydration_en__light.png
 
 TITRE :
@@ -445,7 +458,7 @@ DESCRIPTION :
 « 75% Hydration Was Hubris » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #35 ─────  (niches · fr)
+───── #36 ─────  (niches · fr)
 IMAGE(S) : sd_alveolage_fr__dark.png, sd_alveolage_fr__light.png
 
 TITRE :
@@ -458,7 +471,7 @@ DESCRIPTION :
 « L'Alvéolage N'est Jamais Assez Ouvert » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #36 ─────  (niches · en)
+───── #37 ─────  (niches · en)
 IMAGE(S) : sd_bulk_one_more_hour_en__dark.png, sd_bulk_one_more_hour_en__light.png
 
 TITRE :
@@ -471,7 +484,7 @@ DESCRIPTION :
 « Bulk Ferment: Just One More Hour » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #37 ─────  (niches · en)
+───── #38 ─────  (niches · en)
 IMAGE(S) : sd_discard_better_life_en__dark.png, sd_discard_better_life_en__light.png
 
 TITRE :
@@ -484,7 +497,7 @@ DESCRIPTION :
 « My Discard Has a Better Life Than Me » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #38 ─────  (niches · en)
+───── #39 ─────  (niches · en)
 IMAGE(S) : sd_fed_starter_first_en__dark.png, sd_fed_starter_first_en__light.png
 
 TITRE :
@@ -497,7 +510,7 @@ DESCRIPTION :
 « Fed My Starter Before Myself. Again. » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #39 ─────  (niches · en)
+───── #40 ─────  (niches · en)
 IMAGE(S) : sd_float_test_en__dark.png, sd_float_test_en__light.png
 
 TITRE :
@@ -510,7 +523,7 @@ DESCRIPTION :
 « My Float Test Lied Baked Anyway » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #40 ─────  (niches · fr)
+───── #41 ─────  (niches · fr)
 IMAGE(S) : sd_levain_prenom_fr__dark.png, sd_levain_prenom_fr__light.png
 
 TITRE :
@@ -523,7 +536,7 @@ DESCRIPTION :
 « Mon Levain Se Prénomme Jean-Pierre » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #41 ─────  (niches · en)
+───── #42 ─────  (niches · en)
 IMAGE(S) : sd_open_crumb_en__dark.png, sd_open_crumb_en__light.png
 
 TITRE :
@@ -536,7 +549,7 @@ DESCRIPTION :
 « Open Crumb or Start Over » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #42 ─────  (niches · en)
+───── #43 ─────  (niches · en)
 IMAGE(S) : teacher_coffee_chaos_en__dark.png, teacher_coffee_chaos_en__light.png
 
 TITRE :
@@ -549,7 +562,7 @@ DESCRIPTION :
 « Teacher: Fueled by Coffee & Chaos » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #43 ─────  (niches · en)
+───── #44 ─────  (niches · en)
 IMAGE(S) : wine_cheaper_therapy_en__dark.png, wine_cheaper_therapy_en__light.png
 
 TITRE :
@@ -562,7 +575,7 @@ DESCRIPTION :
 « Wine Is Cheaper Than Therapy » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #44 ─────  (niches · en)
+───── #45 ─────  (niches · en)
 IMAGE(S) : wine_not_en__dark.png, wine_not_en__light.png
 
 TITRE :
@@ -575,7 +588,7 @@ DESCRIPTION :
 « Wine Not? » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #45 ─────  (niches · en)
+───── #46 ─────  (niches · en)
 IMAGE(S) : wine_rosé_all_day_en__dark.png, wine_rosé_all_day_en__light.png
 
 TITRE :
@@ -588,7 +601,7 @@ DESCRIPTION :
 « Rosé All Day » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #46 ─────  (niches · en)
+───── #47 ─────  (niches · en)
 IMAGE(S) : wine_wisdom_en__dark.png, wine_wisdom_en__light.png
 
 TITRE :
@@ -601,7 +614,7 @@ DESCRIPTION :
 « In Wine There Is Wisdom » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #47 ─────  (niches · en)
+───── #48 ─────  (niches · en)
 IMAGE(S) : yoga_wine_later_en__dark.png, yoga_wine_later_en__light.png
 
 TITRE :
@@ -614,7 +627,7 @@ DESCRIPTION :
 « Yoga Now Wine Later » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #48 ─────  (proverbes · en)
+───── #49 ─────  (proverbes · en)
 IMAGE(S) : pv_teach_fish_en__dark.png, pv_teach_fish_en__light.png
 
 TITRE :
@@ -627,7 +640,7 @@ DESCRIPTION :
 « Give A Man A Fish, Or Just Fix The Broken System » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #49 ─────  (punchlines · en)
+───── #50 ─────  (punchlines · en)
 IMAGE(S) : pl_born_coffee_en__dark.png, pl_born_coffee_en__light.png
 
 TITRE :
@@ -640,7 +653,7 @@ DESCRIPTION :
 « Born For Nothing, Staying For The Coffee » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #50 ─────  (punchlines · en)
+───── #51 ─────  (punchlines · en)
 IMAGE(S) : pl_caffeine_personality_en__dark.png, pl_caffeine_personality_en__light.png
 
 TITRE :
@@ -653,7 +666,7 @@ DESCRIPTION :
 « Caffeine Is A Personality » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #51 ─────  (punchlines · en)
+───── #52 ─────  (punchlines · en)
 IMAGE(S) : pl_caffeine_spite_en__dark.png, pl_caffeine_spite_en__light.png
 
 TITRE :
@@ -666,7 +679,7 @@ DESCRIPTION :
 « Running On Caffeine And Spite » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #52 ─────  (punchlines · en)
+───── #53 ─────  (punchlines · en)
 IMAGE(S) : pl_kebab_en__dark.png, pl_kebab_en__light.png
 
 TITRE :
@@ -679,7 +692,7 @@ DESCRIPTION :
 « You Are What You Eat. I'm A Kebab. » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #53 ─────  (punchlines · fr)
+───── #54 ─────  (punchlines · fr)
 IMAGE(S) : pl_kebab_fr__dark.png, pl_kebab_fr__light.png
 
 TITRE :
@@ -692,7 +705,7 @@ DESCRIPTION :
 « On Est Ce Qu'On Mange. Je Suis Un Kebab. » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #54 ─────  (punchlines · fr)
+───── #55 ─────  (punchlines · fr)
 IMAGE(S) : pl_ne_pour_cafe_fr__dark.png, pl_ne_pour_cafe_fr__light.png
 
 TITRE :
@@ -705,7 +718,7 @@ DESCRIPTION :
 « Né Pour Rien, Reste Pour Le Café » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #55 ─────  (punchlines · en)
+───── #56 ─────  (punchlines · en)
 IMAGE(S) : pl_nothing_snacks_en__dark.png, pl_nothing_snacks_en__light.png
 
 TITRE :
@@ -718,7 +731,7 @@ DESCRIPTION :
 « Nothing Matters (Snacks Help) » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #56 ─────  (punchlines · en)
+───── #57 ─────  (punchlines · en)
 IMAGE(S) : pl_snacks_downfall_en__dark.png, pl_snacks_downfall_en__light.png
 
 TITRE :
@@ -731,7 +744,7 @@ DESCRIPTION :
 « Here For The Snacks And The Downfall » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #57 ─────  (punchlines · en)
+───── #58 ─────  (punchlines · en)
 IMAGE(S) : pl_spite_snacks_en__dark.png, pl_spite_snacks_en__light.png
 
 TITRE :
@@ -744,7 +757,7 @@ DESCRIPTION :
 « Powered By Spite & Snacks » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #58 ─────  (relatable · —)
+───── #59 ─────  (relatable · —)
 IMAGE(S) : here_for_the_snacks__dark.png, here_for_the_snacks__light.png
 
 TITRE :
@@ -757,7 +770,7 @@ DESCRIPTION :
 « Here For The Snacks » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #59 ─────  (relatable · —)
+───── #60 ─────  (relatable · —)
 IMAGE(S) : running_on_snacks_spite__dark.png, running_on_snacks_spite__light.png
 
 TITRE :
@@ -770,7 +783,7 @@ DESCRIPTION :
 « Running On Snacks Spite » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #60 ─────  (stoner · fr)
+───── #61 ─────  (stoner · fr)
 IMAGE(S) : st_champis_fr__dark.png, st_champis_fr__light.png
 
 TITRE :
@@ -783,7 +796,20 @@ DESCRIPTION :
 « J'Aime Les Champis Mais Je Parle Pas De Morilles » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #61 ─────  (trending · en)
+───── #62 ─────  (subniches · en)
+IMAGE(S) : sn_caffeine_denial_en__dark.png, sn_caffeine_denial_en__light.png
+
+TITRE :
+Held Together By Caffeine & Denial - Food & Drink Design
+
+TAGS :
+foodie gift, coffee lover, food humor, caffeine, brunch, held, together, denial, food & drink, funny shirt, typography, minimalist, aesthetic, gift idea, trendy design, statement tee, for men, for women
+
+DESCRIPTION :
+« Held Together By Caffeine & Denial » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
+
+
+───── #63 ─────  (trending · en)
 IMAGE(S) : tr_but_first_coffee_en__dark.png, tr_but_first_coffee_en__light.png
 
 TITRE :
@@ -796,7 +822,7 @@ DESCRIPTION :
 « But First Coffee » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #62 ─────  (trending · fr)
+───── #64 ─────  (trending · fr)
 IMAGE(S) : tr_cafe_avant_parler_fr__dark.png, tr_cafe_avant_parler_fr__light.png
 
 TITRE :
@@ -809,7 +835,7 @@ DESCRIPTION :
 « Café Avant De Parler » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #63 ─────  (trending · fr)
+───── #65 ─────  (trending · fr)
 IMAGE(S) : tr_cafe_dabord_fr__dark.png, tr_cafe_dabord_fr__light.png
 
 TITRE :
@@ -822,7 +848,7 @@ DESCRIPTION :
 « Café D'Abord » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #64 ─────  (trending · fr)
+───── #66 ─────  (trending · fr)
 IMAGE(S) : tr_cafe_recommence_fr__dark.png, tr_cafe_recommence_fr__light.png
 
 TITRE :
@@ -835,7 +861,7 @@ DESCRIPTION :
 « Café, Et On Recommence » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #65 ─────  (trending · en)
+───── #67 ─────  (trending · en)
 IMAGE(S) : tr_caffeine_chaos_en__dark.png, tr_caffeine_chaos_en__light.png
 
 TITRE :
@@ -848,7 +874,7 @@ DESCRIPTION :
 « Running On Caffeine & Chaos » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #66 ─────  (trending · en)
+───── #68 ─────  (trending · en)
 IMAGE(S) : tr_just_a_girl_en__dark.png, tr_just_a_girl_en__light.png
 
 TITRE :
@@ -861,7 +887,7 @@ DESCRIPTION :
 « Just A Girl Who Loves Coffee » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #67 ─────  (trending · en)
+───── #69 ─────  (trending · en)
 IMAGE(S) : tr_pizza_cardio_en__dark.png, tr_pizza_cardio_en__light.png
 
 TITRE :
@@ -874,7 +900,7 @@ DESCRIPTION :
 « Pizza Is My Cardio » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #68 ─────  (trending · fr)
+───── #70 ─────  (trending · fr)
 IMAGE(S) : tr_pizza_fr__dark.png, tr_pizza_fr__light.png
 
 TITRE :
@@ -887,7 +913,7 @@ DESCRIPTION :
 « Pizza Mon Amour » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #69 ─────  (trending · fr)
+───── #71 ─────  (trending · fr)
 IMAGE(S) : tr_propulsee_cafe_fr__dark.png, tr_propulsee_cafe_fr__light.png
 
 TITRE :
@@ -900,7 +926,7 @@ DESCRIPTION :
 « Propulsée Au Café » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #70 ─────  (trending · en)
+───── #72 ─────  (trending · en)
 IMAGE(S) : tr_quiet_quitting_en__dark.png, tr_quiet_quitting_en__light.png
 
 TITRE :
@@ -913,7 +939,7 @@ DESCRIPTION :
 « Quiet Quitting Champion » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #71 ─────  (trending · en)
+───── #73 ─────  (trending · en)
 IMAGE(S) : tr_snack_dealer_en__dark.png, tr_snack_dealer_en__light.png
 
 TITRE :
@@ -926,7 +952,7 @@ DESCRIPTION :
 « Professional Snack Dealer » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #72 ─────  (trending · en)
+───── #74 ─────  (trending · en)
 IMAGE(S) : tr_squat_wine_en__dark.png, tr_squat_wine_en__light.png
 
 TITRE :
@@ -939,7 +965,7 @@ DESCRIPTION :
 « Squat Now Wine Later » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #73 ─────  (trending · en)
+───── #75 ─────  (trending · en)
 IMAGE(S) : tr_stressed_blessed_en__dark.png, tr_stressed_blessed_en__light.png
 
 TITRE :
@@ -952,7 +978,7 @@ DESCRIPTION :
 « Stressed, Blessed Coffee Obsessed » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #74 ─────  (trending · en)
+───── #76 ─────  (trending · en)
 IMAGE(S) : tr_tacos_fix_en__dark.png, tr_tacos_fix_en__light.png
 
 TITRE :
@@ -965,7 +991,7 @@ DESCRIPTION :
 « Tacos Fix Everything » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #75 ─────  (trending · fr)
+───── #77 ─────  (trending · fr)
 IMAGE(S) : tr_team_canape_fr__dark.png, tr_team_canape_fr__light.png
 
 TITRE :
@@ -978,7 +1004,7 @@ DESCRIPTION :
 « Team Canapé » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #76 ─────  (trending · en)
+───── #78 ─────  (trending · en)
 IMAGE(S) : tr_thinking_snacks_en__dark.png, tr_thinking_snacks_en__light.png
 
 TITRE :
@@ -991,7 +1017,7 @@ DESCRIPTION :
 « Probably Thinking About Snacks » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #77 ─────  (trending · en)
+───── #79 ─────  (trending · en)
 IMAGE(S) : tr_weekend_wine_en__dark.png, tr_weekend_wine_en__light.png
 
 TITRE :
@@ -1004,7 +1030,7 @@ DESCRIPTION :
 « Weekend Forecast: Wine » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #78 ─────  (trending · en)
+───── #80 ─────  (trending · en)
 IMAGE(S) : tr_wine_oclock_en__dark.png, tr_wine_oclock_en__light.png
 
 TITRE :
@@ -1017,7 +1043,7 @@ DESCRIPTION :
 « Wine O'Clock » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #79 ─────  (word_shapes · —)
+───── #81 ─────  (word_shapes · —)
 IMAGE(S) : niche_coffee_shape.png
 
 TITRE :
@@ -1030,7 +1056,7 @@ DESCRIPTION :
 « Niche Coffee Shape » en typographie minimaliste et percutante. Un design pour les gourmand·es et accros au café. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #food_drink #typographie
 
 
-───── #80 ─────  (word_shapes · —)
+───── #82 ─────  (word_shapes · —)
 IMAGE(S) : niche_mushrooms_shroom.png
 
 TITRE :

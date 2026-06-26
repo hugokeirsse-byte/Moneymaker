@@ -1,5 +1,5 @@
 ════════════════════════════════════════════════════════════════
-  CATÉGORIE : Pets & Dog Lovers   (65 designs)
+  CATÉGORIE : Pets & Dog Lovers   (66 designs)
   Pour chaque design : uploade l'IMAGE, puis copie-colle TITRE / TAGS / DESCRIPTION.
 ════════════════════════════════════════════════════════════════
 
@@ -796,7 +796,20 @@ DESCRIPTION :
 « Be The Person Your Dog Thinks You Are » en typographie minimaliste et percutante. Un design pour les maîtres d'animaux. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #pets #typographie
 
 
-───── #62 ─────  (trending · fr)
+───── #62 ─────  (subniches · fr)
+IMAGE(S) : sn_chien_dispo_fr__dark.png, sn_chien_dispo_fr__light.png
+
+TITRE :
+Émotionnellement Disponible Pour Mon Chien - Pets & Dog Lovers (French) Design
+
+TAGS :
+dog mom, pet lover, dog dad, reptile, animal parent, émotionnellement, disponible, chien, pets & dog lovers, funny shirt, typography, minimalist, aesthetic, gift idea, trendy design, statement tee, for men, for women
+
+DESCRIPTION :
+« Émotionnellement Disponible Pour Mon Chien » en typographie minimaliste et percutante. Un design pour les maîtres d'animaux. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #pets #typographie
+
+
+───── #63 ─────  (trending · fr)
 IMAGE(S) : tr_calin_chien_fr__dark.png, tr_calin_chien_fr__light.png
 
 TITRE :
@@ -809,7 +822,7 @@ DESCRIPTION :
 « Câlin Avec Mon Chien » en typographie minimaliste et percutante. Un design pour les maîtres d'animaux. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #pets #typographie
 
 
-───── #63 ─────  (trending · fr)
+───── #64 ─────  (trending · fr)
 IMAGE(S) : tr_chien_meilleur_fr__dark.png, tr_chien_meilleur_fr__light.png
 
 TITRE :
@@ -822,7 +835,7 @@ DESCRIPTION :
 « Mon Chien, Mon Thérapeute » en typographie minimaliste et percutante. Un design pour les maîtres d'animaux. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #pets #typographie
 
 
-───── #64 ─────  (trending · fr)
+───── #65 ─────  (trending · fr)
 IMAGE(S) : tr_maman_chien_fr__dark.png, tr_maman_chien_fr__light.png
 
 TITRE :
@@ -835,7 +848,7 @@ DESCRIPTION :
 « Maman Chien » en typographie minimaliste et percutante. Un design pour les maîtres d'animaux. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #pets #typographie
 
 
-───── #65 ─────  (word_shapes · —)
+───── #66 ─────  (word_shapes · —)
 IMAGE(S) : niche_dog_shape.png
 
 TITRE :

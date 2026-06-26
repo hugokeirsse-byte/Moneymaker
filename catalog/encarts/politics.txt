@@ -1,5 +1,5 @@
 ════════════════════════════════════════════════════════════════
-  CATÉGORIE : Activist & Leftist   (106 designs)
+  CATÉGORIE : Activist & Leftist   (109 designs)
   Pour chaque design : uploade l'IMAGE, puis copie-colle TITRE / TAGS / DESCRIPTION.
 ════════════════════════════════════════════════════════════════
 
@@ -1173,7 +1173,46 @@ DESCRIPTION :
 « Yoga Le Matin, Révolution L'Aprèm » en typographie minimaliste et percutante. Un design pour les militant·es et engagé·es. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #politics #typographie
 
 
-───── #91 ─────  (trending · en)
+───── #91 ─────  (subniches · en)
+IMAGE(S) : sn_abolish_billionaires_en__dark.png, sn_abolish_billionaires_en__light.png
+
+TITRE :
+Abolish Billionaires - Activist & Leftist Design
+
+TAGS :
+activist, eat the rich, anti capitalist, leftist, protest, revolution, abolish, billionaires, activist & leftist, funny shirt, typography, minimalist, aesthetic, gift idea, trendy design, statement tee, for men, for women
+
+DESCRIPTION :
+« Abolish Billionaires » en typographie minimaliste et percutante. Un design pour les militant·es et engagé·es. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #politics #typographie
+
+
+───── #92 ─────  (subniches · en)
+IMAGE(S) : sn_rest_resistance_en__dark.png, sn_rest_resistance_en__light.png
+
+TITRE :
+Rest Is Resistance - Activist & Leftist Design
+
+TAGS :
+activist, eat the rich, anti capitalist, leftist, protest, revolution, rest, resistance, activist & leftist, funny shirt, typography, minimalist, aesthetic, gift idea, trendy design, statement tee, for men, for women
+
+DESCRIPTION :
+« Rest Is Resistance » en typographie minimaliste et percutante. Un design pour les militant·es et engagé·es. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #politics #typographie
+
+
+───── #93 ─────  (subniches · en)
+IMAGE(S) : sn_tired_strong_en__dark.png, sn_tired_strong_en__light.png
+
+TITRE :
+Tired Of Being Strong - Activist & Leftist Design
+
+TAGS :
+activist, eat the rich, anti capitalist, leftist, protest, revolution, tired, being, strong, activist & leftist, funny shirt, typography, minimalist, aesthetic, gift idea, trendy design, statement tee, for men, for women
+
+DESCRIPTION :
+« Tired Of Being Strong » en typographie minimaliste et percutante. Un design pour les militant·es et engagé·es. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #politics #typographie
+
+
+───── #94 ─────  (trending · en)
 IMAGE(S) : tr_allergic_mornings_en__dark.png, tr_allergic_mornings_en__light.png
 
 TITRE :
@@ -1186,7 +1225,7 @@ DESCRIPTION :
 « Allergic To Mornings » en typographie minimaliste et percutante. Un design pour les militant·es et engagé·es. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #politics #typographie
 
 
-───── #92 ─────  (trending · fr)
+───── #95 ─────  (trending · fr)
 IMAGE(S) : tr_chat_patron_fr__dark.png, tr_chat_patron_fr__light.png
 
 TITRE :
@@ -1199,7 +1238,7 @@ DESCRIPTION :
 « Mon Chat Est Le Patron » en typographie minimaliste et percutante. Un design pour les militant·es et engagé·es. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #politics #typographie
 
 
-───── #93 ─────  (warning · fr)
+───── #96 ─────  (warning · fr)
 IMAGE(S) : wa_betise_fr__dark.png, wa_betise_fr__light.png
 
 TITRE :
@@ -1212,7 +1251,7 @@ DESCRIPTION :
 « La Bêtise Tue (Et Se Reproduit) » en typographie minimaliste et percutante. Un design pour les militant·es et engagé·es. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #politics #typographie
 
 
-───── #94 ─────  (warning · en)
+───── #97 ─────  (warning · en)
 IMAGE(S) : wa_capitalism_en__dark.png, wa_capitalism_en__light.png
 
 TITRE :
@@ -1225,7 +1264,7 @@ DESCRIPTION :
 « Capitalism Kills (And Knows It) » en typographie minimaliste et percutante. Un design pour les militant·es et engagé·es. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #politics #typographie
 
 
-───── #95 ─────  (warning · fr)
+───── #98 ─────  (warning · fr)
 IMAGE(S) : wa_capitalisme_fr__dark.png, wa_capitalisme_fr__light.png
 
 TITRE :
@@ -1238,7 +1277,7 @@ DESCRIPTION :
 « Le Capitalisme Tue (Et Le Sait) » en typographie minimaliste et percutante. Un design pour les militant·es et engagé·es. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #politics #typographie
 
 
-───── #96 ─────  (warning · en)
+───── #99 ─────  (warning · en)
 IMAGE(S) : wa_fastfashion_en__dark.png, wa_fastfashion_en__light.png
 
 TITRE :
@@ -1251,7 +1290,7 @@ DESCRIPTION :
 « Fast Fashion Kills » en typographie minimaliste et percutante. Un design pour les militant·es et engagé·es. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #politics #typographie
 
 
-───── #97 ─────  (warning · fr)
+───── #100 ─────  (warning · fr)
 IMAGE(S) : wa_fastfashion_fr__dark.png, wa_fastfashion_fr__light.png
 
 TITRE :
@@ -1264,7 +1303,7 @@ DESCRIPTION :
 « La Fast Fashion Tue » en typographie minimaliste et percutante. Un design pour les militant·es et engagé·es. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #politics #typographie
 
 
-───── #98 ─────  (warning · fr)
+───── #101 ─────  (warning · fr)
 IMAGE(S) : wa_indifference_fr__dark.png, wa_indifference_fr__light.png
 
 TITRE :
@@ -1277,7 +1316,7 @@ DESCRIPTION :
 « L'Indifférence Tue » en typographie minimaliste et percutante. Un design pour les militant·es et engagé·es. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #politics #typographie
 
 
-───── #99 ─────  (warning · fr)
+───── #102 ─────  (warning · fr)
 IMAGE(S) : wa_peter_fr__dark.png, wa_peter_fr__light.png
 
 TITRE :
@@ -1290,7 +1329,7 @@ DESCRIPTION :
 « Péter Ne Tue Pas (Mais Ça Pue) » en typographie minimaliste et percutante. Un design pour les militant·es et engagé·es. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #politics #typographie
 
 
-───── #100 ─────  (warning · fr)
+───── #103 ─────  (warning · fr)
 IMAGE(S) : wa_pub_fr__dark.png, wa_pub_fr__light.png
 
 TITRE :
@@ -1303,7 +1342,7 @@ DESCRIPTION :
 « La Publicité Tue (Le Cerveau) » en typographie minimaliste et percutante. Un design pour les militant·es et engagé·es. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #politics #typographie
 
 
-───── #101 ─────  (warning · fr)
+───── #104 ─────  (warning · fr)
 IMAGE(S) : wa_reunion_fr__dark.png, wa_reunion_fr__light.png
 
 TITRE :
@@ -1316,7 +1355,7 @@ DESCRIPTION :
 « Cette Réunion Tue (Du Temps) » en typographie minimaliste et percutante. Un design pour les militant·es et engagé·es. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #politics #typographie
 
 
-───── #102 ─────  (warning · en)
+───── #105 ─────  (warning · en)
 IMAGE(S) : wa_scroll_en__dark.png, wa_scroll_en__light.png
 
 TITRE :
@@ -1329,7 +1368,7 @@ DESCRIPTION :
 « Doomscrolling Kills (Your Time) » en typographie minimaliste et percutante. Un design pour les militant·es et engagé·es. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #politics #typographie
 
 
-───── #103 ─────  (warning · en)
+───── #106 ─────  (warning · en)
 IMAGE(S) : wa_silence_en__dark.png, wa_silence_en__light.png
 
 TITRE :
@@ -1342,7 +1381,7 @@ DESCRIPTION :
 « Silence Kills » en typographie minimaliste et percutante. Un design pour les militant·es et engagé·es. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #politics #typographie
 
 
-───── #104 ─────  (warning · fr)
+───── #107 ─────  (warning · fr)
 IMAGE(S) : wa_silence_fr__dark.png, wa_silence_fr__light.png
 
 TITRE :
@@ -1355,7 +1394,7 @@ DESCRIPTION :
 « Le Silence Tue (Face À L'Injustice) » en typographie minimaliste et percutante. Un design pour les militant·es et engagé·es. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #politics #typographie
 
 
-───── #105 ─────  (warning · en)
+───── #108 ─────  (warning · en)
 IMAGE(S) : wa_smalltalk_en__dark.png, wa_smalltalk_en__light.png
 
 TITRE :
@@ -1368,7 +1407,7 @@ DESCRIPTION :
 « Small Talk Kills (Slowly) » en typographie minimaliste et percutante. Un design pour les militant·es et engagé·es. Idée cadeau parfaite, à porter ou offrir. Disponible sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. #politics #typographie
 
 
-───── #106 ─────  (warning · fr)
+───── #109 ─────  (warning · fr)
 IMAGE(S) : wa_ultrariches_fr__dark.png, wa_ultrariches_fr__light.png
 
 TITRE :
