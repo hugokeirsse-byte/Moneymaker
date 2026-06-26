@@ -42,50 +42,61 @@ def render(entry, variant, idx=0, side=4500):
     ink = adapt(INK, variant)
     red = adapt(RED, variant)
     head = entry.get("head", "ANTI")
-    items = list(entry["items"])
-    # le dernier mot porte la parenthèse fermante (la liste « tient » dedans)
-    items_closed = items[:-1] + [items[-1].rstrip(",") + " )"]
+    words = list(entry["items"])
+    # dernier mot : parenthèse fermante collée
+    words[-1] = words[-1].rstrip(",") + " )"
 
-    margin = int(side * 0.12)
+    margin = int(side * 0.11)
     max_w = side - 2 * margin
 
-    # taille du head : limitée par la largeur de « HEAD ( » et du plus long item
-    longest = max([head + " ("] + items, key=len)
-    lo, hi = 20, int(side * 0.16)
+    # head bien visible : « Head ( » calé à ~62 % de la largeur utile
+    lo, hi = 20, int(side * 0.17)
     while lo < hi:
         mid = (lo + hi + 1) // 2
         f = load_font(FONT, mid)
-        if measure(f, longest)[0] <= max_w:
+        if measure(f, head + " (")[0] <= max_w * 0.62:
             lo = mid
         else:
             hi = mid - 1
     head_sz = lo
+    min_sz = max(9, int(head_sz * MIN_RATIO))
 
-    # tailles décroissantes des items jusqu'à une police minuscule (effet « infini »)
-    min_sz = max(8, int(head_sz * MIN_RATIO))
-    sizes = []
-    sz = int(head_sz * SHRINK)
-    for _ in items_closed:
-        sizes.append(int(sz))
+    # ── empilage : on garnit chaque ligne de plusieurs mots, taille décroissante ──
+    # grandes lignes = peu de mots (2-3) ; petites lignes = beaucoup de mots
+    target_w = max_w
+    sz = int(head_sz * 0.78)
+    i = 0
+    body = []  # (size, text)
+    while i < len(words):
+        f = load_font(FONT, sz)
+        line = []
+        w = 0.0
+        while i < len(words):
+            piece = (" " if line else "") + words[i]
+            ww = f.getlength(piece)
+            if line and w + ww > target_w:
+                break
+            line.append(words[i])
+            w += ww
+            i += 1
+        body.append((sz, " ".join(line)))
         sz = max(min_sz, int(sz * SHRINK))
 
     img = Image.new("RGBA", (side, side), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
     cx = side // 2
 
-    # ── pile : « Head (  » puis items de plus en plus petits, ) au dernier ──
     fh = load_font(FONT, head_sz)
     rows = [(fh, head + " (", head_sz, False)]
-    for it, s in zip(items_closed, sizes):
-        rows.append((load_font(FONT, s), it, s, True))
+    for s, t in body:
+        rows.append((load_font(FONT, s), t, s, True))
 
-    # gap proportionnel à la taille de la ligne courante (resserre quand ça rétrécit)
     heights = [measure(f, t)[1] for f, t, _, _ in rows]
-    gaps = [int(s * 0.16) for _, _, s, _ in rows]
+    gaps = [int(s * 0.20) for _, _, s, _ in rows]
     total_h = sum(heights) + sum(gaps[:-1])
     top = side // 2 - total_h // 2
 
-    n_items = len(items_closed)
+    n_body = len(body)
     y = top
     block_w = 0
     item_k = 0
@@ -94,8 +105,8 @@ def render(entry, variant, idx=0, side=4500):
         block_w = max(block_w, w)
         if is_item:
             col = red if (item_k % 2 == 0) else ink
-            frac = item_k / max(1, n_items - 1)
-            alpha = int(255 - 120 * frac)
+            frac = item_k / max(1, n_body - 1)
+            alpha = int(255 - 95 * frac)
             col = col[:3] + (alpha,)
             item_k += 1
         else:
