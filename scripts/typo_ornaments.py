@@ -94,17 +94,33 @@ def _orn_double(d, x0, y0, x1, y1, ink, accent, scale, qf):
 
 def _orn_sparkles(d, x0, y0, x1, y1, ink, accent, scale, qf):
     cx = (x0 + x1) // 2
-    big = int(26 * scale)
-    mid = int(19 * scale)
-    sm = int(15 * scale)
-    o = int(40 * scale)
-    spots = [
-        (x0 - o, y0 + o * 0.3, big), (x1 + o, y0 - o * 0.2, mid),
-        (x0 - o * 0.4, y1 - o * 0.1, sm), (x1 + o * 0.7, y1 + o * 0.3, big),
-        (cx, y0 - int(52 * scale), mid), (cx, y1 + int(52 * scale), sm),
+    cy = (y0 + y1) // 2
+    big = int(90 * scale)
+    mid = int(62 * scale)
+    sm = int(44 * scale)
+    o = int(110 * scale)
+    # accent (red) stars — main sparkles
+    spots_a = [
+        (x0 - o,                y0 - int(o * 0.5),   big),
+        (x1 + o,                y0 - int(o * 0.2),   mid),
+        (x0 - int(o * 0.5),    y1 + int(o * 0.7),   mid),
+        (x1 + int(o * 0.8),    y1 + int(o * 0.5),   big),
+        (cx,                    y0 - int(130 * scale), mid),
+        (cx,                    y1 + int(130 * scale), sm),
+        (x0 - int(o * 0.2),    cy + int(o * 0.1),   sm),
+        (x1 + int(o * 0.4),    cy - int(o * 0.2),   sm),
     ]
-    for x, y, r in spots:
+    # ink (dark) smaller stars — give depth
+    spots_i = [
+        (x0 - int(o * 0.7),    y1 - int(o * 0.4),   sm),
+        (x1 + int(o * 0.6),    y0 + int(o * 0.4),   sm),
+        (cx - int(180 * scale), y0 - int(70 * scale), int(32 * scale)),
+        (cx + int(180 * scale), y1 + int(70 * scale), int(32 * scale)),
+    ]
+    for x, y, r in spots_a:
         _star(d, x, y, r, accent)
+    for x, y, r in spots_i:
+        _star(d, x, y, r, ink)
 
 
 def _orn_quotes(d, x0, y0, x1, y1, ink, accent, scale, qf):
