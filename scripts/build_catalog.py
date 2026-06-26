@@ -230,14 +230,11 @@ def word_tags(text):
 
 
 def make_desc(phrase, theme, label, lang, who_en, who_fr):
-    if lang == "fr":
-        return (f"« {phrase} » en typographie minimaliste et percutante. Un design "
-                f"pour {who_fr}. Idée cadeau parfaite, à porter ou offrir. Disponible "
-                f"sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. "
-                f"#{theme} #typographie")
-    return (f"\"{phrase}\" in clean minimalist typography. A statement design for "
-            f"{who_en}. Makes a perfect gift to wear or give. Available on tees, "
-            f"hoodies, stickers, mugs, tote bags, posters and more. #{theme} #typography")
+    # description TOUJOURS en français (sera traduite ensuite si besoin)
+    return (f"« {phrase} » en typographie minimaliste et percutante. Un design "
+            f"pour {who_fr}. Idée cadeau parfaite, à porter ou offrir. Disponible "
+            f"sur t-shirt, sweat, sticker, mug, tote bag, poster et plus. "
+            f"#{theme} #typographie")
 
 
 def build():
