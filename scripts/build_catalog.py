@@ -293,6 +293,34 @@ def build():
                   encoding="utf-8") as fh:
             w = csv.DictWriter(fh, fieldnames=cols); w.writeheader(); w.writerows(rs)
 
+    # ── encarts lisibles (prêts à copier-coller, 1 bloc par design) ──
+    os.makedirs(os.path.join(OUT, "encarts"), exist_ok=True)
+    SEP = "═" * 64
+    for theme, rs in by.items():
+        label = THEME_BY_KEY[theme][1]
+        lines = [SEP, f"  CATÉGORIE : {label}   ({len(rs)} designs)",
+                 "  Pour chaque design : uploade l'IMAGE, puis copie-colle "
+                 "TITRE / TAGS / DESCRIPTION.", SEP, ""]
+        for i, r in enumerate(rs, 1):
+            imgs = [os.path.basename(x) for x in r["files"].split(" | ")]
+            lines += [
+                f"───── #{i} ─────  ({r['collection']} · {r['lang'] or '—'})",
+                f"IMAGE(S) : {', '.join(imgs)}",
+                "",
+                "TITRE :",
+                r["title"],
+                "",
+                "TAGS :",
+                r["tags"],
+                "",
+                "DESCRIPTION :",
+                r["description"],
+                "", "",
+            ]
+        with open(os.path.join(OUT, "encarts", f"{theme}.txt"), "w",
+                  encoding="utf-8") as fh:
+            fh.write("\n".join(lines))
+
     plats = ("Redbubble, TeePublic, Amazon Merch on Demand, Spreadshirt, Spring, "
              "Threadless, Zazzle, Society6, Displate, Fine Art America")
     with open(os.path.join(OUT, "SUMMARY.md"), "w", encoding="utf-8") as fh:

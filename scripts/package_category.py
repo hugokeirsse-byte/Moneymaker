@@ -31,6 +31,7 @@ def main():
     args = ap.parse_args()
 
     csv_path = os.path.join(ROOT, "catalog", "by_theme", f"{args.theme}.csv")
+    txt_path = os.path.join(ROOT, "catalog", "encarts", f"{args.theme}.txt")
     if not os.path.isfile(csv_path):
         print("introuvable:", csv_path); sys.exit(1)
     rows = list(csv.DictReader(open(csv_path, encoding="utf-8")))
@@ -53,6 +54,9 @@ def main():
     def open_zip(n):
         p = os.path.join(args.out, f"{args.theme}_part{n}.zip")
         z = zipfile.ZipFile(p, "w", zipfile.ZIP_STORED)
+        # encart lisible (prêt à copier-coller) en priorité, CSV en bonus
+        if os.path.isfile(txt_path):
+            z.writestr(f"{args.theme}_a-copier-coller.txt", open(txt_path, "rb").read())
         z.writestr(f"{args.theme}.csv", open(csv_path, "rb").read())
         return p, z
 
