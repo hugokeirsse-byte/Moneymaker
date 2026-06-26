@@ -34,8 +34,8 @@ def pick_ornament(i):
 
 
 def pick_style(i):
-    """Alternance sur les 6 modèles distincts (le 6e = étiquette)."""
-    return STYLES[i % len(STYLES)]
+    """Style unique retenu : les étoiles / éclats (sparkles) sur tous les designs."""
+    return "sparkles"
 
 
 # ─── primitives ─────────────────────────────────────────────────────────────
@@ -95,27 +95,32 @@ def _orn_double(d, x0, y0, x1, y1, ink, accent, scale, qf):
 def _orn_sparkles(d, x0, y0, x1, y1, ink, accent, scale, qf):
     cx = (x0 + x1) // 2
     cy = (y0 + y1) // 2
-    big = int(90 * scale)
-    mid = int(62 * scale)
-    sm = int(44 * scale)
-    o = int(110 * scale)
-    # accent (red) stars — main sparkles
+    big = int(95 * scale)
+    mid = int(64 * scale)
+    sm = int(46 * scale)
+    xs = int(30 * scale)
+    o = int(115 * scale)
+    # accent (red) stars — éclats principaux autour du bloc
     spots_a = [
-        (x0 - o,                y0 - int(o * 0.5),   big),
-        (x1 + o,                y0 - int(o * 0.2),   mid),
-        (x0 - int(o * 0.5),    y1 + int(o * 0.7),   mid),
-        (x1 + int(o * 0.8),    y1 + int(o * 0.5),   big),
-        (cx,                    y0 - int(130 * scale), mid),
-        (cx,                    y1 + int(130 * scale), sm),
-        (x0 - int(o * 0.2),    cy + int(o * 0.1),   sm),
-        (x1 + int(o * 0.4),    cy - int(o * 0.2),   sm),
+        (x0 - o,                 y0 - int(o * 0.5),     big),
+        (x1 + o,                 y0 - int(o * 0.2),     mid),
+        (x0 - int(o * 0.5),      y1 + int(o * 0.7),     mid),
+        (x1 + int(o * 0.8),      y1 + int(o * 0.5),     big),
+        (cx,                     y0 - int(135 * scale), mid),
+        (cx,                     y1 + int(135 * scale), sm),
+        (x0 - int(o * 0.2),      cy + int(o * 0.1),     sm),
+        (x1 + int(o * 0.4),      cy - int(o * 0.2),     sm),
+        (cx - int(0.30 * (x1 - x0)), y0 - int(o * 0.75), sm),
+        (cx + int(0.30 * (x1 - x0)), y1 + int(o * 0.75), sm),
     ]
-    # ink (dark) smaller stars — give depth
+    # ink (dark) stars plus petites — profondeur
     spots_i = [
-        (x0 - int(o * 0.7),    y1 - int(o * 0.4),   sm),
-        (x1 + int(o * 0.6),    y0 + int(o * 0.4),   sm),
-        (cx - int(180 * scale), y0 - int(70 * scale), int(32 * scale)),
-        (cx + int(180 * scale), y1 + int(70 * scale), int(32 * scale)),
+        (x0 - int(o * 0.7),      y1 - int(o * 0.4),     sm),
+        (x1 + int(o * 0.6),      y0 + int(o * 0.4),     sm),
+        (cx - int(180 * scale),  y0 - int(72 * scale),  int(34 * scale)),
+        (cx + int(180 * scale),  y1 + int(72 * scale),  int(34 * scale)),
+        (x0 - int(o * 1.05),     cy - int(o * 0.35),    xs),
+        (x1 + int(o * 1.05),     cy + int(o * 0.45),    xs),
     ]
     for x, y, r in spots_a:
         _star(d, x, y, r, accent)

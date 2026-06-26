@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "note": "Punchlines ironiques / sarcastiques, certaines engagées. Markup *mot* = rouge. 6 styles alternés.",
+    "ink": [28, 28, 32, 255],
+    "accent": [190, 46, 38, 255]
+  },
+  "entries": [
+    {"id": "ir_content_moi_fr", "lang": "fr", "lines": ["Je Suis *Content*", "D'Être Moi", "Quand Je Te Vois"]},
+    {"id": "ir_raciste_cul_fr", "lang": "fr", "lines": ["Si T'Es *Raciste*,", "Je Préfère Encore", "Parler À Un Cul"]},
+    {"id": "ir_pas_pour_toi_fr", "lang": "fr", "lines": ["J'Ai Un *Sourire*", "Pour Tout Le Monde.", "Sauf Toi."]},
+    {"id": "ir_facho_neurones_fr", "lang": "fr", "lines": ["Toi Et Tes Idées", "*Fachos*, Vous", "Faites Pas Le Poids"]},
+    {"id": "ir_mechant_gratuit_fr", "lang": "fr", "lines": ["Je Suis Pas Méchant,", "Je Suis *Honnête*.", "Ça Surprend, Hein ?"]},
+    {"id": "ir_avis_demande_fr", "lang": "fr", "lines": ["Ton Avis Compte.", "Pour *Toi*.", "Garde-Le."]},
+    {"id": "ir_allergique_betise_fr", "lang": "fr", "lines": ["Allergique À La", "*Bêtise*. On Va", "Pas S'Entendre"]},
+    {"id": "ir_neurone_solo_fr", "lang": "fr", "lines": ["Ton Neurone", "Doit Se Sentir", "Bien *Seul*"]},
+    {"id": "ir_great_personality_en", "lang": "en", "lines": ["You Have A Great", "*Personality*", "For A Bigot"]},
+    {"id": "ir_not_for_you_en", "lang": "en", "lines": ["I Have A Smile", "For Everyone.", "Except *You*."]},
+    {"id": "ir_thoughts_quiet_en", "lang": "en", "lines": ["Your Opinion", "Means A Lot.", "To *Nobody*."]},
+    {"id": "ir_so_brave_en", "lang": "en", "lines": ["Being Racist", "In *Current Year*?", "So Brave."]},
+    {"id": "ir_iq_room_temp_en", "lang": "en", "lines": ["Your Hot Takes", "Are *Cold*.", "Like Your IQ."]},
+    {"id": "ir_block_button_en", "lang": "en", "lines": ["You're The Reason", "The *Block Button*", "Exists"]},
+    {"id": "ir_villain_origin_en", "lang": "en", "lines": ["Talking To You", "Is My *Villain*", "Origin Story"]},
+    {"id": "ir_emotional_support_en", "lang": "en", "lines": ["I'm Someone's", "*Emotional Support*", "Menace"]},
+    {"id": "ir_couldnt_care_en", "lang": "en", "lines": ["I Couldn't Care", "Less. And I've", "*Tried*."]},
+    {"id": "ir_patience_fr", "lang": "fr", "lines": ["J'Ai De La *Patience*.", "Elle T'Attend", "Dehors."]},
+    {"id": "ir_smarter_plants_en", "lang": "en", "lines": ["My *Plants* Have", "Better Takes", "Than You"]},
+    {"id": "ir_sois_toi_meme_fr", "lang": "fr", "lines": ["« Sois Toi-Même »", "Mauvais Conseil", "*Dans Ton Cas*"]},
+    {"id": "ir_two_sides_en", "lang": "en", "lines": ["There Aren't", "*Two Sides* To", "Basic Respect"]},
+    {"id": "ir_decu_pas_surpris_fr", "lang": "fr", "lines": ["Déçu ? Non.", "*Pas Surpris*", "Venant De Toi"]},
+    {"id": "ir_main_character_en", "lang": "en", "lines": ["You're Not The", "*Main Character*.", "You're The Warning."]},
+    {"id": "ir_gout_des_autres_fr", "lang": "fr", "lines": ["J'Ai Bon Goût.", "C'Est Pour Ça", "Que *Tu Me Fuis*"]},
+    {"id": "ir_meme_bateau_fr", "lang": "fr", "lines": ["On Est Tous Dans", "Le Même Bateau", "(Sauf Ceux Qui Ont", "*Troué La Coque*)"]},
+    {"id": "ir_same_boat_en", "lang": "en", "lines": ["We're All In The", "Same Boat", "(Some Just *Drilled", "The Holes*)"]},
+    {"id": "ir_self_made_fr", "lang": "fr", "lines": ["« Parti De Rien »", "Avec L'Entreprise", "*De Papa*"]},
+    {"id": "ir_bootstraps_en", "lang": "en", "lines": ["« Self-Made »", "With *Daddy's*", "Startup Money"]},
+    {"id": "ir_trickle_down_en", "lang": "en", "lines": ["Still Waiting", "For That Wealth", "To *Trickle Down*"]},
+    {"id": "ir_ruissellement_fr", "lang": "fr", "lines": ["J'Attends Toujours", "Le *Ruissellement*.", "Il Pleut Pas."]}
+  ]
+}

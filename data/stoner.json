@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "note": "Série stoner / festival : clair pour qui sait, mais déniable de mauvaise foi. 'flag' = remplissage drapeau (rasta/jamaica/pride). Sinon markup *mot* = rouge.",
+    "ink": [28, 28, 32, 255],
+    "accent": [190, 46, 38, 255]
+  },
+  "entries": [
+    {"id": "st_420_rasta", "lang": "xx", "flag": "rasta", "lines": ["420"]},
+    {"id": "st_420_friendly_rasta", "lang": "en", "flag": "rasta", "lines": ["420", "Friendly"]},
+    {"id": "st_high_vibes_rasta", "lang": "en", "flag": "rasta", "lines": ["High", "Vibes"]},
+    {"id": "st_good_trip_rasta", "lang": "en", "flag": "rasta", "lines": ["Good", "Trip"]},
+    {"id": "st_one_love_rasta", "lang": "en", "flag": "rasta", "lines": ["One", "Love"]},
+    {"id": "st_stay_high_rasta", "lang": "en", "flag": "rasta", "lines": ["Stay", "High"]},
+    {"id": "st_peace_jamaica", "lang": "en", "flag": "jamaica", "lines": ["Peace", "& Love"]},
+    {"id": "st_blaze_jamaica", "lang": "en", "flag": "jamaica", "lines": ["Blaze", "It"]},
+    {"id": "st_champis_fr", "lang": "fr", "lines": ["J'Aime Les *Champis*", "Mais Je Parle Pas", "De Morilles"]},
+    {"id": "st_jardinage_fr", "lang": "fr", "lines": ["J'Aime Le *Jardinage*", "Surtout Une", "Certaine Herbe"]},
+    {"id": "st_brownie_fr", "lang": "fr", "lines": ["Mes *Brownies*", "Sont Un Peu", "Spéciaux"]},
+    {"id": "st_camping_fr", "lang": "fr", "lines": ["En *Camping*", "Spirituel"]},
+    {"id": "st_roule_fr", "lang": "fr", "lines": ["Je Roule...", "Mes *Cigarettes*", "Moi-Même"]},
+    {"id": "st_plante_verte_fr", "lang": "fr", "lines": ["Amateur De", "*Plantes Vertes*", "(Une En Particulier)"]},
+    {"id": "st_tisane_fr", "lang": "fr", "lines": ["Soirée *Tisane*", "(C'Est Pas", "De La Tisane)"]},
+    {"id": "st_arrose_fr", "lang": "fr", "lines": ["J'Arrose Mes *Plantes*", "Et Elles Me Le", "Rendent Bien"]},
+    {"id": "st_medite_fr", "lang": "fr", "lines": ["Je *Médite*", "Avec Un Petit", "Coup De Main"]},
+    {"id": "st_baked_en", "lang": "en", "lines": ["I Love", "*Baking*", "(Wink)"]},
+    {"id": "st_gardening_en", "lang": "en", "lines": ["I Love *Gardening*", "One Plant", "In Particular"]},
+    {"id": "st_brownies_en", "lang": "en", "lines": ["My *Brownies*", "Hit", "Different"]},
+    {"id": "st_greens_en", "lang": "en", "lines": ["Doctor Said", "I Need More", "*Greens*"]},
+    {"id": "st_plant_parent_en", "lang": "en", "lines": ["Proud *Plant Parent*", "(You Know", "The One)"]},
+    {"id": "st_herbal_en", "lang": "en", "lines": ["Certified", "*Herbal*", "Enthusiast"]},
+    {"id": "st_high_on_life_en", "lang": "en", "lines": ["High On *Life*", "(And A Couple", "Other Things)"]},
+    {"id": "st_festival_mode_en", "lang": "en", "lines": ["*Festival* Mode:", "Brain Offline"]},
+    {"id": "st_sunset_session_en", "lang": "en", "lines": ["Sunset *Session*", "Enthusiast"]},
+    {"id": "st_legalize_en", "lang": "en", "lines": ["*Legalize*", "Good Vibes"]},
+    {"id": "st_pride_love", "lang": "en", "flag": "pride", "lines": ["Love", "Is Love"]}
+  ]
+}

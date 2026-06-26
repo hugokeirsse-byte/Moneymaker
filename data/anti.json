@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "note": "Liste qui rétrécit jusqu'à une police minuscule (effet infini). « Head ( » puis items décroissants, ) sur le dernier. Items alternés rouge/noir, fondu vers le bas.",
+    "ink": [28, 28, 32, 255],
+    "accent": [190, 46, 38, 255]
+  },
+  "entries": [
+    {"id": "an_anti_fr", "lang": "fr", "head": "Anti", "items": ["Fascisme,", "Capitalisme,", "Ultra-Riches,", "Pollueurs,", "Racisme,", "Patriarcat,", "Homophobie,", "Sexisme,", "Mépris,", "Cons,", "Et Cætera,"]},
+    {"id": "an_anti_en", "lang": "en", "head": "Anti", "items": ["Fascism,", "Capitalism,", "Billionaires,", "Polluters,", "Racism,", "Patriarchy,", "Homophobia,", "Sexism,", "Greed,", "Hate,", "And So On,"]},
+    {"id": "an_anticons_fr", "lang": "fr", "head": "Anti", "items": ["Cons,", "Fachos,", "Pollueurs,", "Hypocrites,", "Lâches,", "Donneurs", "De Leçons,", "Et Cie,"]},
+    {"id": "an_pro_fr", "lang": "fr", "head": "Pour", "items": ["L'Écologie,", "L'Égalité,", "Les Chats,", "Les Droits,", "La Paix,", "Le Partage,", "La Justice,", "Les Gens,"]},
+    {"id": "an_pro_en", "lang": "en", "head": "Pro", "items": ["Equality,", "Climate,", "Cats,", "Naps,", "Justice,", "Kindness,", "Workers,", "Everyone,"]},
+    {"id": "an_against_en", "lang": "en", "head": "Against", "items": ["Hate,", "Greed,", "Fascism,", "Pollution,", "Bigotry,", "Cruelty,", "Excuses,", "Silence,"]},
+    {"id": "an_allergic_en", "lang": "en", "head": "Allergic To", "items": ["Racists,", "Fascists,", "Bosses,", "Mondays,", "Small Talk,", "Excuses,", "Liars,", "Cruelty,"]},
+    {"id": "an_alergique_fr", "lang": "fr", "head": "Allergique Aux", "items": ["Fachos,", "Patrons,", "Lundis,", "Hypocrites,", "Cons,", "Menteurs,", "Excuses,", "Mépris,"]},
+    {"id": "an_safe_fr", "lang": "fr", "head": "Zone Sans", "items": ["Racisme,", "Homophobie,", "Sexisme,", "Validisme,", "Haine,", "Transphobie,", "Mépris,", "Jugement,"]},
+    {"id": "an_freezone_en", "lang": "en", "head": "Free Of", "items": ["Racism,", "Homophobia,", "Sexism,", "Hate,", "Fear,", "Ableism,", "Judgment,", "Shame,"]},
+    {"id": "an_tired_en", "lang": "en", "head": "Tired Of", "items": ["Billionaires,", "Excuses,", "Greenwashing,", "Bigots,", "Lies,", "Hustle,", "Burnout,", "Mondays,"]},
+    {"id": "an_marre_fr", "lang": "fr", "head": "Marre Des", "items": ["Milliardaires,", "Excuses,", "Pollueurs,", "Fachos,", "Mensonges,", "Burn-Out,", "Mépris,", "Lundis,"]}
+  ]
+}

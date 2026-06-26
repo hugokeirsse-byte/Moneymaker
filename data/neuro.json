@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "note": "Particularités assumées avec humour (neurodivergence, troubles dys), multilingue. Markup *mot* = rouge. 6 styles alternés.",
+    "ink": [28, 28, 32, 255],
+    "accent": [190, 46, 38, 255]
+  },
+  "entries": [
+    {"id": "ne_dyslexique_fr", "lang": "fr", "lines": ["*Fier* D'Être", "Dsylexqiue !"]},
+    {"id": "ne_dyscalculie_fr", "lang": "fr", "lines": ["Dyscalculique,", "Aussi *Sûr* Que", "1 + 1 Font 3"]},
+    {"id": "ne_dyslexic_en", "lang": "en", "lines": ["*Proud* To Be", "Dsylexic", "(See? Fine.)"]},
+    {"id": "ne_untie_en", "lang": "en", "lines": ["Dyslexics Of The", "World, *Untie* !"]},
+    {"id": "ne_alphabet_fr", "lang": "fr", "lines": ["Je Connais L'*Alphabet*", "Par Cœur :", "A B D C F E..."]},
+    {"id": "ne_adhd_en", "lang": "en", "lines": ["ADHD:", "I *Finish* Every—", "Oh, A Bird!"]},
+    {"id": "ne_tdah_fr", "lang": "fr", "lines": ["TDAH :", "Je Finis *Toujours*", "Mes— Un Chat !"]},
+    {"id": "ne_autism_en", "lang": "en", "lines": ["*Autistic*", "& Awesome", "Ask Me About Trains"]},
+    {"id": "ne_autiste_fr", "lang": "fr", "lines": ["*Autiste* Et Fier", "Demande-Moi", "Un Truc Précis"]},
+    {"id": "ne_dyspraxie_fr", "lang": "fr", "lines": ["Dyspraxique :", "Champion Du", "*Monde* Des Bleus"]},
+    {"id": "ne_dyscalculia_en", "lang": "en", "lines": ["Dyscalculic", "& *100%* Sure", "This Is 200%"]},
+    {"id": "ne_anxiety_en", "lang": "en", "lines": ["My *Anxiety* And I", "Have Decided", "Everyone Hates Us"]},
+    {"id": "ne_anxieux_fr", "lang": "fr", "lines": ["Mon *Anxiété* Et Moi", "On A Déjà Prévu", "Le Pire"]},
+    {"id": "ne_overthink_en", "lang": "en", "lines": ["Professional", "*Overthinker*", "Since Forever"]},
+    {"id": "ne_surpenseur_fr", "lang": "fr", "lines": ["*Surpenseur*", "Diplômé", "(3h Sur Ce Texte)"]},
+    {"id": "ne_neurospicy_en", "lang": "en", "lines": ["Not Broken.", "Just *Neuro-Spicy*"]},
+    {"id": "ne_neuroatypique_fr", "lang": "fr", "lines": ["Pas Cassé.", "Juste *Neuro-", "Atypique*"]},
+    {"id": "ne_different_brain_en", "lang": "en", "lines": ["Different Brain.", "*Same Worth.*"]},
+    {"id": "ne_cerveau_fr", "lang": "fr", "lines": ["Cerveau Différent.", "*Même Valeur.*"]},
+    {"id": "ne_stimming_en", "lang": "en", "lines": ["I *Stim*,", "Therefore", "I Am"]},
+    {"id": "ne_dys_team_fr", "lang": "fr", "lines": ["Team *Dys*", "On Lit Lentement", "Mais On Pense Vite"]},
+    {"id": "ne_late_en", "lang": "en", "lines": ["Time Blindness:", "I'm *Always*", "Almost There"]},
+    {"id": "ne_retard_fr", "lang": "fr", "lines": ["Cécité Temporelle :", "J'Arrive *Dans*", "Cinq Minutes (×10)"]},
+    {"id": "ne_orgullo_es", "lang": "es", "lines": ["*Orgulloso* De", "Ser Disléxico", "(O Dixléxico)"]},
+    {"id": "ne_stolz_de", "lang": "de", "lines": ["*Stolz*", "Neurodivergent", "Zu Sein"]},
+    {"id": "ne_sensory_en", "lang": "en", "lines": ["*Sensory Overload*", "But Make It", "Fashion"]}
+  ]
+}

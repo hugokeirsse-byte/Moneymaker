@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "note": "T-shirts solidaires : signaler une personne safe, contre la solitude / le harcèlement. Markup *mot* = rouge. 6 styles alternés.",
+    "ink": [28, 28, 32, 255],
+    "accent": [190, 46, 38, 255]
+  },
+  "entries": [
+    {"id": "so_lonely_talk_en", "lang": "en", "lines": ["*Lonely?*", "Talk To Me"]},
+    {"id": "so_seul_parle_fr", "lang": "fr", "lines": ["*Seul(e) ?*", "Viens Me Parler"]},
+    {"id": "so_safe_person_en", "lang": "en", "lines": ["You're Safe", "*With Me*"]},
+    {"id": "so_personne_safe_fr", "lang": "fr", "lines": ["Avec Moi,", "Tu Es *En Sécurité*"]},
+    {"id": "so_bad_day_en", "lang": "en", "lines": ["Bad Day?", "I've *Got* You"]},
+    {"id": "so_mauvais_jour_fr", "lang": "fr", "lines": ["Pas La Forme ?", "Je Suis *Là*"]},
+    {"id": "so_you_matter_en", "lang": "en", "lines": ["You *Matter*.", "Yes, You."]},
+    {"id": "so_tu_comptes_fr", "lang": "fr", "lines": ["Tu *Comptes*.", "Oui, Toi."]},
+    {"id": "so_sit_here_en", "lang": "en", "lines": ["This Seat Is", "*Always* Free", "For You"]},
+    {"id": "so_place_libre_fr", "lang": "fr", "lines": ["Cette Place Est", "*Toujours* Libre", "Pour Toi"]},
+    {"id": "so_ask_for_help_en", "lang": "en", "lines": ["Asking For *Help*", "Is Brave"]},
+    {"id": "so_demander_aide_fr", "lang": "fr", "lines": ["Demander De", "L'*Aide*, C'Est", "Du Courage"]},
+    {"id": "so_no_harass_en", "lang": "en", "lines": ["Harassment Stops", "*With Me*"]},
+    {"id": "so_harcelement_fr", "lang": "fr", "lines": ["Le Harcèlement", "S'Arrête *Avec Moi*"]},
+    {"id": "so_walk_with_you_en", "lang": "en", "lines": ["Need Someone?", "I'll *Walk* With You"]},
+    {"id": "so_je_marche_fr", "lang": "fr", "lines": ["Besoin ?", "Je *Marche* Avec Toi"]},
+    {"id": "so_still_here_en", "lang": "en", "lines": ["Still Here.", "Still *Rooting*", "For You"]},
+    {"id": "so_tiens_bon_fr", "lang": "fr", "lines": ["Tiens Bon.", "On Est Plus", "*Forts* Ensemble"]},
+    {"id": "so_no_one_alone_en", "lang": "en", "lines": ["No One", "Fights *Alone*"]},
+    {"id": "so_jamais_seul_fr", "lang": "fr", "lines": ["Personne Ne Lutte", "*Tout Seul*"]},
+    {"id": "so_check_friends_en", "lang": "en", "lines": ["Text Your", "*Friends*", "First"]},
+    {"id": "so_prends_des_nouvelles_fr", "lang": "fr", "lines": ["Prends Des", "*Nouvelles*", "De Tes Potes"]},
+    {"id": "so_kind_loud_en", "lang": "en", "lines": ["Be *Kind*.", "Out Loud.", "On Purpose."]},
+    {"id": "so_gentillesse_fr", "lang": "fr", "lines": ["Sois *Gentil*.", "Fort. Et", "Exprès."]}
+  ]
+}
