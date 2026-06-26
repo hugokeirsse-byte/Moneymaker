@@ -1,33 +1,207 @@
 {
   "meta": {
     "note": "Série « I ❤ X ». FR = « J'❤ » (cœur collé à l'apostrophe). Avec 'replacement' = mot barré + correction rouge. Sans = jeu de mots/parenthèses, markup *rouge*.",
-    "ink": [28, 28, 32, 255],
-    "accent": [190, 46, 38, 255]
+    "ink": [
+      28,
+      28,
+      32,
+      255
+    ],
+    "accent": [
+      190,
+      46,
+      38,
+      255
+    ]
   },
   "entries": [
-    {"id": "he_men_cats_en", "lang": "en", "pre": "I", "post": "Men", "replacement": "Cats"},
-    {"id": "he_men_women_en", "lang": "en", "pre": "I", "post": "Men", "replacement": "Women"},
-    {"id": "he_men_dogs_en", "lang": "en", "pre": "I", "post": "Men", "replacement": "My Dog"},
-    {"id": "he_people_naps_en", "lang": "en", "pre": "I", "post": "People", "replacement": "Naps"},
-    {"id": "he_hommes_chats_fr", "lang": "fr", "pre": "J'", "post": "Hommes", "replacement": "Chats"},
-    {"id": "he_gens_chien_fr", "lang": "fr", "pre": "J'", "post": "Les Gens", "replacement": "Mon Chien"},
-    {"id": "he_capitalism_planet_en", "lang": "en", "pre": "I", "post": "Capitalism", "replacement": "The Planet"},
-    {"id": "he_monday_coffee_en", "lang": "en", "pre": "I", "post": "Mondays", "replacement": "Coffee"},
-    {"id": "he_billionaires_taxes_en", "lang": "en", "pre": "I", "post": "Billionaires", "replacement": "Taxes"},
-    {"id": "he_drama_plants_en", "lang": "en", "pre": "I", "post": "Drama", "replacement": "My Plants"},
-    {"id": "he_patron_weekend_fr", "lang": "fr", "pre": "J'", "post": "Mon Patron", "replacement": "Le Week-End"},
-    {"id": "he_foule_canape_fr", "lang": "fr", "pre": "J'", "post": "La Foule", "replacement": "Mon Canapé"},
-    {"id": "he_small_talk_silence_en", "lang": "en", "pre": "I", "post": "Small Talk", "replacement": "Silence"},
-    {"id": "he_fast_fashion_thrift_en", "lang": "en", "pre": "I", "post": "Fast Fashion", "replacement": "Thrifting"},
-    {"id": "he_wowmen_en", "lang": "en", "pre": "I", "post": "*(Wo)*Men"},
-    {"id": "he_gveganes_fr", "lang": "fr", "pre": "J'", "post": "Les *(Vé)*Gens"},
-    {"id": "he_thembo_en", "lang": "en", "pre": "I", "post": "*(S)*He*(/Them)*"},
-    {"id": "he_anticapital_en", "lang": "en", "pre": "I", "post": "*Anti*-Capitalism"},
-    {"id": "he_humans_en", "lang": "en", "pre": "I", "post": "*All*-Humans"},
-    {"id": "he_immigrants_fr", "lang": "fr", "pre": "J'", "post": "Les *(Im)*Migrants"},
-    {"id": "he_my_rights_en", "lang": "en", "pre": "I", "post": "My *Rights*"},
-    {"id": "he_la_greve_fr", "lang": "fr", "pre": "J'", "post": "La *Grève*"},
-    {"id": "he_naps_en", "lang": "en", "pre": "I", "post": "*Naps* & *Justice*"},
-    {"id": "he_chats_lutte_fr", "lang": "fr", "pre": "J'", "post": "Les Chats *Et La Lutte*"}
+    {
+      "id": "he_men_cats_en",
+      "lang": "en",
+      "pre": "I",
+      "post": "Men",
+      "replacement": "Cats"
+    },
+    {
+      "id": "he_men_women_en",
+      "lang": "en",
+      "pre": "I",
+      "post": "Men",
+      "replacement": "Women"
+    },
+    {
+      "id": "he_men_dogs_en",
+      "lang": "en",
+      "pre": "I",
+      "post": "Men",
+      "replacement": "My Dog"
+    },
+    {
+      "id": "he_people_naps_en",
+      "lang": "en",
+      "pre": "I",
+      "post": "People",
+      "replacement": "Naps"
+    },
+    {
+      "id": "he_hommes_chats_fr",
+      "lang": "fr",
+      "pre": "J'",
+      "post": "Hommes",
+      "replacement": "Chats"
+    },
+    {
+      "id": "he_gens_chien_fr",
+      "lang": "fr",
+      "pre": "J'",
+      "post": "Les Gens",
+      "replacement": "Mon Chien"
+    },
+    {
+      "id": "he_capitalism_planet_en",
+      "lang": "en",
+      "pre": "I",
+      "post": "Capitalism",
+      "replacement": "The Planet"
+    },
+    {
+      "id": "he_monday_coffee_en",
+      "lang": "en",
+      "pre": "I",
+      "post": "Mondays",
+      "replacement": "Coffee"
+    },
+    {
+      "id": "he_billionaires_taxes_en",
+      "lang": "en",
+      "pre": "I",
+      "post": "Billionaires",
+      "replacement": "Taxes"
+    },
+    {
+      "id": "he_drama_plants_en",
+      "lang": "en",
+      "pre": "I",
+      "post": "Drama",
+      "replacement": "My Plants"
+    },
+    {
+      "id": "he_patron_weekend_fr",
+      "lang": "fr",
+      "pre": "J'",
+      "post": "Mon Patron",
+      "replacement": "Le Week-End"
+    },
+    {
+      "id": "he_foule_canape_fr",
+      "lang": "fr",
+      "pre": "J'",
+      "post": "La Foule",
+      "replacement": "Mon Canapé"
+    },
+    {
+      "id": "he_small_talk_silence_en",
+      "lang": "en",
+      "pre": "I",
+      "post": "Small Talk",
+      "replacement": "Silence"
+    },
+    {
+      "id": "he_fast_fashion_thrift_en",
+      "lang": "en",
+      "pre": "I",
+      "post": "Fast Fashion",
+      "replacement": "Thrifting"
+    },
+    {
+      "id": "he_wowmen_en",
+      "lang": "en",
+      "pre": "I",
+      "post": "*(Wo)*Men"
+    },
+    {
+      "id": "he_gveganes_fr",
+      "lang": "fr",
+      "pre": "J'",
+      "post": "Les *(Vé)*Gens"
+    },
+    {
+      "id": "he_thembo_en",
+      "lang": "en",
+      "pre": "I",
+      "post": "*(S)*He*(/Them)*"
+    },
+    {
+      "id": "he_anticapital_en",
+      "lang": "en",
+      "pre": "I",
+      "post": "*Anti*-Capitalism"
+    },
+    {
+      "id": "he_humans_en",
+      "lang": "en",
+      "pre": "I",
+      "post": "*All*-Humans"
+    },
+    {
+      "id": "he_immigrants_fr",
+      "lang": "fr",
+      "pre": "J'",
+      "post": "Les *(Im)*Migrants"
+    },
+    {
+      "id": "he_my_rights_en",
+      "lang": "en",
+      "pre": "I",
+      "post": "My *Rights*"
+    },
+    {
+      "id": "he_la_greve_fr",
+      "lang": "fr",
+      "pre": "J'",
+      "post": "La *Grève*"
+    },
+    {
+      "id": "he_naps_en",
+      "lang": "en",
+      "pre": "I",
+      "post": "*Naps* & *Justice*"
+    },
+    {
+      "id": "he_chats_lutte_fr",
+      "lang": "fr",
+      "pre": "J'",
+      "post": "Les Chats *Et La Lutte*"
+    },
+    {
+      "id": "he_co2_en",
+      "lang": "en",
+      "pre": "I",
+      "post": "CO2"
+    },
+    {
+      "id": "he_chaos_fr",
+      "lang": "fr",
+      "pre": "J'",
+      "post": "Le Chaos"
+    },
+    {
+      "id": "he_drama_en",
+      "lang": "en",
+      "pre": "I",
+      "post": "*Drama*"
+    },
+    {
+      "id": "he_petrole_fr",
+      "lang": "fr",
+      "pre": "J'",
+      "post": "Le *Pétrole*"
+    },
+    {
+      "id": "he_overtime_en",
+      "lang": "en",
+      "pre": "I",
+      "post": "Overtime"
+    }
   ]
 }

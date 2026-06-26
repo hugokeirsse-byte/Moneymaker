@@ -1,64 +1,1596 @@
 {
   "meta": {
     "note": "Punchlines : cynique, ironique, absurde, jeux de mots, existentiel, engagé. Markup *mot* = or. Surtout FR + EN.",
-    "ink": [28, 28, 32, 255],
-    "accent": [201, 162, 39, 255]
+    "ink": [
+      28,
+      28,
+      32,
+      255
+    ],
+    "accent": [
+      201,
+      162,
+      39,
+      255
+    ]
   },
   "entries": [
-    {"id": "pl_auto_extinction_fr", "lang": "fr", "lines": ["*Auto-Extinction*", "En Cours"]},
-    {"id": "pl_climato_criminels_fr", "lang": "fr", "lines": ["Les Élites Sont Des", "*Climato-Criminels*", "Conscients"]},
-    {"id": "pl_corrida_fr", "lang": "fr", "lines": ["La Corrida", "Est Un *Meurtre*"]},
-    {"id": "pl_kebab_fr", "lang": "fr", "lines": ["On Est Ce Qu'On Mange.", "Je Suis Un *Kebab*."]},
-    {"id": "pl_mouette_fr", "lang": "fr", "lines": ["La Mouette", "*Muette*"]},
-    {"id": "pl_non_fr", "lang": "fr", "lines": ["*Non.*"]},
-    {"id": "pl_quouije_fr", "lang": "fr", "lines": ["*Qu'Ouïe-Je* ?"]},
-    {"id": "pl_sersje_fr", "lang": "fr", "lines": ["À Quoi", "*Sers-Je* ?"]},
-    {"id": "pl_anthropocene_fr", "lang": "fr", "lines": ["Bienvenue Dans", "L'*Anthropocène*", "(Profitez Bien)"]},
-    {"id": "pl_planete_cassee_fr", "lang": "fr", "lines": ["On Avait Une Planète.", "On L'A *Cassée*."]},
-    {"id": "pl_comete_fr", "lang": "fr", "lines": ["Nous Sommes", "La *Comète*"]},
-    {"id": "pl_asteroid_en", "lang": "en", "lines": ["We Are", "The *Asteroid*"]},
-    {"id": "pl_optimisme_fr", "lang": "fr", "lines": ["Optimisme :", "*Rupture De Stock*"]},
-    {"id": "pl_optimism_en", "lang": "en", "lines": ["Optimism:", "*Out Of Stock*"]},
-    {"id": "pl_capitalisme_terminal_fr", "lang": "fr", "lines": ["*Capitalisme*", "Terminal"]},
-    {"id": "pl_futur_avant_fr", "lang": "fr", "lines": ["Le Futur", "Était *Mieux Avant*"]},
-    {"id": "pl_6e_extinction_fr", "lang": "fr", "lines": ["6ème Extinction", "*Édition Limitée*"]},
-    {"id": "pl_disparition_nous_fr", "lang": "fr", "lines": ["Espèce En Voie", "De Disparition", "*(Nous)*"]},
-    {"id": "pl_extinct_en", "lang": "en", "lines": ["Currently", "Going *Extinct*"]},
-    {"id": "pl_elite_know_en", "lang": "en", "lines": ["The Elite Know", "*Exactly* What", "They're Doing"]},
-    {"id": "pl_this_is_fine_en", "lang": "en", "lines": ["This Is *Fine*", "(It Is Not)"]},
-    {"id": "pl_game_over_fr", "lang": "fr", "lines": ["Game Over.", "Insère Une Pièce", "*(On N'En A Plus)*"]},
-    {"id": "pl_carpe_koi_fr", "lang": "fr", "lines": ["Carpe Diem,", "Carpe *Koi*"]},
-    {"id": "pl_pense_fuis_fr", "lang": "fr", "lines": ["Je Pense", "Donc Je *Fuis*"]},
-    {"id": "pl_bof_fr", "lang": "fr", "lines": ["*Bof.*", "(Mot Du Jour)"]},
-    {"id": "pl_metro_marteau_fr", "lang": "fr", "lines": ["Métro, Boulot,", "*Marteau*"]},
-    {"id": "pl_moins_riz_fr", "lang": "fr", "lines": ["Plus On Est De Fous,", "Moins Y'A De *Riz*"]},
-    {"id": "pl_espoir_fatigue_fr", "lang": "fr", "lines": ["L'Espoir Fait Vivre", "(Et Mourir *Fatigué*)"]},
-    {"id": "pl_99_loyer_fr", "lang": "fr", "lines": ["99 Problèmes", "Et Le *Loyer*", "En Est 98"]},
-    {"id": "pl_99_en", "lang": "en", "lines": ["99 Problems", "And *Rent*", "Is 98"]},
-    {"id": "pl_energie_sociale_fr", "lang": "fr", "lines": ["Énergie Sociale :", "*Épuisée*"]},
-    {"id": "pl_introverti_chat_fr", "lang": "fr", "lines": ["Introverti.", "Sauf Pour", "Mon *Chat*"]},
-    {"id": "pl_valeurs_decouvert_fr", "lang": "fr", "lines": ["Pas D'Argent,", "Mais Des *Valeurs*", "(Et Un Découvert)"]},
-    {"id": "pl_dread_party_en", "lang": "en", "lines": ["Existential Dread,", "Party Of *One*"]},
-    {"id": "pl_born_nap_en", "lang": "en", "lines": ["Born To *Nap*,", "Forced To Work"]},
-    {"id": "pl_steak_cadavre_fr", "lang": "fr", "lines": ["Un Steak", "= Un *Cadavre*"]},
-    {"id": "pl_elevage_crime_fr", "lang": "fr", "lines": ["L'Élevage Intensif", "Est Un *Crime*"]},
-    {"id": "pl_fourrure_honte_fr", "lang": "fr", "lines": ["La Fourrure,", "C'Est La *Honte*"]},
-    {"id": "pl_eat_rich_en", "lang": "en", "lines": ["Eat The *Rich*", "(Free-Range Only)"]},
-    {"id": "pl_profits_poumons_fr", "lang": "fr", "lines": ["Vos *Profits*,", "Nos Poumons"]},
-    {"id": "pl_silence_complice_fr", "lang": "fr", "lines": ["Le Silence", "Est *Complice*"]},
-    {"id": "pl_justice_paix_fr", "lang": "fr", "lines": ["Pas De Justice,", "Pas De *Paix*"]},
-    {"id": "pl_quoi_bon_fr", "lang": "fr", "lines": ["À Quoi Bon", "*(Mais Quand Même)*"]},
-    {"id": "pl_ne_pour_cafe_fr", "lang": "fr", "lines": ["Né Pour Rien,", "Reste Pour Le *Café*"]},
-    {"id": "pl_tout_ca_fr", "lang": "fr", "lines": ["Tout Ça", "*Pour Ça*"]},
-    {"id": "pl_vide_appele_fr", "lang": "fr", "lines": ["Le Vide A Appelé.", "J'Ai Pas *Répondu*."]},
-    {"id": "pl_sieste_historique_fr", "lang": "fr", "lines": ["Sur Le Point De Faire", "Une Sieste", "*Historique*"]},
-    {"id": "pl_allergique_lactose_fr", "lang": "fr", "lines": ["Allergique Aux Conneries", "(Et Au *Lactose*)"]},
-    {"id": "pl_riches_crever_fr", "lang": "fr", "lines": ["Riches À En *Crever*", "(Nous, Pas Eux)"]},
-    {"id": "pl_terre_temoin_fr", "lang": "fr", "lines": ["La Terre Brûle", "Et Nous Regardons", "*Ailleurs*"]},
-    {"id": "pl_world_burning_en", "lang": "en", "lines": ["The World Is On Fire", "And We're", "*Looking Away*"]},
-    {"id": "pl_pourquoi_simple_fr", "lang": "fr", "lines": ["Pourquoi Faire Simple", "Quand On Peut", "*Tout Gâcher*"]},
-    {"id": "pl_capitalism_fine_en", "lang": "en", "lines": ["Late-Stage", "*Capitalism*", "Enthusiast"]},
-    {"id": "pl_hope_dies_en", "lang": "en", "lines": ["Hope Dies Last.", "But It *Dies*."]},
-    {"id": "pl_huitre_fr", "lang": "fr", "lines": ["L'Huître A", "*Pris Cher*"]}
+    {
+      "id": "pl_auto_extinction_fr",
+      "lang": "fr",
+      "lines": [
+        "*Auto-Extinction*",
+        "En Cours"
+      ]
+    },
+    {
+      "id": "pl_climato_criminels_fr",
+      "lang": "fr",
+      "lines": [
+        "Les Élites Sont Des",
+        "*Climato-Criminels*",
+        "Conscients"
+      ]
+    },
+    {
+      "id": "pl_corrida_fr",
+      "lang": "fr",
+      "lines": [
+        "La Corrida",
+        "Est Un *Meurtre*"
+      ]
+    },
+    {
+      "id": "pl_kebab_fr",
+      "lang": "fr",
+      "lines": [
+        "On Est Ce Qu'On Mange.",
+        "Je Suis Un *Kebab*."
+      ]
+    },
+    {
+      "id": "pl_mouette_fr",
+      "lang": "fr",
+      "lines": [
+        "La Mouette",
+        "*Muette*"
+      ]
+    },
+    {
+      "id": "pl_non_fr",
+      "lang": "fr",
+      "lines": [
+        "*Non.*"
+      ]
+    },
+    {
+      "id": "pl_quouije_fr",
+      "lang": "fr",
+      "lines": [
+        "*Qu'Ouïe-Je* ?"
+      ]
+    },
+    {
+      "id": "pl_sersje_fr",
+      "lang": "fr",
+      "lines": [
+        "À Quoi",
+        "*Sers-Je* ?"
+      ]
+    },
+    {
+      "id": "pl_anthropocene_fr",
+      "lang": "fr",
+      "lines": [
+        "Bienvenue Dans",
+        "L'*Anthropocène*",
+        "(Profitez Bien)"
+      ]
+    },
+    {
+      "id": "pl_planete_cassee_fr",
+      "lang": "fr",
+      "lines": [
+        "On Avait Une Planète.",
+        "On L'A *Cassée*."
+      ]
+    },
+    {
+      "id": "pl_comete_fr",
+      "lang": "fr",
+      "lines": [
+        "Nous Sommes",
+        "La *Comète*"
+      ]
+    },
+    {
+      "id": "pl_asteroid_en",
+      "lang": "en",
+      "lines": [
+        "We Are",
+        "The *Asteroid*"
+      ]
+    },
+    {
+      "id": "pl_optimisme_fr",
+      "lang": "fr",
+      "lines": [
+        "Optimisme :",
+        "*Rupture De Stock*"
+      ]
+    },
+    {
+      "id": "pl_optimism_en",
+      "lang": "en",
+      "lines": [
+        "Optimism:",
+        "*Out Of Stock*"
+      ]
+    },
+    {
+      "id": "pl_capitalisme_terminal_fr",
+      "lang": "fr",
+      "lines": [
+        "*Capitalisme*",
+        "Terminal"
+      ]
+    },
+    {
+      "id": "pl_futur_avant_fr",
+      "lang": "fr",
+      "lines": [
+        "Le Futur",
+        "Était *Mieux Avant*"
+      ]
+    },
+    {
+      "id": "pl_6e_extinction_fr",
+      "lang": "fr",
+      "lines": [
+        "6ème Extinction",
+        "*Édition Limitée*"
+      ]
+    },
+    {
+      "id": "pl_disparition_nous_fr",
+      "lang": "fr",
+      "lines": [
+        "Espèce En Voie",
+        "De Disparition",
+        "*(Nous)*"
+      ]
+    },
+    {
+      "id": "pl_extinct_en",
+      "lang": "en",
+      "lines": [
+        "Currently",
+        "Going *Extinct*"
+      ]
+    },
+    {
+      "id": "pl_elite_know_en",
+      "lang": "en",
+      "lines": [
+        "The Elite Know",
+        "*Exactly* What",
+        "They're Doing"
+      ]
+    },
+    {
+      "id": "pl_this_is_fine_en",
+      "lang": "en",
+      "lines": [
+        "This Is *Fine*",
+        "(It Is Not)"
+      ]
+    },
+    {
+      "id": "pl_game_over_fr",
+      "lang": "fr",
+      "lines": [
+        "Game Over.",
+        "Insère Une Pièce",
+        "*(On N'En A Plus)*"
+      ]
+    },
+    {
+      "id": "pl_carpe_koi_fr",
+      "lang": "fr",
+      "lines": [
+        "Carpe Diem,",
+        "Carpe *Koi*"
+      ]
+    },
+    {
+      "id": "pl_pense_fuis_fr",
+      "lang": "fr",
+      "lines": [
+        "Je Pense",
+        "Donc Je *Fuis*"
+      ]
+    },
+    {
+      "id": "pl_bof_fr",
+      "lang": "fr",
+      "lines": [
+        "*Bof.*",
+        "(Mot Du Jour)"
+      ]
+    },
+    {
+      "id": "pl_metro_marteau_fr",
+      "lang": "fr",
+      "lines": [
+        "Métro, Boulot,",
+        "*Marteau*"
+      ]
+    },
+    {
+      "id": "pl_moins_riz_fr",
+      "lang": "fr",
+      "lines": [
+        "Plus On Est De Fous,",
+        "Moins Y'A De *Riz*"
+      ]
+    },
+    {
+      "id": "pl_espoir_fatigue_fr",
+      "lang": "fr",
+      "lines": [
+        "L'Espoir Fait Vivre",
+        "(Et Mourir *Fatigué*)"
+      ]
+    },
+    {
+      "id": "pl_99_loyer_fr",
+      "lang": "fr",
+      "lines": [
+        "99 Problèmes",
+        "Et Le *Loyer*",
+        "En Est 98"
+      ]
+    },
+    {
+      "id": "pl_99_en",
+      "lang": "en",
+      "lines": [
+        "99 Problems",
+        "And *Rent*",
+        "Is 98"
+      ]
+    },
+    {
+      "id": "pl_energie_sociale_fr",
+      "lang": "fr",
+      "lines": [
+        "Énergie Sociale :",
+        "*Épuisée*"
+      ]
+    },
+    {
+      "id": "pl_introverti_chat_fr",
+      "lang": "fr",
+      "lines": [
+        "Introverti.",
+        "Sauf Pour",
+        "Mon *Chat*"
+      ]
+    },
+    {
+      "id": "pl_valeurs_decouvert_fr",
+      "lang": "fr",
+      "lines": [
+        "Pas D'Argent,",
+        "Mais Des *Valeurs*",
+        "(Et Un Découvert)"
+      ]
+    },
+    {
+      "id": "pl_dread_party_en",
+      "lang": "en",
+      "lines": [
+        "Existential Dread,",
+        "Party Of *One*"
+      ]
+    },
+    {
+      "id": "pl_born_nap_en",
+      "lang": "en",
+      "lines": [
+        "Born To *Nap*,",
+        "Forced To Work"
+      ]
+    },
+    {
+      "id": "pl_steak_cadavre_fr",
+      "lang": "fr",
+      "lines": [
+        "Un Steak",
+        "= Un *Cadavre*"
+      ]
+    },
+    {
+      "id": "pl_elevage_crime_fr",
+      "lang": "fr",
+      "lines": [
+        "L'Élevage Intensif",
+        "Est Un *Crime*"
+      ]
+    },
+    {
+      "id": "pl_fourrure_honte_fr",
+      "lang": "fr",
+      "lines": [
+        "La Fourrure,",
+        "C'Est La *Honte*"
+      ]
+    },
+    {
+      "id": "pl_eat_rich_en",
+      "lang": "en",
+      "lines": [
+        "Eat The *Rich*",
+        "(Free-Range Only)"
+      ]
+    },
+    {
+      "id": "pl_profits_poumons_fr",
+      "lang": "fr",
+      "lines": [
+        "Vos *Profits*,",
+        "Nos Poumons"
+      ]
+    },
+    {
+      "id": "pl_silence_complice_fr",
+      "lang": "fr",
+      "lines": [
+        "Le Silence",
+        "Est *Complice*"
+      ]
+    },
+    {
+      "id": "pl_justice_paix_fr",
+      "lang": "fr",
+      "lines": [
+        "Pas De Justice,",
+        "Pas De *Paix*"
+      ]
+    },
+    {
+      "id": "pl_quoi_bon_fr",
+      "lang": "fr",
+      "lines": [
+        "À Quoi Bon",
+        "*(Mais Quand Même)*"
+      ]
+    },
+    {
+      "id": "pl_ne_pour_cafe_fr",
+      "lang": "fr",
+      "lines": [
+        "Né Pour Rien,",
+        "Reste Pour Le *Café*"
+      ]
+    },
+    {
+      "id": "pl_tout_ca_fr",
+      "lang": "fr",
+      "lines": [
+        "Tout Ça",
+        "*Pour Ça*"
+      ]
+    },
+    {
+      "id": "pl_vide_appele_fr",
+      "lang": "fr",
+      "lines": [
+        "Le Vide A Appelé.",
+        "J'Ai Pas *Répondu*."
+      ]
+    },
+    {
+      "id": "pl_sieste_historique_fr",
+      "lang": "fr",
+      "lines": [
+        "Sur Le Point De Faire",
+        "Une Sieste",
+        "*Historique*"
+      ]
+    },
+    {
+      "id": "pl_allergique_lactose_fr",
+      "lang": "fr",
+      "lines": [
+        "Allergique Aux Conneries",
+        "(Et Au *Lactose*)"
+      ]
+    },
+    {
+      "id": "pl_riches_crever_fr",
+      "lang": "fr",
+      "lines": [
+        "Riches À En *Crever*",
+        "(Nous, Pas Eux)"
+      ]
+    },
+    {
+      "id": "pl_terre_temoin_fr",
+      "lang": "fr",
+      "lines": [
+        "La Terre Brûle",
+        "Et Nous Regardons",
+        "*Ailleurs*"
+      ]
+    },
+    {
+      "id": "pl_world_burning_en",
+      "lang": "en",
+      "lines": [
+        "The World Is On Fire",
+        "And We're",
+        "*Looking Away*"
+      ]
+    },
+    {
+      "id": "pl_pourquoi_simple_fr",
+      "lang": "fr",
+      "lines": [
+        "Pourquoi Faire Simple",
+        "Quand On Peut",
+        "*Tout Gâcher*"
+      ]
+    },
+    {
+      "id": "pl_capitalism_fine_en",
+      "lang": "en",
+      "lines": [
+        "Late-Stage",
+        "*Capitalism*",
+        "Enthusiast"
+      ]
+    },
+    {
+      "id": "pl_hope_dies_en",
+      "lang": "en",
+      "lines": [
+        "Hope Dies Last.",
+        "But It *Dies*."
+      ]
+    },
+    {
+      "id": "pl_huitre_fr",
+      "lang": "fr",
+      "lines": [
+        "L'Huître A",
+        "*Pris Cher*"
+      ]
+    },
+    {
+      "id": "pl_future_before_en",
+      "lang": "en",
+      "lines": [
+        "The Future",
+        "Was *Better* Before"
+      ]
+    },
+    {
+      "id": "pl_introvert_cat_en",
+      "lang": "en",
+      "lines": [
+        "Introvert.",
+        "Except For",
+        "My *Cat*"
+      ]
+    },
+    {
+      "id": "pl_born_coffee_en",
+      "lang": "en",
+      "lines": [
+        "Born For Nothing,",
+        "Staying For The *Coffee*"
+      ]
+    },
+    {
+      "id": "pl_seas_day_en",
+      "lang": "en",
+      "lines": [
+        "*Seas* The Day"
+      ]
+    },
+    {
+      "id": "pl_carpe_nope_en",
+      "lang": "en",
+      "lines": [
+        "Carpe Diem?",
+        "Carpe *Nope.*"
+      ]
+    },
+    {
+      "id": "pl_kebab_en",
+      "lang": "en",
+      "lines": [
+        "You Are What You Eat.",
+        "I'm A *Kebab*."
+      ]
+    },
+    {
+      "id": "pl_huitre_en",
+      "lang": "en",
+      "lines": [
+        "The Oyster",
+        "*Took It Hard*"
+      ]
+    },
+    {
+      "id": "pl_metro_en",
+      "lang": "en",
+      "lines": [
+        "Commute, Work,",
+        "*Hammer*"
+      ]
+    },
+    {
+      "id": "pl_anti_traditions_fr",
+      "lang": "fr",
+      "lines": [
+        "Traditionnellement",
+        "*Anti-Traditions*"
+      ]
+    },
+    {
+      "id": "pl_mortiferes_fr",
+      "lang": "fr",
+      "lines": [
+        "Mort Aux Pratiques",
+        "*Mortifères*"
+      ]
+    },
+    {
+      "id": "pl_supplicies_fr",
+      "lang": "fr",
+      "lines": [
+        "Ainsi S'Insurgèrent",
+        "Les *Suppliciés*"
+      ]
+    },
+    {
+      "id": "pl_grandma_hates_en",
+      "lang": "en",
+      "lines": [
+        "My Grandma",
+        "*Hates* You"
+      ]
+    },
+    {
+      "id": "pl_mamie_deteste_fr",
+      "lang": "fr",
+      "lines": [
+        "Ma Mamie",
+        "Te *Déteste*"
+      ]
+    },
+    {
+      "id": "pl_mousquetaire_fr",
+      "lang": "fr",
+      "lines": [
+        "Tching Tching,",
+        "Je Suis Un",
+        "*Mousquetaire*"
+      ]
+    },
+    {
+      "id": "pl_peuple_danse_fr",
+      "lang": "fr",
+      "lines": [
+        "On N'Arrête Pas",
+        "Un Peuple",
+        "Qui *Danse*"
+      ]
+    },
+    {
+      "id": "pl_demandez_impossible_fr",
+      "lang": "fr",
+      "lines": [
+        "Soyez Réalistes,",
+        "Demandez",
+        "L'*Impossible*"
+      ]
+    },
+    {
+      "id": "pl_paves_plage_fr",
+      "lang": "fr",
+      "lines": [
+        "Sous Les Pavés,",
+        "La *Plage*"
+      ]
+    },
+    {
+      "id": "pl_interdit_interdire_fr",
+      "lang": "fr",
+      "lines": [
+        "Il Est Interdit",
+        "D'*Interdire*"
+      ]
+    },
+    {
+      "id": "pl_ne_travaillez_fr",
+      "lang": "fr",
+      "lines": [
+        "Ne Travaillez",
+        "*Jamais*"
+      ]
+    },
+    {
+      "id": "pl_beaute_rue_fr",
+      "lang": "fr",
+      "lines": [
+        "La Beauté",
+        "Est Dans La *Rue*"
+      ]
+    },
+    {
+      "id": "pl_imagination_fr",
+      "lang": "fr",
+      "lines": [
+        "L'*Imagination*",
+        "Au Pouvoir"
+      ]
+    },
+    {
+      "id": "pl_cours_camarade_fr",
+      "lang": "fr",
+      "lines": [
+        "Cours Camarade,",
+        "Le Vieux Monde",
+        "Est *Derrière Toi*"
+      ]
+    },
+    {
+      "id": "pl_desobeir_exister_fr",
+      "lang": "fr",
+      "lines": [
+        "Désobéir,",
+        "C'Est *Exister*"
+      ]
+    },
+    {
+      "id": "pl_tout_a_nous_fr",
+      "lang": "fr",
+      "lines": [
+        "Tout Est À Nous,",
+        "Rien N'Est À *Eux*"
+      ]
+    },
+    {
+      "id": "pl_plutot_la_vie_fr",
+      "lang": "fr",
+      "lines": [
+        "Plutôt",
+        "La *Vie*"
+      ]
+    },
+    {
+      "id": "pl_reve_realite_fr",
+      "lang": "fr",
+      "lines": [
+        "Le Rêve",
+        "Est *Réalité*"
+      ]
+    },
+    {
+      "id": "pl_espoir_discipline_fr",
+      "lang": "fr",
+      "lines": [
+        "L'Espoir",
+        "Est Une *Discipline*"
+      ]
+    },
+    {
+      "id": "pl_graines_fr",
+      "lang": "fr",
+      "lines": [
+        "Ils Ont Voulu Nous Enterrer.",
+        "Ils Ignoraient Qu'On",
+        "Était Des *Graines*"
+      ]
+    },
+    {
+      "id": "pl_resistance_devoir_fr",
+      "lang": "fr",
+      "lines": [
+        "Quand L'Injustice",
+        "Devient Loi, La Résistance",
+        "Devient *Devoir*"
+      ]
+    },
+    {
+      "id": "pl_another_world_en",
+      "lang": "en",
+      "lines": [
+        "Another World",
+        "Is *Possible*"
+      ]
+    },
+    {
+      "id": "pl_ones_waiting_en",
+      "lang": "en",
+      "lines": [
+        "We Are The Ones",
+        "We've Been",
+        "*Waiting For*"
+      ]
+    },
+    {
+      "id": "pl_no_one_free_en",
+      "lang": "en",
+      "lines": [
+        "No One Is Free",
+        "Until We *All* Are"
+      ]
+    },
+    {
+      "id": "pl_united_en",
+      "lang": "en",
+      "lines": [
+        "The People United",
+        "Will Never Be",
+        "*Defeated*"
+      ]
+    },
+    {
+      "id": "pl_hope_discipline_en",
+      "lang": "en",
+      "lines": [
+        "Hope Is",
+        "A *Discipline*"
+      ]
+    },
+    {
+      "id": "pl_be_storm_en",
+      "lang": "en",
+      "lines": [
+        "Be The",
+        "*Storm*"
+      ]
+    },
+    {
+      "id": "pl_well_behaved_en",
+      "lang": "en",
+      "lines": [
+        "Well-Behaved Women",
+        "Rarely Make",
+        "*History*"
+      ]
+    },
+    {
+      "id": "pl_voice_shakes_en",
+      "lang": "en",
+      "lines": [
+        "Speak The Truth,",
+        "Even If Your",
+        "Voice *Shakes*"
+      ]
+    },
+    {
+      "id": "pl_seeds_en",
+      "lang": "en",
+      "lines": [
+        "They Buried Us.",
+        "They Didn't Know",
+        "We Were *Seeds*"
+      ]
+    },
+    {
+      "id": "pl_riot_unheard_en",
+      "lang": "en",
+      "lines": [
+        "A Riot Is The Language",
+        "Of The *Unheard*"
+      ]
+    },
+    {
+      "id": "pl_stay_soft_en",
+      "lang": "en",
+      "lines": [
+        "Stay Angry,",
+        "Stay *Soft*"
+      ]
+    },
+    {
+      "id": "pl_disobey_en",
+      "lang": "en",
+      "lines": [
+        "Disobey",
+        "*Beautifully*"
+      ]
+    },
+    {
+      "id": "pl_rage_light_en",
+      "lang": "en",
+      "lines": [
+        "Rage Against",
+        "The Dying",
+        "Of The *Light*"
+      ]
+    },
+    {
+      "id": "pl_resist_duty_en",
+      "lang": "en",
+      "lines": [
+        "When Injustice Is Law,",
+        "Resistance Is *Duty*"
+      ]
+    },
+    {
+      "id": "pl_enfer_rechauffement_fr",
+      "lang": "fr",
+      "lines": [
+        "Bienvenue En Enfer",
+        "*(Réchauffement Inclus)*"
+      ]
+    },
+    {
+      "id": "pl_meteo_apocalyptique_fr",
+      "lang": "fr",
+      "lines": [
+        "Météo Du Jour :",
+        "*Apocalyptique*"
+      ]
+    },
+    {
+      "id": "pl_brule_style_fr",
+      "lang": "fr",
+      "lines": [
+        "On Brûle,",
+        "Mais Avec *Style*"
+      ]
+    },
+    {
+      "id": "pl_capitalisme_patience_fr",
+      "lang": "fr",
+      "lines": [
+        "Le Capitalisme Vous",
+        "Remercie De Votre",
+        "*Patience*"
+      ]
+    },
+    {
+      "id": "pl_demain_pire_fr",
+      "lang": "fr",
+      "lines": [
+        "Demain Sera Pire",
+        "*(Mais Ensoleillé)*"
+      ]
+    },
+    {
+      "id": "pl_profitez_fini_fr",
+      "lang": "fr",
+      "lines": [
+        "Profitez,",
+        "C'Est Bientôt *Fini*"
+      ]
+    },
+    {
+      "id": "pl_end_near_en",
+      "lang": "en",
+      "lines": [
+        "The End Is Near",
+        "*(Restrictions Apply)*"
+      ]
+    },
+    {
+      "id": "pl_doomed_aesthetic_en",
+      "lang": "en",
+      "lines": [
+        "Doomed,",
+        "But Make It",
+        "*Aesthetic*"
+      ]
+    },
+    {
+      "id": "pl_hydrate_anyway_en",
+      "lang": "en",
+      "lines": [
+        "We're All Going To Die",
+        "*(Hydrate Anyway)*"
+      ]
+    },
+    {
+      "id": "pl_planet_fine_en",
+      "lang": "en",
+      "lines": [
+        "The Planet Is Fine.",
+        "*We're* Doomed."
+      ]
+    },
+    {
+      "id": "pl_change_should_en",
+      "lang": "en",
+      "lines": [
+        "The Climate's Changing.",
+        "So Should *You*."
+      ]
+    },
+    {
+      "id": "pl_page12_fr",
+      "lang": "fr",
+      "lines": [
+        "Fin Du Monde :",
+        "Détails En *Page 12*"
+      ]
+    },
+    {
+      "id": "pl_cogito_bof_fr",
+      "lang": "fr",
+      "lines": [
+        "Cogito",
+        "Ergo *Bof*"
+      ]
+    },
+    {
+      "id": "pl_veni_vomi_fr",
+      "lang": "fr",
+      "lines": [
+        "Veni, Vidi,",
+        "*Vomi*"
+      ]
+    },
+    {
+      "id": "pl_panem_pain_fr",
+      "lang": "fr",
+      "lines": [
+        "Panem Et Circenses",
+        "*(Surtout Le Pain)*"
+      ]
+    },
+    {
+      "id": "pl_touche_fond_fr",
+      "lang": "fr",
+      "lines": [
+        "J'Ai Touché Le Fond.",
+        "Et Là, Je *Creuse*."
+      ]
+    },
+    {
+      "id": "pl_enfer_lundi_fr",
+      "lang": "fr",
+      "lines": [
+        "L'Enfer C'Est Les Autres",
+        "*(Et Le Lundi)*"
+      ]
+    },
+    {
+      "id": "pl_ceci_tshirt_fr",
+      "lang": "fr",
+      "lines": [
+        "Ceci N'Est Pas",
+        "Un *T-Shirt*"
+      ]
+    },
+    {
+      "id": "pl_metaphysiquement_fr",
+      "lang": "fr",
+      "lines": [
+        "Métaphysiquement",
+        "*Fatigué*"
+      ]
+    },
+    {
+      "id": "pl_mur_reves_fr",
+      "lang": "fr",
+      "lines": [
+        "Au Bout De Mes Rêves",
+        "Y'A Un *Mur*"
+      ]
+    },
+    {
+      "id": "pl_silence_or_fr",
+      "lang": "fr",
+      "lines": [
+        "Le Silence Est D'Or.",
+        "Moi Je Suis *Fauché*."
+      ]
+    },
+    {
+      "id": "pl_persevoler_fr",
+      "lang": "fr",
+      "lines": [
+        "Errare Humanum Est,",
+        "Persévérer *Diabolique*"
+      ]
+    },
+    {
+      "id": "pl_rien_sens_fr",
+      "lang": "fr",
+      "lines": [
+        "Rien N'A De Sens.",
+        "Souris *Quand Même*."
+      ]
+    },
+    {
+      "id": "pl_poussiere_fr",
+      "lang": "fr",
+      "lines": [
+        "Poussière Tu Es,",
+        "Stressée Tu *Resteras*"
+      ]
+    },
+    {
+      "id": "pl_neant_salue_fr",
+      "lang": "fr",
+      "lines": [
+        "Le Néant",
+        "Vous Salue *Bien*"
+      ]
+    },
+    {
+      "id": "pl_naitre_mourir_fr",
+      "lang": "fr",
+      "lines": [
+        "On Naît, On Stresse,",
+        "On *Meurt*"
+      ]
+    },
+    {
+      "id": "pl_tout_passe_fr",
+      "lang": "fr",
+      "lines": [
+        "Tout Passe.",
+        "Même *Ça*."
+      ]
+    },
+    {
+      "id": "pl_atoms_en",
+      "lang": "en",
+      "lines": [
+        "We're Just Atoms",
+        "*Pretending*"
+      ]
+    },
+    {
+      "id": "pl_insignificant_en",
+      "lang": "en",
+      "lines": [
+        "Cosmically Insignificant",
+        "And *Tired*"
+      ]
+    },
+    {
+      "id": "pl_nothing_snacks_en",
+      "lang": "en",
+      "lines": [
+        "Nothing Matters",
+        "*(Snacks Help)*"
+      ]
+    },
+    {
+      "id": "pl_born_adult_en",
+      "lang": "en",
+      "lines": [
+        "Born To Die,",
+        "Forced To *Adult*"
+      ]
+    },
+    {
+      "id": "pl_abattoir_fr",
+      "lang": "fr",
+      "lines": [
+        "Un Cri Dans L'Abattoir,",
+        "Un Silence Dans",
+        "L'*Assiette*"
+      ]
+    },
+    {
+      "id": "pl_cage_fr",
+      "lang": "fr",
+      "lines": [
+        "La Cage N'Est",
+        "*Jamais* Confortable"
+      ]
+    },
+    {
+      "id": "pl_manteau_fr",
+      "lang": "fr",
+      "lines": [
+        "Leur Peau N'Est Pas",
+        "Un *Manteau*"
+      ]
+    },
+    {
+      "id": "pl_numero_fr",
+      "lang": "fr",
+      "lines": [
+        "Pas Un Numéro.",
+        "Un Être *Vivant*."
+      ]
+    },
+    {
+      "id": "pl_specisme_fr",
+      "lang": "fr",
+      "lines": [
+        "Le Spécisme",
+        "Est Une *Idéologie*"
+      ]
+    },
+    {
+      "id": "pl_not_food_en",
+      "lang": "en",
+      "lines": [
+        "Not Food.",
+        "*Someone*."
+      ]
+    },
+    {
+      "id": "pl_skin_style_en",
+      "lang": "en",
+      "lines": [
+        "Their Skin",
+        "Is Not Your *Style*"
+      ]
+    },
+    {
+      "id": "pl_compassion_en",
+      "lang": "en",
+      "lines": [
+        "Compassion",
+        "Is Not A *Trend*"
+      ]
+    },
+    {
+      "id": "pl_spite_snacks_en",
+      "lang": "en",
+      "lines": [
+        "Powered By",
+        "Spite & *Snacks*"
+      ]
+    },
+    {
+      "id": "pl_energy_saving_en",
+      "lang": "en",
+      "lines": [
+        "Not Lazy.",
+        "*Energy-Saving* Mode."
+      ]
+    },
+    {
+      "id": "pl_pro_disappointment_en",
+      "lang": "en",
+      "lines": [
+        "Professional",
+        "*Disappointment*"
+      ]
+    },
+    {
+      "id": "pl_awkward_en",
+      "lang": "en",
+      "lines": [
+        "I Came, I Saw,",
+        "I Made It *Awkward*"
+      ]
+    },
+    {
+      "id": "pl_snacks_downfall_en",
+      "lang": "en",
+      "lines": [
+        "Here For The Snacks",
+        "And The *Downfall*"
+      ]
+    },
+    {
+      "id": "pl_chronically_en",
+      "lang": "en",
+      "lines": [
+        "Chronically Online,",
+        "Eternally *Tired*"
+      ]
+    },
+    {
+      "id": "pl_romanticizing_en",
+      "lang": "en",
+      "lines": [
+        "Currently Romanticizing",
+        "My Own *Collapse*"
+      ]
+    },
+    {
+      "id": "pl_caffeine_spite_en",
+      "lang": "en",
+      "lines": [
+        "Running On Caffeine",
+        "And *Spite*"
+      ]
+    },
+    {
+      "id": "pl_surviving_en",
+      "lang": "en",
+      "lines": [
+        "Surviving,",
+        "Not Thriving",
+        "*(But Make It Cute)*"
+      ]
+    },
+    {
+      "id": "pl_plot_twist_en",
+      "lang": "en",
+      "lines": [
+        "Plot Twist:",
+        "Nobody's Coming",
+        "To *Save Us*"
+      ]
+    },
+    {
+      "id": "pl_sarcasm_en",
+      "lang": "en",
+      "lines": [
+        "Emotionally Fluent",
+        "In *Sarcasm*"
+      ]
+    },
+    {
+      "id": "pl_main_villain_en",
+      "lang": "en",
+      "lines": [
+        "Not The Hero.",
+        "Not The Victim.",
+        "The *Plot Twist*."
+      ]
+    },
+    {
+      "id": "pl_sieste_revolution_fr",
+      "lang": "fr",
+      "lines": [
+        "Je Fais La Révolution.",
+        "Après Ma *Sieste*."
+      ]
+    },
+    {
+      "id": "pl_motivation_demain_fr",
+      "lang": "fr",
+      "lines": [
+        "Motivation :",
+        "*Reportée À Demain*"
+      ]
+    },
+    {
+      "id": "pl_adulte_arnaque_fr",
+      "lang": "fr",
+      "lines": [
+        "Être Adulte",
+        "C'Est Une *Arnaque*"
+      ]
+    },
+    {
+      "id": "pl_pile_charge_fr",
+      "lang": "fr",
+      "lines": [
+        "Batterie Sociale :",
+        "*0 %*"
+      ]
+    },
+    {
+      "id": "pl_cafe_avant_fr",
+      "lang": "fr",
+      "lines": [
+        "Pas De Café,",
+        "Pas De *Révolution*"
+      ]
+    },
+    {
+      "id": "pl_chat_therapie_fr",
+      "lang": "fr",
+      "lines": [
+        "Mon Chat",
+        "Est Ma *Thérapie*"
+      ]
+    },
+    {
+      "id": "pl_systeme_marche_fr",
+      "lang": "fr",
+      "lines": [
+        "Le Système Marche",
+        "*Très Bien*",
+        "(C'Est Le Problème)"
+      ]
+    },
+    {
+      "id": "pl_pas_paranos_fr",
+      "lang": "fr",
+      "lines": [
+        "On N'Est Pas Parano,",
+        "On Est *Lucides*"
+      ]
+    },
+    {
+      "id": "pl_eat_rich_vegan_en",
+      "lang": "en",
+      "lines": [
+        "Eat The Rich.",
+        "*Plant-Based*, Obviously."
+      ]
+    },
+    {
+      "id": "pl_billionaires_mistake_en",
+      "lang": "en",
+      "lines": [
+        "Every Billionaire",
+        "Is A Policy *Failure*"
+      ]
+    },
+    {
+      "id": "pl_milliardaire_erreur_fr",
+      "lang": "fr",
+      "lines": [
+        "Un Milliardaire,",
+        "C'Est Une *Erreur*",
+        "De Société"
+      ]
+    },
+    {
+      "id": "pl_normal_malade_fr",
+      "lang": "fr",
+      "lines": [
+        "Être Bien Adapté",
+        "À Une Société Malade,",
+        "*Non Merci*"
+      ]
+    },
+    {
+      "id": "pl_quiet_revolution_en",
+      "lang": "en",
+      "lines": [
+        "The Revolution",
+        "Will Not Be",
+        "*Convenient*"
+      ]
+    },
+    {
+      "id": "pl_taxez_fr",
+      "lang": "fr",
+      "lines": [
+        "Taxez Les Riches",
+        "*Avant Qu'Ils*",
+        "Nous Mangent"
+      ]
+    },
+    {
+      "id": "pl_grande_demission_fr",
+      "lang": "fr",
+      "lines": [
+        "Grande Démission",
+        "*Intérieure*"
+      ]
+    },
+    {
+      "id": "pl_quiet_quitting_en",
+      "lang": "en",
+      "lines": [
+        "Quietly Quitting",
+        "*Everything*"
+      ]
+    },
+    {
+      "id": "pl_certified_cat_en",
+      "lang": "en",
+      "lines": [
+        "Certified",
+        "By My *Cat*"
+      ]
+    },
+    {
+      "id": "pl_gentil_limite_fr",
+      "lang": "fr",
+      "lines": [
+        "Gentil.",
+        "Mais Y'A Une *Limite*."
+      ]
+    },
+    {
+      "id": "pl_souris_interieur_fr",
+      "lang": "fr",
+      "lines": [
+        "Je Souris.",
+        "À L'Intérieur",
+        "C'Est *Le Chaos*"
+      ]
+    },
+    {
+      "id": "pl_feral_en",
+      "lang": "en",
+      "lines": [
+        "Mostly Peaceful.",
+        "Occasionally *Feral*."
+      ]
+    },
+    {
+      "id": "pl_menace_en",
+      "lang": "en",
+      "lines": [
+        "Someone's Emotional",
+        "Support *Menace*"
+      ]
+    },
+    {
+      "id": "pl_unbothered_en",
+      "lang": "en",
+      "lines": [
+        "Unbothered.",
+        "Moisturized.",
+        "*Doomed*."
+      ]
+    },
+    {
+      "id": "pl_overqualified_en",
+      "lang": "en",
+      "lines": [
+        "Overqualified",
+        "And *Underpaid*"
+      ]
+    },
+    {
+      "id": "pl_surdiplome_fr",
+      "lang": "fr",
+      "lines": [
+        "Surdiplômé",
+        "Et *Sous-Payé*"
+      ]
+    },
+    {
+      "id": "pl_capitalisme_pause_fr",
+      "lang": "fr",
+      "lines": [
+        "Le Capitalisme",
+        "Ne Prend Jamais",
+        "De *Pause*. Moi Si."
+      ]
+    },
+    {
+      "id": "pl_derniere_foret_fr",
+      "lang": "fr",
+      "lines": [
+        "Quand La Dernière Forêt",
+        "Tombera, On Comptera",
+        "Nos *Billets*"
+      ]
+    },
+    {
+      "id": "pl_last_tree_en",
+      "lang": "en",
+      "lines": [
+        "Only When The Last Tree",
+        "Falls Will They Learn",
+        "They Can't Eat *Money*"
+      ]
+    },
+    {
+      "id": "pl_terre_heritage_fr",
+      "lang": "fr",
+      "lines": [
+        "La Terre N'Est Pas",
+        "Un Héritage, C'Est",
+        "Un *Emprunt*"
+      ]
+    },
+    {
+      "id": "pl_planete_b_fr",
+      "lang": "fr",
+      "lines": [
+        "Il N'Y A Pas",
+        "De Planète *B*"
+      ]
+    },
+    {
+      "id": "pl_oceans_silence_fr",
+      "lang": "fr",
+      "lines": [
+        "Les Océans Se Taisent.",
+        "Écoute *Quand Même*."
+      ]
+    },
+    {
+      "id": "pl_mon_corps_fr",
+      "lang": "fr",
+      "lines": [
+        "Mon Corps,",
+        "*Mon Choix*"
+      ]
+    },
+    {
+      "id": "pl_my_body_en",
+      "lang": "en",
+      "lines": [
+        "My Body,",
+        "*My Choice*"
+      ]
+    },
+    {
+      "id": "pl_droits_acquis_fr",
+      "lang": "fr",
+      "lines": [
+        "Aucun Droit",
+        "N'Est *Acquis*"
+      ]
+    },
+    {
+      "id": "pl_rights_fight_en",
+      "lang": "en",
+      "lines": [
+        "Rights Aren't Given.",
+        "They're *Taken*."
+      ]
+    },
+    {
+      "id": "pl_future_female_en",
+      "lang": "en",
+      "lines": [
+        "The Future",
+        "Is *Inclusive*"
+      ]
+    },
+    {
+      "id": "pl_silence_complice2_fr",
+      "lang": "fr",
+      "lines": [
+        "Ne Rien Dire,",
+        "C'Est *Choisir*",
+        "L'Oppresseur"
+      ]
+    },
+    {
+      "id": "pl_lundi_crime_fr",
+      "lang": "fr",
+      "lines": [
+        "Le Lundi Devrait",
+        "Être *Illégal*"
+      ]
+    },
+    {
+      "id": "pl_reveil_ennemi_fr",
+      "lang": "fr",
+      "lines": [
+        "Mon Réveil",
+        "Est Mon *Ennemi*"
+      ]
+    },
+    {
+      "id": "pl_adulting_en",
+      "lang": "en",
+      "lines": [
+        "Adulting Is A",
+        "*Scam*"
+      ]
+    },
+    {
+      "id": "pl_monday_crime_en",
+      "lang": "en",
+      "lines": [
+        "Mondays Should",
+        "Be *Illegal*"
+      ]
+    },
+    {
+      "id": "pl_nap_queen_en",
+      "lang": "en",
+      "lines": [
+        "Nap *Royalty*"
+      ]
+    },
+    {
+      "id": "pl_caffeine_personality_en",
+      "lang": "en",
+      "lines": [
+        "Caffeine Is A",
+        "*Personality*"
+      ]
+    },
+    {
+      "id": "pl_introvert_loading_en",
+      "lang": "en",
+      "lines": [
+        "Social Battery:",
+        "*Critically Low*"
+      ]
+    }
   ]
 }
