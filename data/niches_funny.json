@@ -4631,6 +4631,1150 @@
       ],
       "accent": 1,
       "ornament": true
+    },
+    {
+      "id": "doh_aboyer_fr",
+      "lang": "fr",
+      "niche": "dog_over_humans",
+      "lines": [
+        "Je préfère entendre",
+        "mon chien aboyer que les cons causer"
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "doh_juge_fr",
+      "lang": "fr",
+      "niche": "dog_over_humans",
+      "lines": [
+        "Mon Chien Ne Me Juge Pas",
+        "Les Humains Si"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "doh_rentrer_fr",
+      "lang": "fr",
+      "niche": "dog_over_humans",
+      "lines": [
+        "Je veux rentrer",
+        "pour voir mon chien"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "doh_plus_je_connais_fr",
+      "lang": "fr",
+      "niche": "dog_over_humans",
+      "lines": [
+        "Plus je connais les gens",
+        "Plus j'aime mon chien"
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "doh_annuler_fr",
+      "lang": "fr",
+      "niche": "dog_over_humans",
+      "lines": [
+        "J'annule des plans",
+        "pour mon chien. Pas pour toi."
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "doh_inviter_fr",
+      "lang": "fr",
+      "niche": "dog_over_humans",
+      "lines": [
+        "Si tu n'aimes pas les chiens",
+        "Ne me parle pas"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "doh_decu_fr",
+      "lang": "fr",
+      "niche": "dog_over_humans",
+      "lines": [
+        "Mon chien ne m'a",
+        "jamais déçu. Les gens si."
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "doh_bark_en",
+      "lang": "en",
+      "niche": "dog_over_humans",
+      "lines": [
+        "I'd Rather Hear",
+        "My Dog Bark Than People Talk"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "doh_judge_en",
+      "lang": "en",
+      "niche": "dog_over_humans",
+      "lines": [
+        "My Dog Doesn't Judge",
+        "That's Why I Prefer Him"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "doh_cancel_en",
+      "lang": "en",
+      "niche": "dog_over_humans",
+      "lines": [
+        "I'd Cancel Plans",
+        "for My Dog. Not for You."
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "doh_more_i_know_en",
+      "lang": "en",
+      "niche": "dog_over_humans",
+      "lines": [
+        "The More I Know People",
+        "The More I Love My Dog"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "doh_company_en",
+      "lang": "en",
+      "niche": "dog_over_humans",
+      "lines": [
+        "My Dog Is Better Company",
+        "Than Most Humans"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "doh_let_down_en",
+      "lang": "en",
+      "niche": "dog_over_humans",
+      "lines": [
+        "My Dog Never Let Me Down",
+        "People Do"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "doh_home_for_en",
+      "lang": "en",
+      "niche": "dog_over_humans",
+      "lines": [
+        "I Go Home Early",
+        "for My Dog"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "doh_party_en",
+      "lang": "en",
+      "niche": "dog_over_humans",
+      "lines": [
+        "No Thanks, I'm Going",
+        "to Be with My Dog"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "doh_meinung_de",
+      "lang": "de",
+      "niche": "dog_over_humans",
+      "lines": [
+        "Lieber mein Hund",
+        "als deine Meinung"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "doh_beklagt_de",
+      "lang": "de",
+      "niche": "dog_over_humans",
+      "lines": [
+        "Mein Hund beklagt sich",
+        "weniger als du"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "doh_kenn_de",
+      "lang": "de",
+      "niche": "dog_over_humans",
+      "lines": [
+        "Je mehr Menschen ich kenne",
+        "Desto mehr liebe ich meinen Hund"
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "doh_nach_hause_de",
+      "lang": "de",
+      "niche": "dog_over_humans",
+      "lines": [
+        "Ich gehe nach Hause",
+        "Mein Hund wartet"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "doh_ladridos_es",
+      "lang": "es",
+      "niche": "dog_over_humans",
+      "lines": [
+        "Prefiero los ladridos",
+        "de mi perro a tu conversación"
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "doh_mas_conozco_es",
+      "lang": "es",
+      "niche": "dog_over_humans",
+      "lines": [
+        "Cuanto más conozco a la gente",
+        "Más quiero a mi perro"
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "doh_planes_es",
+      "lang": "es",
+      "niche": "dog_over_humans",
+      "lines": [
+        "Cancelo planes",
+        "por mi perro. No por ti."
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "doh_compagnia_it",
+      "lang": "it",
+      "niche": "dog_over_humans",
+      "lines": [
+        "Preferisco il mio cane",
+        "alla tua compagnia"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "doh_persone_it",
+      "lang": "it",
+      "niche": "dog_over_humans",
+      "lines": [
+        "Più conosco le persone",
+        "Più amo il mio cane"
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "coh_ronron_fr",
+      "lang": "fr",
+      "niche": "cat_over_humans",
+      "lines": [
+        "Mon chat ronronne",
+        "Les gens m'épuisent"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "coh_miaulements_fr",
+      "lang": "fr",
+      "niche": "cat_over_humans",
+      "lines": [
+        "Je préfère ses miaulements",
+        "à vos réunions"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "coh_plus_connais_fr",
+      "lang": "fr",
+      "niche": "cat_over_humans",
+      "lines": [
+        "Plus je connais les gens",
+        "Plus j'aime mon chat"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "coh_purr_en",
+      "lang": "en",
+      "niche": "cat_over_humans",
+      "lines": [
+        "My Cat's Purr",
+        "Is Better Than Small Talk"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "coh_judge_en",
+      "lang": "en",
+      "niche": "cat_over_humans",
+      "lines": [
+        "My Cat Judges Me",
+        "But at Least She's Honest"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "coh_more_know_en",
+      "lang": "en",
+      "niche": "cat_over_humans",
+      "lines": [
+        "The More I Know People",
+        "The More I Love My Cat"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "coh_cancel_en",
+      "lang": "en",
+      "niche": "cat_over_humans",
+      "lines": [
+        "I Cancelled Plans",
+        "to Stay Home with My Cat"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "coh_schnurrt_de",
+      "lang": "de",
+      "niche": "cat_over_humans",
+      "lines": [
+        "Meine Katze schnurrt",
+        "Die Menschen nerven"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "coh_ronronea_es",
+      "lang": "es",
+      "niche": "cat_over_humans",
+      "lines": [
+        "Mi gato ronronea",
+        "La gente me cansa"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "aoh_plants_fr",
+      "lang": "fr",
+      "niche": "plants_over_humans",
+      "lines": [
+        "Mes plantes m'écoutent",
+        "Les gens m'oublient"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "aoh_nature_fr",
+      "lang": "fr",
+      "niche": "plants_over_humans",
+      "lines": [
+        "La forêt ne me juge pas",
+        "Les gens oui"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "aoh_plants_en",
+      "lang": "en",
+      "niche": "plants_over_humans",
+      "lines": [
+        "My Plants Listen",
+        "People Interrupt"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "aoh_nature_en",
+      "lang": "en",
+      "niche": "plants_over_humans",
+      "lines": [
+        "Trees Don't Ghost You",
+        "I'm Just Saying"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "aoh_wifi_fr",
+      "lang": "fr",
+      "niche": "plants_over_humans",
+      "lines": [
+        "Mes plantes n'ont pas",
+        "besoin de WiFi pour pousser"
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "mis_enfer_fr",
+      "lang": "fr",
+      "niche": "misanthropy",
+      "lines": [
+        "L'enfer c'est les autres",
+        "mais un peu moi quand même"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "mis_plan_fr",
+      "lang": "fr",
+      "niche": "misanthropy",
+      "lines": [
+        "J'ai annulé mes plans",
+        "Ils n'étaient pas bons de toute façon"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "mis_bruit_fr",
+      "lang": "fr",
+      "niche": "misanthropy",
+      "lines": [
+        "Le silence est d'or",
+        "Les gens sont du bruit"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "mis_travail_fr",
+      "lang": "fr",
+      "niche": "misanthropy",
+      "lines": [
+        "Le travail c'est la santé",
+        "Vive les malades"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "mis_monde_fr",
+      "lang": "fr",
+      "niche": "misanthropy",
+      "lines": [
+        "Je ne déteste pas les gens",
+        "Je déteste les foules"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "mis_bonjour_fr",
+      "lang": "fr",
+      "niche": "misanthropy",
+      "lines": [
+        "Bonjour",
+        "(Je mens)"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "mis_sociable_fr",
+      "lang": "fr",
+      "niche": "misanthropy",
+      "lines": [
+        "Je suis sociable",
+        "Avec les gens qui ne me parlent pas"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "mis_hell_en",
+      "lang": "en",
+      "niche": "misanthropy",
+      "lines": [
+        "Hell Is Other People",
+        "(And a Bit Me Too)"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "mis_cancel_en",
+      "lang": "en",
+      "niche": "misanthropy",
+      "lines": [
+        "My Plans Got Cancelled",
+        "I Cancelled Them Myself"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "mis_morning_en",
+      "lang": "en",
+      "niche": "misanthropy",
+      "lines": [
+        "Good Morning",
+        "(I Don't Mean That)"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "mis_fine_en",
+      "lang": "en",
+      "niche": "misanthropy",
+      "lines": [
+        "I'm Fine",
+        "(I'm Not Talking About It)"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "mis_alone_en",
+      "lang": "en",
+      "niche": "misanthropy",
+      "lines": [
+        "Not Antisocial",
+        "Just Selectively Social"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "mis_hoelle_de",
+      "lang": "de",
+      "niche": "misanthropy",
+      "lines": [
+        "Die Hölle das sind die anderen",
+        "Ein bisschen ich auch"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "mis_ruhe_de",
+      "lang": "de",
+      "niche": "misanthropy",
+      "lines": [
+        "Ich brauche Ruhe",
+        "Keine Menschen"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "mis_infierno_es",
+      "lang": "es",
+      "niche": "misanthropy",
+      "lines": [
+        "El infierno son los demás",
+        "Y un poco yo también"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "mis_silenzio_it",
+      "lang": "it",
+      "niche": "misanthropy",
+      "lines": [
+        "L'inferno sono gli altri",
+        "E un po' anch'io"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "enc_touche_fr",
+      "lang": "fr",
+      "niche": "pregnancy_notouch",
+      "lines": [
+        "Enceinte",
+        "Touche et vois ce qui arrive"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "enc_pied_fr",
+      "lang": "fr",
+      "niche": "pregnancy_notouch",
+      "lines": [
+        "Touche mon ventre",
+        "et mon pied touche ton c**"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "enc_oblige_fr",
+      "lang": "fr",
+      "niche": "pregnancy_notouch",
+      "lines": [
+        "Enceinte, mais tu n'es vraiment",
+        "pas obligé de toucher"
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "enc_permission_fr",
+      "lang": "fr",
+      "niche": "pregnancy_notouch",
+      "lines": [
+        "Aucune permission de toucher",
+        "N'a été accordée"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "enc_pas_petting_zoo_fr",
+      "lang": "fr",
+      "niche": "pregnancy_notouch",
+      "lines": [
+        "Je ne suis pas",
+        "un zoo de contact"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "enc_dare_en",
+      "lang": "en",
+      "niche": "pregnancy_notouch",
+      "lines": [
+        "Pregnant",
+        "Touch My Belly. I Dare You."
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "enc_hands_en",
+      "lang": "en",
+      "niche": "pregnancy_notouch",
+      "lines": [
+        "Baby Inside",
+        "Hands Outside"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "enc_petting_zoo_en",
+      "lang": "en",
+      "niche": "pregnancy_notouch",
+      "lines": [
+        "Not a Petting Zoo",
+        "I'm Just Pregnant"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "enc_ask_first_en",
+      "lang": "en",
+      "niche": "pregnancy_notouch",
+      "lines": [
+        "Belly Belongs to Baby",
+        "Not to You. Ask First."
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "enc_bump_en",
+      "lang": "en",
+      "niche": "pregnancy_notouch",
+      "lines": [
+        "Touch the Bump",
+        "Lose the Hand"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "enc_bauch_de",
+      "lang": "de",
+      "niche": "pregnancy_notouch",
+      "lines": [
+        "Finger weg vom Bauch",
+        "Das ist keine Einladung"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "enc_barriga_es",
+      "lang": "es",
+      "niche": "pregnancy_notouch",
+      "lines": [
+        "Embarazada",
+        "No toques la barriga"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "gma_mamimosa_fr",
+      "lang": "fr",
+      "niche": "cool_grandma",
+      "lines": [
+        "Mamie-mosa",
+        "(le mimosa c'est pour moi)"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "gma_glam_fr",
+      "lang": "fr",
+      "niche": "cool_grandma",
+      "lines": [
+        "Mamie Glam",
+        "pas la mamie sage"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "gma_gateaux_fr",
+      "lang": "fr",
+      "niche": "cool_grandma",
+      "lines": [
+        "Je fais des gâteaux",
+        "et des complots"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "gma_cool_fr",
+      "lang": "fr",
+      "niche": "cool_grandma",
+      "lines": [
+        "La mamie cool",
+        "que t'aurais voulu avoir"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "gma_vieille_fr",
+      "lang": "fr",
+      "niche": "cool_grandma",
+      "lines": [
+        "Vieille? Moi?",
+        "Je suis millésimée."
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "gma_grandmosa_en",
+      "lang": "en",
+      "niche": "cool_grandma",
+      "lines": [
+        "Grandma-mosa",
+        "The Fun One"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "gma_cool_en",
+      "lang": "en",
+      "niche": "cool_grandma",
+      "lines": [
+        "The Cool Grandma",
+        "You Were Warned"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "gma_wine_en",
+      "lang": "en",
+      "niche": "cool_grandma",
+      "lines": [
+        "Grandma Needs Wine",
+        "Not Advice"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "gma_biscuits_plot_en",
+      "lang": "en",
+      "niche": "cool_grandma",
+      "lines": [
+        "I Bake Cookies",
+        "and Plan World Domination"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "gma_vintage_en",
+      "lang": "en",
+      "niche": "cool_grandma",
+      "lines": [
+        "I'm Not Old",
+        "I'm Vintage"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "gma_oma_de",
+      "lang": "de",
+      "niche": "cool_grandma",
+      "lines": [
+        "Oma Glam",
+        "Nicht die brave Oma"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "gma_abuela_es",
+      "lang": "es",
+      "niche": "cool_grandma",
+      "lines": [
+        "Abuela Cool",
+        "La que tú querías tener"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "dw_parler_fr",
+      "lang": "fr",
+      "niche": "dog_wit",
+      "lines": [
+        "Si mon chien pouvait parler",
+        "c'est lui qui te dirait d'arrêter d'aboyer"
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "dw_patron_fr",
+      "lang": "fr",
+      "niche": "dog_wit",
+      "lines": [
+        "Mon chien a plus de sens commun",
+        "que la plupart des gens que je connais"
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "dw_maitre_fr",
+      "lang": "fr",
+      "niche": "dog_wit",
+      "lines": [
+        "Je croyais dresser mon chien",
+        "C'est lui qui m'a dressé"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "dw_meilleur_ami_fr",
+      "lang": "fr",
+      "niche": "dog_wit",
+      "lines": [
+        "Mon chien est mon meilleur ami",
+        "Il ne me le dit pas mais c'est réciproque"
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "dw_could_talk_en",
+      "lang": "en",
+      "niche": "dog_wit",
+      "lines": [
+        "If My Dog Could Talk",
+        "He'd Tell You to Stop Barking"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "dw_trained_me_en",
+      "lang": "en",
+      "niche": "dog_wit",
+      "lines": [
+        "I Thought I Was Training Him",
+        "He Was Training Me"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "dw_best_human_en",
+      "lang": "en",
+      "niche": "dog_wit",
+      "lines": [
+        "My Dog Thinks I'm the Best Person",
+        "Low Bar. I'll Take It."
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "dw_hund_de",
+      "lang": "de",
+      "niche": "dog_wit",
+      "lines": [
+        "Ich dachte ich erziehe meinen Hund",
+        "Er hat mich erzogen"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "dw_perro_es",
+      "lang": "es",
+      "niche": "dog_wit",
+      "lines": [
+        "Pensé que lo adiestraba",
+        "Me adestro a mí"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "pun_biere_peur_fr",
+      "lang": "fr",
+      "niche": "wordplay_fr",
+      "lines": [
+        "Sans bière",
+        "c'est sans pitié"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "pun_vin_vingt_fr",
+      "lang": "fr",
+      "niche": "wordplay_fr",
+      "lines": [
+        "J'ai vingt problèmes",
+        "et le vin en règle vingt"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "pun_cafe_confiance_fr",
+      "lang": "fr",
+      "niche": "wordplay_fr",
+      "lines": [
+        "Caféine",
+        "le seul C que je valide"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "pun_chat_chance_fr",
+      "lang": "fr",
+      "niche": "wordplay_fr",
+      "lines": [
+        "Le chat de ma vie",
+        "(pas de bol, c'est un chat)"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "pun_pain_fr",
+      "lang": "fr",
+      "niche": "wordplay_fr",
+      "lines": [
+        "Sans pain",
+        "sans gain"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "pun_soleil_fr",
+      "lang": "fr",
+      "niche": "wordplay_fr",
+      "lines": [
+        "Après la pluie",
+        "le bon vin"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "pun_retraite_fr",
+      "lang": "fr",
+      "niche": "wordplay_fr",
+      "lines": [
+        "La retraite c'est travailler",
+        "pour soi enfin"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "pun_butter_en",
+      "lang": "en",
+      "niche": "wordplay_en",
+      "lines": [
+        "I'm on a Roll",
+        "(Butter Side Up)"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "pun_wine_time_en",
+      "lang": "en",
+      "niche": "wordplay_en",
+      "lines": [
+        "Wine Time",
+        "Is Fine Time"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "pun_knot_en",
+      "lang": "en",
+      "niche": "wordplay_en",
+      "lines": [
+        "Knot My Problem",
+        "I'm Crocheting"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "pun_espresso_en",
+      "lang": "en",
+      "niche": "wordplay_en",
+      "lines": [
+        "I've Bean Thinking",
+        "About Coffee"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "pun_reel_en",
+      "lang": "en",
+      "niche": "wordplay_en",
+      "lines": [
+        "I'm Hooked",
+        "(It's the Fishing)"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "pun_kale_en",
+      "lang": "en",
+      "niche": "wordplay_en",
+      "lines": [
+        "Kale Yeah",
+        "I'm Healthy"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "pun_bier_wort_de",
+      "lang": "de",
+      "niche": "wordplay_de",
+      "lines": [
+        "Bier ist das",
+        "wichtigste Wort"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "pun_vino_es",
+      "lang": "es",
+      "niche": "wordplay_es",
+      "lines": [
+        "El vino tiene la respuesta",
+        "Cual era la pregunta?"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "pun_gato_es",
+      "lang": "es",
+      "niche": "wordplay_es",
+      "lines": [
+        "Tengo un gato",
+        "y muchos problemas"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "pun_vino_it",
+      "lang": "it",
+      "niche": "wordplay_it",
+      "lines": [
+        "In vino veritas",
+        "In acqua basta"
+      ],
+      "accent": 0,
+      "ornament": true
     }
   ]
 }
