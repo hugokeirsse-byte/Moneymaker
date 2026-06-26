@@ -118,8 +118,11 @@ def render(entry, variant, idx=0, side=4500):
                 x += f.getlength(seg)
             y += lh + line_gap
         img.alpha_composite(outline)
-        # 2) remplissage drapeau (bandes colorées) par-dessus le contour
-        img.alpha_composite(flag_fill(mask, bbox, FLAGS[flag]))
+        # 2) remplissage drapeau : bandes réparties sur l'ENCRE réelle des glyphes
+        #    (et non la boîte ligne, qui inclut les jambages vides) → vert/jaune/rouge
+        #    équilibrés, même sur « 420 » sans descendantes.
+        mb = mask.getbbox() or bbox
+        img.alpha_composite(flag_fill(mask, mb, FLAGS[flag]))
     else:
         d = ImageDraw.Draw(img)
         sw = max(2, int(sz * 0.025))
