@@ -22,7 +22,7 @@ from PIL import Image, ImageDraw  # noqa: E402
 
 # Pacifico pour tous, alternance noir / rouge
 STYLE_CYCLE = ["script"]
-COLOR_CYCLE = [(24, 24, 28), (190, 46, 38)]
+COLOR_CYCLE = [(24, 24, 28), (201, 162, 39)]
 
 
 def measure(font, text):

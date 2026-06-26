@@ -54,7 +54,7 @@ def render_poster(entry, side=4500, variant="dark"):
     margin = int(side * 0.08)
     max_w = side - 2 * margin
 
-    color = adapt((190, 46, 38, 255), variant)    # rouge
+    color = adapt((201, 162, 39, 255), variant)    # rouge
     label_col = adapt((100, 100, 100, 255), variant)
 
     word = entry["word"].upper()
@@ -101,7 +101,7 @@ def render_grid(entries, cols=5, cell=900):
 
     for i, entry in enumerate(entries):
         word = entry["word"].upper()
-        color = (190, 46, 38)   # rouge
+        color = (201, 162, 39)   # rouge
         pad = int(cell * 0.08)
         max_w = cell - 2 * pad
 

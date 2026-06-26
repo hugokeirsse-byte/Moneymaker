@@ -42,7 +42,7 @@ def fit_font_size(text, key, max_w, hi=1000, lo=20):
 
 # --- palette — noir et rouge uniquement ----------------------------------
 DARK = (24, 24, 28, 255)
-RED  = (190, 46, 38, 255)
+RED  = (201, 162, 39, 255)
 GRAY = (120, 120, 124, 255)
 # anciens alias → remappés vers le duo noir/rouge
 WARM = RED

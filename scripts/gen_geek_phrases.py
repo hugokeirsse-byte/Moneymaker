@@ -22,7 +22,7 @@ from PIL import Image, ImageDraw, ImageFont  # noqa: E402
 
 INK = (28, 30, 34, 255)
 GRAY = (130, 132, 138, 255)
-RED = (190, 46, 38, 255)
+RED = (201, 162, 39, 255)
 TERM = RED
 CYAN = RED
 AMBER = RED

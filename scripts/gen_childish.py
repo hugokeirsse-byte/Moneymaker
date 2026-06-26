@@ -22,7 +22,7 @@ from typo_variants import VARIANTS, adapt  # noqa: E402
 from PIL import Image, ImageDraw  # noqa: E402
 
 INK = (32, 30, 30, 255)
-DROP = (190, 46, 38, 255)   # goutte rouge
+DROP = (201, 162, 39, 255)   # goutte rouge
 
 # id, lignes, drops(bool)
 DESIGNS = [

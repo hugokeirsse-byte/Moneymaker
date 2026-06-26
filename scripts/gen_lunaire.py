@@ -21,7 +21,7 @@ from typo_variants import INK_DARK, VARIANTS, adapt  # noqa: E402
 from PIL import Image, ImageDraw, ImageFont  # noqa: E402
 
 INK = INK_DARK
-RED = (190, 46, 38, 255)
+RED = (201, 162, 39, 255)
 
 # (id, ligne1, ligne2) — déadpan, deux mots, gros
 PHRASES = [

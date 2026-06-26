@@ -23,7 +23,7 @@ from typo_variants import VARIANTS, adapt  # noqa: E402
 from PIL import Image, ImageDraw, ImageFont  # noqa: E402
 
 GRAY = (120, 120, 126, 255)
-RED = (190, 46, 38, 255)
+RED = (201, 162, 39, 255)
 
 # langue -> (police, couleur, label FR, label EN) — tous Pacifico + rouge
 LANG = {
