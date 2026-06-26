@@ -1,77 +1,713 @@
 {
   "meta": {
     "note": "Série correction : fin de phrase barrée + remplacée en rouge en dessous.",
-    "ink": [28, 28, 32, 255],
-    "accent": [190, 46, 38, 255]
+    "ink": [
+      28,
+      28,
+      32,
+      255
+    ],
+    "accent": [
+      190,
+      46,
+      38,
+      255
+    ]
   },
   "entries": [
-    {"id": "co_girls_fun_en", "lang": "en", "kept": ["Girls Just", "Want To Have"], "struck": "Fun", "replacement": "Equal Rights"},
-    {"id": "co_filles_amuser_fr", "lang": "fr", "kept": ["Les Filles", "Veulent Juste"], "struck": "S'Amuser", "replacement": "L'Égalité"},
-    {"id": "co_all_you_need_en", "lang": "en", "kept": ["All You", "Need Is"], "struck": "Love", "replacement": "Human Rights"},
-    {"id": "co_boys_will_en", "lang": "en", "kept": ["Boys Will", "Be"], "struck": "Boys", "replacement": "Held Accountable"},
-    {"id": "co_garcons_fr", "lang": "fr", "kept": ["Les Garçons", "Resteront"], "struck": "Des Garçons", "replacement": "Responsables"},
-    {"id": "co_think_box_en", "lang": "en", "kept": ["Think", "Outside The"], "struck": "Box", "replacement": "Binary"},
-    {"id": "co_live_laugh_en", "lang": "en", "kept": ["Live,", "Laugh,"], "struck": "Love", "replacement": "Resist"},
-    {"id": "co_keep_calm_en", "lang": "en", "kept": ["Keep Calm", "And"], "struck": "Carry On", "replacement": "Smash Patriarchy"},
-    {"id": "co_ok_boomer_en", "lang": "en", "kept": ["Ok"], "struck": "Boomer", "replacement": "Bigot"},
-    {"id": "co_pas_raciste_fr", "lang": "fr", "kept": ["Je Suis Pas", "Raciste"], "struck": "Mais...", "replacement": "(Si, En Fait)"},
-    {"id": "co_not_bossy_en", "lang": "en", "kept": ["I'm Not"], "struck": "Bossy", "replacement": "The Boss"},
-    {"id": "co_born_shop_en", "lang": "en", "kept": ["Born To"], "struck": "Shop", "replacement": "Adopt"},
-    {"id": "co_good_vibes_en", "lang": "en", "kept": ["Good Vibes"], "struck": "Only", "replacement": "And Equal Rights"},
-    {"id": "co_make_love_en", "lang": "en", "kept": ["Make Love,", "Not"], "struck": "War", "replacement": "Carbon"},
-    {"id": "co_manager_en", "lang": "en", "kept": ["I'd Like To Speak", "To The"], "struck": "Manager", "replacement": "Revolution"},
-    {"id": "co_client_raison_fr", "lang": "fr", "kept": ["Le Client A"], "struck": "Toujours Raison", "replacement": "Souvent Tort"},
-    {"id": "co_crazy_cat_en", "lang": "en", "kept": ["Crazy"], "struck": "Cat Lady", "replacement": "Feminist Cat Lady"},
-    {"id": "co_eat_sleep_en", "lang": "en", "kept": ["Eat, Sleep,"], "struck": "Consume", "replacement": "Resist, Repeat"},
-    {"id": "co_history_en", "lang": "en", "kept": ["History Will"], "struck": "Repeat", "replacement": "Judge You"},
-    {"id": "co_stay_lane_en", "lang": "en", "kept": ["Stay In", "Your"], "struck": "Lane", "replacement": "Power"},
-    {"id": "co_save_planet_en", "lang": "en", "kept": ["Save The"], "struck": "Date", "replacement": "Planet"},
-    {"id": "co_sois_sage_fr", "lang": "fr", "kept": ["Sois"], "struck": "Sage", "replacement": "Rebelle"},
-    {"id": "co_chat_juge_fr", "lang": "fr", "kept": ["Mon Chat", "Juge"], "struck": "Tout Le Monde", "replacement": "Surtout Les Fachos"},
-    {"id": "co_apolitique_fr", "lang": "fr", "kept": ["Je Suis"], "struck": "Apolitique", "replacement": "Juste Privilégié"},
-    {"id": "co_just_do_en", "lang": "en", "kept": ["Just Do"], "struck": "It", "replacement": "Your Taxes"},
-    {"id": "co_houston_en", "lang": "en", "kept": ["Houston,", "We Have A"], "struck": "Problem", "replacement": "Planet To Save"},
-    {"id": "co_infinity_en", "lang": "en", "kept": ["To Infinity", "And"], "struck": "Beyond", "replacement": "Equal Pay"},
-    {"id": "co_you_had_en", "lang": "en", "kept": ["You Had", "Me At"], "struck": "Hello", "replacement": "Feminism"},
-    {"id": "co_cool_story_en", "lang": "en", "kept": ["Cool Story,"], "struck": "Bro", "replacement": "Believe Women"},
-    {"id": "co_make_earth_en", "lang": "en", "kept": ["Make"], "struck": "America Great Again", "replacement": "Earth Livable Again"},
-    {"id": "co_life_box_en", "lang": "en", "kept": ["Life Is Like", "A Box Of"], "struck": "Chocolates", "replacement": "Privilege"},
-    {"id": "co_she_said_en", "lang": "en", "kept": ["That's What"], "struck": "She Said", "replacement": "Wasn't Believed"},
-    {"id": "co_be_change_en", "lang": "en", "kept": ["Be The Change"], "struck": "You Wish To See", "replacement": "You Tax"},
-    {"id": "co_great_power_en", "lang": "en", "kept": ["With Great Power", "Comes Great"], "struck": "Responsibility", "replacement": "Tax Bills"},
-    {"id": "co_ill_back_en", "lang": "en", "kept": ["I'll Be"], "struck": "Back", "replacement": "Voting"},
-    {"id": "co_woke_up_en", "lang": "en", "kept": ["I Woke Up Like"], "struck": "This", "replacement": "An Activist"},
-    {"id": "co_have_nice_en", "lang": "en", "kept": ["Have A"], "struck": "Nice Day", "replacement": "Revolution"},
-    {"id": "co_another_day_en", "lang": "en", "kept": ["Another Day,"], "struck": "Another Dollar", "replacement": "Another Fight"},
-    {"id": "co_coffee_en", "lang": "en", "kept": ["Coffee Is For"], "struck": "Closers", "replacement": "Everyone"},
-    {"id": "co_winter_coming_en", "lang": "en", "kept": ["Winter Is"], "struck": "Coming", "replacement": "Already Here"},
-    {"id": "co_why_serious_en", "lang": "en", "kept": ["Why So"], "struck": "Serious?", "replacement": "Complicit?"},
-    {"id": "co_liberte_fr", "lang": "fr", "kept": ["Liberté,", "Égalité,"], "struck": "Fraternité", "replacement": "Sororité"},
-    {"id": "co_qui_peut_fr", "lang": "fr", "kept": ["Qui Peut Le Plus"], "struck": "Peut Le Moins", "replacement": "Paie Plus D'Impôts"},
-    {"id": "co_chats_droits_fr", "lang": "fr", "kept": ["La Nuit Tous", "Les Chats"], "struck": "Sont Gris", "replacement": "Ont Des Droits"},
-    {"id": "co_naturel_fr", "lang": "fr", "kept": ["Chassez Le Naturel,"], "struck": "Il Revient Au Galop", "replacement": "Taxez Les Riches"},
-    {"id": "co_vouloir_militer_fr", "lang": "fr", "kept": ["Vouloir C'Est"], "struck": "Pouvoir", "replacement": "Militer"},
-    {"id": "co_rien_perd_fr", "lang": "fr", "kept": ["Rien Ne Se Perd,", "Rien Ne Se Crée,", "Tout Se"], "struck": "Transforme", "replacement": "Délocalise"},
-    {"id": "co_je_pense_fr", "lang": "fr", "kept": ["Je Pense,", "Donc Je"], "struck": "Suis", "replacement": "Vote"},
-    {"id": "co_mange_prie_fr", "lang": "fr", "kept": ["Mange,", "Prie,"], "struck": "Aime", "replacement": "Milite"},
-    {"id": "co_veni_fr", "lang": "fr", "kept": ["Veni, Vidi,"], "struck": "Vici", "replacement": "Voté"},
-    {"id": "co_patron_naif_fr", "lang": "fr", "kept": ["Mon Patron", "Pense Que Je Suis"], "struck": "Loyal", "replacement": "Syndiqué"},
-    {"id": "co_cest_capitalisme_fr", "lang": "fr", "kept": ["C'Est La"], "struck": "Vie", "replacement": "Faute Du Capitalisme"},
-    {"id": "co_travaille_chat_fr", "lang": "fr", "kept": ["Je Travaille Dur", "Pour Que Mon"], "struck": "Patron", "replacement": "Chat"},
-    {"id": "co_not_backyard_en", "lang": "en", "kept": ["Not In My"], "struck": "Backyard", "replacement": "Lifetime"},
-    {"id": "co_temps_argent_fr", "lang": "fr", "kept": ["Le Temps,"], "struck": "C'Est De L'Argent", "replacement": "C'Est Pour Les Riches"},
-    {"id": "co_after_all_en", "lang": "en", "kept": ["After All This Time?"], "struck": "Always.", "replacement": "Still Fighting."},
-    {"id": "co_courage_fr", "lang": "fr", "kept": ["Le Courage,"], "struck": "C'Est D'Obéir", "replacement": "C'Est De Résister"},
-    {"id": "co_not_angry_en", "lang": "en", "kept": ["I'm Not Angry,", "I'm Just"], "struck": "Disappointed", "replacement": "Organizing"},
-    {"id": "co_you_are_en", "lang": "en", "kept": ["You Are What"], "struck": "You Eat", "replacement": "You Fight For"},
-    {"id": "co_seize_en", "lang": "en", "kept": ["Seize The"], "struck": "Day", "replacement": "Means Of Production"},
-    {"id": "co_climato_fr", "lang": "fr", "kept": ["Je Suis"], "struck": "Climatosceptique", "replacement": "Climato-Stupide"},
-    {"id": "co_climate_en", "lang": "en", "kept": ["I'm A"], "struck": "Climate Skeptic", "replacement": "Climate Stupid"},
-    {"id": "co_platiste_fr", "lang": "fr", "kept": ["La Terre Est Plate ?"], "struck": "Platiste", "replacement": "Platement Stupide"},
-    {"id": "co_complotiste_fr", "lang": "fr", "kept": ["Je Ne Suis Pas"], "struck": "Complotiste", "replacement": "Juste Crédule"},
-    {"id": "co_flatearth_en", "lang": "en", "kept": ["Earth Is Flat?"], "struck": "Free Thinker", "replacement": "Free Faller"},
-    {"id": "co_antiscience_en", "lang": "en", "kept": ["I Did My Own"], "struck": "Research", "replacement": "Googling"},
-    {"id": "co_recherche_fr", "lang": "fr", "kept": ["J'Ai Fait Mes"], "struck": "Recherches", "replacement": "Trois Vidéos"},
-    {"id": "co_canicule_fr", "lang": "fr", "kept": ["Il Fait Chaud,", "C'Est"], "struck": "Normal", "replacement": "+1,5°C"}
+    {
+      "id": "co_girls_fun_en",
+      "lang": "en",
+      "kept": [
+        "Girls Just",
+        "Want To Have"
+      ],
+      "struck": "Fun",
+      "replacement": "Equal Rights"
+    },
+    {
+      "id": "co_filles_amuser_fr",
+      "lang": "fr",
+      "kept": [
+        "Les Filles",
+        "Veulent Juste"
+      ],
+      "struck": "S'Amuser",
+      "replacement": "L'Égalité"
+    },
+    {
+      "id": "co_all_you_need_en",
+      "lang": "en",
+      "kept": [
+        "All You",
+        "Need Is"
+      ],
+      "struck": "Love",
+      "replacement": "Human Rights"
+    },
+    {
+      "id": "co_boys_will_en",
+      "lang": "en",
+      "kept": [
+        "Boys Will",
+        "Be"
+      ],
+      "struck": "Boys",
+      "replacement": "Held Accountable"
+    },
+    {
+      "id": "co_garcons_fr",
+      "lang": "fr",
+      "kept": [
+        "Les Garçons",
+        "Resteront"
+      ],
+      "struck": "Des Garçons",
+      "replacement": "Responsables"
+    },
+    {
+      "id": "co_think_box_en",
+      "lang": "en",
+      "kept": [
+        "Think",
+        "Outside The"
+      ],
+      "struck": "Box",
+      "replacement": "Binary"
+    },
+    {
+      "id": "co_live_laugh_en",
+      "lang": "en",
+      "kept": [
+        "Live,",
+        "Laugh,"
+      ],
+      "struck": "Love",
+      "replacement": "Resist"
+    },
+    {
+      "id": "co_keep_calm_en",
+      "lang": "en",
+      "kept": [
+        "Keep Calm",
+        "And"
+      ],
+      "struck": "Carry On",
+      "replacement": "Smash Patriarchy"
+    },
+    {
+      "id": "co_ok_boomer_en",
+      "lang": "en",
+      "kept": [
+        "Ok"
+      ],
+      "struck": "Boomer",
+      "replacement": "Bigot"
+    },
+    {
+      "id": "co_pas_raciste_fr",
+      "lang": "fr",
+      "kept": [
+        "Je Suis Pas",
+        "Raciste"
+      ],
+      "struck": "Mais...",
+      "replacement": "(Si, En Fait)"
+    },
+    {
+      "id": "co_not_bossy_en",
+      "lang": "en",
+      "kept": [
+        "I'm Not"
+      ],
+      "struck": "Bossy",
+      "replacement": "The Boss"
+    },
+    {
+      "id": "co_born_shop_en",
+      "lang": "en",
+      "kept": [
+        "Born To"
+      ],
+      "struck": "Shop",
+      "replacement": "Adopt"
+    },
+    {
+      "id": "co_good_vibes_en",
+      "lang": "en",
+      "kept": [
+        "Good Vibes"
+      ],
+      "struck": "Only",
+      "replacement": "And Equal Rights"
+    },
+    {
+      "id": "co_make_love_en",
+      "lang": "en",
+      "kept": [
+        "Make Love,",
+        "Not"
+      ],
+      "struck": "War",
+      "replacement": "Carbon"
+    },
+    {
+      "id": "co_manager_en",
+      "lang": "en",
+      "kept": [
+        "I'd Like To Speak",
+        "To The"
+      ],
+      "struck": "Manager",
+      "replacement": "Revolution"
+    },
+    {
+      "id": "co_client_raison_fr",
+      "lang": "fr",
+      "kept": [
+        "Le Client A"
+      ],
+      "struck": "Toujours Raison",
+      "replacement": "Souvent Tort"
+    },
+    {
+      "id": "co_crazy_cat_en",
+      "lang": "en",
+      "kept": [
+        "Crazy"
+      ],
+      "struck": "Cat Lady",
+      "replacement": "Feminist Cat Lady"
+    },
+    {
+      "id": "co_eat_sleep_en",
+      "lang": "en",
+      "kept": [
+        "Eat, Sleep,"
+      ],
+      "struck": "Consume",
+      "replacement": "Resist, Repeat"
+    },
+    {
+      "id": "co_history_en",
+      "lang": "en",
+      "kept": [
+        "History Will"
+      ],
+      "struck": "Repeat",
+      "replacement": "Judge You"
+    },
+    {
+      "id": "co_stay_lane_en",
+      "lang": "en",
+      "kept": [
+        "Stay In",
+        "Your"
+      ],
+      "struck": "Lane",
+      "replacement": "Power"
+    },
+    {
+      "id": "co_save_planet_en",
+      "lang": "en",
+      "kept": [
+        "Save The"
+      ],
+      "struck": "Date",
+      "replacement": "Planet"
+    },
+    {
+      "id": "co_sois_sage_fr",
+      "lang": "fr",
+      "kept": [
+        "Sois"
+      ],
+      "struck": "Sage",
+      "replacement": "Rebelle"
+    },
+    {
+      "id": "co_chat_juge_fr",
+      "lang": "fr",
+      "kept": [
+        "Mon Chat",
+        "Juge"
+      ],
+      "struck": "Tout Le Monde",
+      "replacement": "Surtout Les Fachos"
+    },
+    {
+      "id": "co_apolitique_fr",
+      "lang": "fr",
+      "kept": [
+        "Je Suis"
+      ],
+      "struck": "Apolitique",
+      "replacement": "Juste Privilégié"
+    },
+    {
+      "id": "co_just_do_en",
+      "lang": "en",
+      "kept": [
+        "Just Do"
+      ],
+      "struck": "It",
+      "replacement": "Your Taxes"
+    },
+    {
+      "id": "co_houston_en",
+      "lang": "en",
+      "kept": [
+        "Houston,",
+        "We Have A"
+      ],
+      "struck": "Problem",
+      "replacement": "Planet To Save"
+    },
+    {
+      "id": "co_infinity_en",
+      "lang": "en",
+      "kept": [
+        "To Infinity",
+        "And"
+      ],
+      "struck": "Beyond",
+      "replacement": "Equal Pay"
+    },
+    {
+      "id": "co_you_had_en",
+      "lang": "en",
+      "kept": [
+        "You Had",
+        "Me At"
+      ],
+      "struck": "Hello",
+      "replacement": "Feminism"
+    },
+    {
+      "id": "co_cool_story_en",
+      "lang": "en",
+      "kept": [
+        "Cool Story,"
+      ],
+      "struck": "Bro",
+      "replacement": "Believe Women"
+    },
+    {
+      "id": "co_make_earth_en",
+      "lang": "en",
+      "kept": [
+        "Make"
+      ],
+      "struck": "America Great Again",
+      "replacement": "Earth Livable Again"
+    },
+    {
+      "id": "co_life_box_en",
+      "lang": "en",
+      "kept": [
+        "Life Is Like",
+        "A Box Of"
+      ],
+      "struck": "Chocolates",
+      "replacement": "Privilege"
+    },
+    {
+      "id": "co_she_said_en",
+      "lang": "en",
+      "kept": [
+        "That's What"
+      ],
+      "struck": "She Said",
+      "replacement": "Wasn't Believed"
+    },
+    {
+      "id": "co_be_change_en",
+      "lang": "en",
+      "kept": [
+        "Be The Change"
+      ],
+      "struck": "You Wish To See",
+      "replacement": "You Tax"
+    },
+    {
+      "id": "co_great_power_en",
+      "lang": "en",
+      "kept": [
+        "With Great Power",
+        "Comes Great"
+      ],
+      "struck": "Responsibility",
+      "replacement": "Tax Bills"
+    },
+    {
+      "id": "co_ill_back_en",
+      "lang": "en",
+      "kept": [
+        "I'll Be"
+      ],
+      "struck": "Back",
+      "replacement": "Voting"
+    },
+    {
+      "id": "co_woke_up_en",
+      "lang": "en",
+      "kept": [
+        "I Woke Up Like"
+      ],
+      "struck": "This",
+      "replacement": "An Activist"
+    },
+    {
+      "id": "co_have_nice_en",
+      "lang": "en",
+      "kept": [
+        "Have A"
+      ],
+      "struck": "Nice Day",
+      "replacement": "Revolution"
+    },
+    {
+      "id": "co_another_day_en",
+      "lang": "en",
+      "kept": [
+        "Another Day,"
+      ],
+      "struck": "Another Dollar",
+      "replacement": "Another Fight"
+    },
+    {
+      "id": "co_coffee_en",
+      "lang": "en",
+      "kept": [
+        "Coffee Is For"
+      ],
+      "struck": "Closers",
+      "replacement": "Everyone"
+    },
+    {
+      "id": "co_winter_coming_en",
+      "lang": "en",
+      "kept": [
+        "Winter Is"
+      ],
+      "struck": "Coming",
+      "replacement": "Already Here"
+    },
+    {
+      "id": "co_why_serious_en",
+      "lang": "en",
+      "kept": [
+        "Why So"
+      ],
+      "struck": "Serious?",
+      "replacement": "Complicit?"
+    },
+    {
+      "id": "co_liberte_fr",
+      "lang": "fr",
+      "kept": [
+        "Liberté,",
+        "Égalité,"
+      ],
+      "struck": "Fraternité",
+      "replacement": "Sororité"
+    },
+    {
+      "id": "co_qui_peut_fr",
+      "lang": "fr",
+      "kept": [
+        "Qui Peut Le Plus"
+      ],
+      "struck": "Peut Le Moins",
+      "replacement": "Paie Plus D'Impôts"
+    },
+    {
+      "id": "co_chats_droits_fr",
+      "lang": "fr",
+      "kept": [
+        "La Nuit Tous",
+        "Les Chats"
+      ],
+      "struck": "Sont Gris",
+      "replacement": "Ont Des Droits"
+    },
+    {
+      "id": "co_naturel_fr",
+      "lang": "fr",
+      "kept": [
+        "Chassez Le Naturel,"
+      ],
+      "struck": "Il Revient Au Galop",
+      "replacement": "Taxez Les Riches"
+    },
+    {
+      "id": "co_vouloir_militer_fr",
+      "lang": "fr",
+      "kept": [
+        "Vouloir C'Est"
+      ],
+      "struck": "Pouvoir",
+      "replacement": "Militer"
+    },
+    {
+      "id": "co_rien_perd_fr",
+      "lang": "fr",
+      "kept": [
+        "Rien Ne Se Perd,",
+        "Rien Ne Se Crée,",
+        "Tout Se"
+      ],
+      "struck": "Transforme",
+      "replacement": "Délocalise"
+    },
+    {
+      "id": "co_je_pense_fr",
+      "lang": "fr",
+      "kept": [
+        "Je Pense,",
+        "Donc Je"
+      ],
+      "struck": "Suis",
+      "replacement": "Vote"
+    },
+    {
+      "id": "co_mange_prie_fr",
+      "lang": "fr",
+      "kept": [
+        "Mange,",
+        "Prie,"
+      ],
+      "struck": "Aime",
+      "replacement": "Milite"
+    },
+    {
+      "id": "co_veni_fr",
+      "lang": "fr",
+      "kept": [
+        "Veni, Vidi,"
+      ],
+      "struck": "Vici",
+      "replacement": "Voté"
+    },
+    {
+      "id": "co_patron_naif_fr",
+      "lang": "fr",
+      "kept": [
+        "Mon Patron",
+        "Pense Que Je Suis"
+      ],
+      "struck": "Loyal",
+      "replacement": "Syndiqué"
+    },
+    {
+      "id": "co_cest_capitalisme_fr",
+      "lang": "fr",
+      "kept": [
+        "C'Est La"
+      ],
+      "struck": "Vie",
+      "replacement": "Faute Du Capitalisme"
+    },
+    {
+      "id": "co_travaille_chat_fr",
+      "lang": "fr",
+      "kept": [
+        "Je Travaille Dur",
+        "Pour Que Mon"
+      ],
+      "struck": "Patron",
+      "replacement": "Chat"
+    },
+    {
+      "id": "co_not_backyard_en",
+      "lang": "en",
+      "kept": [
+        "Not In My"
+      ],
+      "struck": "Backyard",
+      "replacement": "Lifetime"
+    },
+    {
+      "id": "co_temps_argent_fr",
+      "lang": "fr",
+      "kept": [
+        "Le Temps,"
+      ],
+      "struck": "C'Est De L'Argent",
+      "replacement": "C'Est Pour Les Riches"
+    },
+    {
+      "id": "co_after_all_en",
+      "lang": "en",
+      "kept": [
+        "After All This Time?"
+      ],
+      "struck": "Always.",
+      "replacement": "Still Fighting."
+    },
+    {
+      "id": "co_courage_fr",
+      "lang": "fr",
+      "kept": [
+        "Le Courage,"
+      ],
+      "struck": "C'Est D'Obéir",
+      "replacement": "C'Est De Résister"
+    },
+    {
+      "id": "co_not_angry_en",
+      "lang": "en",
+      "kept": [
+        "I'm Not Angry,",
+        "I'm Just"
+      ],
+      "struck": "Disappointed",
+      "replacement": "Organizing"
+    },
+    {
+      "id": "co_you_are_en",
+      "lang": "en",
+      "kept": [
+        "You Are What"
+      ],
+      "struck": "You Eat",
+      "replacement": "You Fight For"
+    },
+    {
+      "id": "co_seize_en",
+      "lang": "en",
+      "kept": [
+        "Seize The"
+      ],
+      "struck": "Day",
+      "replacement": "Means Of Production"
+    },
+    {
+      "id": "co_climato_fr",
+      "lang": "fr",
+      "kept": [
+        "Je Suis"
+      ],
+      "struck": "Climatosceptique",
+      "replacement": "Climato-Stupide"
+    },
+    {
+      "id": "co_climate_en",
+      "lang": "en",
+      "kept": [
+        "I'm A"
+      ],
+      "struck": "Climate Skeptic",
+      "replacement": "Climate Stupid"
+    },
+    {
+      "id": "co_platiste_fr",
+      "lang": "fr",
+      "kept": [
+        "La Terre Est Plate ?"
+      ],
+      "struck": "Platiste",
+      "replacement": "Platement Stupide"
+    },
+    {
+      "id": "co_complotiste_fr",
+      "lang": "fr",
+      "kept": [
+        "Je Ne Suis Pas"
+      ],
+      "struck": "Complotiste",
+      "replacement": "Juste Crédule"
+    },
+    {
+      "id": "co_flatearth_en",
+      "lang": "en",
+      "kept": [
+        "Earth Is Flat?"
+      ],
+      "struck": "Free Thinker",
+      "replacement": "Free Faller"
+    },
+    {
+      "id": "co_antiscience_en",
+      "lang": "en",
+      "kept": [
+        "I Did My Own"
+      ],
+      "struck": "Research",
+      "replacement": "Googling"
+    },
+    {
+      "id": "co_recherche_fr",
+      "lang": "fr",
+      "kept": [
+        "J'Ai Fait Mes"
+      ],
+      "struck": "Recherches",
+      "replacement": "Trois Vidéos"
+    },
+    {
+      "id": "co_canicule_fr",
+      "lang": "fr",
+      "kept": [
+        "Il Fait Chaud,",
+        "C'Est"
+      ],
+      "struck": "Normal",
+      "replacement": "+1,5°C"
+    },
+    {
+      "id": "co_planet_bee_en",
+      "lang": "en",
+      "kept": [
+        "There Is No"
+      ],
+      "struck": "Planet B",
+      "replacement": "Planet Bee"
+    },
+    {
+      "id": "co_croissance_fr",
+      "lang": "fr",
+      "kept": [
+        "La Croissance"
+      ],
+      "struck": "Infinie",
+      "replacement": "C'Est Fini"
+    },
+    {
+      "id": "co_think_bees_en",
+      "lang": "en",
+      "kept": [
+        "Think"
+      ],
+      "struck": "Globally",
+      "replacement": "Of The Bees"
+    },
+    {
+      "id": "co_swimming_en",
+      "lang": "en",
+      "kept": [
+        "Just Keep"
+      ],
+      "struck": "Swimming",
+      "replacement": "The Oceans Clean"
+    },
+    {
+      "id": "co_odeur_avenir_fr",
+      "lang": "fr",
+      "kept": [
+        "L'Argent N'A Pas"
+      ],
+      "struck": "D'Odeur",
+      "replacement": "D'Avenir"
+    },
+    {
+      "id": "co_babylon_en",
+      "lang": "en",
+      "kept": [
+        "Chase The"
+      ],
+      "struck": "Bag",
+      "replacement": "System (Babylon)"
+    }
   ]
 }
