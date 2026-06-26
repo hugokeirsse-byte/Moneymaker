@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "note": "Formats officiels détournés retenus : caution, care, card, loading, error, rx, nutrition. Surtout EN + FR.",
+    "ink": [20, 20, 22, 255],
+    "accent": [201, 162, 39, 255]
+  },
+  "entries": [
+    {"id": "fm_caution_feminist_en", "format": "caution", "lang": "en", "head": "Caution", "text": "Feminist Area"},
+    {"id": "fm_caution_catlady_en", "format": "caution", "lang": "en", "head": "Caution", "text": "Feral Cat Lady"},
+    {"id": "fm_caution_overthink_en", "format": "caution", "lang": "en", "head": "Warning", "text": "Overthinking In Progress"},
+    {"id": "fm_caution_opinions_en", "format": "caution", "lang": "en", "head": "Danger", "text": "Unfiltered Opinions"},
+    {"id": "fm_caution_damage_en", "format": "caution", "lang": "en", "head": "Caution", "text": "Emotional Damage Ahead"},
+    {"id": "fm_caution_antifa_fr", "format": "caution", "lang": "fr", "head": "Attention", "text": "Zone Antifa"},
+    {"id": "fm_caution_colere_fr", "format": "caution", "lang": "fr", "head": "Danger", "text": "Féministe En Colère"},
+
+    {"id": "fm_care_brain_en", "format": "care", "lang": "en", "text": "Do Not Wash My Brain", "sub": "Cold wash, like my ex"},
+    {"id": "fm_care_patience_en", "format": "care", "lang": "en", "text": "Do Not Tumble Dry My Patience", "sub": "Already shrunk"},
+    {"id": "fm_care_handle_en", "format": "care", "lang": "en", "text": "Handle With Care", "sub": "Contents may be anxious"},
+    {"id": "fm_care_vibe_en", "format": "care", "lang": "en", "text": "Do Not Bleach My Vibe", "sub": "100% authentic"},
+    {"id": "fm_care_cerveau_fr", "format": "care", "lang": "fr", "text": "Ne Pas Laver Mon Cerveau", "sub": "Lavage à froid, comme mon ex"},
+    {"id": "fm_care_principes_fr", "format": "care", "lang": "fr", "text": "Ne Pas Repasser Mes Principes", "sub": "Faits pour durer"},
+
+    {"id": "fm_card_racism_en", "format": "card", "lang": "en", "title": "Red Card", "text": "To Racism"},
+    {"id": "fm_card_patriarchy_en", "format": "card", "lang": "en", "title": "Red Card", "text": "To The Patriarchy"},
+    {"id": "fm_card_fascism_en", "format": "card", "lang": "en", "title": "Red Card", "text": "To Fascism"},
+    {"id": "fm_card_excuses_en", "format": "card", "lang": "en", "color": "yellow", "title": "Yellow Card", "text": "To Your Excuses"},
+    {"id": "fm_card_racisme_fr", "format": "card", "lang": "fr", "title": "Carton Rouge", "text": "Au Racisme"},
+    {"id": "fm_card_fachos_fr", "format": "card", "lang": "fr", "title": "Carton Rouge", "text": "Aux Fachos"},
+    {"id": "fm_card_fashion_en", "format": "card", "lang": "en", "title": "Red Card", "text": "To Fast Fashion"},
+
+    {"id": "fm_load_revolution_en", "format": "loading", "lang": "en", "text": "Revolution Loading…", "pct": 47, "sub": "don't give up"},
+    {"id": "fm_load_equality_en", "format": "loading", "lang": "en", "text": "Equality Loading…", "pct": 78, "sub": "almost there"},
+    {"id": "fm_load_patience_en", "format": "loading", "lang": "en", "text": "Patience Loading…", "pct": 12, "sub": "please wait"},
+    {"id": "fm_load_motivation_en", "format": "loading", "lang": "en", "text": "Motivation Loading…", "pct": 3, "sub": "try again later"},
+    {"id": "fm_load_revolution_fr", "format": "loading", "lang": "fr", "text": "Révolution En Cours…", "pct": 47, "sub": "n'abandonnez pas"},
+    {"id": "fm_load_changement_fr", "format": "loading", "lang": "fr", "text": "Changement En Cours…", "pct": 60, "sub": "patience"},
+
+    {"id": "fm_err_justice_en", "format": "error", "lang": "en", "code": "404", "text": "Justice Not Found"},
+    {"id": "fm_err_patience_en", "format": "error", "lang": "en", "code": "404", "text": "Patience Not Found"},
+    {"id": "fm_err_equality_en", "format": "error", "lang": "en", "code": "404", "text": "Equality Not Found"},
+    {"id": "fm_err_silence_en", "format": "error", "lang": "en", "code": "403", "text": "Silence Forbidden"},
+    {"id": "fm_err_system_en", "format": "error", "lang": "en", "code": "500", "text": "Capitalism Failed"},
+    {"id": "fm_err_justice_fr", "format": "error", "lang": "fr", "code": "404", "text": "Justice Introuvable"},
+
+    {"id": "fm_rx_naps_en", "format": "rx", "lang": "en", "head": "Prescription", "items": ["2 naps a day", "Touch grass", "Less doomscrolling", "Tax the rich"], "doctor": "Dr. Common Sense"},
+    {"id": "fm_rx_siestes_fr", "format": "rx", "lang": "fr", "head": "Ordonnance", "items": ["2 siestes par jour", "Café à volonté", "0 réunion inutile", "Limiter les cons"], "doctor": "Dr. Bon Sens"},
+    {"id": "fm_rx_self_en", "format": "rx", "lang": "en", "head": "Prescription", "items": ["Rest, no guilt", "Set boundaries", "Block the haters", "Hydrate & resist"], "doctor": "Dr. Self-Care"},
+
+    {"id": "fm_nut_values_en", "format": "nutrition", "lang": "en", "title": "Personal Values", "rows": [["Rage", "100%"], ["Patience", "0%"], ["Sarcasm", "95%"], ["Caffeine", "∞"], ["Empathy", "88%"], ["Filter", "0%"]]},
+    {"id": "fm_nut_valeurs_fr", "format": "nutrition", "lang": "fr", "title": "Valeurs Personnelles", "rows": [["Rage", "100%"], ["Patience", "0%"], ["Sarcasme", "95%"], ["Caféine", "∞"], ["Empathie", "88%"], ["Filtre", "0%"]]},
+    {"id": "fm_nut_chaos_en", "format": "nutrition", "lang": "en", "title": "Daily Intake", "rows": [["Chaos", "100%"], ["Naps", "12h"], ["Drama", "0%"], ["Snacks", "∞"], ["Vibes", "Immaculate"]]}
+  ]
+}
