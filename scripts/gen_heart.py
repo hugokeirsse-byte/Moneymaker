@@ -24,14 +24,16 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from typo_fonts import load_font  # noqa: E402
 from typo_variants import VARIANTS, adapt  # noqa: E402
-from typo_ornaments import pick_style, apply_ornament, sticker_layer  # noqa: E402
+from typo_ornaments import (pick_style, apply_ornament, sticker_layer,  # noqa: E402
+                            draw_word)
 
 from PIL import Image, ImageDraw, ImageFont  # noqa: E402
 
 DATA_PATH = "data/heart.json"
 FONT = "script"
 INK = (28, 28, 32, 255)
-RED = (190, 46, 38, 255)
+RED = (190, 46, 38, 255)          # uniquement pour le cœur
+GOLD = (201, 162, 39, 255)        # accent texte (contour croisé)
 
 
 def heart_points(cx, cy, w):
@@ -65,10 +67,11 @@ def render(entry, variant, idx=0, side=4500):
     style = entry.get("ornament", pick_style(idx))
     sticker = (style == "sticker")
     if sticker:
-        ink, red = INK, RED
+        ink, accent = INK, GOLD
     else:
         ink = adapt(INK, variant)
-        red = adapt(RED, variant)
+        accent = adapt(GOLD, variant)
+    red = adapt(RED, variant)     # cœur : toujours rouge (saturé → lisible partout)
 
     pre = entry.get("pre", "I")
     post = entry["post"]
@@ -138,40 +141,41 @@ def render(entry, variant, idx=0, side=4500):
     if sticker:
         img.alpha_composite(sticker_layer((side, side), bbox, side / 4500.0))
 
-    # ── ligne 1 : pre  ❤  post ──
+    # ── ligne 1 : pre  ❤  post ── (texte = contour croisé or/encre)
+    sw = max(2, int(sz * 0.025))
     y = top
     x = cx - w1 / 2
     for seg, acc in pre_toks:
-        d.text((x, y - base_off), seg, font=f, fill=red if acc else ink)
+        draw_word(d, (x, y - base_off), seg, f, acc, ink, accent, stroke=sw)
         x += f.getlength(seg)
     x += (sz * 0.02 if tight else gap_h)
     hy = y - base_off + (capbox[1] + (capbox[3] - capbox[1]) / 2)
     pts = heart_points(x + ch / 2, hy, ch)
-    d.polygon(pts, fill=red)
+    d.polygon(pts, fill=red)          # cœur : ROUGE
     x += ch + gap_h
     post_x0 = x
     for seg, acc in post_toks:
-        d.text((x, y - base_off), seg, font=f, fill=red if (acc and not repl) else ink)
+        draw_word(d, (x, y - base_off), seg, f, acc and not repl, ink, accent, stroke=sw)
         x += f.getlength(seg)
     post_x1 = x
 
-    # barre le mot "post" si remplacement
+    # barre le mot "post" si remplacement (rature OR)
     if repl_toks:
         line_y = y - base_off + capbox[1] + (capbox[3] - capbox[1]) / 2
         lw = max(9, int(sz * 0.075))
         ext = int(sz * 0.06)
-        d.line([(post_x0 - ext, line_y), (post_x1 + ext, line_y)], fill=red, width=lw)
-        # ── ligne 2 : remplacement (rouge) ──
+        d.line([(post_x0 - ext, line_y), (post_x1 + ext, line_y)], fill=accent, width=lw)
+        # ── ligne 2 : remplacement (or, contour noir) ──
         y2 = top + lh + gap_v + int(sz * 0.10)
         w2 = seg_w(fr, repl_toks)
         x = cx - w2 / 2
         for seg, acc in repl_toks:
-            d.text((x, y2 - roff), seg, font=fr, fill=red)
+            draw_word(d, (x, y2 - roff), seg, fr, True, ink, accent, stroke=sw)
             x += fr.getlength(seg)
 
     if style and not sticker:
         qf = load_font(FONT, int(sz * 1.5))
-        apply_ornament(d, style, bbox, ink, red, scale=side / 4500.0, quote_font=qf)
+        apply_ornament(d, style, bbox, ink, accent, scale=side / 4500.0, quote_font=qf)
 
     bb = img.getbbox()
     if bb is None:

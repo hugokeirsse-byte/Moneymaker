@@ -20,14 +20,15 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from typo_fonts import load_font  # noqa: E402
 from typo_variants import VARIANTS, adapt  # noqa: E402
-from typo_ornaments import pick_style, apply_ornament, sticker_layer  # noqa: E402
+from typo_ornaments import (pick_style, apply_ornament, sticker_layer,  # noqa: E402
+                            draw_word)
 
 from PIL import Image, ImageDraw, ImageFont  # noqa: E402
 
 DATA_PATH = "data/corrige.json"
 FONT = "script"
 INK = (28, 28, 32, 255)
-RED = (190, 46, 38, 255)
+GOLD = (201, 162, 39, 255)        # accent (rature + correction) — charte or/noir
 
 
 def measure(f, t):
@@ -50,10 +51,10 @@ def render(entry, variant, idx=0, side=4500):
     style = entry.get("ornament", pick_style(idx))
     sticker = (style == "sticker")
     if sticker:
-        ink, red = INK, RED          # carte blanche : encre sombre + rouge
+        ink, red = INK, GOLD
     else:
         ink = adapt(INK, variant)
-        red = adapt(RED, variant)
+        red = adapt(GOLD, variant)   # 'red' = désormais l'accent OR
     kept = entry.get("kept", [])
     struck = entry["struck"]
     repl = entry["replacement"]
@@ -83,23 +84,24 @@ def render(entry, variant, idx=0, side=4500):
     if sticker:
         img.alpha_composite(sticker_layer((side, side), bbox, side / 4500.0))
 
+    sw = max(2, int(sz * 0.025))
     y = top
-    # lignes conservées (noir)
+    # lignes conservées (encre + liseré or)
     for t, (w, h, off) in zip(kept, dims_keep):
-        d.text((cx - w // 2, y - off), t, font=f, fill=ink)
+        draw_word(d, (cx - w // 2, y - off), t, f, False, ink, red, stroke=sw)
         y += h + gap
 
-    # ligne barrée (noir + rature rouge, trait épais)
+    # ligne barrée (encre + liseré or, rature OR épaisse)
     sx = cx - dw_s // 2
-    d.text((sx, y - off_s), struck, font=f, fill=ink)
+    draw_word(d, (sx, y - off_s), struck, f, False, ink, red, stroke=sw)
     line_y = y + dh_s // 2
     lw = max(9, int(sz * 0.075))
     ext = int(sz * 0.08)
     d.line([(sx - ext, line_y), (sx + dw_s + ext, line_y)], fill=red, width=lw)
     y += dh_s + gap + int(sz * 0.10)
 
-    # correction (rouge, en dessous)
-    d.text((cx - dw_r // 2, y - off_r), repl, font=fr, fill=red)
+    # correction (or, contour noir, en dessous)
+    draw_word(d, (cx - dw_r // 2, y - off_r), repl, fr, True, ink, red, stroke=sw)
 
     if style and not sticker:
         qf = load_font(FONT, int(sz * 1.5))
