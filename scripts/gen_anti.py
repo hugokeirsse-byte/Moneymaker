@@ -42,29 +42,29 @@ def render(entry, variant, idx=0, side=4500):
     ink = adapt(INK, variant)
     red = adapt(RED, variant)
     head = entry.get("head", "ANTI")
-    words = list(entry["items"])
-    # dernier mot : parenthèse fermante collée
+    # « ( » ouvre la liste sur la ligne suivante (jamais collé au head)
+    words = ["("] + list(entry["items"])
     words[-1] = words[-1].rstrip(",") + " )"
 
     margin = int(side * 0.11)
     max_w = side - 2 * margin
+    target_w = max_w * 0.96   # marge de sécurité pour ne rien couper
 
-    # head bien visible : « Head ( » calé à ~62 % de la largeur utile
+    # head SEUL sur sa ligne, entier et bien visible (~70 % de la largeur utile)
     lo, hi = 20, int(side * 0.17)
     while lo < hi:
         mid = (lo + hi + 1) // 2
         f = load_font(FONT, mid)
-        if measure(f, head + " (")[0] <= max_w * 0.62:
+        if measure(f, head)[0] <= max_w * 0.70:
             lo = mid
         else:
             hi = mid - 1
     head_sz = lo
     min_sz = max(9, int(head_sz * MIN_RATIO))
 
-    # ── empilage : on garnit chaque ligne de plusieurs mots, taille décroissante ──
+    # ── empilage : « ( » + mots garnis plusieurs par ligne, taille décroissante ──
     # grandes lignes = peu de mots (2-3) ; petites lignes = beaucoup de mots
-    target_w = max_w
-    sz = int(head_sz * 0.78)
+    sz = int(head_sz * 0.74)
     i = 0
     body = []  # (size, text)
     while i < len(words):
@@ -74,6 +74,7 @@ def render(entry, variant, idx=0, side=4500):
         while i < len(words):
             piece = (" " if line else "") + words[i]
             ww = f.getlength(piece)
+            # un seul mot trop large pour la ligne cible : on le garde quand même
             if line and w + ww > target_w:
                 break
             line.append(words[i])
@@ -82,27 +83,31 @@ def render(entry, variant, idx=0, side=4500):
         body.append((sz, " ".join(line)))
         sz = max(min_sz, int(sz * SHRINK))
 
-    img = Image.new("RGBA", (side, side), (0, 0, 0, 0))
-    d = ImageDraw.Draw(img)
-    cx = side // 2
-
     fh = load_font(FONT, head_sz)
-    rows = [(fh, head + " (", head_sz, False)]
+    rows = [(fh, head, head_sz, False)]
     for s, t in body:
         rows.append((load_font(FONT, s), t, s, True))
 
-    heights = [measure(f, t)[1] for f, t, _, _ in rows]
-    gaps = [int(s * 0.20) for _, _, s, _ in rows]
-    total_h = sum(heights) + sum(gaps[:-1])
-    top = side // 2 - total_h // 2
+    # avance ligne-à-ligne basée sur les métriques de police (jamais de chevauchement),
+    # léger surplus sous le head pour bien le détacher de la parenthèse
+    line_hs = []
+    for j, (f, t, s, is_item) in enumerate(rows):
+        a, de = f.getmetrics()
+        extra = int(s * 0.18) if j == 0 else int(s * 0.06)
+        line_hs.append(int((a + de) * 0.88) + extra)
+    total_h = sum(line_hs)
+
+    # canevas assez haut pour tout contenir (la pile peut dépasser `side`)
+    H = max(side, total_h + int(side * 0.06))
+    img = Image.new("RGBA", (side, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    cx = side // 2
+    top = (H - total_h) // 2
 
     n_body = len(body)
     y = top
-    block_w = 0
     item_k = 0
     for k, (f, t, s, is_item) in enumerate(rows):
-        w, h, off = measure(f, t)
-        block_w = max(block_w, w)
         if is_item:
             col = red if (item_k % 2 == 0) else ink
             frac = item_k / max(1, n_body - 1)
@@ -111,8 +116,8 @@ def render(entry, variant, idx=0, side=4500):
             item_k += 1
         else:
             col = ink
-        d.text((cx - w / 2, y - off), t, font=f, fill=col)
-        y += h + gaps[k]
+        d.text((cx, y), t, font=f, fill=col, anchor="mt")
+        y += line_hs[k]
 
     bb = img.getbbox()
     if bb is None:
