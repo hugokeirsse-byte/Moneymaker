@@ -24,6 +24,8 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from typo_fonts import load_font  # noqa: E402
 from typo_variants import VARIANTS, adapt  # noqa: E402
+from typo_ornaments import (STYLES, pick_style, apply_ornament,  # noqa: E402
+                            sticker_layer)
 
 from PIL import Image, ImageDraw, ImageFont  # noqa: E402
 
@@ -79,45 +81,55 @@ def draw_swash(d, cx, y, width, color, base_thick):
         d.ellipse([px - r, py - r, px + r, py + r], fill=color)
 
 
-def render(entry, pal, side=4500, margin_ratio=0.12):
-    lines = entry["lines"]
-    accent = entry.get("accent", len(lines) - 1)
-    ornament = entry.get("ornament", True)
+def pick_for(entry, idx):
+    """Style : nom explicite si fourni, False/None = aucun, sinon alternance/6."""
+    o = entry.get("ornament", "auto")
+    if o is False or o is None:
+        return None
+    if isinstance(o, str) and o in STYLES:
+        return o
+    return pick_style(idx)
 
-    margin = int(side * margin_ratio)
+
+def render(entry, pal, idx=0, side=4500, margin_ratio=0.13):
+    lines = entry["lines"]
+    accent_idx = entry.get("accent", len(lines) - 1)
+    style = pick_for(entry, idx)
+    sticker = (style == "sticker")
+    if sticker:
+        # carte blanche : encre toujours sombre + rouge
+        pal = PALETTES["dark"]
+
+    margin = int(side * (0.16 if sticker else margin_ratio))
     max_w = side - 2 * margin
-    sz = fit_size(lines, max_w)
+    sz = fit_size(lines, max_w, hi=int(side * 0.20))
     f = load_font(FONT, sz)
+    qf = load_font(FONT, int(sz * 1.5))
     gap = int(sz * 0.15)
 
     dims = [measure(f, t) for t in lines]
     text_w = max(dd[0] for dd in dims)
     text_h = sum(dd[1] for dd in dims) + gap * (len(lines) - 1)
 
-    orn_gap = int(sz * 0.34)
-    orn_thick = max(4, int(sz * 0.035))
-    orn_space = (orn_gap + orn_thick * 4) if ornament else 0
-
-    total_h = text_h + 2 * orn_space
-    img = Image.new("RGBA", (side, total_h + 2 * margin), (0, 0, 0, 0))
+    img = Image.new("RGBA", (side, side), (0, 0, 0, 0))
     dr = ImageDraw.Draw(img)
 
-    orn_w = min(int(text_w * 0.6), int(max_w * 0.5))
+    cx = side // 2
+    top = side // 2 - text_h // 2
+    bbox = (cx - text_w // 2, top, cx + text_w // 2, top + text_h)
 
-    y = margin
-    if ornament:
-        draw_swash(dr, side // 2, y + orn_thick * 2, orn_w, pal["accent"], orn_thick)
-        y += orn_space
+    if sticker:
+        img.alpha_composite(sticker_layer((side, side), bbox, side / 4500.0))
 
+    y = top
     for i, (t, (w, h, off)) in enumerate(zip(lines, dims)):
-        col = pal["accent"] if i == accent else pal["ink"]
+        col = pal["accent"] if i == accent_idx else pal["ink"]
         dr.text(((side - w) // 2, y - off), t, font=f, fill=col)
         y += h + gap
-    y -= gap
 
-    if ornament:
-        y += orn_gap
-        draw_swash(dr, side // 2, y + orn_thick * 2, orn_w, pal["accent"], orn_thick)
+    if style and not sticker:
+        apply_ornament(dr, style, bbox, pal["ink"], pal["accent"],
+                       scale=side / 4500.0, quote_font=qf)
 
     bbox = img.getbbox()
     if bbox is None:
@@ -146,7 +158,7 @@ def main():
     data = json.load(open(args.data, encoding="utf-8"))
     entries = data["entries"]
     sel = set(args.only.split(",")) if args.only else None
-    items = [e for e in entries
+    items = [(i, e) for i, e in enumerate(entries)
              if (not sel or e["id"] in sel)
              and (not args.niche or e.get("niche") == args.niche)
              and (not args.lang or e.get("lang") == args.lang)]
@@ -161,12 +173,12 @@ def main():
             lab = load_font("fjalla", 15)
         except Exception:
             lab = ImageFont.load_default()
-        for i, e in enumerate(items):
-            im = render(e, PALETTES["dark"], side=1300)
+        for k, (i, e) in enumerate(items):
+            im = render(e, PALETTES["dark"], idx=i, side=1300)
             im.thumbnail((cell - 40, cell - 60))
             bg = Image.new("RGB", im.size, (255, 255, 255))
             bg.paste(im.convert("RGB"), mask=im.split()[-1])
-            r, c = divmod(i, cols)
+            r, c = divmod(k, cols)
             sheet.paste(bg, (c * cell + 20, r * cell + 20))
             dd.text((c * cell + 20, r * cell + cell - 28), e["id"][:32],
                     fill=(70, 70, 70), font=lab)
@@ -178,9 +190,9 @@ def main():
     variants = list(VARIANTS) if args.variant == "both" else [args.variant]
     os.makedirs(args.out, exist_ok=True)
     n = 0
-    for e in items:
+    for i, e in items:
         for v in variants:
-            im = render(e, PALETTES[v])
+            im = render(e, PALETTES[v], idx=i)
             im.save(os.path.join(args.out, f"{e['id']}__{v}.png"), dpi=(300, 300))
             n += 1
     print(f"{n} fichiers ({len(items)} phrases × {len(variants)} variantes) → {args.out}")

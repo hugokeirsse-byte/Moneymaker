@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "note": "Série correction : fin de phrase barrée + remplacée en rouge en dessous.",
+    "ink": [28, 28, 32, 255],
+    "accent": [190, 46, 38, 255]
+  },
+  "entries": [
+    {"id": "co_girls_fun_en", "lang": "en", "kept": ["Girls Just", "Want To Have"], "struck": "Fun", "replacement": "Equal Rights"},
+    {"id": "co_filles_amuser_fr", "lang": "fr", "kept": ["Les Filles", "Veulent Juste"], "struck": "S'Amuser", "replacement": "L'Égalité"},
+    {"id": "co_all_you_need_en", "lang": "en", "kept": ["All You", "Need Is"], "struck": "Love", "replacement": "Human Rights"},
+    {"id": "co_boys_will_en", "lang": "en", "kept": ["Boys Will", "Be"], "struck": "Boys", "replacement": "Held Accountable"},
+    {"id": "co_garcons_fr", "lang": "fr", "kept": ["Les Garçons", "Resteront"], "struck": "Des Garçons", "replacement": "Responsables"},
+    {"id": "co_think_box_en", "lang": "en", "kept": ["Think", "Outside The"], "struck": "Box", "replacement": "Binary"},
+    {"id": "co_live_laugh_en", "lang": "en", "kept": ["Live,", "Laugh,"], "struck": "Love", "replacement": "Resist"},
+    {"id": "co_keep_calm_en", "lang": "en", "kept": ["Keep Calm", "And"], "struck": "Carry On", "replacement": "Smash Patriarchy"},
+    {"id": "co_ok_boomer_en", "lang": "en", "kept": ["Ok"], "struck": "Boomer", "replacement": "Bigot"},
+    {"id": "co_pas_raciste_fr", "lang": "fr", "kept": ["Je Suis Pas", "Raciste"], "struck": "Mais...", "replacement": "(Si, En Fait)"},
+    {"id": "co_not_bossy_en", "lang": "en", "kept": ["I'm Not"], "struck": "Bossy", "replacement": "The Boss"},
+    {"id": "co_born_shop_en", "lang": "en", "kept": ["Born To"], "struck": "Shop", "replacement": "Adopt"},
+    {"id": "co_good_vibes_en", "lang": "en", "kept": ["Good Vibes"], "struck": "Only", "replacement": "And Equal Rights"},
+    {"id": "co_make_love_en", "lang": "en", "kept": ["Make Love,", "Not"], "struck": "War", "replacement": "Carbon"},
+    {"id": "co_manager_en", "lang": "en", "kept": ["I'd Like To Speak", "To The"], "struck": "Manager", "replacement": "Revolution"},
+    {"id": "co_client_raison_fr", "lang": "fr", "kept": ["Le Client A"], "struck": "Toujours Raison", "replacement": "Souvent Tort"},
+    {"id": "co_crazy_cat_en", "lang": "en", "kept": ["Crazy"], "struck": "Cat Lady", "replacement": "Feminist Cat Lady"},
+    {"id": "co_eat_sleep_en", "lang": "en", "kept": ["Eat, Sleep,"], "struck": "Consume", "replacement": "Resist, Repeat"},
+    {"id": "co_history_en", "lang": "en", "kept": ["History Will"], "struck": "Repeat", "replacement": "Judge You"},
+    {"id": "co_stay_lane_en", "lang": "en", "kept": ["Stay In", "Your"], "struck": "Lane", "replacement": "Power"},
+    {"id": "co_save_planet_en", "lang": "en", "kept": ["Save The"], "struck": "Date", "replacement": "Planet"},
+    {"id": "co_sois_sage_fr", "lang": "fr", "kept": ["Sois"], "struck": "Sage", "replacement": "Rebelle"},
+    {"id": "co_chat_juge_fr", "lang": "fr", "kept": ["Mon Chat", "Juge"], "struck": "Tout Le Monde", "replacement": "Surtout Les Fachos"},
+    {"id": "co_apolitique_fr", "lang": "fr", "kept": ["Je Suis"], "struck": "Apolitique", "replacement": "Juste Privilégié"}
+  ]
+}
