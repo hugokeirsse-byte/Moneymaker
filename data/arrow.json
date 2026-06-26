@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "note": "Série flèche : désigne le voisin. dir = right/left. Markup *mot* = rouge.",
+    "ink": [28, 28, 32, 255],
+    "accent": [190, 46, 38, 255]
+  },
+  "entries": [
+    {"id": "ar_resistance_en", "lang": "en", "dir": "right", "lines": ["I'm With The", "*Resistance*"]},
+    {"id": "ar_antifa_fr", "lang": "fr", "dir": "right", "lines": ["Mon Pote", "Est *Antifa*"]},
+    {"id": "ar_voté_fr", "lang": "fr", "dir": "left", "lines": ["Il A Voté", "*Pour Ça*"]},
+    {"id": "ar_future_ex_en", "lang": "en", "dir": "right", "lines": ["Future", "*Ex*"]},
+    {"id": "ar_cat_lady_en", "lang": "en", "dir": "right", "lines": ["I'm With The", "*Cat Lady*"]},
+    {"id": "ar_allie_fr", "lang": "fr", "dir": "left", "lines": ["*Allié*", "Le Vrai"]},
+    {"id": "ar_apero_fr", "lang": "fr", "dir": "right", "lines": ["C'Est Lui Qui Paie", "L'*Apéro*"]},
+    {"id": "ar_trie_pas_fr", "lang": "fr", "dir": "right", "lines": ["Demande-Lui Pourquoi", "Il *Trie Pas*"]},
+    {"id": "ar_climate_en", "lang": "en", "dir": "right", "lines": ["I'm With", "*Climate Action*"]},
+    {"id": "ar_single_fr", "lang": "fr", "dir": "left", "lines": ["*Célibataire*", "Et Fier"]},
+    {"id": "ar_feministe_fr", "lang": "fr", "dir": "right", "lines": ["Lui Aussi Est", "*Féministe*"]},
+    {"id": "ar_not_facho_fr", "lang": "fr", "dir": "right", "lines": ["Pas D'Accord Avec", "*Le Facho*"]},
+    {"id": "ar_therapist_en", "lang": "en", "dir": "right", "lines": ["Keeps My Therapist", "*In Business*"]},
+    {"id": "ar_good_human_en", "lang": "en", "dir": "right", "lines": ["Certified", "*Good Human*"]},
+    {"id": "ar_ask_pronouns_en", "lang": "en", "dir": "right", "lines": ["Ask Them About", "*Their Pronouns*"]},
+    {"id": "ar_meilleur_fr", "lang": "fr", "dir": "left", "lines": ["Mon *Meilleur*", "Ami (Le Chien)"]}
+  ]
+}

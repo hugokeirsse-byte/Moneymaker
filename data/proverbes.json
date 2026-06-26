@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "note": "Proverbes détournés, engagés ou drôles. Markup *mot* = rouge. 6 styles alternés.",
+    "ink": [28, 28, 32, 255],
+    "accent": [190, 46, 38, 255]
+  },
+  "entries": [
+    {"id": "pv_argent_loyer_fr", "lang": "fr", "lines": ["L'Argent Ne Fait Pas", "Le Bonheur, Mais Il", "*Paie Le Loyer*"]},
+    {"id": "pv_habit_moine_fr", "lang": "fr", "lines": ["L'Habit Ne Fait Pas", "Le Moine, Mais Le", "*Patriarcat* Fait Le Sexisme"]},
+    {"id": "pv_homme_averti_fr", "lang": "fr", "lines": ["Un Homme Averti", "En Vaut Deux.", "Une *Femme*, En Vaut Dix."]},
+    {"id": "pv_charite_riches_fr", "lang": "fr", "lines": ["Charité Bien Ordonnée", "Commence Par", "*Taxer Les Riches*"]},
+    {"id": "pv_prevenir_polluer_fr", "lang": "fr", "lines": ["Mieux Vaut Prévenir", "Que *Polluer*"]},
+    {"id": "pv_oiseau_nid_fr", "lang": "fr", "lines": ["Petit À Petit,", "L'Oiseau Défend", "*Ses Droits*"]},
+    {"id": "pv_tel_pere_fr", "lang": "fr", "lines": ["Tel Père, Tel Fils ?", "On *Brise* Le Cycle"]},
+    {"id": "pv_voler_oeuf_fr", "lang": "fr", "lines": ["Qui Vole Un Œuf", "Vole Moins Que", "*Un Milliardaire*"]},
+    {"id": "pv_fin_memes_fr", "lang": "fr", "lines": ["La Fin Justifie", "Les *Mèmes*"]},
+    {"id": "pv_aide_toi_fr", "lang": "fr", "lines": ["Aide-Toi", "Et Le Ciel...", "Non. *Aide Les Autres*."]},
+    {"id": "pv_loin_yeux_fr", "lang": "fr", "lines": ["Loin Des Yeux,", "Près Du *Frigo*"]},
+    {"id": "pv_chat_parti_fr", "lang": "fr", "lines": ["Quand Le Chat N'Est Pas Là", "Les Souris *Télétravaillent*"]},
+    {"id": "pv_apple_throw_en", "lang": "en", "lines": ["An Apple A Day", "Keeps Anyone Away", "If You *Throw It Hard*"]},
+    {"id": "pv_early_bird_en", "lang": "en", "lines": ["The Early Bird", "Can Have The Worm.", "I Want My *Sleep*."]},
+    {"id": "pv_money_plants_en", "lang": "en", "lines": ["Money Can't Buy", "Happiness, But It", "Buys *Plants*"]},
+    {"id": "pv_lemons_supply_en", "lang": "en", "lines": ["When Life Gives", "You Lemons, Question", "The *Supply Chain*"]},
+    {"id": "pv_birds_unionize_en", "lang": "en", "lines": ["Birds Of A Feather", "*Unionize* Together"]},
+    {"id": "pv_actions_prayers_en", "lang": "en", "lines": ["Actions Speak Louder", "Than *Thoughts", "And Prayers*"]},
+    {"id": "pv_grass_greener_en", "lang": "en", "lines": ["The Grass Is Greener", "Where You *Water It*", "(And Tax The Rich)"]},
+    {"id": "pv_rome_built_en", "lang": "en", "lines": ["Rome Wasn't Built", "In A Day, But", "*Burned* In One"]},
+    {"id": "pv_teach_fish_en", "lang": "en", "lines": ["Give A Man A Fish,", "Or Just Fix The", "*Broken System*"]},
+    {"id": "pv_silence_golden_en", "lang": "en", "lines": ["Silence Is Golden,", "Unless It's About", "*Injustice*"]},
+    {"id": "pv_curiosity_cat_en", "lang": "en", "lines": ["Curiosity Killed The Cat.", "Satisfaction *Brought", "It Back*"]},
+    {"id": "pv_patience_vertu_fr", "lang": "fr", "lines": ["La Patience Est Une Vertu", "La *Révolte* Aussi"]}
+  ]
+}
