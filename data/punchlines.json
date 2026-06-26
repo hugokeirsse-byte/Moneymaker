@@ -1591,6 +1591,822 @@
         "Social Battery:",
         "*Critically Low*"
       ]
+    },
+    {
+      "id": "p2_quiet_quit_life_en",
+      "lang": "en",
+      "lines": [
+        "Quiet Quitting",
+        "*Life Itself*"
+      ]
+    },
+    {
+      "id": "p2_pre_rich_en",
+      "lang": "en",
+      "lines": [
+        "Not Broke.",
+        "*Pre-Rich.*",
+        "(Forever)"
+      ]
+    },
+    {
+      "id": "p2_5yearplan_en",
+      "lang": "en",
+      "lines": [
+        "My Five-Year Plan:",
+        "*Survive* Tuesday"
+      ]
+    },
+    {
+      "id": "p2_hustle_hobbies_en",
+      "lang": "en",
+      "lines": [
+        "Hustle Culture",
+        "Killed My *Hobbies*"
+      ]
+    },
+    {
+      "id": "p2_trickle_dry_en",
+      "lang": "en",
+      "lines": [
+        "Still Waiting",
+        "For The Trickle.",
+        "*Still Dry.*"
+      ]
+    },
+    {
+      "id": "p2_economy_en",
+      "lang": "en",
+      "lines": [
+        "The Economy's Great",
+        "*(For The Economy)*"
+      ]
+    },
+    {
+      "id": "p2_travail_actionnaires_fr",
+      "lang": "fr",
+      "lines": [
+        "Le Travail C'Est La Santé",
+        "*(Des Actionnaires)*"
+      ]
+    },
+    {
+      "id": "p2_reve_facture_fr",
+      "lang": "fr",
+      "lines": [
+        "On M'A Vendu Du Rêve.",
+        "J'Ai Eu La *Facture*."
+      ]
+    },
+    {
+      "id": "p2_merite_heritage_fr",
+      "lang": "fr",
+      "lines": [
+        "Le Mérite ?",
+        "Demande À",
+        "*L'Héritage*."
+      ]
+    },
+    {
+      "id": "p2_support_local_en",
+      "lang": "en",
+      "lines": [
+        "I Support Local",
+        "*(My Bank Is Local)*"
+      ]
+    },
+    {
+      "id": "p2_budget_en",
+      "lang": "en",
+      "lines": [
+        "Born To Consume,",
+        "Forced To *Budget*"
+      ]
+    },
+    {
+      "id": "p2_lundi_sante_fr",
+      "lang": "fr",
+      "lines": [
+        "Le Lundi M'A Ghosté",
+        "Mon *Énergie*"
+      ]
+    },
+    {
+      "id": "p2_donne_capitalisme_fr",
+      "lang": "fr",
+      "lines": [
+        "J'Ai Donné.",
+        "Au *Capitalisme*."
+      ]
+    },
+    {
+      "id": "p2_self_made_help_en",
+      "lang": "en",
+      "lines": [
+        "Self-Made",
+        "*(With A Lot",
+        "Of Help)*"
+      ]
+    },
+    {
+      "id": "p2_aged_milk_en",
+      "lang": "en",
+      "lines": [
+        "Aged Like Milk,",
+        "Marketed Like *Wine*"
+      ]
+    },
+    {
+      "id": "p2_multitudes_en",
+      "lang": "en",
+      "lines": [
+        "I Contain Multitudes.",
+        "*All Tired.*"
+      ]
+    },
+    {
+      "id": "p2_briefly_en",
+      "lang": "en",
+      "lines": [
+        "Briefly Conscious,",
+        "Mostly *Confused*"
+      ]
+    },
+    {
+      "id": "p2_long_not_good_en",
+      "lang": "en",
+      "lines": [
+        "Here For A Long Time,",
+        "Not A *Good* Time"
+      ]
+    },
+    {
+      "id": "p2_heat_death_en",
+      "lang": "en",
+      "lines": [
+        "We're All Vibing",
+        "Toward *Heat Death*"
+      ]
+    },
+    {
+      "id": "p2_sentient_accident_en",
+      "lang": "en",
+      "lines": [
+        "Sentient",
+        "By *Accident*"
+      ]
+    },
+    {
+      "id": "p2_conscient_decu_fr",
+      "lang": "fr",
+      "lines": [
+        "Conscient,",
+        "Donc *Déçu*"
+      ]
+    },
+    {
+      "id": "p2_vide_va_fr",
+      "lang": "fr",
+      "lines": [
+        "Le Vide Me Va",
+        "Plutôt *Bien*"
+      ]
+    },
+    {
+      "id": "p2_accident_stat_fr",
+      "lang": "fr",
+      "lines": [
+        "Accident Statistique",
+        "De *Bonne Humeur*"
+      ]
+    },
+    {
+      "id": "p2_briefly_here_en",
+      "lang": "en",
+      "lines": [
+        "Temporarily",
+        "*Human*"
+      ]
+    },
+    {
+      "id": "p2_cosmic_joke_en",
+      "lang": "en",
+      "lines": [
+        "Part Of The",
+        "*Cosmic Joke*"
+      ]
+    },
+    {
+      "id": "p2_sarcasm_silence_en",
+      "lang": "en",
+      "lines": [
+        "Fluent In Sarcasm",
+        "And *Silence*"
+      ]
+    },
+    {
+      "id": "p2_dnd_sign_en",
+      "lang": "en",
+      "lines": [
+        "My Spirit Animal:",
+        "A *Do Not Disturb*",
+        "Sign"
+      ]
+    },
+    {
+      "id": "p2_homeopathie_fr",
+      "lang": "fr",
+      "lines": [
+        "Les Gens En Dose",
+        "*Homéopathique*"
+      ]
+    },
+    {
+      "id": "p2_sur_rdv_fr",
+      "lang": "fr",
+      "lines": [
+        "Sociable ?",
+        "*Sur Rendez-Vous.*"
+      ]
+    },
+    {
+      "id": "p2_small_large_en",
+      "lang": "en",
+      "lines": [
+        "Allergic To Small Talk",
+        "And *Large Crowds*"
+      ]
+    },
+    {
+      "id": "p2_battery_humans_en",
+      "lang": "en",
+      "lines": [
+        "Low Battery",
+        "Around *Humans*"
+      ]
+    },
+    {
+      "id": "p2_functioning_en",
+      "lang": "en",
+      "lines": [
+        "Functioning. Barely.",
+        "*Beautifully.*"
+      ]
+    },
+    {
+      "id": "p2_playlists_en",
+      "lang": "en",
+      "lines": [
+        "Held Together",
+        "By *Playlists*"
+      ]
+    },
+    {
+      "id": "p2_terms_apply_en",
+      "lang": "en",
+      "lines": [
+        "I'm Okay",
+        "*(Terms & Conditions",
+        "Apply)*"
+      ]
+    },
+    {
+      "id": "p2_crying_update_en",
+      "lang": "en",
+      "lines": [
+        "Crying Is Just",
+        "The Body *Updating*"
+      ]
+    },
+    {
+      "id": "p2_travaux_fr",
+      "lang": "fr",
+      "lines": [
+        "Émotionnellement",
+        "*En Travaux*"
+      ]
+    },
+    {
+      "id": "p2_maintenance_fr",
+      "lang": "fr",
+      "lines": [
+        "Mon Cœur Est",
+        "En *Maintenance*"
+      ]
+    },
+    {
+      "id": "p2_soft_brutes_fr",
+      "lang": "fr",
+      "lines": [
+        "Trop Sensible Pour Ce",
+        "Monde De *Brutes*"
+      ]
+    },
+    {
+      "id": "p2_artichaut_fr",
+      "lang": "fr",
+      "lines": [
+        "Cœur d'Artichaut,",
+        "Foie De *Survivant*"
+      ]
+    },
+    {
+      "id": "p2_carpe_nuit_fr",
+      "lang": "fr",
+      "lines": [
+        "Carpe Diem,",
+        "Carpe *Nuit* Aussi"
+      ]
+    },
+    {
+      "id": "p2_change_chaine_fr",
+      "lang": "fr",
+      "lines": [
+        "Sois Le Changement...",
+        "De *Chaîne*"
+      ]
+    },
+    {
+      "id": "p2_seau_fr",
+      "lang": "fr",
+      "lines": [
+        "Métaphoriquement",
+        "Au Fond Du *Seau*"
+      ]
+    },
+    {
+      "id": "p2_chaussettes_fr",
+      "lang": "fr",
+      "lines": [
+        "Le Moral Dans Les",
+        "Chaussettes *Trouées*"
+      ]
+    },
+    {
+      "id": "p2_plan_b_fr",
+      "lang": "fr",
+      "lines": [
+        "Plan A : Échouer.",
+        "Plan B : *Bof.*"
+      ]
+    },
+    {
+      "id": "p2_lunettes_reines_fr",
+      "lang": "fr",
+      "lines": [
+        "Au Royaume Des Aveugles,",
+        "Les Lunettes *Sont Reines*"
+      ]
+    },
+    {
+      "id": "p2_dors_fr",
+      "lang": "fr",
+      "lines": [
+        "Qui Vivra Verra.",
+        "Moi Je *Dors.*"
+      ]
+    },
+    {
+      "id": "p2_scroller_fr",
+      "lang": "fr",
+      "lines": [
+        "Tel Est Pris Qui",
+        "Croyait *Scroller*"
+      ]
+    },
+    {
+      "id": "p2_vintage_fr",
+      "lang": "fr",
+      "lines": [
+        "Pas Vieux.",
+        "*Vintage.*"
+      ]
+    },
+    {
+      "id": "p2_avance_demain_fr",
+      "lang": "fr",
+      "lines": [
+        "Pas En Retard.",
+        "En Avance Sur",
+        "*Demain.*"
+      ]
+    },
+    {
+      "id": "p2_peak_downhill_en",
+      "lang": "en",
+      "lines": [
+        "Peak Performance",
+        "*(It's All Downhill",
+        "Now)*"
+      ]
+    },
+    {
+      "id": "p2_best_life_en",
+      "lang": "en",
+      "lines": [
+        "Living My Best Life",
+        "*(Citation Needed)*"
+      ]
+    },
+    {
+      "id": "p2_thriving_alleged_en",
+      "lang": "en",
+      "lines": [
+        "Thriving.",
+        "*Allegedly.*"
+      ]
+    },
+    {
+      "id": "p2_fine_everything_en",
+      "lang": "en",
+      "lines": [
+        "This Is Fine.",
+        "I'm Fine.",
+        "*Everything's Fine.*"
+      ]
+    },
+    {
+      "id": "p2_optimism_toxic_en",
+      "lang": "en",
+      "lines": [
+        "My Toxic Trait",
+        "Is *Optimism*",
+        "(Kidding)"
+      ]
+    },
+    {
+      "id": "p2_realiste_fr",
+      "lang": "fr",
+      "lines": [
+        "Réaliste = Optimiste",
+        "Avec De *L'Expérience*"
+      ]
+    },
+    {
+      "id": "p2_pessimiste_fr",
+      "lang": "fr",
+      "lines": [
+        "Pessimiste",
+        "*Bien Informé*"
+      ]
+    },
+    {
+      "id": "p2_empathy_en",
+      "lang": "en",
+      "lines": [
+        "Empathy Is Not",
+        "*Weakness*"
+      ]
+    },
+    {
+      "id": "p2_boycott_en",
+      "lang": "en",
+      "lines": [
+        "Boycott Is A",
+        "*Love Language*"
+      ]
+    },
+    {
+      "id": "p2_banned_books_en",
+      "lang": "en",
+      "lines": [
+        "Read *Banned*",
+        "Books"
+      ]
+    },
+    {
+      "id": "p2_pay_artists_en",
+      "lang": "en",
+      "lines": [
+        "Pay Artists,",
+        "Not *Algorithms*"
+      ]
+    },
+    {
+      "id": "p2_comfort_rights_en",
+      "lang": "en",
+      "lines": [
+        "Your Comfort Isn't",
+        "Worth My *Rights*"
+      ]
+    },
+    {
+      "id": "p2_lis_interdits_fr",
+      "lang": "fr",
+      "lines": [
+        "Lis Des Livres",
+        "*Interdits*"
+      ]
+    },
+    {
+      "id": "p2_payez_artistes_fr",
+      "lang": "fr",
+      "lines": [
+        "Payez Les Artistes,",
+        "Pas Les *Algorithmes*"
+      ]
+    },
+    {
+      "id": "p2_touche_droits_fr",
+      "lang": "fr",
+      "lines": [
+        "Touche Pas",
+        "À Mes *Droits*"
+      ]
+    },
+    {
+      "id": "p2_rest_resistance_en",
+      "lang": "en",
+      "lines": [
+        "Rest Is",
+        "*Resistance*"
+      ]
+    },
+    {
+      "id": "p2_no_neutral_en",
+      "lang": "en",
+      "lines": [
+        "There Is No",
+        "*Neutral* On",
+        "A Moving Train"
+      ]
+    },
+    {
+      "id": "p2_silence_violence_en",
+      "lang": "en",
+      "lines": [
+        "Silence Is",
+        "*Violence*"
+      ]
+    },
+    {
+      "id": "p2_care_radical_en",
+      "lang": "en",
+      "lines": [
+        "Caring Is A",
+        "*Radical* Act"
+      ]
+    },
+    {
+      "id": "p2_fictional_en",
+      "lang": "en",
+      "lines": [
+        "Emotionally Invested",
+        "In *Fictional* People"
+      ]
+    },
+    {
+      "id": "p2_bare_minimum_en",
+      "lang": "en",
+      "lines": [
+        "I Romanticize",
+        "The *Bare Minimum*"
+      ]
+    },
+    {
+      "id": "p2_yapper_en",
+      "lang": "en",
+      "lines": [
+        "Certified",
+        "*Yapper*"
+      ]
+    },
+    {
+      "id": "p2_overthink_cardio_en",
+      "lang": "en",
+      "lines": [
+        "Overthinking:",
+        "My *Cardio*"
+      ]
+    },
+    {
+      "id": "p2_buffet_en",
+      "lang": "en",
+      "lines": [
+        "I Peaked",
+        "At The *Buffet*"
+      ]
+    },
+    {
+      "id": "p2_multitask_en",
+      "lang": "en",
+      "lines": [
+        "Multitasking:",
+        "Worrying &",
+        "*Procrastinating*"
+      ]
+    },
+    {
+      "id": "p2_npc_en",
+      "lang": "en",
+      "lines": [
+        "NPC With Main",
+        "Character *Anxiety*"
+      ]
+    },
+    {
+      "id": "p2_side_quests_en",
+      "lang": "en",
+      "lines": [
+        "Side Quests",
+        "*Only*"
+      ]
+    },
+    {
+      "id": "p2_lore_disaster_en",
+      "lang": "en",
+      "lines": [
+        "Lore-Accurate",
+        "*Disaster*"
+      ]
+    },
+    {
+      "id": "p2_speedrun_adult_en",
+      "lang": "en",
+      "lines": [
+        "Speedrunning",
+        "*Adulthood*"
+      ]
+    },
+    {
+      "id": "p2_low_battery_en",
+      "lang": "en",
+      "lines": [
+        "Low Battery,",
+        "High *Standards*"
+      ]
+    },
+    {
+      "id": "p2_plot_armor_en",
+      "lang": "en",
+      "lines": [
+        "Plot Armor:",
+        "*Expired*"
+      ]
+    },
+    {
+      "id": "p2_procrastine_style_fr",
+      "lang": "fr",
+      "lines": [
+        "Je Procrastine",
+        "Mais Avec *Style*"
+      ]
+    },
+    {
+      "id": "p2_personnalite_fr",
+      "lang": "fr",
+      "lines": [
+        "Ma Personnalité ?",
+        "Fatiguée Mais",
+        "*Drôle.*"
+      ]
+    },
+    {
+      "id": "p2_evitement_fr",
+      "lang": "fr",
+      "lines": [
+        "Diplômé En",
+        "*Évitement*"
+      ]
+    },
+    {
+      "id": "p2_yapper_fr",
+      "lang": "fr",
+      "lines": [
+        "Bavard",
+        "*Certifié*"
+      ]
+    },
+    {
+      "id": "p2_anxiete_playlists_en",
+      "lang": "en",
+      "lines": [
+        "Powered By Anxiety",
+        "And *Playlists*"
+      ]
+    },
+    {
+      "id": "p2_spite_spotify_en",
+      "lang": "en",
+      "lines": [
+        "Running On Spite,",
+        "Snacks &",
+        "*Spotify*"
+      ]
+    },
+    {
+      "id": "p2_pro_procrastinate_en",
+      "lang": "en",
+      "lines": [
+        "I Put The 'Pro'",
+        "In *Procrastinate*"
+      ]
+    },
+    {
+      "id": "p2_emotionally_fluent_en",
+      "lang": "en",
+      "lines": [
+        "Emotionally Fluent",
+        "In *Memes*"
+      ]
+    },
+    {
+      "id": "p2_chaotic_neutral_en",
+      "lang": "en",
+      "lines": [
+        "Chaotic Neutral",
+        "With *Snack* Access"
+      ]
+    },
+    {
+      "id": "p2_main_character_tired_en",
+      "lang": "en",
+      "lines": [
+        "Main Character,",
+        "*Side-Quest* Budget"
+      ]
+    },
+    {
+      "id": "p2_introvert_extrovert_en",
+      "lang": "en",
+      "lines": [
+        "Introvert With",
+        "*Extrovert* Hobbies"
+      ]
+    },
+    {
+      "id": "p2_feral_gentle_en",
+      "lang": "en",
+      "lines": [
+        "Mostly Gentle,",
+        "Occasionally *Feral*"
+      ]
+    },
+    {
+      "id": "p2_soft_spiky_en",
+      "lang": "en",
+      "lines": [
+        "Soft Heart,",
+        "*Spiky* Mouth"
+      ]
+    },
+    {
+      "id": "p2_delulu_en",
+      "lang": "en",
+      "lines": [
+        "Delulu Is The",
+        "*Solulu*"
+      ]
+    },
+    {
+      "id": "p2_touch_grass_en",
+      "lang": "en",
+      "lines": [
+        "I Touched Grass.",
+        "*Hated* It."
+      ]
+    },
+    {
+      "id": "p2_offline_en",
+      "lang": "en",
+      "lines": [
+        "Currently",
+        "*Offline*",
+        "(Mentally)"
+      ]
+    },
+    {
+      "id": "p2_loading_personality_en",
+      "lang": "en",
+      "lines": [
+        "Personality:",
+        "*Still Loading*"
+      ]
+    },
+    {
+      "id": "p2_caffeine_chaos_fr",
+      "lang": "fr",
+      "lines": [
+        "Café, Chaos",
+        "Et *Bonnes Vibes*"
+      ]
+    },
+    {
+      "id": "p2_pas_un_robot_fr",
+      "lang": "fr",
+      "lines": [
+        "Je Ne Suis Pas",
+        "Un Robot.",
+        "*Cochez La Case.*"
+      ]
+    },
+    {
+      "id": "p2_mode_avion_fr",
+      "lang": "fr",
+      "lines": [
+        "Mode Avion",
+        "*Émotionnel*"
+      ]
     }
   ]
 }
