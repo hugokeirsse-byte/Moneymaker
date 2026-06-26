@@ -1,257 +1,4636 @@
 {
   "_note": "Niches & sous-niches à forte communauté, mal desservies. accent = index de ligne en rouge. ornament = vague déco au-dessus/dessous.",
   "entries": [
-    {"id": "malinois_has_job_en", "lang": "en", "niche": "malinois", "lines": ["My Malinois Has a Job", "I Don't"], "accent": 1, "ornament": true},
-    {"id": "malinois_maligator_en", "lang": "en", "niche": "malinois", "lines": ["Maligator", "Owner"], "accent": 0, "ornament": true},
-    {"id": "malinois_not_hyper_en", "lang": "en", "niche": "malinois", "lines": ["It's Not Hyper", "It's a Malinois"], "accent": 1, "ornament": true},
-    {"id": "malinois_powered_en", "lang": "en", "niche": "malinois", "lines": ["Powered by Coffee", "& My Malinois"], "accent": 1, "ornament": true},
-    {"id": "malinois_esclave_fr", "lang": "fr", "niche": "malinois", "lines": ["Esclave de", "Mon Malinois"], "accent": 1, "ornament": true},
-    {"id": "malinois_bosse_fr", "lang": "fr", "niche": "malinois", "lines": ["Mon Malinois Bosse", "Moi Non"], "accent": 1, "ornament": true},
-
-    {"id": "gsd_just_a_girl_en", "lang": "en", "niche": "german_shepherd", "lines": ["Just a Girl Who Loves", "Her German Shepherd"], "accent": 1, "ornament": false},
-    {"id": "gsd_dad_en", "lang": "en", "niche": "german_shepherd", "lines": ["German Shepherd", "Dad"], "accent": 0, "ornament": true},
-    {"id": "gsd_lap_dog_en", "lang": "en", "niche": "german_shepherd", "lines": ["My Shepherd Thinks", "He's a Lap Dog"], "accent": 1, "ornament": true},
-    {"id": "gsd_velcro_en", "lang": "en", "niche": "german_shepherd", "lines": ["Personal Space?", "I Have a Shepherd"], "accent": 1, "ornament": true},
-
-    {"id": "collie_smarter_en", "lang": "en", "niche": "border_collie", "lines": ["My Border Collie", "Is Smarter Than You"], "accent": 1, "ornament": true},
-    {"id": "collie_tired_en", "lang": "en", "niche": "border_collie", "lines": ["Tired Is a", "Border Collie Owner"], "accent": 1, "ornament": true},
-    {"id": "collie_herd_en", "lang": "en", "niche": "border_collie", "lines": ["Will Herd", "for Treats"], "accent": 0, "ornament": true},
-    {"id": "collie_zoomies_en", "lang": "en", "niche": "border_collie", "lines": ["Genius", "With Zoomies"], "accent": 1, "ornament": true},
-
-    {"id": "doxie_half_sausage_en", "lang": "en", "niche": "dachshund", "lines": ["Half Dog", "Half Sausage"], "accent": 1, "ornament": true},
-    {"id": "doxie_wiener_mom_en", "lang": "en", "niche": "dachshund", "lines": ["Wiener Dog", "Mom"], "accent": 0, "ornament": true},
-    {"id": "doxie_low_rider_en", "lang": "en", "niche": "dachshund", "lines": ["Low Rider", "Big Attitude"], "accent": 1, "ornament": true},
-    {"id": "doxie_short_patience_en", "lang": "en", "niche": "dachshund", "lines": ["Long Dog", "Short Patience"], "accent": 1, "ornament": true},
-
-    {"id": "chihuahua_huge_ego_en", "lang": "en", "niche": "chihuahua", "lines": ["Tiny Dog", "Huge Ego"], "accent": 1, "ornament": true},
-    {"id": "chihuahua_runs_house_en", "lang": "en", "niche": "chihuahua", "lines": ["My Chihuahua", "Runs This House"], "accent": 1, "ornament": true},
-    {"id": "chihuahua_pocket_rage_en", "lang": "en", "niche": "chihuahua", "lines": ["Pocket-Sized", "Rage"], "accent": 1, "ornament": true},
-    {"id": "chihuahua_proud_en", "lang": "en", "niche": "chihuahua", "lines": ["Chihuahua Mom", "& Proud"], "accent": 0, "ornament": true},
-
-    {"id": "blackcat_big_mood_en", "lang": "en", "niche": "black_cats", "lines": ["Black Cat", "Big Mood"], "accent": 1, "ornament": true},
-    {"id": "blackcat_bad_luck_en", "lang": "en", "niche": "black_cats", "lines": ["My Black Cat Is", "Bad Luck for Mice"], "accent": 1, "ornament": true},
-    {"id": "blackcat_spooky_soft_en", "lang": "en", "niche": "black_cats", "lines": ["Spooky", "& Soft"], "accent": 0, "ornament": true},
-    {"id": "blackcat_house_panther_en", "lang": "en", "niche": "black_cats", "lines": ["House Panther", "Owner"], "accent": 0, "ornament": true},
-
-    {"id": "cat_distractor_en", "lang": "en", "niche": "cats", "lines": ["Professional", "Cat Distractor"], "accent": 1, "ornament": true},
-    {"id": "cat_judging_en", "lang": "en", "niche": "cats", "lines": ["My Cat Is", "Judging You"], "accent": 1, "ornament": true},
-    {"id": "cat_sat_on_me_en", "lang": "en", "niche": "cats", "lines": ["Sorry I'm Late", "My Cat Sat on Me"], "accent": 1, "ornament": true},
-    {"id": "cat_lady_training_en", "lang": "en", "niche": "cats", "lines": ["Crazy Cat Lady", "in Training"], "accent": 0, "ornament": true},
-
-    {"id": "sourdough_love_language_en", "lang": "en", "niche": "sourdough", "lines": ["Sourdough Is", "My Love Language"], "accent": 1, "ornament": true},
-    {"id": "sourdough_starter_name_en", "lang": "en", "niche": "sourdough", "lines": ["My Starter", "Has a Name"], "accent": 1, "ornament": true},
-    {"id": "sourdough_in_knead_en", "lang": "en", "niche": "sourdough", "lines": ["In Knead", "of Bread"], "accent": 0, "ornament": true},
-    {"id": "sourdough_therapy_en", "lang": "en", "niche": "sourdough", "lines": ["Bread Is Cheaper", "Than Therapy"], "accent": 1, "ornament": true},
-    {"id": "levain_amour_fr", "lang": "fr", "niche": "sourdough", "lines": ["Mon Levain", "a un Prénom"], "accent": 1, "ornament": true},
-
-    {"id": "ferment_friendly_bacteria_en", "lang": "en", "niche": "fermentation", "lines": ["I Make", "Friendly Bacteria"], "accent": 1, "ornament": true},
-    {"id": "ferment_kombucha_chill_en", "lang": "en", "niche": "fermentation", "lines": ["Kombucha", "& Chill"], "accent": 0, "ornament": true},
-    {"id": "ferment_everything_en", "lang": "en", "niche": "fermentation", "lines": ["Ferment", "Everything"], "accent": 1, "ornament": true},
-    {"id": "ferment_controlled_rotting_en", "lang": "en", "niche": "fermentation", "lines": ["My Hobby Is", "Controlled Rotting"], "accent": 1, "ornament": true},
-
-    {"id": "discgolf_repeat_en", "lang": "en", "niche": "disc_golf", "lines": ["Eat. Sleep.", "Disc Golf. Repeat."], "accent": 1, "ornament": true},
-    {"id": "discgolf_rather_throw_en", "lang": "en", "niche": "disc_golf", "lines": ["I'd Rather Be", "Throwing Discs"], "accent": 1, "ornament": true},
-    {"id": "discgolf_chains_en", "lang": "en", "niche": "disc_golf", "lines": ["Chains Are", "My Love Language"], "accent": 1, "ornament": true},
-    {"id": "discgolf_addict_en", "lang": "en", "niche": "disc_golf", "lines": ["Disc Golf", "Addict"], "accent": 0, "ornament": true},
-
-    {"id": "axe_whats_your_hobby_en", "lang": "en", "niche": "axe_throwing", "lines": ["I Throw Axes", "What's Your Hobby?"], "accent": 0, "ornament": true},
-    {"id": "axe_stress_relief_en", "lang": "en", "niche": "axe_throwing", "lines": ["Stress Relief", "Comes in Sharp"], "accent": 1, "ornament": true},
-    {"id": "axe_therapy_en", "lang": "en", "niche": "axe_throwing", "lines": ["Axe Throwing", "Therapy"], "accent": 1, "ornament": true},
-    {"id": "axe_bullseye_en", "lang": "en", "niche": "axe_throwing", "lines": ["Bullseye", "or Nothing"], "accent": 0, "ornament": true},
-
-    {"id": "pickle_cardio_en", "lang": "en", "niche": "pickleball", "lines": ["Pickleball", "Is My Cardio"], "accent": 1, "ornament": true},
-    {"id": "pickle_dink_responsibly_en", "lang": "en", "niche": "pickleball", "lines": ["Dink", "Responsibly"], "accent": 0, "ornament": true},
-    {"id": "pickle_sorry_cant_en", "lang": "en", "niche": "pickleball", "lines": ["Sorry I Can't", "I Have Pickleball"], "accent": 1, "ornament": true},
-    {"id": "pickle_repeat_en", "lang": "en", "niche": "pickleball", "lines": ["Eat. Sleep.", "Dink. Repeat."], "accent": 1, "ornament": true},
-
-    {"id": "crochet_choke_en", "lang": "en", "niche": "crochet", "lines": ["I Crochet So I", "Don't Choke People"], "accent": 1, "ornament": true},
-    {"id": "crochet_hooked_en", "lang": "en", "niche": "crochet", "lines": ["Hooked", "on Crochet"], "accent": 0, "ornament": true},
-    {"id": "crochet_yarn_cardio_en", "lang": "en", "niche": "crochet", "lines": ["Yarn Is", "My Cardio"], "accent": 1, "ornament": true},
-    {"id": "crochet_will_stop_en", "lang": "en", "niche": "crochet", "lines": ["Will Stop", "for Yarn"], "accent": 0, "ornament": true},
-
-    {"id": "plants_crazy_lady_en", "lang": "en", "niche": "houseplants", "lines": ["Crazy Plant", "Lady"], "accent": 1, "ornament": true},
-    {"id": "plants_rooting_for_you_en", "lang": "en", "niche": "houseplants", "lines": ["I'm Rooting", "for You"], "accent": 0, "ornament": true},
-    {"id": "plants_overachiever_en", "lang": "en", "niche": "houseplants", "lines": ["Plant Parent", "Overachiever"], "accent": 1, "ornament": true},
-    {"id": "plants_too_many_en", "lang": "en", "niche": "houseplants", "lines": ["Too Many Plants?", "Said No One Ever"], "accent": 1, "ornament": true},
-
-    {"id": "bees_save_ask_en", "lang": "en", "niche": "beekeeping", "lines": ["Save the Bees", "Ask Me How"], "accent": 1, "ornament": true},
-    {"id": "bees_whisperer_en", "lang": "en", "niche": "beekeeping", "lines": ["Bee", "Whisperer"], "accent": 0, "ornament": true},
-    {"id": "bees_60000_en", "lang": "en", "niche": "beekeeping", "lines": ["My Other Job Has", "60,000 Employees"], "accent": 1, "ornament": true},
-    {"id": "bees_unbeelievable_en", "lang": "en", "niche": "beekeeping", "lines": ["Unbeelievable", "Beekeeper"], "accent": 0, "ornament": true},
-
-    {"id": "chickens_crazy_lady_en", "lang": "en", "niche": "chickens", "lines": ["Crazy Chicken", "Lady"], "accent": 1, "ornament": true},
-    {"id": "chickens_my_girls_en", "lang": "en", "niche": "chickens", "lines": ["My Girls Have", "Feathers"], "accent": 1, "ornament": true},
-    {"id": "chickens_eggs_regrets_en", "lang": "en", "niche": "chickens", "lines": ["Eggs Before", "Regrets"], "accent": 0, "ornament": true},
-    {"id": "chickens_tender_en", "lang": "en", "niche": "chickens", "lines": ["Chicken Tender", "(I Tend Chickens)"], "accent": 1, "ornament": true},
-
-    {"id": "aqua_watch_fish_en", "lang": "en", "niche": "aquascaping", "lines": ["I Just Want to", "Watch My Fish"], "accent": 1, "ornament": true},
-    {"id": "aqua_is_art_en", "lang": "en", "niche": "aquascaping", "lines": ["Aquascaping", "Is an Art"], "accent": 1, "ornament": true},
-    {"id": "aqua_my_tank_en", "lang": "en", "niche": "aquascaping", "lines": ["My Tank", "My Rules"], "accent": 1, "ornament": true},
-    {"id": "aqua_just_a_girl_en", "lang": "en", "niche": "aquascaping", "lines": ["Just a Girl Who", "Loves Fish"], "accent": 1, "ornament": false},
-
-    {"id": "reef_money_pit_en", "lang": "en", "niche": "reef_tank", "lines": ["Reef Tank", "Money Pit"], "accent": 1, "ornament": true},
-    {"id": "reef_spent_on_coral_en", "lang": "en", "niche": "reef_tank", "lines": ["I Spent It", "on Coral"], "accent": 1, "ornament": true},
-    {"id": "reef_saltwater_veins_en", "lang": "en", "niche": "reef_tank", "lines": ["Saltwater Runs", "in My Veins"], "accent": 1, "ornament": true},
-    {"id": "reef_spoiled_en", "lang": "en", "niche": "reef_tank", "lines": ["My Corals", "Are Spoiled"], "accent": 0, "ornament": true},
-
-    {"id": "climb_into_rocks_en", "lang": "en", "niche": "climbing", "lines": ["I'm Into", "Rocks"], "accent": 1, "ornament": true},
-    {"id": "climb_adult_later_en", "lang": "en", "niche": "climbing", "lines": ["Climb Now", "Adult Later"], "accent": 1, "ornament": true},
-    {"id": "climb_chalk_cologne_en", "lang": "en", "niche": "climbing", "lines": ["Chalk Is", "My Cologne"], "accent": 1, "ornament": true},
-    {"id": "climb_send_it_en", "lang": "en", "niche": "climbing", "lines": ["Send It", "or Bend It"], "accent": 0, "ornament": true},
-
-    {"id": "trail_stupid_far_en", "lang": "en", "niche": "trail_running", "lines": ["I Run", "Stupid Far"], "accent": 1, "ornament": true},
-    {"id": "trail_over_treadmill_en", "lang": "en", "niche": "trail_running", "lines": ["Trails Over", "Treadmills"], "accent": 1, "ornament": true},
-    {"id": "trail_repeat_en", "lang": "en", "niche": "trail_running", "lines": ["Eat. Sleep.", "Run Trails."], "accent": 1, "ornament": true},
-    {"id": "trail_will_run_en", "lang": "en", "niche": "trail_running", "lines": ["Will Run", "for Snacks"], "accent": 0, "ornament": true},
-
-    {"id": "gravel_life_better_en", "lang": "en", "niche": "gravel_cycling", "lines": ["Life Is Better", "on Gravel"], "accent": 1, "ornament": true},
-    {"id": "gravel_grinder_en", "lang": "en", "niche": "gravel_cycling", "lines": ["Gravel", "Grinder"], "accent": 0, "ornament": true},
-    {"id": "gravel_drop_bars_en", "lang": "en", "niche": "gravel_cycling", "lines": ["Drop Bars", "Not Standards"], "accent": 1, "ornament": true},
-    {"id": "gravel_one_more_mile_en", "lang": "en", "niche": "gravel_cycling", "lines": ["One More Mile", "I Promise"], "accent": 1, "ornament": true},
-
-    {"id": "cold_water_therapy_en", "lang": "en", "niche": "cold_plunge", "lines": ["Cold Water", "Therapy"], "accent": 1, "ornament": true},
-    {"id": "cold_i_plunge_en", "lang": "en", "niche": "cold_plunge", "lines": ["I Plunge", "Therefore I Am"], "accent": 1, "ornament": true},
-    {"id": "cold_wild_swimmer_en", "lang": "en", "niche": "cold_plunge", "lines": ["Wild Swimmer", "Warm Heart"], "accent": 1, "ornament": true},
-    {"id": "cold_embrace_en", "lang": "en", "niche": "cold_plunge", "lines": ["Embrace", "the Cold"], "accent": 0, "ornament": true},
-
-    {"id": "mush_fungi_en", "lang": "en", "niche": "mushroom_foraging", "lines": ["I'm a", "Fungi"], "accent": 1, "ornament": true},
-    {"id": "mush_forage_more_en", "lang": "en", "niche": "mushroom_foraging", "lines": ["Forage", "More"], "accent": 0, "ornament": true},
-    {"id": "mush_among_us_en", "lang": "en", "niche": "mushroom_foraging", "lines": ["There's a Fungus", "Among Us"], "accent": 1, "ornament": true},
-    {"id": "mush_spore_lover_en", "lang": "en", "niche": "mushroom_foraging", "lines": ["Spore", "Lover"], "accent": 0, "ornament": true},
-
-    {"id": "bird_not_nerdy_en", "lang": "en", "niche": "birdwatching", "lines": ["Birding Is", "Not Nerdy"], "accent": 1, "ornament": true},
-    {"id": "bird_deal_with_it_en", "lang": "en", "niche": "birdwatching", "lines": ["I Watch Birds", "Deal With It"], "accent": 1, "ornament": true},
-    {"id": "bird_nerd_proud_en", "lang": "en", "niche": "birdwatching", "lines": ["Bird Nerd", "& Proud"], "accent": 0, "ornament": true},
-    {"id": "bird_will_travel_en", "lang": "en", "niche": "birdwatching", "lines": ["Will Travel", "for Birds"], "accent": 0, "ornament": true},
-
-    {"id": "astro_just_a_girl_en", "lang": "en", "niche": "astronomy", "lines": ["Just a Girl Who", "Loves Stars"], "accent": 1, "ornament": false},
-    {"id": "astro_more_space_en", "lang": "en", "niche": "astronomy", "lines": ["I Need", "More Space"], "accent": 1, "ornament": true},
-    {"id": "astro_night_owl_en", "lang": "en", "niche": "astronomy", "lines": ["Stargazer", "Night Owl"], "accent": 1, "ornament": true},
-    {"id": "astro_keep_looking_up_en", "lang": "en", "niche": "astronomy", "lines": ["Keep", "Looking Up"], "accent": 0, "ornament": true},
-
-    {"id": "keeb_hear_keyboard_en", "lang": "en", "niche": "mechanical_keyboards", "lines": ["Sorry You Can't Hear", "Over My Keyboard"], "accent": 1, "ornament": true},
-    {"id": "keeb_membrane_en", "lang": "en", "niche": "mechanical_keyboards", "lines": ["Life's Too Short", "for Membrane"], "accent": 1, "ornament": true},
-    {"id": "keeb_clack_en", "lang": "en", "niche": "mechanical_keyboards", "lines": ["Clack", "Responsibly"], "accent": 0, "ornament": true},
-    {"id": "keeb_costs_more_en", "lang": "en", "niche": "mechanical_keyboards", "lines": ["My Keyboard Costs", "More Than Yours"], "accent": 1, "ornament": true},
-
-    {"id": "print3d_in_3d_en", "lang": "en", "niche": "3d_printing", "lines": ["I Print", "in 3D"], "accent": 1, "ornament": true},
-    {"id": "print3d_just_one_more_en", "lang": "en", "niche": "3d_printing", "lines": ["Just One More", "Print"], "accent": 1, "ornament": true},
-    {"id": "print3d_powered_plastic_en", "lang": "en", "niche": "3d_printing", "lines": ["Powered by", "Plastic"], "accent": 1, "ornament": true},
-    {"id": "print3d_fails_at_98_en", "lang": "en", "niche": "3d_printing", "lines": ["It Always Fails", "at 98%"], "accent": 1, "ornament": true},
-
-    {"id": "retro_insert_coffee_en", "lang": "en", "niche": "retro_gaming", "lines": ["Game Over?", "Insert Coffee"], "accent": 1, "ornament": true},
-    {"id": "retro_press_start_en", "lang": "en", "niche": "retro_gaming", "lines": ["Press Start", "to Adult"], "accent": 1, "ornament": true},
-    {"id": "retro_save_point_en", "lang": "en", "niche": "retro_gaming", "lines": ["Saved by", "the Save Point"], "accent": 0, "ornament": true},
-    {"id": "retro_modern_problems_en", "lang": "en", "niche": "retro_gaming", "lines": ["Retro Gamer", "Modern Problems"], "accent": 1, "ornament": true},
-
-    {"id": "dnd_initiative_en", "lang": "en", "niche": "tabletop", "lines": ["Roll for", "Initiative"], "accent": 1, "ornament": true},
-    {"id": "dnd_rather_roll_en", "lang": "en", "niche": "tabletop", "lines": ["I'd Rather Be", "Rolling Dice"], "accent": 1, "ornament": true},
-    {"id": "dnd_critical_hit_en", "lang": "en", "niche": "tabletop", "lines": ["Critical Hit to", "My Free Time"], "accent": 1, "ornament": true},
-    {"id": "dnd_master_disaster_en", "lang": "en", "niche": "tabletop", "lines": ["Dungeon Master", "of Disaster"], "accent": 1, "ornament": true},
-
-    {"id": "vinyl_drop_needle_en", "lang": "en", "niche": "vinyl", "lines": ["Drop the", "Needle"], "accent": 1, "ornament": true},
-    {"id": "vinyl_life_better_en", "lang": "en", "niche": "vinyl", "lines": ["Life Is Better", "on Vinyl"], "accent": 1, "ornament": true},
-    {"id": "vinyl_big_records_en", "lang": "en", "niche": "vinyl", "lines": ["I Like Big", "Records"], "accent": 1, "ornament": true},
-    {"id": "vinyl_crackle_pop_en", "lang": "en", "niche": "vinyl", "lines": ["Crackle", "& Pop"], "accent": 0, "ornament": true},
-
-    {"id": "coffee_but_first_en", "lang": "en", "niche": "coffee", "lines": ["But First", "Coffee"], "accent": 1, "ornament": true},
-    {"id": "coffee_espresso_yourself_en", "lang": "en", "niche": "coffee", "lines": ["Espresso", "Yourself"], "accent": 1, "ornament": true},
-    {"id": "coffee_blood_type_en", "lang": "en", "niche": "coffee", "lines": ["My Blood Type", "Is Espresso"], "accent": 1, "ornament": true},
-    {"id": "coffee_powered_beans_en", "lang": "en", "niche": "coffee", "lines": ["Powered by", "Beans"], "accent": 1, "ornament": true},
-
-    {"id": "matcha_made_heaven_en", "lang": "en", "niche": "matcha", "lines": ["Matcha", "Made in Heaven"], "accent": 0, "ornament": true},
-    {"id": "matcha_but_first_en", "lang": "en", "niche": "matcha", "lines": ["But First", "Matcha"], "accent": 1, "ornament": true},
-    {"id": "matcha_spill_tea_en", "lang": "en", "niche": "matcha", "lines": ["Spill the Tea", "Not the Matcha"], "accent": 1, "ornament": true},
-    {"id": "matcha_terrific_en", "lang": "en", "niche": "matcha", "lines": ["Tea-rrific", "& Caffeinated"], "accent": 0, "ornament": true},
-
-    {"id": "hotsauce_everything_en", "lang": "en", "niche": "hot_sauce", "lines": ["I Put Hot Sauce", "on Everything"], "accent": 1, "ornament": true},
-    {"id": "hotsauce_painful_en", "lang": "en", "niche": "hot_sauce", "lines": ["Some Like It Hot", "I Like It Painful"], "accent": 1, "ornament": true},
-    {"id": "hotsauce_chili_head_en", "lang": "en", "niche": "hot_sauce", "lines": ["Chili Head", "& Proud"], "accent": 0, "ornament": true},
-    {"id": "hotsauce_sweating_en", "lang": "en", "niche": "hot_sauce", "lines": ["Sweating", "Is Optional"], "accent": 1, "ornament": true},
-
-    {"id": "bbq_low_slow_en", "lang": "en", "niche": "bbq", "lines": ["Low", "& Slow"], "accent": 1, "ornament": true},
-    {"id": "bbq_rub_my_meat_en", "lang": "en", "niche": "bbq", "lines": ["I Rub My Meat", "Then Smoke It"], "accent": 1, "ornament": true},
-    {"id": "bbq_grill_sergeant_en", "lang": "en", "niche": "bbq", "lines": ["Grill", "Sergeant"], "accent": 0, "ornament": true},
-    {"id": "bbq_smoke_everything_en", "lang": "en", "niche": "bbq", "lines": ["Smoke", "Everything"], "accent": 1, "ornament": true},
-
-    {"id": "vegan_powered_plants_en", "lang": "en", "niche": "vegan", "lines": ["Powered by", "Plants"], "accent": 1, "ornament": true},
-    {"id": "vegan_protein_en", "lang": "en", "niche": "vegan", "lines": ["But Where Do You", "Get Your Protein?"], "accent": 1, "ornament": true},
-    {"id": "vegan_loud_en", "lang": "en", "niche": "vegan", "lines": ["Vegan &", "Loud About It"], "accent": 1, "ornament": true},
-    {"id": "vegan_turnip_beet_en", "lang": "en", "niche": "vegan", "lines": ["Lettuce Turnip", "the Beet"], "accent": 1, "ornament": true},
-
-    {"id": "lift_up_down_en", "lang": "en", "niche": "lifting", "lines": ["I Lift Things Up", "& Put Them Down"], "accent": 1, "ornament": true},
-    {"id": "lift_sore_strong_en", "lang": "en", "niche": "lifting", "lines": ["Sore Today", "Strong Tomorrow"], "accent": 1, "ornament": true},
-    {"id": "lift_squat_snacks_en", "lang": "en", "niche": "lifting", "lines": ["Will Squat", "for Snacks"], "accent": 0, "ornament": true},
-    {"id": "lift_gains_goblin_en", "lang": "en", "niche": "lifting", "lines": ["Gains", "Goblin"], "accent": 1, "ornament": true},
-
-    {"id": "yoga_namastay_bed_en", "lang": "en", "niche": "yoga", "lines": ["Namast'ay", "in Bed"], "accent": 1, "ornament": true},
-    {"id": "yoga_wine_later_en", "lang": "en", "niche": "yoga", "lines": ["Yoga Now", "Wine Later"], "accent": 1, "ornament": true},
-    {"id": "yoga_find_balance_en", "lang": "en", "niche": "yoga", "lines": ["Find Your", "Balance"], "accent": 0, "ornament": true},
-    {"id": "yoga_bendy_zen_en", "lang": "en", "niche": "yoga", "lines": ["Bendy", "& Zen"], "accent": 1, "ornament": true},
-
-    {"id": "van_home_park_en", "lang": "en", "niche": "van_life", "lines": ["Home Is Where", "I Park It"], "accent": 1, "ornament": true},
-    {"id": "van_adventure_mobile_en", "lang": "en", "niche": "van_life", "lines": ["Adventure", "Mobile"], "accent": 0, "ornament": true},
-    {"id": "van_wander_often_en", "lang": "en", "niche": "van_life", "lines": ["Wander Often", "Wander Far"], "accent": 1, "ornament": true},
-    {"id": "van_less_stuff_en", "lang": "en", "niche": "van_life", "lines": ["Less Stuff", "More Adventure"], "accent": 1, "ornament": true},
-
-    {"id": "moto_two_wheels_en", "lang": "en", "niche": "motorcycle", "lines": ["Two Wheels", "One Love"], "accent": 1, "ornament": true},
-    {"id": "moto_loud_pipes_en", "lang": "en", "niche": "motorcycle", "lines": ["Loud Pipes", "Save Lives"], "accent": 1, "ornament": true},
-    {"id": "moto_ride_more_en", "lang": "en", "niche": "motorcycle", "lines": ["Ride More", "Worry Less"], "accent": 1, "ornament": true},
-    {"id": "moto_born_to_ride_en", "lang": "en", "niche": "motorcycle", "lines": ["Born", "to Ride"], "accent": 0, "ornament": true},
-
-    {"id": "mechanic_fix_break_en", "lang": "en", "niche": "mechanics", "lines": ["I Fix What", "You Break"], "accent": 1, "ornament": true},
-    {"id": "mechanic_grease_monkey_en", "lang": "en", "niche": "mechanics", "lines": ["Grease Monkey", "& Proud"], "accent": 0, "ornament": true},
-    {"id": "mechanic_garage_en", "lang": "en", "niche": "mechanics", "lines": ["Sorry for What I", "Said in the Garage"], "accent": 1, "ornament": true},
-    {"id": "mechanic_car_therapy_en", "lang": "en", "niche": "mechanics", "lines": ["Classic Car", "Therapy"], "accent": 1, "ornament": true},
-
-    {"id": "nurse_mode_on_en", "lang": "en", "niche": "nurses", "lines": ["Nurse Mode", "On"], "accent": 0, "ornament": true},
-    {"id": "nurse_sedate_en", "lang": "en", "niche": "nurses", "lines": ["Can't Fix Stupid", "But I Can Sedate It"], "accent": 1, "ornament": true},
-    {"id": "nurse_coffee_lives_en", "lang": "en", "niche": "nurses", "lines": ["Powered by Coffee", "& Saving Lives"], "accent": 1, "ornament": true},
-    {"id": "nurse_superhero_en", "lang": "en", "niche": "nurses", "lines": ["Nurse: Because", "Superhero Isn't a Job"], "accent": 1, "ornament": true},
-
-    {"id": "teacher_coffee_chaos_en", "lang": "en", "niche": "teachers", "lines": ["Teacher: Fueled by", "Coffee & Chaos"], "accent": 1, "ornament": true},
-    {"id": "teacher_superpower_en", "lang": "en", "niche": "teachers", "lines": ["I Teach", "What's Your Superpower?"], "accent": 1, "ornament": true},
-    {"id": "teacher_my_jam_en", "lang": "en", "niche": "teachers", "lines": ["Teaching Is", "My Jam"], "accent": 1, "ornament": true},
-    {"id": "teacher_sorry_late_en", "lang": "en", "niche": "teachers", "lines": ["Sorry I'm Late", "I'm a Teacher"], "accent": 1, "ornament": true},
-
-    {"id": "phleb_here_for_veins_en", "lang": "en", "niche": "phlebotomist", "lines": ["I'm Just Here", "for the Veins"], "accent": 1, "ornament": true},
-    {"id": "phleb_find_veins_en", "lang": "en", "niche": "phlebotomist", "lines": ["I Find Veins", "for a Living"], "accent": 1, "ornament": true},
-    {"id": "phleb_hard_stick_en", "lang": "en", "niche": "phlebotomist", "lines": ["Hard Stick?", "Challenge Accepted"], "accent": 1, "ornament": true},
-    {"id": "phleb_your_type_en", "lang": "en", "niche": "phlebotomist", "lines": ["Whatever Your Type", "I'll Find It"], "accent": 1, "ornament": true},
-
-    {"id": "slp_word_nerd_en", "lang": "en", "niche": "speech_therapist", "lines": ["Speech Therapist", "Word Nerd"], "accent": 1, "ornament": true},
-    {"id": "slp_find_words_en", "lang": "en", "niche": "speech_therapist", "lines": ["I Help People", "Find Their Words"], "accent": 1, "ornament": true},
-    {"id": "slp_say_clearly_en", "lang": "en", "niche": "speech_therapist", "lines": ["Keep Calm &", "Say It Clearly"], "accent": 1, "ornament": true},
-    {"id": "slp_proud_en", "lang": "en", "niche": "speech_therapist", "lines": ["SLP", "& Proud"], "accent": 0, "ornament": true},
-
-    {"id": "weld_sparks_fly_en", "lang": "en", "niche": "welders", "lines": ["I Make", "Sparks Fly"], "accent": 1, "ornament": true},
-    {"id": "weld_stick_with_me_en", "lang": "en", "niche": "welders", "lines": ["Stick With Me", "I'm a Welder"], "accent": 1, "ornament": true},
-    {"id": "weld_metal_therapy_en", "lang": "en", "niche": "welders", "lines": ["Metal Is", "My Therapy"], "accent": 1, "ornament": true},
-    {"id": "weld_professional_sparkler_en", "lang": "en", "niche": "welders", "lines": ["Professional", "Sparkler"], "accent": 0, "ornament": true},
-
-    {"id": "elec_shocking_en", "lang": "en", "niche": "electricians", "lines": ["Electrician:", "I Find It Shocking"], "accent": 1, "ornament": true},
-    {"id": "elec_lets_get_wired_en", "lang": "en", "niche": "electricians", "lines": ["Let's Get", "Wired"], "accent": 0, "ornament": true},
-    {"id": "elec_watts_up_en", "lang": "en", "niche": "electricians", "lines": ["Watt's", "Up?"], "accent": 0, "ornament": true},
-    {"id": "elec_quite_current_en", "lang": "en", "niche": "electricians", "lines": ["I'm Quite", "Current"], "accent": 1, "ornament": true},
-
-    {"id": "farm_hair_dont_care_en", "lang": "en", "niche": "farmers", "lines": ["Farm Hair", "Don't Care"], "accent": 1, "ornament": true},
-    {"id": "farm_dirt_coffee_en", "lang": "en", "niche": "farmers", "lines": ["Powered by", "Dirt & Coffee"], "accent": 1, "ornament": true},
-    {"id": "farm_sunrise_hustle_en", "lang": "en", "niche": "farmers", "lines": ["Sunrise", "Hustle"], "accent": 0, "ornament": true},
-    {"id": "farm_no_farms_en", "lang": "en", "niche": "farmers", "lines": ["No Farms", "No Food"], "accent": 1, "ornament": true},
-
-    {"id": "fly_rather_be_en", "lang": "en", "niche": "fly_fishing", "lines": ["I'd Rather Be", "Fly Fishing"], "accent": 1, "ornament": true},
-    {"id": "fly_reel_talk_en", "lang": "en", "niche": "fly_fishing", "lines": ["Reel", "Talk"], "accent": 0, "ornament": true},
-    {"id": "fly_hooked_en", "lang": "en", "niche": "fly_fishing", "lines": ["Hooked on", "Fly Fishing"], "accent": 1, "ornament": true},
-    {"id": "fly_trout_whisperer_en", "lang": "en", "niche": "fly_fishing", "lines": ["Trout", "Whisperer"], "accent": 0, "ornament": true},
-
-    {"id": "hunt_rather_woods_en", "lang": "en", "niche": "hunting", "lines": ["I'd Rather Be", "in the Woods"], "accent": 1, "ornament": true},
-    {"id": "hunt_camo_color_en", "lang": "en", "niche": "hunting", "lines": ["Camo Is", "My Color"], "accent": 1, "ornament": true},
-    {"id": "hunt_born_forced_en", "lang": "en", "niche": "hunting", "lines": ["Born to Hunt", "Forced to Work"], "accent": 1, "ornament": true},
-    {"id": "hunt_buck_fever_en", "lang": "en", "niche": "hunting", "lines": ["Buck", "Fever"], "accent": 0, "ornament": true},
-
-    {"id": "scuba_rather_underwater_en", "lang": "en", "niche": "scuba", "lines": ["I'd Rather Be", "Underwater"], "accent": 1, "ornament": true},
-    {"id": "scuba_repeat_en", "lang": "en", "niche": "scuba", "lines": ["Eat. Sleep.", "Dive. Repeat."], "accent": 1, "ornament": true},
-    {"id": "surf_hair_dont_care_en", "lang": "en", "niche": "surfing", "lines": ["Surf Hair", "Don't Care"], "accent": 1, "ornament": true},
-    {"id": "surf_sea_you_en", "lang": "en", "niche": "surfing", "lines": ["Sea You", "Out There"], "accent": 0, "ornament": true}
+    {
+      "id": "cat_distractor_en",
+      "lang": "en",
+      "niche": "cats",
+      "lines": [
+        "Professional",
+        "Cat Distractor"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "cat_judging_en",
+      "lang": "en",
+      "niche": "cats",
+      "lines": [
+        "My Cat Is",
+        "Judging You"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "cat_sat_on_me_en",
+      "lang": "en",
+      "niche": "cats",
+      "lines": [
+        "Sorry I'm Late",
+        "My Cat Sat on Me"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "cat_lady_training_en",
+      "lang": "en",
+      "niche": "cats",
+      "lines": [
+        "Crazy Cat Lady",
+        "in Training"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "axe_whats_your_hobby_en",
+      "lang": "en",
+      "niche": "axe_throwing",
+      "lines": [
+        "I Throw Axes",
+        "What's Your Hobby?"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "axe_stress_relief_en",
+      "lang": "en",
+      "niche": "axe_throwing",
+      "lines": [
+        "Stress Relief",
+        "Comes in Sharp"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "axe_therapy_en",
+      "lang": "en",
+      "niche": "axe_throwing",
+      "lines": [
+        "Axe Throwing",
+        "Therapy"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "axe_bullseye_en",
+      "lang": "en",
+      "niche": "axe_throwing",
+      "lines": [
+        "Bullseye",
+        "or Nothing"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "pickle_cardio_en",
+      "lang": "en",
+      "niche": "pickleball",
+      "lines": [
+        "Pickleball",
+        "Is My Cardio"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "pickle_dink_responsibly_en",
+      "lang": "en",
+      "niche": "pickleball",
+      "lines": [
+        "Dink",
+        "Responsibly"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "pickle_sorry_cant_en",
+      "lang": "en",
+      "niche": "pickleball",
+      "lines": [
+        "Sorry I Can't",
+        "I Have Pickleball"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "pickle_repeat_en",
+      "lang": "en",
+      "niche": "pickleball",
+      "lines": [
+        "Eat. Sleep.",
+        "Dink. Repeat."
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "crochet_choke_en",
+      "lang": "en",
+      "niche": "crochet",
+      "lines": [
+        "I Crochet So I",
+        "Don't Choke People"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "crochet_hooked_en",
+      "lang": "en",
+      "niche": "crochet",
+      "lines": [
+        "Hooked",
+        "on Crochet"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "crochet_yarn_cardio_en",
+      "lang": "en",
+      "niche": "crochet",
+      "lines": [
+        "Yarn Is",
+        "My Cardio"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "crochet_will_stop_en",
+      "lang": "en",
+      "niche": "crochet",
+      "lines": [
+        "Will Stop",
+        "for Yarn"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "plants_crazy_lady_en",
+      "lang": "en",
+      "niche": "houseplants",
+      "lines": [
+        "Crazy Plant",
+        "Lady"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "plants_rooting_for_you_en",
+      "lang": "en",
+      "niche": "houseplants",
+      "lines": [
+        "I'm Rooting",
+        "for You"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "plants_overachiever_en",
+      "lang": "en",
+      "niche": "houseplants",
+      "lines": [
+        "Plant Parent",
+        "Overachiever"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "plants_too_many_en",
+      "lang": "en",
+      "niche": "houseplants",
+      "lines": [
+        "Too Many Plants?",
+        "Said No One Ever"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "climb_into_rocks_en",
+      "lang": "en",
+      "niche": "climbing",
+      "lines": [
+        "I'm Into",
+        "Rocks"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "climb_adult_later_en",
+      "lang": "en",
+      "niche": "climbing",
+      "lines": [
+        "Climb Now",
+        "Adult Later"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "climb_chalk_cologne_en",
+      "lang": "en",
+      "niche": "climbing",
+      "lines": [
+        "Chalk Is",
+        "My Cologne"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "climb_send_it_en",
+      "lang": "en",
+      "niche": "climbing",
+      "lines": [
+        "Send It",
+        "or Bend It"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "trail_stupid_far_en",
+      "lang": "en",
+      "niche": "trail_running",
+      "lines": [
+        "I Run",
+        "Stupid Far"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "trail_over_treadmill_en",
+      "lang": "en",
+      "niche": "trail_running",
+      "lines": [
+        "Trails Over",
+        "Treadmills"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "trail_repeat_en",
+      "lang": "en",
+      "niche": "trail_running",
+      "lines": [
+        "Eat. Sleep.",
+        "Run Trails."
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "trail_will_run_en",
+      "lang": "en",
+      "niche": "trail_running",
+      "lines": [
+        "Will Run",
+        "for Snacks"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "gravel_life_better_en",
+      "lang": "en",
+      "niche": "gravel_cycling",
+      "lines": [
+        "Life Is Better",
+        "on Gravel"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "gravel_grinder_en",
+      "lang": "en",
+      "niche": "gravel_cycling",
+      "lines": [
+        "Gravel",
+        "Grinder"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "gravel_drop_bars_en",
+      "lang": "en",
+      "niche": "gravel_cycling",
+      "lines": [
+        "Drop Bars",
+        "Not Standards"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "gravel_one_more_mile_en",
+      "lang": "en",
+      "niche": "gravel_cycling",
+      "lines": [
+        "One More Mile",
+        "I Promise"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "astro_just_a_girl_en",
+      "lang": "en",
+      "niche": "astronomy",
+      "lines": [
+        "Just a Girl Who",
+        "Loves Stars"
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "astro_more_space_en",
+      "lang": "en",
+      "niche": "astronomy",
+      "lines": [
+        "I Need",
+        "More Space"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "astro_night_owl_en",
+      "lang": "en",
+      "niche": "astronomy",
+      "lines": [
+        "Stargazer",
+        "Night Owl"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "astro_keep_looking_up_en",
+      "lang": "en",
+      "niche": "astronomy",
+      "lines": [
+        "Keep",
+        "Looking Up"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "retro_insert_coffee_en",
+      "lang": "en",
+      "niche": "retro_gaming",
+      "lines": [
+        "Game Over?",
+        "Insert Coffee"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "retro_press_start_en",
+      "lang": "en",
+      "niche": "retro_gaming",
+      "lines": [
+        "Press Start",
+        "to Adult"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "retro_save_point_en",
+      "lang": "en",
+      "niche": "retro_gaming",
+      "lines": [
+        "Saved by",
+        "the Save Point"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "retro_modern_problems_en",
+      "lang": "en",
+      "niche": "retro_gaming",
+      "lines": [
+        "Retro Gamer",
+        "Modern Problems"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "dnd_initiative_en",
+      "lang": "en",
+      "niche": "tabletop",
+      "lines": [
+        "Roll for",
+        "Initiative"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "dnd_rather_roll_en",
+      "lang": "en",
+      "niche": "tabletop",
+      "lines": [
+        "I'd Rather Be",
+        "Rolling Dice"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "dnd_critical_hit_en",
+      "lang": "en",
+      "niche": "tabletop",
+      "lines": [
+        "Critical Hit to",
+        "My Free Time"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "dnd_master_disaster_en",
+      "lang": "en",
+      "niche": "tabletop",
+      "lines": [
+        "Dungeon Master",
+        "of Disaster"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "coffee_but_first_en",
+      "lang": "en",
+      "niche": "coffee",
+      "lines": [
+        "But First",
+        "Coffee"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "coffee_espresso_yourself_en",
+      "lang": "en",
+      "niche": "coffee",
+      "lines": [
+        "Espresso",
+        "Yourself"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "coffee_blood_type_en",
+      "lang": "en",
+      "niche": "coffee",
+      "lines": [
+        "My Blood Type",
+        "Is Espresso"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "coffee_powered_beans_en",
+      "lang": "en",
+      "niche": "coffee",
+      "lines": [
+        "Powered by",
+        "Beans"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "matcha_made_heaven_en",
+      "lang": "en",
+      "niche": "matcha",
+      "lines": [
+        "Matcha",
+        "Made in Heaven"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "matcha_but_first_en",
+      "lang": "en",
+      "niche": "matcha",
+      "lines": [
+        "But First",
+        "Matcha"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "matcha_spill_tea_en",
+      "lang": "en",
+      "niche": "matcha",
+      "lines": [
+        "Spill the Tea",
+        "Not the Matcha"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "matcha_terrific_en",
+      "lang": "en",
+      "niche": "matcha",
+      "lines": [
+        "Tea-rrific",
+        "& Caffeinated"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "hotsauce_everything_en",
+      "lang": "en",
+      "niche": "hot_sauce",
+      "lines": [
+        "I Put Hot Sauce",
+        "on Everything"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "hotsauce_painful_en",
+      "lang": "en",
+      "niche": "hot_sauce",
+      "lines": [
+        "Some Like It Hot",
+        "I Like It Painful"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "hotsauce_chili_head_en",
+      "lang": "en",
+      "niche": "hot_sauce",
+      "lines": [
+        "Chili Head",
+        "& Proud"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "hotsauce_sweating_en",
+      "lang": "en",
+      "niche": "hot_sauce",
+      "lines": [
+        "Sweating",
+        "Is Optional"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "bbq_low_slow_en",
+      "lang": "en",
+      "niche": "bbq",
+      "lines": [
+        "Low",
+        "& Slow"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "bbq_rub_my_meat_en",
+      "lang": "en",
+      "niche": "bbq",
+      "lines": [
+        "I Rub My Meat",
+        "Then Smoke It"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "bbq_grill_sergeant_en",
+      "lang": "en",
+      "niche": "bbq",
+      "lines": [
+        "Grill",
+        "Sergeant"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "bbq_smoke_everything_en",
+      "lang": "en",
+      "niche": "bbq",
+      "lines": [
+        "Smoke",
+        "Everything"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "vegan_powered_plants_en",
+      "lang": "en",
+      "niche": "vegan",
+      "lines": [
+        "Powered by",
+        "Plants"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "vegan_protein_en",
+      "lang": "en",
+      "niche": "vegan",
+      "lines": [
+        "But Where Do You",
+        "Get Your Protein?"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "vegan_loud_en",
+      "lang": "en",
+      "niche": "vegan",
+      "lines": [
+        "Vegan &",
+        "Loud About It"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "vegan_turnip_beet_en",
+      "lang": "en",
+      "niche": "vegan",
+      "lines": [
+        "Lettuce Turnip",
+        "the Beet"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "lift_up_down_en",
+      "lang": "en",
+      "niche": "lifting",
+      "lines": [
+        "I Lift Things Up",
+        "& Put Them Down"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "lift_sore_strong_en",
+      "lang": "en",
+      "niche": "lifting",
+      "lines": [
+        "Sore Today",
+        "Strong Tomorrow"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "lift_squat_snacks_en",
+      "lang": "en",
+      "niche": "lifting",
+      "lines": [
+        "Will Squat",
+        "for Snacks"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "lift_gains_goblin_en",
+      "lang": "en",
+      "niche": "lifting",
+      "lines": [
+        "Gains",
+        "Goblin"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "yoga_namastay_bed_en",
+      "lang": "en",
+      "niche": "yoga",
+      "lines": [
+        "Namast'ay",
+        "in Bed"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "yoga_wine_later_en",
+      "lang": "en",
+      "niche": "yoga",
+      "lines": [
+        "Yoga Now",
+        "Wine Later"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "yoga_find_balance_en",
+      "lang": "en",
+      "niche": "yoga",
+      "lines": [
+        "Find Your",
+        "Balance"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "yoga_bendy_zen_en",
+      "lang": "en",
+      "niche": "yoga",
+      "lines": [
+        "Bendy",
+        "& Zen"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "moto_two_wheels_en",
+      "lang": "en",
+      "niche": "motorcycle",
+      "lines": [
+        "Two Wheels",
+        "One Love"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "moto_loud_pipes_en",
+      "lang": "en",
+      "niche": "motorcycle",
+      "lines": [
+        "Loud Pipes",
+        "Save Lives"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "moto_ride_more_en",
+      "lang": "en",
+      "niche": "motorcycle",
+      "lines": [
+        "Ride More",
+        "Worry Less"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "moto_born_to_ride_en",
+      "lang": "en",
+      "niche": "motorcycle",
+      "lines": [
+        "Born",
+        "to Ride"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "mechanic_fix_break_en",
+      "lang": "en",
+      "niche": "mechanics",
+      "lines": [
+        "I Fix What",
+        "You Break"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "mechanic_grease_monkey_en",
+      "lang": "en",
+      "niche": "mechanics",
+      "lines": [
+        "Grease Monkey",
+        "& Proud"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "mechanic_garage_en",
+      "lang": "en",
+      "niche": "mechanics",
+      "lines": [
+        "Sorry for What I",
+        "Said in the Garage"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "mechanic_car_therapy_en",
+      "lang": "en",
+      "niche": "mechanics",
+      "lines": [
+        "Classic Car",
+        "Therapy"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "nurse_mode_on_en",
+      "lang": "en",
+      "niche": "nurses",
+      "lines": [
+        "Nurse Mode",
+        "On"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "nurse_sedate_en",
+      "lang": "en",
+      "niche": "nurses",
+      "lines": [
+        "Can't Fix Stupid",
+        "But I Can Sedate It"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "nurse_coffee_lives_en",
+      "lang": "en",
+      "niche": "nurses",
+      "lines": [
+        "Powered by Coffee",
+        "& Saving Lives"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "nurse_superhero_en",
+      "lang": "en",
+      "niche": "nurses",
+      "lines": [
+        "Nurse: Because",
+        "Superhero Isn't a Job"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "teacher_coffee_chaos_en",
+      "lang": "en",
+      "niche": "teachers",
+      "lines": [
+        "Teacher: Fueled by",
+        "Coffee & Chaos"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "teacher_superpower_en",
+      "lang": "en",
+      "niche": "teachers",
+      "lines": [
+        "I Teach",
+        "What's Your Superpower?"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "teacher_my_jam_en",
+      "lang": "en",
+      "niche": "teachers",
+      "lines": [
+        "Teaching Is",
+        "My Jam"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "teacher_sorry_late_en",
+      "lang": "en",
+      "niche": "teachers",
+      "lines": [
+        "Sorry I'm Late",
+        "I'm a Teacher"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "phleb_here_for_veins_en",
+      "lang": "en",
+      "niche": "phlebotomist",
+      "lines": [
+        "I'm Just Here",
+        "for the Veins"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "phleb_find_veins_en",
+      "lang": "en",
+      "niche": "phlebotomist",
+      "lines": [
+        "I Find Veins",
+        "for a Living"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "phleb_hard_stick_en",
+      "lang": "en",
+      "niche": "phlebotomist",
+      "lines": [
+        "Hard Stick?",
+        "Challenge Accepted"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "phleb_your_type_en",
+      "lang": "en",
+      "niche": "phlebotomist",
+      "lines": [
+        "Whatever Your Type",
+        "I'll Find It"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "slp_word_nerd_en",
+      "lang": "en",
+      "niche": "speech_therapist",
+      "lines": [
+        "Speech Therapist",
+        "Word Nerd"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "slp_find_words_en",
+      "lang": "en",
+      "niche": "speech_therapist",
+      "lines": [
+        "I Help People",
+        "Find Their Words"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "slp_say_clearly_en",
+      "lang": "en",
+      "niche": "speech_therapist",
+      "lines": [
+        "Keep Calm &",
+        "Say It Clearly"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "slp_proud_en",
+      "lang": "en",
+      "niche": "speech_therapist",
+      "lines": [
+        "SLP",
+        "& Proud"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "weld_sparks_fly_en",
+      "lang": "en",
+      "niche": "welders",
+      "lines": [
+        "I Make",
+        "Sparks Fly"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "weld_stick_with_me_en",
+      "lang": "en",
+      "niche": "welders",
+      "lines": [
+        "Stick With Me",
+        "I'm a Welder"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "weld_metal_therapy_en",
+      "lang": "en",
+      "niche": "welders",
+      "lines": [
+        "Metal Is",
+        "My Therapy"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "weld_professional_sparkler_en",
+      "lang": "en",
+      "niche": "welders",
+      "lines": [
+        "Professional",
+        "Sparkler"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "elec_shocking_en",
+      "lang": "en",
+      "niche": "electricians",
+      "lines": [
+        "Electrician:",
+        "I Find It Shocking"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "elec_lets_get_wired_en",
+      "lang": "en",
+      "niche": "electricians",
+      "lines": [
+        "Let's Get",
+        "Wired"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "elec_watts_up_en",
+      "lang": "en",
+      "niche": "electricians",
+      "lines": [
+        "Watt's",
+        "Up?"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "elec_quite_current_en",
+      "lang": "en",
+      "niche": "electricians",
+      "lines": [
+        "I'm Quite",
+        "Current"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "farm_hair_dont_care_en",
+      "lang": "en",
+      "niche": "farmers",
+      "lines": [
+        "Farm Hair",
+        "Don't Care"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "farm_dirt_coffee_en",
+      "lang": "en",
+      "niche": "farmers",
+      "lines": [
+        "Powered by",
+        "Dirt & Coffee"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "farm_sunrise_hustle_en",
+      "lang": "en",
+      "niche": "farmers",
+      "lines": [
+        "Sunrise",
+        "Hustle"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "farm_no_farms_en",
+      "lang": "en",
+      "niche": "farmers",
+      "lines": [
+        "No Farms",
+        "No Food"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "hunt_rather_woods_en",
+      "lang": "en",
+      "niche": "hunting",
+      "lines": [
+        "I'd Rather Be",
+        "in the Woods"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "hunt_camo_color_en",
+      "lang": "en",
+      "niche": "hunting",
+      "lines": [
+        "Camo Is",
+        "My Color"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "hunt_born_forced_en",
+      "lang": "en",
+      "niche": "hunting",
+      "lines": [
+        "Born to Hunt",
+        "Forced to Work"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "hunt_buck_fever_en",
+      "lang": "en",
+      "niche": "hunting",
+      "lines": [
+        "Buck",
+        "Fever"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "scuba_rather_underwater_en",
+      "lang": "en",
+      "niche": "scuba",
+      "lines": [
+        "I'd Rather Be",
+        "Underwater"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "scuba_repeat_en",
+      "lang": "en",
+      "niche": "scuba",
+      "lines": [
+        "Eat. Sleep.",
+        "Dive. Repeat."
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "surf_hair_dont_care_en",
+      "lang": "en",
+      "niche": "surfing",
+      "lines": [
+        "Surf Hair",
+        "Don't Care"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "surf_sea_you_en",
+      "lang": "en",
+      "niche": "surfing",
+      "lines": [
+        "Sea You",
+        "Out There"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "golf_born_forced_en",
+      "lang": "en",
+      "niche": "golf",
+      "lines": [
+        "Born to Golf",
+        "Forced to Work"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "golf_happy_place_en",
+      "lang": "en",
+      "niche": "golf",
+      "lines": [
+        "Golf Is",
+        "My Happy Place"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "golf_bad_day_en",
+      "lang": "en",
+      "niche": "golf",
+      "lines": [
+        "A Bad Day Golfing",
+        "Beats a Good Day Working"
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "golf_bogey_life_en",
+      "lang": "en",
+      "niche": "golf",
+      "lines": [
+        "Bogey Golfer",
+        "Champion Attitude"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "tennis_deuce_en",
+      "lang": "en",
+      "niche": "tennis",
+      "lines": [
+        "Deuce",
+        "Me Up"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "tennis_game_set_nap_en",
+      "lang": "en",
+      "niche": "tennis",
+      "lines": [
+        "Game. Set.",
+        "Match. Nap."
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "tennis_love_all_en",
+      "lang": "en",
+      "niche": "tennis",
+      "lines": [
+        "Love All",
+        "(Except Mondays)"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "tennis_mom_en",
+      "lang": "en",
+      "niche": "tennis",
+      "lines": [
+        "Tennis Mom",
+        "& Proud"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "padel_cant_en",
+      "lang": "en",
+      "niche": "padel",
+      "lines": [
+        "Sorry I Can't",
+        "I Have Padel"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "padel_life_en",
+      "lang": "en",
+      "niche": "padel",
+      "lines": [
+        "Padel",
+        "Is Life"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "padel_cant_fr",
+      "lang": "fr",
+      "niche": "padel",
+      "lines": [
+        "Désolé Je Peux Pas",
+        "J'ai Padel"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "pilates_reformer_en",
+      "lang": "en",
+      "niche": "pilates",
+      "lines": [
+        "Reformer",
+        "Girl"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "pilates_core_en",
+      "lang": "en",
+      "niche": "pilates",
+      "lines": [
+        "Core Values:",
+        "Pilates"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "pilates_made_me_en",
+      "lang": "en",
+      "niche": "pilates",
+      "lines": [
+        "Pilates Made",
+        "Me Do It"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "embr_stitch_en",
+      "lang": "en",
+      "niche": "embroidery",
+      "lines": [
+        "Cross Stitch",
+        "Queen"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "embr_hoop_en",
+      "lang": "en",
+      "niche": "embroidery",
+      "lines": [
+        "Hoop,",
+        "There It Is"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "embr_care_en",
+      "lang": "en",
+      "niche": "embroidery",
+      "lines": [
+        "I Stitch",
+        "Because I Care"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "wood_sawdust_en",
+      "lang": "en",
+      "niche": "woodworking",
+      "lines": [
+        "I Make Sawdust",
+        "for Fun"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "wood_confetti_en",
+      "lang": "en",
+      "niche": "woodworking",
+      "lines": [
+        "Shavings Are",
+        "My Confetti"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "wood_would_you_en",
+      "lang": "en",
+      "niche": "woodworking",
+      "lines": [
+        "Wood You",
+        "Believe It?"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "wood_grain_en",
+      "lang": "en",
+      "niche": "woodworking",
+      "lines": [
+        "Go Against",
+        "the Grain"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "wine_not_en",
+      "lang": "en",
+      "niche": "wine",
+      "lines": [
+        "Wine",
+        "Not?"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "wine_rosé_all_day_en",
+      "lang": "en",
+      "niche": "wine",
+      "lines": [
+        "Rosé",
+        "All Day"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "wine_cheaper_therapy_en",
+      "lang": "en",
+      "niche": "wine",
+      "lines": [
+        "Wine Is Cheaper",
+        "Than Therapy"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "wine_wisdom_en",
+      "lang": "en",
+      "niche": "wine",
+      "lines": [
+        "In Wine",
+        "There Is Wisdom"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "ski_born_forced_en",
+      "lang": "en",
+      "niche": "skiing",
+      "lines": [
+        "Born to Ski",
+        "Forced to Work"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "ski_slopes_en",
+      "lang": "en",
+      "niche": "skiing",
+      "lines": [
+        "Life Is Better",
+        "on the Slopes"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "ski_bum_en",
+      "lang": "en",
+      "niche": "skiing",
+      "lines": [
+        "Ski Bum",
+        "& Proud"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "ski_fresh_powder_en",
+      "lang": "en",
+      "niche": "skiing",
+      "lines": [
+        "Fresh Powder",
+        "Fresh Mindset"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "snow_shred_en",
+      "lang": "en",
+      "niche": "snowboarding",
+      "lines": [
+        "Shred",
+        "the Gnar"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "snow_powder_en",
+      "lang": "en",
+      "niche": "snowboarding",
+      "lines": [
+        "Powder",
+        "Seeker"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "snow_sideways_en",
+      "lang": "en",
+      "niche": "snowboarding",
+      "lines": [
+        "Born",
+        "Sideways"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "kayak_rather_paddle_en",
+      "lang": "en",
+      "niche": "kayaking",
+      "lines": [
+        "I'd Rather",
+        "Be Paddling"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "kayak_less_stress_en",
+      "lang": "en",
+      "niche": "kayaking",
+      "lines": [
+        "Kayak More",
+        "Stress Less"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "kayak_water_en",
+      "lang": "en",
+      "niche": "kayaking",
+      "lines": [
+        "Life Is Better",
+        "on the Water"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "hike_less_worry_en",
+      "lang": "en",
+      "niche": "hiking",
+      "lines": [
+        "Hike More",
+        "Worry Less"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "hike_born_en",
+      "lang": "en",
+      "niche": "hiking",
+      "lines": [
+        "Born",
+        "to Hike"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "hike_eat_en",
+      "lang": "en",
+      "niche": "hiking",
+      "lines": [
+        "I Hike",
+        "Therefore I Eat"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "hike_trail_boss_en",
+      "lang": "en",
+      "niche": "hiking",
+      "lines": [
+        "Trail",
+        "Boss"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "camp_happy_en",
+      "lang": "en",
+      "niche": "camping",
+      "lines": [
+        "Happy",
+        "Camper"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "camp_nature_calls_en",
+      "lang": "en",
+      "niche": "camping",
+      "lines": [
+        "Nature Calls",
+        "I Answer"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "camp_unplugged_en",
+      "lang": "en",
+      "niche": "camping",
+      "lines": [
+        "Unplugged",
+        "& Loving It"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "camp_repeat_en",
+      "lang": "en",
+      "niche": "camping",
+      "lines": [
+        "Eat. Sleep.",
+        "Camp. Repeat."
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "sail_prevails_en",
+      "lang": "en",
+      "niche": "sailing",
+      "lines": [
+        "She Who Sails",
+        "Prevails"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "sail_email_less_en",
+      "lang": "en",
+      "niche": "sailing",
+      "lines": [
+        "Sail More",
+        "Email Less"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "sail_wind_en",
+      "lang": "en",
+      "niche": "sailing",
+      "lines": [
+        "Wind in",
+        "My Sails"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "horse_therapist_en",
+      "lang": "en",
+      "niche": "horse_riding",
+      "lines": [
+        "My Therapist",
+        "Has Four Legs"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "horse_girl_en",
+      "lang": "en",
+      "niche": "horse_riding",
+      "lines": [
+        "Horse Girl",
+        "Unapologetically"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "horse_hay_wine_en",
+      "lang": "en",
+      "niche": "horse_riding",
+      "lines": [
+        "Hay Is for Horses",
+        "I Want Wine"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "horse_born_wrong_century_en",
+      "lang": "en",
+      "niche": "horse_riding",
+      "lines": [
+        "Born in the",
+        "Wrong Century"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "goat_mom_en",
+      "lang": "en",
+      "niche": "goats",
+      "lines": [
+        "Goat Mom",
+        "& Proud"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "goat_homework_en",
+      "lang": "en",
+      "niche": "goats",
+      "lines": [
+        "My Goat Ate",
+        "My To-Do List"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "goat_better_en",
+      "lang": "en",
+      "niche": "goats",
+      "lines": [
+        "Life Is Better",
+        "with Goats"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "goat_tiny_horse_en",
+      "lang": "en",
+      "niche": "goats",
+      "lines": [
+        "Tiny Horses",
+        "with Opinions"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "bunny_mom_en",
+      "lang": "en",
+      "niche": "rabbits",
+      "lines": [
+        "Bunny Mom",
+        "& Loving It"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "bunny_fluff_en",
+      "lang": "en",
+      "niche": "rabbits",
+      "lines": [
+        "Fluff",
+        "Addict"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "bunny_runs_house_en",
+      "lang": "en",
+      "niche": "rabbits",
+      "lines": [
+        "My Rabbit",
+        "Runs This House"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "gpig_slave_en",
+      "lang": "en",
+      "niche": "guinea_pigs",
+      "lines": [
+        "Guinea Pig",
+        "Slave"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "gpig_wheek_en",
+      "lang": "en",
+      "niche": "guinea_pigs",
+      "lines": [
+        "Wheek Wheek",
+        "Feed Me"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "gpig_better_en",
+      "lang": "en",
+      "niche": "guinea_pigs",
+      "lines": [
+        "Life Is Better",
+        "with Guinea Pigs"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "rept_lizard_mom_en",
+      "lang": "en",
+      "niche": "reptiles",
+      "lines": [
+        "Lizard Mom",
+        "& Cold Blooded"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "rept_scale_mom_en",
+      "lang": "en",
+      "niche": "reptiles",
+      "lines": [
+        "Scale",
+        "Mom"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "rept_snek_en",
+      "lang": "en",
+      "niche": "reptiles",
+      "lines": [
+        "Danger",
+        "Noodle Owner"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "parr_judges_en",
+      "lang": "en",
+      "niche": "parrots",
+      "lines": [
+        "My Parrot",
+        "Judges You"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "parr_polly_en",
+      "lang": "en",
+      "niche": "parrots",
+      "lines": [
+        "Polly Wants",
+        "Everything"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "parr_flock_en",
+      "lang": "en",
+      "niche": "parrots",
+      "lines": [
+        "Flock",
+        "This"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "tatt_draw_people_en",
+      "lang": "en",
+      "niche": "tattoo_artists",
+      "lines": [
+        "I Draw on People",
+        "for a Living"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "tatt_ink_soul_en",
+      "lang": "en",
+      "niche": "tattoo_artists",
+      "lines": [
+        "Ink",
+        "& Soul"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "tatt_story_en",
+      "lang": "en",
+      "niche": "tattoo_artists",
+      "lines": [
+        "Wear",
+        "Your Story"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "tatt_permanent_en",
+      "lang": "en",
+      "niche": "tattoo_artists",
+      "lines": [
+        "Making Things",
+        "Permanent Since Ever"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "barb_sharp_fades_en",
+      "lang": "en",
+      "niche": "barbers",
+      "lines": [
+        "Sharp Fades",
+        "Sharp Minds"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "barb_fades_cheap_en",
+      "lang": "en",
+      "niche": "barbers",
+      "lines": [
+        "Talk Is Cheap",
+        "Good Fades Aren't"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "barb_life_en",
+      "lang": "en",
+      "niche": "barbers",
+      "lines": [
+        "Barber",
+        "Life"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "hair_cheaper_therapy_en",
+      "lang": "en",
+      "niche": "hairdressers",
+      "lines": [
+        "I Do Hair",
+        "It's Cheaper Than Therapy"
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "hair_wizard_en",
+      "lang": "en",
+      "niche": "hairdressers",
+      "lines": [
+        "Hair",
+        "Wizard"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "hair_color_me_en",
+      "lang": "en",
+      "niche": "hairdressers",
+      "lines": [
+        "Color Me",
+        "Happy"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "hair_coiffeuse_fr",
+      "lang": "fr",
+      "niche": "hairdressers",
+      "lines": [
+        "Coiffeuse:",
+        "Pas Psy Mais Presque"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "bake_better_place_en",
+      "lang": "en",
+      "niche": "pastry",
+      "lines": [
+        "Bake the World",
+        "a Better Place"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "bake_whisked_en",
+      "lang": "en",
+      "niche": "pastry",
+      "lines": [
+        "Whisked",
+        "& Ready"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "bake_butter_trust_en",
+      "lang": "en",
+      "niche": "pastry",
+      "lines": [
+        "In Butter",
+        "We Trust"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "bake_messy_kitchen_en",
+      "lang": "en",
+      "niche": "pastry",
+      "lines": [
+        "Messy Kitchen",
+        "Delicious Results"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "lib_shh_en",
+      "lang": "en",
+      "niche": "librarians",
+      "lines": [
+        "Shhh",
+        "I'm a Librarian"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "lib_quiet_rebel_en",
+      "lang": "en",
+      "niche": "librarians",
+      "lines": [
+        "Quietly",
+        "Rebellious"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "lib_reading_cardio_en",
+      "lang": "en",
+      "niche": "librarians",
+      "lines": [
+        "Reading Is",
+        "My Cardio"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "lib_do_it_en",
+      "lang": "en",
+      "niche": "librarians",
+      "lines": [
+        "Book Nerd",
+        "& Loving It"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "acct_numbers_en",
+      "lang": "en",
+      "niche": "accountants",
+      "lines": [
+        "I Know Numbers",
+        "You Fear"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "acct_debit_en",
+      "lang": "en",
+      "niche": "accountants",
+      "lines": [
+        "In Debit",
+        "We Trust"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "acct_april_en",
+      "lang": "en",
+      "niche": "accountants",
+      "lines": [
+        "April Is Just",
+        "My Valentine's Day"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "re_sanity_en",
+      "lang": "en",
+      "niche": "real_estate",
+      "lines": [
+        "For Sale:",
+        "My Sanity"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "re_always_open_en",
+      "lang": "en",
+      "niche": "real_estate",
+      "lines": [
+        "Real Estate Agent",
+        "Always Open"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "re_dreams_en",
+      "lang": "en",
+      "niche": "real_estate",
+      "lines": [
+        "I Don't Sell Homes",
+        "I Sell Dreams"
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "dent_floss_en",
+      "lang": "en",
+      "niche": "dental_hygienist",
+      "lines": [
+        "Floss More",
+        "Complain Less"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "dent_spit_rinse_en",
+      "lang": "en",
+      "niche": "dental_hygienist",
+      "lines": [
+        "Spit. Rinse.",
+        "Repeat."
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "dent_veins_en",
+      "lang": "en",
+      "niche": "dental_hygienist",
+      "lines": [
+        "I Clean Teeth",
+        "for a Living"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "dent_plaque_en",
+      "lang": "en",
+      "niche": "dental_hygienist",
+      "lines": [
+        "Fighting Plaque",
+        "One Mouth at a Time"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "vet_hug_animals_en",
+      "lang": "en",
+      "niche": "vet_tech",
+      "lines": [
+        "I Hug Animals",
+        "for a Living"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "vet_underrated_en",
+      "lang": "en",
+      "niche": "vet_tech",
+      "lines": [
+        "Underpaid, Overworked",
+        "Totally Worth It"
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "vet_listen_harder_en",
+      "lang": "en",
+      "niche": "vet_tech",
+      "lines": [
+        "My Patients Can't Speak",
+        "I Listen Harder"
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "fire_toward_en",
+      "lang": "en",
+      "niche": "firefighters",
+      "lines": [
+        "Run Toward",
+        "the Fire"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "fire_hot_stuff_en",
+      "lang": "en",
+      "niche": "firefighters",
+      "lines": [
+        "Hot Stuff",
+        "& Proud"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "fire_not_sport_en",
+      "lang": "en",
+      "niche": "firefighters",
+      "lines": [
+        "Firefighting",
+        "Is Not a Hobby"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "pt_fix_people_en",
+      "lang": "en",
+      "niche": "physical_therapist",
+      "lines": [
+        "I Fix",
+        "People"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "pt_move_it_en",
+      "lang": "en",
+      "niche": "physical_therapist",
+      "lines": [
+        "Move It",
+        "or Lose It"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "pt_pain_tolerance_en",
+      "lang": "en",
+      "niche": "physical_therapist",
+      "lines": [
+        "PT: Pain Tolerance",
+        "Trainer"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "thrift_treasure_en",
+      "lang": "en",
+      "niche": "thrifting",
+      "lines": [
+        "One Person's Trash",
+        "Is My Treasure"
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "thrift_queen_en",
+      "lang": "en",
+      "niche": "thrifting",
+      "lines": [
+        "Thrift",
+        "Queen"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "thrift_born_en",
+      "lang": "en",
+      "niche": "thrifting",
+      "lines": [
+        "Born",
+        "to Thrift"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "thrift_vintage_soul_en",
+      "lang": "en",
+      "niche": "thrifting",
+      "lines": [
+        "Vintage Soul",
+        "Modern Problems"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "book_one_more_chapter_en",
+      "lang": "en",
+      "niche": "book_lovers",
+      "lines": [
+        "One More",
+        "Chapter"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "book_dragon_en",
+      "lang": "en",
+      "niche": "book_lovers",
+      "lines": [
+        "Book Dragon",
+        "Not Worm"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "book_tbr_en",
+      "lang": "en",
+      "niche": "book_lovers",
+      "lines": [
+        "My TBR Is",
+        "Taller Than Me"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "book_pause_en",
+      "lang": "en",
+      "niche": "book_lovers",
+      "lines": [
+        "I Paused My Reading",
+        "to Be Here"
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "tc_bodies_en",
+      "lang": "en",
+      "niche": "true_crime",
+      "lines": [
+        "I Know Where",
+        "the Bodies Are Hidden"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "tc_junkie_en",
+      "lang": "en",
+      "niche": "true_crime",
+      "lines": [
+        "True Crime",
+        "Junkie"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "tc_cereal_en",
+      "lang": "en",
+      "niche": "true_crime",
+      "lines": [
+        "Murder Podcasts",
+        "& Cereal"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "photo_lens_en",
+      "lang": "en",
+      "niche": "photography",
+      "lines": [
+        "Life Through",
+        "a Lens"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "photo_shoot_first_en",
+      "lang": "en",
+      "niche": "photography",
+      "lines": [
+        "Shoot First",
+        "Ask Later"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "photo_golden_hour_en",
+      "lang": "en",
+      "niche": "photography",
+      "lines": [
+        "Chasing",
+        "Golden Hour"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "paint_accidents_en",
+      "lang": "en",
+      "niche": "painting",
+      "lines": [
+        "Happy Little",
+        "Accidents"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "paint_therapy_en",
+      "lang": "en",
+      "niche": "painting",
+      "lines": [
+        "Art Is",
+        "My Therapy"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "paint_mess_en",
+      "lang": "en",
+      "niche": "painting",
+      "lines": [
+        "I Make Messes",
+        "on Canvas"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "medi_breathe_en",
+      "lang": "en",
+      "niche": "meditation",
+      "lines": [
+        "Breathe",
+        "Just Breathe"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "medi_chaos_en",
+      "lang": "en",
+      "niche": "meditation",
+      "lines": [
+        "Meditating My Way",
+        "Through Chaos"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "medi_namaste_en",
+      "lang": "en",
+      "niche": "meditation",
+      "lines": [
+        "Namaste",
+        "(Or I'll Meditate on It)"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "fpv_fly_fast_en",
+      "lang": "en",
+      "niche": "fpv_drones",
+      "lines": [
+        "FPV Pilot",
+        "I Fly Fast"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "fpv_drone_car_en",
+      "lang": "en",
+      "niche": "fpv_drones",
+      "lines": [
+        "My Other Car",
+        "Is a Drone"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "fpv_up_away_en",
+      "lang": "en",
+      "niche": "fpv_drones",
+      "lines": [
+        "Up, Up &",
+        "Away From My Problems"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "run_26_2_en",
+      "lang": "en",
+      "niche": "running",
+      "lines": [
+        "13.1",
+        "Halfway There"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "run_5k_before_en",
+      "lang": "en",
+      "niche": "running",
+      "lines": [
+        "5K Before",
+        "Your 5K"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "run_faster_en",
+      "lang": "en",
+      "niche": "running",
+      "lines": [
+        "I Run Faster",
+        "Than My Problems"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "run_cardio_en",
+      "lang": "en",
+      "niche": "running",
+      "lines": [
+        "Running Late",
+        "Is My Cardio"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "swim_pool_office_en",
+      "lang": "en",
+      "niche": "swimming",
+      "lines": [
+        "The Pool",
+        "Is My Office"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "swim_chlorine_en",
+      "lang": "en",
+      "niche": "swimming",
+      "lines": [
+        "Chlorine",
+        "Is My Perfume"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "swim_faster_en",
+      "lang": "en",
+      "niche": "swimming",
+      "lines": [
+        "Swim Faster",
+        "Than Yesterday"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "succ_prick_en",
+      "lang": "en",
+      "niche": "succulents",
+      "lines": [
+        "A Little",
+        "Prickly"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "succ_looking_sharp_en",
+      "lang": "en",
+      "niche": "succulents",
+      "lines": [
+        "Looking",
+        "Sharp"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "succ_no_water_en",
+      "lang": "en",
+      "niche": "succulents",
+      "lines": [
+        "I Forget to Water",
+        "Myself Too"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "succ_crazy_plant_lady_en",
+      "lang": "en",
+      "niche": "succulents",
+      "lines": [
+        "Crazy Succulent",
+        "Lady"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "candle_lit_en",
+      "lang": "en",
+      "niche": "candle_making",
+      "lines": [
+        "Totally",
+        "Lit"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "candle_wax_on_en",
+      "lang": "en",
+      "niche": "candle_making",
+      "lines": [
+        "Wax On",
+        "Worry Off"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "candle_wickedly_crafty_en",
+      "lang": "en",
+      "niche": "candle_making",
+      "lines": [
+        "Wickedly",
+        "Crafty"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "jewel_gem_en",
+      "lang": "en",
+      "niche": "jewelry_making",
+      "lines": [
+        "She's a",
+        "Gem Maker"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "jewel_wire_weaver_en",
+      "lang": "en",
+      "niche": "jewelry_making",
+      "lines": [
+        "Wire Weaver",
+        "Stone Lover"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "jewel_sparkle_en",
+      "lang": "en",
+      "niche": "jewelry_making",
+      "lines": [
+        "I Make",
+        "Sparkle"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "sew_seam_stress_en",
+      "lang": "en",
+      "niche": "sewing",
+      "lines": [
+        "Seam",
+        "Stress"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "sew_life_short_en",
+      "lang": "en",
+      "niche": "sewing",
+      "lines": [
+        "Life Is Too Short",
+        "for Bad Fabric"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "sew_stitch_witch_en",
+      "lang": "en",
+      "niche": "sewing",
+      "lines": [
+        "Stitch",
+        "Witch"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "sew_quilt_en",
+      "lang": "en",
+      "niche": "sewing",
+      "lines": [
+        "Quilts Are Just",
+        "Fabric Hugs"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "sd_float_test_en",
+      "lang": "en",
+      "niche": "sourdough",
+      "lines": [
+        "My Float Test Lied",
+        "Baked Anyway"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "sd_75_hydration_en",
+      "lang": "en",
+      "niche": "sourdough",
+      "lines": [
+        "75% Hydration",
+        "Was Hubris"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "sd_fed_starter_first_en",
+      "lang": "en",
+      "niche": "sourdough",
+      "lines": [
+        "Fed My Starter",
+        "Before Myself. Again."
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "sd_bulk_one_more_hour_en",
+      "lang": "en",
+      "niche": "sourdough",
+      "lines": [
+        "Bulk Ferment:",
+        "Just One More Hour"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "sd_discard_better_life_en",
+      "lang": "en",
+      "niche": "sourdough",
+      "lines": [
+        "My Discard Has",
+        "a Better Life Than Me"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "sd_open_crumb_en",
+      "lang": "en",
+      "niche": "sourdough",
+      "lines": [
+        "Open Crumb",
+        "or Start Over"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "sd_levain_prenom_fr",
+      "lang": "fr",
+      "niche": "sourdough",
+      "lines": [
+        "Mon Levain",
+        "Se Prénomme Jean-Pierre"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "sd_alveolage_fr",
+      "lang": "fr",
+      "niche": "sourdough",
+      "lines": [
+        "L'Alvéolage",
+        "N'est Jamais Assez Ouvert"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "dg_water_hazard_en",
+      "lang": "en",
+      "niche": "disc_golf",
+      "lines": [
+        "That Water Hazard",
+        "Ate 12 of My Discs"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "dg_anhyzer_ob_en",
+      "lang": "en",
+      "niche": "disc_golf",
+      "lines": [
+        "Anhyzer Into OB",
+        "Every. Time."
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "dg_23_discs_en",
+      "lang": "en",
+      "niche": "disc_golf",
+      "lines": [
+        "I Carry 23 Discs",
+        "for 9 Holes. Normal."
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "dg_hyzer_memory_en",
+      "lang": "en",
+      "niche": "disc_golf",
+      "lines": [
+        "My Hyzer Is",
+        "Muscle Memory"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "dg_innova_en",
+      "lang": "en",
+      "niche": "disc_golf",
+      "lines": [
+        "Innova or Discraft",
+        "Blood Has Been Spilled"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "dg_ace_cry_en",
+      "lang": "en",
+      "niche": "disc_golf",
+      "lines": [
+        "The Day I Ace a Hole",
+        "I Will Cry"
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "dg_chains_en",
+      "lang": "en",
+      "niche": "disc_golf",
+      "lines": [
+        "Chains Are",
+        "What I Live For"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "dg_birdie_en",
+      "lang": "en",
+      "niche": "disc_golf",
+      "lines": [
+        "Birdie Putt",
+        "Made It. This Time."
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "cf_thrusters_hate_en",
+      "lang": "en",
+      "niche": "crossfit",
+      "lines": [
+        "Thrusters Are Just",
+        "Hate Made Functional"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "cf_kip_en",
+      "lang": "en",
+      "niche": "crossfit",
+      "lines": [
+        "I Kip",
+        "and I'm Not Sorry"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "cf_whiteboard_en",
+      "lang": "en",
+      "niche": "crossfit",
+      "lines": [
+        "The Whiteboard",
+        "Never Lies"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "cf_double_unders_en",
+      "lang": "en",
+      "niche": "crossfit",
+      "lines": [
+        "Double Unders Ended",
+        "My Last Friendship"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "cf_scaled_ok_en",
+      "lang": "en",
+      "niche": "crossfit",
+      "lines": [
+        "Scaled Isn't Weak",
+        "Ask Me How I Know"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "cf_chalk_en",
+      "lang": "en",
+      "niche": "crossfit",
+      "lines": [
+        "Chalk Hands",
+        "Open Heart"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "cf_pr_cried_en",
+      "lang": "en",
+      "niche": "crossfit",
+      "lines": [
+        "PR'd My Clean",
+        "and Cried. Loudly."
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "cf_amrap_en",
+      "lang": "en",
+      "niche": "crossfit",
+      "lines": [
+        "My AMRAP Is Longer",
+        "Than Your Workout"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "kb_lubed_2am_en",
+      "lang": "en",
+      "niche": "mechanical_keyboards",
+      "lines": [
+        "Lubed My Switches",
+        "at 2am. Worth It."
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "kb_holy_panda_en",
+      "lang": "en",
+      "niche": "mechanical_keyboards",
+      "lines": [
+        "Holy Pandas vs Boba U4",
+        "No Middle Ground"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "kb_keycaps_rent_en",
+      "lang": "en",
+      "niche": "mechanical_keyboards",
+      "lines": [
+        "I Paid More for Keycaps",
+        "Than My Rent"
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "kb_group_buy_en",
+      "lang": "en",
+      "niche": "mechanical_keyboards",
+      "lines": [
+        "Group Buy Shipping",
+        "18 Months and Counting"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "kb_thock_en",
+      "lang": "en",
+      "niche": "mechanical_keyboards",
+      "lines": [
+        "The Thock",
+        "Is the Point"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "kb_hotswap_en",
+      "lang": "en",
+      "niche": "mechanical_keyboards",
+      "lines": [
+        "Hotswap Board",
+        "47 Switch Sets Tried"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "kb_membrane_sin_en",
+      "lang": "en",
+      "niche": "mechanical_keyboards",
+      "lines": [
+        "Membrane Keyboards",
+        "Are a Sin"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "3dp_benchy_en",
+      "lang": "en",
+      "niche": "3d_printing",
+      "lines": [
+        "My Benchy",
+        "Strung Like a Harp"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "3dp_first_layer_en",
+      "lang": "en",
+      "niche": "3d_printing",
+      "lines": [
+        "First Layer Anxiety",
+        "Is a Diagnosis"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "3dp_bed_level_en",
+      "lang": "en",
+      "niche": "3d_printing",
+      "lines": [
+        "Bed Was Level",
+        "The Print Said Otherwise"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "3dp_98_fail_en",
+      "lang": "en",
+      "niche": "3d_printing",
+      "lines": [
+        "Failed at 98%",
+        "We Don't Talk About It"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "3dp_filament_en",
+      "lang": "en",
+      "niche": "3d_printing",
+      "lines": [
+        "I Changed Filament",
+        "4 Times for One Print"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "3dp_nozzle_clog_en",
+      "lang": "en",
+      "niche": "3d_printing",
+      "lines": [
+        "Nozzle Clogged",
+        "Right in the Middle. Classic."
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "3dp_pla_petg_en",
+      "lang": "en",
+      "niche": "3d_printing",
+      "lines": [
+        "PLA or PETG",
+        "The Only Question That Matters"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "bee_propolis_en",
+      "lang": "en",
+      "niche": "beekeeping",
+      "lines": [
+        "Propolis on Everything",
+        "I Accept This"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "bee_queen_hidden_en",
+      "lang": "en",
+      "niche": "beekeeping",
+      "lines": [
+        "The Queen Was There",
+        "I Just Couldn't Find Her"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "bee_swarmed_en",
+      "lang": "en",
+      "niche": "beekeeping",
+      "lines": [
+        "Swarmed Out",
+        "Starting Over. Again."
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "bee_varroa_en",
+      "lang": "en",
+      "niche": "beekeeping",
+      "lines": [
+        "My Varroa Count",
+        "Is My Anxiety Number"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "bee_oxalic_en",
+      "lang": "en",
+      "niche": "beekeeping",
+      "lines": [
+        "Treated with OA",
+        "Still Worrying"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "bee_split_en",
+      "lang": "en",
+      "niche": "beekeeping",
+      "lines": [
+        "I Split Before",
+        "They Could Swarm. Mostly."
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "bee_frames_en",
+      "lang": "en",
+      "niche": "beekeeping",
+      "lines": [
+        "Ten Frames",
+        "Forty Thousand Opinions"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "pott_center_en",
+      "lang": "en",
+      "niche": "pottery",
+      "lines": [
+        "Center or",
+        "Die Trying"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "pott_scrack_en",
+      "lang": "en",
+      "niche": "pottery",
+      "lines": [
+        "S-Crack",
+        "Again. Of Course."
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "pott_exploded_kiln_en",
+      "lang": "en",
+      "niche": "pottery",
+      "lines": [
+        "Exploded in the Kiln",
+        "Character Building"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "pott_wedge_en",
+      "lang": "en",
+      "niche": "pottery",
+      "lines": [
+        "I Wedge So I",
+        "Don't Have to Think"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "pott_cone6_en",
+      "lang": "en",
+      "niche": "pottery",
+      "lines": [
+        "Cone 6",
+        "Not Negotiable"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "pott_reclaim_en",
+      "lang": "en",
+      "niche": "pottery",
+      "lines": [
+        "Reclaim the Clay",
+        "Reclaim Your Soul"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "pott_pull_en",
+      "lang": "en",
+      "niche": "pottery",
+      "lines": [
+        "Pulling Walls",
+        "Finding Zen"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "kn_gauge_lied_en",
+      "lang": "en",
+      "niche": "knitting",
+      "lines": [
+        "My Gauge Swatch Lied",
+        "I Trusted It"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "kn_second_sock_en",
+      "lang": "en",
+      "niche": "knitting",
+      "lines": [
+        "Second Sock Syndrome",
+        "Is My Diagnosis"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "kn_frog_again_en",
+      "lang": "en",
+      "niche": "knitting",
+      "lines": [
+        "Frogged It",
+        "Again. Third Time."
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "kn_12_wips_en",
+      "lang": "en",
+      "niche": "knitting",
+      "lines": [
+        "12 WIPs",
+        "Zero Regrets"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "kn_ravelry_en",
+      "lang": "en",
+      "niche": "knitting",
+      "lines": [
+        "Ravelry Queue: 847 Projects",
+        "0 Completed"
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "kn_cast_on_en",
+      "lang": "en",
+      "niche": "knitting",
+      "lines": [
+        "I Cast On",
+        "When I'm Stressed"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "kn_yarn_swift_en",
+      "lang": "en",
+      "niche": "knitting",
+      "lines": [
+        "Yarn Swift",
+        "& No Regrets"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "aq_bba_en",
+      "lang": "en",
+      "niche": "aquascaping",
+      "lines": [
+        "BBA Is",
+        "My Personal Nemesis"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "aq_co2_en",
+      "lang": "en",
+      "niche": "aquascaping",
+      "lines": [
+        "CO2 Off",
+        "Tank Sad"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "aq_trim_saturday_en",
+      "lang": "en",
+      "niche": "aquascaping",
+      "lines": [
+        "I Trim Every Saturday",
+        "Non-Negotiable"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "aq_hardscape_en",
+      "lang": "en",
+      "niche": "aquascaping",
+      "lines": [
+        "My Hardscape Has Better",
+        "Composition Than My Life"
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "aq_ei_dosing_en",
+      "lang": "en",
+      "niche": "aquascaping",
+      "lines": [
+        "EI Dosing",
+        "& Trusting the Process"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "aq_dutch_en",
+      "lang": "en",
+      "niche": "aquascaping",
+      "lines": [
+        "Dutch Style",
+        "No Half Measures"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "aq_anubias_en",
+      "lang": "en",
+      "niche": "aquascaping",
+      "lines": [
+        "Anubias on Driftwood",
+        "Classic for a Reason"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "reef_alk_crash_en",
+      "lang": "en",
+      "niche": "reef_tank",
+      "lines": [
+        "Alk Crashed at 3am",
+        "Classic Tuesday"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "reef_sps_flow_en",
+      "lang": "en",
+      "niche": "reef_tank",
+      "lines": [
+        "My SPS Needs",
+        "More Flow Than I Do"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "reef_rodi_en",
+      "lang": "en",
+      "niche": "reef_tank",
+      "lines": [
+        "RODI or",
+        "the Tank Dies. Simple."
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "reef_frag_en",
+      "lang": "en",
+      "niche": "reef_tank",
+      "lines": [
+        "I Frag My Corals",
+        "They're Fine with It"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "reef_big3_en",
+      "lang": "en",
+      "niche": "reef_tank",
+      "lines": [
+        "Alk. Calc. Mag.",
+        "The Holy Trinity"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "reef_skimmer_en",
+      "lang": "en",
+      "niche": "reef_tank",
+      "lines": [
+        "Skimmer Overflowed",
+        "Life Is Pain"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "reef_softies_en",
+      "lang": "en",
+      "niche": "reef_tank",
+      "lines": [
+        "SPS, LPS, Softies",
+        "I Speak All Three"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "ff_match_hatch_en",
+      "lang": "en",
+      "niche": "fly_fishing",
+      "lines": [
+        "Match the Hatch",
+        "or Go Home"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "ff_tippet_en",
+      "lang": "en",
+      "niche": "fly_fishing",
+      "lines": [
+        "My Tippet Is 5x",
+        "My Patience Is Thinner"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "ff_euro_en",
+      "lang": "en",
+      "niche": "fly_fishing",
+      "lines": [
+        "Euro Nymphing",
+        "Changed Everything"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "ff_waded_en",
+      "lang": "en",
+      "niche": "fly_fishing",
+      "lines": [
+        "I Waded In",
+        "Soaked. Still Fished."
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "ff_hatch_started_en",
+      "lang": "en",
+      "niche": "fly_fishing",
+      "lines": [
+        "The Hatch Started",
+        "I Was in the Car"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "ff_dry_fly_en",
+      "lang": "en",
+      "niche": "fly_fishing",
+      "lines": [
+        "Dry Fly Only",
+        "I Have Standards"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "ferm_kahm_en",
+      "lang": "en",
+      "niche": "fermentation",
+      "lines": [
+        "Kahm Yeast Is Not Mold",
+        "I Promise"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "ferm_brine_en",
+      "lang": "en",
+      "niche": "fermentation",
+      "lines": [
+        "My Brine Is 2%",
+        "My pH Is Fine"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "ferm_scoby_hotel_en",
+      "lang": "en",
+      "niche": "fermentation",
+      "lines": [
+        "SCOBY Hotel",
+        "Population Growing"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "ferm_wild_en",
+      "lang": "en",
+      "niche": "fermentation",
+      "lines": [
+        "I Wild Ferment",
+        "Because Control Is an Illusion"
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "ferm_listen_en",
+      "lang": "en",
+      "niche": "fermentation",
+      "lines": [
+        "Every Jar Makes a Sound",
+        "I Listen"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "ferm_lacto_en",
+      "lang": "en",
+      "niche": "fermentation",
+      "lines": [
+        "Lacto-Fermented",
+        "by Nature, Obsessed by Choice"
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "brew_og_en",
+      "lang": "en",
+      "niche": "home_brewing",
+      "lines": [
+        "My OG Was 1.065",
+        "Proud of It"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "brew_dry_hop_en",
+      "lang": "en",
+      "niche": "home_brewing",
+      "lines": [
+        "Dry-Hopped at Day 4",
+        "Science."
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "brew_trub_en",
+      "lang": "en",
+      "niche": "home_brewing",
+      "lines": [
+        "Trub in the Fermenter",
+        "Trust the Process"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "brew_ibus_en",
+      "lang": "en",
+      "niche": "home_brewing",
+      "lines": [
+        "I Know My IBUs",
+        "by Heart"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "brew_lhbs_en",
+      "lang": "en",
+      "niche": "home_brewing",
+      "lines": [
+        "LHBS Closed?",
+        "Crisis Mode."
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "brew_mash_temp_en",
+      "lang": "en",
+      "niche": "home_brewing",
+      "lines": [
+        "Mash Temp Held",
+        "67°C. Perfect."
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "mal_drive_en",
+      "lang": "en",
+      "niche": "malinois",
+      "lines": [
+        "My Mal Has",
+        "More Drive Than My Car"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "mal_igp_en",
+      "lang": "en",
+      "niche": "malinois",
+      "lines": [
+        "IGP Trial This Weekend",
+        "Send Coffee"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "mal_bite_work_en",
+      "lang": "en",
+      "niche": "malinois",
+      "lines": [
+        "Bite Work Is",
+        "Our Cardio. Both of Us."
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "mal_knpv_en",
+      "lang": "en",
+      "niche": "malinois",
+      "lines": [
+        "KNPV Lines",
+        "That's the Dream"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "mal_bh_en",
+      "lang": "en",
+      "niche": "malinois",
+      "lines": [
+        "He Passed His BH",
+        "I Cried in the Ring"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "mal_esclave_fr",
+      "lang": "fr",
+      "niche": "malinois",
+      "lines": [
+        "Esclave de",
+        "Mon Malinois"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "mal_bosse_fr",
+      "lang": "fr",
+      "niche": "malinois",
+      "lines": [
+        "Mon Malinois Bosse",
+        "Moi Non"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "mal_maligator_en",
+      "lang": "en",
+      "niche": "malinois",
+      "lines": [
+        "Maligator",
+        "Owner"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "gsd_coat_en",
+      "lang": "en",
+      "niche": "german_shepherd",
+      "lines": [
+        "My GSD Blows Coat",
+        "All Twelve Months"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "gsd_lines_en",
+      "lang": "en",
+      "niche": "german_shepherd",
+      "lines": [
+        "West German or DDR Lines",
+        "I Have Opinions"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "gsd_not_wolf_en",
+      "lang": "en",
+      "niche": "german_shepherd",
+      "lines": [
+        "Not a Wolf",
+        "Please Stop Asking"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "gsd_ofa_en",
+      "lang": "en",
+      "niche": "german_shepherd",
+      "lines": [
+        "OFA Certified",
+        "Hips Clear. We're Good."
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "gsd_dm_en",
+      "lang": "en",
+      "niche": "german_shepherd",
+      "lines": [
+        "DM Aware",
+        "& Fighting It"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "gsd_velcro_en",
+      "lang": "en",
+      "niche": "german_shepherd",
+      "lines": [
+        "Personal Space?",
+        "I Have a GSD."
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "bc_eye_en",
+      "lang": "en",
+      "niche": "border_collie",
+      "lines": [
+        "The Eye Is Not Aggression",
+        "Educate Yourselves"
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "bc_herds_en",
+      "lang": "en",
+      "niche": "border_collie",
+      "lines": [
+        "My Collie Herds Children",
+        "at the Park. I Apologize."
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "bc_brain_en",
+      "lang": "en",
+      "niche": "border_collie",
+      "lines": [
+        "Border Collie Brain",
+        "at 6am. Not Ready."
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "bc_zoomies_en",
+      "lang": "en",
+      "niche": "border_collie",
+      "lines": [
+        "The Zoomies Hit",
+        "There's Nothing I Can Do"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "bc_agility_en",
+      "lang": "en",
+      "niche": "border_collie",
+      "lines": [
+        "My Dog Has Agility Titles",
+        "I Have Snacks"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "bc_smarter_en",
+      "lang": "en",
+      "niche": "border_collie",
+      "lines": [
+        "My Border Collie",
+        "Is Smarter Than Both of Us"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "dx_ivdd_en",
+      "lang": "en",
+      "niche": "dachshund",
+      "lines": [
+        "IVDD Aware",
+        "My Wiener Is Worth It"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "dx_low_rider_en",
+      "lang": "en",
+      "niche": "dachshund",
+      "lines": [
+        "Low Rider",
+        "Loud Opinions"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "dx_stairs_no_en",
+      "lang": "en",
+      "niche": "dachshund",
+      "lines": [
+        "No Stairs",
+        "Vet's Orders. He Ignores Them."
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "dx_long_short_en",
+      "lang": "en",
+      "niche": "dachshund",
+      "lines": [
+        "Long Dog",
+        "Short Fuse"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "dx_sausage_en",
+      "lang": "en",
+      "niche": "dachshund",
+      "lines": [
+        "Half Dog",
+        "Half Sausage. All Attitude."
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "chi_tiny_rage_en",
+      "lang": "en",
+      "niche": "chihuahua",
+      "lines": [
+        "Pocket-Sized Rage",
+        "& I Love Her"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "chi_pda_en",
+      "lang": "en",
+      "niche": "chihuahua",
+      "lines": [
+        "My Chihuahua Has PDA",
+        "Permanent Diva Attitude"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "chi_trembling_en",
+      "lang": "en",
+      "niche": "chihuahua",
+      "lines": [
+        "She's Not Cold",
+        "That's Just Her Personality"
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "chi_fawn_or_merle_en",
+      "lang": "en",
+      "niche": "chihuahua",
+      "lines": [
+        "Fawn, Merle, Blue?",
+        "She's Trouble. That's the Color."
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "chi_big_dog_en",
+      "lang": "en",
+      "niche": "chihuahua",
+      "lines": [
+        "Thinks She's a Rottweiler",
+        "She's 2kg"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "bc_shadow_en",
+      "lang": "en",
+      "niche": "black_cats",
+      "lines": [
+        "I Find Her by Blinking",
+        "in the Dark"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "bc_lint_roller_en",
+      "lang": "en",
+      "niche": "black_cats",
+      "lines": [
+        "Black Cat Owner",
+        "Lint Roller Addict"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "bc_halloween_en",
+      "lang": "en",
+      "niche": "black_cats",
+      "lines": [
+        "My Cat Looks",
+        "Like Halloween Year-Round"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "bc_adopt_en",
+      "lang": "en",
+      "niche": "black_cats",
+      "lines": [
+        "Black Cats Adopt Last",
+        "Mine Adopted Me First"
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "bc_panther_en",
+      "lang": "en",
+      "niche": "black_cats",
+      "lines": [
+        "House Panther",
+        "Unapologetically"
+      ],
+      "accent": 0,
+      "ornament": true
+    },
+    {
+      "id": "chk_pecking_en",
+      "lang": "en",
+      "niche": "chickens",
+      "lines": [
+        "Pecking Order",
+        "I'm at the Bottom"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "chk_molt_en",
+      "lang": "en",
+      "niche": "chickens",
+      "lines": [
+        "Molting Season",
+        "Zero Eggs, Maximum Panic"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "chk_3am_en",
+      "lang": "en",
+      "niche": "chickens",
+      "lines": [
+        "My Rooster Goes Off",
+        "at 3am. Every Day."
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "chk_roo_en",
+      "lang": "en",
+      "niche": "chickens",
+      "lines": [
+        "Straight Run:",
+        "Expected Hens, Got Roosters"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "chk_silkie_en",
+      "lang": "en",
+      "niche": "chickens",
+      "lines": [
+        "Silkie Keeper",
+        "They're Basically Cats"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "chk_vent_glazing_en",
+      "lang": "en",
+      "niche": "chickens",
+      "lines": [
+        "Vent Check Every Sunday",
+        "Because I'm That Person"
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "bw_lifer_en",
+      "lang": "en",
+      "niche": "birdwatching",
+      "lines": [
+        "Lifer at Last",
+        "299 Species & Counting"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "bw_bins_en",
+      "lang": "en",
+      "niche": "birdwatching",
+      "lines": [
+        "My Bins Cost",
+        "More Than My Phone"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "bw_pish_en",
+      "lang": "en",
+      "niche": "birdwatching",
+      "lines": [
+        "I Pish in Public",
+        "& I'm Not Ashamed"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "bw_patch_en",
+      "lang": "en",
+      "niche": "birdwatching",
+      "lines": [
+        "Patch Birder",
+        "Hardcore Since Dawn"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "bw_merlin_en",
+      "lang": "en",
+      "niche": "birdwatching",
+      "lines": [
+        "I Let Merlin",
+        "ID My Pride"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "mf_chanterelle_en",
+      "lang": "en",
+      "niche": "mushroom_foraging",
+      "lines": [
+        "Found a Chanterelle",
+        "Told No One"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "mf_spot_en",
+      "lang": "en",
+      "niche": "mushroom_foraging",
+      "lines": [
+        "I Never Reveal",
+        "My Spot"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "mf_galerina_en",
+      "lang": "en",
+      "niche": "mushroom_foraging",
+      "lines": [
+        "Galerina Looks Like Honey Fungus",
+        "Learn the Difference"
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "mf_spore_print_en",
+      "lang": "en",
+      "niche": "mushroom_foraging",
+      "lines": [
+        "When in Doubt",
+        "Take a Spore Print"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "mf_inoculation_en",
+      "lang": "en",
+      "niche": "mushroom_foraging",
+      "lines": [
+        "I Inoculate Logs",
+        "on the Weekend"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "cp_37_seconds_en",
+      "lang": "en",
+      "niche": "cold_plunge",
+      "lines": [
+        "37 Seconds In",
+        "Mind Went Quiet"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "cp_wim_en",
+      "lang": "en",
+      "niche": "cold_plunge",
+      "lines": [
+        "Wim Hof Was Right",
+        "I Can't Believe It Either"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "cp_vagal_en",
+      "lang": "en",
+      "niche": "cold_plunge",
+      "lines": [
+        "Vagal Tone High",
+        "Tolerance Higher"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "cp_3min_en",
+      "lang": "en",
+      "niche": "cold_plunge",
+      "lines": [
+        "3 Minutes",
+        "Changed My Nervous System"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "cp_ice_bath_en",
+      "lang": "en",
+      "niche": "cold_plunge",
+      "lines": [
+        "Ice Bath Every Morning",
+        "Then Coffee. Then Humans."
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "vl_stealth_en",
+      "lang": "en",
+      "niche": "van_life",
+      "lines": [
+        "Stealth Camped",
+        "Outside Your HOA"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "vl_condensation_en",
+      "lang": "en",
+      "niche": "van_life",
+      "lines": [
+        "Condensation at Dawn",
+        "Van Life's Dirty Secret"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "vl_solar_en",
+      "lang": "en",
+      "niche": "van_life",
+      "lines": [
+        "400 Watts Solar",
+        "Still Not Enough"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "vl_boondocking_en",
+      "lang": "en",
+      "niche": "van_life",
+      "lines": [
+        "Boondocking Preferred",
+        "Campgrounds Are for Tourists"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "vl_free_camping_en",
+      "lang": "en",
+      "niche": "van_life",
+      "lines": [
+        "Free Camping Only",
+        "My App Is Freecampsites"
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "vn_vta_en",
+      "lang": "en",
+      "niche": "vinyl",
+      "lines": [
+        "VTA Set. Azimuth Dialed.",
+        "Just Press Play Already."
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "vn_clean_needle_en",
+      "lang": "en",
+      "niche": "vinyl",
+      "lines": [
+        "Clean Your Stylus",
+        "It's Not That Hard"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "vn_pre_listening_en",
+      "lang": "en",
+      "niche": "vinyl",
+      "lines": [
+        "I Clean Records",
+        "Before I Listen to Records"
+      ],
+      "accent": 1,
+      "ornament": true
+    },
+    {
+      "id": "vn_phono_stage_en",
+      "lang": "en",
+      "niche": "vinyl",
+      "lines": [
+        "My Phono Stage Costs",
+        "More Than Your Streaming Year"
+      ],
+      "accent": 1,
+      "ornament": false
+    },
+    {
+      "id": "vn_180g_en",
+      "lang": "en",
+      "niche": "vinyl",
+      "lines": [
+        "180g Pressing",
+        "or I Wait for a Better Press"
+      ],
+      "accent": 1,
+      "ornament": true
+    }
   ]
 }
