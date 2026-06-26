@@ -25,16 +25,17 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from typo_fonts import load_font  # noqa: E402
 from typo_variants import VARIANTS, adapt  # noqa: E402
 from typo_ornaments import (STYLES, pick_style, apply_ornament,  # noqa: E402
-                            sticker_layer)
+                            sticker_layer, draw_word)
 
 from PIL import Image, ImageDraw, ImageFont  # noqa: E402
 
 DATA_PATH = "data/niches_funny.json"
 FONT = "script"  # Pacifico, comme tout le catalogue
 
+# accent doré (lisible sur clair comme sur foncé → identique dans les deux palettes)
 PALETTES = {
-    "dark":  {"ink": (30, 30, 34, 255),   "accent": (190, 46, 38, 255)},
-    "light": {"ink": (244, 244, 246, 255), "accent": (224, 84, 72, 255)},
+    "dark":  {"ink": (30, 30, 34, 255),   "accent": (201, 162, 39, 255)},
+    "light": {"ink": (244, 244, 246, 255), "accent": (201, 162, 39, 255)},
 }
 
 
@@ -121,10 +122,11 @@ def render(entry, pal, idx=0, side=4500, margin_ratio=0.13):
     if sticker:
         img.alpha_composite(sticker_layer((side, side), bbox, side / 4500.0))
 
+    sw = max(2, int(sz * 0.025))
     y = top
     for i, (t, (w, h, off)) in enumerate(zip(lines, dims)):
-        col = pal["accent"] if i == accent_idx else pal["ink"]
-        dr.text(((side - w) // 2, y - off), t, font=f, fill=col)
+        draw_word(dr, ((side - w) // 2, y - off), t, f, i == accent_idx,
+                  pal["ink"], pal["accent"], stroke=sw)
         y += h + gap
 
     if style and not sticker:

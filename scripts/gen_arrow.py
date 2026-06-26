@@ -20,13 +20,14 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from typo_fonts import load_font  # noqa: E402
 from typo_variants import VARIANTS, adapt  # noqa: E402
+from typo_ornaments import draw_word  # noqa: E402
 
 from PIL import Image, ImageDraw, ImageFont  # noqa: E402
 
 DATA_PATH = "data/arrow.json"
 FONT = "script"
 INK = (28, 28, 32, 255)
-RED = (190, 46, 38, 255)
+GOLD = (201, 162, 39, 255)   # accent doré (contour croisé avec l'encre)
 
 
 def parse_line(line):
@@ -68,7 +69,7 @@ def draw_arrow(d, cx, cy, width, thick, direction, color):
 
 def render(entry, variant, side=4500):
     ink = adapt(INK, variant)
-    red = adapt(RED, variant)
+    accent = adapt(GOLD, variant)
     token_lines = [parse_line(l) for l in entry["lines"]]
     direction = entry.get("dir", "right")
 
@@ -96,11 +97,12 @@ def render(entry, variant, side=4500):
     total_h = text_h + arrow_gap + arrow_thick * 2
 
     top = side // 2 - total_h // 2
+    sw = max(2, int(sz * 0.025))
     y = top
     for tl, w in zip(token_lines, widths):
         x = cx - w / 2
         for seg, acc in tl:
-            d.text((x, y - base_off), seg, font=f, fill=red if acc else ink)
+            draw_word(d, (x, y - base_off), seg, f, acc, ink, accent, stroke=sw)
             x += f.getlength(seg)
         y += lh + line_gap
 

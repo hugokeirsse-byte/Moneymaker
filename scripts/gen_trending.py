@@ -23,14 +23,14 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from typo_fonts import load_font  # noqa: E402
 from typo_variants import VARIANTS, adapt  # noqa: E402
 from typo_ornaments import (STYLES, pick_style, apply_ornament,  # noqa: E402
-                            sticker_layer)
+                            sticker_layer, draw_word)
 
 from PIL import Image, ImageDraw, ImageFont  # noqa: E402
 
 DATA_PATH = "data/trending_100.json"
 FONT = "script"
 INK = (28, 28, 32, 255)
-RED = (190, 46, 38, 255)
+GOLD = (201, 162, 39, 255)   # accent doré (contour croisé avec l'encre)
 
 
 def parse_line(line):
@@ -58,11 +58,11 @@ def render(entry, idx, variant, side=4500):
     style = entry.get("ornament", pick_style(idx))
     sticker = (style == "sticker")
     if sticker:
-        # carte blanche : encre toujours sombre + rouge, quelle que soit la variante
-        ink, accent = INK, RED
+        # carte blanche : encre toujours sombre + or, quelle que soit la variante
+        ink, accent = INK, GOLD
     else:
         ink = adapt(INK, variant)
-        accent = adapt(RED, variant)
+        accent = adapt(GOLD, variant)
     token_lines = [parse_line(l) for l in entry["lines"]]
 
     margin = int(side * 0.16 if sticker else side * 0.13)
@@ -94,11 +94,12 @@ def render(entry, idx, variant, side=4500):
     if sticker:
         canvas.alpha_composite(sticker_layer((side, side), bbox, scale))
 
+    sw = max(2, int(sz * 0.025))
     y = top
     for tl, w in zip(token_lines, widths):
         x = cx - w / 2
         for seg, is_acc in tl:
-            d.text((x, y - base_off), seg, font=f, fill=accent if is_acc else ink)
+            draw_word(d, (x, y - base_off), seg, f, is_acc, ink, accent, stroke=sw)
             x += f.getlength(seg)
         y += lh + line_gap
 

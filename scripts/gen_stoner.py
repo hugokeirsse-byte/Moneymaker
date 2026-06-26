@@ -21,14 +21,14 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from typo_fonts import load_font  # noqa: E402
 from typo_variants import VARIANTS, adapt  # noqa: E402
-from typo_ornaments import pick_style, apply_ornament  # noqa: E402
+from typo_ornaments import pick_style, apply_ornament, draw_word  # noqa: E402
 
 from PIL import Image, ImageDraw, ImageFont  # noqa: E402
 
 DATA_PATH = "data/stoner.json"
 FONT = "script"
 INK = (28, 28, 32, 255)
-RED = (190, 46, 38, 255)
+GOLD = (201, 162, 39, 255)   # accent doré (contour croisé avec l'encre)
 
 FLAGS = {
     "rasta": [(0, 158, 73), (254, 209, 0), (200, 16, 46)],   # vert / jaune / rouge
@@ -78,7 +78,7 @@ def render(entry, variant, idx=0, side=4500):
     flag = entry.get("flag")
     style = entry.get("ornament", None if flag else pick_style(idx))
     ink = adapt(INK, variant)
-    red = adapt(RED, variant)
+    accent = adapt(GOLD, variant)
     token_lines = [parse_line(l) for l in entry["lines"]]
 
     margin = int(side * 0.12)
@@ -122,16 +122,18 @@ def render(entry, variant, idx=0, side=4500):
         img.alpha_composite(flag_fill(mask, bbox, FLAGS[flag]))
     else:
         d = ImageDraw.Draw(img)
+        sw = max(2, int(sz * 0.025))
         y = top
         for tl, w in zip(token_lines, widths):
             x = cx - w / 2
             for seg, acc in tl:
-                d.text((x, y - base_off), seg, font=f, fill=red if acc else ink)
+                draw_word(d, (x, y - base_off), seg, f, acc, ink, accent, stroke=sw)
                 x += f.getlength(seg)
             y += lh + line_gap
         if style:
             qf = load_font(FONT, int(sz * 1.5))
-            apply_ornament(d, style, bbox, ink, red, scale=side / 4500.0, quote_font=qf)
+            apply_ornament(d, style, bbox, ink, accent, scale=side / 4500.0,
+                           quote_font=qf)
 
     bb = img.getbbox()
     if bb is None:

@@ -68,6 +68,28 @@ def _star(d, cx, cy, r, color):
     d.polygon(pts, fill=color)
 
 
+def _spark4(d, cx, cy, r, color):
+    """Étoile à 4 branches (scintillement / sparkle)."""
+    pts = []
+    for k in range(8):
+        ang = math.pi / 4 * k - math.pi / 2
+        rr = r if k % 2 == 0 else r * 0.20
+        pts.append((cx + math.cos(ang) * rr, cy + math.sin(ang) * rr))
+    d.polygon(pts, fill=color)
+
+
+def draw_word(d, xy, text, font, is_accent, ink, accent, stroke=0):
+    """Dessine un segment avec contour croisé : mot accent = remplissage accent +
+    liseré encre ; mot de base = remplissage encre + liseré accent. stroke<=0 : pas
+    de liseré (rendu simple)."""
+    if stroke <= 0:
+        d.text(xy, text, font=font, fill=accent if is_accent else ink)
+    elif is_accent:
+        d.text(xy, text, font=font, fill=accent, stroke_width=stroke, stroke_fill=ink)
+    else:
+        d.text(xy, text, font=font, fill=ink, stroke_width=stroke, stroke_fill=accent)
+
+
 # ─── ornements ──────────────────────────────────────────────────────────────
 
 def _orn_wave(d, x0, y0, x1, y1, ink, accent, scale, qf):
@@ -123,9 +145,9 @@ def _orn_sparkles(d, x0, y0, x1, y1, ink, accent, scale, qf):
         (x1 + int(o * 1.05),     cy + int(o * 0.45),    xs),
     ]
     for x, y, r in spots_a:
-        _star(d, x, y, r, accent)
+        _spark4(d, x, y, r, accent)
     for x, y, r in spots_i:
-        _star(d, x, y, r, ink)
+        _spark4(d, x, y, r, ink)
 
 
 def _orn_quotes(d, x0, y0, x1, y1, ink, accent, scale, qf):

@@ -27,7 +27,7 @@ from PIL import Image, ImageDraw, ImageFont  # noqa: E402
 DATA_PATH = "data/anti.json"
 FONT = "script"
 INK = (28, 28, 32, 255)
-RED = (190, 46, 38, 255)
+GOLD = (201, 162, 39, 255)   # accent doré (contour croisé avec l'encre)
 
 SHRINK = 0.86      # facteur de réduction par ligne
 MIN_RATIO = 0.07   # taille mini relative au head (≈ minuscule → effet « infini »)
@@ -40,7 +40,7 @@ def measure(f, t):
 
 def render(entry, variant, idx=0, side=4500):
     ink = adapt(INK, variant)
-    red = adapt(RED, variant)
+    accent = adapt(GOLD, variant)
     head = entry.get("head", "ANTI")
     # « ( » ouvre la liste sur la ligne suivante (jamais collé au head)
     words = ["("] + list(entry["items"])
@@ -108,15 +108,19 @@ def render(entry, variant, idx=0, side=4500):
     y = top
     item_k = 0
     for k, (f, t, s, is_item) in enumerate(rows):
+        sw = max(1, int(s * 0.022))
         if is_item:
-            col = red if (item_k % 2 == 0) else ink
+            gold = (item_k % 2 == 0)
             frac = item_k / max(1, n_body - 1)
             alpha = int(255 - 95 * frac)
-            col = col[:3] + (alpha,)
+            fill = (accent if gold else ink)[:3] + (alpha,)
+            out = (ink if gold else accent)[:3] + (alpha,)
             item_k += 1
-        else:
-            col = ink
-        d.text((cx, y), t, font=f, fill=col, anchor="mt")
+        else:  # head : encre + liseré or
+            fill = ink
+            out = accent
+        d.text((cx, y), t, font=f, fill=fill, stroke_width=sw, stroke_fill=out,
+               anchor="mt")
         y += line_hs[k]
 
     bb = img.getbbox()
