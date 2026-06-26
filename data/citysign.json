@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "note": "Panneaux d'agglomération détournés : noms de villes marrants ou touchants. Blanc + liseré rouge + noir (format authentique).",
+    "ink": [24, 24, 26, 255],
+    "accent": [200, 28, 28, 255]
+  },
+  "entries": [
+    {"id": "cs_burnout_fr", "name": "Burn-Out-les-Bains", "sub": "pop. épuisée"},
+    {"id": "cs_procrastine_fr", "name": "Procrastine-sur-Loire", "sub": "on verra demain"},
+    {"id": "cs_solitude_fr", "name": "Solitude", "sub": "pop. 1"},
+    {"id": "cs_marre_fr", "name": "Ras-le-Bol-en-Provence"},
+    {"id": "cs_glandage_fr", "name": "Glandage-sur-Canapé", "sub": "altitude : zéro effort"},
+    {"id": "cs_anxiete_fr", "name": "Anxiété-les-Flots", "sub": "tout va bien (non)"},
+    {"id": "cs_calin_fr", "name": "Câlin-sur-Mer", "sub": "on vous attend"},
+    {"id": "cs_nullepart_fr", "name": "Nulle-Part", "sub": "vous y êtes"},
+    {"id": "cs_sieste_fr", "name": "Sieste-sur-Oreiller"},
+    {"id": "cs_deprime_fr", "name": "Déprime-les-Deux-Églises"},
+    {"id": "cs_cafeine_fr", "name": "Caféine-City", "sub": "jamais assez"},
+    {"id": "cs_boutrouleau_fr", "name": "Bout-du-Rouleau"},
+    {"id": "cs_pasdereseau_fr", "name": "Pas-de-Réseau", "sub": "enfin la paix"},
+    {"id": "cs_loindetout_fr", "name": "Loin-de-Tout", "sub": "et c'est très bien"},
+    {"id": "cs_chezmeme_fr", "name": "Chez-Mémé", "sub": "pop. ∞ souvenirs"},
+    {"id": "cs_telework_fr", "name": "Télétravail-en-Pyjama"},
+    {"id": "cs_lundi_fr", "name": "Lundi-sur-Mer", "sub": "courage"},
+    {"id": "cs_reviens_fr", "name": "Reviens-Quand-Tu-Veux", "sub": "la porte est ouverte"},
+    {"id": "cs_cheztoi_fr", "name": "Ici-Tu-Es-Chez-Toi"},
+    {"id": "cs_aurevoir_fr", "name": "Au-Revoir", "sub": "reviens vite"},
+    {"id": "cs_trololo_fr", "name": "Trop-Loin-du-Bar"},
+    {"id": "cs_zenitude_fr", "name": "Zénitude-sur-Coussin", "sub": "respirez"},
+    {"id": "cs_celibat_fr", "name": "Célibatville", "sub": "jumelée avec Mon-Chat"},
+    {"id": "cs_demain_fr", "name": "Demain-J'Arrête", "sub": "depuis 2019"}
+  ]
+}
