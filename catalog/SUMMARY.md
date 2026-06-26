@@ -1,72 +1,97 @@
-# Catalogue par thème (prêt Redbubble)
+# Catalogue POD — titres, descriptions & tags prêts
 
-**1343 designs** (2686 fichiers dark+light), 15 thèmes.
+**1343 designs** (2686 fichiers dark+light), 23 thèmes.
 
-Chaque `by_theme/<theme>.csv` regroupe des designs qui partagent quasiment les mêmes tags → upload par lot, mots-clés à peine à retoucher.
+Plateformes gratuites visées : Redbubble, TeePublic, Amazon Merch on Demand, Spreadshirt, Spring, Threadless, Zazzle, Society6, Displate, Fine Art America.
+
+`pod_all.csv` = tout. `by_theme/` et `by_collection/` = lots à mots-clés quasi constants pour upload en masse.
 
 ## Par thème
 
-### Funny & Sarcastic (`humor`) — 632 designs
-Tags de base : `funny saying, sarcastic, sarcasm, humor, meme shirt, funny quote, introvert humor`
+### Funny & Sarcastic (`humor`) — 400 designs
+Tags de base : `funny saying, sarcastic, sarcasm, humor, meme shirt, funny quote`
 
-### Activist & Leftist (`politics`) — 140 designs
-Tags de base : `activist, eat the rich, anti capitalist, leftist, protest, revolution, socialist, class war`
+### Existential & Dark Humor (`existential`) — 117 designs
+Tags de base : `existential, nihilism, dark humor, philosophy, absurd`
 
-### Existential & Dark Humor (`existential`) — 103 designs
-Tags de base : `existential, nihilism, dark humor, philosophy, absurd, deep quote`
+### Activist & Leftist (`politics`) — 111 designs
+Tags de base : `activist, eat the rich, anti capitalist, leftist, protest, revolution, class war`
 
-### Pets & Animals Lovers (`pets`) — 79 designs
-Tags de base : `dog mom, pet lover, dog dad, reptile, animal parent, pet gift`
-
-### Climate & Ecology (`climate`) — 70 designs
+### Climate & Ecology (`climate`) — 75 designs
 Tags de base : `climate change, save the planet, ecology, environment, climate activist, earth day, eco friendly`
+
+### Pets & Animal Lovers (`pets`) — 75 designs
+Tags de base : `dog mom, pet lover, dog dad, reptile, animal parent`
+
+### Hobbies & Crafts (`hobbies_craft`) — 71 designs
+Tags de base : `hobby gift, craft lover, reading, crochet, fishing, hobby`
+
+### Food & Drink (`food_drink`) — 69 designs
+Tags de base : `foodie gift, coffee lover, food humor, caffeine, brunch, snack lover`
 
 ### Feminist (`feminism`) — 68 designs
 Tags de base : `feminist, feminism, girl power, smash patriarchy, women rights, equal rights, feminist gift`
 
-### Mental Health & Neurodivergent (`mental_health`) — 49 designs
+### Mental Health & Neurodivergent (`mental_health`) — 51 designs
 Tags de base : `mental health, neurodivergent, adhd, autism, anxiety, introvert, self care, neurospicy`
 
-### Cats (`cats`) — 35 designs
-Tags de base : `cat lover, cat mom, cat dad, cat lady, crazy cat, kitten, cat gift`
+### Jobs & Professions (`professions`) — 42 designs
+Tags de base : `nurse gift, teacher gift, coworker gift, job humor, profession, work pride`
 
-### Anti-Racism (`antiracism`) — 33 designs
+### Fitness & Sport (`fitness_sport`) — 40 designs
+Tags de base : `gym gift, fitness, running, yoga, workout, sport`
+
+### Anti-Racism (`antiracism`) — 36 designs
 Tags de base : `anti racism, human rights, social justice, equality, no racism, solidarity`
 
-### Stoner & Festival (`stoner`) — 32 designs
-Tags de base : `420, weed, stoner, cannabis, festival, high vibes, rasta`
+### Cats (`cats`) — 35 designs
+Tags de base : `cat lover, cat mom, cat dad, cat lady, crazy cat, kitten`
 
-### Solidarity & Kindness (`solidarity`) — 25 designs
-Tags de base : `be kind, you matter, solidarity, anti bullying, mental health support, kindness`
+### Solidarity & Kindness (`solidarity`) — 26 designs
+Tags de base : `be kind, you matter, solidarity, anti bullying, kindness`
 
-### Work & Office Humor (`work`) — 25 designs
-Tags de base : `office humor, work shirt, coworker gift, monday, sarcastic work, corporate`
+### Stoner & Festival (`stoner`) — 24 designs
+Tags de base : `420, weed, stoner, cannabis, festival, high vibes`
 
-### Relationship & Single (`relationship`) — 23 designs
-Tags de base : `single, dating, anti valentine, divorce, relationship humor, couple`
+### Work & Office Humor (`work`) — 24 designs
+Tags de base : `office humor, work shirt, coworker gift, monday, sarcastic work`
 
-### Animal Rights & Vegan (`animals`) — 19 designs
+### Plants & Garden (`plants_garden`) — 23 designs
+Tags de base : `plant lover, plant mom, gardening, botanical, succulent`
+
+### Animal Rights & Vegan (`animals`) — 18 designs
 Tags de base : `vegan, animal rights, vegan gift, save animals, plant based, cruelty free, animal lover`
 
-### LGBTQ Pride (`lgbtq`) — 10 designs
-Tags de base : `pride, lgbtq, queer, trans rights, love is love, ally, rainbow flag`
+### Gaming & Geek (`gaming_geek`) — 11 designs
+Tags de base : `gamer gift, gaming, nerd, geek, anime, dnd`
 
+### Relationship & Single (`relationship`) — 11 designs
+Tags de base : `single, dating, anti valentine, divorce, relationship humor`
+
+### LGBTQ Pride (`lgbtq`) — 9 designs
+Tags de base : `pride, lgbtq, queer, trans rights, love is love, ally, rainbow`
+
+### Music & Festival (`music`) — 4 designs
+Tags de base : `music lover, festival, band tee, vinyl, concert`
+
+### Travel & Outdoors (`travel`) — 3 designs
+Tags de base : `travel gift, wanderlust, adventure, mountains, outdoors`
 
 ## Par collection
 
-- **niches** : 525 designs
-- **punchlines** : 192 designs
-- **trending** : 102 designs
-- **identite** : 94 designs
-- **revendications** : 93 designs
-- **corrige** : 74 designs
-- **formats** : 38 designs
-- **ironique** : 30 designs
-- **proverbes** : 30 designs
-- **heart** : 29 designs
-- **stoner** : 28 designs
-- **warning** : 26 designs
-- **neuro** : 26 designs
-- **solidaire** : 24 designs
-- **arrow** : 20 designs
-- **anti** : 12 designs
+- **niches** : 525
+- **punchlines** : 192
+- **trending** : 102
+- **identite** : 94
+- **revendications** : 93
+- **corrige** : 74
+- **formats** : 38
+- **ironique** : 30
+- **proverbes** : 30
+- **heart** : 29
+- **stoner** : 28
+- **warning** : 26
+- **neuro** : 26
+- **solidaire** : 24
+- **arrow** : 20
+- **anti** : 12
