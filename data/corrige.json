@@ -64,6 +64,14 @@
     {"id": "co_courage_fr", "lang": "fr", "kept": ["Le Courage,"], "struck": "C'Est D'Obéir", "replacement": "C'Est De Résister"},
     {"id": "co_not_angry_en", "lang": "en", "kept": ["I'm Not Angry,", "I'm Just"], "struck": "Disappointed", "replacement": "Organizing"},
     {"id": "co_you_are_en", "lang": "en", "kept": ["You Are What"], "struck": "You Eat", "replacement": "You Fight For"},
-    {"id": "co_seize_en", "lang": "en", "kept": ["Seize The"], "struck": "Day", "replacement": "Means Of Production"}
+    {"id": "co_seize_en", "lang": "en", "kept": ["Seize The"], "struck": "Day", "replacement": "Means Of Production"},
+    {"id": "co_climato_fr", "lang": "fr", "kept": ["Je Suis"], "struck": "Climatosceptique", "replacement": "Climato-Stupide"},
+    {"id": "co_climate_en", "lang": "en", "kept": ["I'm A"], "struck": "Climate Skeptic", "replacement": "Climate Stupid"},
+    {"id": "co_platiste_fr", "lang": "fr", "kept": ["La Terre Est Plate ?"], "struck": "Platiste", "replacement": "Platement Stupide"},
+    {"id": "co_complotiste_fr", "lang": "fr", "kept": ["Je Ne Suis Pas"], "struck": "Complotiste", "replacement": "Juste Crédule"},
+    {"id": "co_flatearth_en", "lang": "en", "kept": ["Earth Is Flat?"], "struck": "Free Thinker", "replacement": "Free Faller"},
+    {"id": "co_antiscience_en", "lang": "en", "kept": ["I Did My Own"], "struck": "Research", "replacement": "Googling"},
+    {"id": "co_recherche_fr", "lang": "fr", "kept": ["J'Ai Fait Mes"], "struck": "Recherches", "replacement": "Trois Vidéos"},
+    {"id": "co_canicule_fr", "lang": "fr", "kept": ["Il Fait Chaud,", "C'Est"], "struck": "Normal", "replacement": "+1,5°C"}
   ]
 }
