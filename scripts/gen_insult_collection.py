@@ -19,6 +19,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from typo_fonts import load_font  # noqa: E402
 from typo_variants import VARIANTS, adapt  # noqa: E402
+from typo_ornaments import apply_ornament  # noqa: E402
 
 from PIL import Image, ImageDraw  # noqa: E402
 
@@ -80,6 +81,10 @@ def render_poster(entry, side=4500, variant="dark"):
     d.text(((side - lw) // 2, y - loff), label, font=f_label, fill=label_col)
 
     # crop + padding uniforme
+    _tb = img.getbbox()
+    if _tb:
+        apply_ornament(d, "sparkles", _tb, adapt((28, 28, 32, 255), variant),
+                       adapt((201, 162, 39, 255), variant), scale=side / 4500.0)
     bbox = img.getbbox()
     if bbox is None:
         return img

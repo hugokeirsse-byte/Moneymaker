@@ -19,6 +19,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from typo_fonts import load_font  # noqa: E402
 from typo_variants import VARIANTS, adapt  # noqa: E402
+from typo_ornaments import apply_ornament  # noqa: E402
 
 from PIL import Image, ImageDraw, ImageFont  # noqa: E402
 
@@ -118,6 +119,10 @@ def render(verb, lang_id, lang, tone, variant="dark", side=4500, margin_ratio=0.
     y += vh + gap
     d.text(((side - bw) // 2, y - boff), big, font=f_big, fill=big_color)
 
+    _tb = img.getbbox()
+    if _tb:
+        apply_ornament(d, "sparkles", _tb, adapt((28, 28, 32, 255), variant),
+                       adapt((201, 162, 39, 255), variant), scale=side / 4500.0)
     bbox = img.getbbox()
     if bbox is None:
         return img

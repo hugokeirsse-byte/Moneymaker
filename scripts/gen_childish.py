@@ -18,6 +18,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from typo_fonts import load_font  # noqa: E402
 from typo_variants import VARIANTS, adapt  # noqa: E402
+from typo_ornaments import apply_ornament  # noqa: E402
 
 from PIL import Image, ImageDraw  # noqa: E402
 
@@ -87,6 +88,10 @@ def render(lines, drops, variant, side=4500):
         for dx in (-int(sz * 0.55), int(sz * 0.55)):
             draw_drop(d, side // 2 + dx, y, drop_h, drop_col)
 
+    _tb = img.getbbox()
+    if _tb:
+        apply_ornament(d, "sparkles", _tb, adapt((28, 28, 32, 255), variant),
+                       adapt((201, 162, 39, 255), variant), scale=side / 4500.0)
     bbox = img.getbbox()
     img = img.crop(bbox)
     pad = int(side * 0.08)
