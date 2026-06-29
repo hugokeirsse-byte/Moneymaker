@@ -20,6 +20,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from typo_fonts import load_font  # noqa: E402
 from typo_variants import VARIANTS, adapt  # noqa: E402
+from typo_ornaments import apply_ornament  # noqa: E402
 
 from PIL import Image, ImageDraw, ImageFont  # noqa: E402
 
@@ -213,6 +214,12 @@ def render_phrase(ph, variant="dark", side=4500, margin_ratio=0.08):
     for txt, f, color, w, h, off in rendered:
         d.text(((side - w) // 2, y - off), txt, font=f, fill=color)
         y += h + gap
+
+    # étoiles 4 branches or/noir autour du bloc
+    block_w = max(r[3] for r in rendered)
+    tb = ((side - block_w) // 2, margin, (side + block_w) // 2, margin + total_h)
+    apply_ornament(d, "sparkles", tb, adapt(DARK, variant), adapt(RED, variant),
+                   scale=side / 4500.0)
 
     bbox = img.getbbox()
     if bbox is None:
