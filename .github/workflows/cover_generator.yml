@@ -35,8 +35,13 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout (sparse — scripts uniquement, dépôt lourd)
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          sparse-checkout: |
+            scripts/covers
+          sparse-checkout-cone-mode: false
 
       - name: Setup Python
         uses: actions/setup-python@v5
