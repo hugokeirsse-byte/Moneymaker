@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """
-Génère les images d'art (face) des 3 concepts de couverture « CYCLE 404 »
+Génère les images d'art (face) des concepts de couverture « CYCLE 404 »
 via Runware FLUX.1 Dev, puis upscale IA ×4. Sauvegarde des PNG dans --out.
 
 Nécessite RUNWARE_API_KEY (secret GitHub Actions).
 
 Usage :
-  RUNWARE_API_KEY=... python runware_cover.py --out art --concepts chambre404,reflet,standby
+  RUNWARE_API_KEY=... python runware_cover.py --out art \
+     --concepts ecran_profil,ecran_face,ecran_oeil,ecran_spectatrice
 """
 from __future__ import annotations
 
@@ -20,44 +21,59 @@ import requests
 
 RUNWARE_URL = "https://api.runware.ai/v1"
 MODEL = os.getenv("RUNWARE_MODEL", "runware:101@1")  # FLUX.1 Dev
-CFG = 4.0
-STEPS = 28
+CFG = 3.5
+STEPS = 34
 GEN_W, GEN_H = 832, 1344  # portrait ~5:8, divisibles par 64
 UPSCALE = 4
 
-# 4 prompts du brief : 2 directions (A cinématographique, B graphique) × 2 concepts.
-# Texte repris tel quel (l'illustration EST le sujet — pas d'aplat noir).
+# Suffixe commun : impose le rendu PHOTOréaliste (pas illustré) et réserve le
+# tiers supérieur sombre pour le titre. Une grille d'écrans NETTE et ORGANISÉE.
+COMMON = (
+    " Shot on a full-frame cinema camera, 85mm lens, photorealistic, hyper-detailed real"
+    " human skin with pores and fine texture, natural catchlights in the eyes, shallow depth"
+    " of field. Cold teal shadows and warm amber screen glow, cinematic color grade, subtle"
+    " film grain. The wall of screens is an ORDERLY rectangular grid of identical old CRT"
+    " monitors, each screen sharp and legible, NOT random noise. The upper third of the frame"
+    " is kept dark and uncluttered for a title. No text, no letters, no captions, no logo,"
+    " no watermark. Vertical 5:8 book-cover composition."
+)
+
+# 4 variations issues du concept « visage + mur d'écrans » (oeil_ecran),
+# mais VISAGE RÉALISTE et écrans COHÉRENTS (fragments de la vie de l'héroïne).
 CONCEPTS = {
-    # --- Direction A — Cinématographique (photoréaliste stylisé) ---
-    "decor_dechire": (
-        "Cinematic book cover illustration, dystopian psychological thriller. A woman in a "
-        "long coat seen from behind, standing in a hospital corridor bathed in cold fluorescent "
-        "light, facing a door numbered 404. The corridor wall on one side is torn open like "
-        "theater scenery, revealing behind it a vast dark film studio: scaffolding, spotlights "
-        "on rigs, thick cables, and one small red recording light glowing in the blackness. "
-        "Dramatic contrast, teal and amber grade, volumetric light, fine film grain, painterly "
-        "photorealism, ultra detailed, no text, no letters. Vertical 5:8 composition, upper "
-        "third kept darker and simpler for the title."),
-    "chambre_plateau": (
-        "Cinematic book cover illustration. A hospital room seen from above at a slight angle: "
-        "a woman sits on the edge of the bed in pale morning light — but the walls of the room "
-        "stop like stage-set panels, and beyond them stretches an immense dark soundstage with "
-        "camera cranes and silhouetted technicians watching her. She is the only lit element. "
-        "Oppressive scale, cold light inside the set, warm darkness outside, hyper-detailed, no "
-        "text. Vertical 5:8, negative space at the top for the title."),
-    # --- Direction B — Graphique / illustrée (style affiche) ---
-    "saul_bass": (
-        "Modern graphic thriller book cover, bold flat illustration style inspired by Saul Bass "
-        "and contemporary noir covers. A woman's silhouette walks inside the giant red digits "
-        "\"404\" shaped like corridors seen in cross-section; tiny surveillance camera shapes "
-        "hidden in the negative space. Limited palette: deep black, blood red, off-white. Strong "
-        "shapes, screen-print texture, high contrast, no text, no letters, vertical 5:8."),
-    "oeil_ecran": (
-        "Striking graphic book cover illustration: a woman's profile face merging into a wall of "
-        "hundreds of tiny glowing television screens, each screen showing a fragment of an "
-        "ordinary life; one screen is blood red. Duotone palette (near-black blue and warm "
-        "off-white, single red accent), grainy risograph texture, bold poster composition, no "
-        "text, vertical 5:8."),
+    # 1 — Profil : l'arrière du crâne se dissout dans la grille d'écrans.
+    "ecran_profil": (
+        "Dystopian psychological thriller book cover, cinematic photograph. Realistic close side"
+        " profile of a pensive woman in her early forties, calm expression, soft dramatic side"
+        " lighting on real skin. The back of her head and neck gradually dissolve into a neat"
+        " rectangular grid of old cathode-ray television monitors. Each screen clearly shows a"
+        " coherent quiet moment of HER OWN life — a child laughing, a kitchen at breakfast, a"
+        " hospital bed, a suburban living room, a wedding photo — as if her whole existence is"
+        " being broadcast. One single screen in the grid glows blood red." + COMMON),
+    # 2 — Face : le vrai visage apparaît DERRIÈRE un mur d'écrans, prisonnière.
+    "ecran_face": (
+        "Dystopian psychological thriller book cover, cinematic photograph. A realistic woman's"
+        " face seen looking straight at the viewer through the narrow gaps of a large orderly"
+        " wall of glowing old television screens, as if she is trapped behind the monitors. Her"
+        " real eyes and part of her face are visible between the screens. Every surrounding"
+        " screen shows a calm ordinary moment of the SAME woman's life, arranged in a clean grid;"
+        " one screen flickers red. Moody surveillance atmosphere, volumetric light." + COMMON),
+    # 3 — Œil macro : la grille d'écrans se reflète dans l'iris.
+    "ecran_oeil": (
+        "Dystopian psychological thriller book cover, cinematic photograph. Extreme realistic"
+        " macro close-up of a single human eye, hyper-detailed iris and eyelashes, real skin"
+        " around it in shadow. Reflected sharply and in miniature inside the iris: an orderly"
+        " wall of surveillance monitors, each tiny screen showing a coherent scene of the same"
+        " woman's daily life, and a hidden film crew filming her. One reflected screen glows"
+        " red. The rest of the frame falls into deep shadow." + COMMON),
+    # 4 — Spectatrice : de dos face au mur d'écrans qui diffuse sa propre vie.
+    "ecran_spectatrice": (
+        "Dystopian psychological thriller book cover, cinematic photograph. A realistic woman"
+        " seen from behind, sitting alone in a dark room, her shoulders and hair softly lit by"
+        " the glow of an enormous orderly wall of television screens that fills the frame in"
+        " front of her. Every screen shows a coherent moment of her own life and her own face at"
+        " different ages, turning her into the spectator of her fabricated existence. A single"
+        " screen burns red. Cold blue rim light on her silhouette." + COMMON),
 }
 
 
@@ -139,7 +155,8 @@ def run_concept(session, key, prompt, out, retries=2):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default="art")
-    ap.add_argument("--concepts", default="decor_dechire,chambre_plateau,saul_bass,oeil_ecran")
+    ap.add_argument("--concepts",
+                    default="ecran_profil,ecran_face,ecran_oeil,ecran_spectatrice")
     a = ap.parse_args()
 
     key = os.getenv("RUNWARE_API_KEY", "")
