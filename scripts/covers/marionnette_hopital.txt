@@ -1,0 +1,2 @@
+Prompt de reference (documentation) pour le concept marionnette_hopital v2.
+Voir CONCEPTS['marionnette_hopital'] dans runware_cover.py.
