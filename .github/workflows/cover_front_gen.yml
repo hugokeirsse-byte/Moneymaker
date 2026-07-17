@@ -1,0 +1,113 @@
+name: cover_front_gen
+
+# Génère un concept (Runware text-to-image, FLUX 1.1 Pro) puis compose
+# UNIQUEMENT la face avec un titre unique centré/intégré (ex. « 404 »).
+# Sert à obtenir une nouvelle image fidèle à un brief précis. Lancement manuel.
+
+on:
+  workflow_dispatch:
+    inputs:
+      concept:
+        default: "marionnette_hopital"
+        required: true
+      title:
+        default: "404"
+        required: true
+      author:
+        default: "SHIRO KEGESU"
+        required: true
+      center:
+        default: "0.30"
+        required: false
+      cap:
+        default: "0.135"
+        required: false
+
+permissions:
+  contents: write
+
+jobs:
+  gen_front:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (sparse — scripts uniquement)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          sparse-checkout: |
+            scripts/covers
+          sparse-checkout-cone-mode: false
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: python -m pip install --quiet requests Pillow fonttools
+
+      - name: Prepare fonts
+        run: |
+          mkdir -p assets/cover_fonts
+          npm install --no-save @fontsource/bebas-neue @fontsource/oswald @fontsource/cormorant-garamond
+          python - <<'PY'
+          from fontTools.ttLib import TTFont
+          conv = {
+            "node_modules/@fontsource/bebas-neue/files/bebas-neue-latin-400-normal.woff": "assets/cover_fonts/BebasNeue-Regular.ttf",
+            "node_modules/@fontsource/oswald/files/oswald-latin-600-normal.woff": "assets/cover_fonts/Oswald-SemiBold.ttf",
+            "node_modules/@fontsource/oswald/files/oswald-latin-400-normal.woff": "assets/cover_fonts/Oswald-Regular.ttf",
+            "node_modules/@fontsource/cormorant-garamond/files/cormorant-garamond-latin-500-italic.woff": "assets/cover_fonts/Cormorant-Italic.ttf",
+          }
+          for s, d in conv.items():
+              f = TTFont(s); f.flavor = None; f.save(d); print("OK", d)
+          PY
+
+      - name: Generate art (Runware FLUX)
+        env:
+          RUNWARE_API_KEY: ${{ secrets.RUNWARE_API_KEY }}
+          CONCEPT: ${{ github.event.inputs.concept }}
+        run: |
+          set -e
+          python scripts/covers/runware_cover.py --out art --concepts "$CONCEPT"
+
+      - name: Compose front (titre unique centré/intégré)
+        env:
+          CONCEPT: ${{ github.event.inputs.concept }}
+        run: |
+          set -e
+          mkdir -p output/front
+          python scripts/covers/compose_front_title.py \
+            --art "art/${CONCEPT}.png" \
+            --title "${{ github.event.inputs.title }}" \
+            --author "${{ github.event.inputs.author }}" \
+            --center "${{ github.event.inputs.center }}" \
+            --cap "${{ github.event.inputs.cap }}" \
+            --out output/front
+
+      - name: List outputs
+        run: find output/front art -type f -printf '%p  %k Ko\n' | sort
+
+      - name: Upload front artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cycle404-front-gen
+          path: |
+            output/front/**
+            art/**
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Publish preview to branch covers-output
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          rm -rf /tmp/pv && mkdir -p /tmp/pv
+          cp output/front/cover_front.jpg "/tmp/pv/${{ github.event.inputs.concept }}_front404.jpg"
+          cd /tmp/pv
+          git init -q
+          git checkout -q -b covers-output
+          git add -A
+          git -c user.name=ci -c user.email=ci@example.com commit -q -m "front gen ${{ github.run_id }}"
+          git push -q -f "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" covers-output
+          echo "Preview front (gen) poussée sur covers-output."

@@ -84,6 +84,21 @@ CONCEPTS = {
         " with a single red accent, soft volumetric dusk light, fine film grain, eerie and"
         " melancholic. Dark uncluttered sky in the upper area reserved for the title. No text, no"
         " letters, no logo. Vertical 5:8."),
+    # B-bis — Marionnette + blouse d'hôpital + fils sur tout le décor (génération native).
+    "marionnette_hopital": (
+        "Dystopian psychological thriller book cover, cinematic photograph. A woman seen from"
+        " behind, standing alone in the exact middle of the empty main street of a quiet, too-"
+        "perfect symmetrical provincial town at dusk, low three-quarter angle. She wears a plain"
+        " pale greenish-blue HOSPITAL PATIENT GOWN with an open back tied with fabric straps, hem"
+        " at the knees, bare calves, like an amnesiac patient who wandered out of a hospital; her"
+        " bare upper back and shoulder blades are visible through the open-back gown. From her"
+        " shoulders, wrists and head rise thin marionette strings to a wooden control cross high"
+        " above against the dark cloudy sky. In addition, faint, thin, barely visible pale strings"
+        " also descend from the sky onto the rooftops and facades of the identical houses on both"
+        " sides of the street, as if the entire neighbourhood set is being manipulated too. One"
+        " tiny red light glows far down the street. Cold teal dusk palette, a single red accent,"
+        " soft volumetric light, fine film grain, eerie and melancholic. Dark uncluttered upper"
+        " sky reserved for the title. No text, no letters, no logo. Vertical 5:8."),
     # C — Les enfants dans les murs : deuil fabriqué, mur = décor peint.
     "mur_enfants": (
         "Dystopian psychological thriller book cover, cinematic photograph. Intimate close shot of"
