@@ -47,7 +47,7 @@ def draw_tracked_center(d, cx, y, s, f, fill, tracking):
         x += d.textlength(ch, font=f) + tracking
 
 
-def gradient_scrim_top(base, rect, height_frac=0.24, max_alpha=72):
+def gradient_scrim_top(base, rect, height_frac=0.22, max_alpha=78):
     """Voile sombre dégradé en haut du rect (lisibilité de l'accroche)."""
     x0, y0, x1, y1 = rect
     h = max(1, int((y1 - y0) * height_frac))
@@ -61,16 +61,24 @@ def gradient_scrim_top(base, rect, height_frac=0.24, max_alpha=72):
 
 def draw_tagline(base, rect, lines):
     """Accroche : 3 lignes empilées, tout en haut, petites capitales, tracking large,
-    blanc cassé 85 %, aucun glow."""
+    blanc cassé 85 %, aucun glow. Auto-ajustée en largeur. Retourne le bas du bloc."""
     x0, y0, x1, y1 = rect
+    fw = x1 - x0
     fh = y1 - y0
     cx = (x0 + x1) / 2
-    cap = int(fh * 0.040)
-    f = font(F_TAG, int(cap * 1.35))
-    tracking = int(cap * 0.38)
-    asc, desc = f.getmetrics()
-    lh = int((asc + desc) * 1.10)
-    top = y0 + int(fh * 0.075)
+    max_w = fw * 0.94
+    cap = int(fh * 0.034)
+    min_cap = int(fh * 0.020)
+    probe = ImageDraw.Draw(base)
+    while True:
+        f = font(F_TAG, int(cap * 1.35))
+        tracking = int(cap * 0.22)
+        longest = max(text_w(probe, ln.upper(), f, tracking) for ln in lines)
+        if longest <= max_w or cap <= min_cap:
+            break
+        cap -= 2
+    lh = int(cap * 1.32)
+    top = y0 + int(fh * 0.055)
     overlay = Image.new("RGBA", base.size, (0, 0, 0, 0))
     od = ImageDraw.Draw(overlay)
     col = INK_WHITE + (217,)  # 85 %
@@ -84,21 +92,21 @@ def draw_tagline(base, rect, lines):
             x += od.textlength(ch, font=f) + tracking
         y += lh
     out = Image.alpha_composite(base.convert("RGBA"), overlay).convert("RGB")
-    return out
+    return out, top + lh * len(lines)
 
 
-def draw_title_block(base, rect, title):
+def draw_title_block(base, rect, title, top_y):
     x0, y0, x1, y1 = rect
     fh = y1 - y0
     cx = (x0 + x1) / 2
-    cap = int(fh * 0.150)
+    cap = int(fh * 0.145)
     tf = font(F_TITLE, int(cap * 1.38))
     words = title.split()
     w1 = words[0] if words else title
     w2 = words[1] if len(words) > 1 else ""
     asc, desc = tf.getmetrics()
     line_h = asc + desc
-    top = y0 + int(fh * 0.170)
+    top = int(top_y)
     tr = int(cap * 0.06)
     d = ImageDraw.Draw(base)
     draw_tracked_center(d, cx, top, w1, tf, INK_WHITE, tr)
@@ -130,9 +138,12 @@ def draw_author(base, rect, author):
 
 
 def draw_front(base, rect, title, tagline_lines, author):
-    base = gradient_scrim_top(base, rect, 0.24, 72)
-    base = draw_tagline(base, rect, tagline_lines)
-    base = draw_title_block(base, rect, title)
+    x0, y0, x1, y1 = rect
+    fh = y1 - y0
+    base = gradient_scrim_top(base, rect, 0.22, 78)
+    base, tag_bottom = draw_tagline(base, rect, tagline_lines)
+    title_top = max(y0 + int(fh * 0.20), tag_bottom + int(fh * 0.035))
+    base = draw_title_block(base, rect, title, title_top)
     base = draw_author(base, rect, author)
     return base
 
