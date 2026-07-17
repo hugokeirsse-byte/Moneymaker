@@ -59,6 +59,44 @@ CONCEPTS = {
         " melancholic and unsettling. The wall above the window stays dim and uncluttered for the"
         " title. No text, no letters, no logos anywhere in the image."),
 
+    # === 3 nouvelles directions inspirées du résumé ===
+    # A — Le plateau : le salon parfait dont le mur du fond s'ouvre sur un plateau de tournage.
+    "plateau_salon": (
+        "Dystopian psychological thriller book cover, cinematic photograph. A warm, perfect"
+        " provincial living room at night — old stone walls, a lit table lamp, framed family"
+        " photographs, a worn armchair — but the entire back wall of the room is a theatrical set"
+        " flat that stops in mid-air like stage scenery, revealing behind it a vast dark film"
+        " soundstage: steel scaffolding, a professional camera on a crane, thick cables coiled on"
+        " the floor, and the silhouettes of a hidden film crew quietly watching. One small red"
+        " recording light glows in the darkness. The cosy room is the only warmly lit element; the"
+        " studio behind is cold and immense. Photorealistic, cinematic teal-and-amber grade,"
+        " volumetric light, fine film grain, unsettling. Dark uncluttered upper area reserved for"
+        " the title. No text, no letters, no logo. Vertical 5:8."),
+    # B — Les fils : femme marionnette dans une ville trop parfaite.
+    "fils_marionnette": (
+        "Dystopian psychological thriller book cover, cinematic photograph. A woman in a pale"
+        " dress stands alone in the middle of the empty main street of a quiet, slightly too-"
+        "perfect provincial town at dusk, seen from a low three-quarter angle. From her shoulders,"
+        " wrists and head rise thin, almost invisible marionette strings that climb high and"
+        " vanish into the dark sky above, where a faint wooden control cross is barely suggested"
+        " in shadow. The town is immaculate, symmetrical and deserted, unnaturally staged and"
+        " still. One tiny red light glows on a distant rooftop. Photorealistic, muted cold palette"
+        " with a single red accent, soft volumetric dusk light, fine film grain, eerie and"
+        " melancholic. Dark uncluttered sky in the upper area reserved for the title. No text, no"
+        " letters, no logo. Vertical 5:8."),
+    # C — Les enfants dans les murs : deuil fabriqué, mur = décor peint.
+    "mur_enfants": (
+        "Dystopian psychological thriller book cover, cinematic photograph. Intimate close shot of"
+        " a woman in profile pressing her cheek and open palm against an old flowered wallpaper"
+        " wall inside a stone house, eyes closed, listening intently. Through fine cracks and a"
+        " peeling corner of the wallpaper, warm golden light escapes and the faint ghostly"
+        " silhouettes of two small children playing are barely visible, as if trapped inside the"
+        " wall; behind the peeled strip the wall is revealed to be a painted stage backdrop on"
+        " plywood. Melancholic and uncanny, warm amber light against cold blue shadow, one small"
+        " red glow deep inside a crack. Photorealistic, real skin texture, fine film grain. Dark"
+        " uncluttered upper area reserved for the title. No text, no letters, no logo. Vertical"
+        " 5:8."),
+
     # --- variations « visage + mur d'écrans » (conservées) ---
     "ecran_profil": (
         "Dystopian psychological thriller book cover, cinematic photograph. Realistic close side"
