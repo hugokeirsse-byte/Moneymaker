@@ -34,6 +34,10 @@ on:
         description: "Hauteur de capitale du titre (fraction de la hauteur)"
         default: "0.135"
         required: false
+      style:
+        description: "Style du titre : solid ou cloud"
+        default: "solid"
+        required: false
 
 permissions:
   contents: write
@@ -113,6 +117,7 @@ jobs:
             --author "${{ github.event.inputs.author }}" \
             --center "${{ github.event.inputs.center }}" \
             --cap "${{ github.event.inputs.cap }}" \
+            --style "${{ github.event.inputs.style }}" \
             --out output/front
 
       - name: List outputs
