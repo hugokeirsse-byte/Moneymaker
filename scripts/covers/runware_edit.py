@@ -5,9 +5,9 @@ en ne modifiant QUE ce qui est demandé (le reste de l'image est préservé).
 
 Entrée : --in <png>  |  Sortie : --out <png>  |  Instruction : --prompt "..."
 
-L'image est envoyée en base64 (data URI) comme referenceImage. On plafonne le
-côté le plus long à 1344 px pour rester dans les limites du modèle d'édition ;
-la composition finale ré-upscale ensuite.
+FLUX Kontext n'accepte qu'une liste fixe de dimensions : on snappe donc sur
+celle dont le ratio est le plus proche de l'image source. L'image est envoyée
+en base64 (data URI) comme referenceImage ; la composition finale ré-upscale.
 
 Nécessite RUNWARE_API_KEY.
 """
@@ -35,11 +35,17 @@ _ov = os.getenv("RUNWARE_KONTEXT_MODEL", "").strip()
 if _ov:
     MODEL_CHAIN = [_ov] + [m for m in MODEL_CHAIN if m != _ov]
 
-MAX_SIDE = 1344
+# Dimensions acceptées par FLUX Kontext (largeur, hauteur).
+KONTEXT_DIMS = [
+    (1568, 672), (1392, 752), (1184, 880), (1248, 832), (1024, 1024),
+    (832, 1248), (880, 1184), (752, 1392), (672, 1568),
+]
 
 
-def round64(n):
-    return max(256, (int(n) // 64) * 64)
+def snap_dims(w, h):
+    """Choisit la dimension Kontext dont le ratio est le plus proche."""
+    r = w / float(h)
+    return min(KONTEXT_DIMS, key=lambda d: abs(d[0] / float(d[1]) - r))
 
 
 def post(session, tasks, timeout=180):
@@ -97,9 +103,7 @@ def main():
         sys.exit(2)
 
     im = Image.open(a.inp).convert("RGB")
-    w, h = im.size
-    scale = min(1.0, MAX_SIDE / float(max(w, h)))
-    tw, th = round64(w * scale), round64(h * scale)
+    tw, th = snap_dims(im.width, im.height)
     im = im.resize((tw, th), Image.LANCZOS)
     buf = BytesIO()
     im.save(buf, "PNG")
