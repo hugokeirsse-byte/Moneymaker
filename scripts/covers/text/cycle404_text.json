@@ -1,0 +1,33 @@
+{
+  "tagline": [
+    "On prend la même.",
+    "On efface tout.",
+    "On recommence."
+  ],
+  "resume_blocks": [
+    {
+      "style": "bold",
+      "text": "Florence se réveille dans un lit d'hôpital. Elle ne sait pas qu'elle s'appelle Florence. D'ailleurs, elle ne sait plus rien du tout."
+    },
+    {
+      "style": "regular",
+      "text": "Alors on lui rend sa vie, pièce par pièce : un mari dévoué, une maison de pierre au bout d'un hameau, et cette nuit de novembre qui lui a pris ses deux enfants. Un deuil à porter. Une existence entière à réapprendre par cœur."
+    },
+    {
+      "style": "regular",
+      "text": "Mais quelque chose cloche. Autour d'elle, tout semble orchestré : les journées se déroulent sans un accroc, rien ne laisse place à l'imprévu, et le monde paraît toujours prêt une seconde avant qu'elle n'arrive. Certaines nuits, elle jurerait même entendre ses enfants rire dans les murs."
+    },
+    {
+      "style": "regular",
+      "text": "Son mari lui parle de temps. Les blouses blanches, de convalescence. Florence, elle, observe. Se tait. Vérifie. Elle en vient à douter de tout — chaque détail compte, chaque silence pèse, chaque coïncidence tombe un peu trop juste. Jusqu'à cette question qu'elle n'ose d'abord pas s'avouer :"
+    },
+    {
+      "style": "question",
+      "text": "et si toute sa vie n'était qu'un coup monté ?"
+    },
+    {
+      "style": "italic",
+      "text": "Satire glaçante de la société du spectacle et de ses dérives, Cycle 404 imagine un monde où l'observation est devenue une arme — et où même les innocents peuvent se réveiller, un matin, du mauvais côté de l'écran."
+    }
+  ]
+}

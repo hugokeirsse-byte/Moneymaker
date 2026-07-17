@@ -1,32 +1,24 @@
-name: cover_edit
+name: cover_finalize
 
-# Édite l'art d'un run précédent via FLUX Kontext (retouche ciblée : on garde
-# l'image et on ne modifie que ce que décrit edit_prompt), puis recompose la
-# couverture KDP et publie les aperçus. Lancement manuel.
+# Finalisation KDP : applique l'accroche + la 4e de couverture + le dos + les
+# exports définitifs sur l'art validé d'un run précédent (aucune regénération).
 
 on:
   workflow_dispatch:
     inputs:
       source_run_id:
-        description: "Run ID contenant l'art à éditer"
+        description: "Run ID contenant l'art validé"
         required: true
       source_artifact:
         description: "Nom de l'artifact source"
-        default: "cycle404-covers"
+        default: "cycle404-covers-edited"
         required: true
       concept:
-        description: "Concept (nom du fichier art sans extension)"
         default: "fenetre_auditorium"
-        required: true
-      edit_prompt:
-        description: "Instruction d'édition (anglais recommandé)"
         required: true
       title:
         default: "CYCLE 404"
         required: true
-      tagline:
-        default: ""
-        required: false
       author:
         default: "SHIRO KEGESU"
         required: true
@@ -39,7 +31,7 @@ permissions:
   actions: read
 
 jobs:
-  edit:
+  finalize:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout (sparse — scripts uniquement)
@@ -56,9 +48,9 @@ jobs:
           python-version: "3.11"
 
       - name: Install deps
-        run: python -m pip install --quiet requests Pillow fonttools
+        run: python -m pip install --quiet Pillow fonttools
 
-      - name: Prepare fonts (Bebas Neue, Oswald, Cormorant Italic)
+      - name: Prepare fonts (Bebas, Oswald 300/400/600, Cormorant Italic)
         run: |
           mkdir -p assets/cover_fonts
           npm install --no-save @fontsource/bebas-neue @fontsource/oswald @fontsource/cormorant-garamond
@@ -83,75 +75,49 @@ jobs:
           run-id: ${{ github.event.inputs.source_run_id }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Edit art (Runware FLUX Kontext)
+      - name: Finalize (accroche + 4e + dos + exports)
         env:
-          RUNWARE_API_KEY: ${{ secrets.RUNWARE_API_KEY }}
           CONCEPT: ${{ github.event.inputs.concept }}
-          EDIT_PROMPT: ${{ github.event.inputs.edit_prompt }}
         run: |
           set -e
-          mkdir -p art
+          mkdir -p output/final
           if [ ! -f "prev/art/${CONCEPT}.png" ]; then
             echo "::error::prev/art/${CONCEPT}.png introuvable dans l'artifact source"
             find prev -type f | sort
             exit 1
           fi
-          python scripts/covers/runware_edit.py \
-            --in "prev/art/${CONCEPT}.png" \
-            --out "art/${CONCEPT}.png" \
-            --prompt "$EDIT_PROMPT"
-
-      - name: Compose cover (typo + wrap KDP)
-        env:
-          CONCEPT: ${{ github.event.inputs.concept }}
-        run: |
-          set -e
-          mkdir -p output/covers
-          python scripts/covers/compose_cover.py \
-            --art "art/${CONCEPT}.png" \
-            --concept "${CONCEPT}" \
+          python scripts/covers/finalize_cover.py \
+            --art "prev/art/${CONCEPT}.png" \
+            --textjson scripts/covers/text/cycle404_text.json \
             --title "${{ github.event.inputs.title }}" \
-            --tagline "${{ github.event.inputs.tagline }}" \
             --author "${{ github.event.inputs.author }}" \
             --pages "${{ github.event.inputs.pages }}" \
-            --out output/covers
-
-      - name: Contact sheet + vignettes 100px
-        run: |
-          python scripts/covers/contact_sheet.py \
-            --covers output/covers \
-            --concepts "${{ github.event.inputs.concept }}"
+            --out output/final
 
       - name: List outputs
-        run: find output/covers art -type f -printf '%p  %k Ko\n' | sort
+        run: find output/final -type f -printf '%p  %k Ko\n' | sort
 
-      - name: Upload edited covers artifact
+      - name: Upload final artifact
         uses: actions/upload-artifact@v4
         with:
-          name: cycle404-covers-edited
-          path: |
-            output/covers/**
-            art/**
+          name: cycle404-final
+          path: output/final/**
           if-no-files-found: error
-          retention-days: 14
+          retention-days: 30
 
-      - name: Publish lightweight previews to branch covers-output
+      - name: Publish previews to branch covers-output
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -e
           rm -rf /tmp/pv && mkdir -p /tmp/pv
-          cp output/covers/contact_sheet.png /tmp/pv/ 2>/dev/null || true
-          cp output/covers/thumbnails_100px.png /tmp/pv/ 2>/dev/null || true
-          for d in output/covers/*/; do
-            c="$(basename "$d")"
-            [ -f "$d/preview_montage.png" ] && cp "$d/preview_montage.png" "/tmp/pv/${c}_edit_montage.png"
-            [ -f "$d/cover_ebook.jpg" ]     && cp "$d/cover_ebook.jpg"     "/tmp/pv/${c}_edit_ebook.jpg"
-          done
+          cp output/final/cover_ebook_final.jpg      /tmp/pv/ 2>/dev/null || true
+          cp output/final/preview_montage.png        /tmp/pv/final_preview_montage.png 2>/dev/null || true
+          cp output/final/cover_paperback_final.png  /tmp/pv/final_wrap.png 2>/dev/null || true
           cd /tmp/pv
           git init -q
           git checkout -q -b covers-output
           git add -A
-          git -c user.name=ci -c user.email=ci@example.com commit -q -m "previews cover_edit run ${{ github.run_id }}"
+          git -c user.name=ci -c user.email=ci@example.com commit -q -m "finalisation run ${{ github.run_id }}"
           git push -q -f "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" covers-output
-          echo "Previews édités poussés sur covers-output."
+          echo "Previews finales poussées sur covers-output."
