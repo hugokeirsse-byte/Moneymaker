@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """
 Génère les images d'art (face) des concepts de couverture « CYCLE 404 »
-via Runware, puis upscale IA ×4. Sauvegarde des PNG dans --out.
+via Runware, puis upscale IA (best-effort). Sauvegarde des PNG dans --out.
 
 Qualité maximale : essaie d'abord un modèle photo premium (FLUX 1.1 Pro,
 puis FLUX.1 Pro) et retombe automatiquement sur FLUX.1 Dev si le compte n'y
-a pas accès, pour garantir une sortie.
+a pas accès. L'upscale est best-effort : si le service Runware expire, on
+conserve l'image générée (pas d'échec du run).
 
 Nécessite RUNWARE_API_KEY (secret GitHub Actions).
 
@@ -38,7 +39,7 @@ if _override:
 CFG = 3.5
 STEPS = 34
 GEN_W, GEN_H = 832, 1344  # portrait ~5:8, divisibles par 64
-UPSCALE = 4
+UPSCALE = 2               # x2 : assez pour l'ebook (1600x2560) et évite le timeout du service
 
 CONCEPTS = {
     # Femme à la fenêtre, galets sur le rebord, reflet d'auditorium (spectateurs).
@@ -161,21 +162,39 @@ def download(url, path, timeout=120):
 
 
 def run_concept(session, key, prompt, out, retries=2):
+    # 1) Génération (doit réussir).
+    gen_url = None
     for attempt in range(retries + 1):
         try:
             if attempt:
                 time.sleep(2 ** attempt)
             gen_url, c1, model = generate_best(session, prompt)
-            print(f"[{key}] généré (cost={c1}) → upscale ×{UPSCALE}")
-            up_url, c2 = upscale(session, gen_url)
-            path = os.path.join(out, f"{key}.png")
-            n = download(up_url, path)
-            print(f"[{key}] OK {path} ({n // 1024} Ko, cost total≈{(c1 or 0)+(c2 or 0):.4f})")
-            return path
+            print(f"[{key}] généré (cost={c1}, modèle={model})")
+            break
         except Exception as exc:
-            print(f"[{key}] tentative {attempt+1} échouée: {exc}", file=sys.stderr)
-    print(f"[{key}] ÉCHEC définitif", file=sys.stderr)
-    return None
+            print(f"[{key}] génération tentative {attempt+1} échouée: {exc}", file=sys.stderr)
+    if not gen_url:
+        print(f"[{key}] ÉCHEC génération", file=sys.stderr)
+        return None
+
+    # 2) Upscale best-effort : si le service expire, on garde l'original.
+    final_url = gen_url
+    for attempt in range(2):
+        try:
+            if attempt:
+                time.sleep(2 ** attempt)
+            final_url, _ = upscale(session, gen_url)
+            print(f"[{key}] upscale ×{UPSCALE} OK")
+            break
+        except Exception as exc:
+            print(f"[{key}] upscale tentative {attempt+1} échouée (on garde l'original): {exc}",
+                  file=sys.stderr)
+            final_url = gen_url
+
+    path = os.path.join(out, f"{key}.png")
+    n = download(final_url, path)
+    print(f"[{key}] OK {path} ({n // 1024} Ko)")
+    return path
 
 
 def main():
