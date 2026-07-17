@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 """
 Génère les images d'art (face) des concepts de couverture « CYCLE 404 »
-via Runware FLUX.1 Dev, puis upscale IA ×4. Sauvegarde des PNG dans --out.
+via Runware, puis upscale IA ×4. Sauvegarde des PNG dans --out.
+
+Qualité maximale : essaie d'abord un modèle photo premium (FLUX 1.1 Pro,
+puis FLUX.1 Pro) et retombe automatiquement sur FLUX.1 Dev si le compte n'y
+a pas accès, pour garantir une sortie.
 
 Nécessite RUNWARE_API_KEY (secret GitHub Actions).
 
 Usage :
-  RUNWARE_API_KEY=... python runware_cover.py --out art \
-     --concepts ecran_profil,ecran_face,ecran_oeil,ecran_spectatrice
+  RUNWARE_API_KEY=... python runware_cover.py --out art --concepts fenetre_auditorium
 """
 from __future__ import annotations
 
@@ -20,60 +23,64 @@ import uuid
 import requests
 
 RUNWARE_URL = "https://api.runware.ai/v1"
-MODEL = os.getenv("RUNWARE_MODEL", "runware:101@1")  # FLUX.1 Dev
+
+# Chaîne de modèles, du plus qualitatif au repli garanti. Surchargable via
+# RUNWARE_MODEL (place alors ce modèle en tête de liste).
+MODEL_CHAIN = [
+    "bfl:2@1",        # FLUX 1.1 [pro] — photo premium
+    "bfl:1@1",        # FLUX.1 [pro]
+    "runware:101@1",  # FLUX.1 [dev] — repli garanti
+]
+_override = os.getenv("RUNWARE_MODEL", "").strip()
+if _override:
+    MODEL_CHAIN = [_override] + [m for m in MODEL_CHAIN if m != _override]
+
 CFG = 3.5
 STEPS = 34
 GEN_W, GEN_H = 832, 1344  # portrait ~5:8, divisibles par 64
 UPSCALE = 4
 
-# Suffixe commun : impose le rendu PHOTOréaliste (pas illustré) et réserve le
-# tiers supérieur sombre pour le titre. Une grille d'écrans NETTE et ORGANISÉE.
-COMMON = (
-    " Shot on a full-frame cinema camera, 85mm lens, photorealistic, hyper-detailed real"
-    " human skin with pores and fine texture, natural catchlights in the eyes, shallow depth"
-    " of field. Cold teal shadows and warm amber screen glow, cinematic color grade, subtle"
-    " film grain. The wall of screens is an ORDERLY rectangular grid of identical old CRT"
-    " monitors, each screen sharp and legible, NOT random noise. The upper third of the frame"
-    " is kept dark and uncluttered for a title. No text, no letters, no captions, no logo,"
-    " no watermark. Vertical 5:8 book-cover composition."
-)
-
-# 4 variations issues du concept « visage + mur d'écrans » (oeil_ecran),
-# mais VISAGE RÉALISTE et écrans COHÉRENTS (fragments de la vie de l'héroïne).
 CONCEPTS = {
-    # 1 — Profil : l'arrière du crâne se dissout dans la grille d'écrans.
+    # Femme à la fenêtre, galets sur le rebord, reflet d'auditorium (spectateurs).
+    "fenetre_auditorium": (
+        "Cinematic book cover illustration, dystopian psychological thriller, vertical 5:8"
+        " composition, designed to read clearly as a small thumbnail. A single strong focal"
+        " figure: a woman in a pale hospital gown, seen from behind at three-quarter angle,"
+        " standing at a tall window in soft cold morning light, her dark silhouette contrasting"
+        " against the bright glass. On the window ledge, sharply detailed, four small round grey"
+        " pebbles: three grouped together, one placed apart. In the window glass, instead of the"
+        " room's reflection, there is the faint ghostly reflection of a vast dark auditorium"
+        " filled with rows of silhouetted seated spectators watching her; the reflection must be"
+        " subtle, readable only at second glance. A tiny red LED light is reflected in the upper"
+        " corner of the glass. Outside the window, a quiet, slightly too-perfect provincial town"
+        " under morning haze. Palette: cold teal shadows, pale amber window light, one red accent"
+        " only. Painterly photorealism, volumetric light, fine film grain, ultra detailed,"
+        " melancholic and unsettling. The wall above the window stays dim and uncluttered for the"
+        " title. No text, no letters, no logos anywhere in the image."),
+
+    # --- variations « visage + mur d'écrans » (conservées) ---
     "ecran_profil": (
         "Dystopian psychological thriller book cover, cinematic photograph. Realistic close side"
         " profile of a pensive woman in her early forties, calm expression, soft dramatic side"
         " lighting on real skin. The back of her head and neck gradually dissolve into a neat"
         " rectangular grid of old cathode-ray television monitors. Each screen clearly shows a"
-        " coherent quiet moment of HER OWN life — a child laughing, a kitchen at breakfast, a"
-        " hospital bed, a suburban living room, a wedding photo — as if her whole existence is"
-        " being broadcast. One single screen in the grid glows blood red." + COMMON),
-    # 2 — Face : le vrai visage apparaît DERRIÈRE un mur d'écrans, prisonnière.
+        " coherent quiet moment of HER OWN life. One single screen glows blood red. Shot on a"
+        " cinema camera, photorealistic real skin, cold teal and warm amber grade, film grain,"
+        " dark uncluttered upper third for the title. No text, no letters. Vertical 5:8."),
     "ecran_face": (
         "Dystopian psychological thriller book cover, cinematic photograph. A realistic woman's"
-        " face seen looking straight at the viewer through the narrow gaps of a large orderly"
-        " wall of glowing old television screens, as if she is trapped behind the monitors. Her"
-        " real eyes and part of her face are visible between the screens. Every surrounding"
-        " screen shows a calm ordinary moment of the SAME woman's life, arranged in a clean grid;"
-        " one screen flickers red. Moody surveillance atmosphere, volumetric light." + COMMON),
-    # 3 — Œil macro : la grille d'écrans se reflète dans l'iris.
-    "ecran_oeil": (
-        "Dystopian psychological thriller book cover, cinematic photograph. Extreme realistic"
-        " macro close-up of a single human eye, hyper-detailed iris and eyelashes, real skin"
-        " around it in shadow. Reflected sharply and in miniature inside the iris: an orderly"
-        " wall of surveillance monitors, each tiny screen showing a coherent scene of the same"
-        " woman's daily life, and a hidden film crew filming her. One reflected screen glows"
-        " red. The rest of the frame falls into deep shadow." + COMMON),
-    # 4 — Spectatrice : de dos face au mur d'écrans qui diffuse sa propre vie.
+        " face looking at the viewer through the narrow gaps of an orderly wall of glowing old"
+        " television screens, as if trapped behind the monitors. Each surrounding screen shows a"
+        " calm ordinary moment of the same woman's life in a clean grid; one screen flickers red."
+        " Photorealistic, volumetric light, film grain, dark uncluttered upper third for the"
+        " title. No text, no letters. Vertical 5:8."),
     "ecran_spectatrice": (
-        "Dystopian psychological thriller book cover, cinematic photograph. A realistic woman"
-        " seen from behind, sitting alone in a dark room, her shoulders and hair softly lit by"
-        " the glow of an enormous orderly wall of television screens that fills the frame in"
-        " front of her. Every screen shows a coherent moment of her own life and her own face at"
-        " different ages, turning her into the spectator of her fabricated existence. A single"
-        " screen burns red. Cold blue rim light on her silhouette." + COMMON),
+        "Dystopian psychological thriller book cover, cinematic photograph. A realistic woman seen"
+        " from behind, alone in a dark room, softly lit by an enormous orderly wall of television"
+        " screens filling the frame before her. Every screen shows a coherent moment of her own"
+        " life at different ages. A single screen burns red. Cold blue rim light, photorealistic,"
+        " film grain, dark uncluttered upper third for the title. No text, no letters. Vertical"
+        " 5:8."),
 }
 
 
@@ -96,20 +103,39 @@ def find(resp, uid, ttype):
     return None
 
 
-def generate(session, prompt):
+def generate(session, prompt, model):
     uid = str(uuid.uuid4())
     task = {
-        "taskType": "imageInference", "taskUUID": uid, "model": MODEL,
+        "taskType": "imageInference", "taskUUID": uid, "model": model,
         "positivePrompt": prompt, "width": GEN_W, "height": GEN_H,
-        "steps": STEPS, "CFGScale": CFG, "numberResults": 1,
-        "outputType": ["URL"], "outputFormat": "PNG",
-        "checkNSFW": False, "includeCost": True, "tiling": False,
+        "numberResults": 1, "outputType": ["URL"], "outputFormat": "PNG",
+        "checkNSFW": False, "includeCost": True,
     }
+    # Les modèles BFL (pro) gèrent steps/CFG en interne : on ne les envoie que
+    # pour les modèles runware/flux dev afin d'éviter un rejet de paramètres.
+    if not model.startswith("bfl:"):
+        task["steps"] = STEPS
+        task["CFGScale"] = CFG
+        task["tiling"] = False
     resp = post(session, [task])
     res = find(resp, uid, "imageInference")
     if not res or not res.get("imageURL"):
         raise RuntimeError(f"génération échouée: {res}")
     return res["imageURL"], res.get("cost")
+
+
+def generate_best(session, prompt):
+    """Essaie chaque modèle de la chaîne jusqu'à succès."""
+    last = None
+    for model in MODEL_CHAIN:
+        try:
+            url, cost = generate(session, prompt, model)
+            print(f"    ✓ modèle utilisé: {model}")
+            return url, cost, model
+        except Exception as exc:
+            print(f"    ✗ modèle {model} indisponible: {exc}", file=sys.stderr)
+            last = exc
+    raise RuntimeError(f"aucun modèle disponible: {last}")
 
 
 def upscale(session, url, factor=UPSCALE):
@@ -139,7 +165,7 @@ def run_concept(session, key, prompt, out, retries=2):
         try:
             if attempt:
                 time.sleep(2 ** attempt)
-            gen_url, c1 = generate(session, prompt)
+            gen_url, c1, model = generate_best(session, prompt)
             print(f"[{key}] généré (cost={c1}) → upscale ×{UPSCALE}")
             up_url, c2 = upscale(session, gen_url)
             path = os.path.join(out, f"{key}.png")
@@ -155,8 +181,7 @@ def run_concept(session, key, prompt, out, retries=2):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default="art")
-    ap.add_argument("--concepts",
-                    default="ecran_profil,ecran_face,ecran_oeil,ecran_spectatrice")
+    ap.add_argument("--concepts", default="fenetre_auditorium")
     a = ap.parse_args()
 
     key = os.getenv("RUNWARE_API_KEY", "")
@@ -164,6 +189,7 @@ def main():
         print("RUNWARE_API_KEY absente — impossible de générer.", file=sys.stderr)
         sys.exit(2)
 
+    print(f"Chaîne de modèles: {' → '.join(MODEL_CHAIN)}")
     os.makedirs(a.out, exist_ok=True)
     session = requests.Session()
     session.headers.update({"Authorization": f"Bearer {key}",
