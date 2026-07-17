@@ -59,7 +59,7 @@ CONCEPTS = {
         " melancholic and unsettling. The wall above the window stays dim and uncluttered for the"
         " title. No text, no letters, no logos anywhere in the image."),
 
-    # === 3 nouvelles directions inspirées du résumé ===
+    # === directions inspirées du résumé ===
     # A — Le plateau : le salon parfait dont le mur du fond s'ouvre sur un plateau de tournage.
     "plateau_salon": (
         "Dystopian psychological thriller book cover, cinematic photograph. A warm, perfect"
@@ -72,7 +72,7 @@ CONCEPTS = {
         " studio behind is cold and immense. Photorealistic, cinematic teal-and-amber grade,"
         " volumetric light, fine film grain, unsettling. Dark uncluttered upper area reserved for"
         " the title. No text, no letters, no logo. Vertical 5:8."),
-    # B — Les fils : femme marionnette dans une ville trop parfaite.
+    # B — Les fils : femme marionnette dans une ville trop parfaite (robe).
     "fils_marionnette": (
         "Dystopian psychological thriller book cover, cinematic photograph. A woman in a pale"
         " dress stands alone in the middle of the empty main street of a quiet, slightly too-"
@@ -84,21 +84,23 @@ CONCEPTS = {
         " with a single red accent, soft volumetric dusk light, fine film grain, eerie and"
         " melancholic. Dark uncluttered sky in the upper area reserved for the title. No text, no"
         " letters, no logo. Vertical 5:8."),
-    # B-bis — Marionnette + blouse d'hôpital + fils sur tout le décor (génération native).
+    # B-bis — Marionnette + blouse d'hôpital CLINIQUE + fils sur tout le décor, palette bleu-dusk.
     "marionnette_hopital": (
         "Dystopian psychological thriller book cover, cinematic photograph. A woman seen from"
         " behind, standing alone in the exact middle of the empty main street of a quiet, too-"
-        "perfect symmetrical provincial town at dusk, low three-quarter angle. She wears a plain"
-        " pale greenish-blue HOSPITAL PATIENT GOWN with an open back tied with fabric straps, hem"
-        " at the knees, bare calves, like an amnesiac patient who wandered out of a hospital; her"
-        " bare upper back and shoulder blades are visible through the open-back gown. From her"
+        "perfect symmetrical provincial town at dusk, low three-quarter angle. Cold desaturated"
+        " STEEL-BLUE and slate-grey dusk palette (definitely NOT green, NOT teal). She is clearly"
+        " a HOSPITAL PATIENT: she wears a plain pale blue-grey thin cotton hospital gown, wrinkled"
+        " and loose, open at the back with fabric ties, a white plastic hospital identification"
+        " wristband around her wrist, and she is barefoot on the cold asphalt — an amnesiac patient"
+        " who wandered out of a hospital, this is a medical gown and NOT a dress. From her"
         " shoulders, wrists and head rise thin marionette strings to a wooden control cross high"
         " above against the dark cloudy sky. In addition, faint, thin, barely visible pale strings"
-        " also descend from the sky onto the rooftops and facades of the identical houses on both"
-        " sides of the street, as if the entire neighbourhood set is being manipulated too. One"
-        " tiny red light glows far down the street. Cold teal dusk palette, a single red accent,"
-        " soft volumetric light, fine film grain, eerie and melancholic. Dark uncluttered upper"
-        " sky reserved for the title. No text, no letters, no logo. Vertical 5:8."),
+        " also descend from the sky onto the rooftops of the identical houses on both sides of the"
+        " street, as if the whole neighbourhood set is being manipulated too. One tiny red light"
+        " glows far down the street. A single red accent, soft volumetric dusk light, fine film"
+        " grain, eerie and melancholic. Dark uncluttered upper sky reserved for the title. No"
+        " text, no letters, no logo. Vertical 5:8."),
     # C — Les enfants dans les murs : deuil fabriqué, mur = décor peint.
     "mur_enfants": (
         "Dystopian psychological thriller book cover, cinematic photograph. Intimate close shot of"
