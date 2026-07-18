@@ -2,7 +2,7 @@ name: cover_front_gen
 
 # Génère un concept (Runware text-to-image, FLUX 1.1 Pro) puis compose
 # UNIQUEMENT la face avec un titre unique centré/intégré (ex. « 404 »).
-# Sert à obtenir une nouvelle image fidèle à un brief précis. Lancement manuel.
+# Lancement manuel.
 
 on:
   workflow_dispatch:
@@ -17,10 +17,14 @@ on:
         default: "SHIRO KEGESU"
         required: true
       center:
-        default: "0.30"
+        default: "0.135"
         required: false
       cap:
-        default: "0.135"
+        default: "0.15"
+        required: false
+      style:
+        description: "Style du titre : solid, cloud ou sky"
+        default: "sky"
         required: false
 
 permissions:
@@ -82,6 +86,7 @@ jobs:
             --author "${{ github.event.inputs.author }}" \
             --center "${{ github.event.inputs.center }}" \
             --cap "${{ github.event.inputs.cap }}" \
+            --style "${{ github.event.inputs.style }}" \
             --out output/front
 
       - name: List outputs
@@ -110,4 +115,4 @@ jobs:
           git add -A
           git -c user.name=ci -c user.email=ci@example.com commit -q -m "front gen ${{ github.run_id }}"
           git push -q -f "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" covers-output
-          echo "Preview front (gen) poussée sur covers-output."
+          echo "Preview front (gen) poussée."

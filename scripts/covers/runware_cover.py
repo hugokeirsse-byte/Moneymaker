@@ -25,8 +25,6 @@ import requests
 
 RUNWARE_URL = "https://api.runware.ai/v1"
 
-# Chaîne de modèles, du plus qualitatif au repli garanti. Surchargable via
-# RUNWARE_MODEL (place alors ce modèle en tête de liste).
 MODEL_CHAIN = [
     "bfl:2@1",        # FLUX 1.1 [pro] — photo premium
     "bfl:1@1",        # FLUX.1 [pro]
@@ -38,11 +36,10 @@ if _override:
 
 CFG = 3.5
 STEPS = 34
-GEN_W, GEN_H = 832, 1344  # portrait ~5:8, divisibles par 64
-UPSCALE = 2               # x2 : assez pour l'ebook (1600x2560) et évite le timeout du service
+GEN_W, GEN_H = 832, 1344
+UPSCALE = 2
 
 CONCEPTS = {
-    # Femme à la fenêtre, galets sur le rebord, reflet d'auditorium (spectateurs).
     "fenetre_auditorium": (
         "Cinematic book cover illustration, dystopian psychological thriller, vertical 5:8"
         " composition, designed to read clearly as a small thumbnail. A single strong focal"
@@ -58,9 +55,6 @@ CONCEPTS = {
         " only. Painterly photorealism, volumetric light, fine film grain, ultra detailed,"
         " melancholic and unsettling. The wall above the window stays dim and uncluttered for the"
         " title. No text, no letters, no logos anywhere in the image."),
-
-    # === directions inspirées du résumé ===
-    # A — Le plateau : le salon parfait dont le mur du fond s'ouvre sur un plateau de tournage.
     "plateau_salon": (
         "Dystopian psychological thriller book cover, cinematic photograph. A warm, perfect"
         " provincial living room at night — old stone walls, a lit table lamp, framed family"
@@ -72,7 +66,6 @@ CONCEPTS = {
         " studio behind is cold and immense. Photorealistic, cinematic teal-and-amber grade,"
         " volumetric light, fine film grain, unsettling. Dark uncluttered upper area reserved for"
         " the title. No text, no letters, no logo. Vertical 5:8."),
-    # B — Les fils : femme marionnette dans une ville trop parfaite (robe).
     "fils_marionnette": (
         "Dystopian psychological thriller book cover, cinematic photograph. A woman in a pale"
         " dress stands alone in the middle of the empty main street of a quiet, slightly too-"
@@ -84,24 +77,24 @@ CONCEPTS = {
         " with a single red accent, soft volumetric dusk light, fine film grain, eerie and"
         " melancholic. Dark uncluttered sky in the upper area reserved for the title. No text, no"
         " letters, no logo. Vertical 5:8."),
-    # B-bis — Marionnette + blouse d'hôpital CLINIQUE + fils sur tout le décor, palette bleu-dusk.
+    # v3 — blouse d'hôpital + fils FUSIONNÉS à la peau et aux vêtements, ciel nuageux dégagé.
     "marionnette_hopital": (
         "Dystopian psychological thriller book cover, cinematic photograph. A woman seen from"
         " behind, standing alone in the exact middle of the empty main street of a quiet, too-"
-        "perfect symmetrical provincial town at dusk, low three-quarter angle. Cold desaturated"
-        " STEEL-BLUE and slate-grey dusk palette (definitely NOT green, NOT teal). She is clearly"
-        " a HOSPITAL PATIENT: she wears a plain pale blue-grey thin cotton hospital gown, wrinkled"
-        " and loose, open at the back with fabric ties, a white plastic hospital identification"
-        " wristband around her wrist, and she is barefoot on the cold asphalt — an amnesiac patient"
-        " who wandered out of a hospital, this is a medical gown and NOT a dress. From her"
-        " shoulders, wrists and head rise thin marionette strings to a wooden control cross high"
-        " above against the dark cloudy sky. In addition, faint, thin, barely visible pale strings"
-        " also descend from the sky onto the rooftops of the identical houses on both sides of the"
-        " street, as if the whole neighbourhood set is being manipulated too. One tiny red light"
-        " glows far down the street. A single red accent, soft volumetric dusk light, fine film"
-        " grain, eerie and melancholic. Dark uncluttered upper sky reserved for the title. No"
-        " text, no letters, no logo. Vertical 5:8."),
-    # C — Les enfants dans les murs : deuil fabriqué, mur = décor peint.
+        "perfect symmetrical provincial suburb at cold winter dusk, thin snow on the verges, low"
+        " three-quarter angle. Cold desaturated STEEL-BLUE and slate-grey palette (not green, not"
+        " teal). She is clearly a HOSPITAL PATIENT: a plain pale blue-grey thin wrinkled hospital"
+        " gown open at the back, a white hospital identification wristband on her wrist, barefoot"
+        " on the cold asphalt, an amnesiac patient. Thin pale marionette strings EMERGE SEAMLESSLY"
+        " FROM HER BODY — they grow directly out of the skin of her shoulders, her upper back, the"
+        " backs of her hands and the crown of her head, and out of the fabric of her gown, with no"
+        " visible knots or hooks, as if the strings are fused into her skin and clothes; the"
+        " strings then rise straight up and dissolve softly into the overcast cloudy sky. Faint,"
+        " thin, barely visible pale strings also descend from the sky onto the rooftops of the"
+        " identical houses on both sides. Two tiny red lights glow far down the street. A soft band"
+        " of pale grey clouds fills the upper third of the sky, kept relatively open and"
+        " uncluttered for a title. Soft volumetric dusk light, fine film grain, eerie and"
+        " melancholic. No text, no letters, no logo. Vertical 5:8."),
     "mur_enfants": (
         "Dystopian psychological thriller book cover, cinematic photograph. Intimate close shot of"
         " a woman in profile pressing her cheek and open palm against an old flowered wallpaper"
@@ -113,8 +106,6 @@ CONCEPTS = {
         " red glow deep inside a crack. Photorealistic, real skin texture, fine film grain. Dark"
         " uncluttered upper area reserved for the title. No text, no letters, no logo. Vertical"
         " 5:8."),
-
-    # --- variations « visage + mur d'écrans » (conservées) ---
     "ecran_profil": (
         "Dystopian psychological thriller book cover, cinematic photograph. Realistic close side"
         " profile of a pensive woman in her early forties, calm expression, soft dramatic side"
@@ -167,8 +158,6 @@ def generate(session, prompt, model):
         "numberResults": 1, "outputType": ["URL"], "outputFormat": "PNG",
         "checkNSFW": False, "includeCost": True,
     }
-    # Les modèles BFL (pro) gèrent steps/CFG en interne : on ne les envoie que
-    # pour les modèles runware/flux dev afin d'éviter un rejet de paramètres.
     if not model.startswith("bfl:"):
         task["steps"] = STEPS
         task["CFGScale"] = CFG
@@ -181,7 +170,6 @@ def generate(session, prompt, model):
 
 
 def generate_best(session, prompt):
-    """Essaie chaque modèle de la chaîne jusqu'à succès."""
     last = None
     for model in MODEL_CHAIN:
         try:
@@ -217,7 +205,6 @@ def download(url, path, timeout=120):
 
 
 def run_concept(session, key, prompt, out, retries=2):
-    # 1) Génération (doit réussir).
     gen_url = None
     for attempt in range(retries + 1):
         try:
@@ -232,7 +219,6 @@ def run_concept(session, key, prompt, out, retries=2):
         print(f"[{key}] ÉCHEC génération", file=sys.stderr)
         return None
 
-    # 2) Upscale best-effort : si le service expire, on garde l'original.
     final_url = gen_url
     for attempt in range(2):
         try:
