@@ -1,19 +1,17 @@
 #!/usr/bin/env python3
 """
-Composition FRONT seule avec un titre unique centré et INTÉGRÉ. Deux styles :
-  - solid : titre net avec ombre douce + léger halo rouge (intégration discrète).
-  - cloud : titre lumineux et brumeux, comme « dessiné dans les nuages » (bords
-            vaporeux, halo diffus) — pour que les fils semblent en descendre.
-
-Conçu pour la couverture « 404 » (concept marionnette) : le titre est placé
-dans une bande vide (les nuages / au-dessus du personnage) sans couvrir la
-figure.
+Composition FRONT seule avec un titre unique centré et INTÉGRÉ. Styles :
+  - solid : titre net, ombre douce + léger halo rouge (intégration discrète).
+  - cloud : titre lumineux et brumeux, comme dessiné dans un nuage.
+  - sky   : titre comme de la LUMIÈRE qui perce les nuages (trouées claires en
+            forme de chiffres) — intégré au ciel mais resté lisible ; les fils
+            semblent en descendre.
 
 Sortie : cover_front.jpg (1600x2560, RVB).
 
 Usage :
   python compose_front_title.py --art art.png --title 404 --author "SHIRO KEGESU" \
-      --center 0.16 --cap 0.135 --style cloud --out output/front
+      --center 0.135 --cap 0.15 --style sky --out output/front
 """
 from __future__ import annotations
 
@@ -69,34 +67,37 @@ def build(art_path, title, author, out, center_frac, cap_frac, style):
     total = text_w(probe, title, tf, tr)
     sx = cx - total / 2
 
-    if style == "cloud":
-        # 404 « dessiné dans les nuages » : superposition de halos flous, pas de
-        # bord dur, légère teinte froide — lumineux et vaporeux.
+    def layer(fill, blur, alpha=1.0):
+        lyr = _stamp_layer(base.size, title, tf, tr, sx, top, fill)
+        if blur:
+            lyr = lyr.filter(ImageFilter.GaussianBlur(px(blur)))
+        if alpha < 1.0:
+            lyr = _reduce_alpha(lyr, alpha)
+        return lyr
+
+    def over(b, lyr):
+        return Image.alpha_composite(b.convert("RGBA"), lyr).convert("RGB")
+
+    if style == "sky":
+        # 404 = lumière perçant les nuages : halos lumineux superposés + cœur
+        # doux (lisible). Teinte légèrement chaude/pâle.
+        warm = (255, 253, 246, 255)
+        base = over(base, layer(warm, 18, 0.55))   # bloom large
+        base = over(base, layer(warm, 7, 0.85))    # halo moyen
+        base = over(base, layer((255, 255, 250, 255), 2.4))  # cœur doux
+        base = over(base, layer((255, 255, 252, 255), 0.8, 0.55))  # net léger (lisibilité)
+    elif style == "cloud":
         white = (255, 255, 250, 255)
-        # halo très large (lueur diffuse dans les nuages)
-        wide = _stamp_layer(base.size, title, tf, tr, sx, top, white)
-        wide = _reduce_alpha(wide.filter(ImageFilter.GaussianBlur(px(16))), 0.55)
-        base = Image.alpha_composite(base.convert("RGBA"), wide).convert("RGB")
-        # halo moyen
-        mid = _stamp_layer(base.size, title, tf, tr, sx, top, white)
-        mid = _reduce_alpha(mid.filter(ImageFilter.GaussianBlur(px(6))), 0.75)
-        base = Image.alpha_composite(base.convert("RGBA"), mid).convert("RGB")
-        # cœur adouci (légèrement flou, légèrement transparent -> fondu nuageux)
-        core = _stamp_layer(base.size, title, tf, tr, sx, top, (255, 255, 252, 235))
-        core = core.filter(ImageFilter.GaussianBlur(px(1.4)))
-        base = Image.alpha_composite(base.convert("RGBA"), core).convert("RGB")
-    else:
-        # solid : ombre douce sombre + léger halo rouge + titre net.
-        shadow = _stamp_layer(base.size, title, tf, tr, sx, top, (0, 0, 0, 205))
-        shadow = shadow.filter(ImageFilter.GaussianBlur(px(6)))
-        base = Image.alpha_composite(base.convert("RGBA"), shadow).convert("RGB")
-        glow = _stamp_layer(base.size, title, tf, tr, sx, top, RED + (120,))
-        glow = glow.filter(ImageFilter.GaussianBlur(px(4)))
-        base = Image.alpha_composite(base.convert("RGBA"), glow).convert("RGB")
+        base = over(base, layer(white, 16, 0.55))
+        base = over(base, layer(white, 6, 0.75))
+        base = over(base, layer((255, 255, 252, 235), 1.4))
+    else:  # solid
+        base = over(base, layer((0, 0, 0, 205), 6))
+        base = over(base, layer(RED + (120,), 4))
         d = ImageDraw.Draw(base)
         draw_tracked_center(d, cx, top, title, tf, (247, 240, 235), tr)
 
-    # auteur en bas (net, dans les deux styles)
+    # auteur en bas (net, dans tous les styles)
     d = ImageDraw.Draw(base)
     af = font(F_TITLE, int(H * 0.042 * 1.38))
     ay = H - px(FACE_SAFETY_MM) - int(H * 0.055)
@@ -117,7 +118,7 @@ def main():
     ap.add_argument("--out", default="output/front")
     ap.add_argument("--center", type=float, default=0.30)
     ap.add_argument("--cap", type=float, default=0.135)
-    ap.add_argument("--style", default="solid", choices=["solid", "cloud"])
+    ap.add_argument("--style", default="solid", choices=["solid", "cloud", "sky"])
     a = ap.parse_args()
     build(a.art, a.title, a.author, a.out, a.center, a.cap, a.style)
 
