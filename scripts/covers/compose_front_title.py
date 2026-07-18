@@ -2,8 +2,9 @@
 """
 Composition FRONT : (optionnel) titre posé ET/OU un « 404 » brodé dans le dos.
 
-Styles de titre (--style) : solid | cloud | sky. Mettre --title " " (espace)
-pour ne PAS poser de titre.
+Styles de titre (--style) : solid | cloud | sky. Mettre --title NONE (ou espace)
+pour ne PAS poser de titre (GitHub Actions retransforme un input vide en valeur
+par défaut ; d'où la sentinelle NONE).
 
 Broderie dos (--emb-text 404) : numéro cousu (effet fil mat, léger relief), placé
 via --emb-cx/--emb-cy (fractions) et dimensionné par --emb-h.
@@ -23,6 +24,10 @@ from compose_cover import (  # noqa: E402
     DPI, px, font, F_TITLE, F_ITAL, INK_WHITE, RED, FACE_SAFETY_MM,
     fit_cover, add_grain, text_w,
 )
+
+
+def _title_active(title):
+    return bool(title and title.strip() and title.strip().upper() != "NONE")
 
 
 def draw_tracked_center(d, cx, y, s, f, fill, tracking):
@@ -50,19 +55,19 @@ def _stamp_layer(base_size, title, tf, tr, sx, top, fill):
 
 
 def draw_embroidery(base, text, cx_f, cy_f, h_f):
-    """'404' cousu dans le tissu : ombre + rehaut + fil mat, légèrement flouté."""
+    """'404' cousu dans le tissu : ombre + rehaut + fil mat, légèrement flou."""
     W, H = base.size
     cap = int(H * h_f)
-    f = font(F_ITAL, int(cap * 1.5))  # Cormorant italic : allure de monogramme brodé
+    f = font(F_ITAL, int(cap * 1.5))
     d0 = ImageDraw.Draw(base)
     tw = d0.textlength(text, font=f)
     x = W * cx_f - tw / 2
     y = H * cy_f - cap / 2
     layer = Image.new("RGBA", base.size, (0, 0, 0, 0))
     dl = ImageDraw.Draw(layer)
-    dl.text((x + px(0.5), y + px(0.6)), text, font=f, fill=(18, 24, 34, 160))     # ombre couture
-    dl.text((x - px(0.4), y - px(0.4)), text, font=f, fill=(240, 236, 222, 120))  # rehaut fil
-    dl.text((x, y), text, font=f, fill=(223, 217, 199, 235))                      # fil mat
+    dl.text((x + px(0.5), y + px(0.6)), text, font=f, fill=(18, 24, 34, 160))
+    dl.text((x - px(0.4), y - px(0.4)), text, font=f, fill=(240, 236, 222, 120))
+    dl.text((x, y), text, font=f, fill=(223, 217, 199, 235))
     layer = layer.filter(ImageFilter.GaussianBlur(px(0.4)))
     return Image.alpha_composite(base.convert("RGBA"), layer).convert("RGB")
 
@@ -74,12 +79,10 @@ def build(art_path, title, author, out, center_frac, cap_frac, style,
     base = add_grain(base, 0.04)
     cx = W / 2
 
-    # --- broderie dans le dos (avant le titre) ---
-    if emb_text and emb_text.strip():
+    if emb_text and emb_text.strip() and emb_text.strip().upper() != "NONE":
         base = draw_embroidery(base, emb_text.strip(), emb_cx, emb_cy, emb_h)
 
-    # --- titre posé (optionnel) ---
-    if title and title.strip():
+    if _title_active(title):
         cap = int(H * cap_frac)
         tf = font(F_TITLE, int(cap * 1.38))
         tr = int(cap * 0.05)
@@ -118,7 +121,6 @@ def build(art_path, title, author, out, center_frac, cap_frac, style,
             d = ImageDraw.Draw(base)
             draw_tracked_center(d, cx, top, title, tf, (247, 240, 235), tr)
 
-    # --- auteur en bas ---
     d = ImageDraw.Draw(base)
     af = font(F_TITLE, int(H * 0.042 * 1.38))
     ay = H - px(FACE_SAFETY_MM) - int(H * 0.055)
