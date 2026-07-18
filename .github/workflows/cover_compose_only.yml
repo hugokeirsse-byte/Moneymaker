@@ -1,24 +1,21 @@
 name: cover_compose_only
 
 # Compose la face à partir d'un art DÉJÀ généré/édité (téléchargé depuis un
-# artifact) sans rien regénérer. Permet d'itérer titre / style / placement
-# sur une image fixe. Lancement manuel.
+# artifact) sans rien regénérer. Itère titre / style / broderie dos. Manuel.
 
 on:
   workflow_dispatch:
     inputs:
       source_run_id:
-        description: "Run ID contenant l'art (artifact)"
         required: true
       source_artifact:
-        description: "Nom de l'artifact source"
-        default: "cycle404-front-edited"
+        default: "cycle404-front-gen"
         required: true
       concept:
         default: "marionnette_hopital"
         required: true
       title:
-        description: "Titre posé (mettre un espace pour aucun titre)"
+        description: "Titre posé (espace = aucun)"
         default: " "
         required: false
       author:
@@ -33,6 +30,19 @@ on:
       style:
         default: "solid"
         required: false
+      emb_text:
+        description: "Texte brodé dans le dos (vide = aucun)"
+        default: "404"
+        required: false
+      emb_cx:
+        default: "0.5"
+        required: false
+      emb_cy:
+        default: "0.40"
+        required: false
+      emb_h:
+        default: "0.05"
+        required: false
 
 permissions:
   contents: write
@@ -42,7 +52,7 @@ jobs:
   compose:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout (sparse — scripts uniquement)
+      - name: Checkout (sparse)
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
@@ -86,13 +96,12 @@ jobs:
         env:
           CONCEPT: ${{ github.event.inputs.concept }}
           TITLE: ${{ github.event.inputs.title }}
+          EMB: ${{ github.event.inputs.emb_text }}
         run: |
           set -e
           mkdir -p output/front
           ART="prev/art/${CONCEPT}.png"
-          if [ ! -f "$ART" ]; then
-            echo "::error::$ART introuvable"; find prev -type f | sort; exit 1
-          fi
+          if [ ! -f "$ART" ]; then echo "::error::$ART introuvable"; find prev -type f | sort; exit 1; fi
           python scripts/covers/compose_front_title.py \
             --art "$ART" \
             --title "$TITLE" \
@@ -100,6 +109,10 @@ jobs:
             --center "${{ github.event.inputs.center }}" \
             --cap "${{ github.event.inputs.cap }}" \
             --style "${{ github.event.inputs.style }}" \
+            --emb-text "$EMB" \
+            --emb-cx "${{ github.event.inputs.emb_cx }}" \
+            --emb-cy "${{ github.event.inputs.emb_cy }}" \
+            --emb-h "${{ github.event.inputs.emb_h }}" \
             --out output/front
 
       - name: Upload artifact

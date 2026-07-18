@@ -1,17 +1,14 @@
 #!/usr/bin/env python3
 """
-Composition FRONT seule avec un titre unique centré et INTÉGRÉ. Styles :
-  - solid : titre net, ombre douce + léger halo rouge (intégration discrète).
-  - cloud : titre lumineux et brumeux, comme dessiné dans un nuage.
-  - sky   : titre comme de la LUMIÈRE qui perce les nuages (trouées claires en
-            forme de chiffres) — intégré au ciel mais resté lisible ; les fils
-            semblent en descendre.
+Composition FRONT : (optionnel) titre posé ET/OU un « 404 » brodé dans le dos.
+
+Styles de titre (--style) : solid | cloud | sky. Mettre --title " " (espace)
+pour ne PAS poser de titre.
+
+Broderie dos (--emb-text 404) : numéro cousu (effet fil mat, léger relief), placé
+via --emb-cx/--emb-cy (fractions) et dimensionné par --emb-h.
 
 Sortie : cover_front.jpg (1600x2560, RVB).
-
-Usage :
-  python compose_front_title.py --art art.png --title 404 --author "SHIRO KEGESU" \
-      --center 0.135 --cap 0.15 --style sky --out output/front
 """
 from __future__ import annotations
 
@@ -23,7 +20,7 @@ from PIL import Image, ImageDraw, ImageFilter
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from compose_cover import (  # noqa: E402
-    DPI, px, font, F_TITLE, INK_WHITE, RED, FACE_SAFETY_MM,
+    DPI, px, font, F_TITLE, F_ITAL, INK_WHITE, RED, FACE_SAFETY_MM,
     fit_cover, add_grain, text_w,
 )
 
@@ -52,52 +49,76 @@ def _stamp_layer(base_size, title, tf, tr, sx, top, fill):
     return layer
 
 
-def build(art_path, title, author, out, center_frac, cap_frac, style):
+def draw_embroidery(base, text, cx_f, cy_f, h_f):
+    """'404' cousu dans le tissu : ombre + rehaut + fil mat, légèrement flouté."""
+    W, H = base.size
+    cap = int(H * h_f)
+    f = font(F_ITAL, int(cap * 1.5))  # Cormorant italic : allure de monogramme brodé
+    d0 = ImageDraw.Draw(base)
+    tw = d0.textlength(text, font=f)
+    x = W * cx_f - tw / 2
+    y = H * cy_f - cap / 2
+    layer = Image.new("RGBA", base.size, (0, 0, 0, 0))
+    dl = ImageDraw.Draw(layer)
+    dl.text((x + px(0.5), y + px(0.6)), text, font=f, fill=(18, 24, 34, 160))     # ombre couture
+    dl.text((x - px(0.4), y - px(0.4)), text, font=f, fill=(240, 236, 222, 120))  # rehaut fil
+    dl.text((x, y), text, font=f, fill=(223, 217, 199, 235))                      # fil mat
+    layer = layer.filter(ImageFilter.GaussianBlur(px(0.4)))
+    return Image.alpha_composite(base.convert("RGBA"), layer).convert("RGB")
+
+
+def build(art_path, title, author, out, center_frac, cap_frac, style,
+          emb_text, emb_cx, emb_cy, emb_h):
     W, H = 1600, 2560
     base = fit_cover(Image.open(art_path).convert("RGB"), W, H)
     base = add_grain(base, 0.04)
     cx = W / 2
-    cap = int(H * cap_frac)
-    tf = font(F_TITLE, int(cap * 1.38))
-    tr = int(cap * 0.05)
-    asc, desc = tf.getmetrics()
-    line_h = asc + desc
-    top = int(H * center_frac - line_h / 2)
-    probe = ImageDraw.Draw(base)
-    total = text_w(probe, title, tf, tr)
-    sx = cx - total / 2
 
-    def layer(fill, blur, alpha=1.0):
-        lyr = _stamp_layer(base.size, title, tf, tr, sx, top, fill)
-        if blur:
-            lyr = lyr.filter(ImageFilter.GaussianBlur(px(blur)))
-        if alpha < 1.0:
-            lyr = _reduce_alpha(lyr, alpha)
-        return lyr
+    # --- broderie dans le dos (avant le titre) ---
+    if emb_text and emb_text.strip():
+        base = draw_embroidery(base, emb_text.strip(), emb_cx, emb_cy, emb_h)
 
-    def over(b, lyr):
-        return Image.alpha_composite(b.convert("RGBA"), lyr).convert("RGB")
+    # --- titre posé (optionnel) ---
+    if title and title.strip():
+        cap = int(H * cap_frac)
+        tf = font(F_TITLE, int(cap * 1.38))
+        tr = int(cap * 0.05)
+        asc, desc = tf.getmetrics()
+        line_h = asc + desc
+        top = int(H * center_frac - line_h / 2)
+        probe = ImageDraw.Draw(base)
+        total = text_w(probe, title, tf, tr)
+        sx = cx - total / 2
 
-    if style == "sky":
-        # 404 = lumière perçant les nuages : halos lumineux superposés + cœur
-        # doux (lisible). Teinte légèrement chaude/pâle.
-        warm = (255, 253, 246, 255)
-        base = over(base, layer(warm, 18, 0.55))   # bloom large
-        base = over(base, layer(warm, 7, 0.85))    # halo moyen
-        base = over(base, layer((255, 255, 250, 255), 2.4))  # cœur doux
-        base = over(base, layer((255, 255, 252, 255), 0.8, 0.55))  # net léger (lisibilité)
-    elif style == "cloud":
-        white = (255, 255, 250, 255)
-        base = over(base, layer(white, 16, 0.55))
-        base = over(base, layer(white, 6, 0.75))
-        base = over(base, layer((255, 255, 252, 235), 1.4))
-    else:  # solid
-        base = over(base, layer((0, 0, 0, 205), 6))
-        base = over(base, layer(RED + (120,), 4))
-        d = ImageDraw.Draw(base)
-        draw_tracked_center(d, cx, top, title, tf, (247, 240, 235), tr)
+        def layer(fill, blur, alpha=1.0):
+            lyr = _stamp_layer(base.size, title, tf, tr, sx, top, fill)
+            if blur:
+                lyr = lyr.filter(ImageFilter.GaussianBlur(px(blur)))
+            if alpha < 1.0:
+                lyr = _reduce_alpha(lyr, alpha)
+            return lyr
 
-    # auteur en bas (net, dans tous les styles)
+        def over(b, lyr):
+            return Image.alpha_composite(b.convert("RGBA"), lyr).convert("RGB")
+
+        if style == "sky":
+            warm = (255, 253, 246, 255)
+            base = over(base, layer(warm, 18, 0.55))
+            base = over(base, layer(warm, 7, 0.85))
+            base = over(base, layer((255, 255, 250, 255), 2.4))
+            base = over(base, layer((255, 255, 252, 255), 0.8, 0.55))
+        elif style == "cloud":
+            white = (255, 255, 250, 255)
+            base = over(base, layer(white, 16, 0.55))
+            base = over(base, layer(white, 6, 0.75))
+            base = over(base, layer((255, 255, 252, 235), 1.4))
+        else:
+            base = over(base, layer((0, 0, 0, 205), 6))
+            base = over(base, layer(RED + (120,), 4))
+            d = ImageDraw.Draw(base)
+            draw_tracked_center(d, cx, top, title, tf, (247, 240, 235), tr)
+
+    # --- auteur en bas ---
     d = ImageDraw.Draw(base)
     af = font(F_TITLE, int(H * 0.042 * 1.38))
     ay = H - px(FACE_SAFETY_MM) - int(H * 0.055)
@@ -119,8 +140,13 @@ def main():
     ap.add_argument("--center", type=float, default=0.30)
     ap.add_argument("--cap", type=float, default=0.135)
     ap.add_argument("--style", default="solid", choices=["solid", "cloud", "sky"])
+    ap.add_argument("--emb-text", dest="emb_text", default="")
+    ap.add_argument("--emb-cx", dest="emb_cx", type=float, default=0.5)
+    ap.add_argument("--emb-cy", dest="emb_cy", type=float, default=0.40)
+    ap.add_argument("--emb-h", dest="emb_h", type=float, default=0.05)
     a = ap.parse_args()
-    build(a.art, a.title, a.author, a.out, a.center, a.cap, a.style)
+    build(a.art, a.title, a.author, a.out, a.center, a.cap, a.style,
+          a.emb_text, a.emb_cx, a.emb_cy, a.emb_h)
 
 
 if __name__ == "__main__":

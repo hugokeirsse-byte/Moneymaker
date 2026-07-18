@@ -35,26 +35,27 @@ GEN_W, GEN_H = 832, 1344
 UPSCALE = 2
 
 CONCEPTS = {
-    # v5 — vrais fils de marionnette (peu, mats, qui tirent le perso), 404 brodé mat, pas de titre ciel.
+    # v6 — vrais fils mats qui accrochent AUSSI les bras/mains ; AUCUN 404 dans le prompt
+    # (le 404 brodé est ajouté ensuite par compositing). Dos de la blouse laissé vierge.
     "marionnette_hopital": (
         "Dystopian psychological thriller book cover, cinematic photograph, vertical 5:8. A woman"
         " seen from behind, standing in the middle of an empty, too-perfect symmetrical suburban"
         " street at cold winter dusk, thin snow on the verges, barefoot on the asphalt. She wears"
-        " a pale blue-grey wrinkled HOSPITAL GOWN and a white hospital wristband; an amnesiac"
-        " patient. She is controlled like a MARIONETTE: a small number, about six to eight,"
-        " distinct taut thin PUPPET STRINGS — real pale matte cords, clearly readable as strings,"
-        " NOT glowing light, NOT rain, casting faint shadows — are attached to her wrists, the"
-        " backs of her hands, her shoulders and the back of her head, and hooked into the fabric"
-        " of her gown. The strings visibly TUG and LIFT parts of her: one hand is pulled slightly"
-        " upward, a sleeve and a fold of the gown are pinched and raised into small peaks where the"
-        " strings pull, as if a hidden puppeteer high above is manipulating her body. The taut"
-        " strings rise straight up, converging high overhead and dissolving softly into the low"
-        " clouds at the very top edge of the frame, never abruptly cut. In the blurred background,"
-        " only a few much fainter thin strings hang down over the distant houses on both sides. On"
-        " the back of her gown, the number 404 is embroidered in matte stitched thread — real neat"
-        " embroidery sewn into the fabric, absolutely not glowing. Cold steel-blue palette, one"
-        " small distant red light far down the street, soft volumetric dusk light, fine film"
-        " grain, eerie and melancholic. There is NO number and NO text anywhere in the sky, no"
+        " a pale blue-grey wrinkled hospital gown and a white hospital wristband; an amnesiac"
+        " patient. She is controlled like a MARIONETTE: about eight distinct, taut, thin puppet"
+        " strings — real pale matte cords, clearly readable as strings with small hooks and knots"
+        " where they attach, NOT glowing light, NOT rain — descend from high above and hook into"
+        " her body. Several attach to the tops of her shoulders and the back of her head, and"
+        " importantly several run down and hook onto her ARMS, the backs of her hands and her"
+        " wrists, and into the fabric of her gown, visibly tugging and lifting parts of her: one"
+        " arm and hand are pulled slightly upward, a sleeve and a fold of the gown are pinched and"
+        " raised into small peaks where the strings pull, as if a hidden puppeteer high above"
+        " manipulates her body. The taut strings rise straight up, converging high overhead and"
+        " dissolving softly into the low clouds at the very top edge of the frame, never abruptly"
+        " cut. In the blurred background, only a few much fainter thin strings hang down over the"
+        " distant houses on both sides. Cold steel-blue palette, one small distant red light far"
+        " down the street, soft volumetric dusk light, fine film grain, eerie and melancholic. The"
+        " back of her hospital gown is plain and clean. No text, no numbers anywhere, no"
         " typography, no logo."),
     "fenetre_auditorium": (
         "Cinematic book cover illustration, dystopian psychological thriller, vertical 5:8. A woman"
@@ -62,12 +63,6 @@ CONCEPTS = {
         " light. On the ledge four small pebbles: three grouped, one apart. In the glass the faint"
         " reflection of a dark auditorium of silhouetted spectators. A tiny red LED in the upper"
         " corner. Cold teal, one red accent. Painterly photorealism, film grain. Dark top. No text."),
-    "plateau_salon": (
-        "Dystopian psychological thriller book cover, cinematic photograph. A warm perfect"
-        " provincial living room at night whose entire back wall is a theatrical set flat that"
-        " stops mid-air, revealing a vast dark film soundstage: scaffolding, a camera on a crane,"
-        " cables, silhouettes of a hidden crew. One small red recording light. Photorealistic,"
-        " film grain. Dark uncluttered top. No text. Vertical 5:8."),
 }
 
 
