@@ -35,46 +35,39 @@ GEN_W, GEN_H = 832, 1344
 UPSCALE = 2
 
 CONCEPTS = {
-    "fenetre_auditorium": (
-        "Cinematic book cover illustration, dystopian psychological thriller, vertical 5:8"
-        " composition. A woman in a pale hospital gown, seen from behind at three-quarter angle,"
-        " standing at a tall window in soft cold morning light. On the window ledge four small"
-        " round grey pebbles: three grouped, one apart. In the glass, the faint ghostly"
-        " reflection of a vast dark auditorium of silhouetted spectators watching her. A tiny red"
-        " LED reflected in the upper corner. Cold teal shadows, pale amber light, one red accent."
-        " Painterly photorealism, film grain. Dark uncluttered top for the title. No text."),
-    # v4 — 404 brodé dans le dos + fils partout descendant du ciel jusqu'en haut.
+    # v5 — vrais fils de marionnette (peu, mats, qui tirent le perso), 404 brodé mat, pas de titre ciel.
     "marionnette_hopital": (
         "Dystopian psychological thriller book cover, cinematic photograph, vertical 5:8. A woman"
-        " seen from behind, standing alone in the exact middle of an empty, too-perfect"
-        " symmetrical provincial suburban street at cold winter dusk, thin snow on the verges,"
-        " barefoot on the cold asphalt. She wears a pale blue-grey thin wrinkled HOSPITAL GOWN"
-        " open at the back, a white hospital identification wristband on her wrist; an amnesiac"
-        " patient. MANY thin pale puppet strings descend from all across the sky and fill the"
-        " whole upper part of the frame, rising and softly dissolving into the clouds at the very"
-        " top edge of the image, never abruptly cut. The most pronounced strings attach to her"
-        " body as if sewn directly into the fabric of her gown and fused into the skin of her"
-        " shoulders, upper back, arms and the crown of her head. Other fainter, barely"
-        " distinguishable strings descend onto the rooftops and facades of the identical houses on"
-        " both sides, gently hooking the whole set. On the back of her hospital gown, the number"
-        " '404' is embroidered in pale stitched thread, neat and clearly legible, matching the"
-        " muted style. Cold steel-blue palette, one small distant red light far down the street,"
-        " soft volumetric dusk light, fine film grain, eerie and melancholic. No other text, no"
-        " letters anywhere except the embroidered 404 on the gown, no logo."),
+        " seen from behind, standing in the middle of an empty, too-perfect symmetrical suburban"
+        " street at cold winter dusk, thin snow on the verges, barefoot on the asphalt. She wears"
+        " a pale blue-grey wrinkled HOSPITAL GOWN and a white hospital wristband; an amnesiac"
+        " patient. She is controlled like a MARIONETTE: a small number, about six to eight,"
+        " distinct taut thin PUPPET STRINGS — real pale matte cords, clearly readable as strings,"
+        " NOT glowing light, NOT rain, casting faint shadows — are attached to her wrists, the"
+        " backs of her hands, her shoulders and the back of her head, and hooked into the fabric"
+        " of her gown. The strings visibly TUG and LIFT parts of her: one hand is pulled slightly"
+        " upward, a sleeve and a fold of the gown are pinched and raised into small peaks where the"
+        " strings pull, as if a hidden puppeteer high above is manipulating her body. The taut"
+        " strings rise straight up, converging high overhead and dissolving softly into the low"
+        " clouds at the very top edge of the frame, never abruptly cut. In the blurred background,"
+        " only a few much fainter thin strings hang down over the distant houses on both sides. On"
+        " the back of her gown, the number 404 is embroidered in matte stitched thread — real neat"
+        " embroidery sewn into the fabric, absolutely not glowing. Cold steel-blue palette, one"
+        " small distant red light far down the street, soft volumetric dusk light, fine film"
+        " grain, eerie and melancholic. There is NO number and NO text anywhere in the sky, no"
+        " typography, no logo."),
+    "fenetre_auditorium": (
+        "Cinematic book cover illustration, dystopian psychological thriller, vertical 5:8. A woman"
+        " in a pale hospital gown, seen from behind, standing at a tall window in cold morning"
+        " light. On the ledge four small pebbles: three grouped, one apart. In the glass the faint"
+        " reflection of a dark auditorium of silhouetted spectators. A tiny red LED in the upper"
+        " corner. Cold teal, one red accent. Painterly photorealism, film grain. Dark top. No text."),
     "plateau_salon": (
         "Dystopian psychological thriller book cover, cinematic photograph. A warm perfect"
         " provincial living room at night whose entire back wall is a theatrical set flat that"
-        " stops in mid-air, revealing a vast dark film soundstage: scaffolding, a camera on a"
-        " crane, cables, silhouettes of a hidden crew. One small red recording light glows. Cosy"
-        " warm room, cold immense studio behind. Photorealistic, teal-and-amber grade, film grain."
-        " Dark uncluttered top for the title. No text. Vertical 5:8."),
-    "mur_enfants": (
-        "Dystopian psychological thriller book cover, cinematic photograph. Close shot of a woman"
-        " in profile pressing her cheek and palm against an old flowered wallpaper wall, eyes"
-        " closed. Through cracks and a peeling corner, warm light escapes and the faint"
-        " silhouettes of two children playing show, as if trapped inside the wall; behind the peel"
-        " the wall is a painted stage backdrop on plywood. Warm amber against cold blue, one small"
-        " red glow in a crack. Photorealistic, film grain. Dark uncluttered top. No text. 5:8."),
+        " stops mid-air, revealing a vast dark film soundstage: scaffolding, a camera on a crane,"
+        " cables, silhouettes of a hidden crew. One small red recording light. Photorealistic,"
+        " film grain. Dark uncluttered top. No text. Vertical 5:8."),
 }
 
 
