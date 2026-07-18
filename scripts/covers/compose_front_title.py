@@ -1,13 +1,11 @@
 #!/usr/bin/env python3
 """
-Composition FRONT : (optionnel) titre posé ET/OU un « 404 » brodé dans le dos.
+Composition FRONT : titre posé (optionnel), accroche 3 lignes (optionnel),
+et/ou « 404 » brodé dans le dos (optionnel).
 
-Styles de titre (--style) : solid | cloud | sky. Mettre --title NONE (ou espace)
-pour ne PAS poser de titre (GitHub Actions retransforme un input vide en valeur
-par défaut ; d'où la sentinelle NONE).
-
-Broderie dos (--emb-text 404) : numéro cousu (effet fil mat, léger relief), placé
-via --emb-cx/--emb-cy (fractions) et dimensionné par --emb-h.
+- --title 404 --style solid|cloud|sky  (NONE ou espace = pas de titre)
+- --tagline "L1|L2|L3"  (lignes séparées par des barres verticales)
+- --emb-text 404  (broderie dans le dos)
 
 Sortie : cover_front.jpg (1600x2560, RVB).
 """
@@ -26,8 +24,8 @@ from compose_cover import (  # noqa: E402
 )
 
 
-def _title_active(title):
-    return bool(title and title.strip() and title.strip().upper() != "NONE")
+def _active(v):
+    return bool(v and v.strip() and v.strip().upper() != "NONE")
 
 
 def draw_tracked_center(d, cx, y, s, f, fill, tracking):
@@ -55,7 +53,6 @@ def _stamp_layer(base_size, title, tf, tr, sx, top, fill):
 
 
 def draw_embroidery(base, text, cx_f, cy_f, h_f):
-    """'404' cousu dans le tissu : ombre + rehaut + fil mat, légèrement flou."""
     W, H = base.size
     cap = int(H * h_f)
     f = font(F_ITAL, int(cap * 1.5))
@@ -72,17 +69,49 @@ def draw_embroidery(base, text, cx_f, cy_f, h_f):
     return Image.alpha_composite(base.convert("RGBA"), layer).convert("RGB")
 
 
+def draw_tagline(base, lines, cy_f, h_f):
+    """Accroche : petites capitales, tracking large, blanc cassé 85 %, ombre douce."""
+    W, H = base.size
+    cx = W / 2
+    cap = int(H * h_f)
+    f = font(F_TITLE, int(cap * 1.38))
+    tr = int(cap * 0.34)
+    lh = int(cap * 1.75)
+    total_h = lh * len(lines)
+    y0 = int(H * cy_f - total_h / 2)
+
+    def stamp(fill):
+        lyr = Image.new("RGBA", base.size, (0, 0, 0, 0))
+        d = ImageDraw.Draw(lyr)
+        y = y0
+        for ln in lines:
+            s = ln.upper()
+            tw = text_w(d, s, f, tr)
+            x = cx - tw / 2
+            for ch in s:
+                d.text((x, y), ch, font=f, fill=fill)
+                x += d.textlength(ch, font=f) + tr
+            y += lh
+        return lyr
+
+    shadow = stamp((0, 0, 0, 150)).filter(ImageFilter.GaussianBlur(px(3)))
+    base = Image.alpha_composite(base.convert("RGBA"), shadow).convert("RGB")
+    white = stamp(INK_WHITE + (217,))
+    base = Image.alpha_composite(base.convert("RGBA"), white).convert("RGB")
+    return base
+
+
 def build(art_path, title, author, out, center_frac, cap_frac, style,
-          emb_text, emb_cx, emb_cy, emb_h):
+          emb_text, emb_cx, emb_cy, emb_h, tagline, tag_cy, tag_h):
     W, H = 1600, 2560
     base = fit_cover(Image.open(art_path).convert("RGB"), W, H)
     base = add_grain(base, 0.04)
     cx = W / 2
 
-    if emb_text and emb_text.strip() and emb_text.strip().upper() != "NONE":
+    if _active(emb_text):
         base = draw_embroidery(base, emb_text.strip(), emb_cx, emb_cy, emb_h)
 
-    if _title_active(title):
+    if _active(title):
         cap = int(H * cap_frac)
         tf = font(F_TITLE, int(cap * 1.38))
         tr = int(cap * 0.05)
@@ -121,6 +150,11 @@ def build(art_path, title, author, out, center_frac, cap_frac, style,
             d = ImageDraw.Draw(base)
             draw_tracked_center(d, cx, top, title, tf, (247, 240, 235), tr)
 
+    if _active(tagline):
+        lines = [s for s in tagline.split("|") if s.strip()]
+        if lines:
+            base = draw_tagline(base, lines, tag_cy, tag_h)
+
     d = ImageDraw.Draw(base)
     af = font(F_TITLE, int(H * 0.042 * 1.38))
     ay = H - px(FACE_SAFETY_MM) - int(H * 0.055)
@@ -139,16 +173,19 @@ def main():
     ap.add_argument("--title", default="404")
     ap.add_argument("--author", default="SHIRO KEGESU")
     ap.add_argument("--out", default="output/front")
-    ap.add_argument("--center", type=float, default=0.30)
+    ap.add_argument("--center", type=float, default=0.115)
     ap.add_argument("--cap", type=float, default=0.135)
     ap.add_argument("--style", default="solid", choices=["solid", "cloud", "sky"])
     ap.add_argument("--emb-text", dest="emb_text", default="")
     ap.add_argument("--emb-cx", dest="emb_cx", type=float, default=0.5)
     ap.add_argument("--emb-cy", dest="emb_cy", type=float, default=0.40)
     ap.add_argument("--emb-h", dest="emb_h", type=float, default=0.05)
+    ap.add_argument("--tagline", default="")
+    ap.add_argument("--tag-cy", dest="tag_cy", type=float, default=0.255)
+    ap.add_argument("--tag-h", dest="tag_h", type=float, default=0.024)
     a = ap.parse_args()
     build(a.art, a.title, a.author, a.out, a.center, a.cap, a.style,
-          a.emb_text, a.emb_cx, a.emb_cy, a.emb_h)
+          a.emb_text, a.emb_cx, a.emb_cy, a.emb_h, a.tagline, a.tag_cy, a.tag_h)
 
 
 if __name__ == "__main__":

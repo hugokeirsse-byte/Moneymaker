@@ -1,7 +1,7 @@
 name: cover_compose_only
 
-# Compose la face à partir d'un art DÉJÀ généré/édité (téléchargé depuis un
-# artifact) sans rien regénérer. Itère titre / style / broderie dos. Manuel.
+# Compose la face à partir d'un art DÉJÀ généré/édité. Itère titre / accroche /
+# style / broderie dos, sans rien regénérer. Manuel.
 
 on:
   workflow_dispatch:
@@ -12,17 +12,16 @@ on:
         default: "cycle404-front-gen"
         required: true
       concept:
-        default: "marionnette_hopital"
+        default: "marionnette_croix"
         required: true
       title:
-        description: "Titre posé (espace = aucun)"
-        default: " "
+        default: "404"
         required: false
       author:
         default: "SHIRO KEGESU"
         required: true
       center:
-        default: "0.16"
+        default: "0.115"
         required: false
       cap:
         default: "0.135"
@@ -30,9 +29,18 @@ on:
       style:
         default: "solid"
         required: false
+      tagline:
+        description: "Accroche (lignes séparées par des barres |)"
+        default: ""
+        required: false
+      tag_cy:
+        default: "0.255"
+        required: false
+      tag_h:
+        default: "0.024"
+        required: false
       emb_text:
-        description: "Texte brodé dans le dos (vide = aucun)"
-        default: "404"
+        default: "NONE"
         required: false
       emb_cx:
         default: "0.5"
@@ -96,6 +104,7 @@ jobs:
         env:
           CONCEPT: ${{ github.event.inputs.concept }}
           TITLE: ${{ github.event.inputs.title }}
+          TAGLINE: ${{ github.event.inputs.tagline }}
           EMB: ${{ github.event.inputs.emb_text }}
         run: |
           set -e
@@ -109,6 +118,9 @@ jobs:
             --center "${{ github.event.inputs.center }}" \
             --cap "${{ github.event.inputs.cap }}" \
             --style "${{ github.event.inputs.style }}" \
+            --tagline "$TAGLINE" \
+            --tag-cy "${{ github.event.inputs.tag_cy }}" \
+            --tag-h "${{ github.event.inputs.tag_h }}" \
             --emb-text "$EMB" \
             --emb-cx "${{ github.event.inputs.emb_cx }}" \
             --emb-cy "${{ github.event.inputs.emb_cy }}" \
