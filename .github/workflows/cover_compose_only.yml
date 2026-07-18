@@ -1,0 +1,126 @@
+name: cover_compose_only
+
+# Compose la face à partir d'un art DÉJÀ généré/édité (téléchargé depuis un
+# artifact) sans rien regénérer. Permet d'itérer titre / style / placement
+# sur une image fixe. Lancement manuel.
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_run_id:
+        description: "Run ID contenant l'art (artifact)"
+        required: true
+      source_artifact:
+        description: "Nom de l'artifact source"
+        default: "cycle404-front-edited"
+        required: true
+      concept:
+        default: "marionnette_hopital"
+        required: true
+      title:
+        description: "Titre posé (mettre un espace pour aucun titre)"
+        default: " "
+        required: false
+      author:
+        default: "SHIRO KEGESU"
+        required: true
+      center:
+        default: "0.16"
+        required: false
+      cap:
+        default: "0.135"
+        required: false
+      style:
+        default: "solid"
+        required: false
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  compose:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (sparse — scripts uniquement)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          sparse-checkout: |
+            scripts/covers
+          sparse-checkout-cone-mode: false
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: python -m pip install --quiet Pillow fonttools
+
+      - name: Prepare fonts
+        run: |
+          mkdir -p assets/cover_fonts
+          npm install --no-save @fontsource/bebas-neue @fontsource/oswald @fontsource/cormorant-garamond
+          python - <<'PY'
+          from fontTools.ttLib import TTFont
+          conv = {
+            "node_modules/@fontsource/bebas-neue/files/bebas-neue-latin-400-normal.woff": "assets/cover_fonts/BebasNeue-Regular.ttf",
+            "node_modules/@fontsource/oswald/files/oswald-latin-600-normal.woff": "assets/cover_fonts/Oswald-SemiBold.ttf",
+            "node_modules/@fontsource/oswald/files/oswald-latin-400-normal.woff": "assets/cover_fonts/Oswald-Regular.ttf",
+            "node_modules/@fontsource/cormorant-garamond/files/cormorant-garamond-latin-500-italic.woff": "assets/cover_fonts/Cormorant-Italic.ttf",
+          }
+          for s, d in conv.items():
+              f = TTFont(s); f.flavor = None; f.save(d); print("OK", d)
+          PY
+
+      - name: Download art from source run
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ github.event.inputs.source_artifact }}
+          path: prev
+          run-id: ${{ github.event.inputs.source_run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Compose front
+        env:
+          CONCEPT: ${{ github.event.inputs.concept }}
+          TITLE: ${{ github.event.inputs.title }}
+        run: |
+          set -e
+          mkdir -p output/front
+          ART="prev/art/${CONCEPT}.png"
+          if [ ! -f "$ART" ]; then
+            echo "::error::$ART introuvable"; find prev -type f | sort; exit 1
+          fi
+          python scripts/covers/compose_front_title.py \
+            --art "$ART" \
+            --title "$TITLE" \
+            --author "${{ github.event.inputs.author }}" \
+            --center "${{ github.event.inputs.center }}" \
+            --cap "${{ github.event.inputs.cap }}" \
+            --style "${{ github.event.inputs.style }}" \
+            --out output/front
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cycle404-front-composed
+          path: output/front/**
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Publish preview to branch covers-output
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          rm -rf /tmp/pv && mkdir -p /tmp/pv
+          cp output/front/cover_front.jpg "/tmp/pv/${{ github.event.inputs.concept }}_front404.jpg"
+          cd /tmp/pv
+          git init -q
+          git checkout -q -b covers-output
+          git add -A
+          git -c user.name=ci -c user.email=ci@example.com commit -q -m "compose only ${{ github.run_id }}"
+          git push -q -f "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" covers-output
+          echo "Preview compose-only poussée."
