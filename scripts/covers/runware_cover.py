@@ -35,8 +35,7 @@ GEN_W, GEN_H = 832, 1344
 UPSCALE = 2
 
 CONCEPTS = {
-    # v6 — vrais fils mats qui accrochent AUSSI les bras/mains ; AUCUN 404 dans le prompt
-    # (le 404 brodé est ajouté ensuite par compositing). Dos de la blouse laissé vierge.
+    # v6 — fils mats qui accrochent aussi bras/mains ; aucun 404 dans le prompt ; dos vierge.
     "marionnette_hopital": (
         "Dystopian psychological thriller book cover, cinematic photograph, vertical 5:8. A woman"
         " seen from behind, standing in the middle of an empty, too-perfect symmetrical suburban"
@@ -57,6 +56,26 @@ CONCEPTS = {
         " down the street, soft volumetric dusk light, fine film grain, eerie and melancholic. The"
         " back of her hospital gown is plain and clean. No text, no numbers anywhere, no"
         " typography, no logo."),
+    # bras tendus en croix (T-pose), fils accrochant les bras étendus.
+    "marionnette_croix": (
+        "Dystopian psychological thriller book cover, cinematic photograph, vertical 5:8. A woman"
+        " seen from behind, standing in the middle of an empty, too-perfect symmetrical suburban"
+        " street at cold winter dusk, thin snow on the verges, barefoot on the asphalt. She wears"
+        " a pale blue-grey wrinkled hospital gown and a white hospital wristband; an amnesiac"
+        " patient. She holds BOTH ARMS OUTSTRETCHED horizontally to the sides, parallel to the"
+        " ground, in a wide T-pose like a crucified marionette. She is controlled like a"
+        " MARIONETTE: about eight distinct, taut, thin puppet strings — real pale matte cords with"
+        " small hooks and knots where they attach, NOT glowing light, NOT rain — descend from high"
+        " above and hook onto her: several onto her two outstretched arms, wrists and the backs of"
+        " her hands, and onto her shoulders and the back of her head, and into the fabric of her"
+        " gown. The strings clearly hold up and suspend her outstretched arms as if the puppeteer"
+        " keeps them raised; a sleeve and a fold are pinched and lifted where the strings pull. The"
+        " taut strings rise straight up, converging high overhead and dissolving softly into the"
+        " low clouds at the very top edge, never abruptly cut. In the blurred background, only a"
+        " few much fainter strings hang over the distant houses on both sides. Cold steel-blue"
+        " palette, one small distant red light far down the street, soft volumetric dusk light,"
+        " fine film grain, eerie and melancholic. The back of her gown is plain and clean. No"
+        " text, no numbers anywhere, no typography, no logo."),
     "fenetre_auditorium": (
         "Cinematic book cover illustration, dystopian psychological thriller, vertical 5:8. A woman"
         " in a pale hospital gown, seen from behind, standing at a tall window in cold morning"
