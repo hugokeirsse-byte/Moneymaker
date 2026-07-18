@@ -6,7 +6,7 @@ via Runware, puis upscale IA (best-effort). Sauvegarde des PNG dans --out.
 Nécessite RUNWARE_API_KEY (secret GitHub Actions).
 
 Usage :
-  RUNWARE_API_KEY=... python runware_cover.py --out art --concepts marionnette_hopital
+  RUNWARE_API_KEY=... python runware_cover.py --out art --concepts marionnette_croix
 """
 from __future__ import annotations
 
@@ -35,47 +35,40 @@ GEN_W, GEN_H = 832, 1344
 UPSCALE = 2
 
 CONCEPTS = {
-    # v6 — fils mats qui accrochent aussi bras/mains ; aucun 404 dans le prompt ; dos vierge.
     "marionnette_hopital": (
         "Dystopian psychological thriller book cover, cinematic photograph, vertical 5:8. A woman"
         " seen from behind, standing in the middle of an empty, too-perfect symmetrical suburban"
         " street at cold winter dusk, thin snow on the verges, barefoot on the asphalt. She wears"
         " a pale blue-grey wrinkled hospital gown and a white hospital wristband; an amnesiac"
         " patient. She is controlled like a MARIONETTE: about eight distinct, taut, thin puppet"
-        " strings — real pale matte cords, clearly readable as strings with small hooks and knots"
-        " where they attach, NOT glowing light, NOT rain — descend from high above and hook into"
-        " her body. Several attach to the tops of her shoulders and the back of her head, and"
-        " importantly several run down and hook onto her ARMS, the backs of her hands and her"
-        " wrists, and into the fabric of her gown, visibly tugging and lifting parts of her: one"
-        " arm and hand are pulled slightly upward, a sleeve and a fold of the gown are pinched and"
-        " raised into small peaks where the strings pull, as if a hidden puppeteer high above"
-        " manipulates her body. The taut strings rise straight up, converging high overhead and"
-        " dissolving softly into the low clouds at the very top edge of the frame, never abruptly"
-        " cut. In the blurred background, only a few much fainter thin strings hang down over the"
-        " distant houses on both sides. Cold steel-blue palette, one small distant red light far"
-        " down the street, soft volumetric dusk light, fine film grain, eerie and melancholic. The"
-        " back of her hospital gown is plain and clean. No text, no numbers anywhere, no"
-        " typography, no logo."),
-    # bras tendus en croix (T-pose), fils accrochant les bras étendus.
+        " strings — real pale matte cords with small hooks and knots, NOT glowing light, NOT rain"
+        " — descend from high above and hook into her shoulders, the back of her head, her arms,"
+        " the backs of her hands and the fabric of her gown, tugging and lifting parts of her. The"
+        " taut strings rise straight up, converging high overhead and dissolving into the low"
+        " clouds at the very top edge, never abruptly cut. A few fainter strings hang over the"
+        " distant houses. Cold steel-blue palette, one small distant red light, soft dusk light,"
+        " fine film grain, eerie. Plain clean back of the gown. No text, no numbers, no logo."),
+    # v2 — bras tendus en croix, mais corps SANS FORCE soutenu par les fils (s'effondrerait sans eux).
     "marionnette_croix": (
         "Dystopian psychological thriller book cover, cinematic photograph, vertical 5:8. A woman"
-        " seen from behind, standing in the middle of an empty, too-perfect symmetrical suburban"
-        " street at cold winter dusk, thin snow on the verges, barefoot on the asphalt. She wears"
-        " a pale blue-grey wrinkled hospital gown and a white hospital wristband; an amnesiac"
-        " patient. She holds BOTH ARMS OUTSTRETCHED horizontally to the sides, parallel to the"
-        " ground, in a wide T-pose like a crucified marionette. She is controlled like a"
-        " MARIONETTE: about eight distinct, taut, thin puppet strings — real pale matte cords with"
-        " small hooks and knots where they attach, NOT glowing light, NOT rain — descend from high"
-        " above and hook onto her: several onto her two outstretched arms, wrists and the backs of"
-        " her hands, and onto her shoulders and the back of her head, and into the fabric of her"
-        " gown. The strings clearly hold up and suspend her outstretched arms as if the puppeteer"
-        " keeps them raised; a sleeve and a fold are pinched and lifted where the strings pull. The"
-        " taut strings rise straight up, converging high overhead and dissolving softly into the"
-        " low clouds at the very top edge, never abruptly cut. In the blurred background, only a"
-        " few much fainter strings hang over the distant houses on both sides. Cold steel-blue"
-        " palette, one small distant red light far down the street, soft volumetric dusk light,"
-        " fine film grain, eerie and melancholic. The back of her gown is plain and clean. No"
-        " text, no numbers anywhere, no typography, no logo."),
+        " seen from behind in the middle of an empty, too-perfect symmetrical suburban street at"
+        " cold winter dusk, thin snow on the verges, barefoot on the asphalt. She wears a pale"
+        " blue-grey wrinkled hospital gown and a white hospital wristband; an amnesiac patient."
+        " Both her ARMS ARE OUTSTRETCHED horizontally to the sides, parallel to the ground, in a"
+        " wide T-pose. But her body is LIMP and completely drained of strength: her head hangs"
+        " down loosely to one side, her shoulders sag, her knees are slightly buckled and her"
+        " whole body sinks and slumps — she is NOT holding the pose herself. The taut puppet"
+        " strings are what SUPPORT and hold her up, clearly bearing her dead weight, so that it is"
+        " obvious she would crumple and collapse to the ground without them. About eight distinct"
+        " taut thin puppet strings — real pale matte cords with small hooks and knots, NOT glowing"
+        " light, NOT rain — descend from high above and hook onto her two outstretched arms, her"
+        " wrists, the backs of her hands, her shoulders and the back of her head, taking her"
+        " weight. The strings rise straight up, converging high overhead and dissolving softly"
+        " into the low clouds at the very top edge of the frame, never abruptly cut. In the"
+        " blurred background only a few much fainter strings hang over the distant houses on both"
+        " sides. Cold steel-blue palette, one small distant red light far down the street, soft"
+        " volumetric dusk light, fine film grain, eerie and melancholic. No text, no numbers"
+        " anywhere, no typography, no logo."),
     "fenetre_auditorium": (
         "Cinematic book cover illustration, dystopian psychological thriller, vertical 5:8. A woman"
         " in a pale hospital gown, seen from behind, standing at a tall window in cold morning"
@@ -195,7 +188,7 @@ def run_concept(session, key, prompt, out, retries=2):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default="art")
-    ap.add_argument("--concepts", default="marionnette_hopital")
+    ap.add_argument("--concepts", default="marionnette_croix")
     a = ap.parse_args()
 
     key = os.getenv("RUNWARE_API_KEY", "")
