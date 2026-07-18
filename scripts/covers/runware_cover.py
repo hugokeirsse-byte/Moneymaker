@@ -35,39 +35,38 @@ GEN_W, GEN_H = 832, 1344
 UPSCALE = 2
 
 CONCEPTS = {
-    # v3 — vrais fils ATTACHÉS à elle qui la soutiennent ; mains pendantes molles ; corps amorphe.
+    # v4 — BEAUCOUP de fils attachés, pieds au sol, SOUTENUE (pas suspendue) ; elle avance
+    # comme mi-par volonté, mi-tirée par les fils.
     "marionnette_croix": (
         "Dystopian psychological thriller book cover, cinematic photograph, vertical 5:8. A woman"
-        " seen from behind in the middle of an empty, too-perfect symmetrical suburban street at"
-        " cold winter dusk, thin snow on the verges, barefoot on the wet asphalt. She wears a pale"
-        " blue-grey wrinkled hospital gown and white hospital wristbands; an amnesiac patient. She"
-        " hangs like a real human MARIONETTE, held up ONLY by taut puppet strings that are clearly"
-        " ATTACHED to her body — not floating in front of her. Her arms are raised out to the"
-        " sides, but NOT by her own strength: taut strings are tied to them. Two strings are"
-        " hooked to her wrists onto the white hospital wristbands; other taut strings are knotted"
-        " to her upper arms, to the tops of her shoulders, to the back of her head, and sewn into"
-        " the fabric of her gown, pulling little peaks in the cloth. Her HANDS dangle loosely and"
-        " limp at the ends of her raised arms, fingers hanging slack in the empty air. Her whole"
-        " body is amorphous and drained of strength — head lolling to one side, shoulders and"
-        " spine sagging, knees slightly buckled — she has barely enough strength to be upright and"
-        " would crumple to the ground without the strings holding her. The strings are real pale"
-        " matte taut cords, clearly connecting from her body straight up and bearing her weight;"
-        " they converge high overhead and dissolve softly into the low clouds at the very top edge"
-        " of the frame, never abruptly cut. In the blurred background only a few much fainter"
-        " strings hang over the distant houses on both sides. Cold steel-blue palette, one small"
-        " distant red light far down the street, soft volumetric dusk light, fine film grain,"
-        " eerie and melancholic. No text, no numbers anywhere, no typography, no logo."),
+        " seen from behind, WALKING slowly forward down the middle of an empty, too-perfect"
+        " symmetrical suburban street at cold winter dusk, thin snow on the verges. She is"
+        " mid-step, barefoot, her feet ON the ground (not lifted, not floating, not suspended in"
+        " the air). She wears a pale blue-grey wrinkled hospital gown and white hospital"
+        " wristbands; an amnesiac patient. She is a human MARIONETTE supported and guided by MANY"
+        " taut thin puppet strings — about twelve real pale matte cords with small hooks and knots"
+        " — that are clearly ATTACHED to her body: to the tops of both shoulders, along both arms,"
+        " to her wrists on the white wristbands, to the backs of her hands, to the back of her"
+        " head, and sewn into the fabric of her gown, pulling little peaks in the cloth. The many"
+        " strings rise straight up, taut, taking part of her weight so that she is SUPPORTED and"
+        " held upright — not hanging, not suspended off the ground. She seems to advance partly by"
+        " her own faltering will and partly pulled along by the strings, her body slightly limp"
+        " and guided, drained of strength. The many taut strings rise and converge high overhead,"
+        " dissolving softly into the low clouds at the very top edge of the frame, never abruptly"
+        " cut. In the blurred background only a few much fainter strings hang over the distant"
+        " houses on both sides. Cold steel-blue palette, one small distant red light far down the"
+        " street, soft volumetric dusk light, fine film grain, eerie and melancholic. No text, no"
+        " numbers anywhere, no typography, no logo."),
     "marionnette_hopital": (
         "Dystopian psychological thriller book cover, cinematic photograph, vertical 5:8. A woman"
         " seen from behind, standing in an empty, too-perfect symmetrical suburban street at cold"
         " winter dusk, thin snow, barefoot. Pale blue-grey wrinkled hospital gown, white wristband;"
         " amnesiac patient. Controlled like a MARIONETTE: about eight distinct taut thin puppet"
-        " strings — real pale matte cords with small hooks and knots, not glowing, not rain — hook"
-        " into her shoulders, the back of her head, her arms, the backs of her hands and the fabric"
-        " of her gown, tugging and lifting parts of her. Strings rise straight up, converge high"
-        " overhead and dissolve into the low clouds at the very top, never abruptly cut. A few"
-        " fainter strings over the distant houses. Cold steel-blue, one small distant red light,"
-        " film grain, eerie. Plain clean back of the gown. No text, no numbers, no logo."),
+        " strings — real pale matte cords with small hooks and knots — hook into her shoulders, the"
+        " back of her head, her arms, the backs of her hands and the fabric of her gown. Strings"
+        " rise straight up, converge high overhead and dissolve into the low clouds at the very"
+        " top, never abruptly cut. A few fainter strings over the distant houses. Cold steel-blue,"
+        " one small distant red light, film grain, eerie. Plain clean back of the gown. No text."),
 }
 
 
