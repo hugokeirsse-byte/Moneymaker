@@ -3,15 +3,10 @@
 Génère les images d'art (face) des concepts de couverture « CYCLE 404 »
 via Runware, puis upscale IA (best-effort). Sauvegarde des PNG dans --out.
 
-Qualité maximale : essaie d'abord un modèle photo premium (FLUX 1.1 Pro,
-puis FLUX.1 Pro) et retombe automatiquement sur FLUX.1 Dev si le compte n'y
-a pas accès. L'upscale est best-effort : si le service Runware expire, on
-conserve l'image générée (pas d'échec du run).
-
 Nécessite RUNWARE_API_KEY (secret GitHub Actions).
 
 Usage :
-  RUNWARE_API_KEY=... python runware_cover.py --out art --concepts fenetre_auditorium
+  RUNWARE_API_KEY=... python runware_cover.py --out art --concepts marionnette_hopital
 """
 from __future__ import annotations
 
@@ -42,92 +37,44 @@ UPSCALE = 2
 CONCEPTS = {
     "fenetre_auditorium": (
         "Cinematic book cover illustration, dystopian psychological thriller, vertical 5:8"
-        " composition, designed to read clearly as a small thumbnail. A single strong focal"
-        " figure: a woman in a pale hospital gown, seen from behind at three-quarter angle,"
-        " standing at a tall window in soft cold morning light, her dark silhouette contrasting"
-        " against the bright glass. On the window ledge, sharply detailed, four small round grey"
-        " pebbles: three grouped together, one placed apart. In the window glass, instead of the"
-        " room's reflection, there is the faint ghostly reflection of a vast dark auditorium"
-        " filled with rows of silhouetted seated spectators watching her; the reflection must be"
-        " subtle, readable only at second glance. A tiny red LED light is reflected in the upper"
-        " corner of the glass. Outside the window, a quiet, slightly too-perfect provincial town"
-        " under morning haze. Palette: cold teal shadows, pale amber window light, one red accent"
-        " only. Painterly photorealism, volumetric light, fine film grain, ultra detailed,"
-        " melancholic and unsettling. The wall above the window stays dim and uncluttered for the"
-        " title. No text, no letters, no logos anywhere in the image."),
-    "plateau_salon": (
-        "Dystopian psychological thriller book cover, cinematic photograph. A warm, perfect"
-        " provincial living room at night — old stone walls, a lit table lamp, framed family"
-        " photographs, a worn armchair — but the entire back wall of the room is a theatrical set"
-        " flat that stops in mid-air like stage scenery, revealing behind it a vast dark film"
-        " soundstage: steel scaffolding, a professional camera on a crane, thick cables coiled on"
-        " the floor, and the silhouettes of a hidden film crew quietly watching. One small red"
-        " recording light glows in the darkness. The cosy room is the only warmly lit element; the"
-        " studio behind is cold and immense. Photorealistic, cinematic teal-and-amber grade,"
-        " volumetric light, fine film grain, unsettling. Dark uncluttered upper area reserved for"
-        " the title. No text, no letters, no logo. Vertical 5:8."),
-    "fils_marionnette": (
-        "Dystopian psychological thriller book cover, cinematic photograph. A woman in a pale"
-        " dress stands alone in the middle of the empty main street of a quiet, slightly too-"
-        "perfect provincial town at dusk, seen from a low three-quarter angle. From her shoulders,"
-        " wrists and head rise thin, almost invisible marionette strings that climb high and"
-        " vanish into the dark sky above, where a faint wooden control cross is barely suggested"
-        " in shadow. The town is immaculate, symmetrical and deserted, unnaturally staged and"
-        " still. One tiny red light glows on a distant rooftop. Photorealistic, muted cold palette"
-        " with a single red accent, soft volumetric dusk light, fine film grain, eerie and"
-        " melancholic. Dark uncluttered sky in the upper area reserved for the title. No text, no"
-        " letters, no logo. Vertical 5:8."),
-    # v3 — blouse d'hôpital + fils FUSIONNÉS à la peau et aux vêtements, ciel nuageux dégagé.
+        " composition. A woman in a pale hospital gown, seen from behind at three-quarter angle,"
+        " standing at a tall window in soft cold morning light. On the window ledge four small"
+        " round grey pebbles: three grouped, one apart. In the glass, the faint ghostly"
+        " reflection of a vast dark auditorium of silhouetted spectators watching her. A tiny red"
+        " LED reflected in the upper corner. Cold teal shadows, pale amber light, one red accent."
+        " Painterly photorealism, film grain. Dark uncluttered top for the title. No text."),
+    # v4 — 404 brodé dans le dos + fils partout descendant du ciel jusqu'en haut.
     "marionnette_hopital": (
-        "Dystopian psychological thriller book cover, cinematic photograph. A woman seen from"
-        " behind, standing alone in the exact middle of the empty main street of a quiet, too-"
-        "perfect symmetrical provincial suburb at cold winter dusk, thin snow on the verges, low"
-        " three-quarter angle. Cold desaturated STEEL-BLUE and slate-grey palette (not green, not"
-        " teal). She is clearly a HOSPITAL PATIENT: a plain pale blue-grey thin wrinkled hospital"
-        " gown open at the back, a white hospital identification wristband on her wrist, barefoot"
-        " on the cold asphalt, an amnesiac patient. Thin pale marionette strings EMERGE SEAMLESSLY"
-        " FROM HER BODY — they grow directly out of the skin of her shoulders, her upper back, the"
-        " backs of her hands and the crown of her head, and out of the fabric of her gown, with no"
-        " visible knots or hooks, as if the strings are fused into her skin and clothes; the"
-        " strings then rise straight up and dissolve softly into the overcast cloudy sky. Faint,"
-        " thin, barely visible pale strings also descend from the sky onto the rooftops of the"
-        " identical houses on both sides. Two tiny red lights glow far down the street. A soft band"
-        " of pale grey clouds fills the upper third of the sky, kept relatively open and"
-        " uncluttered for a title. Soft volumetric dusk light, fine film grain, eerie and"
-        " melancholic. No text, no letters, no logo. Vertical 5:8."),
+        "Dystopian psychological thriller book cover, cinematic photograph, vertical 5:8. A woman"
+        " seen from behind, standing alone in the exact middle of an empty, too-perfect"
+        " symmetrical provincial suburban street at cold winter dusk, thin snow on the verges,"
+        " barefoot on the cold asphalt. She wears a pale blue-grey thin wrinkled HOSPITAL GOWN"
+        " open at the back, a white hospital identification wristband on her wrist; an amnesiac"
+        " patient. MANY thin pale puppet strings descend from all across the sky and fill the"
+        " whole upper part of the frame, rising and softly dissolving into the clouds at the very"
+        " top edge of the image, never abruptly cut. The most pronounced strings attach to her"
+        " body as if sewn directly into the fabric of her gown and fused into the skin of her"
+        " shoulders, upper back, arms and the crown of her head. Other fainter, barely"
+        " distinguishable strings descend onto the rooftops and facades of the identical houses on"
+        " both sides, gently hooking the whole set. On the back of her hospital gown, the number"
+        " '404' is embroidered in pale stitched thread, neat and clearly legible, matching the"
+        " muted style. Cold steel-blue palette, one small distant red light far down the street,"
+        " soft volumetric dusk light, fine film grain, eerie and melancholic. No other text, no"
+        " letters anywhere except the embroidered 404 on the gown, no logo."),
+    "plateau_salon": (
+        "Dystopian psychological thriller book cover, cinematic photograph. A warm perfect"
+        " provincial living room at night whose entire back wall is a theatrical set flat that"
+        " stops in mid-air, revealing a vast dark film soundstage: scaffolding, a camera on a"
+        " crane, cables, silhouettes of a hidden crew. One small red recording light glows. Cosy"
+        " warm room, cold immense studio behind. Photorealistic, teal-and-amber grade, film grain."
+        " Dark uncluttered top for the title. No text. Vertical 5:8."),
     "mur_enfants": (
-        "Dystopian psychological thriller book cover, cinematic photograph. Intimate close shot of"
-        " a woman in profile pressing her cheek and open palm against an old flowered wallpaper"
-        " wall inside a stone house, eyes closed, listening intently. Through fine cracks and a"
-        " peeling corner of the wallpaper, warm golden light escapes and the faint ghostly"
-        " silhouettes of two small children playing are barely visible, as if trapped inside the"
-        " wall; behind the peeled strip the wall is revealed to be a painted stage backdrop on"
-        " plywood. Melancholic and uncanny, warm amber light against cold blue shadow, one small"
-        " red glow deep inside a crack. Photorealistic, real skin texture, fine film grain. Dark"
-        " uncluttered upper area reserved for the title. No text, no letters, no logo. Vertical"
-        " 5:8."),
-    "ecran_profil": (
-        "Dystopian psychological thriller book cover, cinematic photograph. Realistic close side"
-        " profile of a pensive woman in her early forties, calm expression, soft dramatic side"
-        " lighting on real skin. The back of her head and neck gradually dissolve into a neat"
-        " rectangular grid of old cathode-ray television monitors. Each screen clearly shows a"
-        " coherent quiet moment of HER OWN life. One single screen glows blood red. Shot on a"
-        " cinema camera, photorealistic real skin, cold teal and warm amber grade, film grain,"
-        " dark uncluttered upper third for the title. No text, no letters. Vertical 5:8."),
-    "ecran_face": (
-        "Dystopian psychological thriller book cover, cinematic photograph. A realistic woman's"
-        " face looking at the viewer through the narrow gaps of an orderly wall of glowing old"
-        " television screens, as if trapped behind the monitors. Each surrounding screen shows a"
-        " calm ordinary moment of the same woman's life in a clean grid; one screen flickers red."
-        " Photorealistic, volumetric light, film grain, dark uncluttered upper third for the"
-        " title. No text, no letters. Vertical 5:8."),
-    "ecran_spectatrice": (
-        "Dystopian psychological thriller book cover, cinematic photograph. A realistic woman seen"
-        " from behind, alone in a dark room, softly lit by an enormous orderly wall of television"
-        " screens filling the frame before her. Every screen shows a coherent moment of her own"
-        " life at different ages. A single screen burns red. Cold blue rim light, photorealistic,"
-        " film grain, dark uncluttered upper third for the title. No text, no letters. Vertical"
-        " 5:8."),
+        "Dystopian psychological thriller book cover, cinematic photograph. Close shot of a woman"
+        " in profile pressing her cheek and palm against an old flowered wallpaper wall, eyes"
+        " closed. Through cracks and a peeling corner, warm light escapes and the faint"
+        " silhouettes of two children playing show, as if trapped inside the wall; behind the peel"
+        " the wall is a painted stage backdrop on plywood. Warm amber against cold blue, one small"
+        " red glow in a crack. Photorealistic, film grain. Dark uncluttered top. No text. 5:8."),
 }
 
 
@@ -241,7 +188,7 @@ def run_concept(session, key, prompt, out, retries=2):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default="art")
-    ap.add_argument("--concepts", default="fenetre_auditorium")
+    ap.add_argument("--concepts", default="marionnette_hopital")
     a = ap.parse_args()
 
     key = os.getenv("RUNWARE_API_KEY", "")
