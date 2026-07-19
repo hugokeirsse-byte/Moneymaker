@@ -1,19 +1,13 @@
 #!/usr/bin/env python3
 """
-Finalisation KDP « CYCLE 404 » : compositing typographique définitif sur l'art
-validé (aucune regénération d'image).
+Finalisation KDP « 404 » : compositing définitif sur l'art validé (marionnette).
+Face = version B : accroche 3 lignes en haut, titre « 404 » en dessous, auteur en bas.
 
 Produit dans --out :
-  - cover_ebook_final.jpg      (1600x2560, accroche + titre + auteur, SANS ISBN)
-  - cover_paperback_final.pdf  (wrap complet 4e + dos + face, fond perdu, aplati)
-  - cover_paperback_final.png  (raster du wrap, pour l'aperçu)
-  - preview_montage.png        (4e + dos + face côte à côte)
-
-Textes (accroche + résumé) lus depuis --textjson, à la lettre.
-
-Usage :
-  python finalize_cover.py --art face.png --textjson text/cycle404_text.json \
-     --title "CYCLE 404" --author "SHIRO KEGESU" --pages 400 --out output/final
+  - cover_ebook_final.jpg      (1600x2560)
+  - cover_paperback_final.pdf  (wrap 4e + dos + face, fond perdu, aplati)
+  - cover_paperback_final.png  (raster du wrap)
+  - preview_montage.png        (4e + dos + face)
 """
 from __future__ import annotations
 
@@ -32,122 +26,80 @@ from compose_cover import (  # noqa: E402
     draw_isbn_zone, wrap_text, text_w,
 )
 
-# Polices supplémentaires (graisses légères pour accroche et corps 4e).
 F_BODY = os.path.join(FONT_DIR, "Oswald-Regular.ttf")
 F_BOLD = os.path.join(FONT_DIR, "Oswald-SemiBold.ttf")
-_light = os.path.join(FONT_DIR, "Oswald-Light.ttf")
-F_TAG = _light if os.path.exists(_light) else F_BODY
 
 
-def draw_tracked_center(d, cx, y, s, f, fill, tracking):
-    total = text_w(d, s, f, tracking)
-    x = cx - total / 2
-    for ch in s:
-        d.text((x, y), ch, font=f, fill=fill)
-        x += d.textlength(ch, font=f) + tracking
-
-
-def gradient_scrim_top(base, rect, height_frac=0.22, max_alpha=78):
-    """Voile sombre dégradé en haut du rect (lisibilité de l'accroche)."""
-    x0, y0, x1, y1 = rect
-    h = max(1, int((y1 - y0) * height_frac))
-    overlay = Image.new("RGBA", base.size, (0, 0, 0, 0))
-    od = ImageDraw.Draw(overlay)
-    for i in range(h):
-        a = int(max_alpha * (1 - i / h))
-        od.line([(x0, y0 + i), (x1, y0 + i)], fill=(0, 0, 0, a))
-    return Image.alpha_composite(base.convert("RGBA"), overlay).convert("RGB")
-
-
-def draw_tagline(base, rect, lines):
-    """Accroche : 3 lignes empilées, tout en haut, petites capitales, tracking large,
-    blanc cassé 85 %, aucun glow. Auto-ajustée en largeur. Retourne le bas du bloc."""
-    x0, y0, x1, y1 = rect
-    fw = x1 - x0
-    fh = y1 - y0
-    cx = (x0 + x1) / 2
-    max_w = fw * 0.94
-    cap = int(fh * 0.034)
-    min_cap = int(fh * 0.020)
-    probe = ImageDraw.Draw(base)
-    while True:
-        f = font(F_TAG, int(cap * 1.35))
-        tracking = int(cap * 0.22)
-        longest = max(text_w(probe, ln.upper(), f, tracking) for ln in lines)
-        if longest <= max_w or cap <= min_cap:
-            break
-        cap -= 2
-    lh = int(cap * 1.32)
-    top = y0 + int(fh * 0.055)
-    overlay = Image.new("RGBA", base.size, (0, 0, 0, 0))
-    od = ImageDraw.Draw(overlay)
-    col = INK_WHITE + (217,)  # 85 %
-    y = top
+# --------------------------------------------------------------------------- #
+# Face (version B)
+# --------------------------------------------------------------------------- #
+def _stamp_lines(size, lines, f, tr, lh, cx, y0, upper, fill):
+    lyr = Image.new("RGBA", size, (0, 0, 0, 0))
+    d = ImageDraw.Draw(lyr)
+    y = y0
     for ln in lines:
-        s = ln.upper()
-        total = text_w(od, s, f, tracking)
-        x = cx - total / 2
+        s = ln.upper() if upper else ln
+        tw = text_w(d, s, f, tr)
+        x = cx - tw / 2
         for ch in s:
-            od.text((x, y), ch, font=f, fill=col)
-            x += od.textlength(ch, font=f) + tracking
+            d.text((x, y), ch, font=f, fill=fill)
+            x += d.textlength(ch, font=f) + tr
         y += lh
-    out = Image.alpha_composite(base.convert("RGBA"), overlay).convert("RGB")
-    return out, top + lh * len(lines)
+    return lyr
 
 
-def draw_title_block(base, rect, title, top_y):
+def _draw_lines(base, lines, f, tr, lh, cx, y0, upper, fill, shadow=None, sblur=3):
+    if shadow:
+        sh = _stamp_lines(base.size, lines, f, tr, lh, cx, y0, upper, shadow)
+        sh = sh.filter(ImageFilter.GaussianBlur(px(sblur)))
+        base = Image.alpha_composite(base.convert("RGBA"), sh).convert("RGB")
+    wl = _stamp_lines(base.size, lines, f, tr, lh, cx, y0, upper, fill)
+    return Image.alpha_composite(base.convert("RGBA"), wl).convert("RGB")
+
+
+def _draw_title(base, title, tf, tr, cx, top):
+    sh = _stamp_lines(base.size, [title], tf, tr, 0, cx, top, False, (0, 0, 0, 205))
+    sh = sh.filter(ImageFilter.GaussianBlur(px(6)))
+    base = Image.alpha_composite(base.convert("RGBA"), sh).convert("RGB")
+    gl = _stamp_lines(base.size, [title], tf, tr, 0, cx, top, False, RED + (120,))
+    gl = gl.filter(ImageFilter.GaussianBlur(px(4)))
+    base = Image.alpha_composite(base.convert("RGBA"), gl).convert("RGB")
+    tx = _stamp_lines(base.size, [title], tf, tr, 0, cx, top, False, (247, 240, 235, 255))
+    return Image.alpha_composite(base.convert("RGBA"), tx).convert("RGB")
+
+
+def draw_front(base, rect, title, tag_lines, author):
     x0, y0, x1, y1 = rect
     fh = y1 - y0
     cx = (x0 + x1) / 2
-    cap = int(fh * 0.145)
+    # accroche 3 lignes, centrée à ~11 % de la hauteur
+    cap_t = int(fh * 0.024)
+    ft = font(F_TITLE, int(cap_t * 1.38))
+    trt = int(cap_t * 0.34)
+    lht = int(cap_t * 1.75)
+    tot = lht * max(1, len(tag_lines))
+    ty0 = int(y0 + fh * 0.11 - tot / 2)
+    base = _draw_lines(base, tag_lines, ft, trt, lht, cx, ty0, True,
+                       INK_WHITE + (217,), shadow=(0, 0, 0, 150), sblur=3)
+    # titre 404, centré à ~24 % de la hauteur
+    cap = int(fh * 0.12)
     tf = font(F_TITLE, int(cap * 1.38))
-    words = title.split()
-    w1 = words[0] if words else title
-    w2 = words[1] if len(words) > 1 else ""
+    tr = int(cap * 0.05)
     asc, desc = tf.getmetrics()
-    line_h = asc + desc
-    top = int(top_y)
-    tr = int(cap * 0.06)
-    d = ImageDraw.Draw(base)
-    draw_tracked_center(d, cx, top, w1, tf, INK_WHITE, tr)
-    y2 = top + int(line_h * 0.86)
-    if w2:
-        glow = Image.new("RGBA", base.size, (0, 0, 0, 0))
-        gd = ImageDraw.Draw(glow)
-        total = text_w(gd, w2, tf, tr)
-        xx = cx - total / 2
-        for ch in w2:
-            gd.text((xx, y2), ch, font=tf, fill=RED + (255,))
-            xx += gd.textlength(ch, font=tf) + tr
-        glow = glow.filter(ImageFilter.GaussianBlur(px(2.4)))
-        base = Image.alpha_composite(base.convert("RGBA"), glow).convert("RGB")
-        d = ImageDraw.Draw(base)
-        draw_tracked_center(d, cx, y2, w2, tf, (247, 233, 228), tr)
+    lh = asc + desc
+    tt_top = int(y0 + fh * 0.24 - lh / 2)
+    base = _draw_title(base, title, tf, tr, cx, tt_top)
+    # auteur en bas
+    af = font(F_TITLE, int(fh * 0.042 * 1.38))
+    ay = int(y1 - px(FACE_SAFETY_MM) - fh * 0.05)
+    base = _draw_lines(base, [author], af, int(fh * 0.012), 0, cx, ay, False,
+                       INK_WHITE + (255,), shadow=(0, 0, 0, 140), sblur=4)
     return base
 
 
-def draw_author(base, rect, author):
-    x0, y0, x1, y1 = rect
-    fh = y1 - y0
-    cx = (x0 + x1) / 2
-    f = font(F_TITLE, int(fh * 0.050 * 1.38))
-    y = y1 - px(FACE_SAFETY_MM) - int(fh * 0.050)
-    d = ImageDraw.Draw(base)
-    draw_tracked_center(d, cx, y, author, f, INK_WHITE, int(fh * 0.014))
-    return base
-
-
-def draw_front(base, rect, title, tagline_lines, author):
-    x0, y0, x1, y1 = rect
-    fh = y1 - y0
-    base = gradient_scrim_top(base, rect, 0.22, 78)
-    base, tag_bottom = draw_tagline(base, rect, tagline_lines)
-    title_top = max(y0 + int(fh * 0.20), tag_bottom + int(fh * 0.035))
-    base = draw_title_block(base, rect, title, title_top)
-    base = draw_author(base, rect, author)
-    return base
-
-
+# --------------------------------------------------------------------------- #
+# 4e de couverture (résumé)
+# --------------------------------------------------------------------------- #
 def _block_spec(style, size):
     if style == "bold":
         return font(F_BOLD, size), size
@@ -226,7 +178,7 @@ def draw_back(canvas, g, blocks):
 def draw_spine(canvas, g, title, author):
     sw = g["spine"]
     sh = g["trim_h"]
-    if sw < px(10):  # dos < 10 mm : aucun texte (règle KDP fine tranche)
+    if sw < px(10):
         return canvas
     strip = Image.new("RGB", (sh, sw), BACK_BG)
     d = ImageDraw.Draw(strip)
@@ -237,18 +189,18 @@ def draw_spine(canvas, g, title, author):
     x = (sh - tw) / 2
     y = (sw - cap) / 2 - int(cap * 0.12)
     d.text((x, y), s, font=f, fill=INK_WHITE)
-    strip = strip.rotate(-90, expand=True)  # lecture haut -> bas
+    strip = strip.rotate(-90, expand=True)
     canvas.paste(strip, (g["spine_x0"], g["trim_y0"]))
     return canvas
 
 
+# --------------------------------------------------------------------------- #
+# Assemblage
+# --------------------------------------------------------------------------- #
 def build_ebook(art, tj, title, author, out):
     W, H = 1600, 2560
-    base = fit_cover(art, W, H)
-    base = add_grain(base, 0.04)
-    m = int(W * 0.055)
-    rect = (m, int(H * 0.02), W - m, H - int(H * 0.02))
-    base = draw_front(base, rect, title, tj["tagline"], author)
+    base = add_grain(fit_cover(art, W, H), 0.04)
+    base = draw_front(base, (0, 0, W, H), title, tj["tagline"], author)
     path = os.path.join(out, "cover_ebook_final.jpg")
     base.convert("RGB").save(path, "JPEG", quality=92, dpi=(DPI, DPI))
     return path
@@ -288,7 +240,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--art", required=True)
     ap.add_argument("--textjson", required=True)
-    ap.add_argument("--title", default="CYCLE 404")
+    ap.add_argument("--title", default="404")
     ap.add_argument("--author", default="SHIRO KEGESU")
     ap.add_argument("--pages", type=int, default=400)
     ap.add_argument("--out", default="output/final")
